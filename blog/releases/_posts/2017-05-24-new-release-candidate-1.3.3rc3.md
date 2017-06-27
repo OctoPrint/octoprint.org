@@ -11,7 +11,7 @@ excerpt: The third release candidate of the 1.3.3 release, fixing
 
 ---
 
-This second release candidate of the 1.3.3 release fixes two minor
+This third release candidate of the 1.3.3 release fixes two minor
 regressions that were found in 1.3.3rc1 and 1.3.3rc2:
 
   * [#1821](https://github.com/foosel/OctoPrint/issues/1821) - Properly

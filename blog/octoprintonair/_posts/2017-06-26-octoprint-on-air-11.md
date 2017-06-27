@@ -5,14 +5,14 @@ title: "OctoPrint On Air #11"
 author: foosel
 card: /assets/img/blog/2017-06/2017-06-26-octoprint-on-air-11.png
 featuredimage: /assets/img/blog/2017-06/2017-06-26-octoprint-on-air-11.png
-excerpt: The eleventh episode of a monthly live broadcast for Patrons, which thus time was prerecorded due to scheduling issues.
+excerpt: The eleventh episode of a monthly live broadcast for Patrons, which this time was prerecorded due to scheduling issues.
 date: 2017-06-26 10:30:00 +0200
 
 ---
 
 <center><iframe class="youtube-embed" width="560" height="315" src="https://www.youtube.com/embed/SUq6Sxvaw5E" frameborder="0" allowfullscreen></iframe></center>
 
-Topics in this episode which aired live on May 13th:
+Topics in this episode which was recorded on June 22nd:
 
   * Releases of 1.3.3 and 1.3.4
   * Work towards 1.3.5 and 1.4.0
