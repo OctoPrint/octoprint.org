@@ -20,8 +20,8 @@ that already includes OctoPrint plus everything you need to run it:
 You can download the latest version via the following button:
 
 <div class="text-center">
-    <a class="btn btn-primary btn-large btn-block" href="https://octopi.octoprint.org/latest" data-event-category="download" data-event-action="latest"><i class="icon-download-alt icon-large"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;0.13</a>
-    <small>MD5Sum: <code>d0191958de7ffe0f0a62c9313b7a3fc9</code> &middot; Compatible with Raspberry Pi A, B, A+, B+, B2, 3 and Zero</small>
+    <a class="btn btn-primary btn-large btn-block" href="https://octopi.octoprint.org/latest" data-event-category="download" data-event-action="latest"><i class="icon-download-alt icon-large"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;0.14</a>
+    <small>MD5Sum of the .zip: <code>52c855c9bcc88fd3bf81bbe8e58a2e4c</code> &middot; Compatible with Raspberry Pi A, B, A+, B+, B2, 3, Zero and Zero W</small>
 </div>
 
 or simply buy one of the available
