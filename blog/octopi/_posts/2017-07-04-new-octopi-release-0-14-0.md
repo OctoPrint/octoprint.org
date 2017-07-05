@@ -40,8 +40,23 @@ Apart from adding support for the Pi Zero W and of course shipping with the curr
 >   * Fixed pybonjour download link (google code is dead)
 >   * Switched vagrant box to one including guest additions
 
-You can download OctoPi 0.14.0 from the [usual](http://octoprint.org/download/)
-[places](https://octopi.octoprint.org). 
-
 The full release notes can be found at
 [github](https://github.com/guysoft/OctoPi/releases/tag/0.14.0).
+
+You can download OctoPi 0.14.0 from the [usual](http://octoprint.org/download/)
+[places](https://octopi.octoprint.org). If you are asking yourself how to update from
+an earlier version of OctoPi, please read on.
+
+**"How do I update?"**
+
+There is currently no way to update from earlier *OctoPi* versions to a new version of that image. It's not necessary though -
+a new image basically means that if you have to setup a new instance you'll start at a newer version of everything
+bundled with the image. Anything included on the image however can also be kept up to date without having to
+reflash. OctoPrint will have prompted you to update itself and will continue to do so, and most of the image itself
+[can be kept up to date like every other Raspbian image](https://www.raspberrypi.org/documentation/raspbian/updating.md).
+
+So no need to reflash!
+
+If you want to however, make sure you backup anything under `~pi/.octoprint` on your current instance and also
+make a list of your installed plugins so that you can restore your data on your new one. I might look into a way
+to automate this too.
