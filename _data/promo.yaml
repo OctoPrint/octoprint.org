@@ -25,7 +25,7 @@
 - id: compatible-and-extendable
   title: Compatible and extendable
   icon: puzzle-piece
-  short-description: OctoPrint's powerful plugin system allows extending its functionality and the integrated plugin repository makes it easy to find and install awesome plugins from the community.
+  short-description: OctoPrint's powerful plugin system allows extending its functionality with awesome plugins from the community.
   description: 'Out of the box OctoPrint is **compatible with most of the available consumer 3D printers**. And its
       powerful plugin system allows extending its functionality in various ways. To name a few:
 

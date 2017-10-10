@@ -19,6 +19,10 @@
 @sponsorwidth: 120px;
 @sponsormargin: 10px;
 
+@adheight: 120px;
+@adwidth: 270px; // 2 x 130 + margin
+@admargin: 10px;
+
 @kitheight: 240px;
 @kitwidth: 240px;
 @kitfullheight: 400px;
@@ -258,7 +262,7 @@ ol.slick-dots {
 }
 
 #shortpromo {
-  padding: 5em 1em;
+  padding: 3em 1em;
   @media (max-width: 767px) {
     padding-bottom: 0;
   }
@@ -270,18 +274,28 @@ ol.slick-dots {
 
   text-align: center;
 
+  >.container:last-child {
+    @media (max-width: 767px) {
+      margin-bottom: 3em;
+    }
+  }
+
   .promobox {
     @media (max-width: 767px) {
-      margin-bottom: 5em;
+      margin-bottom: 3em;
     }
 
     h1 {
       color: @octoLight;
+
+      i {
+        font-size: 1.2em;
+      }
     }
   }
 
   .actionbox {
-    margin-top: 5em;
+    margin-top: 3em;
     @media (max-width: 767px) {
       margin-top: 0;
     }
@@ -295,11 +309,7 @@ ol.slick-dots {
 
   .sponsorbox {
     text-align: center;
-    margin-top: 1em;
-
-    @media (max-width: 767px) {
-      margin-bottom: 5em;
-    }
+    margin-top: 2em;
 
     .sponsorrow {
       .sponsor {
@@ -318,7 +328,7 @@ ol.slick-dots {
 }
 
 #features {
-  padding: 5em 1em 3em;
+  padding: 3em 1em 3em;
 
   .promo {
     h3 {
@@ -645,5 +655,35 @@ ul.sharebuttons {
     display: list-item;
     float: left;
     padding: 5px;
+  }
+}
+
+// Carbon ads
+
+#carbonads {
+  display: block;
+
+  overflow: hidden;
+  padding: 1em;
+  font-family: Verdana, "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1.5;
+
+  span {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+
+  .carbon-text {
+    font-size: .8em;
+    color: #333;
+  }
+
+  .carbon-poweredby {
+    font-size: .5em;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: #333;
   }
 }
