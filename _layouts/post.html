@@ -65,38 +65,43 @@ layout: default
             {% endif %}
         </div>
         <div class="span4">
-            {% if page.featuredimage %}
-            <dl class="featuredimage">
-                <img src="{{ page.featuredimage }}" class="img-rounded">
-            </dl>
-            {% endif %}
-            <dl class="author">
-                <dt>Author</dt>
-                <dd>
-                    <a href="{{ site.data.authors[page.author].link }}" target="_blank">{{ site.data.authors[page.author].name }}</a>
-                </dd>
-            </dl>
-            <dl class="published">
-                <dt>Published</dt>
-                <dd>{{ page.date | date_to_string }}</dd>
-            </dl>
-            {% assign thecategories = page.categories | shift %}
-            {% if thecategories %}
-            <dl class="category">
-                <dt>Category</dt>
-                <dd>{% include post_category categories=thecategories %}</dd>
-            </dl>
-            {% endif %}
-            {% if page.originalUrl %}
-            <dl class="originalUrl">
-                <dt>Original URL</dt>
-                <dd>This post was originally published at <a href="{{ page.originalUrl }}" target="_blank">{{ page.originalUrl }}</a></dd>
-            </dl>
-            {% endif %}
-            <dl class="share">
-                <dt>Share this</dt>
-                <dd>{% include share_snippet %}</dd>
-            </dl>
+            <div class="postinfo">
+                {% if page.featuredimage %}
+                <dl class="featuredimage">
+                    <img src="{{ page.featuredimage }}" class="img-rounded">
+                </dl>
+                {% endif %}
+                <dl class="author">
+                    <dt>Author</dt>
+                    <dd>
+                        <a href="{{ site.data.authors[page.author].link }}" target="_blank">{{ site.data.authors[page.author].name }}</a>
+                    </dd>
+                    </dl>
+                    <dl class="published">
+                        <dt>Published</dt>
+                    <dd>{{ page.date | date_to_string }}</dd>
+                </dl>
+                {% assign thecategories = page.categories | shift %}
+                {% if thecategories %}
+                <dl class="category">
+                    <dt>Category</dt>
+                    <dd>{% include post_category categories=thecategories %}</dd>
+                </dl>
+                {% endif %}
+                {% if page.originalUrl %}
+                <dl class="originalUrl">
+                    <dt>Original URL</dt>
+                    <dd>This post was originally published at <a href="{{ page.originalUrl }}" target="_blank">{{ page.originalUrl }}</a></dd>
+                </dl>
+                {% endif %}
+                <dl class="share">
+                    <dt>Share this</dt>
+                    <dd>{% include share_snippet %}</dd>
+                </dl>
+            </div>
+            <div class="ad visible-desktop visible-tablet invisible-mobile">
+                {% include adsnippet_desktop.html %}
+            </div>
         </div>
     </div>
 </div>

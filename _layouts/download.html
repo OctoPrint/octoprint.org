@@ -9,14 +9,24 @@ layout: default
         <div class="span9 text">
             {{ content }}
         </div>
-        <div class="hidden-phone visible-desktop visible-tablet span3 sponsorcolumn">
-            {% include sponsorcolumn.html %}
+        <div class="span3">
+            <div class="sponsorcolumn">
+                {% include sponsorcolumn.html %}
+            </div>
+            <div class="adcolumn">
+                {% include adsnippet_desktop.html %}
+            </div>
         </div>
     </div>
     <div class="visible-phone hidden-desktop hidden-tablet content row-fluid">
         <!-- mobile view: sponsor column first, then content -->
-        <div class="span3 sponsorcolumn">
-            {% include sponsorcolumn.html %}
+        <div class="span3">
+            <div class="sponsorcolumn">
+                {% include sponsorcolumn.html %}
+            </div>
+            <div class="adcolumn">
+                {% include adsnippet_mobile.html %}
+            </div>
         </div>
         <div class="span9 text">
             {{ content }}
