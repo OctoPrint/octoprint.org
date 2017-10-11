@@ -52,9 +52,7 @@ Please also refer to [OctoPi's README](https://github.com/guysoft/OctoPi), espec
 
 [Thomas Sanladerer](https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A) created a great video guide on how to get OctoPi 0.12 up an running.
 
-<div class="text-center">
-    <iframe width="560" height="315" src="//www.youtube.com/embed/MwsxO3ksxm4" frameborder="0" allowfullscreen="allowfullscreen">&nbsp;</iframe>
-</div>
+{% include youtube.html vid="MwsxO3ksxm4" %}
 
 ----
 

@@ -11,7 +11,7 @@ date: 2017-01-17 11:00:00 +0100
 
 ---
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/pV4nYrEmehE" frameborder="0" allowfullscreen></iframe></center>
+{% include youtube.html vid="pV4nYrEmehE" %}
 
 Topics in this episode which aired live on January 14th:
 

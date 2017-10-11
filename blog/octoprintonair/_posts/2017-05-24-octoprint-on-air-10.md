@@ -11,7 +11,7 @@ date: 2017-05-24 10:00:00 +0200
 
 ---
 
-<center><iframe class="youtube-embed" width="560" height="315" src="https://www.youtube.com/embed/dF5ndNxDH-M" frameborder="0" allowfullscreen></iframe></center>
+{% include youtube.html vid="dF5ndNxDH-M" %}
 
 Topics in this episode which aired live on May 13th:
 

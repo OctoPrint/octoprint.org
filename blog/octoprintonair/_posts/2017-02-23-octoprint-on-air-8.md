@@ -11,7 +11,7 @@ date: 2017-02-23 12:00:00 +0100
 
 ---
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/a7b4VaJgJag" frameborder="0" allowfullscreen></iframe></center>
+{% include youtube.html vid="a7b4VaJgJag" %}
 
 Topics in this episode which aired live on February 18th:
 

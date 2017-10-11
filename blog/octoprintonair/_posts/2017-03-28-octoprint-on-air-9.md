@@ -11,7 +11,7 @@ date: 2017-03-28 20:00:00 +0200
 
 ---
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/JU_gZS1vJUs" frameborder="0" allowfullscreen></iframe></center>
+{% include youtube.html vid="JU_gZS1vJUs" %}
 
 Topics in this episode which aired live on March 19th:
 

@@ -10,7 +10,7 @@ date: 2017-06-26 10:30:00 +0200
 
 ---
 
-<center><iframe class="youtube-embed" width="560" height="315" src="https://www.youtube.com/embed/SUq6Sxvaw5E" frameborder="0" allowfullscreen></iframe></center>
+{% include youtube.html vid="SUq6Sxvaw5E" %}
 
 Topics in this episode which was recorded on June 22nd:
 

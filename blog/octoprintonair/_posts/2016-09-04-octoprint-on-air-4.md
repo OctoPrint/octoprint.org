@@ -8,7 +8,7 @@ excerpt: The fourth episode of a monthly live broadcast for Patrons
 date: 2016-09-04 15:00:00 +0200
 ---
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/VsJ2DmbIwzs" frameborder="0" allowfullscreen></iframe></center>
+{% include youtube.html vid="VsJ2DmbIwzs" %}
 
 Topics in this episode:
 

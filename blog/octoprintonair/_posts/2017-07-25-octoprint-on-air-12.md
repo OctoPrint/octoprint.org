@@ -11,7 +11,7 @@ date: 2017-07-25 13:45:00 +0200
 
 ---
 
-<center><iframe class="youtube-embed" width="560" height="315" src="https://www.youtube.com/embed/jzQJi1mfI6U" frameborder="0" allowfullscreen></iframe></center>
+{% include youtube.html vid="jzQJi1mfI6U" %}
 
 Topics in this episode which was recorded on July 22nd:
 

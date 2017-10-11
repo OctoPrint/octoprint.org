@@ -10,7 +10,7 @@ excerpt: The third episode of a monthly live broadcast for Patrons and
 date: 2016-08-16 12:00:00 +0200
 ---
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/nCAMjqysBB0" frameborder="0" allowfullscreen></iframe></center>
+{% include youtube.html vid="nCAMjqysBB0" %}
 
 Topics in this episode:
 

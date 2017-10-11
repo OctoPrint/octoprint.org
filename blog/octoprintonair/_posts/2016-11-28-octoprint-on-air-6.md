@@ -11,7 +11,7 @@ date: 2016-11-28 15:50:00 +0100
 
 ---
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/AMnXrS6MBTg" frameborder="0" allowfullscreen></iframe></center>
+{% include youtube.html vid="AMnXrS6MBTg" %}
 
 Topics in this episode which aired live on November 27th:
 

@@ -11,7 +11,7 @@ date: 2016-10-20 10:20:00 +0200
 
 ---
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/uu-wAVgzkxo" frameborder="0" allowfullscreen></iframe></center>
+{% include youtube.html vid="uu-wAVgzkxo" %}
 
 Topics in this episode which aired live on October 8th:
 
