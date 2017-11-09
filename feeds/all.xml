@@ -19,7 +19,7 @@ layout: null
           ]]>
         </description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{% if post.link %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl | prepend: site.external }}{% endif %}</link>
+        <link>{% if post.link %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl | prepend: site.external }}{% endif %}?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">{% if post.link %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl | prepend: site.external }}{% endif %}</guid>
         {% assign thecategories = post.categories | shift %}{% for category in thecategories %}{% if site.data.categories[category] %}<category>{{ site.data.categories[category].rss }}</category>{% endif %}{% endfor %}
       </item>
