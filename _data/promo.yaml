@@ -30,7 +30,7 @@
       powerful plugin system allows extending its functionality in various ways. To name a few:
 
 
-      * Have OctoPrint send you **push notifications** on job progress via [Pushbullet](http://plugins.octoprint.org/plugins/octobullet/), [Pushover](http://plugins.octoprint.org/plugins/pushover/) or [Mail](http://plugins.octoprint.org/plugins/emailnotifier/).
+      * Have OctoPrint send you **push notifications** on job progress via [Pushbullet](http://plugins.octoprint.org/plugins/octobullet/) or [Pushover](http://plugins.octoprint.org/plugins/pushover/).
 
       * Completely **replace OctoPrint''s UI** on mobile devices via [TouchUI](http://plugins.octoprint.org/plugins/touchui/).
 
