@@ -1,5 +1,6 @@
 ---
 layout: download
+banner: true
 title: Download & Setup OctoPrint
 description: Learn how to setup OctoPrint using the preinstalled OctoPi image for Raspberry Pi, or how to install from source on Windows, Linux and Mac.
 ---
@@ -20,7 +21,7 @@ that already includes OctoPrint plus everything you need to run it:
 You can download the latest version via the following button:
 
 <div class="text-center">
-    <a class="btn btn-primary btn-large btn-block" href="https://octopi.octoprint.org/latest" data-event-category="download" data-event-action="latest"><i class="icon-download-alt icon-large"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;0.14</a>
+    <a class="btn btn-large btn-block" href="https://octopi.octoprint.org/latest" data-event-category="download" data-event-action="latest"><i class="icon-download-alt icon-large"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;0.14</a>
     <small>MD5Sum of the .zip: <code>52c855c9bcc88fd3bf81bbe8e58a2e4c</code></small><br>
     <small>Compatible with Raspberry Pi A, B, A+, B+, B2, 3, Zero and Zero W</small>
 </div>
@@ -28,7 +29,7 @@ You can download the latest version via the following button:
 or simply buy one of the available
 
 <div class="text-center">
-    <a class="btn btn-primary btn-large btn-block" href="/support-octoprint/#kits" data-event-category="download" data-event-action="kits">All-in-one OctoPrint Kits</a>
+    <a class="btn btn-large btn-block" href="/support-octoprint/#kits" data-event-category="download" data-event-action="kits">All-in-one OctoPrint Kits</a>
 </div>
 
 ##  Getting Started with OctoPi

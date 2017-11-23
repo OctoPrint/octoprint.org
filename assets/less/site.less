@@ -52,6 +52,80 @@ body, html {
 .text-align-right  { text-align: right; }
 .text-align-center { text-align: center; }
 
+#banner {
+  padding: 15px;
+
+  background-color: black;
+  border: 5px @patreonOrange solid;
+  color: white;
+
+  font-size: 1.2em;
+
+  position: relative;
+
+  a.close-banner {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    color: white;
+    font-family: @sansFontFamily;
+    font-size: 20px;
+
+    width: 20px;
+    height: 20px;
+
+    text-decoration: none;
+    &:hover, &:active {
+      text-decoration: none;
+    }
+  }
+
+  a.btn {
+    font-family: @sansFontFamily;
+  }
+
+  .content {
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      position: relative;
+
+      p.text {
+        margin-bottom: 15px;
+      }
+
+      p.signature {
+        margin-bottom: 0;
+      }
+
+      .button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .responsive-full-width;
+}
+
+#navigation {
+  &.navbar-fixed-top {
+    @media (max-width: 979px) {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &.unfixed {
+    position: static;
+  }
+}
+
+
 .navbar {
   .brand {
     color: @white;
@@ -81,12 +155,6 @@ body, html {
 h1, h2, h3, h4, h5, h6 {
   a {
     color: @textColor;
-  }
-}
-
-.navbar-fixed-top {
-  @media (max-width: 979px) {
-    margin-bottom: 0 !important;
   }
 }
 
@@ -121,8 +189,14 @@ ol.slick-dots {
 }
 
 #wrap {
-  padding-top: 40px;
-  @media (max-width: 979px) {
+  &.wrap-navbar-fixed-top {
+    padding-top: 40px;
+    @media (max-width: 979px) {
+      padding-top: 0;
+    }
+  }
+
+  &.wrap-navbar-top {
     padding-top: 0;
   }
 }
