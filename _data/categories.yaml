@@ -16,3 +16,6 @@ octoprintonair:
 news:
   title: News
   rss: OctoPrint News
+development:
+  title: Development
+  rss: OctoPrint Core and Plugin Development
