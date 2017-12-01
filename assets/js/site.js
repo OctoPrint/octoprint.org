@@ -83,6 +83,7 @@ $(function() {
 
   if (!getCookie("banner_shown") || /[?&]sb/.test(location.search)) {
     window.setTimeout(function() {
+      if (window.innerWidth < 768 && $("div[aria-label='cookieconsent']").is(":visible")) return;
       $("#banner").slideDown({
           complete: function() {
             evalHeader();

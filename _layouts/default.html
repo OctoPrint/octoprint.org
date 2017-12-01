@@ -89,6 +89,7 @@
     <script src="{{ BASE_PATH }}/assets/js/cookieconsent.min.js"></script>
     <script>
         window.addEventListener("load", function(){
+            window.cookieconsent.hasTransition = false;
             window.cookieconsent.initialise({
                 "position": "bottom",
                 "theme": "edgeless",
