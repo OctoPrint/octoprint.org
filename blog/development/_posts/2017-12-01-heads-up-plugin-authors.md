@@ -3,7 +3,7 @@
 layout: post
 title: "Heads-up plugin authors! Potentially breaking change with 1.3.6"
 author: foosel
-date: 2017-12-01 10:00:00 +0100
+date: 2017-12-01 10:15:00 +0100
 excerpt: A change to solve issues with plugins bundling JS assets causing interference with others  might 
     cause errors for some plugins that go a bit further than just run-off-the-mill view models. Read on 
     to learn if your maintained plugin might be affected and if so what to do against that.
@@ -115,7 +115,7 @@ available on the global namespace and an error will be thrown when your view mod
 If you just accidentally forgot to make your `myHelper` function local and are only using it inside your own JS
 assets however there won't be any problems.
 
-### How do I solve this quickly?
+### How do I solve this?
 
 #### The quick and dirty solution
 
@@ -144,7 +144,7 @@ window.myHelper = function(value) {
 That's fully backwards compatible to earlier versions of OctoPrint too - you are really just doing something
 explicitly that before you were doing implicitly.
 
-#### A potentially cleaner solution
+#### A possibly cleaner solution
 
 **But even better yet** is to avoid global functions in general and instead see if you can't adjust your plugin 
 to instead bind to a helper function or even a `computed`/`pureComputed` defined on your view model if it's bound to 
@@ -215,13 +215,13 @@ necessary in your plugin.
 
 ### Why was this introduced now?
 
-Some plugin authors started running into seriously hard to debug problems caused by other plugins declaring strict mode
-or otherwise interfering. That's something that in all likelihood would have gotten only more worse the longer a 
-stricter isolation of plugins wasn't in place.
+Some users and plugin authors started running into seriously hard to debug problems caused by other plugins 
+declaring strict mode or otherwise interfering. That's something that in all likelihood would have gotten only 
+more worse the longer a stricter isolation of plugins wasn't in place.
 
 Considering that the change needed to get affected plugins going again is a very simple on, not many plugins should
-even be affected and a better isolation and error handling has additional benefits, I decided the advantages outweigh
-the disadvantages.
+even be affected and a better isolation and error handling has huge benefits, I decided that the advantages here
+certainly outweigh the disadvantages.
 
-See also the discussion in the related brainstorming ticket [#2200](https://github.com/foosel/OctoPrint/issues/2200) 
+If you want even more details, feel free to read the [related ticket](https://github.com/foosel/OctoPrint/issues/2200) 
 that led to the introduction of this change.
