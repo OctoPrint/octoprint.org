@@ -78,7 +78,10 @@ $(function() {
   evalScroll();
 
   $("#banner .close-banner").click(function() {
-      $("#banner").slideUp({complete: function() { evalHeader() }});
+      $("#banner").slideUp({complete: function() {
+        evalHeader();
+        ga("send", "event", "banner", "close");
+      }});
   });
 
   if (!getCookie("banner_shown") || /[?&]sb/.test(location.search)) {
@@ -87,6 +90,7 @@ $(function() {
       $("#banner").slideDown({
           complete: function() {
             evalHeader();
+            ga("send", "event", "banner", "show");
           }
       });
       setCookie("banner_shown", true, 7, "/");
