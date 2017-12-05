@@ -34,7 +34,7 @@ should soon get an update notification just like you are used to from
 stable releases.
 
 **If you downgraded back to 1.3.5 from 1.3.6rc1** you'll need to do a tiny fix in your `config.yaml`, made necessary
-by the switch to `pip` as update method in 1.3.6rc, our you won't be able to switch back again to Maintenance RCs to test
+by the switch to `pip` as update method in 1.3.6rc, or you won't be able to switch back again to Maintenance RCs to test
 this second RC. You'll need to remove the ``method: pip`` line under
 ``plugins.softwareupdate.checks.octoprint`` and then restart. 
 
