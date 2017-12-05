@@ -27,6 +27,7 @@ Like with 1.3.5 the [changelog](https://github.com/foosel/OctoPrint/releases/tag
 is on the lengthy side again. This is simply the consequence of these releases
 to be spread a bit further apart now. I hope that doesn't initimidate you ;)
 
+<a id="heads-up"></a>
 **The most important thing first:** This release introduces a potentially breaking change
 with regards to how JS plugin assets are bundled - you can read all the gritty details
 [here](/blog/2017/12/01/heads-up-plugin-authors/). Not many plugins should be affected by this, but some are and for that I also added a 
