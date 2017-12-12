@@ -33,7 +33,7 @@ restarting your server and see if that fixes things - and if so best report the 
 to the plugin author. The plugins that so far are known to be affected by this are
 
   * [Navbar Temp](https://plugins.octoprint.org/plugins/navbartemp/) up until version 0.8 - version 0.9 is fixed!
-  * [Fullscreen Webcam](https://plugins.octoprint.org/plugins/fullscreen_webcam/) up until version 0.0.3
+  * [Fullscreen Webcam](https://plugins.octoprint.org/plugins/fullscreen_webcam/) up until version 0.0.3 - version 0.0.4 is fixed!
 
 With that out of the way, on to **some highlights from the release notes**:
 
