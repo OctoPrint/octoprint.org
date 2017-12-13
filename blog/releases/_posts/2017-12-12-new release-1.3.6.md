@@ -106,6 +106,9 @@ producing an error message, read [this](https://github.com/foosel/OctoPrint/wiki
 If you were running 1.3.6rc1 or 1.3.6rc2, downgraded back to 1.3.5 and now can't update and/or select
 your release channel, please read [this](/blog/2017/12/08/new-release-candidate-1.3.6rc3/#heads-up).
 
+If you get an error about "no suitable distribution" during update, please read 
+[this](https://github.com/foosel/OctoPrint/wiki/FAQ#i-got-some-error-about-no-suitable-distribution-during-update-and-now-my-server-wont-start).
+
 If you have any problems with your OctoPrint installation, please seek 
 support on the [Mailinglist](https://groups.google.com/group/octoprint).
 
