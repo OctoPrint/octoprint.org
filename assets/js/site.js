@@ -93,7 +93,11 @@ $(function() {
             ga("send", "event", "banner", "show");
           }
       });
-      setCookie("banner_shown", true, 7, "/");
+      setCookie("banner_shown", true, 14, "/");
     }, 2000);
+  }
+
+  if (window.location.pathname === "/support-octoprint/") {
+    setCookie("banner_shown", true, 60, "/");
   }
 });
