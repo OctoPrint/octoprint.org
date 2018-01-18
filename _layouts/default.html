@@ -88,6 +88,12 @@
     <link rel="stylesheet" type="text/css" href="{{ BASE_PATH }}/assets/css/cookieconsent.min.css" />
     <script src="{{ BASE_PATH }}/assets/js/cookieconsent.min.js"></script>
     <script>
+        if (!String.prototype.startsWith) {
+            String.prototype.startsWith = function(search, pos) {
+            return this.substr(!pos || pos < 0 ? 0 : +pos, search.length) === search;
+            };
+        }
+
         window.addEventListener("load", function(){
             window.cookieconsent.hasTransition = false;
             window.cookieconsent.initialise({
@@ -104,6 +110,17 @@
                 }
             })
         });
+
+        /**
+         * Make sure octoprint.github.io stuff gets rewritten to octoprint.org.
+         * See https://github.com/OctoPrint/plugins.octoprint.org/issues/146.
+         */
+        var githubio = "octoprint.github.io/octoprint.org";
+        var url = window.location.href;
+        if (url && (url.startsWith("http://" + githubio) || url.startsWith("https://" + githubio))) {
+            url = url.replace(githubio, "octoprint.org");
+            window.location.replace(url);
+        }
     </script>
 </head>
 
