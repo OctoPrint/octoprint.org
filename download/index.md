@@ -46,7 +46,7 @@ Please follow these steps after downloading
 1. Unzip the image and install the contained ``.img`` file to an SD card
    [like any other Raspberry Pi image](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
 2. Configure your WiFi connection by editing ``octopi-network.txt`` on the root of the
-   flashed card when using it like a thumb drive. **Important: Do not use WordPad (Windows) or TextMate (MacOS X)**
+   flashed card when using it like a thumb drive. **Important: Do not use WordPad (Windows) or TextEdit (MacOS X)**
    for this, those editors are known to mangle the file, making configuration fail. Use something like 
    Notepad++, Atom or VSCode instead or at the very least heed the warnings in the file.
 3. Boot the Pi from the card.
