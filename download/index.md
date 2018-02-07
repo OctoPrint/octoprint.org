@@ -92,14 +92,3 @@ For installing OctoPrint on a Windows system, please take a look at [the setup i
 ## Mac
 
 For installing OctoPrint on a Mac, please take a look at [the setup instructions for MacOS on the wiki](https://github.com/foosel/OctoPrint/wiki/Setup-on-Mac).
-
-----
-
-<div class="footnotes">
-    <div class="footnote-text">
-        <a href="#footnote-1" id="footnote-1-text">1)</a> Recommended model.
-    </div>
-    <div class="footnote-text">
-        <a href="#footnote-2" id="footnote-2-text">2)</a> Not recommended if you plan to use a webcam for a live view - the wifi interface currently <a href="https://github.com/guysoft/OctoPi/issues/318#issuecomment-284762963" target="_blank">causes significant CPU load</a> on bandwidth utilization, negatively affecting running print jobs.
-    </div>
-</div>
