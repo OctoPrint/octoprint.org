@@ -64,6 +64,13 @@ Please also refer to [OctoPi's README](https://github.com/guysoft/OctoPi), espec
 
 {% include youtube.html vid="MwsxO3ksxm4" %}
 
+## Further resources
+
+  * [The MagPi issue #36](https://www.raspberrypi.org/magpi/issues/36/) contains a "Getting Started" guide on 
+    pages 50-51. You can find an excerpt [here](/assets/download/MagPi36_OctoPrint.pdf) 
+    (MagPi License: [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/)).
+  * Scripts to build (and customize) the image yourself can be found in [OctoPi's Github repository](https://github.com/guysoft/OctoPi").
+
 ----
 
 #  Installing from source
