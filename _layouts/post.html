@@ -17,7 +17,7 @@ banner: true
         </div>
     </div>
     <div class="row-fluid content">
-        <div class="span8 text">
+        <div class="span8 text" id="blogpost-content">
             {{ content }}
 
             {% if page.links %}
@@ -64,6 +64,22 @@ banner: true
                 {% endfor %}
             </div>
             {% endif %}
+            <div class="postcomments">
+                <h2>Discuss!</h2>
+
+                <div id='discourse-comments'></div>
+
+                <script type="text/javascript">
+                  DiscourseEmbed = { discourseUrl: 'https://discourse.octoprint.org/',
+                                     discourseEmbedUrl: '{{ page.url | prepend: site.baseurl | prepend: site.external }}' };
+
+                  (function() {
+                    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+                    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+                  })();
+                </script>
+            </div>
         </div>
         <div class="span4">
             <div class="postinfo">
