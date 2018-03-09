@@ -1,6 +1,6 @@
 - id: full-remote-control-and-monitoring
   title: Full remote control & monitoring
-  icon: wifi
+  icon: fa fa-wifi
   short-description: Control and monitor every aspect of your 3D printer and your printing jobs right from within your browser.
   description: 'Control and monitor every aspect of your 3D printer and your printing jobs right from within your browser:
 
@@ -24,7 +24,7 @@
 
 - id: compatible-and-extendable
   title: Compatible and extendable
-  icon: puzzle-piece
+  icon: fa fa-puzzle-piece
   short-description: OctoPrint's powerful plugin system allows extending its functionality with awesome plugins from the community.
   description: 'Out of the box OctoPrint is **compatible with most of the available consumer 3D printers**. And its
       powerful plugin system allows extending its functionality in various ways. To name a few:
@@ -49,7 +49,7 @@
 
 - id: 100-percent-open-source
   title: 100% Open Source
-  icon: github
+  icon: fab fa-github
   short-description: Free and open source software released under the Affero General Public License (AGPL).
   description: 'OctoPrint is Free and Open Source Software released under the GNU Affero General Public License (AGPL).
 

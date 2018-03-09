@@ -27,7 +27,7 @@ banner: true
             {% for p in site.data.promo %}
             {% if p.icon %}
             <div class="span4 promobox">
-                <h1><i class="fa fa-{{ p.icon }}"></i></h1>
+                <h1><i class="{{ p.icon }}"></i></h1>
                 <h4>{{ p.title }}</h4>
                 <p>{{ p.short-description }}</p>
                 {% if p.description %}
