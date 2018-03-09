@@ -64,6 +64,7 @@ banner: true
                 {% endfor %}
             </div>
             {% endif %}
+            {% unless page.comments == false %}
             <div class="postcomments">
                 <h2>Discuss!</h2>
 
@@ -80,6 +81,7 @@ banner: true
                   })();
                 </script>
             </div>
+            {% endunless %}
         </div>
         <div class="span4">
             <div class="postinfo">
