@@ -6,7 +6,7 @@ date: 2017-03-31 19:00:00 +0200
 excerpt: Guy Sheffer just published a release candidate for the next OctoPi release 0.14 and is looking for feedback!
 card: /assets/img/blog/2017-03/2017-03-31-octopi-release-candidate.png
 featuredimage: /assets/img/blog/2017-03/2017-03-31-octopi-release-candidate.png
-
+comments: false
 ---
 
 [Guy Sheffer](https://github.com/guysoft) just published a

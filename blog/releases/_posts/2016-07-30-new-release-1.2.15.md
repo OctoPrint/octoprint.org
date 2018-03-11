@@ -5,6 +5,7 @@ author: foosel
 date: 2016-07-30 09:00:00 +0200
 card: /assets/img/blog/2016-07/2016-07-30-release-card.png
 featuredimage: /assets/img/blog/2016-07/2016-07-30-release-card.png
+comments: false
 ---
 
 Late on the 28th it sadly came to my attention that some users were

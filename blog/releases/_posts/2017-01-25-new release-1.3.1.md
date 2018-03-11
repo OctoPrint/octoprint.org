@@ -6,6 +6,7 @@ date: 2017-01-25 11:20:00 +0100
 card: /assets/img/blog/2017-01/2017-01-25-release-card.png
 featuredimage: /assets/img/blog/2017-01/2017-01-25-release-card.png
 excerpt:
+comments: false
 
 ---
 

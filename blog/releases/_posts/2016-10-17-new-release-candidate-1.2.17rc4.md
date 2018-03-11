@@ -8,6 +8,7 @@ card: /assets/img/blog/2016-10/2016-10-17-release-candidate-card.png
 featuredimage: /assets/img/blog/2016-10/2016-10-17-release-candidate-card.png
 excerpt: Another RC after all before we get out the stable 1.2.17 release,
   due to another bug that was found and fixed since pushing out 1.2.17rc3.
+comments: false
 
 ---
 

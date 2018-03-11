@@ -8,6 +8,7 @@ card: /assets/img/blog/2017-05/2017-05-17-card.png
 featuredimage: /assets/img/blog/2017-05/2017-05-17-card.png
 excerpt: The second release candidate of the 1.3.3 release, fixing
   three minor regressions found in 1.3.3rc1.
+comments: false
 
 ---
 

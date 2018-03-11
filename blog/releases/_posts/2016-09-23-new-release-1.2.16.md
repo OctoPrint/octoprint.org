@@ -7,6 +7,7 @@ card: /assets/img/blog/2016-09/2016-09-23-release-card.png
 images:
 - /assets/img/blog/2016-09/2016-09-09-release-channel-screenie.png
 featuredimage: /assets/img/blog/2016-09/2016-09-23-release-card.png
+comments: false
 
 ---
 

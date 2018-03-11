@@ -9,6 +9,7 @@ featuredimage: /assets/img/blog/2017-07/2017-07-26-octoprint-1.3.5rc1-card.png
 poster: /assets/img/blog/2017-07/2017-07-26-octoprint-1.3.5rc1-card.png
 excerpt: The first release candidate of the 1.3.5 release, with various
    improvements and bug fixes.
+comments: false
 
 ---
 

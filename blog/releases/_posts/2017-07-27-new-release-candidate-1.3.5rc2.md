@@ -9,6 +9,7 @@ featuredimage: /assets/img/blog/2017-07/2017-07-27-octoprint-1.3.5rc2-card.png
 poster: /assets/img/blog/2017-07/2017-07-27-octoprint-1.3.5rc2-card.png
 excerpt: This second release candidate of the 1.3.5 release fixes a couple of bugs reported with the first one
    the were either regressions or issues with new/improved functionality.
+comments: false
 
 ---
 

@@ -8,7 +8,7 @@ featuredimage: /assets/img/blog/2017-05/2017-05-24-octoprint-on-air-10.png
 excerpt: The recording of the tenth episode of a monthly live broadcast for Patrons,
   which aired live on May 13th.
 date: 2017-05-24 10:00:00 +0200
-
+comments: false
 ---
 
 {% include youtube.html vid="dF5ndNxDH-M" %}

@@ -8,6 +8,7 @@ card: /assets/img/blog/2017-01/2017-01-20-release-candidate-card.png
 featuredimage: /assets/img/blog/2017-01/2017-01-20-release-candidate-card.png
 excerpt: A second release candidate of 1.3.1 which was needed to correct
   a bug fix present in 1.3.1rc1.
+comments: false
 
 ---
 

@@ -6,7 +6,7 @@ date: 2017-06-26 12:00:00 +0200
 excerpt: Prompted by the release of a new Raspbian Lite base image, Guy Sheffer just published a third release candidate for the next OctoPi release 0.14 and is looking for feedback!
 card: /assets/img/blog/2017-06/2017-06-26-octopi-release-candidate.png
 featuredimage: /assets/img/blog/2017-06/2017-06-26-octopi-release-candidate.png
-
+comments: false
 ---
 
 Since the Raspberry Foundation published a new Raspbian Lite base image mere days after OctoPi 0.14rc2 😏,

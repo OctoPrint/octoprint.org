@@ -7,7 +7,7 @@ excerpt: OctoPi 0.14 comes with the latest OctoPrint 1.3.4 and Pi Zero W support
 featuredimage: /assets/img/blog/2017-07/2017-07-05-octopi-release.png
 card: /assets/img/blog/2017-07/2017-07-05-octopi-release.png
 poster: /assets/img/blog/2017-07/2017-07-05-octopi-release-poster.png
-
+comments: false
 ---
 
 [Guy Sheffer](https://github.com/guysoft) just released

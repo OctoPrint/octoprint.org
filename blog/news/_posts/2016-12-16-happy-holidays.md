@@ -8,7 +8,7 @@ featuredimage: /assets/img/blog/2016-12/2016-12-16-happy-holidays.png
 date: 2016-12-16 17:45:00 +0100
 excerpt: Happy Holidays, a Happy New Year and of course also Happy 
   Printing and we'll see each other again in 2017! 
-
+comments: false
 ---
 
 I don't know about you, but with 

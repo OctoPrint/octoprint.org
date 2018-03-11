@@ -7,7 +7,7 @@ card: /assets/img/blog/2017-06/2017-06-26-octoprint-on-air-11.png
 featuredimage: /assets/img/blog/2017-06/2017-06-26-octoprint-on-air-11.png
 excerpt: The eleventh episode of a monthly live broadcast for Patrons, which this time was prerecorded due to scheduling issues.
 date: 2017-06-26 10:30:00 +0200
-
+comments: false
 ---
 
 {% include youtube.html vid="SUq6Sxvaw5E" %}

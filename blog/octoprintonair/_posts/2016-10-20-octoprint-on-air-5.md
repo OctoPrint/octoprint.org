@@ -8,7 +8,7 @@ featuredimage: /assets/img/blog/2016-10/2016-10-20-octoprint-on-air-5.png
 excerpt: The recording of the fifth episode of a monthly live broadcast for Patrons,
   which aired live on October 8th.
 date: 2016-10-20 10:20:00 +0200
-
+comments: false
 ---
 
 {% include youtube.html vid="uu-wAVgzkxo" %}

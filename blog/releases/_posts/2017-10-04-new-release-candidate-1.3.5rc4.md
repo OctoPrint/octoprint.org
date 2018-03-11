@@ -9,6 +9,7 @@ featuredimage: /assets/img/blog/2017-10/2017-10-04-octoprint-1.3.5rc4-card.png
 poster: /assets/img/blog/2017-10/2017-10-04-octoprint-1.3.5rc4-poster.png
 excerpt: The fourth release candidate of the 1.3.5 release fixes a few issues discovered in the earlier ones
    that were either regressions or issues with new/improved functionality.
+comments: false
 
 ---
 

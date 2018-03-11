@@ -5,6 +5,7 @@ author: foosel
 date: 2016-11-30 12:30:00 +0100
 card: /assets/img/blog/2016-11/2016-11-30-release-card.png
 featuredimage: /assets/img/blog/2016-11/2016-11-30-release-card.png
+comments: false
 
 ---
 

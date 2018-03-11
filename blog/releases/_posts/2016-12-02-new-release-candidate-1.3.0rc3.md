@@ -8,6 +8,7 @@ card: /assets/img/blog/2016-12/2016-12-02-release-candidate-card.png
 featuredimage: /assets/img/blog/2016-12/2016-12-02-release-candidate-card.png
 excerpt: The third release candidate for the upcoming huge 1.3.0
   release, now available for your testing pleasure!
+comments: false
 
 ---
 

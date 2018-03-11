@@ -14,6 +14,7 @@ images:
   title: Configuring a shared nozzle for the printer profile
 excerpt: Now switched to a longer release cycle to leave some more time for
   working on new functionality and similar things, I present you 1.3.2
+comments: false
 
 ---
 

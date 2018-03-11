@@ -7,6 +7,7 @@ date: 2017-01-13 14:30:00 +0100
 card: /assets/img/blog/2017-01/2017-01-13-release-candidate-card.png
 featuredimage: /assets/img/blog/2017-01/2017-01-13-release-candidate-card.png
 excerpt: Happy 2017! Let's start it with a release candidate for 1.3.1 :)
+comments: false
 
 ---
 

@@ -17,6 +17,7 @@ images:
   title: A custom UI by Leapfrog for their printers, done through a UiPlugin
 - url: /assets/img/blog/2016-10/2016-10-19-ui-example-forcelogin.png
   title: A login-only view forced for logged out/anonymous users, done through a UiPlugin
+comments: false
 
 ---
 

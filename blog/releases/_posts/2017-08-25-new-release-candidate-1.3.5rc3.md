@@ -9,6 +9,7 @@ featuredimage: /assets/img/blog/2017-08/2017-08-25-octoprint-1.3.5rc3-card.png
 poster: /assets/img/blog/2017-08/2017-08-25-octoprint-1.3.5rc3-poster.png
 excerpt: This third release candidate of the 1.3.5 release fixes three bugs discovered in the earlier ones
    that were either regressions or issues with new/improved functionality.
+comments: false
 
 ---
 

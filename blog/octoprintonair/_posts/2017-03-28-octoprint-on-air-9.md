@@ -8,7 +8,7 @@ featuredimage: /assets/img/blog/2017-03/2017-03-28-octoprint-on-air-9.png
 excerpt: The recording of the ninth episode of a monthly live broadcast for Patrons,
   which aired live on March 19th.
 date: 2017-03-28 20:00:00 +0200
-
+comments: false
 ---
 
 {% include youtube.html vid="JU_gZS1vJUs" %}

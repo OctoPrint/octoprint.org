@@ -8,6 +8,7 @@ card: /assets/img/blog/2016-10/2016-10-13-release-candidate-card.png
 featuredimage: /assets/img/blog/2016-10/2016-10-13-release-candidate-card.png
 excerpt: Another release candidate for 1.2.17 that fixes another bug from
   1.2.16 and adds some internal improvements as well.
+comments: false
 
 ---
 

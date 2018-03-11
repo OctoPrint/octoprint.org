@@ -8,7 +8,7 @@ featuredimage: /assets/img/blog/2017-01/2017-01-17-octoprint-on-air-7.png
 excerpt: The recording of the seventh episode of a monthly live broadcast for Patrons,
   which aired live on January 14th.
 date: 2017-01-17 11:00:00 +0100
-
+comments: false
 ---
 
 {% include youtube.html vid="pV4nYrEmehE" %}

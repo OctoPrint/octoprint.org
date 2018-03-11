@@ -8,6 +8,7 @@ card: /assets/img/blog/2016-10/2016-10-13-release-candidate-card2.png
 featuredimage: /assets/img/blog/2016-10/2016-10-13-release-candidate-card2.png
 excerpt: This RC for 1.2.17 fixes a regression that was introduced by 
   1.2.17rc2 released earlier today.
+comments: false
 
 ---
 

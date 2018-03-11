@@ -8,7 +8,7 @@ card: /assets/img/blog/2017-07/2017-07-25-octoprint-on-air-12-card.png
 poster: /assets/img/blog/2017-07/2017-07-25-octoprint-on-air-12-poster.png
 excerpt: The twelfth episode of a monthly live broadcast for Patrons which aired live on July 22nd 2017.
 date: 2017-07-25 13:45:00 +0200
-
+comments: false
 ---
 
 {% include youtube.html vid="jzQJi1mfI6U" %}

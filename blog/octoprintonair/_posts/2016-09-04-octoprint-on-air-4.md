@@ -6,6 +6,7 @@ card: /assets/img/blog/2016-09/2016-09-04-octoprint-on-air-4.png
 featuredimage: /assets/img/blog/2016-09/2016-09-04-octoprint-on-air-4.png
 excerpt: The fourth episode of a monthly live broadcast for Patrons
 date: 2016-09-04 15:00:00 +0200
+comments: false
 ---
 
 {% include youtube.html vid="VsJ2DmbIwzs" %}

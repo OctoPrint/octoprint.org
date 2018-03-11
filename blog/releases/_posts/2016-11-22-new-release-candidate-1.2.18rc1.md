@@ -8,6 +8,7 @@ card: /assets/img/blog/2016-11/2016-11-22-release-candidate-card.png
 featuredimage: /assets/img/blog/2016-11/2016-11-22-release-candidate-card.png
 excerpt: The first release candidate of the 1.2.18 release, which will
   hopefully be the final release before 1.3.0 becomes stable.
+comments: false
 
 ---
 

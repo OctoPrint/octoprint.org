@@ -15,6 +15,7 @@ images:
   title: Confirmation for deleted timelapses - and to still allow you fast deletions of multiple timelapses a new bulk delete feature.
 - url: /assets/img/blog/2017-05/2017-05-11-plugin-notices.png
   title: The new plugin notice mechanism to give you a heads-up regarding any important issues with your installed plugins.
+comments: false
 
 ---
 

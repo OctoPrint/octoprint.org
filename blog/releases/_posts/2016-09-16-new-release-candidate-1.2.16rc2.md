@@ -8,6 +8,7 @@ card: /assets/img/blog/2016-09/2016-09-16-release-candidate-card.png
 featuredimage: /assets/img/blog/2016-09/2016-09-16-release-candidate-card.png
 excerpt: The second release candidate of the 1.2.16 release, with
   two bug fixes and a small improvement.
+comments: false
 
 ---
 

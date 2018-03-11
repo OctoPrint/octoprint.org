@@ -13,6 +13,7 @@ images:
   title: New firmware auto detection feature
 excerpt: The second release candidate for the upcoming huge 1.3.0
   release, now available for your testing pleasure!
+comments: false
 
 ---
 

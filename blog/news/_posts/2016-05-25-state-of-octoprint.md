@@ -7,6 +7,7 @@ featuredimage: /assets/img/blog/2016-05/2016-05-25-state-card.png
 excerpt: A look at the state of OctoPrint, its current funding situation
     and how things will continue from here on.
 date: 2016-05-25 20:00:00 +0200
+comments: false
 ---
 A bit over a month ago I shared with you the bad news that
 [the funding situation of OctoPrint](../../../../2016/04/13/i-need-your-support/)

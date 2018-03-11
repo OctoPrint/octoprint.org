@@ -14,6 +14,7 @@ links:
 originalUrl: https://plus.google.com/+OctoprintOrg/posts/5m53jf6cdme
 card: /assets/img/blog/2016-04/2016-04-13-support-card.png
 featuredimage: /assets/img/blog/2016-04/2016-04-13-support-featured.png
+comments: false
 ---
 Most of you probably know that OctoPrint's development has been heavily 
 sponsored by BQ since August 2014, mostly by employing me (Gina Häußge) 

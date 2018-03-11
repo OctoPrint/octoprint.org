@@ -8,7 +8,7 @@ featuredimage: /assets/img/blog/2016-11/2016-11-28-octoprint-on-air-6.png
 excerpt: The recording of the sixth episode of a monthly live broadcast for Patrons,
   which aired live on November 27th.
 date: 2016-11-28 15:50:00 +0100
-
+comments: false
 ---
 
 {% include youtube.html vid="AMnXrS6MBTg" %}

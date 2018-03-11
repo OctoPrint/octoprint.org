@@ -11,6 +11,7 @@ excerpt: The first release candidate of the 1.3.2 release, with various
 images:
 - url: /assets/img/blog/2017-03/2017-03-10-restart-in-safemode.png
   title: The new "Restart OctoPrint in safe mode" system menu entry
+comments: false
 
 
 ---

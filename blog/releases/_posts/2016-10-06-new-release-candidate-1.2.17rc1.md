@@ -8,6 +8,7 @@ card: /assets/img/blog/2016-10/2016-10-06-release-candidate-card.png
 featuredimage: /assets/img/blog/2016-10/2016-10-06-release-candidate-card.png
 excerpt: The first release candidate of the 1.2.17 release, with
   various improvements and bug fixes.
+comments: false
 
 ---
 

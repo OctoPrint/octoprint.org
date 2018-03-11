@@ -11,7 +11,7 @@ featuredimage: /assets/img/blog/2016-09/2016-09-09-release-candidate-card.png
 excerpt: The first release candidate of the 1.2.16 release, with
   various improvements and bug fixes plus the new release channel
   feature.
-
+comments: false
 ---
 
 After the compatibility issues we saw in 1.2.14 and which prompted the 
