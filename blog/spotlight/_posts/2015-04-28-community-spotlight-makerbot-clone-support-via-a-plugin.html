@@ -9,6 +9,7 @@ links:
   url: http://plugins.octoprint.org/plugins/gpx
   image: https://markwal.github.io/OctoPrint/gpx.png
 originalUrl: https://plus.google.com/+OctoprintOrg/posts/RXXvdxR7c14
+comments: false
 ---
 It&#39;s not a secret that OctoPrint so far lacked support for Makerbot printers and their clones (e.g. Flashforge) and that I wasn&#39;t going to do anything about that due to various reasons (the most prominent one being no access to a machine to test with, but admittedly also some other reservations). With the arrival of the plugin system in OctoPrint&#39;s development branch <span class="proflinkWrapper"><span class="proflinkPrefix">+</span><a class="proflink" href="https://plus.google.com/118024220644837840366" oid="118024220644837840366">Mark Walker</a></span> took it upon himself to change that and with &quot;GPX&quot; [1] developed a plugin around the &quot;gpx&quot; tool, which converts GCODE to the x3g format used by these printers. Mark has the plugin do this on the fly, basically having it act as a translation layer between OctoPrint itself and the serial port connected to the printer and thus allowing FlashForge and Makerbot printers up until Gen5 (read: Replicator 2 being the last one) to work together with OctoPrint.<br />
 <!-- more -->
