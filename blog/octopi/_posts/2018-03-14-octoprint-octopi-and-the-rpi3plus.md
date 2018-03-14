@@ -3,7 +3,7 @@ layout: post
 author: foosel
 title: "OctoPrint, OctoPi and the Raspberry Pi 3+"
 date: 2018-03-14 11:30:00 +0100
-excerpt: The RPi3+ has just been released and I exactly as much as you. Still, some speculation on the usual questions
+excerpt: The RPi3+ has just been released and I know exactly as much as you. Still, some speculation on the usual questions
     I get bombarded with after such releases ;)
 ---
 
