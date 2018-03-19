@@ -23,7 +23,7 @@ Here are some highlights from the release notes:
       * it must respond to an immediately sent `M27` with `SD printing byte <current>/<total>`
       * it must stay responsive during ongoing print to allow for regular M27 polls (or push those automatically) or M25 to pause/cancel the print through OctoPrint.
     Additionally there's now support for SD status autoreport capabilities by the firmware.
-  * The serial settings were got an UI overhaul to be hopefully less overwhelming.
+  * The serial settings got an UI overhaul to be hopefully less overwhelming.
   * The log management has been extracted into its own bundled plugin and now allows log level management. That is especially interesting to quickly get more detailed logs of specific components in case of bug reports and seeking support but can also help tremendously during plugin development.
   * A new bundled plugin "Printer Safety Check" will try to identify printer/printer firmware with known safety issues such as missing thermal runaway protection and display warning if such a printer is detected.
   * OctoPrint now has native support for the following [@ commands](http://docs.octoprint.org/en/maintenance/features/atcommands.html) that can be used in your GCODE files, scripts and basically everywhere where you'd send a command through OctoPrint to the printer: `@pause` (pauses the print), `@resume` (resumes the print), `@cancel` or `@abort` (cancels the print). More commands can be added through the plugin hooks [`octoprint.comm.protocol.atcommand.*`](http://docs.octoprint.org/en/maintenance/plugins/hooks.html#octoprint-comm-protocol-atcommand-phase).
