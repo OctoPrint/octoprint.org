@@ -6,7 +6,7 @@ author: foosel
 date: 2018-03-19 17:00:00 +0100
 card: /assets/img/blog/2018-03/2018-03-19-octoprint-1.3.7rc1-card.png
 featuredimage: /assets/img/blog/2018-03/2018-03-19-octoprint-1.3.7rc1-card.png
-poster: /assets/img/blog/2018-03/2018-03-19-octoprint-1.3.7rc1-poster.png
+poster: /assets/img/blog/2018-03/2018-03-19-octoprint-1.3.7rc1-post.png
 excerpt: The first release candidate of the 1.3.7 release, with various
    improvements and bug fixes.
 
