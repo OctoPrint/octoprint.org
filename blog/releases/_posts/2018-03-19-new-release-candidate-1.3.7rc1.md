@@ -34,6 +34,10 @@ Here are some highlights from the release notes:
 **If you are tracking the "Maintenance RC" release channel**, you should soon get an update notification just like you 
 are used to from stable releases.
 
+If you want to help test this release candidate and **aren't yet tracking the "Maintenance RCs" release channel**, you
+can find information on how to switch [in this guide](https://discourse.octoprint.org/t/how-to-use-the-release-channels-to-help-test-release-candidates/402)
+(also linked below).
+
 **If you are not interested in helping to test release candidates**, just ignore this post, 1.3.7 stable will hit 
 your instance via the usual way once it's ready 😊
 
@@ -51,7 +55,7 @@ observed regressions and push out a new release candidate ASAP.
 
   * [Ticket for general feedback](https://github.com/foosel/OctoPrint/issues/2492)
   * [Changelog and Release Notes](https://github.com/foosel/OctoPrint/releases/tag/1.3.7rc1)
-  * [Using Release Channels](https://github.com/foosel/OctoPrint/wiki/Using-Release-Channels)
+  * [How to use release channels to help test release candidates](https://discourse.octoprint.org/t/how-to-use-the-release-channels-to-help-test-release-candidates/402)
   * [How to file a bug report](https://github.com/foosel/OctoPrint/blob/master/CONTRIBUTING.md#how-to-file-a-bug-report)
   * [Contribution Guidelines (also relevant for creating bug reports!)](https://github.com/foosel/OctoPrint/blob/master/CONTRIBUTING.md)
   * [FAQ](https://faq.octoprint.org)
