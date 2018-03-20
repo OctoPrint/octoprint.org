@@ -7,6 +7,7 @@ card: /assets/img/blog/2018-03/2018-03-20-community-forum-card.png
 featuredimage: /assets/img/blog/2018-03/2018-03-20-community-forum-card.png
 poster: /assets/img/blog/2018-03/2018-03-20-community-forum-poster.png
 date: 2018-03-20 12:40:00 +0100
+excerpt: OctoPrint finally has its own community forum at discourse.octoprint.org!
 
 ---
 
