@@ -4,7 +4,7 @@ layout: post
 title: 'New release candidate: 1.3.7rc2'
 author: foosel
 date: 2018-03-23 16:15:00 +0100
-card: /assets/img/blog/2018-03/2018-03-23-octoprint-1.3.7rc1-card.png
+card: /assets/img/blog/2018-03/2018-03-23-octoprint-1.3.7rc2-card.png
 featuredimage: /assets/img/blog/2018-03/2018-03-23-octoprint-1.3.7rc2-card.png
 poster: /assets/img/blog/2018-03/2018-03-23-octoprint-1.3.7rc2-poster.png
 excerpt: This second release candidate of the 1.3.7 release fixes a couple of bugs reported with the first one
