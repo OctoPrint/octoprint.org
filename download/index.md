@@ -25,7 +25,8 @@ issues were observed, caused by the WiFi interface when bandwidth is utilized (e
 impacting printing results. [See also here](https://github.com/guysoft/OctoPi/issues/318#issuecomment-284762963).
 
 Please note that the recently released **Raspberry Pi 3+ is not compatible to OctoPi 0.14 and will not boot on it**. 
-Use one of the current [OctoPi 0.15 nightlies](http://gnethomelinux.com/OctoPi/nightly/) if you have a 3+.
+Use one of the current [OctoPi 0.15 nightlies](http://gnethomelinux.com/OctoPi/nightly/) if you have a 3+. 
+[See also here](https://github.com/guysoft/OctoPi/issues/505).
     
 You can download the latest OctoPi image via the following button:
 
