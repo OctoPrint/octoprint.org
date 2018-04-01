@@ -23,15 +23,16 @@ that already includes OctoPrint plus everything you need to run it:
 Please note that the **Raspberry Pi Zero W is not recommended** since severe performance 
 issues were observed, caused by the WiFi interface when bandwidth is utilized (e.g. the webcam is streamed), negatively 
 impacting printing results. [See also here](https://github.com/guysoft/OctoPi/issues/318#issuecomment-284762963).
+
+Please note that the recently released **Raspberry Pi 3+ is not compatible to OctoPi 0.14 and will not boot on it**. 
+Use one of the current [OctoPi 0.15 nightlies](http://gnethomelinux.com/OctoPi/nightly/) if you have a 3+.
     
-You can download the latest OctoPi image via the following button. **Please note that OctoPi 0.14 is not yet compatible
-with the recently released Raspberry Pi 3+ and will not boot on it.** Use one of the current [OctoPi 0.15 nightlies](http://gnethomelinux.com/OctoPi/nightly/) 
-if you have one of those.
+You can download the latest OctoPi image via the following button:
 
 <div class="text-center">
     <a class="btn btn-large btn-block" href="https://octopi.octoprint.org/latest" data-event-category="download" data-event-action="latest"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;0.14</a>
     <small>MD5Sum of the .zip: <code>52c855c9bcc88fd3bf81bbe8e58a2e4c</code></small><br>
-    <small>Image compatible with Raspberry Pi A, B, A+, B+, B2, 3, Zero and Zero W, <strong>not yet compatible</strong> with Raspberry Pi 3+</small><br>
+    <small>Image compatible with Raspberry Pi A, B, A+, B+, B2, 3, Zero and Zero W. <strong>Incompatible with Raspberry Pi 3+</strong></small><br>
     <small><strong>Raspberry Pi 3 strongly recommended!</strong></small>
 </div>
 
