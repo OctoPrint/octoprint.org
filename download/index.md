@@ -98,8 +98,8 @@ They should be pretty much identical on other Linux distributions.
 
 ##  Windows
 
-For installing OctoPrint on a Windows system, please take a look at [the setup instructions for Windows on the wiki](https://github.com/foosel/OctoPrint/wiki/Setup-on-Windows).
+For installing the OctoPrint server on a Windows system, please take a look at [the setup instructions for Windows on the forum](https://discourse.octoprint.org/t/setting-up-octoprint-on-windows/383/1).
 
 ## Mac
 
-For installing OctoPrint on a Mac, please take a look at [the setup instructions for MacOS on the wiki](https://github.com/foosel/OctoPrint/wiki/Setup-on-Mac).
+For installing the OctoPrint server on a Mac, please take a look at [the setup instructions for MacOS on the wiki](https://github.com/foosel/OctoPrint/wiki/Setup-on-Mac).
