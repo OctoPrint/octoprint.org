@@ -23,7 +23,7 @@ Apart from adding support for the Pi 3+ and of course shipping with the current 
 >
 > Developer Notes:
 >
-> We have moved to build with [CustomPiOS](https://github.com/guysoft/CustomPiOS), which means that OctoPi has joined a larger build system which supports lots of modules and cool ways to configure and maintain debian-based IOT distos.
+> We have moved to build with [CustomPiOS](https://github.com/guysoft/CustomPiOS), which means that OctoPi has joined a larger build system which supports lots of modules and cool ways to configure and maintain debian-based IOT distros.
 
 If you've been waiting for a new OctoPi release, this is your chance to give the candidate a test drive
 and [report any findings back](https://github.com/guysoft/OctoPi/issues/516) so we can make sure the
