@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function fetch_img {
+	echo "Fetching image for $1..."
+	curl -o "assets/img/yt-with-consent/$1.jpg" "https://i.ytimg.com/vi/$1/maxresdefault.jpg"
+}
+
+if [ -z "$1" ];
+then
+	echo "Fetching all images..."
+	for name in $(grep -roh "include youtube.html vid=\"[[:alnum:]_-]*\"" blog/ download/ imprint/ support-octoprint/ index.html | awk '{print $3}' | awk -F= '{print $2}' | cut -d'"' -f 2)
+	do
+		fetch_img $name
+	done
+else
+	fetch_img $1;
+fi
+

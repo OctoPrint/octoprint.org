@@ -6,6 +6,7 @@ exclude:
 - Gemfile.lock
 - vendor
 - "*.iml"
+- fetch_yt_preview
 
 highlighter: rouge
 markdown: kramdown

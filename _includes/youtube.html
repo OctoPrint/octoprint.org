@@ -1,3 +1,3 @@
 <div class="responsive_iframe">
-	<iframe width="560" height="315" src="//www.youtube.com/embed/{{ include.vid }}" frameborder="0" allowfullscreen="allowfullscreen">&nbsp;</iframe>
+	<div class="yt-with-consent" data-vid="{{ include.vid }}"{% if include.preview %} data-preview="{{ include.preview}}"{% endif %}></div>
 </div>
