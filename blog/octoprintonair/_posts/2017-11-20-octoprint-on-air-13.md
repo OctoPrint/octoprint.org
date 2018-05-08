@@ -8,6 +8,7 @@ card: /assets/img/blog/2017-11/2017-11-20-octoprint-on-air-13-card.png
 poster: /assets/img/blog/2017-11/2017-11-20-octoprint-on-air-13-poster.png
 excerpt: The thirteenth episode of a monthly live broadcast for Patrons which aired live on November 11th 2017.
 date: 2017-11-20 11:45:00 +0100
+comments: false
 
 ---
 

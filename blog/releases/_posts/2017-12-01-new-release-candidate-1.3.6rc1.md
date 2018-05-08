@@ -14,6 +14,7 @@ images:
   title: File and folder names now support UTF8 - including emoji.
 excerpt: The first release candidate of the 1.3.6 release, with various
    improvements and bug fixes.
+comments: false
 
 ---
 

@@ -9,6 +9,7 @@ featuredimage: /assets/img/blog/2017-12/2017-12-08-octoprint-1.3.6rc3-card.png
 poster: /assets/img/blog/2017-12/2017-12-08-octoprint-1.3.6rc3-poster.png
 excerpt: This third release candidate of the 1.3.6 release fixes two small bugs found in the second one
    that were an issue with new/improved functionality and also switches plugin blacklist access to https.
+comments: false
 
 ---
 

@@ -13,6 +13,7 @@ images:
   title: File and folder names now support UTF8 - including emoji.
 excerpt: As an early christmas present I'm happy to present you OctoPrint 1.3.6. This a true maintenance release 
   again, consisting of various improvements and fixes.
+comments: false
 
 ---
 

@@ -9,6 +9,7 @@ featuredimage: /assets/img/blog/2017-12/2017-12-05-octoprint-1.3.6rc2-card.png
 poster: /assets/img/blog/2017-12/2017-12-05-octoprint-1.3.6rc2-poster.png
 excerpt: This second release candidate of the 1.3.6 release fixes a couple of bugs reported with the first one
    that were either regressions or issues with new/improved functionality.
+comments: false
 
 ---
 
