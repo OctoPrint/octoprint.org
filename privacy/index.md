@@ -61,6 +61,16 @@ umfänglich nutzen können. Durch die Nutzung dieser Website erklären Sie sich 
 Daten durch BuySellAds in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.
 </p>
 
+<p>
+<strong>Widerspruch gegen Datenerfassung</strong>
+</p> 
+
+<p>
+Sie können die Erfassung Ihrer Daten durch Carbon Ads verhindern, indem Sie auf folgenden Link klicken. Es wird ein 
+Opt-Out-Cookie gesetzt, der die Werbeeinbindung und damit auch die Erfassung Ihrer Daten bei zukünftigen Besuchen 
+dieser Website verhindert: <a href="javascript:carbonOptout();">Carbon Ads deaktivieren</a>.
+</p>
+
 <h2>5. Plugins und Tools</h2>
 <h3>YouTube</h3> <p>Unsere Website nutzt Plugins der von Google betriebenen Seite YouTube. Betreiber der Seiten ist die YouTube, LLC, 901 Cherry Ave., San Bruno, CA 94066, USA.</p> <p>Wenn Sie eine unserer mit einem YouTube-Plugin ausgestatteten Seiten besuchen und auf die Videovorschau klicken, wird eine Verbindung zu den Servern von YouTube hergestellt. Dabei wird dem YouTube-Server mitgeteilt, welche unserer Seiten Sie besucht haben.</p> <p>Wenn Sie in Ihrem YouTube-Account eingeloggt sind, ermöglichen Sie YouTube, Ihr Surfverhalten direkt Ihrem persönlichen Profil zuzuordnen. Dies können Sie verhindern, indem Sie sich aus Ihrem YouTube-Account ausloggen.</p> <p>Die Nutzung von YouTube erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.</p> <p>Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von YouTube unter: <a href="https://www.google.de/intl/de/policies/privacy" target="_blank">https://www.google.de/intl/de/policies/privacy</a>.</p>
 
@@ -122,6 +132,16 @@ You can prevent the installation of cookies
 by setting your browser software accordingly. Please be aware that in this case, you may not be able to make full use 
 of all the features of this website. By using this website, you agree to the processing of data relating to you and 
 collected by Google as described and for the purposes set out above.
+</p>
+
+<p>
+<strong>Objecting to the collection of data</strong>
+</p> 
+
+<p>
+You can prevent the collection of your data by Carbon Ads by clicking on the following link. An opt-out cookie will 
+be set to prevent ad display and by this your data from being collected on future visits to this site: 
+<a href="javascript:gaOptout();">Disable Carbon Ads</a>.
 </p>
 
 <h2>5. Plugins and tools</h2>
