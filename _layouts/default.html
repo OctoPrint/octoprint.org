@@ -95,6 +95,7 @@
             };
         }
 
+        {% raw %}
         window.addEventListener("load", function(){
             window.cookieconsent.hasTransition = false;
             window.cookieconsent.initialise({
@@ -108,9 +109,13 @@
                     "button": {
                         "background": "#0b7500"
                     }
+                },
+                "elements": {
+                    "messagelink": '<span id="cookieconsent:desc" class="cc-message">{{message}} <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank">{{link}}</a> or <a aria-label="privacy policy" tabindex="1" class="cc-link" href="/privacy/" target="_blank">read our Privacy Policy</a></span>'
                 }
             })
         });
+        {% endraw %}
 
         /**
          * Make sure octoprint.github.io stuff gets rewritten to octoprint.org.
