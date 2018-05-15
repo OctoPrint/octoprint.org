@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Datenschutzerklärung / Privacy Policy
+robots: noindex,nofollow
 ---
 
 <center><em>For the english version <a href="#en">see below</a></em></center>
