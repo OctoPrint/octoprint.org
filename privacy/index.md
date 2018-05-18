@@ -132,7 +132,7 @@ user behavior to optimize both its website and its advertising.
 You can prevent the installation of cookies 
 by setting your browser software accordingly. Please be aware that in this case, you may not be able to make full use 
 of all the features of this website. By using this website, you agree to the processing of data relating to you and 
-collected by Google as described and for the purposes set out above.
+collected by Carbon Ads as described and for the purposes set out above.
 </p>
 
 <p>
