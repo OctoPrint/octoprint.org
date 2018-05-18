@@ -142,7 +142,12 @@ collected by Google as described and for the purposes set out above.
 <p>
 You can prevent the collection of your data by Carbon Ads by clicking on the following link. An opt-out cookie will 
 be set to prevent ad display and by this your data from being collected on future visits to this site: 
-<a href="javascript:gaOptout();">Disable Carbon Ads</a>.
+<a href="javascript:carbonOptout();">Disable Carbon Ads</a>.
+</p>
+
+<p>
+For more information about how Carbon Ads handles user data, see Carbon Ad's privacy policy:
+<a href="https://carbonads.net/privacy.php" target="_blank">https://carbonads.net/privacy.php</a>.
 </p>
 
 <h2>5. Plugins and tools</h2>
