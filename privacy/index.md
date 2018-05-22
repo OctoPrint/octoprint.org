@@ -261,7 +261,9 @@ confidential and in accordance with the statutory data protection regulations an
 
 If you use this website, various pieces of personal data will be collected. Personal information is any data with which 
 you could be personally identified. This privacy policy explains what information we collect and what we use it for. 
-It also explains how and for what purpose this happens.</p> <p>Please note that data transmitted via the internet 
+It also explains how and for what purpose this happens.
+
+Please note that data transmitted via the internet 
 (e.g. via email communication) may be subject to security breaches. Complete protection of your data from third-party 
 access is not possible.
 
