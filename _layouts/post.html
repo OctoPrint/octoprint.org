@@ -73,7 +73,7 @@ banner: true
                 <script type="text/javascript">
                   DiscourseEmbed = { discourseUrl: 'https://discourse.octoprint.org/',
                                      discourseEmbedUrl: '{{ page.url | prepend: site.baseurl | prepend: site.external }}',
-                                     discourseReferrerPolicy: 'unsafe-url'};
+                                     discourseReferrerPolicy: 'no-referrer-when-downgrade'};
 
                   (function() {
                     var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
