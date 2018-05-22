@@ -68,7 +68,7 @@ TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass d
 Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten 
 mitgelesen werden.
 
-### Widerspruch gegen Werbe-Mails
+### Widerspruch gegen Werbe-Mails, -Post oder Telefonanrufe
 
 Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich 
 angeforderter Werbung und Informationsmaterialien wird hiermit widersprochen. Die Betreiber der Seiten behalten sich 
