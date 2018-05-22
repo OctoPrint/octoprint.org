@@ -2,6 +2,7 @@
 layout: page
 title: Datenschutzerklärung / Privacy Policy
 robots: noindex,nofollow
+lastupdate: 2018-05-22 00:00:00 +0000
 ---
 
 <center><em>For the english version <a href="#en">see below</a></em></center>
@@ -229,6 +230,8 @@ Um die Kommentarfunktion zu nutzen, müssen Sie sich bei discourse.octoprint.org
 Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von discourse.octoprint.org unter 
 [https://discourse.octoprint.org/privacy](https://discourse.octoprint.org/privacy). 
 
+<center><em>Dieses Dokument wurde zuletzt aktualisiert am {{ page.lastupdate | date: "%d.%m.%Y" }}.</em></center>
+
 ---
 
 <center><em>Für die deutsche Fassung <a href="#de">siehe oben</a></em></center>
@@ -444,3 +447,5 @@ The comment function available on this website is provided by our forum at disco
 To use the comment function you'll need to register at and log into discourse.octoprint.org. Further information about
 handling user data can be found in the privacy policy of discourse.octoprint.org at
 [https://discourse.octoprint.org/privacy](https://discourse.octoprint.org/privacy).
+
+<center><em>This document was last updated on {{ page.lastupdate | date: "%B %-d, %Y" }}.</em></center>
