@@ -71,16 +71,25 @@ banner: true
                 <div id='discourse-comments'></div>
 
                 <script type="text/javascript">
-                  DiscourseEmbed = { discourseUrl: 'https://discourse.octoprint.org/',
-                                     discourseEmbedUrl: '{{ page.url | prepend: site.baseurl | prepend: site.external }}',
-                                     discourseReferrerPolicy: 'no-referrer-when-downgrade'};
+                  if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+                    // Apparently Safari is a special snow flake and doesn't understand the referer policies. So
+                    // no comments for Safari. Complain to Apple.
+                    document.getElementById("discourse-comments").innerHTML = "It looks like you are using Safari. " +
+                        "Comment embedding is sadly not supported in Safari. You'll need to " +
+                        "<a href='https://discourse.octoprint.org/c/blog/'>go to the comment forum instead.</a>";
+                  } else {
+                    DiscourseEmbed = { discourseUrl: 'https://discourse.octoprint.org/',
+                                       discourseEmbedUrl: '{{ page.url | prepend: site.baseurl | prepend: site.external }}',
+                                       discourseReferrerPolicy: 'no-referrer-when-downgrade'};
 
-                  (function() {
-                    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-                    //d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
-                    d.src = "{{ BASE_PATH }}/assets/js/comments.js";
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
-                  })();
+                    (function() {
+                      var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+                      //d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+                      d.src = "{{ BASE_PATH }}/assets/js/comments.js";
+                      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+                    })();
+                  }
+
                 </script>
             </div>
             {% endunless %}
