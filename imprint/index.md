@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Impressum
+title: Legal Notice
 robots: noindex,nofollow
 ---
 

@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Datenschutzerklärung / Privacy Policy
+title: Privacy Policy
 robots: noindex,nofollow
 lastupdate: 2018-05-23 00:00:00 +0000
 ---
-
-<h1 id="en">Privacy Policy</h1>
 
 ## 1. An overview of data protection
 
