@@ -27,8 +27,8 @@ impacting printing results. [See also here](https://github.com/guysoft/OctoPi/is
 You can download the latest OctoPi image via the following button:
 
 <div class="text-center">
-    <a class="btn btn-large btn-block" href="https://octopi.octoprint.org/latest" data-event-category="download" data-event-action="latest"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;0.15</a>
-    <small>MD5Sum of the .zip: <code>e807a8899dc986114dede71b46d0d6ca</code></small><br>
+    <a class="btn btn-large btn-block" href="https://octopi.octoprint.org/latest" data-event-category="download" data-event-action="latest"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;0.15.1</a>
+    <small>MD5Sum of the .zip: <code>4600d24c0618376c2a10c1507b8ba990</code></small><br>
     <small>Image compatible with Raspberry Pi A, B, A+, B+, B2, 3, 3+, Zero and Zero W.</small><br>
     <small><strong>Raspberry Pi 3 or 3+ strongly recommended!</strong></small>
 </div>
