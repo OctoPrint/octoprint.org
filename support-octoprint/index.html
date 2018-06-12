@@ -83,6 +83,11 @@ description: Working on OctoPrint takes a lot of time and effort. If you've come
                                 {% endfor %}
                             </ul>
                             {% endif %}
+                            {% if kit.location %}
+                            <span class="kitlocation">
+                                {{ kit.location }}
+                            </span>
+                            {% endif %}
                         </div>
                     {% endfor %}
                 </div>
