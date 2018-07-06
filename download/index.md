@@ -53,6 +53,8 @@ Please follow these steps after downloading
    **Note:** This changed with OctoPi 0.15.0, earlier versions had you edit ``octopi-network.txt`` which has a different
    format. This old method is *no longer supported* and the contents of this file will be ignored. Just 
    use ``octopi-wpa-supplicant.txt``.
+   
+   Please also refer take a look at the [full WiFi setup guide in the FAQ](https://faq.octoprint.org/wifi-setup) that also includes Troubleshooting tips.
 3. Boot the Pi from the card.
 4. Log into your Pi via SSH (it is located at ``octopi.local``
    [if your computer supports bonjour](https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview)
