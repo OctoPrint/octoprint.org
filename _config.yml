@@ -46,4 +46,4 @@ twitterlink: https://twitter.com/OctoPrint3D
 facebooklink: https://facebook.com/OctoPrint
 gpluslink: https://plus.google.com/+OctoprintOrg/posts
 
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
