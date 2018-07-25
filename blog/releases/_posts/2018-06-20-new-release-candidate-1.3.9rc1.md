@@ -40,7 +40,7 @@ Here are some highlights from the release notes:
   * Added a new bundled plugin ["Action Command Prompt support"](http://docs.octoprint.org/en/maintenance/bundledplugins/action_command_prompt.html) 
     that allows printer firmware to trigger confirmation/decision dialogs in OctoPrint (e.g. for filament swaps).
   * The bundled web server Tornado was updated to a newer version to work around issues with client IP logging and other 
-    things. This also led to the discovery a **heads-up for anyone running OctoPrint behind NGINX** - please see the 
+    things. This also led to the discovery of a **heads-up for anyone running OctoPrint behind NGINX** - please see the 
     [release notes](https://github.com/foosel/OctoPrint/releases/tag/1.3.9rc1) for details on this.
   * As [announced with the release of OctoPrint 1.3.6](https://octoprint.org/blog/2017/12/12/new-release-1.3.6/), 
     the legacy plugin bundling flag has now been removed again. Plugin authors, please 
