@@ -6,7 +6,7 @@ author: foosel
 featuredimage: /assets/img/blog/2018-08/2018-08-13-octoprint-on-air-18-card.png
 card: /assets/img/blog/2018-08/2018-08-13-octoprint-on-air-18-card.png
 poster: /assets/img/blog/2018-08/2018-08-13-octoprint-on-air-18-poster.png
-excerpt: The eighteent episode of a monthly live broadcast for Patrons which aired live on 
+excerpt: The eighteenth episode of a monthly live broadcast for Patrons which aired live on 
     July 28th 2018.
 date: 2018-08-13 14:30:00 +0200
 
