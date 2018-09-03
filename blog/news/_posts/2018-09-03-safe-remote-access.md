@@ -6,7 +6,7 @@ author: jubaleth
 card: /assets/img/blog/2018-09/2018-09-03-safe-remote-access-card.png
 featuredimage: /assets/img/blog/2018-09/2018-09-03-safe-remote-access-card.png
 poster: /assets/img/blog/2018-09/2018-09-03-safe-remote-access-poster.png
-date: 2018-09-03 18:20:00 +0100
+date: 2018-09-03 18:20:00 +0200
 excerpt: In this guest post, community member Jubaleth will tell you about safe ways to access your OctoPrint instance from the internet.
 
 ---
@@ -39,7 +39,7 @@ Setup is relatively simple, install the plugin, either from the Plugin Manager, 
 #### OctoPrint-DiscordRemote
 
 If you're a discord user, the DiscordRemote plugin is another option. It will join your discord channel,
-rrespond to commands and send you snapshots from your webcam, if you have one installed. At the time of writing, there does not appear to be a way to grant permissions to a specific user, only the channel owner may issue commands. This plugin is can be found in the Plugin Manager or [here](https://plugins.octoprint.org/plugins/DiscordRemote/)
+respond to commands and send you snapshots from your webcam, if you have one installed. At the time of writing, there does not appear to be a way to grant permissions to a specific user, only the channel owner may issue commands. This plugin can be found in the Plugin Manager or [here](https://plugins.octoprint.org/plugins/DiscordRemote/)
 
 #### Telegram
 
@@ -55,7 +55,7 @@ Plugins are a fantastic way for a beginner (or veteran) to access their printer 
 
 #### Reverse Proxy
 
-One can setup a reverse proxy using solutions like nginx, Apache, and HAProxy. There are certainly other options available, these are the 3 most common, and the 3 that popped into my head. When using a reverse proxy, I highly recommend setting up some form of authentication. The most common (and easiest to setup) is basic authentication (i.e. username/password). In this case, I also highly recommend the use of rate limiting to prevent brute-force password guessing attacks. A more secure choice would be client-certificate authentication, this of course requries setting up a PKI to handle the issuance and revocation of certificates. 
+One can setup a reverse proxy using solutions like nginx, Apache, and HAProxy. There are certainly other options available, these are the 3 most common, and the 3 that popped into my head. When using a reverse proxy, I highly recommend setting up some form of authentication. The most common (and easiest to setup) is basic authentication (i.e. username/password). In this case, I also highly recommend the use of rate limiting to prevent brute-force password guessing attacks. A more secure choice would be client-certificate authentication, this of course requires setting up a PKI to handle the issuance and revocation of certificates. 
 
 Whether you use a reverse proxy, or VPN to access OctoPrint; I recommend putting it on a separate physical box to the box connected to your printer. Running everything on a single server is just asking for trouble.
 
