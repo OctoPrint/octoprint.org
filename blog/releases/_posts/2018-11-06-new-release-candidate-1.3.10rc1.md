@@ -3,7 +3,7 @@
 layout: post
 title: 'New release candidate: 1.3.10rc1'
 author: foosel
-date: 2018-11-06 12:00:00 +0100
+date: 2018-11-06 12:10:00 +0100
 card: /assets/img/blog/2018-11/2018-11-06-octoprint-1.3.10rc1-card.png
 featuredimage: /assets/img/blog/2018-11/2018-11-06-octoprint-1.3.10rc1-card.png
 poster: /assets/img/blog/2018-11/2018-11-06-octoprint-1.3.10rc1-poster.png
