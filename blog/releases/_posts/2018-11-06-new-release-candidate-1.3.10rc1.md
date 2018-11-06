@@ -48,7 +48,7 @@ There's also a small heads-up for plugin authors:
 
 You can find the full changelog and release notes as usual [on Github](https://github.com/foosel/OctoPrint/releases/tag/1.3.10rc1).
 
-Special thanks to everyone who contributed to this release candidate, especially @bradcfisher, @eyal0, @fieldOfView, 
+Special thanks to everyone who contributed to this release candidate, especially @BillyBlaze, @bradcfisher, @eyal0, @fieldOfView, 
 @gdombiak, @gerfderp, @hashashin and @tedder for their PRs.
 
 **If you are tracking the "Maintenance RC" release channel**, you should soon get an update notification just like you 
