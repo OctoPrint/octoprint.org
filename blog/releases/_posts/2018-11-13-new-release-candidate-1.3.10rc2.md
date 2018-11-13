@@ -41,7 +41,7 @@ If you want to and can help test this release candidate, you can find informatio
 if not already done (also linked below).
 
 **Please provide feedback** on this RC. For general feedback you can use 
-[this ticket on the tracker](https://github.com/foosel/OctoPrint/issues/2871).
+[this ticket on the tracker](https://github.com/foosel/OctoPrint/issues/2889).
 The information that everything works fine for you is also valuable feedback 😄. For bug reports please follow
 ["How to file a bug report"](https://github.com/foosel/OctoPrint/blob/master/CONTRIBUTING.md#how-to-file-a-bug-report) - 
 I need logs and reproduction steps to fix issues, not just the information that something doesn't work.
@@ -53,7 +53,7 @@ observed regressions and push out a new release candidate ASAP.
 
 ### Links
 
-  * [Ticket for general feedback](https://github.com/foosel/OctoPrint/issues/2871)
+  * [Ticket for general feedback](https://github.com/foosel/OctoPrint/issues/2889)
   * [Changelog and Release Notes](https://github.com/foosel/OctoPrint/releases/tag/1.3.10rc2)
   * [How to use release channels to help test release candidates](https://discourse.octoprint.org/t/how-to-use-the-release-channels-to-help-test-release-candidates/402)
   * [How to file a bug report](https://github.com/foosel/OctoPrint/blob/master/CONTRIBUTING.md#how-to-file-a-bug-report)
