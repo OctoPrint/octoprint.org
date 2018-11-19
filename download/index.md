@@ -7,7 +7,7 @@ description: Learn how to setup OctoPrint using the preinstalled OctoPi image fo
 
 # OctoPi
 
-[Guy Sheffer](https://github.com/guysoft) maintains ["OctoPi"](https://octopi.octoprint.org),
+[Guy Sheffer](https://github.com/guysoft) maintains ["OctoPi"](https://github.com/guysoft/OctoPi),
 a [Raspbian based](http://www.raspbian.org/) SD card image for the Raspberry Pi
 that already includes OctoPrint plus everything you need to run it:
 
@@ -78,6 +78,7 @@ Please also refer to [OctoPi's README](https://github.com/guysoft/OctoPi), espec
     pages 50-51. You can find an excerpt [here](/assets/download/MagPi36_OctoPrint.pdf) 
     (MagPi License: [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/)).
   * Scripts to build (and customize) the image yourself can be found in [OctoPi's Github repository](https://github.com/guysoft/OctoPi).
+  * Nightly builds can be found [here](http://gnethomelinux.com/OctoPi/nightly/).
 
 ----
 
