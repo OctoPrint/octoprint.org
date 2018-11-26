@@ -14,7 +14,7 @@ date: 2018-11-23 17:30:00 +0100
 
 {% include youtube.html vid="poP0wr_n8fo" %}
 
-Topics in this episode which was recorded on September 29th:
+Topics in this episode which was recorded on November 16th:
 
   * 1.3.0rc1 and 1.3.10rc2
   * Release Candidates in general
