@@ -1,31 +1,29 @@
 ---
 
 layout: post
-title: "OctoPrint On Air #20"
+title: "OctoPrint On Air #21"
 author: foosel
-featuredimage: /assets/img/blog/2018-11/2018-11-23-octoprint-on-air-20-card.png
-card: /assets/img/blog/2018-11/2018-11-23-octoprint-on-air-20-card.png
-poster: /assets/img/blog/2018-11/2018-11-23-octoprint-on-air-20-poster.png
-excerpt: The twentieth episode of a monthly live broadcast for Patrons which aired live on 
-    November 16th 2018.
-date: 2018-11-23 17:30:00 +0100
+featuredimage: /assets/img/blog/2018-12/2018-12-18-octoprint-on-air-21-card.png
+card: /assets/img/blog/2018-12/2018-12-18-octoprint-on-air-21-card.png
+poster: /assets/img/blog/2018-12/2018-12-18-octoprint-on-air-21-poster.png
+excerpt: The twenty first episode of a monthly live broadcast for Patrons which aired live on 
+    December 14th 2018.
+date: 2018-12-18 12:20:00 +0100
 
 ---
 
-{% include youtube.html vid="poP0wr_n8fo" %}
+{% include youtube.html vid="euiddlSAoNA" %}
 
 Topics in this episode which was recorded on November 16th:
 
-  * 1.3.10rc1 and 1.3.10rc2
-  * Release Candidates in general
-  * A look at the first output of the Anonymous Usage Tracking
+  * 1.3.10rc3 and 1.3.10rc4
+  * 1.3.10 stable release
+  * A longer look at the current output of the Anonymous Usage Tracking
   * Q&A session touching on
-    * My recent prints
-    * Makerspaces
-    * GCODE and why it's bad as a protocol
+    * the importance of full bug reports
     
 Full contents with jump marks available in the 
-[YouTube description](https://youtu.be/poP0wr_n8fo).
+[YouTube description](https://youtu.be/euiddlSAoNA).
 
 You can find all public past episodes in 
 **[the OctoPrint On Air Playlist](https://www.youtube.com/playlist?list=PL9j2DtsIPVkOFIMRrnnbXsnXtQmwj1IId)**.
