@@ -41,12 +41,13 @@ or simply buy one of the available
     <a class="btn btn-large btn-block" href="/support-octoprint/#kits" data-event-category="download" data-event-action="kits">All-in-one OctoPrint Kits</a>
 </div>
 
-##  Getting Started with OctoPi
+##  Setting up OctoPi
 
-Please follow these steps after downloading
+Please follow these steps after downloading:
 
 1. Unzip the image and install the contained ``.img`` file to an SD card
-   [like any other Raspberry Pi image](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
+   [using Etcher](https://etcher.io/). **Do not at any point format the SD from your Operating System, even if prompted to do so** - 
+   that will break it and you'll have to start over. Just use Etcher to flash the `.img` file, that is enough!
 2. Configure your WiFi connection by editing ``octopi-wpa-supplicant.txt`` on the root of the
    flashed card when using it like a thumb drive. **Important: Do not use WordPad (Windows) or TextEdit (MacOS X)**
    for this, those editors are known to mangle the file, making configuration fail. Use something like 
