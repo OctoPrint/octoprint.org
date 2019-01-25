@@ -48,6 +48,7 @@ Please follow these steps after downloading:
 1. Unzip the image and install the contained ``.img`` file to an SD card
    [using Etcher](https://etcher.io/). **Do not at any point format the SD from your Operating System, even if prompted to do so** - 
    that will break it and you'll have to start over. Just use Etcher to flash the `.img` file, that is enough!
+
 2. Configure your WiFi connection by editing ``octopi-wpa-supplicant.txt`` on the root of the
    flashed card when using it like a thumb drive. **Important: Do not use WordPad (Windows) or TextEdit (MacOS X)**
    for this, those editors are known to mangle the file, making configuration fail. Use something like 
@@ -58,12 +59,22 @@ Please follow these steps after downloading:
    use ``octopi-wpa-supplicant.txt``.
    
    Please also refer take a look at the [full WiFi setup guide in the FAQ](https://faq.octoprint.org/wifi-setup) that also includes Troubleshooting tips.
+
 3. Boot the Pi from the card.
+
 4. Log into your Pi via SSH (it is located at ``octopi.local``
    [if your computer supports bonjour](https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview)
    or the IP address assigned by your router), default username is "pi",
-   default password is "raspberry". **Change the password** using the ``passwd``
-   command. You do not need to expand the filesystem, current versions of OctoPi do this automatically.
+   default password is "raspberry". Run ``sudo raspi-config``. Once that is open:
+    
+   1. Change the password via "Change User Password"
+   2. Optionally: Change the configured timezone via "Localization Optinos" > "Timezone".
+   3. Optionally: Change the hostname via "Network Options" > "Hostname". Your OctoPi instance will then no longer be reachable under ``octopi.local`` but rather the hostname you chose postfixed with ``.local``, so keep that in mind.
+    
+   You can navigate in the menus using the arrow keys and Enter. To switch to selecting the buttons at the bottom use Tab.
+    
+   You do not need to expand the filesystem, current versions of OctoPi do this automatically.
+
 5. Access OctoPrint through ``http://octopi.local`` or ``http://<your pi's ip address>``. https is available too,
    with a self-signed certificate.
 
