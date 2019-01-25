@@ -10,7 +10,7 @@ poster: /assets/img/blog/2019-01/2019-01-25-octopi-0.16.0rc1-poster.png
 ---
 
 [Guy Sheffer](https://github.com/guysoft) just published a
-[release candidate](https://github.com/guysoft/OctoPi/issues/571) for the next release of the OctoPi image, version 0.15.
+[release candidate](https://github.com/guysoft/OctoPi/issues/571) for the next release of the OctoPi image, version 0.16.0.
 
 Apart from adding support for the Pi 3A+ and of course shipping with the current stable OctoPrint version
 1.3.10, 0.16.0rc1 also contains the following changes:
