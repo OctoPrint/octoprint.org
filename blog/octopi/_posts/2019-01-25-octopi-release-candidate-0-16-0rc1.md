@@ -3,7 +3,7 @@ layout: post
 author: foosel
 title: "OctoPi Release Candidate 0.16.0rc1 needs testers!"
 date: 2019-01-25 12:15:00 +0100
-excerpt: Guy Sheffer published a release candidate for a the release of OctoPi 0.16.0 and is looking for feedback!
+excerpt: Guy Sheffer published a release candidate for the release of OctoPi 0.16.0 and is looking for feedback!
 card: /assets/img/blog/2019-01/2019-01-25-octopi-0.16.0rc1-card.png
 featuredimage: /assets/img/blog/2019-01/2019-01-25-octopi-0.16.0rc1-card.png
 poster: /assets/img/blog/2019-01/2019-01-25-octopi-0.16.0rc1-poster.png
