@@ -115,7 +115,7 @@ They should be pretty much identical on other Linux distributions.
 
 ##  Windows
 
-For installing the OctoPrint server on a Windows system, please take a look at [the setup instructions for Windows on the forum](https://discourse.octoprint.org/t/setting-up-octoprint-on-windows/383/1).
+For installing the OctoPrint server on a Windows system, please take a look at [the setup instructions for Windows on the forum](https://community.octoprint.org/t/setting-up-octoprint-on-windows/383/1).
 
 ## Mac
 

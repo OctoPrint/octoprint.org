@@ -7,7 +7,7 @@ robots: noindex,nofollow
 <div class="alert">
     <p><strong>
         To get support with or answers to any OctoPrint or OctoPi related problems or questions use the
-        <a href="https://discourse.octoprint.org" target="_blank">Community Forum</a>!
+        <a href="https://community.octoprint.org" target="_blank">Community Forum</a>!
     </strong></p>
     <p>
         The contact information here is <em>only</em> provided to comply with German law.
