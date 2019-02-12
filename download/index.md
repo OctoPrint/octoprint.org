@@ -24,14 +24,12 @@ Please note that the **Raspberry Pi Zero W is not recommended** since severe per
 issues were observed, caused by the WiFi interface when bandwidth is utilized (e.g. the webcam is streamed), negatively 
 impacting printing results. [See also here](https://github.com/guysoft/OctoPi/issues/318#issuecomment-284762963).
 
-You can download the latest OctoPi image via the following button. **Please note that OctoPi 0.15.1 is not yet compatible
-with the recently released Raspberry Pi 3A+ and will not boot on it.** Use one of the current [OctoPi 0.16 nightlies](http://gnethomelinux.com/OctoPi/nightly/) 
-if you have one of those.
+You can download the latest OctoPi image via the following button. 
 
 <div class="text-center">
-    <a class="btn btn-large btn-block" href="https://octopi.octoprint.org/latest" data-event-category="download" data-event-action="latest"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;0.15.1</a>
-    <small>MD5Sum of the .zip: <code>4600d24c0618376c2a10c1507b8ba990</code></small><br>
-    <small>Image compatible with Raspberry Pi A, B, A+, B+, 2B, 3B, 3B+, Zero and Zero W. <strong>Not yet compatible with Raspberry Pi 3A+</strong></small><br>
+    <a class="btn btn-large btn-block" href="https://octopi.octoprint.org/latest" data-event-category="download" data-event-action="latest"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;0.16.0</a>
+    <small>MD5Sum of the .zip: <code>c363d50f80f04bebcdc774ec20ad22ce</code></small><br>
+    <small>Image compatible with Raspberry Pi A, B, A+, B+, 2B, 3A+, 3B, 3B+, Zero and Zero W.</small><br>
     <small><strong>Raspberry Pi 3B or 3B+ strongly recommended!</strong></small>
 </div>
 
