@@ -7,7 +7,7 @@ featuredimage: /assets/img/blog/2019-02/2019-02-18-octoprint-on-air-22-card.png
 card: /assets/img/blog/2019-02/2019-02-18-octoprint-on-air-22-card.png
 poster: /assets/img/blog/2019-02/2019-02-18-octoprint-on-air-22-poster.png
 excerpt: The twenty second episode of a monthly live broadcast for Patrons which aired live on 
-    February 9th 2018.
+    February 9th 2019.
 date: 2019-02-18 14:00:00 +0100
 
 ---
