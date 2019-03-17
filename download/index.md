@@ -66,7 +66,7 @@ Please follow these steps after downloading:
    default password is "raspberry". Run ``sudo raspi-config``. Once that is open:
     
    1. Change the password via "Change User Password"
-   2. Optionally: Change the configured timezone via "Localization Optinos" > "Timezone".
+   2. Optionally: Change the configured timezone via "Localization Options" > "Timezone".
    3. Optionally: Change the hostname via "Network Options" > "Hostname". Your OctoPi instance will then no longer be reachable under ``octopi.local`` but rather the hostname you chose postfixed with ``.local``, so keep that in mind.
     
    You can navigate in the menus using the arrow keys and Enter. To switch to selecting the buttons at the bottom use Tab.
