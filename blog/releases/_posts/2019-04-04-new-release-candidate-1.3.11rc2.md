@@ -18,12 +18,9 @@ of existing or newly added functionality that became apparent during testing of 
 > 
 >   * More resilience against broken configurations.
 >   * More resilience against platform startup issues during environment detection.
->   * Don't confuse users with pip's new "OMG PY2.7 IS EOL!!1!" message.
 >   * Error Tracking: Severely restrict what gets tracked:
 >     * we are only interested in handled core exceptions or unhandled exceptions
 >     * we are not interested at all in `SerialException`
->     * in the frontend we are only interested in things originating in the `static` files
->     * in the frontend we are not interested in anything originating in `packed_plugins.js`
 > 
 > **Bug fixes**
 > 
