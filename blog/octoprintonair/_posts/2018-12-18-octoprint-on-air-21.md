@@ -14,7 +14,7 @@ date: 2018-12-18 12:20:00 +0100
 
 {% include youtube.html vid="euiddlSAoNA" %}
 
-Topics in this episode which was recorded on November 16th:
+Topics in this episode which was recorded on December 14th:
 
   * 1.3.10rc3 and 1.3.10rc4
   * 1.3.10 stable release

@@ -209,10 +209,10 @@ Further information about handling user data can be found in the data protection
 
 ### Comment function
 
-The comment function available on this website is provided by our forum at discourse.octoprint.org.
+The comment function available on this website is provided by our forum at community.octoprint.org.
 
-To use the comment function you'll need to register at and log into discourse.octoprint.org. Further information about
-handling user data can be found in the privacy policy of discourse.octoprint.org at
-[https://discourse.octoprint.org/privacy](https://discourse.octoprint.org/privacy){:target="_blank" rel="noopener"}.
+To use the comment function you'll need to register at and log into community.octoprint.org. Further information about
+handling user data can be found in the privacy policy of community.octoprint.org at
+[https://community.octoprint.org/privacy](https://community.octoprint.org/privacy){:target="_blank" rel="noopener"}.
 
 <center><em>This document was last updated on {{ page.lastupdate | date: "%B %-d, %Y" }}.</em></center>

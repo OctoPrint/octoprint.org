@@ -76,9 +76,9 @@ banner: true
                     // no comments for Safari. Complain to Apple.
                     document.getElementById("discourse-comments").innerHTML = "It looks like you are using Safari. " +
                         "Comment embedding is sadly not supported in Safari. You'll need to " +
-                        "<a href='https://discourse.octoprint.org/c/blog/'>go to the comment forum instead.</a>";
+                        "<a href='https://community.octoprint.org/c/blog/'>go to the comment forum instead.</a>";
                   } else {
-                    DiscourseEmbed = { discourseUrl: 'https://discourse.octoprint.org/',
+                    DiscourseEmbed = { discourseUrl: 'https://community.octoprint.org/',
                                        discourseEmbedUrl: '{{ page.url | prepend: site.baseurl | prepend: site.external }}',
                                        discourseReferrerPolicy: 'no-referrer-when-downgrade'};
 
