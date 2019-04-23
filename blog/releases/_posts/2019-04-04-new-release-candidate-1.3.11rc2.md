@@ -11,7 +11,7 @@ excerpt: The second release candidate for the upcoming 1.3.11 stable release.
 
 ---
 
-This second RC of 1.3.10 fixes a couple of regressions observed with the first one and also adds some improvements
+This second RC of 1.3.11 fixes a couple of regressions observed with the first one and also adds some improvements
 of existing or newly added functionality that became apparent during testing of RC1:
 
 > **Improvements**
