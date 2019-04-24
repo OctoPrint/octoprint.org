@@ -21,9 +21,9 @@ $serifFontFamily:       Arvo, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
 
 // Include theme-specific fonts
-@import url(/lib/font/Arvo.css);
-@import url(/lib/font/OpenSans.css);
-@import url(/lib/font/font-awesome.css);
+@import url(../../lib/font/Arvo.css);
+@import url(../../lib/font/OpenSans.css);
+@import url(../../lib/css/font-awesome.css);
 
 // Override theme settings (see ../template/settings.scss)
 $linkColor:             #69C95A;

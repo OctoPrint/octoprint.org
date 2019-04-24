@@ -1,7 +1,7 @@
 @charset "CP850";
-@import url(/lib/font/Arvo.css);
-@import url(/lib/font/OpenSans.css);
-@import url(/lib/font/font-awesome.css);
+@import url(../../lib/font/Arvo.css);
+@import url(../../lib/font/OpenSans.css);
+@import url(../../lib/css/font-awesome.css);
 /**
  * OctoPrint theme for reveal.js.
  *
