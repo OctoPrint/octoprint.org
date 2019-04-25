@@ -168,11 +168,17 @@
 						<h3>The "protocol"</h3>
 						<ul>
 							<li>
-								More or less accurate documentation in the RepRap wiki
+								More or less accurate general documentation in the RepRap wiki
 								<ul>
 									<li>Living document</li>
 									<li><em>Anyone</em> can edit it</li>
 									<li>No governing body</li>
+								</ul>
+							</li>
+							<li>Marlin (mainline) specific documentation on marlinfw.org 👍</li>
+							<li>
+								General problem with both:
+								<ul>
 									<li>No test suite or reference implementation</li>
 									<li>Usually no definition of command <em>responses</em></li>
 								</ul>
@@ -183,16 +189,20 @@
 						<h3>Result</h3>
 						<ul>
 							<li>New commands that have incompatible meaning elsewhere</li>
-							<li>Common functionality in a broken way</li>
+							<li>Common functionality in a slightly different or outright broken way</li>
 							<li>
-								Example: possible temperature reports
-								<ul>
-									<li><code>ok T:20.3/0 T0:20.3/0 T1:20.4/0 B:20.2/0 C:20.1/0</code></li>
-									<li><code>ok T:20.3/0 T1:20.4/0 B:20.2/0</code><br><small>(Smoothieware)</small></li>
-									<li><code>T:20.3/0</code><br><small>(blocking heatup or Repetier w/ single extruder)</small></li>
-									<li><code>T:20.3</code><br><small>(blocking heatup?)</small></li>
-									<li><code>==T:20.3 /0 ==B:20.2 /0</code><br><small>(Creality CR-X 🤷‍♀️)</small></li>
-								</ul>
+								Example: possible (simplified) temperature reports
+								<pre><code data-trim class="nohighlight">
+ok T:20.3/0 B:20.2/0                      ; most common, single extruder
+ok T:20.4/0 T0:20.3/0 T1:20.4/0 B:20.2/0  ; most common, multi extruder, 
+                                          ;   T1 active
+ok T:20.3/0 T1:20.4/0 B:20.2/0            ; Smoothieware, multi extruder
+T:20.3/0 B:20.2/0                         ; autoreport or blocking heatup
+T:20.3/0                                  ; autoreport or blocking heatup
+T:20.3                                    ; blocking heatup?
+ok ==T:20.3 /0 ==B:20.2 /0                ; Creality CR-X 🤨
+echo: T20.3 /0.0 B:20.2/ 0.0ok            ; Lerdge S 🤦‍♀️
+								</code></pre>
 							</li>
 						</ul>
 					</section>
@@ -202,6 +212,7 @@
 							<li>Regularly need to read firmware source of forks</li>
 							<li>These days increasingly difficult (China...)</li>
 							<li>Last resort: Logs from & close collaboration w/ users</li>
+							<li>Have to draw a line somewhere w/rt broken firmware</li>
 						</ul>
 					</section>
 					<section>
@@ -231,9 +242,9 @@
 					<section>
 						<h3>Result</h3>
 						<ul>
-							<li>Ancient bugs still present in current printers</li>
 							<li>
-								Still get tickets regularly caused by bugs in Marlin I fixed six years ago
+								Ancient bugs still present in current printers<br>
+								<small>I still get tickets regularly caused by bugs in Marlin forks I fixed six years ago</small>
 								<ul>
 									<li>Missing <code>ok</code>s</li>
 									<li>Translated serial messages</li>
@@ -242,7 +253,8 @@
 								</ul>
 							</li>
 							<li>
-								Takes ages for new features to propagate
+								Takes ages for new features to propagate<br>
+								<small>If they propagate at all</small>
 								<ul>
 									<li>E.g. <code>busy</code> protocol</li>
 									<li>E.g. capability reports</li>
@@ -261,7 +273,7 @@
 					</section>
 					<section>
 						<p>
-							Please update your printer's firmware regularly - and ideally run the official version, not a vendor fork 😉
+							Please update your printer's firmware regularly - and ideally run the mainline version, not an (outdated) vendor fork 😉
 						</p>
 					</section>
 				</section>
@@ -299,6 +311,7 @@
 									<li>Order of events on subsystem?</li>
 									<li>Third party dependency version?</li>
 									<li>Python 3 compatibility?</li>
+									<li>➡ Have to think of consequences all the time</li>
 								</ul>
 							</li>
 						</ul>
@@ -390,6 +403,7 @@
 									<li>New development</li>
 									<li>Community management</li>
 									<li>Support</li>
+									<li>etc</li>
 								</ul>
 							</li>
 							<li>Full time job and then some</li>
