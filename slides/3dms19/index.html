@@ -73,9 +73,12 @@
 						<h2>Gina Häußge aka foosel</h2>
 						<ul>
 							<li>Fun fact: the <strong>ß</strong> is pronounced like an <strong>S</strong><br><small>(there is no B there, really!)</small></li>
-							<li>Creator & maintainer of OctoPrint</li>
+							<li>
+								Creator & maintainer of OctoPrint<br>
+								<small>and mostly sole developer</small>
+							</li>
 							<li>Passionate coder 👩‍💻</li>
-							<li>Former IT consultant & architect</li>
+							<li>Former IT Consultant & Software Architect</li>
 							<li>Owner of a 3d printer since late 2012<br><small>(help, they keep multiplying!)</small></li>
 						</ul>
 					</section>
@@ -93,7 +96,7 @@
 						<ul>
 							<li>Obviously wanted my desk back</li>
 							<li>
-								Rough idea:
+								Rough idea how to solve this:
 								<ul>
 									<li>Web interface</li>
 									<li>Server installed on a headless Raspberry Pi<br><small>(had just come out that year)</small></li>
@@ -125,22 +128,23 @@
 						</ul>
 					</section>
 					<section>
-						<blockquote>
+						<blockquote style="width:50%">
 							How hard can it be?
 							<footer>— Famous last words</footer>
 						</blockquote>
 					</section>
-					<!--section>
+					<section>
 						<ul>
-							<li>Published my little pet project</li>
-							<li>Suddenly it grew</li>
+							<li>Sat down & built first version over Christmas 2012</li>
+							<li>Published my little pet project, figured "I'm done"</li>
+							<li>People started messaging me about it</li>
 							<li>Then it took over my life</li>
 							<li>And now I've been working on it for the past six years</li>
 						</ul>
 						<p>
 							<small>(Honestly I'm still unsure how this all happened...)</small>
 						</p>
-					</section-->
+					</section>
 				</section>
 
 				<section>
@@ -218,11 +222,12 @@ echo: T20.3 /0.0 B:20.2/ 0.0ok            ; Lerdge S 🤦‍♀️
 							<li>These days increasingly difficult (China...)</li>
 							<li>Last resort: Logs from & close collaboration w/ users</li>
 							<li>Have to draw a line somewhere w/rt broken firmware</li>
+							<li>Attempt to standardize: <strong>Strong</strong> resistance 🤷‍♀️</li>
 						</ul>
 					</section>
 					<section>
 						<p>
-							Please scream at your firmware vendors if they break widely supported behaviour instead of me 😉
+							Please scream at your firmware vendors if they break widely supported behaviour instead of at me, I'm on your side 😉
 						</p>
 					</section>
 				</section>
@@ -270,9 +275,21 @@ echo: T20.3 /0.0 B:20.2/ 0.0ok            ; Lerdge S 🤦‍♀️
 					<section>
 						<h3>Consequence</h3>
 						<ul>
-							<li>OctoPrint has to accomodate firmware from 7 years ago</li>
-							<li>OctoPrint has to accomodate firmware from today</li>
-							<li>Next to no way to differentiate between those</li>
+							<li>
+								OctoPrint has to accomodate firmware
+								<ul>
+									<li>from today</li>
+									<li>from 7 years ago</li>
+									<li>and from anything in between</li>
+								</ul>
+							</li>
+							<li>
+								Next to no way to differentiate between those
+								<ul>
+									<li><code>Marlin V1; Sprinter/grbl mashup for gen6</code></li>
+									<li><code>Author: (default)</code></li>
+								</ul>
+							</li>
 							<li>➡ Complex code to handle printer communication</li>
 						</ul>
 					</section>
@@ -286,12 +303,12 @@ echo: T20.3 /0.0 B:20.2/ 0.0ok            ; Lerdge S 🤦‍♀️
 				<section>
 					<section>
 						<h1>Challenge #3</h1>
-						<h3>Plugins vs backwards compatibility</h3>
+						<h3>Plugins require backwards compatibility</h3>
 					</section>
 					<section>
 						<h3>Plugins in OctoPrint</h3>
 						<ul>
-							<li>Since OctoPrint 1.2.0</li>
+							<li>Since OctoPrint 1.2.0 (~2015)</li>
 							<li>Users can easily add or modify functionality</li>
 							<li>Currently over 160 plugins registered on the repository</li>
 							<li>
@@ -302,6 +319,9 @@ echo: T20.3 /0.0 B:20.2/ 0.0ok            ; Lerdge S 🤦‍♀️
 								</ul>
 							</li>
 							<li>
+								Advantage: Bundled plugins are also easier to maintain
+							</li>
+							<li>
 								Disadvantage: Easy fixes turn into backwards compatibility nightmares
 							</li>
 						</ul>
@@ -309,23 +329,18 @@ echo: T20.3 /0.0 B:20.2/ 0.0ok            ; Lerdge S 🤦‍♀️
 					<section>
 						<h3>Result</h3>
 						<ul>
-							<li>
-								Maintenance overhead
-								<ul>
-									<li>Typo in API?</li>
-									<li>Order of events on subsystem?</li>
-									<li>Third party dependency version?</li>
-									<li>Python 3 compatibility?</li>
-									<li>➡ Have to think of consequences all the time</li>
-								</ul>
-							</li>
+							<li>Typo in API? Plugin might depend on that name.</li>
+							<li>Order of events on subsystem? Plugin might depend on the order.</li>
+							<li>Third party dependency version? Plugin might depend on it.</li>
+							<li>Python 3 compatibility? Plugin might not be Python 3 ready.</li>
+							<li>➡ Have to think of consequences all the time</li>
 						</ul>
 					</section>
 					<section>
 						<h3>Consequence</h3>
 						<ul>
 							<li>Need to be very careful with every single change</li>
-							<li>Breaking backwards compatibility = breaking established plugins</li>
+							<li>Breaking backwards compatibility = breaking established plugins = unhappy users</li>
 							<li>Sometimes means bending over backwards to solve a trivial issue</li>
 						</ul>
 					</section>
@@ -365,8 +380,13 @@ echo: T20.3 /0.0 B:20.2/ 0.0ok            ; Lerdge S 🤦‍♀️
 					<section>
 						<h3>Result</h3>
 						<ul>
-							<li>Constant need to request logs & information</li>
-							<li>Tricky to explain e.g. why proprietary printer won't work</li>
+							<li>
+								Lots of development/OSS inexperienced users
+								<ul>
+									<li>Constant need to ask for logs & more info that "it doesn't work"</li>
+									<li>Tricky to explain some things, e.g. why proprietary printer won't work<br><small>and can't "quickly be added"</small></li>
+								</ul>
+							</li>
 							<li>Sometimes expectation to get support on par with huge multinational company</li>
 							<li>Sometimes hostile reaction when told inconvenient truths</li>
 						</ul>
@@ -374,10 +394,16 @@ echo: T20.3 /0.0 B:20.2/ 0.0ok            ; Lerdge S 🤦‍♀️
 					<section>
 						<h3>Consequence</h3>
 						<ul>
-							<li>Huge support overhead</li>
+							<li>
+								Huge support overhead
+								<ul>
+									<li>Hours per week of fielding questions</li>
+									<li>Repetitive</li>
+								</ul>
+							</li>
 							<li>Often very frustrating experience</li>
 							<li>
-								Established community forum
+								➡ Established community forum
 								<ul>
 									<li>Central place for support, questions, sharing</li>
 									<li>Not just me anymore, everyone can help to help</li>
@@ -399,7 +425,7 @@ echo: T20.3 /0.0 B:20.2/ 0.0ok            ; Lerdge S 🤦‍♀️
 						<h3>Funding</h3>
 					</section>
 					<section>
-						<h3>Growth</h3>
+						<h3>This has become a job</h3>
 						<ul>
 							<li>
 								Project size way way past pet project level:
@@ -411,8 +437,10 @@ echo: T20.3 /0.0 B:20.2/ 0.0ok            ; Lerdge S 🤦‍♀️
 									<li>etc</li>
 								</ul>
 							</li>
-							<li>Full time job and then some</li>
-							<li>A lot of people think I'm a multi person company 😋</li>
+							<li>
+								Full time job and then some<br>
+								<small>A lot of people think I'm a multi person company 😋</small>
+							</li>
 						</ul>
 					</section>
 					<section>
@@ -420,9 +448,9 @@ echo: T20.3 /0.0 B:20.2/ 0.0ok            ; Lerdge S 🤦‍♀️
 						<ul>
 							<li>Turned part time in 2013 (own cost)</li>
 							<li>Turned full time in 2014 (single sponsor)</li>
-							<li>Turned crowdfunded in April 2016</li>
+							<li>Turned crowdfunded via Patreon in April 2016</li>
 							<li>It works 😲</li>
-							<li>Huge thanks to the community! ❤</li>
+							<li>Huge thanks to the community! 😍</li>
 						</ul>
 					</section>
 					<section>
@@ -438,8 +466,14 @@ echo: T20.3 /0.0 B:20.2/ 0.0ok            ; Lerdge S 🤦‍♀️
 					<p>Forum: <a href="https://community.octoprint.org">community.octoprint.org</a></p>
 					<p>Slides: <a href="https://octoprint.org/slides/3dms19/">octoprint.org/slides/3dms19/</a></p>
 				</section>
-			</div>
 
+				<section>
+					<h1>Thanks for your attention!</h1>
+					<p>Website: <a href="https://octoprint.org">octoprint.org</a></p>
+					<p>Forum: <a href="https://community.octoprint.org">community.octoprint.org</a></p>
+					<p>Slides: <a href="https://octoprint.org/slides/3dms19/">octoprint.org/slides/3dms19/</a></p>
+				</section>
+			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
