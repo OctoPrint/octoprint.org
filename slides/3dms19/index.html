@@ -139,10 +139,14 @@
 							<li>Published my little pet project, figured "I'm done"</li>
 							<li>People started messaging me about it</li>
 							<li>Then it took over my life</li>
-							<li>And now I've been working on it for the past six years</li>
+							<li>
+								And now I've been working on it for the past six years<br>
+								<small>(Honestly I'm still unsure how this all happened...)</small>
+							</li>
+							<li>Learned a ton</li>
 						</ul>
 						<p>
-							<small>(Honestly I'm still unsure how this all happened...)</small>
+							
 						</p>
 					</section>
 				</section>
@@ -159,14 +163,20 @@
 							<li>
 								GCODE:
 								<ul>
-									<li>(standardized) <em>file format</em> for CNCs</li>
+									<li>(standardized) <em>programming language</em> for CNCs from the 1950s</li>
+									<li>plain text file format</li>
 									<li>nothing about sending messages over serial</li>
 									<li>no error correction</li>
-									<li>plain text</li>
 								</ul>
 							</li>
 							<li>Communication protocol stuff hacked on top</li>
 						</ul>
+
+						<aside class="notes">
+								<ul>
+									<li>RS274, 121 pages</li>
+								</ul>
+						</aside>
 					</section>
 					<section>
 						<h3>The "protocol"</h3>
@@ -202,8 +212,8 @@
 							<li>
 								Example: possible (simplified) temperature reports
 								<pre><code data-trim class="nohighlight">
-ok T:20.3/0 B:20.2/0                      ; most common, single extruder
-ok T:20.4/0 T0:20.3/0 T1:20.4/0 B:20.2/0  ; most common, multi extruder, 
+ok T:20.3/0 B:20.2/0                      ; Marlin & Repetier, single extruder
+ok T:20.4/0 T0:20.3/0 T1:20.4/0 B:20.2/0  ; Marlin & Repetier, multi extruder, 
                                           ;   T1 active
 ok T:20.3/0 T1:20.4/0 B:20.2/0            ; Smoothieware, multi extruder
 T:20.3/0 B:20.2/0                         ; autoreport or blocking heatup
@@ -340,7 +350,8 @@ echo: T20.3 /0.0 B:20.2/ 0.0ok            ; Lerdge S 🤦‍♀️
 						<h3>Consequence</h3>
 						<ul>
 							<li>Need to be very careful with every single change</li>
-							<li>Breaking backwards compatibility = breaking established plugins = unhappy users</li>
+							<li>Breaking backwards compatibility = breaking established plugins</li>
+							<li>Breaking established plugins = unhappy users 😕</li>
 							<li>Sometimes means bending over backwards to solve a trivial issue</li>
 						</ul>
 					</section>
@@ -449,7 +460,10 @@ echo: T20.3 /0.0 B:20.2/ 0.0ok            ; Lerdge S 🤦‍♀️
 							<li>Turned part time in 2013 (own cost)</li>
 							<li>Turned full time in 2014 (single sponsor)</li>
 							<li>Turned crowdfunded via Patreon in April 2016</li>
-							<li>It works 😲</li>
+							<li>
+								It works 😲<br>
+								<small>but is also really scary</small>
+							</li>
 							<li>Huge thanks to the community! 😍</li>
 						</ul>
 					</section>
