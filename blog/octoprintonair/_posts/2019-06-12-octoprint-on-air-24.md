@@ -14,7 +14,7 @@ date: 2019-06-12 13:15:00 +0200
 
 {% include youtube.html vid="JqBS1eBuze0" %}
 
-Topics in this episode which was recorded on April 12th:
+Topics in this episode which was recorded on June 8th:
 
   * 3D Meetup Sweden 2019
   * Work on 1.3.11 and 1.3.12
