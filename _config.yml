@@ -8,7 +8,6 @@ exclude:
 - "*.iml"
 - fetch_yt_preview
 
-
 highlighter: rouge
 markdown: kramdown
 
