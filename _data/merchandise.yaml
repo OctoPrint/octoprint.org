@@ -1,0 +1,8 @@
+#- title: product title
+#  url: link to vendor site
+#  image: image to display
+#  description: description of merch
+- title: OctoPrint stickers by Printed Solid Inc (US)
+  url: https://www.printedsolid.com/products/octoprint-sticker
+  image: printedsolid-stickers.jpg
+  description: Stickers with the OctoPrint logo, 1.95x1.6"
