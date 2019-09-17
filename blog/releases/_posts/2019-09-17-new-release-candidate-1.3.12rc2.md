@@ -47,7 +47,7 @@ or 0.15.1 and already updated to OctoPrint 1.3.12rc1:
 
 You can find the full changelog and release notes as usual [on Github](https://github.com/foosel/OctoPrint/releases/tag/1.3.12rc2).
 
-Special thanks to everyone who contributed to this release candidate and provided full, analyzable bug reports and pull requests, especially [@aliaksei135](https://github.com/aliaksei135), [@AndyQ](https://github.com/AndyQ), [@dmweis](https://github.com/dmweis), [@esver](https://github.com/esver), [@gdombiak](https://github.com/gdombiak), [@jackwilsdon](https://github.com/jackwilsdon), [@JanneMantyharju](https://github.com/JanneMantyharju), [@kevans91](https://github.com/kevans91), [@pusewicz](https://github.com/pusewicz), [@rfinnie](https://github.com/rfinnie) and [@tduehr](https://github.com/tduehr) for their PRs.
+Special thanks to everyone who contributed to this release candidate and provided full, analyzable bug reports!
 
 As the past RCs have shown me that a lot of people appear to be unaware of this: **Please do *not* install this RC if you 
 expect a fully stable version**. It is not a stable release, it is a release *candidate*: severe bugs may occur, and 
