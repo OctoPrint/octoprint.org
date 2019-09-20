@@ -8,7 +8,7 @@ function fetch_img {
 if [ -z "$1" ];
 then
 	echo "Fetching all images..."
-	for name in $(grep -roh "include youtube.html vid=\"[[:alnum:]_-]*\"" blog/ download/ imprint/ support-octoprint/ index.html | awk '{print $3}' | awk -F= '{print $2}' | cut -d'"' -f 2)
+	for name in $(grep -roh "include youtube.html vid=\"[[:alnum:]_-]*\"" blog/ download/ imprint/ support-octoprint/ slides/ index.html | awk '{print $3}' | awk -F= '{print $2}' | cut -d'"' -f 2)
 	do
 		fetch_img $name
 	done
