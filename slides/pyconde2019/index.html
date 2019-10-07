@@ -62,7 +62,7 @@
 						<small><a href="https://foosel.net">Gina Häußge</a> / <a href="https://twitter.com/foosel">@foosel</a></small>
 					</p>
 					<p>
-						<small>PyCon.DE 2019</small>
+						<small>PyConDE 2019</small>
 					</p>
 				</section>
 
@@ -75,11 +75,11 @@
 						<ul>
 							<li>
 								Creator & maintainer of OctoPrint<br>
-								<small>and mostly sole developer</small>
+								<small>and mostly sole developer (full time)</small>
 							</li>
 							<li>Passionate coder 👩‍💻</li>
 							<li>Former IT Consultant & Software Architect</li>
-							<li>Owner of a 3d printer since late 2012<br><small>(help, they keep multiplying!)</small></li>
+							<li>Owner of a 3D printer since late 2012</li>
 						</ul>
 					</section>
 				</section>
@@ -90,8 +90,11 @@
 					</section>
 
 					<section>
-						<h3>Monitoring & remote control solution for consumer 3d printers</h3>
 						<img src="img/screenshot.png" class="stretch">
+					</section>
+
+					<section>
+						<img src="img/fail.png" class="stretch">
 					</section>
 
 					<section>
@@ -129,16 +132,16 @@
 						<h3>Initial installation</h3>
 						<ul>
 							<li>
-								Initial installation happens by end user
+								Initial installation happens by the end user
 								<ul>
-									<li>Bootstrap Python & <code>pip install octoprint</code>? Doesn't work for audience.</li>
-									<li>💡 Preconfigured Raspberry Pi image: download, flash, boot, wizard, done</li>
+									<li>😱 Bootstrap Python &amp; <code>pip install octoprint</code></li>
+									<li>😊 Preconfigured Raspberry Pi image: download, flash, wizard, done</li>
 								</ul>
 							</li>
 							<li>
 								And on something that is not a Pi?
 								<ul>
-									<li>Can be basically anything: huge variety in encountered environments</li>
+									<li>Huge variety in encountered environments</li>
 									<li>Responsibility of the user</li>
 									<li>
 										Code needs to anticipate that
@@ -155,20 +158,20 @@
 						<h3>Keeping things up to date</h3>
 						<ul>
 							<li>
-								<code>pip install -U octoprint</code>? Doesn't work for audience.
+								OctoPrint itself
 								<ul>
-									<li>💡 Built-in update mechanism for OctoPrint & plugins</li>
+									<li>😱 <code>pip install -U octoprint</code></li>
+									<li>😊 Built-in update mechanism for OctoPrint & plugins</li>
 								</ul>
 							</li>
 							<li>
-								Rest of the environment?
+								Rest of the environment
 								<ul>
 									<li>
-										Done by some users, not by others
-										<ul>
-											<li>Often prompted by scary "new version" messages during plugin installs through pip</li>
-											<li>Lots of conflicting information spread across the internet</li>
-										</ul>
+										Done by some users, not by others, conflicting information
+									</li>
+									<li>
+										<code>You are using pip version 10.0.1, however version 19.2.3 is available. You should consider upgrading via the 'python -m pip install --upgrade pip' command.</code>
 									</li>
 									<li>Result: unknown environment, sometimes broken environment, hard to test, additional support overhead</li>
 								</ul>
@@ -179,16 +182,19 @@
 					<section>
 						<h3>What about the image itself?</h3>
 						<ul>
-							<li>Real challenge ("Never touch a running system")</li>
-							<li>Software stack quickly outdates</li>
-							<li>Some ancient python stacks out there</li>
+							<li>
+								"Never touch a running system!"
+								<ul>
+									<li>Software stack quickly outdates</li>
+								</ul>
+							</li>
 							<li>💡 Disable OctoPrint updates on ancient setups & provide migration path</li>
 						</ul>
 					</section>
 
 					<section>
 						<h3>Lessons Learned</h3>
-						Try to control runtime environment but stay flexible, make updates easy and use features as motivator for full image updates.
+						Try to control runtime environment but stay flexible, make updates easy and use features as motivator for touching a running system.
 					</section>
 				</section>
 
@@ -201,16 +207,14 @@
 					<section>
 						<h3>Maintaining backwards compatibility for 3rd party plugins</h3>
 						<ul>
-							<li>Plugin system since v1.2.0/2015, over 170 plugins</li>
+							<li>Plugin system since 2015 (1.2.0), over 170 plugins</li>
 							<li>
-								Established plugin ecosystem, requires backwards compatibility to flourish
+								Established plugin ecosystem, needs stability
 								<ul>
 									<li>Disgruntled authors = no ecosystem = disgruntled users</li>
 								</ul>
 							</li>
-							<li>
-								Problem: Dependency updates with breaking changes
-							</li>
+							<li>Problem: Dependency updates with breaking changes</li>
 							<li>Problem: Code refactoring</li>
 							<li>Problem: Python 2 vs 3</li>
 						</ul>
@@ -218,13 +222,65 @@
 
 					<section>
 						<h3>Lessons Learned</h3>
-						Read changelogs, be prepared to bend over backwards to work around breaking changes, make life easy for plugin authors.
+						Read changelogs (if you can find them), be prepared to work around breaking changes, make life easy for plugin authors.
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h1>Challenge #3</h1>
+						<h3>Performance</h3>
+					</section>
+
+					<section>
+						<h3>Performance</h3>
+						<ul>
+							<li>Webinterface + several clients + keeping a printer running + plugins + ... 🤪</li>
+							<li>Locked to one thread at a time (GIL)</li>
+							<li>CPU bound tasks (message parsing, checksums, file analysis, ...)</li>
+							<li>Underlying platform often limited (RPi)</li>
+							<li>Multiple processes non trivial due to data sharing (plugins)</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Lessons Learned</h3>
+						Extract CPU bound tasks if possible, be very conservative with resources.
 					</section>
 				</section>
 
 				<section>
 					<section>
-						<h1>Challenge #3</h1>
+						<h1>Challenge #4</h1>
+						<h3>No proper protocol specification</h3>
+					</section>
+
+					<section>
+						<h3>No proper protocol specification</h3>
+						<ul>
+							<li>No standard (mutation of GCODE CNC standard, sent/received over serial)</li>
+							<li>Responses undefined, requests mostly not well defined</li>
+							<li>"Specification" is a wiki page everyone can edit</li>
+							<li>
+								There be dragons! 🐉
+								<ul>
+									<li>New printer models cause issues again and again</li>
+									<li>As do very old ones</li>
+									<li>Introduces significant parser overhead and maintainence nightmares</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Lessons Learned</h3>
+						Try to keep up 🤷‍♀️ and use plugins for quick workarounds
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Challenge #5</h1>
 						<h3>Support overhead</h3>
 					</section>
 
@@ -242,83 +298,22 @@
 							<li>
 								These days: Lots and lots of consumers
 								<ul>
-									<li>Printers are marketed as plug-n-play but aren't</li>
 									<li>Many owners never had to tinker before</li>
-									<li>OctoPrint might be their first interaction w/ Open Source</li>
+									<li>
+										OctoPrint might be their first interaction with Open Source<br>
+										<small>and they might think they are dealing with a full blown company with support staff</small>
+									</li>
 								</ul>
 							</li>
 						</ul>
 					</section>
 
 					<section>
-						<h3>Support overhead</h3>
-						<ul>
-							<li>
-								Lots of development/OSS inexperienced users
-								<ul>
-									<li>Constant need to ask for logs & more info that "it doesn't work"</li>
-									<li>Tricky to explain some things, e.g. why proprietary printer won't work<br><small>and can't "quickly be added"</small></li>
-								</ul>
-							</li>
-							<li>Sometimes expectation to get support on par with huge multinational company</li>
-							<li>Sometimes hostile reaction when told inconvenient truths</li>
-							<li>Enormous overhead caused by this</li>
-						</ul>
-					</section>
-
-					<section>
 						<h3>Lessons Learned</h3>
-						Community building to delegate support, here through a forum as central place to get support - let people help each other!
+						Community building to delegate support (e.g. central forum) - let people help each other!
 					</section>
 				</section>
 
-				<section>
-					<section>
-						<h1>Challenge #4</h1>
-						<h3>No proper protocol specification</h3>
-					</section>
-
-					<section>
-						<h3>No proper protocol specification</h3>
-						<ul>
-							<li>No standard (mutation of GCODE CNC standard)</li>
-							<li>Responses undefined, requests mostly not well defined</li>
-							<li>"Specification" is a wiki page everyone can edit</li>
-							<li>There be dragons! 🐉</li>
-						</ul>
-					</section>
-
-					<section>
-						<h3>Lessons Learned</h3>
-						Try to keep up 🤷‍♀️
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h1>Challenge #5</h1>
-						<h3>Funding</h3>
-					</section>
-					<section>
-						<h3>Funding</h3>
-						<ul>
-							<li>Full time job and then some</li>
-							<li>Recently a lot of talk about sustainability
-								<ul>
-									<li>solutions mostly target funding of libraries used in development</li>
-									<li>e.g. based on depedencies</li>
-									<li>not applicable here</li>
-								</ul>
-							</li>
-							<li>Used by some companies, but mostly private people</li>
-						</ul>
-					</section>
-
-					<section>
-						<h3>Lessons Learned</h3>
-						Crowdfunding (Patreon, PayPal, Donorbox) can work but requires established base & a lot of luck.
-					</section>
-				</section>
 
 				<section>
 					<h1>Thanks for your attention!</h1>
