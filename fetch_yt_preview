@@ -1,6 +1,9 @@
 #!/bin/bash
 
 function fetch_img {
+	if [ $1 == "DBFWfXfqS_U" ]; then
+		return;
+	fi
 	echo "Fetching image for $1..."
 	curl -o "assets/img/yt-with-consent/$1.jpg" "https://i.ytimg.com/vi/$1/maxresdefault.jpg"
 }
