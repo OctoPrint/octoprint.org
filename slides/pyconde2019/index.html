@@ -66,7 +66,7 @@
 					</p>
 				</section>
 
-				<section>
+				<!--section>
 					<section>
 						<h1>Who am I?</h1>
 					</section>
@@ -82,19 +82,23 @@
 							<li>Owner of a 3D printer since late 2012</li>
 						</ul>
 					</section>
-				</section>
+				</section-->
 
 				<section>
 					<section>
-						<h1>What is OctoPrint?</h1>
-					</section>
-
-					<section>
-						<img src="img/screenshot.png" class="stretch">
+						<img src="img/ultimaker.jpg" class="stretch">
 					</section>
 
 					<section>
 						<img src="img/fail.png" class="stretch">
+					</section>
+
+					<section>
+						<img src="img/octoprint-baby.png">
+					</section>
+
+					<section>
+						<img src="img/screenshot.png" class="stretch">
 					</section>
 
 					<section>
@@ -141,8 +145,7 @@
 							<li>
 								And on something that is not a Pi?
 								<ul>
-									<li>Huge variety in encountered environments</li>
-									<li>Responsibility of the user</li>
+									<li>Huge variety of encountered environments (Linux, Windows, Mac, FreeBSD, ...)</li>
 									<li>
 										Code needs to anticipate that
 										<ul>
@@ -209,7 +212,7 @@
 						<ul>
 							<li>Plugin system since 2015 (1.2.0), over 170 plugins</li>
 							<li>
-								Established plugin ecosystem, needs stability
+								Established plugin ecosystem => this is suddenly a platform that needs stability
 								<ul>
 									<li>Disgruntled authors = no ecosystem = disgruntled users</li>
 								</ul>
@@ -222,7 +225,7 @@
 
 					<section>
 						<h3>Lessons Learned</h3>
-						Read changelogs (if you can find them), be prepared to work around breaking changes, make life easy for plugin authors.
+						Read changelogs of dependencies (if you can find them), aggressively do version pinning, be prepared to work around breaking changes, make life easy for plugin authors.
 					</section>
 				</section>
 				
@@ -238,14 +241,14 @@
 							<li>Webinterface + several clients + keeping a printer running + plugins + ... 🤪</li>
 							<li>Locked to one thread at a time (GIL)</li>
 							<li>CPU bound tasks (message parsing, checksums, file analysis, ...)</li>
+							<li>Multiple processes non trivial due to needed data sharing (plugins)</li>
 							<li>Underlying platform often limited (RPi)</li>
-							<li>Multiple processes non trivial due to data sharing (plugins)</li>
 						</ul>
 					</section>
 
 					<section>
 						<h3>Lessons Learned</h3>
-						Extract CPU bound tasks if possible, be very conservative with resources.
+						Extract CPU bound tasks if possible, be very conservative with resources, explore IPC options.
 					</section>
 				</section>
 
@@ -262,10 +265,10 @@
 							<li>Responses undefined, requests mostly not well defined</li>
 							<li>"Specification" is a wiki page everyone can edit</li>
 							<li>
-								There be dragons! 🐉
+								There be dragons! 🐉 And they be <strong>huge</strong>!
 								<ul>
 									<li>New printer models cause issues again and again</li>
-									<li>As do very old ones</li>
+									<li>As do very old ones (almost no one does <code>git merge upstream</code>...)</li>
 									<li>Introduces significant parser overhead and maintainence nightmares</li>
 								</ul>
 							</li>
@@ -291,7 +294,7 @@
 								Early days: Huge overlap between printer owners & DIY enthusiasts
 								<ul>
 									<li>Tinker happy</li>
-									<li>Happy to google around for a solution</li>
+									<li>Google around for a solution</li>
 									<li>Capable of fixing stuff themselves</li>
 								</ul>
 							</li>
