@@ -34,7 +34,7 @@ versions:
 > 
 > If you haven't yet updated from such a version ([which you really should have done a long time ago](https://octoprint.org/blog/2018/03/15/security-issue-update-to-1.3.6/)) you'll need to [update manually via command line](https://community.octoprint.org/t/how-can-i-update-the-octoprint-installation-on-my-octopi-image/207?u=foosel).
 
-The other is about this release no longer going to updates through OctoPrint itself on OctoPi 0.14:
+The other is about this release no longer going to support updates through OctoPrint itself on OctoPi 0.14:
 
 > **Heads-up if you are still running OctoPi 0.14**
 > 
