@@ -11,6 +11,12 @@ excerpt: Still in time for the spooky season of the year 🎃 and after 5 months
 
 ---
 
+<div class="alert alert-warning">
+  <p><strong>If you have an MMU2 you might want to hold off with updating to 1.3.12 until further notice.</strong></p>
+  <p>I've gotten a handful of reports from people owning an MMU2 for whom their printer now spontaneously resets on print start with 1.3.12, apparently during filament selection. I am still waiting for the necessary information to even begin to look into this. It's not a problem that was reported during the six weeks of release candidates that preceded this release.</p>
+  <p>I'd appreciate any help in getting to the bottom of this! <a href="https://community.octoprint.org/t/prusa-mmu2s-not-working-in-1-3-12/12884/" target="_blank">Please follow this thread</a>. If you have an MMU2 and everything still works fine with 1.3.12 I'd like to know too.</p>    
+</div>
+
 Still in time for the spooky season of the year I present you OctoPrint 1.3.12 🎃 Almost four months of development and a bit over 
 one of release candidate testing went into this, and it will (hopefully) be the last one on the 1.3.x version track as
 I'm also prepping things for a first RC of 1.4.0 in the background.
