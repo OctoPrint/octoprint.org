@@ -14,7 +14,7 @@ excerpt: Still in time for the spooky season of the year 🎃 and after 5 months
 <div class="alert alert-warning">
   <p><strong>Heads-up if you have an MMU2</strong></p>
   <p>Some people have run into weird reset and loop issues with their MMU2 and OctoPrint 1.3.12. The cause of this - as far as the currently available information suggests - are simply misconfigured printer profiles inside OctoPrint.</p>
-  <p>If you have a multi-extruder setup like the MMU2, **make sure your printer profile has configured all available extruders**. In the case of the MMU2, you should have five extruders and a shared nozzle configured in OctoPrint. For an MMU it's four extruders and a shared nozzle.</p>
+  <p>If you have a multi-extruder setup like the MMU2, <strong>make sure your printer profile has configured all available extruders</strong>. In the case of the MMU2, you should have five extruders and a shared nozzle configured in OctoPrint. For an MMU it's four extruders and a shared nozzle.</p>
   <p>Failure to properly setup your printer profile will cause issues!</p>
   <p><a href="https://community.octoprint.org/t/prusa-mmu2s-not-working-in-1-3-12/12884/24?u=foosel" target="_blank">Please take a look at this post for more details & a screenshot</a>.</p>
 </div>
