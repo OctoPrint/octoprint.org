@@ -6,6 +6,7 @@ description: Interested in some presentation of the project? Here you can find s
 
 ## Slides
 
+* [Driving 3D Printers with Python - Lessons Learned](https://octoprint.org/slides/pyconde2019/) on October 11th 2019 at PyConDE (english talk, english slides)
 * ["Developing OctoPrint" at 3D Meetup Sweden 2019](./3dms19/) on April 27th and 28th 2019 (english language, english slides), that talk is also available on [YouTube](https://www.youtube.com/watch?v=DBFWfXfqS_U)
 * ["OctoPrint in a Nutshell" @ Webmontag Frankfurt #77](./wmfra77.pdf) on January 11th 2016 ([Ignite talk](https://en.wikipedia.org/wiki/Ignite_(event)), that talk is also available on [YouTube](https://www.youtube.com/watch?v=lhkX18r4Qcc), german language, german slides)
 * ["OctoPrint - 3D printing unchained" @ Makerfaire Hannover 2014](./makerfairehannover14/) on July 5th 2014 (german language, german slides)
