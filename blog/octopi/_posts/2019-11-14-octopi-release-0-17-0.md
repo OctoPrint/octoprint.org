@@ -30,7 +30,7 @@ Apart from adding support for the Pi 3A+ and of course shipping with the current
 >   * Our nightly/release builds have moved to the new build server, after 6+ years of operating.
 
 The full release notes can be found at
-[github](https://github.com/guysoft/OctoPi/releases/tag/0.16.0).
+[github](https://github.com/guysoft/OctoPi/releases/tag/0.17.0).
 
 You can download OctoPi 0.17.0 from the [usual place](http://octoprint.org/download/). If you are asking yourself how to update from
 an earlier version of OctoPi, please read on.
