@@ -19,7 +19,7 @@ description: Working on OctoPrint takes a lot of time and effort. If you've come
     You can <strong>support OctoPrint's development directly</strong> either
     <a href="#regularly">regularly</a>
     or <a href="#onetime">through one time contributions</a>.
-    You can also support my work by buying one of the <strong><a href="#kits">All-in-one Kits</a> or the <a href="#merch">Merchandise articles</a> listed below</strong> from whose proceedings I'll receive a share.
+    You can also support my work by buying one of the <strong><a href="/merch/#kits">All-in-one Kits</a> or the <a href="/merch/#merch">Merchandise articles</a> listed <a href="/merch/" data-event-category="merchlink" data-event-action="support">here</a></strong> from whose proceedings I'll receive a share.
 </p>
 <p>
     <strong>With a company and open to a sponsorship?</strong> <a href="mailto:sponsoring@octoprint.org" data-event-category="support" data-event-action="sponsoring">Get in touch with me!</a>
@@ -56,83 +56,6 @@ description: Working on OctoPrint takes a lot of time and effort. If you've come
                 <span style="display: block; height: 60px"><a href="{{ site.donorbox_once }}" target="_blank" rel="noopener noreferrer" data-event-category="support" data-event-action="donorbox-once"><img src="{{ BASE_PATH }}/assets/img/donorbox-with-text.png"></a></a></span>
                 <strong>Support me on Donorbox!</strong><br>
                 <small>Regularly or one-time - you decide!</small>
-            </div>
-        </div>
-    </div>
-    <div class="row-fluid">
-        <div class="span12 support-kits" id="kits">
-            <h3>All-in-one OctoPrint Kits</h3>
-            Want to help and still need some hardware?<br>
-            <strong>Buy one of these All-in-one OctoPrint Kits!</strong><br>
-            <small>I get a share from the proceedings</small>
-            <div class="container">
-                <div class="row-fluid kitrow">
-                    {% for kit in site.data.kits %}
-                        <div class="kit">
-                            {% if kit.url %}
-                            <a href="{{ kit.url }}" title="{{ kit.title }}" target="_blank" rel="noopener noreferrer" data-event-category="kit" data-event-action="{{ kit.title }}">
-                                <span class="imgcontainer">
-                                    <img src="{{ BASE_PATH }}/assets/img/kits/{{ kit.image }}" alt="{{ kit.title }}" title="{{ kit.title }}">
-                                </span><br>
-                                <strong>{{ kit.title }}</strong>
-                            </a><br>
-                            {% else %}
-                            <span>
-                                <span class="imgcontainer">
-                                    <img src="{{ BASE_PATH }}/assets/img/kits/{{ kit.image }}" alt="{{ kit.title }}" title="{{ kit.title }}">
-                                </span><br>
-                                <strong>{{ kit.title }}</strong>
-                            </span><br>
-                            {% endif %}
-                            {{ kit.description }}<br>
-                            {% if kit.resellers %}
-                            <em>Available from</em>
-                            <ul class="resellers">
-                                {% for reseller in kit.resellers %}
-                                    <li><a href="{{ reseller.url }}" target="_blank" rel="noopener noreferrer" title="{{ reseller.title }}" data-event-category="kit" data-event-action="{{ kit.title }}">{{ reseller.title }}</a> [{{ reseller.country }}]</li>
-                                {% endfor %}
-                            </ul>
-                            {% endif %}
-                            {% if kit.location %}
-                            <span class="kitlocation">
-                                {{ kit.location }}
-                            </span>
-                            {% endif %}
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row-fluid">
-        <div class="span12 support-kits" id="merch">
-            <h3>OctoPrint Merchandise</h3>
-            Want to help and get some swag?<br>
-            <strong>Here's some merchandise!</strong><br>
-            <small>I get a share from the proceedings</small>
-            <div class="container">
-                <div class="row-fluid merchrow">
-                    {% for merch in site.data.merchandise %}
-                        <div class="merch">
-                            {% if merch.url %}
-                            <a href="{{ merch.url }}" title="{{ merch.title }}" target="_blank" rel="noopener noreferrer" data-event-category="merch" data-event-action="{{ merch.title }}">
-                                <span class="imgcontainer">
-                                    <img src="{{ BASE_PATH }}/assets/img/merchandise/{{ merch.image }}" alt="{{ merch.title }}" title="{{ merch.title }}">
-                                </span><br>
-                                <strong>{{ merch.title }}</strong>
-                            </a><br>
-                            {% else %}
-                            <span>
-                                <span class="imgcontainer">
-                                    <img src="{{ BASE_PATH }}/assets/img/merchandise/{{ merch.image }}" alt="{{ merch.title }}" title="{{ merch.title }}">
-                                </span><br>
-                                <strong>{{ merch.title }}</strong>
-                            </span><br>
-                            {% endif %}
-                            {{ merch.description }}<br>
-                        </div>
-                    {% endfor %}
-                </div>
             </div>
         </div>
     </div>
