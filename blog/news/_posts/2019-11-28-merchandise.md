@@ -14,7 +14,7 @@ images:
   title: "OctoPrint logo hoodie"
 - url: /assets/img/blog/2019-11/2019-11-28-merch-mug.jpg
   title: '"Octopus in Ink" mug'
-excerpt: If you have been wondering where to buy OctoPrint merch like shirts and such, wonder no more - the Official Merchandise Stores are there!
+excerpt: If you have been wondering where to buy OctoPrint merch like shirts and such, wonder no more - the Official Merchandise Shops are there!
 
 ---
 
