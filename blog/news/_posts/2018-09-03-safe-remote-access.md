@@ -31,10 +31,12 @@ Remote access via a plugin is certainly the easiest way for you to access your i
 
 The Polar Cloud plugin lets you connect OctoPrint to your [Polar Cloud](https://polar3d.com) account. Polar Cloud is a cloud based service that adds a whole lot of flexibility to your workflow. It's certainly more than just an app to monitor/control your printer, it's a whole community of printers, designers and makers. The process of selecting an object, slicing and sending to your printer are streamlined into a simple workflow. The plugin is available [here](https://plugins.octoprint.org/plugins/polarcloud/) and is definitely worth checking out.
 
-#### OctoPrint Anywhere
+#### OctoPrint Anywhere (*edit: or its successor The Spaghetti Detective*)
 
 This plugin is a cloud service that allows you to access your OctoPrint instance through a web interface.
 Setup is relatively simple, install the plugin, either from the Plugin Manager, or you can grab it [here](https://plugins.octoprint.org/plugins/anywhere/). After installing, you will be greated by a setup wizard that will guide you through the rest of the steps. In just a few moments, you'll be up and running, and able to access your OctoPrint instance, without forwaring any ports, or exposing your instance to the internet.
+
+*edit*: Check out Kenneth's new project [The Spaghetti Detective](https://plugins.octoprint.org/plugins/thespaghettidetective/)
 
 #### OctoPrint-DiscordRemote
 
