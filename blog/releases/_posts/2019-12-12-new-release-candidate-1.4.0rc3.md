@@ -11,7 +11,7 @@ excerpt: The third release candidate for the upcoming 1.4.0 release fixes some r
 
 ---
 
-This third RC of 1.3.12 fixes some regressions and issues in the new functionality observed with the first and second one:
+This third RC of 1.4.0 fixes some regressions and issues in the new functionality observed with the first and second one:
 
 > **Improvements**
 > 
