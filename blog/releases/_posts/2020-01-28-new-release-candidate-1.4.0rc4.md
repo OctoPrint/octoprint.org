@@ -7,8 +7,8 @@ date: 2020-01-28 14:45:00 +0100
 card: /assets/img/blog/2020-01/2020-01-28-octoprint-1.4.0rc4-card.png
 featuredimage: /assets/img/blog/2020-01/2020-01-28-octoprint-1.4.0rc4-card.png
 poster: /assets/img/blog/2020-01/2020-01-28-octoprint-1.4.0rc4-poster.png
-excerpt: The fourth release candidate for the upcoming 1.4.0 release fixes some regressions observed with the prior ones. It's
-  now also available on the Maintenance RCs channel.
+excerpt: The fourth release candidate for the upcoming 1.4.0 release fixes some regressions observed with the prior ones.
+  It's now also available on the Maintenance RCs channel. 
 
 ---
 
