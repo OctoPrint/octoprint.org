@@ -17,7 +17,7 @@ Air broadcast a live event for everyone interested, whether a Patron or not, to 
 
 It will air live on **Friday, March 27th at 17:00 CET** on [YouTube](https://www.youtube.com/watch?v=C-MQ8r3EtE0) 
 (you may convert this to your local timezone
-[here](https://www.timeanddate.com/worldclock/fixedtime.html?msg=OctoPrint+On+Air+%2330&iso=20200427T17&p1=83&ah=1)) 
+[here](https://www.timeanddate.com/worldclock/fixedtime.html?msg=OctoPrint+On+Air+%2330&iso=20200327T17&p1=83&ah=1)) 
 and I hope many of you will join me there:
 
 {% include youtube.html vid="C-MQ8r3EtE0" %}
