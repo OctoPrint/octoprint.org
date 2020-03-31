@@ -6,14 +6,6 @@
 #  - title: reseller title
 #    country: country of reseller
 #    url: url to reseller, ideally product page
-#- title: OctoPrint Kit by pi3g (DE)
-#  url: http://www.pollin.de/shop/dt/MjY0OTgxOTk-/Bauelemente_Bauteile/Entwicklerboards/Raspberry_Pi/pi3g_OctoPrint_Kit.html
-#  image: pi3g-octoprint-kit.jpg
-#  description: Raspberry Pi 3 incl. WiFi, power supply, pre-flashed SD card & case with logo, printed manual, assembled.
-#- title: OctoPrint Cam Kit by pi3g
-#  url: http://www.pollin.de/shop/dt/MTY0OTgxOTk-/Bauelemente_Bauteile/Entwicklerboards/Raspberry_Pi/pi3g_OctoPrint_Kit_inkl_HD_Webcam_LOGITECH_C270.html
-#  image: pi3g-octoprint-cam-kit.jpg
-#  description: Raspberry Pi 3 incl. WiFi, Logitech C270 webcam, power supply, pre-flashed SD card, card reader & case with logo, printed manual, assembled.
 - title: EZPi Pro (Pi 4B) – Plug and Play Octoprint Setup by TH3D (US)
   url: https://www.th3dstudio.com/product/ezpi-pro/
   image: th3d-ezpi.jpg
@@ -22,10 +14,6 @@
   url: https://shop.watterott.com/Raspberry-Pi-3-OctoPrint-Bundle-OctoPi_1
   image: watterott-octoprint-kit.jpg
   description: Raspberry Pi 3 incl. WiFi, power supply, pre-flashed SD card & case with logo.
-- title: Sorglos OctoPrint Bundel Raspberry Pi 3 Modell B Plus (DE)
-  url: https://www.sorglos-3d.de/400019-104-sorglos-octoprint-bundel-raspberry-pi-3-modell-b-plus-b-.html
-  image: sorglos-octoprint-kit.jpg
-  description: Raspberry Pi 3+, power supply, pre-flashed & optionally configured SD card, case, optional webcam & other add-ons.
 - title: 3DPi 3D Printer Direct Wire OctoPrint Server (UK)
   url: https://www.ebay.co.uk/itm/3DPi-3D-Printer-Direct-Wire-Octoprint-Server-OctoPi-Raspberry-Pi-3B-16Gb-SD/223180691961?hash=item33f69b19f9:g:BsoAAOSwDOpbuyye
   image: 3dpi-octoprint-kit.jpg
