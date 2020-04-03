@@ -99,7 +99,7 @@ The generic setup instructions boil down to
 1. Installing [Python 2.7](https://www.python.org/) including [pip](https://pip.pypa.io/en/latest/installing.html) and [virtualenv](https://virtualenv.pypa.io/en/stable/installation/).
 2. Creating a virtual environment somewhere: `virtualenv OctoPrint`
 3. Installing OctoPrint *into that virtual environment*: `OctoPrint/bin/pip install OctoPrint`
-4. OctoPrint may then be started through `./OctoPrint/bin/octoprint` or with an absolute path `/path/to/OctoPrint/bin/octoprint`
+4. OctoPrint may then be started through `./OctoPrint/bin/octoprint serve` or with an absolute path `/path/to/OctoPrint/bin/octoprint serve`
 
 More specific setup instructions for the most common runtime environments can be found below.
 
