@@ -96,7 +96,10 @@ Please also refer to [OctoPi's README](https://github.com/guysoft/OctoPi), espec
 
 The generic setup instructions boil down to
 
-1. Installing [Python 2.7](https://www.python.org/) including [pip](https://pip.pypa.io/en/latest/installing.html) and [virtualenv](https://virtualenv.pypa.io/en/stable/installation/).
+1. Installing [Python](https://www.python.org/) including [pip](https://pip.pypa.io/en/latest/installing.html) and [virtualenv](https://virtualenv.pypa.io/en/stable/installation/).
+   **Please note:** While OctoPrint itself supports running under Python 3.7+ starting with version 1.4.0, many of the available plugins still are
+   Python 2 only. If you want to make use of plugins from the plugin repository, you should for now still install OctoPrint under Python 2.7. Note that
+   migrating to Python 3 at a later date is easily done.
 2. Creating a virtual environment somewhere: `virtualenv OctoPrint`
 3. Installing OctoPrint *into that virtual environment*: `OctoPrint/bin/pip install OctoPrint`
 4. OctoPrint may then be started through `./OctoPrint/bin/octoprint serve` or with an absolute path `/path/to/OctoPrint/bin/octoprint serve`
