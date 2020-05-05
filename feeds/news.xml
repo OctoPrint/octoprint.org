@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OctoPrint News</title>
+    
+    <link>https://octoprint.org/blog/</link>
+    <atom:link href="https://octoprint.org/feeds/news.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 05 May 2020 06:54:58 -0500</pubDate>
+    <lastBuildDate>Tue, 05 May 2020 06:54:58 -0500</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Help to fight the Corona Crisis using your 3D printer</title>
+        <description>
+          <![CDATA[
+            A guest post by Oliver Dathe on how you can help in the fight against the ongoing SARS-CoV-2 pandemic. If you have any printing capacities free, please consider joining the community effort!
+          ]]>
+        </description>
+        <pubDate>Tue, 31 Mar 2020 08:00:00 -0500</pubDate>
+        <link>https://octoprint.org/blog/2020/03/31/3d-printing-against-corona/?utm_source=rss&amp;utm_medium=news</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2020/03/31/3d-printing-against-corona/</guid>
+        <category>OctoPrint News</category>
+      </item>
+    
+      <item>
+        <title>Official OctoPrint Merchandise Shops launched!</title>
+        <description>
+          <![CDATA[
+            If you have been wondering where to buy OctoPrint merch like shirts and such, wonder no more - the Official Merchandise Shops are there!
+          ]]>
+        </description>
+        <pubDate>Thu, 28 Nov 2019 09:30:00 -0600</pubDate>
+        <link>https://octoprint.org/blog/2019/11/28/merchandise/?utm_source=rss&amp;utm_medium=news</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2019/11/28/merchandise/</guid>
+        <category>OctoPrint News</category>
+      </item>
+    
+      <item>
+        <title>Community Forum Migration</title>
+        <description>
+          <![CDATA[
+            On February 11th 2019 we migrated the community forums to a new server. This was our experience.
+          ]]>
+        </description>
+        <pubDate>Wed, 06 Mar 2019 04:20:00 -0600</pubDate>
+        <link>https://octoprint.org/blog/2019/03/06/community-forum-migration/?utm_source=rss&amp;utm_medium=news</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2019/03/06/community-forum-migration/</guid>
+        <category>OctoPrint News</category>
+      </item>
+    
+      <item>
+        <title>A Guide To Safe Remote Access of OctoPrint</title>
+        <description>
+          <![CDATA[
+            In this guest post, community member Jubaleth will tell you about safe ways to access your OctoPrint instance from the internet.
+          ]]>
+        </description>
+        <pubDate>Mon, 03 Sep 2018 11:20:00 -0500</pubDate>
+        <link>https://octoprint.org/blog/2018/09/03/safe-remote-access/?utm_source=rss&amp;utm_medium=news</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2018/09/03/safe-remote-access/</guid>
+        <category>OctoPrint News</category>
+      </item>
+    
+      <item>
+        <title>New community forum launched!</title>
+        <description>
+          <![CDATA[
+            OctoPrint finally has its own community forum at discourse.octoprint.org!
+          ]]>
+        </description>
+        <pubDate>Tue, 20 Mar 2018 06:40:00 -0500</pubDate>
+        <link>https://octoprint.org/blog/2018/03/20/community-forum-launched/?utm_source=rss&amp;utm_medium=news</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2018/03/20/community-forum-launched/</guid>
+        <category>OctoPrint News</category>
+      </item>
+    
+      <item>
+        <title>Happy Holidays!</title>
+        <description>
+          <![CDATA[
+            Happy Holidays, a Happy New Year and of course also Happy Printing and we'll see each other again in 2017!
+          ]]>
+        </description>
+        <pubDate>Fri, 16 Dec 2016 10:45:00 -0600</pubDate>
+        <link>https://octoprint.org/blog/2016/12/16/happy-holidays/?utm_source=rss&amp;utm_medium=news</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2016/12/16/happy-holidays/</guid>
+        <category>OctoPrint News</category>
+      </item>
+    
+      <item>
+        <title>On the state of OctoPrint</title>
+        <description>
+          <![CDATA[
+            A look at the state of OctoPrint, its current funding situation and how things will continue from here on.
+          ]]>
+        </description>
+        <pubDate>Wed, 25 May 2016 13:00:00 -0500</pubDate>
+        <link>https://octoprint.org/blog/2016/05/25/state-of-octoprint/?utm_source=rss&amp;utm_medium=news</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2016/05/25/state-of-octoprint/</guid>
+        <category>OctoPrint News</category>
+      </item>
+    
+  </channel>
+</rss>

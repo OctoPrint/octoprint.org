@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+
+    <title>OctoPrint.org - OctoPrint around the World</title>
+    <meta name="description" content="OctoPrint is the snappy web interface for your 3D printer that allows you to control and monitor all aspects of your printer and print jobs, right from your browser.">
+    <meta name="author" content="Gina Häußge">
+    <meta name="google-site-verification" content="0EFsbaNygJcEinKPmzP-hTf0Ju6wDIpJxO5zvQtOQT0" />
+    <meta name="google-site-verification" content="i7e8SG0JfDqFkxQgr1_ZuirRzwJomS8xzPvb0mLHujM" />
+    <meta name="referrer" content="same-origin">
+
+    
+
+    <!--[if lt IE 9]>
+    <script src="/assets/js/html5shim.js?_=1588679698"></script>
+    <![endif]-->
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/assets/css/site.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/bootstrap-responsive.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/prettify.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/lightbox.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/syntax.css?_=1588679698">
+
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/slick-1.5.9/slick.css?_=1588679698"/>
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/slick-1.5.9/slick-theme.css?_=1588679698"/>
+
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/assets/img/tentacle-32x32.png">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144.png">
+
+    <!-- Le RSS feed -->
+    <link rel="alternate" type="application/rss+xml" title="OctoPrint.org: OctoBlog" href="/feeds/all.xml">
+
+    <!-- Le social media meta data -->
+    
+    
+
+    
+
+    
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@OctoPrint3D" />
+    <meta name="twitter:title" content="OctoPrint around the World" />
+    <meta name="twitter:description" content="A little exhibit of some awesome OctoPrint setups from all around the world, as shared by enthusiastic users - the very first "OctoPrint around the World" community spotlight feature!" />
+    <meta name="twitter:image" content="https://octoprint.org/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world.png" />
+
+    <meta property="og:title" content="OctoPrint around the World" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://octoprint.org/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:description" content="A little exhibit of some awesome OctoPrint setups from all around the world, as shared by enthusiastic users - the very first "OctoPrint around the World" community spotlight feature!" />
+    <meta property="og:site_name" content="OctoPrint.org" />
+    <meta property="og:url" content="https://octoprint.org/blog/2016/12/14/octoprint-around-the-world/" />
+
+    <meta itemscope itemtype="http://schema.org/WebPage" />
+    <meta itemprop="headline" content="OctoPrint around the World" />
+    <meta itemprop="description" content="A little exhibit of some awesome OctoPrint setups from all around the world, as shared by enthusiastic users - the very first "OctoPrint around the World" community spotlight feature!" />
+    <meta itemprop="image" content="https://octoprint.org/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world.png" />
+
+    <script>
+        var shiftWindow = function() { scrollBy(0, -40) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+    </script>
+
+    <!-- Carbon -->
+    <script>
+        var disableStr = "carbon-disable";
+        function carbonOptout() {
+            //document.cookie = disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org";
+            document.cookie = disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org";
+            window[disableStr] = true;
+            alert("Carbon Ads sind jetzt deaktiviert! / Carbon Ads are now deactivated!");
+        }
+        if (document.cookie.indexOf(disableStr + "=true") > -1) {
+            window[disableStr] = true;
+        }
+    </script>
+
+    <!-- Cookie consent -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/cookieconsent.min.css" />
+    <script src="/assets/js/cookieconsent.min.js"></script>
+    <script>
+        if (!String.prototype.startsWith) {
+            String.prototype.startsWith = function(search, pos) {
+            return this.substr(!pos || pos < 0 ? 0 : +pos, search.length) === search;
+            };
+        }
+
+        
+        window.addEventListener("load", function(){
+            window.cookieconsent.hasTransition = false;
+            window.cookieconsent.initialise({
+                "position": "bottom",
+                "theme": "edgeless",
+                "palette": {
+                    "popup": {
+                        "background": "#000000",
+                        "link": "#10a800"
+                    },
+                    "button": {
+                        "background": "#0b7500"
+                    }
+                },
+                "elements": {
+                    "messagelink": '<span id="cookieconsent:desc" class="cc-message">{{message}} <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank">{{link}}</a> or <a aria-label="privacy policy" tabindex="1" class="cc-link" href="/privacy/" target="_blank">read our Privacy Policy</a></span>'
+                }
+            })
+        });
+        
+
+        /**
+         * Make sure octoprint.github.io stuff gets rewritten to octoprint.org.
+         * See https://github.com/OctoPrint/plugins.octoprint.org/issues/146.
+         */
+        var githubio = "octoprint.github.io/octoprint.org";
+        var url = window.location.href;
+        if (url && (url.startsWith("http://" + githubio) || url.startsWith("https://" + githubio))) {
+            url = url.replace(githubio, "octoprint.org");
+            window.location.replace(url);
+        }
+    </script>
+</head>
+
+<body onload="load()">
+
+<div id="top"></div>
+
+<div id="banner" style="display: none">
+    <a class="close-banner" href="javascript:void(0)">&times;</a>
+    <div class="container content">
+        <p class="text">
+            I work full time on OctoPrint and can only continue thanks to funding by people like you. Give the
+            button a click and learn how you can help!
+        </p>
+        <p class="signature">
+            Thank you,<br>
+            Gina
+        </p>
+        <div class="span4 button">
+            <a class="btn btn-primary btn-large btn-block" href="/support-octoprint/" data-event-category="supportlink" data-event-action="banner"><i class="fa fa-heart"></i> Support my work! <i class="fa fa-heart"></i></a>
+        </div>
+    </div>
+</div>
+
+<div id="navigation" class="navbar navbar-inverse navbar-fixed-top unfixed" data-scroll-header>
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand hidden-phone" href="/"><img src="/assets/img/tentacle-20x20.png" alt="Tentacle logo" class="tentacle"> OctoPrint.org</a>
+      <a class="brand visible-phone" href="/"><img src="/assets/img/tentacle-20x20.png" alt="Tentacle logo" class="tentacle"></a>
+      <a href="javascript:void(0)" class="btn btn-burger btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><i class="fas fa-bars"></i></a>
+      <div class="pull-right">
+        <ul class="nav social-navbar">
+          <li><a href="/merch/" title="Get some merchandise!"><i class="fa fa-shopping-basket"></i></a></li>
+          <li><a href="/support-octoprint/" title="Support OctoPrint!" data-event-category="supportlink" data-event-action="navigation"><i class="fas fa-donate"></i></a></li>
+        </ul>
+      </div>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="https://community.octoprint.org">Forum</a></li>
+          <li><a href="/download/">Download</a></li>
+          <li><a href="/support-octoprint/" title="Support the project!" data-event-category="supportlink" data-event-action="donate">Donate</a></li>
+          <li><a href="/merch/" title="Get some merchandise!" data-event-category="merchlink" data-event-action="navbar">Merchandise</a></li>
+          <li><a href="http://plugins.octoprint.org">Plugins</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">More... <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://github.com/foosel/OctoPrint/wiki">Wiki</a></li>
+              <li><a href="http://docs.octoprint.org">Documentation</a></li>
+              <li><a href="https://community.octoprint.org/c/support/faq">FAQ</a></li>
+              <li><a href="/slides/">Slides & Talks</a></li>
+              <li class="divider"></li>
+              <li><a href="https://github.com/foosel/OctoPrint">Source</a></li>
+              <li><a href="https://github.com/foosel/OctoPrint/blob/master/CONTRIBUTING.md">Contribution Guidelines</a></li>
+              <li><a href="https://github.com/foosel/OctoPrint/issues">Issuetracker</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="wrap">
+    <div id="main">
+    <div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="hero-content pageheader">
+                    <h1>OctoPrint around the World</h1>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container blogpost">
+    <div class="row-fluid pagination">
+        <div class="span12">
+            
+                <small><a class="newer-posts" href="/blog/2016/12/16/happy-holidays/" title="Next Page">&laquo; Happy Holidays!</a></small>
+            
+            &nbsp;
+            
+                <small><a class="older-posts" href="/blog/2016/12/08/new-release-1.3.0/" title="Previous Page">New release: 1.3.0 &raquo;</a></small>
+            
+        </div>
+    </div>
+    <div class="row-fluid content">
+        <div class="span8 text" id="blogpost-content">
+            <p>For an upcoming article in the german edition of MagPi I recently asked around on
+<a href="https://plus.google.com/u/0/+GinaHäußge/posts/Mi8QiNVwaWp">Google+</a> and <a href="https://www.patreon.com/posts/looking-for-of-7341738">Patreon</a>
+for pictures of your OctoPrint setups - and you delivered! :D</p>
+
+<p>Not making a blog post out of the results of this little call to action
+would have been a shame, considering the very awesome stuff that was
+shared, so here I present you a very first “OctoPrint around the World”
+community spotlight feature!</p>
+
+<p>Let’s start with this very nice setup of <strong>stephl02</strong> that really caught my eye thanks to the 
+custom display:</p>
+
+<blockquote>
+  <p>2 printers, 2 RPI and a LED display : time remaining, bed and extruder 
+temp (from the OctoPrint API)</p>
+</blockquote>
+
+<div class="row-fluid">
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/stephl02_1.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By stephl02"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/stephl02_1.jpg" /></a>
+    </div>
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/stephl02_2.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By stephl02"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/stephl02_2.jpg" /></a>
+    </div>
+</div>
+<div class="row-fluid" style="margin-top: 10px; margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/stephl02_3.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By stephl02"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/stephl02_3.jpg" /></a>
+    </div>
+</div>
+
+<p>Sweet!</p>
+
+<p><strong>Rob Googe</strong> went all out with the color coding:</p>
+
+<blockquote>
+  <p>My two printers (Wanhao i3), Blue and Green, Octoprint is running on 
+two RPis. Each Octoprint is coloured the same as the printer it belongs 
+to. Both have webcams, although I’m not usually too far away.</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/rob_googe.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Rob Googe"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/rob_googe.jpg" /></a>
+    </div>
+</div>
+
+<p>Long time OctoPrint user <strong>Bryan Mayland</strong> not only shared his setup but
+also some valuable advice:</p>
+
+<blockquote>
+  <p>You can’t have a printing space without space blankets and googly eyes</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/bryan_mayland_1.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Bryan Mayland"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/bryan_mayland_1.jpg" /></a>
+    </div>
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/bryan_mayland_2.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Bryan Mayland"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/bryan_mayland_2.jpg" /></a>
+    </div>
+</div>
+
+<p>I wholeheartedly agree on the googly eyes part :D</p>
+
+<p>And <strong>Michael Jones</strong> definitely appears to agree on the space blanket part
+for use as an enclosure:</p>
+
+<blockquote>
+  <p>It’s pretty ugly, but the printer is under the thermal blanket “enclosure” 
+and the electronics (including my trusty original RPi model B) are sitting 
+inside the black toolbox. (OctoSticker slightly visible on the side of 
+the box!)</p>
+</blockquote>
+
+<div class="row-fluid">
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/michael_jones_1.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Michael Jones"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/michael_jones_1.jpg" /></a>
+    </div>
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/michael_jones_2.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Michael Jones"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/michael_jones_2.jpg" /></a>
+    </div>
+</div>
+<div class="row-fluid" style="margin-top: 10px; margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/michael_jones_3.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Michael Jones"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/michael_jones_3.jpg" /></a>
+    </div>
+</div>
+
+<p>For some more pictures with descriptions of this water cooled setup, see also 
+<a href="http://imgur.com/a/cPpPD">his gallery here</a>.</p>
+
+<p>Speaking about water cooling and enclosures, <strong>Bastian Pawlik</strong> also went down that
+road:</p>
+
+<blockquote>
+  <p>My selfmade Prusa i3 water cooled printer running at 24V with self 
+designed cooling tower and (not yet fully covered) Power Station.</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/bastian_pawlik.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Bastian Pawlik"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/bastian_pawlik.jpg" /></a>
+    </div>
+</div>
+
+<p><strong>Matt Miller</strong> opted in for an enclosure as well, but without the space
+blanket part:</p>
+
+<blockquote>
+  <p>Here’s my setup. 7” RPI touchscreen for local access with LCD 
+displaying network ip</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/matt_miller.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Matt Miller"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/matt_miller.jpg" /></a>
+    </div>
+</div>
+
+<p>Another enclosure setup can be found in <strong>Jon Stern</strong>’s workshop:</p>
+
+<blockquote>
+  <p>Here’s my Octopi setup with a touchscreen and keyboard mount that I 
+<a href="http://www.thingiverse.com/thing:1625360">designed</a>. It’s mounted on 
+the door to my custom-built enclosure.</p>
+
+  <p>The camera mount (yellow on left) is <a href="http://www.thingiverse.com/thing:1625360">this one</a>
+only glued on to the Plexiglas (cheesy, I know) instead screwed on to a 2020 extrusion 
+(which I didn’t use for my enclosure).</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/jon_stern.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Jon Stern"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/jon_stern.jpg" /></a>
+    </div>
+</div>
+
+<p><strong>J Nerf</strong> shares this setup with a Printrbot Makers Edition as the 
+centerpiece:</p>
+
+<blockquote>
+  <p>I’ve had this running for a while. It’s a printrbot makers edition, 
+with a modified bed and Z axis extension. The printer controls are in 
+the black project box instead of underneath. The pi can be seen in its 
+box. It’s all mounted on heavy particle board, so it’s completely mobile, 
+just pick it up and take it anywhere.</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/jnerf.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By J Nerf"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/jnerf.jpg" /></a>
+    </div>
+</div>
+
+<p>Another Printrbot by <strong>David Cain</strong>:</p>
+
+<blockquote>
+  <p>Here’s my PrintRBot and its new wooden tower/spool/RPi/PSU mount. […] 
+It’s currently printing dust-extraction vacuum adaptors for my workshop. 
+The RPi is in the red case on the left side of the tower (WiFi stick 
+antenna hanging down, camera mount clipped to print-bed. I use a NoIR 
+camera, mainly via accidental purchase. I keep meaning to light the 
+whole thing up with LED striplights, but the Leg Lamp will do for now.</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/david_cain.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By David Cain"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/david_cain.jpg" /></a>
+    </div>
+</div>
+
+<p>Yet another Printrbot by <strong>Brian Cost</strong> who writes:</p>
+
+<blockquote>
+  <p>Printerbot Simple Metal that I assembled. I wouldn’t have made all that 
+I have without OctoPrint. Thank you, Gina!</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/brian_cost.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Brian Cost"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/brian_cost.jpg" /></a>
+    </div>
+</div>
+
+<p>You are welcome, Brian! :)</p>
+
+<p>And if I’m not mistaken, that is also a heavily modified Printrbot
+printing away in <strong>Matt McMillan</strong>’s workshop there:</p>
+
+<blockquote>
+  <p>Here are some pictures of my setup with the touchscreen interface I 
+wrote in Python/Kivy. I’m using the 7” Raspberry Pi touchscreen.</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/matt_mcmillan_1.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Matt McMillan"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/matt_mcmillan_1.jpg" /></a>
+    </div>
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/matt_mcmillan_2.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Matt McMillan"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/matt_mcmillan_2.jpg" /></a>
+    </div>
+</div>
+
+<p>Way to go, Matt!</p>
+
+<p><strong>Stefan Schmidt</strong> shares his BigBox (which even comes bundled with OctoPrint!):</p>
+
+<blockquote>
+  <p>It is a BigBox with raspi 3 and raspi 7” touch, touch ui + autostart
+and the printer mains is switched by a power strip which is powered by 
+the raspi’s usb power. So when a print is done I can shutdown octopi 
+and the printer. Soon I will try to automate it by plugin depending 
+on hotend cooled down.</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/stefan_schmidt.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Stefan Schmidt"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/stefan_schmidt.jpg" /></a>
+    </div>
+</div>
+
+<p><strong>Jorge Reis Fleming</strong> has one too:</p>
+
+<blockquote>
+  <p>E3D BigBox Pro with webcam mount.</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/jorge_reis_fleming.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Jorge Reis Fleming"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/jorge_reis_fleming.jpg" /></a>
+    </div>
+</div>
+
+<p><strong>Seh Hui</strong> shares this space efficient setup:</p>
+
+<blockquote>
+  <p>Current setup w/ the Prusa i3 Mk2 and Raspberry Pi 2 setup. Also in the 
+picture is my phone w/ Octoprint + TouchUI installed – which is helpful 
+in monitoring prints while I’m on the go :)</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/seh_hui.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Seh Hui"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/seh_hui.jpg" /></a>
+    </div>
+</div>
+
+<p>The printer of <strong>Eric Pavey</strong> definitely seems to need a little bit more 
+room, at least in the Z direction:</p>
+
+<blockquote>
+  <p>It’s a custom build core-xy “C-Bot”, build volume is around 12x12x20”, 
+running RepRap Firmware on RADDS/Due.  The RPi is in the little blue 
+box on the right side, and I monitor it with either my laptop or phone 
+when I’m away.</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/eric_pavey.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Eric Pavey"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/eric_pavey.jpg" /></a>
+    </div>
+</div>
+
+<p><strong>Edward Boston</strong> also chimes in with a C-Bot:</p>
+
+<blockquote>
+  <p>My C-Bot printer and the camera”</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/edward_boston_1.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Edward Boston"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/edward_boston_1.jpg" /></a>
+    </div>
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/edward_boston_2.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Edward Boston"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/edward_boston_2.jpg" /></a>
+    </div>
+</div>
+
+<p>And here is <strong>Tim Hart</strong>’s setup:</p>
+
+<blockquote>
+  <p>Velleman K8200 with RaspberryPi &amp; camera mount on the z axis</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/tim_hart.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Tim Hart"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/tim_hart.jpg" /></a>
+    </div>
+</div>
+
+<p><strong>André Zumsteg</strong> writes:</p>
+
+<blockquote>
+  <p>This is my crappy printer. I started one year ago with a cheap entry 
+level printer and was not satisfy with it. So I started to add a few 
+thing to make it better and make higher prints. Yes, the lamp is from 
+Ikea :-D</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/andre_zumsteg_1.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By André Zumsteg"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/andre_zumsteg_1.jpg" /></a>
+    </div>
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/andre_zumsteg_2.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By André Zumsteg"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/andre_zumsteg_2.jpg" /></a>
+    </div>
+</div>
+
+<p>I need to get to Ikea.</p>
+
+<p>Here’s <strong>Markus Schicker</strong>’s setup:</p>
+
+<blockquote>
+  <p>Here is a picture of my OctoPi + cam setup</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/markus_schicker.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Markus Schicker"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/markus_schicker.jpg" /></a>
+    </div>
+</div>
+
+<p><strong>Luke Pettit</strong> is still undecided whether to use one or two Pis for
+two printers:</p>
+
+<blockquote>
+  <p>The pi is in its blue case near the keyboard with leads to the camera 
+and the printer from the router etc I deliberately didnt clean up as 
+this is the state of things in full “I’m printing” mode. In the scene 
+you can see spare or old pi’s that sit nearby ready for a home made 
+coryxy that I can’t decide whether to run a second instance of octopi 
+from the same rpi or just use a second rpi.</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/luke_pettit.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Luke Pettit"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/luke_pettit.jpg" /></a>
+    </div>
+</div>
+
+<p><strong>Carsten Wartmann</strong> on the other hand doesn’t worry about that and has
+turned this poor little Pi into quite the workhorse ;)</p>
+
+<blockquote>
+  <p>Serving two printers so far, also doing seti@home, has a 
+monitor/keyboard/mouse for doing stuff and is used for my digital 
+scope. So quite busy.</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/carsten_wartmann.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Carsten Wartmann"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/carsten_wartmann.jpg" /></a>
+    </div>
+</div>
+
+<p>Just for the record, personally I’m still a firm believer of the “on-Pi-per-printer”
+approach, but YMMV :)</p>
+
+<p><strong>René Jurack</strong> hides things in plain sight:</p>
+
+<blockquote>
+  <p>Nothing to see, because it’s hidden inside and I use Web-UI only.</p>
+</blockquote>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/rene_jurack.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By René Jurack"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/rene_jurack.jpg" /></a>
+    </div>
+</div>
+
+<p>The printer is René’s own design, the <a href="http://well-engineered.net/index.php/en/projects/12-dice-english">DICE</a>.</p>
+
+<p>Then there’s <strong>Stefan Krister</strong>’s Mendel 90 for which he <a href="http://bastard-fdb.blogspot.de/2014/06/mendel90-erweiterung-fur-raspberry-pi.html">designed</a>
+the RPi mount himself:</p>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/stefan_krister.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Stefan Krister"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/stefan_krister.jpg" /></a>
+    </div>
+</div>
+
+<p>The lamp on the right in <strong>William Waggoner</strong>’s setup looks familiar - Ikea again? :)</p>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/william_waggoner.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By William Waggoner"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/william_waggoner.jpg" /></a>
+    </div>
+</div>
+
+<p><strong>Print3dForum.com</strong> sent in these pictures:</p>
+
+<div class="row-fluid">
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/print3dforum.com_1.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Print3dforum.com"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/print3dforum.com_1.jpg" /></a>
+    </div>
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/print3dforum.com_2.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Print3dforum.com"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/print3dforum.com_2.jpg" /></a>
+    </div>
+</div>
+<div class="row-fluid" style="margin-top: 10px; margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/print3dforum.com_3.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Print3dforum.com"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/print3dforum.com_3.jpg" /></a>
+    </div>
+</div>
+
+<p>And <strong>Richard Hayler</strong> had this nice picture of his printer to share:</p>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/richard_hayler.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Richard Hayler"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/richard_hayler.jpg" /></a>
+    </div>
+</div>
+
+<p>There’s also this one by <strong><a href="https://twitter.com/SirDoubtsALot">@SirDoubtsALot</a></strong>:</p>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/sirdoubtsalot.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By @SirDoubtsALot"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/sirdoubtsalot.jpg" /></a>
+    </div>
+</div>
+
+<p>And this one by <strong>Michael Johnson</strong>:</p>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/michael_johnson_1.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Michael Johnson"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/michael_johnson_1.jpg" /></a>
+    </div>
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/michael_johnson_2.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Michael Johnson"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/michael_johnson_2.jpg" /></a>
+    </div>
+</div>
+
+<p><strong><a href="https://twitter.com/MCHRISSP1">@MCHRISP1</a></strong> shared his setup via Twitter</p>
+
+<blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr"><a href="https://twitter.com/foosel">@foosel</a> <a href="https://twitter.com/OctoPrint3D">@OctoPrint3D</a> Are pics like this what you&#39;re looking for? I can clean these up a bit if yes... <a href="https://t.co/I0ks4ms4uj">pic.twitter.com/I0ks4ms4uj</a></p>&mdash; Chris (@MCHRISP1) <a href="https://twitter.com/MCHRISP1/status/802932350338420740">November 27, 2016</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>And last but not least, Twitter user <strong><a href="https://twitter.com/mikethebomber">@mikethebomber</a></strong> 
+went one step further and sent in a video of his setup:</p>
+
+<blockquote class="twitter-video" data-lang="en"><p lang="und" dir="ltr"><a href="https://twitter.com/OctoPrint3D">@OctoPrint3D</a> <a href="https://t.co/2vOwMB2yNU">pic.twitter.com/2vOwMB2yNU</a></p>&mdash; NeoPortnoy (@mikethebomber) <a href="https://twitter.com/mikethebomber/status/803002391540994048">November 27, 2016</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Thank you Mike, that made my day :D</p>
+
+<p>And in case you are wondering, this is <strong>my</strong> current setup (not only for 
+printing, but also for testing during development, courtesy of a lengthy
+USB extension cable running to my workstation):</p>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/gina_haeussge_1.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Gina Häußge"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/gina_haeussge_1.jpg" /></a>
+    </div>
+    <div class="span6">
+        <a href="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/gina_haeussge_2.jpg" data-lightbox="/blog/2016/12/14/octoprint-around-the-world" data-title="By Gina Häußge"><img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world/gina_haeussge_2.jpg" /></a>
+    </div>
+</div>
+
+<p>Hephestos 2 sitting on a self-built desk in my office. Lot’s of stuff
+designed and printed for it (custom spool holder, filament guide, camera
+mount, electronics bay with fan, replacement covers to keep with the color
+scheme - none of that shared yet, no time) and also some things I found 
+readily available on Thingiverse (<a href="http://www.thingiverse.com/thing:1389926">LCD bezel</a>
+&amp; <a href="http://www.thingiverse.com/thing:1189784">cover</a>, <a href="http://www.thingiverse.com/thing:497764">dust filter</a>, 
+40mm fan guard of which I can’t find the link anymore). The Pi2 lives 
+inside the right side electronics bay, on a little velcro’d in caddy.</p>
+
+<p>I hope you found this little feature as inspiring as I did - if so it
+will not be the last one like this :) Let me know <a href="https://twitter.com/OctoPrint3D">on Twitter</a>! Cheers!</p>
+
+<p><em>Edit 2016-12-15</em> Added another couple of pictures I managed to overlook 😱</p>
+
+
+            
+            
+            
+        </div>
+        <div class="span4">
+            <div class="postinfo">
+                
+                <dl class="featuredimage">
+                    <img src="/assets/img/blog/2016-12/2016-12-14-octoprint-around-the-world.png" class="img-rounded">
+                </dl>
+                
+                <dl class="author">
+                    <dt>Author</dt>
+                    <dd>
+                        <a href="https://github.com/foosel" target="_blank">Gina Häußge</a>
+                    </dd>
+                    </dl>
+                    <dl class="published">
+                        <dt>Published</dt>
+                    <dd>14 Dec 2016</dd>
+                </dl>
+                
+                
+                <dl class="category">
+                    <dt>Category</dt>
+                    <dd>Community Spotlight</dd>
+                </dl>
+                
+                
+                <dl class="share">
+                    <dt>Share this</dt>
+                    <dd><ul class="sharebuttons">
+    <li><a title="Twitter" href="http://twitter.com/share?text=%22OctoPrint around the World%22&url=https://octoprint.org/blog/2016/12/14/octoprint-around-the-world/&via=OctoPrint3D&related=OctoPrint3D" rel="nofollow" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a></li>
+    <li><a title="Facebook" href="http://www.facebook.com/sharer.php?u=https://octoprint.org/blog/2016/12/14/octoprint-around-the-world/&p[title]=OctoPrint around the World" rel="nofollow" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></span></a></li>
+</ul>
+</dd>
+                </dl>
+            </div>
+            <div class="ad visible-desktop visible-tablet invisible-mobile">
+                <script>
+    if (!window["carbon-disable"] && !window.matchMedia("(max-width: 767px)").matches) {
+        (function() {
+            var po = document.createElement("script");
+            po.type = "text/javascript";
+            po.async = true;
+            po.src  = "//cdn.carbonads.com/carbon.js?serve=CKYIL53W&placement=octoprintorg";
+            po.id = "_carbonads_js";
+            var s = document.currentScript;
+            s.parentNode.insertBefore(po, s);
+        })();
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+      <footer>
+          <div class="container">
+              <div class="row">
+                  <div class="span4 footer-left-column">
+                      <h2>On the web</h2>
+                      <ul class="fa-ul">
+                          <li><span class="fa-li"><i class="fas fa-users fa-fw"></i></span><a href="https://community.octoprint.org">Community Forum</a></li>
+                          <li><span class="fa-li"><i class="fas fa-comments fa-fw"></i></span><a href="irc://chat.freenode.net/octoprint" target="_blank">#octoprint on freenode</a> (<a href="https://chat.octoprint.org">Webchat</a>, <a href="https://freenode.logbot.info/octoprint">Logs</a>)</li>
+                          <li><span class="fa-li"><i class="fab fa-twitter fa-fw"></i></span><a href="https://twitter.com/OctoPrint3D" target="_blank">@OctoPrint3D</a></li>
+                          <li><span class="fa-li"><i class="fab fa-facebook-f fa-fw"></i></span><a href="https://facebook.com/OctoPrint" target="_blank">OctoPrint</a></li>
+                          <li><span class="fa-li"><i class="fab fa-youtube fa-fw"></i></span><a href="https://www.youtube.com/c/OctoPrint3D" target="_blank">OctoPrint</a></li>
+                          <li><span class="fa-li"><i class="fas fa-tachometer-alt fa-fw"></i></span><a href="https://status.octoprint.org" target="_blank">Site Status</a></li>
+                          <li><span class="fa-li"><i class="fas fa-gavel fa-fw"></i></span><a href="/imprint/" rel="nofollow">Legal Notice</a></li>
+                          <li><span class="fa-li"><i class="fas fa-gavel fa-fw"></i></span><a href="/privacy/" rel="nofollow">Privacy Policy</a></li>
+                      </ul>
+                  </div>
+                  <div class="span4">
+                      <h2>Recent Posts</h2>
+                      <div class="recent-posts">
+                          
+                          <div><a class="post-link" href="/blog/2020/03/31/3d-printing-against-corona/">Help to fight the Corona Crisis using your 3D printer</a><br><small>31 Mar 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/03/19/octoprint-on-air-30-announcement/">Announcement: OctoPrint On Air #30 LIVE</a><br><small>19 Mar 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/03/04/new-release-candidate-1.4.0/">New release: 1.4.0</a><br><small>04 Mar 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/02/27/octoprint-on-air-29/">OctoPrint On Air #29</a><br><small>27 Feb 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/02/26/new-release-candidate-1.4.0rc6/">New release candidate: 1.4.0rc6</a><br><small>26 Feb 2020</small></div>
+                          
+                      </div>
+                  </div>
+                  <div class="span4 footer-right-column">
+                      <h2>Big Thanks</h2>
+                      <p>
+                          Cross-browser testing services are kindly provided by <a href="https://www.browserstack.com">BrowserStack</a>.
+                          Profiling is done with the help of <a href="https://www.pyvmmonitor.com">PyVmMonitor</a>.
+                          Error tracking is powered and sponsored by <a href="https://sentry.io">Sentry</a>.
+                      </p>
+                      <p>
+                          Development would be impossible without the <a href="/support-octoprint/" data-event-category="supportlink" data-event-action="footer">financial support of the community</a>.
+                      </p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="span12 text-center legal">
+                      <small>"OctoPrint" is a <a href="/trademark-rules/">registered trademark</a></small>
+                  </div>
+              </div>
+          </div>
+      </footer>
+
+
+<a href="#top" class="to-top" title="Back to top" data-scroll><i class="fa fa-arrow-up fa-2x"></i></a>
+
+<script src="/assets/js/jquery-1.9.1.min.js?_=1588679698"></script>
+<script src="/assets/js/underscore-1.4.4.min.js?_=1588679698"></script>
+<script src="/assets/js/prettify-r224.js?_=1588679698"></script>
+<script src="/assets/js/holder-2.9.3.min.js?_=1588679698"></script>
+<script src="/assets/vendor/slick-1.5.9/slick.min.js?_=1588679698"></script>
+<script src="/assets/js/bootstrap.min.js?_=1588679698"></script>
+<script src="/assets/js/lightbox.min.js?_=1588679698"></script>
+<script src="/assets/js/smooth-scroll.min.js?_=1588679698"></script>
+<script src="/assets/js/site.js?_=1588679698"></script>
+<script src="/assets/js/yt-with-consent.js?_=1588679698"></script>
+<script src="/assets/js/autotrack.js?_=1588679698"></script>
+
+<!-- Google Analytics -->
+<script>
+    var gaBaseProperty = 'UA-62479257';
+    var gaProperty = gaBaseProperty + '-1';
+
+    // opt out
+    var disableStr = 'ga-disable-' + gaProperty;
+    var disableCookie = 'ga-disable-' + gaBaseProperty;
+    function gaOptout() {
+        document.cookie = disableCookie + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org';
+        window[disableStr] = true;
+        alert("Google Analytics ist jetzt deaktiviert! / Google Analytics is now deactivated!")
+    }
+
+    // tracking code
+    if (document.cookie.indexOf(disableCookie + '=true') > -1) {
+        window[disableStr] = true;
+    } else {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', gaProperty, 'auto');
+        ga('require', 'autotrack');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+</script>
+
+</body>
+</html>

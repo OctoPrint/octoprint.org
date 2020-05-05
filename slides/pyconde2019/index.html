@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Driving 3D Printers with Python: Lessons Learned</title>
+
+		<meta name="description" content="If you've ever wondered what made me create OctoPrint and what challenges I had to face in the the last six years of maintaining it, this is your chance to get some insights">
+		<meta name="author" content="Gina Häußge">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/octoprint.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Font Awesome -->
+		<link href="lib/css/font-awesome.css" rel="stylesheet">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			if (window.location.search.match( /print-pdf/gi )) {
+				document.write( '<link rel="stylesheet" href="css/print/pdf.css" type="text/css">' );
+			} else {
+				document.write( '<link rel="stylesheet" href="css/print/paper.css" type="text/css" media="print">' );
+			}
+		</script>
+ 
+		<!--[if lt IE 9]>
+			<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<!--[if IE 7]>
+			<link rel="stylesheet" href="lib/css/font-awesome-ie7.min.css">
+		<![endif]-->
+
+		<link rel="shortcut icon" href="lib/img/tentacle-32x32.png">
+		<link rel="apple-touch-icon" href="lib/img/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="lib/img/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="lib/img/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="lib/img/apple-touch-icon-144x144.png">
+		</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 style="font-size: 3em">Driving 3D Printers with Python</h1>
+					<h2>Lessons Learned</h2>
+					<p>
+						<img class="nobox" src="img/logo.png">
+					</p>
+					<p>
+						<small><a href="https://foosel.net">Gina Häußge</a> / <a href="https://twitter.com/foosel">@foosel</a> &amp; <a href="https://twitter.com/OctoPrint3d">@OctoPrint3d</a></small>
+					</p>
+					<p>
+						<small>PyConDE 2019</small>
+					</p>
+				</section>
+
+				<!--section>
+					<section>
+						<h1>Who am I?</h1>
+					</section>
+					<section>
+						<h2>Gina Häußge aka foosel</h2>
+						<ul>
+							<li>
+								Creator & maintainer of OctoPrint<br>
+								<small>and mostly sole developer (full time)</small>
+							</li>
+							<li>Passionate coder 👩‍💻</li>
+							<li>Former IT Consultant & Software Architect</li>
+							<li>Owner of a 3D printer since late 2012</li>
+						</ul>
+					</section>
+				</section-->
+
+				<section>
+					<section>
+						<img src="img/ultimaker.jpg" class="stretch">
+					</section>
+
+					<section>
+						<img src="img/fail.png" class="stretch">
+					</section>
+
+					<section>
+						<img src="img/octoprint-baby.png">
+					</section>
+
+					<section>
+						<img src="img/screenshot.png" class="stretch">
+					</section>
+
+					<section>
+						<h3>Architecture</h3>
+						<img src="img/architecture.png" class="stretch">
+					</section>
+
+					<section>
+						<h3>Target audience & platform</h3>
+						<ul>
+							<li>
+								Audience: Owners of 3d printers = makers & tinkerers, some businesses
+								<ul>
+									<li>end users</li>
+									<li>rarely developers themselves</li>
+								</ul>
+							</li>
+							<li>Platform: Small single PCB linux computers (Raspberry Pi)
+								<ul>
+									<li>e.g. Raspberry Pi</li>
+									<li>but: platform agnostic!</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Challenge #1</h1>
+						<h3>Initial installation and keeping things up to date</h3>
+					</section>
+
+					<section>
+						<h3>Initial installation</h3>
+						<ul>
+							<li>
+								Initial installation happens by the end user
+								<ul>
+									<li>😱 Bootstrap Python &amp; <code>pip install octoprint</code></li>
+									<li>😊 Preconfigured Raspberry Pi image: download, flash, wizard, done</li>
+								</ul>
+							</li>
+							<li>
+								And on something that is not a Pi?
+								<ul>
+									<li>Huge variety of encountered environments (Linux, Windows, Mac, FreeBSD, ...)</li>
+									<li>
+										Code needs to anticipate that
+										<ul>
+											<li>E.g. IPv6 dual stack on Windows</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Keeping things up to date</h3>
+						<ul>
+							<li>
+								OctoPrint itself
+								<ul>
+									<li>😱 <code>pip install -U octoprint</code></li>
+									<li>😊 Built-in update mechanism for OctoPrint & plugins</li>
+								</ul>
+							</li>
+							<li>
+								Rest of the environment
+								<ul>
+									<li>
+										Done by some users, not by others, conflicting information
+									</li>
+									<li>
+										<code>You are using pip version 10.0.1, however version 19.2.3 is available. You should consider upgrading via the 'python -m pip install --upgrade pip' command.</code>
+									</li>
+									<li>Result: unknown environment, sometimes broken environment, hard to test, additional support overhead</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>What about the image itself?</h3>
+						<ul>
+							<li>
+								"Never touch a running system!"
+								<ul>
+									<li>Software stack quickly outdates</li>
+								</ul>
+							</li>
+							<li>💡 Disable OctoPrint updates on ancient setups & provide migration path</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Lessons Learned</h3>
+						Try to control runtime environment but stay flexible, make updates easy and use features as motivator for touching a running system.
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Challenge #2</h1>
+						<h3>Maintaining backwards compatibility for 3rd party plugins</h3>
+					</section>
+
+					<section>
+						<h3>Maintaining backwards compatibility for 3rd party plugins</h3>
+						<ul>
+							<li>Plugin system since 2015 (1.2.0), over 170 plugins</li>
+							<li>
+								Established plugin ecosystem => this is suddenly a platform that needs stability
+								<ul>
+									<li>Disgruntled authors = no ecosystem = disgruntled users</li>
+								</ul>
+							</li>
+							<li>Problem: Dependency updates with breaking changes</li>
+							<li>Problem: Code refactoring</li>
+							<li>Problem: Python 2 vs 3</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Lessons Learned</h3>
+						Read changelogs of dependencies (if you can find them), aggressively do version pinning, be prepared to work around breaking changes, make life easy for plugin authors.
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h1>Challenge #3</h1>
+						<h3>Performance</h3>
+					</section>
+
+					<section>
+						<h3>Performance</h3>
+						<ul>
+							<li>Webinterface + several clients + keeping a printer running + plugins + ... 🤪</li>
+							<li>Locked to one thread at a time (GIL)</li>
+							<li>CPU bound tasks (message parsing, checksums, file analysis, ...)</li>
+							<li>Multiple processes non trivial due to needed data sharing (plugins)</li>
+							<li>Underlying platform often limited (RPi)</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Lessons Learned</h3>
+						Extract CPU bound tasks if possible, be very conservative with resources, explore IPC options.
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Challenge #4</h1>
+						<h3>No proper protocol specification</h3>
+					</section>
+
+					<section>
+						<h3>No proper protocol specification</h3>
+						<ul>
+							<li>No standard (mutation of GCODE CNC standard, sent/received over serial)</li>
+							<li>Responses undefined, requests mostly not well defined</li>
+							<li>"Specification" is a wiki page everyone can edit</li>
+							<li>
+								There be dragons! 🐉 And they be <strong>huge</strong>!
+								<ul>
+									<li>New printer models cause issues again and again</li>
+									<li>As do very old ones (almost no one does <code>git merge upstream</code>...)</li>
+									<li>Introduces significant parser overhead and maintainence nightmares</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Lessons Learned</h3>
+						Try to keep up 🤷‍♀️ and use plugins for quick workarounds
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Challenge #5</h1>
+						<h3>Support overhead</h3>
+					</section>
+
+					<section>
+						<h3>Support overhead</h3>
+						<ul>
+							<li>
+								Early days: Huge overlap between printer owners & DIY enthusiasts
+								<ul>
+									<li>Tinker happy</li>
+									<li>Google around for a solution</li>
+									<li>Capable of fixing stuff themselves</li>
+								</ul>
+							</li>
+							<li>
+								These days: Lots and lots of consumers
+								<ul>
+									<li>Many owners never had to tinker before</li>
+									<li>
+										OctoPrint might be their first interaction with Open Source<br>
+										<small>and they might think they are dealing with a full blown company with support staff</small>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Lessons Learned</h3>
+						Community building to delegate support (e.g. central forum) - let people help each other!
+					</section>
+				</section>
+
+
+				<section>
+					<h1>Thanks for your attention!</h1>
+					<p>Website: <a href="https://octoprint.org">octoprint.org</a></p>
+					<p>Forum: <a href="https://community.octoprint.org">community.octoprint.org</a></p>
+					<p>Slides: <a href="https://octoprint.org/slides/pyconde2019/">octoprint.org/slides/pyconde2019/</a></p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				width: 1280,
+				height: 720,
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				],
+
+				keyboard: {
+					// support left/right for next/prev slide (remote compatible)
+					39: 'next',
+					37: 'prev'
+				}
+			});
+
+		</script>
+
+	</body>
+</html>

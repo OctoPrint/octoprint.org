@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Important OctoPrint Announcements</title>
+    
+    <link>https://octoprint.org/blog/</link>
+    <atom:link href="https://octoprint.org/feeds/important.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 05 May 2020 06:54:58 -0500</pubDate>
+    <lastBuildDate>Tue, 05 May 2020 06:54:58 -0500</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Security vulnerability: Update to 1.3.6 ASAP!</title>
+        <description>
+          <![CDATA[
+            If you still haven't updated to OctoPrint 1.3.6, please do so ASAP. There is a security vulnerability present in versions 1.3.0rc1 through 1.3.5 that puts your instance at risk if it is accessible directly via the internet or another untrusted network.
+          ]]>
+        </description>
+        <pubDate>Thu, 15 Mar 2018 06:00:00 -0500</pubDate>
+        <link>https://octoprint.org/blog/2018/03/15/security-issue-update-to-1.3.6/?utm_source=rss&amp;utm_medium=important</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2018/03/15/security-issue-update-to-1.3.6/</guid>
+        <category>Important OctoPrint Announcements</category>
+      </item>
+    
+      <item>
+        <title>Still running OctoPi 0.12 or old pip and setuptools? You need to do some manual upgrades</title>
+        <description>
+          <![CDATA[
+            If you are still running OctoPi 0.12 or old pip and setuptools versions, due to some changes recently done in the python infrastructure you'll need to run some manual commands or you will no longer be able to upgrade.
+          ]]>
+        </description>
+        <pubDate>Wed, 01 Nov 2017 09:45:00 -0500</pubDate>
+        <link>https://octoprint.org/blog/2017/11/01/octopi-0.12-pip-issues/?utm_source=rss&amp;utm_medium=important</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2017/11/01/octopi-0.12-pip-issues/</guid>
+        <category>Important OctoPrint Announcements</category>
+      </item>
+    
+      <item>
+        <title>Bug in 1.2.16 might prevent updates</title>
+        <description>
+          <![CDATA[
+            If you get an error when trying to upgrade from 1.2.16, open the settings dialog and click "Save" (you don't have to modify anything!). Your update should work now.
+          ]]>
+        </description>
+        <pubDate>Tue, 08 Nov 2016 08:10:00 -0600</pubDate>
+        <link>https://octoprint.org/blog/2016/11/08/bug-in-1.2.16-might-prevent-updates/?utm_source=rss&amp;utm_medium=important</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2016/11/08/bug-in-1.2.16-might-prevent-updates/</guid>
+        <category>Important OctoPrint Announcements</category>
+      </item>
+    
+      <item>
+        <title>I need your support</title>
+        <description>
+          <![CDATA[
+            If you love OctoPrint and want to see its development continue at the pace of the past two years, please read on about its current funding situation and how you can help.
+          ]]>
+        </description>
+        <pubDate>Wed, 13 Apr 2016 14:19:35 -0500</pubDate>
+        <link>https://octoprint.org/blog/2016/04/13/i-need-your-support/?utm_source=rss&amp;utm_medium=important</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2016/04/13/i-need-your-support/</guid>
+        <category>Important OctoPrint Announcements</category>
+      </item>
+    
+      <item>
+        <title>Bug in 1.2.7 prevents updates</title>
+        <description>
+          <![CDATA[
+            <p>If you are currently running version 1.2.7 you’ll need to install the 
+<a href="http://plugins.octoprint.org/plugins/updatefix127/">“Updatefix 1.2.7” plugin</a> from the plugin repository before you can 
+update your OctoPrint installation.</p>
+
+<p>Version 1.2.7 sadly contains a bug that breaks updating OctoPrint. When 
+attempting to update, you’ll simply get presented with an 
+“update successful” message, but nothing was actually updated. Version 
+1.2.8 contains a fix, but naturally we have a hen-egg-problem here. To 
+allow you updating to 1.2.8, a plugin was made available that basically 
+backports the needed fix to 1.2.7 by monkey patching your existing 
+installation during runtime: “Updatefix 1.2.7”. It can be found in the 
+plugin repository and can be installed directly through your plugin 
+manager - just refresh the plugin list from the repository (via the 
+little wrench icon in the plugin manager install dialog) if it doesn’t 
+show up immediately when you search for “update”.</p>
+
+<p>The section “A bug in 1.2.7 prevents directly updating to 1.2.8, here’s what to do” 
+in the <a href="https://github.com/foosel/OctoPrint/releases/tag/1.2.8">release notes</a> explains everything and also offers you 
+a work around if you can’t or don’t want to install the plugin. The FAQ 
+has been updated as well.</p>
+
+          ]]>
+        </description>
+        <pubDate>Mon, 07 Dec 2015 00:00:00 -0600</pubDate>
+        <link>https://octoprint.org/blog/2015/12/07/bug-in-1.2.7-prevents-updates/?utm_source=rss&amp;utm_medium=important</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2015/12/07/bug-in-1.2.7-prevents-updates/</guid>
+        <category>Important OctoPrint Announcements</category>
+      </item>
+    
+  </channel>
+</rss>

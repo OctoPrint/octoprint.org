@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+
+    <title>OctoPrint.org - Heads-up plugin authors! Potentially breaking change with 1.3.6</title>
+    <meta name="description" content="OctoPrint is the snappy web interface for your 3D printer that allows you to control and monitor all aspects of your printer and print jobs, right from your browser.">
+    <meta name="author" content="Gina Häußge">
+    <meta name="google-site-verification" content="0EFsbaNygJcEinKPmzP-hTf0Ju6wDIpJxO5zvQtOQT0" />
+    <meta name="google-site-verification" content="i7e8SG0JfDqFkxQgr1_ZuirRzwJomS8xzPvb0mLHujM" />
+    <meta name="referrer" content="same-origin">
+
+    
+
+    <!--[if lt IE 9]>
+    <script src="/assets/js/html5shim.js?_=1588679698"></script>
+    <![endif]-->
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/assets/css/site.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/bootstrap-responsive.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/prettify.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/lightbox.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/syntax.css?_=1588679698">
+
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/slick-1.5.9/slick.css?_=1588679698"/>
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/slick-1.5.9/slick-theme.css?_=1588679698"/>
+
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/assets/img/tentacle-32x32.png">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144.png">
+
+    <!-- Le RSS feed -->
+    <link rel="alternate" type="application/rss+xml" title="OctoPrint.org: OctoBlog" href="/feeds/all.xml">
+
+    <!-- Le social media meta data -->
+    
+    
+
+    
+
+    
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@OctoPrint3D" />
+    <meta name="twitter:title" content="Heads-up plugin authors! Potentially breaking change with 1.3.6" />
+    <meta name="twitter:description" content="A change to solve issues with plugins bundling JS assets causing interference with others  might cause errors for some plugins that go a bit further than just run-off-the-mill view models. Read on to learn if your maintained plugin might be affected and if so what to do against that." />
+    <meta name="twitter:image" content="https://octoprint.org/assets/img/octoprint-avatar-240x240.png" />
+
+    <meta property="og:title" content="Heads-up plugin authors! Potentially breaking change with 1.3.6" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://octoprint.org/assets/img/octoprint-600x400.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:description" content="A change to solve issues with plugins bundling JS assets causing interference with others  might cause errors for some plugins that go a bit further than just run-off-the-mill view models. Read on to learn if your maintained plugin might be affected and if so what to do against that." />
+    <meta property="og:site_name" content="OctoPrint.org" />
+    <meta property="og:url" content="https://octoprint.org/blog/2017/12/01/heads-up-plugin-authors/" />
+
+    <meta itemscope itemtype="http://schema.org/WebPage" />
+    <meta itemprop="headline" content="Heads-up plugin authors! Potentially breaking change with 1.3.6" />
+    <meta itemprop="description" content="A change to solve issues with plugins bundling JS assets causing interference with others  might cause errors for some plugins that go a bit further than just run-off-the-mill view models. Read on to learn if your maintained plugin might be affected and if so what to do against that." />
+    <meta itemprop="image" content="https://octoprint.org/assets/img/octoprint-600x400.png" />
+
+    <script>
+        var shiftWindow = function() { scrollBy(0, -40) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+    </script>
+
+    <!-- Carbon -->
+    <script>
+        var disableStr = "carbon-disable";
+        function carbonOptout() {
+            //document.cookie = disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org";
+            document.cookie = disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org";
+            window[disableStr] = true;
+            alert("Carbon Ads sind jetzt deaktiviert! / Carbon Ads are now deactivated!");
+        }
+        if (document.cookie.indexOf(disableStr + "=true") > -1) {
+            window[disableStr] = true;
+        }
+    </script>
+
+    <!-- Cookie consent -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/cookieconsent.min.css" />
+    <script src="/assets/js/cookieconsent.min.js"></script>
+    <script>
+        if (!String.prototype.startsWith) {
+            String.prototype.startsWith = function(search, pos) {
+            return this.substr(!pos || pos < 0 ? 0 : +pos, search.length) === search;
+            };
+        }
+
+        
+        window.addEventListener("load", function(){
+            window.cookieconsent.hasTransition = false;
+            window.cookieconsent.initialise({
+                "position": "bottom",
+                "theme": "edgeless",
+                "palette": {
+                    "popup": {
+                        "background": "#000000",
+                        "link": "#10a800"
+                    },
+                    "button": {
+                        "background": "#0b7500"
+                    }
+                },
+                "elements": {
+                    "messagelink": '<span id="cookieconsent:desc" class="cc-message">{{message}} <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank">{{link}}</a> or <a aria-label="privacy policy" tabindex="1" class="cc-link" href="/privacy/" target="_blank">read our Privacy Policy</a></span>'
+                }
+            })
+        });
+        
+
+        /**
+         * Make sure octoprint.github.io stuff gets rewritten to octoprint.org.
+         * See https://github.com/OctoPrint/plugins.octoprint.org/issues/146.
+         */
+        var githubio = "octoprint.github.io/octoprint.org";
+        var url = window.location.href;
+        if (url && (url.startsWith("http://" + githubio) || url.startsWith("https://" + githubio))) {
+            url = url.replace(githubio, "octoprint.org");
+            window.location.replace(url);
+        }
+    </script>
+</head>
+
+<body onload="load()">
+
+<div id="top"></div>
+
+<div id="banner" style="display: none">
+    <a class="close-banner" href="javascript:void(0)">&times;</a>
+    <div class="container content">
+        <p class="text">
+            I work full time on OctoPrint and can only continue thanks to funding by people like you. Give the
+            button a click and learn how you can help!
+        </p>
+        <p class="signature">
+            Thank you,<br>
+            Gina
+        </p>
+        <div class="span4 button">
+            <a class="btn btn-primary btn-large btn-block" href="/support-octoprint/" data-event-category="supportlink" data-event-action="banner"><i class="fa fa-heart"></i> Support my work! <i class="fa fa-heart"></i></a>
+        </div>
+    </div>
+</div>
+
+<div id="navigation" class="navbar navbar-inverse navbar-fixed-top unfixed" data-scroll-header>
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand hidden-phone" href="/"><img src="/assets/img/tentacle-20x20.png" alt="Tentacle logo" class="tentacle"> OctoPrint.org</a>
+      <a class="brand visible-phone" href="/"><img src="/assets/img/tentacle-20x20.png" alt="Tentacle logo" class="tentacle"></a>
+      <a href="javascript:void(0)" class="btn btn-burger btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><i class="fas fa-bars"></i></a>
+      <div class="pull-right">
+        <ul class="nav social-navbar">
+          <li><a href="/merch/" title="Get some merchandise!"><i class="fa fa-shopping-basket"></i></a></li>
+          <li><a href="/support-octoprint/" title="Support OctoPrint!" data-event-category="supportlink" data-event-action="navigation"><i class="fas fa-donate"></i></a></li>
+        </ul>
+      </div>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="https://community.octoprint.org">Forum</a></li>
+          <li><a href="/download/">Download</a></li>
+          <li><a href="/support-octoprint/" title="Support the project!" data-event-category="supportlink" data-event-action="donate">Donate</a></li>
+          <li><a href="/merch/" title="Get some merchandise!" data-event-category="merchlink" data-event-action="navbar">Merchandise</a></li>
+          <li><a href="http://plugins.octoprint.org">Plugins</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">More... <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://github.com/foosel/OctoPrint/wiki">Wiki</a></li>
+              <li><a href="http://docs.octoprint.org">Documentation</a></li>
+              <li><a href="https://community.octoprint.org/c/support/faq">FAQ</a></li>
+              <li><a href="/slides/">Slides & Talks</a></li>
+              <li class="divider"></li>
+              <li><a href="https://github.com/foosel/OctoPrint">Source</a></li>
+              <li><a href="https://github.com/foosel/OctoPrint/blob/master/CONTRIBUTING.md">Contribution Guidelines</a></li>
+              <li><a href="https://github.com/foosel/OctoPrint/issues">Issuetracker</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="wrap">
+    <div id="main">
+    <div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="hero-content pageheader">
+                    <h1>Heads-up plugin authors! Potentially breaking change with 1.3.6</h1>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container blogpost">
+    <div class="row-fluid pagination">
+        <div class="span12">
+            
+                <small><a class="newer-posts" href="/blog/2017/12/01/new-release-candidate-1.3.6rc1/" title="Next Page">&laquo; New release candidate: 1.3.6rc1</a></small>
+            
+            &nbsp;
+            
+                <small><a class="older-posts" href="/blog/2017/11/20/octoprint-on-air-13/" title="Previous Page">OctoPrint On Air #13 &raquo;</a></small>
+            
+        </div>
+    </div>
+    <div class="row-fluid content">
+        <div class="span8 text" id="blogpost-content">
+            <p>A change to solve issues with plugins bundling JS assets that cause interference with other plugins (e.g. through
+the declaration of <code class="language-plaintext highlighter-rouge">"use strict"</code>) and in general to add better isolation and error handling might cause errors 
+for some plugins that go beyond your run-off-the-mill view model and also implicitly declare new globals.</p>
+
+<p>This post will tell you what will change, what plugins are even affected and how to quickly fix the possible issues with a 
+simple plugin update.</p>
+
+<h3 id="what-will-change">What will change?</h3>
+
+<p>OctoPrint by default will no longer bundle the JS assets provided by plugins just one after the other like this:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* contents of plugin_a_1.js */</span>
+
+<span class="p">;</span>
+
+<span class="cm">/* contents of plugin_a_2.js */</span>
+
+<span class="p">;</span>
+
+<span class="cm">/* contents of plugin_b.js */</span>
+
+<span class="p">;</span>
+
+<span class="cm">/* and so on */</span>
+</code></pre></div></div>
+
+<p>Instead it will wrap each plugin’s assets into its own IIFE (immediately invoked function expression) and 
+try-catch-block to isolate it better and thus reduce potential issues like unexpectedly enabled strict mode
+or other such hard to debug issues:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="c1">// source: plugin/a/plugin_a_1.js</span>
+        <span class="cm">/* contents of plugin_a_1.js */</span>
+        
+        <span class="p">;</span> 
+        
+        <span class="c1">// source: plugin/a/plugin_a_2.js</span>
+        <span class="cm">/* contents of plugin_a_2.js */</span>
+        
+        <span class="p">;</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">log</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="dl">"</span><span class="s2">Error in JS assets for plugin a:</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">stack</span> <span class="o">||</span> <span class="nx">error</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">})();</span>
+<span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="c1">// source: plugin/b/plugin_b.js</span>
+        <span class="cm">/* contents of plugin_b.js */</span>
+        
+        <span class="p">;</span> 
+        
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">log</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="dl">"</span><span class="s2">Error in JS assets for plugin b:</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">stack</span> <span class="o">||</span> <span class="nx">error</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">})();</span>
+<span class="cm">/* and so on */</span>
+</code></pre></div></div>
+
+<p>The way scoping in JavaScript works, this means that any functions or variables that you declare in your JS file
+without a scope limiting keyword like e.g. <code class="language-plaintext highlighter-rouge">var</code> will no longer just be pushed to the global namespace but instead
+only be declared locally inside the IIFE. That means they won’t be accessible globally either unless you explicitly
+attach them to <code class="language-plaintext highlighter-rouge">window</code> yourself. This is not a problem (especially not if you did it accidentally) unless you try 
+to use those identifiers outside of your JS files, e.g. in a template your plugin also provides.</p>
+
+<h3 id="what-plugins-are-affected">What plugins are affected?</h3>
+
+<p>Only <code class="language-plaintext highlighter-rouge">AssetPlugin</code> plugins whose JavaScript files contain implicit global declarations of functions or variables 
+they then try to access outside of their JavaScript files are affected.</p>
+
+<p>Let’s look at an example. If you have something like this <code class="language-plaintext highlighter-rouge">myHelper</code> function in your plugin’s JS asset:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">YourViewModel</span><span class="p">(</span><span class="nx">parameters</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nb">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+        <span class="nb">self</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="dl">"</span><span class="s2">value</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">OCTOPRINT_VIEWMODELS</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+        <span class="na">construct</span><span class="p">:</span> <span class="nx">YourViewModel</span><span class="p">,</span>
+        <span class="na">dependencies</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="na">elements</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">#mySpan</span><span class="dl">"</span><span class="p">]</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="kd">function</span> <span class="nx">myHelper</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="dl">"</span><span class="s2">formattedValue: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">value</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>and then use it in your plugin’s template:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"mySpan"</span> <span class="na">data-bind=</span><span class="s">"text: myHelper(value)"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<p>then your plugin will run into an error with OctoPrint 1.3.6 since your <code class="language-plaintext highlighter-rouge">myHelper</code> will no longer be automatically 
+available on the global namespace and an error will be thrown when your view model is bound to your template.</p>
+
+<p>If you just accidentally forgot to make your <code class="language-plaintext highlighter-rouge">myHelper</code> function local and are only using it inside your own JS
+assets however there won’t be any problems.</p>
+
+<h3 id="how-do-i-solve-this">How do I solve this?</h3>
+
+<h4 id="the-quick-and-dirty-solution">The quick and dirty solution</h4>
+
+<p>Instead of implicitly declaring your global function or variable that you need outside of your JS assets, 
+do it explicitly by setting it on <code class="language-plaintext highlighter-rouge">window</code>:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">YourViewModel</span><span class="p">(</span><span class="nx">parameters</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nb">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+        <span class="nb">self</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="dl">"</span><span class="s2">value</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">OCTOPRINT_VIEWMODELS</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+        <span class="na">construct</span><span class="p">:</span> <span class="nx">YourViewModel</span><span class="p">,</span>
+        <span class="na">dependencies</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="na">elements</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">#mySpan</span><span class="dl">"</span><span class="p">]</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">myHelper</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="dl">"</span><span class="s2">formattedValue: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">value</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>That’s fully backwards compatible to earlier versions of OctoPrint too - you are really just doing something
+explicitly that before you were doing implicitly.</p>
+
+<h4 id="a-possibly-cleaner-solution">A possibly cleaner solution</h4>
+
+<p><strong>But even better yet</strong> is to avoid global functions in general and instead see if you can’t adjust your plugin 
+to instead bind to a helper function or even a <code class="language-plaintext highlighter-rouge">computed</code>/<code class="language-plaintext highlighter-rouge">pureComputed</code> defined on your view model if it’s bound to 
+the template in question anyhow:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">YourViewModel</span><span class="p">(</span><span class="nx">parameters</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nb">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+        <span class="nb">self</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">observable</span><span class="p">(</span><span class="dl">"</span><span class="s2">value</span><span class="dl">"</span><span class="p">);</span>
+        
+        <span class="nb">self</span><span class="p">.</span><span class="nx">formattedValue</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">pureComputed</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="dl">"</span><span class="s2">formattedValue: </span><span class="dl">"</span> <span class="o">+</span> <span class="nb">self</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+        <span class="p">});</span>
+        
+        <span class="cm">/* OR MAYBE */</span>
+        
+        <span class="nb">self</span><span class="p">.</span><span class="nx">myHelper</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="dl">"</span><span class="s2">formattedValue: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">value</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">OCTOPRINT_VIEWMODELS</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+        <span class="na">construct</span><span class="p">:</span> <span class="nx">YourViewModel</span><span class="p">,</span>
+        <span class="na">dependencies</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="na">elements</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">#mySpan</span><span class="dl">"</span><span class="p">]</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"#mySpan"</span> <span class="na">data-bind=</span><span class="s">"text: formattedValue"</span><span class="nt">&gt;&lt;/span&gt;</span>
+
+<span class="c">&lt;!-- OR MAYBE --&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"#mySpan"</span> <span class="na">data-bind=</span><span class="s">"text: myHelper(value)"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<h4 id="and-then">And then?</h4>
+
+<p><strong>In any case</strong>, if your plugin is affected, just push an update of your plugin with this change in place and 
+once your users update your plugin all should be fine again.</p>
+
+<div class="alert alert-warning">
+If your plugin is affected but cannot update itself automatically due to issues with its software update config, please
+fix that as well, then 
+<a href="https://github.com/OctoPrint/plugins.octoprint.org/issues" target="_blank">open an issue on the plugin repository</a>
+and request the push of a notification about your plugin to your users to tell them that they should update manually. Don't
+forget to state what plugin and what version(s) the notification should be sent for!
+</div>
+
+<h3 id="what-can-my-users-do-until-ive-updated-my-plugin">What can my users do until I’ve updated my plugin?</h3>
+
+<p>Since it’s only logical that not all affected plugins will already be adjusted at public release of OctoPrint 1.3.6,
+I’ve added a small feature toggle that allows to force the old bundling approach if set:</p>
+
+<p><a href="/assets/img/blog/2017-12/2017-12-01-legacy-setting.png" data-lightbox="/blog/2017/12/01/heads-up-plugin-authors" data-title="Settings &gt; Features &gt; Enable legacy plugin asset bundling"><img alt="Settings &gt; Features &gt; Enable legacy plugin asset bundling" src="/assets/img/blog/2017-12/2017-12-01-legacy-setting.png" /></a></p>
+
+<p>To make plugins that broke due to the change work again, simply checking 
+“Settings &gt; Features &gt; Enable legacy plugin asset bundling”, saving and restarting the server will have 
+OctoPrint use the old method of asset bundling again and work around the problem (with the downside of having the
+same potential compatibility issues with other plugins again that made it necessary to introduce this change in the
+first place).</p>
+
+<p>Please note however that this flag will only be available for a limited period of time. I currently plan to remove it
+again in OctoPrint 1.3.8. This should leave you enough time to do the minimal adjustment 
+necessary in your plugin.</p>
+
+<h3 id="why-was-this-introduced-now">Why was this introduced now?</h3>
+
+<p>Some users and plugin authors started running into seriously hard to debug problems caused by other plugins 
+declaring strict mode or otherwise interfering. That’s something that in all likelihood would have gotten only 
+more worse the longer a stricter isolation of plugins wasn’t in place.</p>
+
+<p>Considering that the change needed to get affected plugins going again is a very simple on, not many plugins should
+even be affected and a better isolation and error handling has huge benefits, I decided that the advantages here
+certainly outweigh the disadvantages.</p>
+
+<p>If you want even more details, feel free to read the <a href="https://github.com/foosel/OctoPrint/issues/2200">related ticket</a> 
+that led to the introduction of this change.</p>
+
+
+            
+            
+            
+        </div>
+        <div class="span4">
+            <div class="postinfo">
+                
+                <dl class="author">
+                    <dt>Author</dt>
+                    <dd>
+                        <a href="https://github.com/foosel" target="_blank">Gina Häußge</a>
+                    </dd>
+                    </dl>
+                    <dl class="published">
+                        <dt>Published</dt>
+                    <dd>01 Dec 2017</dd>
+                </dl>
+                
+                
+                <dl class="category">
+                    <dt>Category</dt>
+                    <dd>Development</dd>
+                </dl>
+                
+                
+                <dl class="share">
+                    <dt>Share this</dt>
+                    <dd><ul class="sharebuttons">
+    <li><a title="Twitter" href="http://twitter.com/share?text=%22Heads-up plugin authors! Potentially breaking change with 1.3.6%22&url=https://octoprint.org/blog/2017/12/01/heads-up-plugin-authors/&via=OctoPrint3D&related=OctoPrint3D" rel="nofollow" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a></li>
+    <li><a title="Facebook" href="http://www.facebook.com/sharer.php?u=https://octoprint.org/blog/2017/12/01/heads-up-plugin-authors/&p[title]=Heads-up plugin authors! Potentially breaking change with 1.3.6" rel="nofollow" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></span></a></li>
+</ul>
+</dd>
+                </dl>
+            </div>
+            <div class="ad visible-desktop visible-tablet invisible-mobile">
+                <script>
+    if (!window["carbon-disable"] && !window.matchMedia("(max-width: 767px)").matches) {
+        (function() {
+            var po = document.createElement("script");
+            po.type = "text/javascript";
+            po.async = true;
+            po.src  = "//cdn.carbonads.com/carbon.js?serve=CKYIL53W&placement=octoprintorg";
+            po.id = "_carbonads_js";
+            var s = document.currentScript;
+            s.parentNode.insertBefore(po, s);
+        })();
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+      <footer>
+          <div class="container">
+              <div class="row">
+                  <div class="span4 footer-left-column">
+                      <h2>On the web</h2>
+                      <ul class="fa-ul">
+                          <li><span class="fa-li"><i class="fas fa-users fa-fw"></i></span><a href="https://community.octoprint.org">Community Forum</a></li>
+                          <li><span class="fa-li"><i class="fas fa-comments fa-fw"></i></span><a href="irc://chat.freenode.net/octoprint" target="_blank">#octoprint on freenode</a> (<a href="https://chat.octoprint.org">Webchat</a>, <a href="https://freenode.logbot.info/octoprint">Logs</a>)</li>
+                          <li><span class="fa-li"><i class="fab fa-twitter fa-fw"></i></span><a href="https://twitter.com/OctoPrint3D" target="_blank">@OctoPrint3D</a></li>
+                          <li><span class="fa-li"><i class="fab fa-facebook-f fa-fw"></i></span><a href="https://facebook.com/OctoPrint" target="_blank">OctoPrint</a></li>
+                          <li><span class="fa-li"><i class="fab fa-youtube fa-fw"></i></span><a href="https://www.youtube.com/c/OctoPrint3D" target="_blank">OctoPrint</a></li>
+                          <li><span class="fa-li"><i class="fas fa-tachometer-alt fa-fw"></i></span><a href="https://status.octoprint.org" target="_blank">Site Status</a></li>
+                          <li><span class="fa-li"><i class="fas fa-gavel fa-fw"></i></span><a href="/imprint/" rel="nofollow">Legal Notice</a></li>
+                          <li><span class="fa-li"><i class="fas fa-gavel fa-fw"></i></span><a href="/privacy/" rel="nofollow">Privacy Policy</a></li>
+                      </ul>
+                  </div>
+                  <div class="span4">
+                      <h2>Recent Posts</h2>
+                      <div class="recent-posts">
+                          
+                          <div><a class="post-link" href="/blog/2020/03/31/3d-printing-against-corona/">Help to fight the Corona Crisis using your 3D printer</a><br><small>31 Mar 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/03/19/octoprint-on-air-30-announcement/">Announcement: OctoPrint On Air #30 LIVE</a><br><small>19 Mar 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/03/04/new-release-candidate-1.4.0/">New release: 1.4.0</a><br><small>04 Mar 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/02/27/octoprint-on-air-29/">OctoPrint On Air #29</a><br><small>27 Feb 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/02/26/new-release-candidate-1.4.0rc6/">New release candidate: 1.4.0rc6</a><br><small>26 Feb 2020</small></div>
+                          
+                      </div>
+                  </div>
+                  <div class="span4 footer-right-column">
+                      <h2>Big Thanks</h2>
+                      <p>
+                          Cross-browser testing services are kindly provided by <a href="https://www.browserstack.com">BrowserStack</a>.
+                          Profiling is done with the help of <a href="https://www.pyvmmonitor.com">PyVmMonitor</a>.
+                          Error tracking is powered and sponsored by <a href="https://sentry.io">Sentry</a>.
+                      </p>
+                      <p>
+                          Development would be impossible without the <a href="/support-octoprint/" data-event-category="supportlink" data-event-action="footer">financial support of the community</a>.
+                      </p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="span12 text-center legal">
+                      <small>"OctoPrint" is a <a href="/trademark-rules/">registered trademark</a></small>
+                  </div>
+              </div>
+          </div>
+      </footer>
+
+
+<a href="#top" class="to-top" title="Back to top" data-scroll><i class="fa fa-arrow-up fa-2x"></i></a>
+
+<script src="/assets/js/jquery-1.9.1.min.js?_=1588679698"></script>
+<script src="/assets/js/underscore-1.4.4.min.js?_=1588679698"></script>
+<script src="/assets/js/prettify-r224.js?_=1588679698"></script>
+<script src="/assets/js/holder-2.9.3.min.js?_=1588679698"></script>
+<script src="/assets/vendor/slick-1.5.9/slick.min.js?_=1588679698"></script>
+<script src="/assets/js/bootstrap.min.js?_=1588679698"></script>
+<script src="/assets/js/lightbox.min.js?_=1588679698"></script>
+<script src="/assets/js/smooth-scroll.min.js?_=1588679698"></script>
+<script src="/assets/js/site.js?_=1588679698"></script>
+<script src="/assets/js/yt-with-consent.js?_=1588679698"></script>
+<script src="/assets/js/autotrack.js?_=1588679698"></script>
+
+<!-- Google Analytics -->
+<script>
+    var gaBaseProperty = 'UA-62479257';
+    var gaProperty = gaBaseProperty + '-1';
+
+    // opt out
+    var disableStr = 'ga-disable-' + gaProperty;
+    var disableCookie = 'ga-disable-' + gaBaseProperty;
+    function gaOptout() {
+        document.cookie = disableCookie + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org';
+        window[disableStr] = true;
+        alert("Google Analytics ist jetzt deaktiviert! / Google Analytics is now deactivated!")
+    }
+
+    // tracking code
+    if (document.cookie.indexOf(disableCookie + '=true') > -1) {
+        window[disableStr] = true;
+    } else {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', gaProperty, 'auto');
+        ga('require', 'autotrack');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+</script>
+
+</body>
+</html>

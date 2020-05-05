@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+
+    <title>OctoPrint.org - Privacy Policy</title>
+    <meta name="description" content="OctoPrint is the snappy web interface for your 3D printer that allows you to control and monitor all aspects of your printer and print jobs, right from your browser.">
+    <meta name="author" content="Gina Häußge">
+    <meta name="google-site-verification" content="0EFsbaNygJcEinKPmzP-hTf0Ju6wDIpJxO5zvQtOQT0" />
+    <meta name="google-site-verification" content="i7e8SG0JfDqFkxQgr1_ZuirRzwJomS8xzPvb0mLHujM" />
+    <meta name="referrer" content="same-origin">
+
+    <meta name="robots" content="noindex,nofollow">
+
+    <!--[if lt IE 9]>
+    <script src="/assets/js/html5shim.js?_=1588679698"></script>
+    <![endif]-->
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/assets/css/site.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/bootstrap-responsive.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/prettify.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/lightbox.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/syntax.css?_=1588679698">
+
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/slick-1.5.9/slick.css?_=1588679698"/>
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/slick-1.5.9/slick-theme.css?_=1588679698"/>
+
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/assets/img/tentacle-32x32.png">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144.png">
+
+    <!-- Le RSS feed -->
+    <link rel="alternate" type="application/rss+xml" title="OctoPrint.org: OctoBlog" href="/feeds/all.xml">
+
+    <!-- Le social media meta data -->
+    
+    
+
+    
+
+    
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@OctoPrint3D" />
+    <meta name="twitter:title" content="Privacy Policy" />
+    <meta name="twitter:description" content="OctoPrint is the snappy web interface for your 3D printer that allows you to control and monitor all aspects of your printer and print jobs, right from your browser." />
+    <meta name="twitter:image" content="https://octoprint.org/assets/img/octoprint-avatar-240x240.png" />
+
+    <meta property="og:title" content="Privacy Policy" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://octoprint.org/assets/img/octoprint-600x400.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:description" content="OctoPrint is the snappy web interface for your 3D printer that allows you to control and monitor all aspects of your printer and print jobs, right from your browser." />
+    <meta property="og:site_name" content="OctoPrint.org" />
+    <meta property="og:url" content="https://octoprint.org/privacy/" />
+
+    <meta itemscope itemtype="http://schema.org/WebPage" />
+    <meta itemprop="headline" content="Privacy Policy" />
+    <meta itemprop="description" content="OctoPrint is the snappy web interface for your 3D printer that allows you to control and monitor all aspects of your printer and print jobs, right from your browser." />
+    <meta itemprop="image" content="https://octoprint.org/assets/img/octoprint-600x400.png" />
+
+    <script>
+        var shiftWindow = function() { scrollBy(0, -40) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+    </script>
+
+    <!-- Carbon -->
+    <script>
+        var disableStr = "carbon-disable";
+        function carbonOptout() {
+            //document.cookie = disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org";
+            document.cookie = disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org";
+            window[disableStr] = true;
+            alert("Carbon Ads sind jetzt deaktiviert! / Carbon Ads are now deactivated!");
+        }
+        if (document.cookie.indexOf(disableStr + "=true") > -1) {
+            window[disableStr] = true;
+        }
+    </script>
+
+    <!-- Cookie consent -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/cookieconsent.min.css" />
+    <script src="/assets/js/cookieconsent.min.js"></script>
+    <script>
+        if (!String.prototype.startsWith) {
+            String.prototype.startsWith = function(search, pos) {
+            return this.substr(!pos || pos < 0 ? 0 : +pos, search.length) === search;
+            };
+        }
+
+        
+        window.addEventListener("load", function(){
+            window.cookieconsent.hasTransition = false;
+            window.cookieconsent.initialise({
+                "position": "bottom",
+                "theme": "edgeless",
+                "palette": {
+                    "popup": {
+                        "background": "#000000",
+                        "link": "#10a800"
+                    },
+                    "button": {
+                        "background": "#0b7500"
+                    }
+                },
+                "elements": {
+                    "messagelink": '<span id="cookieconsent:desc" class="cc-message">{{message}} <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank">{{link}}</a> or <a aria-label="privacy policy" tabindex="1" class="cc-link" href="/privacy/" target="_blank">read our Privacy Policy</a></span>'
+                }
+            })
+        });
+        
+
+        /**
+         * Make sure octoprint.github.io stuff gets rewritten to octoprint.org.
+         * See https://github.com/OctoPrint/plugins.octoprint.org/issues/146.
+         */
+        var githubio = "octoprint.github.io/octoprint.org";
+        var url = window.location.href;
+        if (url && (url.startsWith("http://" + githubio) || url.startsWith("https://" + githubio))) {
+            url = url.replace(githubio, "octoprint.org");
+            window.location.replace(url);
+        }
+    </script>
+</head>
+
+<body onload="load()">
+
+<div id="top"></div>
+
+
+
+<div id="navigation" class="navbar navbar-inverse navbar-fixed-top unfixed" data-scroll-header>
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand hidden-phone" href="/"><img src="/assets/img/tentacle-20x20.png" alt="Tentacle logo" class="tentacle"> OctoPrint.org</a>
+      <a class="brand visible-phone" href="/"><img src="/assets/img/tentacle-20x20.png" alt="Tentacle logo" class="tentacle"></a>
+      <a href="javascript:void(0)" class="btn btn-burger btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><i class="fas fa-bars"></i></a>
+      <div class="pull-right">
+        <ul class="nav social-navbar">
+          <li><a href="/merch/" title="Get some merchandise!"><i class="fa fa-shopping-basket"></i></a></li>
+          <li><a href="/support-octoprint/" title="Support OctoPrint!" data-event-category="supportlink" data-event-action="navigation"><i class="fas fa-donate"></i></a></li>
+        </ul>
+      </div>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="https://community.octoprint.org">Forum</a></li>
+          <li><a href="/download/">Download</a></li>
+          <li><a href="/support-octoprint/" title="Support the project!" data-event-category="supportlink" data-event-action="donate">Donate</a></li>
+          <li><a href="/merch/" title="Get some merchandise!" data-event-category="merchlink" data-event-action="navbar">Merchandise</a></li>
+          <li><a href="http://plugins.octoprint.org">Plugins</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">More... <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://github.com/foosel/OctoPrint/wiki">Wiki</a></li>
+              <li><a href="http://docs.octoprint.org">Documentation</a></li>
+              <li><a href="https://community.octoprint.org/c/support/faq">FAQ</a></li>
+              <li><a href="/slides/">Slides & Talks</a></li>
+              <li class="divider"></li>
+              <li><a href="https://github.com/foosel/OctoPrint">Source</a></li>
+              <li><a href="https://github.com/foosel/OctoPrint/blob/master/CONTRIBUTING.md">Contribution Guidelines</a></li>
+              <li><a href="https://github.com/foosel/OctoPrint/issues">Issuetracker</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="wrap">
+    <div id="main">
+    <div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="hero-content pageheader">
+                    <h1>Privacy Policy</h1>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="content row-fluid">
+        <div class="span12">
+            <h2 id="1-an-overview-of-data-protection">1. An overview of data protection</h2>
+
+<h3 id="general">General</h3>
+
+<p>The following gives a simple overview of what happens to your personal information when you visit our website. 
+Personal information is any data with which you could be personally identified. Detailed information on the subject of 
+data protection can be found in our privacy policy found below.</p>
+
+<h3 id="analytics-and-third-party-tools">Analytics and third-party tools</h3>
+
+<p>When visiting our website, statistical analyses may be made of your surfing behavior. This happens primarily using 
+cookies and analytics. The analysis of your surfing behavior is usually anonymous, i.e. we will not be able to identify 
+you from this data. You can object to this analysis or prevent it by not using certain tools. Detailed information can 
+be found in the following privacy policy.</p>
+
+<p>You can object to this analysis. We will inform you below about how to exercise your options in this regard.</p>
+
+<h2 id="2-general-information-and-mandatory-information">2. General information and mandatory information</h2>
+
+<h3 id="data-protection">Data protection</h3>
+
+<p>The operators of this website take the protection of your personal data very seriously. We treat your personal data as 
+confidential and in accordance with the statutory data protection regulations and this privacy policy.</p>
+
+<p>If you use this website, various pieces of personal data will be collected. Personal information is any data with which 
+you could be personally identified. This privacy policy explains what information we collect and what we use it for. 
+It also explains how and for what purpose this happens.</p>
+
+<p>Please note that data transmitted via the internet 
+(e.g. via email communication) may be subject to security breaches. Complete protection of your data from third-party 
+access is not possible.</p>
+
+<h3 id="notice-concerning-the-party-responsible-for-this-website">Notice concerning the party responsible for this website</h3>
+
+<p>The party responsible for processing data on this website is:</p>
+
+<p>Gina Häußge<br />
+Goethestraße 5<br />
+63179 Obertshausen<br />
+Germany</p>
+
+<p>Telephone: +49 6104 9872629<br />
+Email: privacy@octoprint.org</p>
+
+<p>The responsible party is the natural or legal person who alone or jointly with others decides on the purposes and 
+means of processing personal data (names, email addresses, etc.).</p>
+
+<h3 id="ssl-or-tls-encryption">SSL or TLS encryption</h3>
+
+<p>This site uses SSL or TLS encryption for security reasons and for the protection of the transmission of all content. 
+You can recognize an encrypted connection in your browser’s address line when it changes from “http://” to “https://” 
+and the lock icon is displayed in your browser’s address bar.</p>
+
+<p>If SSL or TLS encryption is activated, the data you transfer to us cannot be read by third parties.</p>
+
+<h3 id="opposition-to-promotional-emails-mails-or-phone-calls">Opposition to promotional emails, mails or phone calls</h3>
+
+<p>We hereby expressly prohibit the use of contact data published in the context of website legal notice requirements with 
+regard to sending promotional and informational materials not expressly requested. The website operator reserves the 
+right to take specific legal action if unsolicited advertising material, such as email spam, is received.</p>
+
+<h2 id="3-data-collection-on-our-website">3. Data collection on our website</h2>
+
+<h3 id="cookies">Cookies</h3>
+
+<p>Some of our web pages use cookies. Cookies do not harm your computer and do not contain any viruses. Cookies help make 
+our website more user-friendly, efficient, and secure. Cookies are small text files that are stored on your computer 
+and saved by your browser.</p>
+
+<p>Most of the cookies we use are so-called “session cookies.” They are automatically deleted after your visit. Other 
+cookies remain in your device’s memory until you delete them. These cookies make it possible to recognize your browser 
+when you next visit the site.</p>
+
+<p>You can configure your browser to inform you about the use of cookies so that you 
+can decide on a case-by-case basis whether to accept or reject a cookie. Alternatively, your browser can be configured 
+to automatically accept cookies under certain conditions or to always reject them, or to automatically delete cookies 
+when closing your browser. Disabling cookies may limit the functionality of this website.</p>
+
+<p>Cookies which are necessary to allow electronic communications or to provide certain functions you wish to use (such as 
+the shopping cart) are stored pursuant to Art. 6 paragraph 1, letter f of GDPR. The website operator has a legitimate 
+interest in the storage of cookies to ensure an optimized service provided free of technical errors. If other cookies 
+(such as those used to analyze your surfing behavior) are also stored, they will be treated separately in this privacy policy.</p>
+
+<h3 id="server-log-files">Server log files</h3>
+
+<p>The website provider automatically collects and stores information that your browser automatically transmits to us in 
+“server log files”. These are:</p>
+
+<ul>
+  <li>Browser type and browser version</li>
+  <li>Operating system used</li>
+  <li>Referrer URL</li>
+  <li>Time of the server request</li>
+  <li>IP address</li>
+</ul>
+
+<p>These log files are used for security measures and are deleted after 30 days.</p>
+
+<p>These data will not be combined with data from other sources.</p>
+
+<p>The basis for data processing is Art. 6 (1) (f) GDPR, which allows the processing of data to fulfill a contract or for 
+measures preliminary to a contract.</p>
+
+<h2 id="4-analytics-and-advertising">4. Analytics and advertising</h2>
+
+<h3 id="google-analytics">Google Analytics</h3>
+
+<p>This website uses Google Analytics, a web analytics service. It is operated by Google Inc., 1600 Amphitheatre Parkway, 
+Mountain View, CA 94043, USA.</p>
+
+<p>Google Analytics uses so-called “cookies”. These are text files that are stored on your computer and that allow an 
+analysis of the use of the website by you. The information generated by the cookie about your use of this website is 
+usually transmitted to a Google server in the USA and stored there.</p>
+
+<p>Google Analytics cookies are stored based on Art. 6 (1) (f) GDPR. The website operator has a legitimate interest in 
+analyzing user behavior to optimize both its website and its advertising.</p>
+
+<h4 id="ip-anonymization">IP anonymization</h4>
+
+<p>We have activated the IP anonymization feature on this website. Your IP address will be shortened by Google within the 
+European Union or other parties to the Agreement on the European Economic Area prior to transmission to the United 
+States. Only in exceptional cases is the full IP address sent to a Google server in the US and shortened there. Google 
+will use this information on behalf of the operator of this website to evaluate your use of the website, to compile 
+reports on website activity, and to provide other services regarding website activity and Internet usage for the 
+website operator. The IP address transmitted by your browser as part of Google Analytics will not be merged with any 
+other data held by Google.</p>
+
+<h4 id="browser-plugin">Browser plugin</h4>
+
+<p>You can prevent these cookies being stored by selecting the appropriate settings in your browser. However, we wish to 
+point out that doing so may mean you will not be able to enjoy the full functionality of this website. You can also 
+prevent the data generated by cookies about your use of the website (incl. your IP address) from being passed to 
+Google, and the processing of these data by Google, by downloading and installing the browser plugin available at the 
+following link: <a href="https://tools.google.com/dlpage/gaoptout?hl=en" target="_blank" rel="noopener">https://tools.google.com/dlpage/gaoptout?hl=en</a>.</p>
+
+<h4 id="objecting-to-the-collection-of-data">Objecting to the collection of data</h4>
+
+<p>You can prevent the collection of your data by Google Analytics by clicking on the following link. An opt-out cookie 
+will be set to prevent your data from being collected on future visits to this site: 
+<a href="javascript:gaOptout();">Disable Google Analytics</a>.</p>
+
+<p>For more information about how Google Analytics handles user data, see Google’s privacy policy:
+<a href="https://support.google.com/analytics/answer/6004245?hl=en" target="_blank" rel="noopener">https://support.google.com/analytics/answer/6004245?hl=en</a>.</p>
+
+<h4 id="outsourced-data-processing">Outsourced data processing</h4>
+
+<p>We have entered into an agreement with Google for the outsourcing of our data processing and fully implement the strict 
+requirements of the German data protection authorities when using Google Analytics.</p>
+
+<h4 id="demographic-data-collection-by-google-analytics">Demographic data collection by Google Analytics</h4>
+
+<p>This website uses Google Analytics’ demographic features. This allows reports to be generated containing statements 
+about the age, gender, and interests of site visitors. This data comes from interest-based advertising from Google and 
+third-party visitor data. This collected data cannot be attributed to any specific individual person. You can disable 
+this feature at any time by adjusting the ads settings in your Google account or you can forbid the collection of your 
+data by Google Analytics as described in the section “Refusal of data collection”.</p>
+
+<h3 id="carbon-ads">Carbon Ads</h3>
+
+<p>This website uses Carbon Ads, a service for including advertisements from BuySellAds.com Inc. (“BuySellAds”). It is 
+operated by BuySellAds.com Inc., P.O. Box 55071 #30027, Boston, MA 02205-5071, USA.</p>
+
+<p>Carbon Ads uses so-called “cookies”, which are text files stored in your computer that enable an analysis of the 
+way you use the website.</p>
+
+<p>The information generated by 
+cookies relating to your use of this website (including your IP address), and delivery of advertising 
+formats, is transmitted to a BuySellAds server in the US and stored there. This information can be passed on from BuySellAds 
+to contracting parties of BuySellAds. However, BuySellAds will not merge your IP address with other data you have stored.</p>
+
+<p>Carbon Ads cookies are stored based on Art. 6 (1) (f) GDPR. The website operator has a legitimate interest in analyzing 
+user behavior to optimize both its website and its advertising.</p>
+
+<p>You can prevent the installation of cookies 
+by setting your browser software accordingly. Please be aware that in this case, you may not be able to make full use 
+of all the features of this website. By using this website, you agree to the processing of data relating to you and 
+collected by Carbon Ads as described and for the purposes set out above.</p>
+
+<h4 id="objecting-to-the-collection-of-data-1">Objecting to the collection of data</h4>
+
+<p>You can prevent the collection of your data by BuySellAds by clicking on the following link. An opt-out cookie will 
+be set to prevent ad display and by this your data from being collected on future visits to this site: 
+<a href="javascript:carbonOptout();">Disable Carbon Ads</a>.</p>
+
+<p>For more information about how BuySellAds handles user data, see their data collection statement and their privacy policy:
+<a href="https://content.buysellads.com/articles/what-data-does-buysellads-collect/" target="_blank" rel="noopener">https://content.buysellads.com/articles/what-data-does-buysellads-collect/</a> and <a href="https://carbonads.net/privacy.php" target="_blank" rel="noopener">https://carbonads.net/privacy.php</a>.</p>
+
+<h2 id="5-plugins-and-tools">5. Plugins and tools</h2>
+
+<h3 id="youtube">YouTube</h3>
+
+<p>Our website uses plugins from YouTube, which is operated by Google. The operator of the pages is YouTube LLC, 
+901 Cherry Ave., San Bruno, CA 94066, USA.</p>
+
+<p>If you visit one of our pages featuring a YouTube plugin and click on the preview, a connection to the YouTube servers 
+is established. Here the YouTube server is informed about which of our pages you have visited.</p>
+
+<p>If you’re logged in to your YouTube account, YouTube allows you to associate your browsing behavior directly with your 
+personal profile. You can prevent this by logging out of your YouTube account.</p>
+
+<p>YouTube is used to help make our website appealing. This constitutes a justified interest pursuant to Art. 6 (1) (f) GDPR.</p>
+
+<p>Further information about handling user data can be found in the data protection declaration of YouTube under
+<a href="https://www.google.de/intl/en/policies/privacy" target="_blank" rel="noopener">https://www.google.de/intl/en/policies/privacy</a>.</p>
+
+<h3 id="comment-function">Comment function</h3>
+
+<p>The comment function available on this website is provided by our forum at community.octoprint.org.</p>
+
+<p>To use the comment function you’ll need to register at and log into community.octoprint.org. Further information about
+handling user data can be found in the privacy policy of community.octoprint.org at
+<a href="https://community.octoprint.org/privacy" target="_blank" rel="noopener">https://community.octoprint.org/privacy</a>.</p>
+
+<center><em>This document was last updated on June 24, 2019.</em></center>
+
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+      <footer>
+          <div class="container">
+              <div class="row">
+                  <div class="span4 footer-left-column">
+                      <h2>On the web</h2>
+                      <ul class="fa-ul">
+                          <li><span class="fa-li"><i class="fas fa-users fa-fw"></i></span><a href="https://community.octoprint.org">Community Forum</a></li>
+                          <li><span class="fa-li"><i class="fas fa-comments fa-fw"></i></span><a href="irc://chat.freenode.net/octoprint" target="_blank">#octoprint on freenode</a> (<a href="https://chat.octoprint.org">Webchat</a>, <a href="https://freenode.logbot.info/octoprint">Logs</a>)</li>
+                          <li><span class="fa-li"><i class="fab fa-twitter fa-fw"></i></span><a href="https://twitter.com/OctoPrint3D" target="_blank">@OctoPrint3D</a></li>
+                          <li><span class="fa-li"><i class="fab fa-facebook-f fa-fw"></i></span><a href="https://facebook.com/OctoPrint" target="_blank">OctoPrint</a></li>
+                          <li><span class="fa-li"><i class="fab fa-youtube fa-fw"></i></span><a href="https://www.youtube.com/c/OctoPrint3D" target="_blank">OctoPrint</a></li>
+                          <li><span class="fa-li"><i class="fas fa-tachometer-alt fa-fw"></i></span><a href="https://status.octoprint.org" target="_blank">Site Status</a></li>
+                          <li><span class="fa-li"><i class="fas fa-gavel fa-fw"></i></span><a href="/imprint/" rel="nofollow">Legal Notice</a></li>
+                          <li><span class="fa-li"><i class="fas fa-gavel fa-fw"></i></span><a href="/privacy/" rel="nofollow">Privacy Policy</a></li>
+                      </ul>
+                  </div>
+                  <div class="span4">
+                      <h2>Recent Posts</h2>
+                      <div class="recent-posts">
+                          
+                          <div><a class="post-link" href="/blog/2020/03/31/3d-printing-against-corona/">Help to fight the Corona Crisis using your 3D printer</a><br><small>31 Mar 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/03/19/octoprint-on-air-30-announcement/">Announcement: OctoPrint On Air #30 LIVE</a><br><small>19 Mar 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/03/04/new-release-candidate-1.4.0/">New release: 1.4.0</a><br><small>04 Mar 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/02/27/octoprint-on-air-29/">OctoPrint On Air #29</a><br><small>27 Feb 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/02/26/new-release-candidate-1.4.0rc6/">New release candidate: 1.4.0rc6</a><br><small>26 Feb 2020</small></div>
+                          
+                      </div>
+                  </div>
+                  <div class="span4 footer-right-column">
+                      <h2>Big Thanks</h2>
+                      <p>
+                          Cross-browser testing services are kindly provided by <a href="https://www.browserstack.com">BrowserStack</a>.
+                          Profiling is done with the help of <a href="https://www.pyvmmonitor.com">PyVmMonitor</a>.
+                          Error tracking is powered and sponsored by <a href="https://sentry.io">Sentry</a>.
+                      </p>
+                      <p>
+                          Development would be impossible without the <a href="/support-octoprint/" data-event-category="supportlink" data-event-action="footer">financial support of the community</a>.
+                      </p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="span12 text-center legal">
+                      <small>"OctoPrint" is a <a href="/trademark-rules/">registered trademark</a></small>
+                  </div>
+              </div>
+          </div>
+      </footer>
+
+
+<a href="#top" class="to-top" title="Back to top" data-scroll><i class="fa fa-arrow-up fa-2x"></i></a>
+
+<script src="/assets/js/jquery-1.9.1.min.js?_=1588679698"></script>
+<script src="/assets/js/underscore-1.4.4.min.js?_=1588679698"></script>
+<script src="/assets/js/prettify-r224.js?_=1588679698"></script>
+<script src="/assets/js/holder-2.9.3.min.js?_=1588679698"></script>
+<script src="/assets/vendor/slick-1.5.9/slick.min.js?_=1588679698"></script>
+<script src="/assets/js/bootstrap.min.js?_=1588679698"></script>
+<script src="/assets/js/lightbox.min.js?_=1588679698"></script>
+<script src="/assets/js/smooth-scroll.min.js?_=1588679698"></script>
+<script src="/assets/js/site.js?_=1588679698"></script>
+<script src="/assets/js/yt-with-consent.js?_=1588679698"></script>
+<script src="/assets/js/autotrack.js?_=1588679698"></script>
+
+<!-- Google Analytics -->
+<script>
+    var gaBaseProperty = 'UA-62479257';
+    var gaProperty = gaBaseProperty + '-1';
+
+    // opt out
+    var disableStr = 'ga-disable-' + gaProperty;
+    var disableCookie = 'ga-disable-' + gaBaseProperty;
+    function gaOptout() {
+        document.cookie = disableCookie + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org';
+        window[disableStr] = true;
+        alert("Google Analytics ist jetzt deaktiviert! / Google Analytics is now deactivated!")
+    }
+
+    // tracking code
+    if (document.cookie.indexOf(disableCookie + '=true') > -1) {
+        window[disableStr] = true;
+    } else {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', gaProperty, 'auto');
+        ga('require', 'autotrack');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+</script>
+
+</body>
+</html>

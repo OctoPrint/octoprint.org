@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+
+    <title>OctoPrint.org - A Guide To Safe Remote Access of OctoPrint</title>
+    <meta name="description" content="OctoPrint is the snappy web interface for your 3D printer that allows you to control and monitor all aspects of your printer and print jobs, right from your browser.">
+    <meta name="author" content="Gina Häußge">
+    <meta name="google-site-verification" content="0EFsbaNygJcEinKPmzP-hTf0Ju6wDIpJxO5zvQtOQT0" />
+    <meta name="google-site-verification" content="i7e8SG0JfDqFkxQgr1_ZuirRzwJomS8xzPvb0mLHujM" />
+    <meta name="referrer" content="same-origin">
+
+    
+
+    <!--[if lt IE 9]>
+    <script src="/assets/js/html5shim.js?_=1588679698"></script>
+    <![endif]-->
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/assets/css/site.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/bootstrap-responsive.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/prettify.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/lightbox.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/syntax.css?_=1588679698">
+
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/slick-1.5.9/slick.css?_=1588679698"/>
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/slick-1.5.9/slick-theme.css?_=1588679698"/>
+
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/assets/img/tentacle-32x32.png">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144.png">
+
+    <!-- Le RSS feed -->
+    <link rel="alternate" type="application/rss+xml" title="OctoPrint.org: OctoBlog" href="/feeds/all.xml">
+
+    <!-- Le social media meta data -->
+    
+    
+
+    
+
+    
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@OctoPrint3D" />
+    <meta name="twitter:title" content="A Guide To Safe Remote Access of OctoPrint" />
+    <meta name="twitter:description" content="In this guest post, community member Jubaleth will tell you about safe ways to access your OctoPrint instance from the internet." />
+    <meta name="twitter:image" content="https://octoprint.org/assets/img/blog/2018-09/2018-09-03-safe-remote-access-card.png" />
+
+    <meta property="og:title" content="A Guide To Safe Remote Access of OctoPrint" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://octoprint.org/assets/img/blog/2018-09/2018-09-03-safe-remote-access-poster.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:description" content="In this guest post, community member Jubaleth will tell you about safe ways to access your OctoPrint instance from the internet." />
+    <meta property="og:site_name" content="OctoPrint.org" />
+    <meta property="og:url" content="https://octoprint.org/blog/2018/09/03/safe-remote-access/" />
+
+    <meta itemscope itemtype="http://schema.org/WebPage" />
+    <meta itemprop="headline" content="A Guide To Safe Remote Access of OctoPrint" />
+    <meta itemprop="description" content="In this guest post, community member Jubaleth will tell you about safe ways to access your OctoPrint instance from the internet." />
+    <meta itemprop="image" content="https://octoprint.org/assets/img/blog/2018-09/2018-09-03-safe-remote-access-poster.png" />
+
+    <script>
+        var shiftWindow = function() { scrollBy(0, -40) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+    </script>
+
+    <!-- Carbon -->
+    <script>
+        var disableStr = "carbon-disable";
+        function carbonOptout() {
+            //document.cookie = disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org";
+            document.cookie = disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org";
+            window[disableStr] = true;
+            alert("Carbon Ads sind jetzt deaktiviert! / Carbon Ads are now deactivated!");
+        }
+        if (document.cookie.indexOf(disableStr + "=true") > -1) {
+            window[disableStr] = true;
+        }
+    </script>
+
+    <!-- Cookie consent -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/cookieconsent.min.css" />
+    <script src="/assets/js/cookieconsent.min.js"></script>
+    <script>
+        if (!String.prototype.startsWith) {
+            String.prototype.startsWith = function(search, pos) {
+            return this.substr(!pos || pos < 0 ? 0 : +pos, search.length) === search;
+            };
+        }
+
+        
+        window.addEventListener("load", function(){
+            window.cookieconsent.hasTransition = false;
+            window.cookieconsent.initialise({
+                "position": "bottom",
+                "theme": "edgeless",
+                "palette": {
+                    "popup": {
+                        "background": "#000000",
+                        "link": "#10a800"
+                    },
+                    "button": {
+                        "background": "#0b7500"
+                    }
+                },
+                "elements": {
+                    "messagelink": '<span id="cookieconsent:desc" class="cc-message">{{message}} <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank">{{link}}</a> or <a aria-label="privacy policy" tabindex="1" class="cc-link" href="/privacy/" target="_blank">read our Privacy Policy</a></span>'
+                }
+            })
+        });
+        
+
+        /**
+         * Make sure octoprint.github.io stuff gets rewritten to octoprint.org.
+         * See https://github.com/OctoPrint/plugins.octoprint.org/issues/146.
+         */
+        var githubio = "octoprint.github.io/octoprint.org";
+        var url = window.location.href;
+        if (url && (url.startsWith("http://" + githubio) || url.startsWith("https://" + githubio))) {
+            url = url.replace(githubio, "octoprint.org");
+            window.location.replace(url);
+        }
+    </script>
+</head>
+
+<body onload="load()">
+
+<div id="top"></div>
+
+<div id="banner" style="display: none">
+    <a class="close-banner" href="javascript:void(0)">&times;</a>
+    <div class="container content">
+        <p class="text">
+            I work full time on OctoPrint and can only continue thanks to funding by people like you. Give the
+            button a click and learn how you can help!
+        </p>
+        <p class="signature">
+            Thank you,<br>
+            Gina
+        </p>
+        <div class="span4 button">
+            <a class="btn btn-primary btn-large btn-block" href="/support-octoprint/" data-event-category="supportlink" data-event-action="banner"><i class="fa fa-heart"></i> Support my work! <i class="fa fa-heart"></i></a>
+        </div>
+    </div>
+</div>
+
+<div id="navigation" class="navbar navbar-inverse navbar-fixed-top unfixed" data-scroll-header>
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand hidden-phone" href="/"><img src="/assets/img/tentacle-20x20.png" alt="Tentacle logo" class="tentacle"> OctoPrint.org</a>
+      <a class="brand visible-phone" href="/"><img src="/assets/img/tentacle-20x20.png" alt="Tentacle logo" class="tentacle"></a>
+      <a href="javascript:void(0)" class="btn btn-burger btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><i class="fas fa-bars"></i></a>
+      <div class="pull-right">
+        <ul class="nav social-navbar">
+          <li><a href="/merch/" title="Get some merchandise!"><i class="fa fa-shopping-basket"></i></a></li>
+          <li><a href="/support-octoprint/" title="Support OctoPrint!" data-event-category="supportlink" data-event-action="navigation"><i class="fas fa-donate"></i></a></li>
+        </ul>
+      </div>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="https://community.octoprint.org">Forum</a></li>
+          <li><a href="/download/">Download</a></li>
+          <li><a href="/support-octoprint/" title="Support the project!" data-event-category="supportlink" data-event-action="donate">Donate</a></li>
+          <li><a href="/merch/" title="Get some merchandise!" data-event-category="merchlink" data-event-action="navbar">Merchandise</a></li>
+          <li><a href="http://plugins.octoprint.org">Plugins</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">More... <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://github.com/foosel/OctoPrint/wiki">Wiki</a></li>
+              <li><a href="http://docs.octoprint.org">Documentation</a></li>
+              <li><a href="https://community.octoprint.org/c/support/faq">FAQ</a></li>
+              <li><a href="/slides/">Slides & Talks</a></li>
+              <li class="divider"></li>
+              <li><a href="https://github.com/foosel/OctoPrint">Source</a></li>
+              <li><a href="https://github.com/foosel/OctoPrint/blob/master/CONTRIBUTING.md">Contribution Guidelines</a></li>
+              <li><a href="https://github.com/foosel/OctoPrint/issues">Issuetracker</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="wrap">
+    <div id="main">
+    <div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="hero-content pageheader">
+                    <h1>A Guide To Safe Remote Access of OctoPrint</h1>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container blogpost">
+    <div class="row-fluid pagination">
+        <div class="span12">
+            
+                <small><a class="newer-posts" href="/blog/2018/09/29/octoprint-on-air-19/" title="Next Page">&laquo; OctoPrint On Air #19</a></small>
+            
+            &nbsp;
+            
+                <small><a class="older-posts" href="/blog/2018/08/13/octoprint-on-air-18/" title="Previous Page">OctoPrint On Air #18 &raquo;</a></small>
+            
+        </div>
+    </div>
+    <div class="row-fluid content">
+        <div class="span8 text" id="blogpost-content">
+            <p><em>A guest post by <a href="https://jubaleth.wtf/">Jubaleth</a> on a topic that is very dear to my heart and on which I’m starting
+to sound like a broken record - please head this warning and invest the time that properly securing internal services
+needs. ~Gina</em></p>
+
+<p>So, you’ve got your shiny new printer, and just installed OctoPrint, great! Being able to remotely monitor your print is a fantastic ability. Being able to start a print remotely is incredibly handy. From within the realm of your local network, you have a ton of power at your finger tips. What if you want to be able to do this when you’re not on your local network? You could just forward ports on your router, use a DDNS service, and you’re good to go, right? … <strong>wrong</strong>.</p>
+
+<p>The <a href="https://isc.sans.edu/forums/diary/3D+Printers+in+The+Wild+What+Can+Go+Wrong/24044/">ISC (Internet Storm Center)</a> recently published an article about OctoPrint instances exposed to the public internet. While it is possible that a percentage of the instances found are unintentionally exposed, the vast majority is very likely users who have gone out of their way to expose OctoPrint to the public internet for the sake of convenience. There are safer ways to access your instance remotely than blind port forwarding. This is a critical issue that needs to be discussed. We as a community have to get the right information to new and/or uninformed users, to prevent a catastrophy from happening.</p>
+
+<p>Putting OctoPrint onto the public internet is a <em>terrible</em> idea, and I really can’t emphasize that enough. Let’s think about this for a moment, or two, or even three. OctoPrint is connected to a printer, complete with motors and heaters. If some hacker somewhere wanted to do some damage, they <em>could</em>. Most printers can have their firmware flashed over USB. So as soon as the box hosting OctoPrint is comprimised, there go any failsafes built into the firmware. All one would have to do, is flash a new, malicious firmware with no safeguards, over USB, and then tell the printer to keep heating, leading to catastrophic failure. Of course there are other reasons to not have an OctoPrint instance available on the public internet, such as sensitive data theft, but catastrophic failure is by far the worst case scenario here.</p>
+
+<p>So, with that said, how can we accomplish remote access to monitor or control a printer, without putting OctoPrint on the public internet for everyone to abuse?  This guide will show you how.</p>
+
+<h3 id="plugins-the-easy-way">Plugins (The Easy Way)</h3>
+
+<p>Remote access via a plugin is certainly the easiest way for you to access your instance and control/monitor your printer. Unless you really know what you’re doing, this is very likely the method that you’re going to want to be using. There are a few different options available that accomplish remote access, without opening up OctoPrint to the rest of the world.</p>
+
+<h4 id="polar-cloud">Polar Cloud</h4>
+
+<p>The Polar Cloud plugin lets you connect OctoPrint to your <a href="https://polar3d.com">Polar Cloud</a> account. Polar Cloud is a cloud based service that adds a whole lot of flexibility to your workflow. It’s certainly more than just an app to monitor/control your printer, it’s a whole community of printers, designers and makers. The process of selecting an object, slicing and sending to your printer are streamlined into a simple workflow. The plugin is available <a href="https://plugins.octoprint.org/plugins/polarcloud/">here</a> and is definitely worth checking out.</p>
+
+<h4 id="octoprint-anywhere-edit-or-its-successor-the-spaghetti-detective">OctoPrint Anywhere (<em>edit: or its successor The Spaghetti Detective</em>)</h4>
+
+<p>This plugin is a cloud service that allows you to access your OctoPrint instance through a web interface.
+Setup is relatively simple, install the plugin, either from the Plugin Manager, or you can grab it <a href="https://plugins.octoprint.org/plugins/anywhere/">here</a>. After installing, you will be greated by a setup wizard that will guide you through the rest of the steps. In just a few moments, you’ll be up and running, and able to access your OctoPrint instance, without forwaring any ports, or exposing your instance to the internet.</p>
+
+<p><em>edit</em>: Check out Kenneth’s new project <a href="https://plugins.octoprint.org/plugins/thespaghettidetective/">The Spaghetti Detective</a></p>
+
+<h4 id="octoprint-discordremote">OctoPrint-DiscordRemote</h4>
+
+<p>If you’re a discord user, the DiscordRemote plugin is another option. It will join your discord channel,
+respond to commands and send you snapshots from your webcam, if you have one installed. At the time of writing, there does not appear to be a way to grant permissions to a specific user, only the channel owner may issue commands. This plugin can be found in the Plugin Manager or <a href="https://plugins.octoprint.org/plugins/DiscordRemote/">here</a></p>
+
+<h4 id="telegram">Telegram</h4>
+
+<p>The telegram plugin operates similarly to the DiscordRemote plugin, in that it creates a telegram bot with which you can interact. It has relatively fine grained ACL capabilities, which allows you to grant permissions to individual users who interact with it. It can be configured to send status updates for different events in the printing process, including configurable periodic updates on layer change or at a specific time interval. The initial setup isn’t complicated, but does require following the steps in the readme. It only takes a few minutes to get setup, and the plugin is available <a href="https://plugins.octoprint.org/plugins/telegram/">here</a>.</p>
+
+<h3 id="advanced-access">Advanced Access</h3>
+
+<p>Plugins are a fantastic way for a beginner (or veteran) to access their printer remotely, but the more advanced user has a few more tools at their disposal. Beyond this point in this post, I will intentionally not go into too much detail. I am mentioning these methods for the sake of completeness, unless you have previous experience setting up web and/or vpn servers, I highly suggest you stick with the plugins. It’s not that I’m against one learning about these things, quite the contrary… I’m against learning them with a 3D printer. There is too much that can go wrong (remember, printers can cause fires!) if you misconfigure something, accidentally skip over something, and unintentionally leave your printer open to the world.</p>
+
+<h4 id="vpn">VPN</h4>
+
+<p><strong>V</strong>irtual <strong>P</strong>rivate <strong>N</strong>etworks are a great way to gain access to your OctoPrint instance. There are many options available (<a href="http://www.pivpn.io/">PiVPN</a>, <a href="https://openvpn.net/">OpenVPN</a>), and some home routers even have a VPN server built in. The major advantage to using a tunnel into your network, is that your OctoPrint instance is <em>not</em> available to the internet in general. Without access to your VPN, the printer can <em>not</em> be accessed from outside.</p>
+
+<h4 id="reverse-proxy">Reverse Proxy</h4>
+
+<p>One can setup a reverse proxy using solutions like nginx, Apache, and HAProxy. There are certainly other options available, these are the 3 most common, and the 3 that popped into my head. When using a reverse proxy, I highly recommend setting up some form of authentication. The most common (and easiest to setup) is basic authentication (i.e. username/password). In this case, I also highly recommend the use of rate limiting to prevent brute-force password guessing attacks. A more secure choice would be client-certificate authentication, this of course requires setting up a PKI to handle the issuance and revocation of certificates.</p>
+
+<p>Whether you use a reverse proxy, or VPN to access OctoPrint; I recommend putting it on a separate physical box to the box connected to your printer. Running everything on a single server is just asking for trouble.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>All in all, there are many ways one can <strong>safely</strong> access an OctoPrint instance remotely, that do not involve blindly forwarding ports on your router and putting yourself at risk. Plugins are a fantastic tool that I recommend beginners take advantage of. Putting OctoPrint on the internet is nothing short of dangerous. If you must do this, take advantage of the ACL system built into OctoPrint, and even better, put another form of authentication in front. Even if it seems like extra work to setup a plugin, or a VPN/reverse proxy, it’s worth it. Anything with the potential to burn down your house should be treated with the utmost care. It may seem more convenient to cut corners… but is it really worth it?</p>
+
+<p><em>If you need help with setting up any of the proposed solutions here, get in touch on the <a href="https://discourse.octoprint.org">OctoPrint Community Forums</a>, you might find some help there. Also be sure to check <a href="https://discourse.octoprint.org/t/access-your-octoprint-remotely/3628">this topic on the forum</a> for some more info.</em></p>
+
+
+            
+            
+            
+            <div class="postcomments">
+                <h2>Discuss!</h2>
+
+                <div id='discourse-comments'></div>
+
+                <script type="text/javascript">
+                  if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+                    // Apparently Safari is a special snow flake and doesn't understand the referer policies. So
+                    // no comments for Safari. Complain to Apple.
+                    document.getElementById("discourse-comments").innerHTML = "It looks like you are using Safari. " +
+                        "Comment embedding is sadly not supported in Safari. You'll need to " +
+                        "<a href='https://community.octoprint.org/c/blog/'>go to the comment forum instead.</a>";
+                  } else {
+                    DiscourseEmbed = { discourseUrl: 'https://community.octoprint.org/',
+                                       discourseEmbedUrl: 'https://octoprint.org/blog/2018/09/03/safe-remote-access/',
+                                       discourseReferrerPolicy: 'no-referrer-when-downgrade'};
+
+                    (function() {
+                      var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+                      d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+                      //d.src = "/assets/js/comments.js";
+                      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+                    })();
+                  }
+
+                </script>
+            </div>
+            
+        </div>
+        <div class="span4">
+            <div class="postinfo">
+                
+                <dl class="featuredimage">
+                    <img src="/assets/img/blog/2018-09/2018-09-03-safe-remote-access-card.png" class="img-rounded">
+                </dl>
+                
+                <dl class="author">
+                    <dt>Author</dt>
+                    <dd>
+                        <a href="https://jubaleth.wtf" target="_blank">Jubaleth</a>
+                    </dd>
+                    </dl>
+                    <dl class="published">
+                        <dt>Published</dt>
+                    <dd>03 Sep 2018</dd>
+                </dl>
+                
+                
+                <dl class="category">
+                    <dt>Category</dt>
+                    <dd>News</dd>
+                </dl>
+                
+                
+                <dl class="share">
+                    <dt>Share this</dt>
+                    <dd><ul class="sharebuttons">
+    <li><a title="Twitter" href="http://twitter.com/share?text=%22A Guide To Safe Remote Access of OctoPrint%22&url=https://octoprint.org/blog/2018/09/03/safe-remote-access/&via=OctoPrint3D&related=OctoPrint3D" rel="nofollow" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a></li>
+    <li><a title="Facebook" href="http://www.facebook.com/sharer.php?u=https://octoprint.org/blog/2018/09/03/safe-remote-access/&p[title]=A Guide To Safe Remote Access of OctoPrint" rel="nofollow" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></span></a></li>
+</ul>
+</dd>
+                </dl>
+            </div>
+            <div class="ad visible-desktop visible-tablet invisible-mobile">
+                <script>
+    if (!window["carbon-disable"] && !window.matchMedia("(max-width: 767px)").matches) {
+        (function() {
+            var po = document.createElement("script");
+            po.type = "text/javascript";
+            po.async = true;
+            po.src  = "//cdn.carbonads.com/carbon.js?serve=CKYIL53W&placement=octoprintorg";
+            po.id = "_carbonads_js";
+            var s = document.currentScript;
+            s.parentNode.insertBefore(po, s);
+        })();
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+      <footer>
+          <div class="container">
+              <div class="row">
+                  <div class="span4 footer-left-column">
+                      <h2>On the web</h2>
+                      <ul class="fa-ul">
+                          <li><span class="fa-li"><i class="fas fa-users fa-fw"></i></span><a href="https://community.octoprint.org">Community Forum</a></li>
+                          <li><span class="fa-li"><i class="fas fa-comments fa-fw"></i></span><a href="irc://chat.freenode.net/octoprint" target="_blank">#octoprint on freenode</a> (<a href="https://chat.octoprint.org">Webchat</a>, <a href="https://freenode.logbot.info/octoprint">Logs</a>)</li>
+                          <li><span class="fa-li"><i class="fab fa-twitter fa-fw"></i></span><a href="https://twitter.com/OctoPrint3D" target="_blank">@OctoPrint3D</a></li>
+                          <li><span class="fa-li"><i class="fab fa-facebook-f fa-fw"></i></span><a href="https://facebook.com/OctoPrint" target="_blank">OctoPrint</a></li>
+                          <li><span class="fa-li"><i class="fab fa-youtube fa-fw"></i></span><a href="https://www.youtube.com/c/OctoPrint3D" target="_blank">OctoPrint</a></li>
+                          <li><span class="fa-li"><i class="fas fa-tachometer-alt fa-fw"></i></span><a href="https://status.octoprint.org" target="_blank">Site Status</a></li>
+                          <li><span class="fa-li"><i class="fas fa-gavel fa-fw"></i></span><a href="/imprint/" rel="nofollow">Legal Notice</a></li>
+                          <li><span class="fa-li"><i class="fas fa-gavel fa-fw"></i></span><a href="/privacy/" rel="nofollow">Privacy Policy</a></li>
+                      </ul>
+                  </div>
+                  <div class="span4">
+                      <h2>Recent Posts</h2>
+                      <div class="recent-posts">
+                          
+                          <div><a class="post-link" href="/blog/2020/03/31/3d-printing-against-corona/">Help to fight the Corona Crisis using your 3D printer</a><br><small>31 Mar 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/03/19/octoprint-on-air-30-announcement/">Announcement: OctoPrint On Air #30 LIVE</a><br><small>19 Mar 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/03/04/new-release-candidate-1.4.0/">New release: 1.4.0</a><br><small>04 Mar 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/02/27/octoprint-on-air-29/">OctoPrint On Air #29</a><br><small>27 Feb 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/02/26/new-release-candidate-1.4.0rc6/">New release candidate: 1.4.0rc6</a><br><small>26 Feb 2020</small></div>
+                          
+                      </div>
+                  </div>
+                  <div class="span4 footer-right-column">
+                      <h2>Big Thanks</h2>
+                      <p>
+                          Cross-browser testing services are kindly provided by <a href="https://www.browserstack.com">BrowserStack</a>.
+                          Profiling is done with the help of <a href="https://www.pyvmmonitor.com">PyVmMonitor</a>.
+                          Error tracking is powered and sponsored by <a href="https://sentry.io">Sentry</a>.
+                      </p>
+                      <p>
+                          Development would be impossible without the <a href="/support-octoprint/" data-event-category="supportlink" data-event-action="footer">financial support of the community</a>.
+                      </p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="span12 text-center legal">
+                      <small>"OctoPrint" is a <a href="/trademark-rules/">registered trademark</a></small>
+                  </div>
+              </div>
+          </div>
+      </footer>
+
+
+<a href="#top" class="to-top" title="Back to top" data-scroll><i class="fa fa-arrow-up fa-2x"></i></a>
+
+<script src="/assets/js/jquery-1.9.1.min.js?_=1588679698"></script>
+<script src="/assets/js/underscore-1.4.4.min.js?_=1588679698"></script>
+<script src="/assets/js/prettify-r224.js?_=1588679698"></script>
+<script src="/assets/js/holder-2.9.3.min.js?_=1588679698"></script>
+<script src="/assets/vendor/slick-1.5.9/slick.min.js?_=1588679698"></script>
+<script src="/assets/js/bootstrap.min.js?_=1588679698"></script>
+<script src="/assets/js/lightbox.min.js?_=1588679698"></script>
+<script src="/assets/js/smooth-scroll.min.js?_=1588679698"></script>
+<script src="/assets/js/site.js?_=1588679698"></script>
+<script src="/assets/js/yt-with-consent.js?_=1588679698"></script>
+<script src="/assets/js/autotrack.js?_=1588679698"></script>
+
+<!-- Google Analytics -->
+<script>
+    var gaBaseProperty = 'UA-62479257';
+    var gaProperty = gaBaseProperty + '-1';
+
+    // opt out
+    var disableStr = 'ga-disable-' + gaProperty;
+    var disableCookie = 'ga-disable-' + gaBaseProperty;
+    function gaOptout() {
+        document.cookie = disableCookie + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org';
+        window[disableStr] = true;
+        alert("Google Analytics ist jetzt deaktiviert! / Google Analytics is now deactivated!")
+    }
+
+    // tracking code
+    if (document.cookie.indexOf(disableCookie + '=true') > -1) {
+        window[disableStr] = true;
+    } else {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', gaProperty, 'auto');
+        ga('require', 'autotrack');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+</script>
+
+</body>
+</html>

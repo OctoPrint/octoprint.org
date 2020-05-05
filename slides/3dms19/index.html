@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Developing OctoPrint</title>
+
+		<meta name="description" content="If you've ever wondered what made me create OctoPrint and what challenges I had to face in the the last six years of maintaining it, this is your chance to get some insights">
+		<meta name="author" content="Gina Häußge">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/octoprint.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Font Awesome -->
+		<link href="lib/css/font-awesome.css" rel="stylesheet">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			if (window.location.search.match( /print-pdf/gi )) {
+				document.write( '<link rel="stylesheet" href="css/print/pdf.css" type="text/css">' );
+			} else {
+				document.write( '<link rel="stylesheet" href="css/print/paper.css" type="text/css" media="print">' );
+			}
+		</script>
+ 
+		<!--[if lt IE 9]>
+			<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<!--[if IE 7]>
+			<link rel="stylesheet" href="lib/css/font-awesome-ie7.min.css">
+		<![endif]-->
+
+		<link rel="shortcut icon" href="lib/img/tentacle-32x32.png">
+		<link rel="apple-touch-icon" href="lib/img/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="lib/img/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="lib/img/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="lib/img/apple-touch-icon-144x144.png">
+		</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Developing <br/> OctoPrint</h1>
+					<p>
+						<img class="nobox" src="img/logo.png">
+					</p>
+					<p>
+						<small><a href="https://foosel.net">Gina Häußge</a> / <a href="https://twitter.com/foosel">@foosel</a></small>
+					</p>
+					<p>
+						<small>3D Meetup Sweden 2019</small>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h1>Who am I?</h1>
+					</section>
+					<section>
+						<h2>Gina Häußge aka foosel</h2>
+						<ul>
+							<li>Fun fact: the <strong>ß</strong> is pronounced like an <strong>S</strong><br><small>(there is no B there, really!)</small></li>
+							<li>
+								Creator & maintainer of OctoPrint<br>
+								<small>and mostly sole developer</small>
+							</li>
+							<li>Passionate coder 👩‍💻</li>
+							<li>Former IT Consultant & Software Architect</li>
+							<li>Owner of a 3d printer since late 2012<br><small>(help, they keep multiplying!)</small></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Why did I create OctoPrint?</h1>
+					</section>
+					<section>
+						<p>First printer acquired in November 2012</p>
+						<img src="img/ultimaker.jpg" class="stretch">
+					</section>
+					<section>
+						<ul>
+							<li>Obviously wanted my desk back</li>
+							<li>
+								Rough idea how to solve this:
+								<ul>
+									<li>Web interface</li>
+									<li>Server installed on a headless Raspberry Pi<br><small>(had just come out that year)</small></li>
+									<li>Put printer in spare (bath) room</li>
+									<li>Remotely monitor full print via WLAN</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>
+								Problem: existing solutions treated printer as write-only
+								<ul>
+									<li>Connect</li>
+									<li>Upload a file</li>
+									<li>Hope that it prints</li>
+								</ul>
+							</li>
+							<li>I didn't trust that <strong>at all</strong>, no feedback</li>
+							<li>
+								Wanted to at least
+								<ul>
+									<li>track temperature</li>
+									<li>track progress</li>
+									<li>ideally provide webcam view</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<blockquote style="width:50%">
+							How hard can it be?
+							<footer>— Famous last words</footer>
+						</blockquote>
+					</section>
+					<section>
+						<ul>
+							<li>Sat down & built first version over Christmas 2012</li>
+							<li>Published my little pet project, figured "I'm done"</li>
+							<li>People started messaging me about it</li>
+							<li>Then it took over my life</li>
+							<li>
+								And now I've been working on it for the past six years<br>
+								<small>(Honestly I'm still unsure how this all happened...)</small>
+							</li>
+							<li>Learned a ton</li>
+						</ul>
+						<p>
+							
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Challenge #1</h1>
+						<h3>No proper protocol specification</h3>
+					</section>
+					<section>
+						<h3>The "protocol"</h3>
+						<ul>
+							<li>Organically grown dialect of GCODE</li>
+							<li>
+								GCODE:
+								<ul>
+									<li>(standardized) <em>programming language</em> for CNCs from the 1950s</li>
+									<li>plain text file format</li>
+									<li>nothing about sending messages over serial</li>
+									<li>no error correction</li>
+								</ul>
+							</li>
+							<li>Communication protocol stuff hacked on top</li>
+						</ul>
+
+						<aside class="notes">
+								<ul>
+									<li>RS274, 121 pages</li>
+								</ul>
+						</aside>
+					</section>
+					<section>
+						<h3>The "protocol"</h3>
+						<ul>
+							<li>
+								More or less accurate general documentation in the RepRap wiki
+								<ul>
+									<li>Living document</li>
+									<li><em>Anyone</em> can edit it</li>
+									<li>No governing body</li>
+								</ul>
+							</li>
+							<li>Marlin (mainline) specific documentation on marlinfw.org 👍</li>
+							<li>
+								General problem with both:
+								<ul>
+									<li>No test suite or reference implementation</li>
+									<li>In general no definition of command <em>responses</em></li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Result</h3>
+						<ul>
+							<li>
+								New firmwares or forks with
+								<ul>
+									<li>New commands that have incompatible meaning elsewhere</li>
+									<li>Common functionality in a slightly different or outright broken way</li>
+								</ul>
+							</li>
+							<li>
+								Example: possible (simplified) temperature reports
+								<pre><code data-trim class="nohighlight">
+ok T:20.3/0 B:20.2/0                      ; Marlin & Repetier, single extruder
+ok T:20.4/0 T0:20.3/0 T1:20.4/0 B:20.2/0  ; Marlin & Repetier, multi extruder, 
+                                          ;   T1 active
+ok T:20.3/0 T1:20.4/0 B:20.2/0            ; Smoothieware, multi extruder
+T:20.3/0 B:20.2/0                         ; autoreport or blocking heatup
+T:20.3/0                                  ; autoreport or blocking heatup
+T:20.3                                    ; blocking heatup?
+ok ==T:20.3 /0 ==B:20.2 /0                ; Creality CR-X 🤨
+echo: T20.3 /0.0 B:20.2/ 0.0ok            ; Lerdge S 🤦‍♀️
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Consequence</h3>
+						<ul>
+							<li>Regularly need to read firmware source of forks</li>
+							<li>These days increasingly difficult (China...)</li>
+							<li>Last resort: Logs from & close collaboration w/ users</li>
+							<li>Have to draw a line somewhere w/rt broken firmware</li>
+							<li>Attempt to standardize: <strong>Strong</strong> resistance 🤷‍♀️</li>
+						</ul>
+					</section>
+					<section>
+						<p>
+							Please scream at your vendors if they break widely supported behaviour and not at me, I'm on your side 😉
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Challenge #2</h1>
+						<h3>Fragmented firmware landscape</h3>
+					</section>
+					<section>
+						<h3>Fragmentation left and right</h3>
+						<ul>
+							<li>
+								Most users rarely update their printer firmware
+								<ul>
+									<li>if they even can!</li>
+								</ul>
+							</li>
+							<li>Vendors fork and never merge from upstream again</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Result</h3>
+						<ul>
+							<li>
+								Ancient bugs still present in current printers<br>
+								<small>I still get tickets regularly caused by bugs in Marlin forks I fixed six years ago</small>
+								<ul>
+									<li>Missing <code>ok</code>s</li>
+									<li>Translated serial messages</li>
+									<li>Broken resend requests</li>
+									<li>etc</li>
+								</ul>
+							</li>
+							<li>
+								Takes ages for new features to propagate<br>
+								<small>If they propagate at all</small>
+								<ul>
+									<li>E.g. <code>busy</code> protocol</li>
+									<li>E.g. capability reports</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Consequence</h3>
+						<ul>
+							<li>
+								OctoPrint has to accommodate firmware
+								<ul>
+									<li>from today</li>
+									<li>from 7 years ago</li>
+									<li>and from anything in between</li>
+								</ul>
+							</li>
+							<li>
+								Next to no way to differentiate between those
+								<ul>
+									<li><code>Marlin V1; Sprinter/grbl mashup for gen6</code></li>
+									<li><code>Author: (default)</code></li>
+								</ul>
+							</li>
+							<li>➡ Complex code to handle printer communication</li>
+						</ul>
+					</section>
+					<section>
+						<p>
+							Please update your printer's firmware regularly - and ideally run the mainline version, not an (outdated) vendor fork 😉
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Challenge #3</h1>
+						<h3>Plugins require backwards compatibility</h3>
+					</section>
+					<section>
+						<h3>Plugins in OctoPrint</h3>
+						<ul>
+							<li>Since OctoPrint 1.2.0 (~2015)</li>
+							<li>Users can easily add or modify functionality</li>
+							<li>Currently over 160 plugins registered on the repository</li>
+							<li>
+								Advantage: Easier to customize OctoPrint to your specific workflow
+								<ul>
+									<li>Not everyone wants every feature</li>
+									<li>Just pick what you need</li>
+								</ul>
+							</li>
+							<li>
+								Advantage: Bundled plugins are also easier to maintain
+							</li>
+							<li>
+								Disadvantage: Easy fixes turn into backwards compatibility nightmares
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Result</h3>
+						<ul>
+							<li>Typo in API? Plugin might depend on that name.</li>
+							<li>Order of events on subsystem? Plugin might depend on the order.</li>
+							<li>Third party dependency version? Plugin might depend on it.</li>
+							<li>Python 3 compatibility? Plugin might not be Python 3 ready.</li>
+							<li>➡ Have to think of consequences all the time</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Consequence</h3>
+						<ul>
+							<li>Need to be very careful with every single change</li>
+							<li>Breaking backwards compatibility = breaking established plugins</li>
+							<li>Breaking established plugins = unhappy users 😕</li>
+							<li>Sometimes means bending over backwards to solve a trivial issue</li>
+						</ul>
+					</section>
+					<section>
+						<p>
+							Please be patient if a seemingly trivial change appears to take ages 🙂
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Challenge #4</h1>
+						<h3>Supporting the masses</h3>
+					</section>
+					<section>
+						<h3>Consumer mentality vs DIY enthusiasts</h3>
+						<ul>
+							<li>
+								Early days: Huge overlap between owners & DIY enthusiasts
+								<ul>
+									<li>Tinker happy</li>
+									<li>Happy to google around for a solution</li>
+									<li>Capable of fixing stuff themselves</li>
+								</ul>
+							</li>
+							<li>
+								These days: Lots and lots of consumers
+								<ul>
+									<li>Printers are marketed as plug-n-play but aren't</li>
+									<li>Many owners never had to tinker before</li>
+									<li>OctoPrint might be their first interaction w/ Open Source</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Result</h3>
+						<ul>
+							<li>
+								Lots of development/OSS inexperienced users
+								<ul>
+									<li>Constant need to ask for logs & more info that "it doesn't work"</li>
+									<li>Tricky to explain some things, e.g. why proprietary printer won't work<br><small>and can't "quickly be added"</small></li>
+								</ul>
+							</li>
+							<li>Sometimes expectation to get support on par with huge multinational company</li>
+							<li>Sometimes hostile reaction when told inconvenient truths</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Consequence</h3>
+						<ul>
+							<li>
+								Huge support overhead
+								<ul>
+									<li>Hours per week of fielding questions</li>
+									<li>Repetitive</li>
+								</ul>
+							</li>
+							<li>Often very frustrating experience</li>
+							<li>
+								➡ Established community forum
+								<ul>
+									<li>Central place for support, questions, sharing</li>
+									<li>Not just me anymore, everyone can help to help</li>
+									<li>Seems to work best so far</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<p>
+							Please help each other with questions and problems 🙂
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Challenge #5</h1>
+						<h3>Funding</h3>
+					</section>
+					<section>
+						<h3>This has become a job</h3>
+						<ul>
+							<li>
+								Project size way way past pet project level:
+								<ul>
+									<li>Maintenance</li>
+									<li>New development</li>
+									<li>Community management</li>
+									<li>Support</li>
+									<li>etc</li>
+								</ul>
+							</li>
+							<li>
+								Full time job and then some<br>
+								<small>A lot of people think I'm a multi person company 😋</small>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Consequence</h3>
+						<ul>
+							<li>Turned part time in 2013 (own cost)</li>
+							<li>Turned full time in 2014 (single sponsor)</li>
+							<li>Turned crowdfunded via Patreon in April 2016</li>
+							<li>
+								It works 😲<br>
+								<small>but is also really scary</small>
+							</li>
+							<li>Huge thanks to the community! 😍</li>
+						</ul>
+					</section>
+					<section>
+						<p>
+							If you like OctoPrint, consider supporting my work on it 🤗
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<h1>Questions?</h1>
+					<p>Website: <a href="https://octoprint.org">octoprint.org</a></p>
+					<p>Forum: <a href="https://community.octoprint.org">community.octoprint.org</a></p>
+					<p>Slides: <a href="https://octoprint.org/slides/3dms19/">octoprint.org/slides/3dms19/</a></p>
+				</section>
+
+				<section>
+					<h1>Thanks for your attention!</h1>
+					<p>Website: <a href="https://octoprint.org">octoprint.org</a></p>
+					<p>Forum: <a href="https://community.octoprint.org">community.octoprint.org</a></p>
+					<p>Slides: <a href="https://octoprint.org/slides/3dms19/">octoprint.org/slides/3dms19/</a></p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				width: 1280,
+				height: 720,
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				],
+
+				keyboard: {
+					// support left/right for next/prev slide (remote compatible)
+					39: 'next',
+					37: 'prev'
+				}
+			});
+
+		</script>
+
+	</body>
+</html>

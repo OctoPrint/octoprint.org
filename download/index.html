@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+
+    <title>OctoPrint.org - Download & Setup OctoPrint</title>
+    <meta name="description" content="Learn how to setup OctoPrint using the preinstalled OctoPi image for Raspberry Pi, or how to install from source on Windows, Linux and Mac.">
+    <meta name="author" content="Gina Häußge">
+    <meta name="google-site-verification" content="0EFsbaNygJcEinKPmzP-hTf0Ju6wDIpJxO5zvQtOQT0" />
+    <meta name="google-site-verification" content="i7e8SG0JfDqFkxQgr1_ZuirRzwJomS8xzPvb0mLHujM" />
+    <meta name="referrer" content="same-origin">
+
+    
+
+    <!--[if lt IE 9]>
+    <script src="/assets/js/html5shim.js?_=1588679698"></script>
+    <![endif]-->
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/assets/css/site.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/bootstrap-responsive.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/prettify.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/lightbox.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css?_=1588679698">
+    <link rel="stylesheet" href="/assets/css/syntax.css?_=1588679698">
+
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/slick-1.5.9/slick.css?_=1588679698"/>
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/slick-1.5.9/slick-theme.css?_=1588679698"/>
+
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/assets/img/tentacle-32x32.png">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144.png">
+
+    <!-- Le RSS feed -->
+    <link rel="alternate" type="application/rss+xml" title="OctoPrint.org: OctoBlog" href="/feeds/all.xml">
+
+    <!-- Le social media meta data -->
+    
+    
+
+    
+
+    
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@OctoPrint3D" />
+    <meta name="twitter:title" content="Download & Setup OctoPrint" />
+    <meta name="twitter:description" content="Learn how to setup OctoPrint using the preinstalled OctoPi image for Raspberry Pi, or how to install from source on Windows, Linux and Mac." />
+    <meta name="twitter:image" content="https://octoprint.org/assets/img/octoprint-avatar-240x240.png" />
+
+    <meta property="og:title" content="Download & Setup OctoPrint" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://octoprint.org/assets/img/octoprint-600x400.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:description" content="Learn how to setup OctoPrint using the preinstalled OctoPi image for Raspberry Pi, or how to install from source on Windows, Linux and Mac." />
+    <meta property="og:site_name" content="OctoPrint.org" />
+    <meta property="og:url" content="https://octoprint.org/download/" />
+
+    <meta itemscope itemtype="http://schema.org/WebPage" />
+    <meta itemprop="headline" content="Download & Setup OctoPrint" />
+    <meta itemprop="description" content="Learn how to setup OctoPrint using the preinstalled OctoPi image for Raspberry Pi, or how to install from source on Windows, Linux and Mac." />
+    <meta itemprop="image" content="https://octoprint.org/assets/img/octoprint-600x400.png" />
+
+    <script>
+        var shiftWindow = function() { scrollBy(0, -40) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+    </script>
+
+    <!-- Carbon -->
+    <script>
+        var disableStr = "carbon-disable";
+        function carbonOptout() {
+            //document.cookie = disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org";
+            document.cookie = disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org";
+            window[disableStr] = true;
+            alert("Carbon Ads sind jetzt deaktiviert! / Carbon Ads are now deactivated!");
+        }
+        if (document.cookie.indexOf(disableStr + "=true") > -1) {
+            window[disableStr] = true;
+        }
+    </script>
+
+    <!-- Cookie consent -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/cookieconsent.min.css" />
+    <script src="/assets/js/cookieconsent.min.js"></script>
+    <script>
+        if (!String.prototype.startsWith) {
+            String.prototype.startsWith = function(search, pos) {
+            return this.substr(!pos || pos < 0 ? 0 : +pos, search.length) === search;
+            };
+        }
+
+        
+        window.addEventListener("load", function(){
+            window.cookieconsent.hasTransition = false;
+            window.cookieconsent.initialise({
+                "position": "bottom",
+                "theme": "edgeless",
+                "palette": {
+                    "popup": {
+                        "background": "#000000",
+                        "link": "#10a800"
+                    },
+                    "button": {
+                        "background": "#0b7500"
+                    }
+                },
+                "elements": {
+                    "messagelink": '<span id="cookieconsent:desc" class="cc-message">{{message}} <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank">{{link}}</a> or <a aria-label="privacy policy" tabindex="1" class="cc-link" href="/privacy/" target="_blank">read our Privacy Policy</a></span>'
+                }
+            })
+        });
+        
+
+        /**
+         * Make sure octoprint.github.io stuff gets rewritten to octoprint.org.
+         * See https://github.com/OctoPrint/plugins.octoprint.org/issues/146.
+         */
+        var githubio = "octoprint.github.io/octoprint.org";
+        var url = window.location.href;
+        if (url && (url.startsWith("http://" + githubio) || url.startsWith("https://" + githubio))) {
+            url = url.replace(githubio, "octoprint.org");
+            window.location.replace(url);
+        }
+    </script>
+</head>
+
+<body onload="load()">
+
+<div id="top"></div>
+
+<div id="banner" style="display: none">
+    <a class="close-banner" href="javascript:void(0)">&times;</a>
+    <div class="container content">
+        <p class="text">
+            I work full time on OctoPrint and can only continue thanks to funding by people like you. Give the
+            button a click and learn how you can help!
+        </p>
+        <p class="signature">
+            Thank you,<br>
+            Gina
+        </p>
+        <div class="span4 button">
+            <a class="btn btn-primary btn-large btn-block" href="/support-octoprint/" data-event-category="supportlink" data-event-action="banner"><i class="fa fa-heart"></i> Support my work! <i class="fa fa-heart"></i></a>
+        </div>
+    </div>
+</div>
+
+<div id="navigation" class="navbar navbar-inverse navbar-fixed-top unfixed" data-scroll-header>
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand hidden-phone" href="/"><img src="/assets/img/tentacle-20x20.png" alt="Tentacle logo" class="tentacle"> OctoPrint.org</a>
+      <a class="brand visible-phone" href="/"><img src="/assets/img/tentacle-20x20.png" alt="Tentacle logo" class="tentacle"></a>
+      <a href="javascript:void(0)" class="btn btn-burger btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><i class="fas fa-bars"></i></a>
+      <div class="pull-right">
+        <ul class="nav social-navbar">
+          <li><a href="/merch/" title="Get some merchandise!"><i class="fa fa-shopping-basket"></i></a></li>
+          <li><a href="/support-octoprint/" title="Support OctoPrint!" data-event-category="supportlink" data-event-action="navigation"><i class="fas fa-donate"></i></a></li>
+        </ul>
+      </div>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="https://community.octoprint.org">Forum</a></li>
+          <li><a href="/download/">Download</a></li>
+          <li><a href="/support-octoprint/" title="Support the project!" data-event-category="supportlink" data-event-action="donate">Donate</a></li>
+          <li><a href="/merch/" title="Get some merchandise!" data-event-category="merchlink" data-event-action="navbar">Merchandise</a></li>
+          <li><a href="http://plugins.octoprint.org">Plugins</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">More... <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://github.com/foosel/OctoPrint/wiki">Wiki</a></li>
+              <li><a href="http://docs.octoprint.org">Documentation</a></li>
+              <li><a href="https://community.octoprint.org/c/support/faq">FAQ</a></li>
+              <li><a href="/slides/">Slides & Talks</a></li>
+              <li class="divider"></li>
+              <li><a href="https://github.com/foosel/OctoPrint">Source</a></li>
+              <li><a href="https://github.com/foosel/OctoPrint/blob/master/CONTRIBUTING.md">Contribution Guidelines</a></li>
+              <li><a href="https://github.com/foosel/OctoPrint/issues">Issuetracker</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="wrap">
+    <div id="main">
+    <div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="hero-content pageheader">
+                    <h1>Download & Setup OctoPrint</h1>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container downloadpage">
+    <div class="hidden-phone visible-desktop visible-tablet content row-fluid">
+        <!-- standard view: content first, then sponsor column -->
+        <div class="span9 text">
+            <h1 id="octopi">OctoPi</h1>
+
+<p><a href="https://github.com/guysoft">Guy Sheffer</a> maintains <a href="https://github.com/guysoft/OctoPi">“OctoPi”</a>,
+a <a href="http://www.raspbian.org/">Raspbian (and thus Debian) based</a> SD card image for the Raspberry Pi
+that already includes OctoPrint plus everything you need to run it:</p>
+
+<ul>
+  <li>OctoPrint plus its dependencies</li>
+  <li><a href="https://github.com/jacksonliam/mjpg-streamer">MJPG-Streamer</a>
+for live viewing of prints and timelapse video creation, compatible with various
+USB webcams and the Raspberry Pi camera</li>
+</ul>
+
+<p><strong>Recommended hardware: Raspberry Pi 3B, 3B+ or 4B. Expect print artifacts and long loading times with other 
+options, especially when adding a webcam or installing third party plugins.</strong> Setups not using
+recommended hardware are not officially supported.</p>
+
+<p>Please note that the <strong>Raspberry Pi Zero W is not recommended explicitly</strong> since severe performance 
+issues were observed, caused by the WiFi interface when bandwidth is utilized (e.g. the webcam is streamed), negatively 
+impacting printing quality. <a href="https://github.com/guysoft/OctoPi/issues/318#issuecomment-284762963">See also here</a>.</p>
+
+<p>You can download the latest OctoPi image via the following button.</p>
+
+<div class="text-center">
+    <a class="btn btn-large btn-block" href="https://octopi.octoprint.org/latest" data-event-category="download" data-event-action="latest"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;0.17.0</a>
+    <small>MD5Sum of the .zip: <code>8a550602b8ccc5df8381924757f88ab9</code></small><br />
+    <small><strong>Raspberry Pi 3B, 3B+ or 4B strongly recommended, Raspberry Pi Zero/Zero W not recommended at all!</strong></small><br />
+    <small>Image compatible with Raspberry Pi A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B, Zero and Zero W.</small><br />
+</div>
+
+<p>or simply buy one of the available</p>
+
+<div class="text-center">
+    <a class="btn btn-large btn-block" href="/support-octoprint/#kits" data-event-category="download" data-event-action="kits">All-in-one OctoPrint Kits</a>
+</div>
+
+<h2 id="setting-up-octopi">Setting up OctoPi</h2>
+
+<p>Please follow these steps after downloading:</p>
+
+<ol>
+  <li>
+    <p>Unzip the image and install the contained <code class="language-plaintext highlighter-rouge">.img</code> file to an SD card
+<a href="https://etcher.io/">using Etcher</a>. <strong>Do not at any point format the SD from your Operating System, even if prompted to do so</strong> - 
+that will break it and you’ll have to start over. Just use Etcher to flash the <code class="language-plaintext highlighter-rouge">.img</code> file, that is enough!</p>
+  </li>
+  <li>
+    <p>Configure your WiFi connection by editing <code class="language-plaintext highlighter-rouge">octopi-wpa-supplicant.txt</code> on the root of the
+flashed card when using it like a thumb drive. <strong>Important: Do not use WordPad (Windows) or TextEdit (MacOS X)</strong>
+for this, those editors are known to mangle the file, making configuration fail. Use something like 
+Notepad++, Atom or VSCode instead or at the very least heed the warnings in the file.</p>
+
+    <p><strong>Note:</strong> This changed with OctoPi 0.15.0, earlier versions had you edit <code class="language-plaintext highlighter-rouge">octopi-network.txt</code> which has a different
+format. This old method is <em>no longer supported</em> and the contents of this file will be ignored. Just 
+use <code class="language-plaintext highlighter-rouge">octopi-wpa-supplicant.txt</code>.</p>
+
+    <p>Please also refer take a look at the <a href="https://faq.octoprint.org/wifi-setup">full WiFi setup guide in the FAQ</a> that also includes Troubleshooting tips.</p>
+  </li>
+  <li>
+    <p>Boot the Pi from the card.</p>
+  </li>
+  <li>
+    <p>Log into your Pi via SSH (it is located at <code class="language-plaintext highlighter-rouge">octopi.local</code>
+<a href="https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview">if your computer supports bonjour</a>
+or the IP address assigned by your router), default username is “pi”,
+default password is “raspberry”. Run <code class="language-plaintext highlighter-rouge">sudo raspi-config</code>. Once that is open:</p>
+
+    <ol>
+      <li>Change the password via “Change User Password”</li>
+      <li>Optionally: Change the configured timezone via “Localization Options” &gt; “Timezone”.</li>
+      <li>Optionally: Change the hostname via “Network Options” &gt; “Hostname”. Your OctoPi instance will then no longer be reachable under <code class="language-plaintext highlighter-rouge">octopi.local</code> but rather the hostname you chose postfixed with <code class="language-plaintext highlighter-rouge">.local</code>, so keep that in mind.</li>
+    </ol>
+
+    <p>You can navigate in the menus using the arrow keys and <key>Enter</key>. To switch to selecting the buttons at the bottom use <key>Tab</key>.</p>
+
+    <p><strong>You do not need to expand the filesystem</strong>, current versions of OctoPi do this automatically.</p>
+
+    <p><strong>You also do not need to manually enable the RaspiCam</strong> if you have one, that is already taken care of on the image as well.</p>
+  </li>
+  <li>
+    <p>Access OctoPrint through <code class="language-plaintext highlighter-rouge">http://octopi.local</code> or <code class="language-plaintext highlighter-rouge">http://&lt;your pi's ip address&gt;</code>. https is available too,
+with a self-signed certificate (which means your browser will warn you about it being invalid).</p>
+  </li>
+</ol>
+
+<p>Please also refer to <a href="https://github.com/guysoft/OctoPi">OctoPi’s README</a>, especially the <a href="https://github.com/guysoft/OctoPi#how-to-use-it">“How to use it” section</a>.</p>
+
+<p><a href="https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A">Thomas Sanladerer</a> created a great video guide on how to get OctoPi 0.12 up an running.</p>
+
+<div class="responsive_iframe">
+	<div class="yt-with-consent" data-vid="MwsxO3ksxm4"></div>
+</div>
+
+<h2 id="further-resources">Further resources</h2>
+
+<ul>
+  <li><a href="https://www.raspberrypi.org/magpi/issues/36/">The MagPi issue #36</a> contains a “Getting Started” guide on 
+pages 50-51. You can find an excerpt <a href="/assets/download/MagPi36_OctoPrint.pdf">here</a> 
+(MagPi License: <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA</a>).</li>
+  <li>Scripts to build (and customize) the image yourself can be found in <a href="https://github.com/guysoft/OctoPi">OctoPi’s Github repository</a>.</li>
+  <li>Nightly builds can be found <a href="http://gnethomelinux.com/OctoPi/nightly/">here</a>.</li>
+</ul>
+
+<hr />
+
+<h1 id="installing-manually">Installing manually</h1>
+
+<p>The generic setup instructions boil down to</p>
+
+<ol>
+  <li>Installing <a href="https://www.python.org/">Python</a> including <a href="https://pip.pypa.io/en/latest/installing.html">pip</a> and <a href="https://virtualenv.pypa.io/en/stable/installation/">virtualenv</a>.
+<strong>Please note:</strong> While OctoPrint itself supports running under Python 3.7+ starting with version 1.4.0, many of the available plugins still are
+Python 2 only. If you want to make use of plugins from the plugin repository, you should for now still install OctoPrint under Python 2.7. Note that
+migrating to Python 3 at a later date is easily done.</li>
+  <li>Creating a virtual environment somewhere: <code class="language-plaintext highlighter-rouge">virtualenv OctoPrint</code></li>
+  <li>Installing OctoPrint <em>into that virtual environment</em>: <code class="language-plaintext highlighter-rouge">OctoPrint/bin/pip install OctoPrint</code></li>
+  <li>OctoPrint may then be started through <code class="language-plaintext highlighter-rouge">./OctoPrint/bin/octoprint serve</code> or with an absolute path <code class="language-plaintext highlighter-rouge">/path/to/OctoPrint/bin/octoprint serve</code></li>
+</ol>
+
+<p>More specific setup instructions for the most common runtime environments can be found below.</p>
+
+<h2 id="linux">Linux</h2>
+
+<p>For installing OctoPrint from source, please take a look at <a href="https://community.octoprint.org/t/setting-up-octoprint-on-a-raspberry-pi-running-raspbian/2337/">the setup instructions for Raspbian on the forum</a>.
+They should be pretty much identical on other Linux distributions.</p>
+
+<h2 id="windows">Windows</h2>
+
+<p>For installing the OctoPrint server on a Windows system, please take a look at <a href="https://community.octoprint.org/t/setting-up-octoprint-on-windows/383/1">the setup instructions for Windows on the forum</a>.</p>
+
+<h2 id="mac">Mac</h2>
+
+<p>For installing the OctoPrint server on a Mac, please take a look at <a href="https://community.octoprint.org/t/setting-up-octoprint-on-macos/13425">the setup instructions for MacOS on the forum</a>.</p>
+
+        </div>
+        <div class="span3">
+            <div class="sponsorcolumn">
+                
+    <div class="flufftext">
+        OctoPrint's development is made possible only through the <strong><a href="/support-octoprint/" rel="noopener noreferrer" data-event-category="supportlink" data-event-action="downloadblurb">financial support</a></strong>
+        of its awesome supporters and
+    </div>
+
+    <div class="sponsors">
+        
+            <div class="sponsor">
+                <a href="https://www.biqu.equipment/" title="BigTreeTech" data-event-category="sponsor" data-event-action="BigTreeTech">
+                    <img src="/assets/img/sponsors/bigtreetech.png" alt="BigTreeTech" title="BigTreeTech">
+                </a>
+            </div>
+        
+            <div class="sponsor">
+                <a href="https://www.raise3d.com" title="Raise 3D" data-event-category="sponsor" data-event-action="Raise 3D">
+                    <img src="/assets/img/sponsors/raise3d.png" alt="Raise 3D" title="Raise 3D">
+                </a>
+            </div>
+        
+    </div>
+
+
+<a class="btn btn-primary btn-block donatelink" href="/support-octoprint/" title="Support the project!" data-event-category="supportlink" data-event-action="download">
+    <i class="fa fa-heart"></i> Support the project! <i class="fa fa-heart"></i>
+</a>
+
+            </div>
+            <div class="adcolumn">
+                <script>
+    if (!window["carbon-disable"] && !window.matchMedia("(max-width: 767px)").matches) {
+        (function() {
+            var po = document.createElement("script");
+            po.type = "text/javascript";
+            po.async = true;
+            po.src  = "//cdn.carbonads.com/carbon.js?serve=CKYIL53W&placement=octoprintorg";
+            po.id = "_carbonads_js";
+            var s = document.currentScript;
+            s.parentNode.insertBefore(po, s);
+        })();
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+    <div class="visible-phone hidden-desktop hidden-tablet content row-fluid">
+        <!-- mobile view: sponsor column first, then content -->
+        <div class="span3">
+            <div class="sponsorcolumn">
+                
+    <div class="flufftext">
+        OctoPrint's development is made possible only through the <strong><a href="/support-octoprint/" rel="noopener noreferrer" data-event-category="supportlink" data-event-action="downloadblurb">financial support</a></strong>
+        of its awesome supporters and
+    </div>
+
+    <div class="sponsors">
+        
+            <div class="sponsor">
+                <a href="https://www.biqu.equipment/" title="BigTreeTech" data-event-category="sponsor" data-event-action="BigTreeTech">
+                    <img src="/assets/img/sponsors/bigtreetech.png" alt="BigTreeTech" title="BigTreeTech">
+                </a>
+            </div>
+        
+            <div class="sponsor">
+                <a href="https://www.raise3d.com" title="Raise 3D" data-event-category="sponsor" data-event-action="Raise 3D">
+                    <img src="/assets/img/sponsors/raise3d.png" alt="Raise 3D" title="Raise 3D">
+                </a>
+            </div>
+        
+    </div>
+
+
+<a class="btn btn-primary btn-block donatelink" href="/support-octoprint/" title="Support the project!" data-event-category="supportlink" data-event-action="download">
+    <i class="fa fa-heart"></i> Support the project! <i class="fa fa-heart"></i>
+</a>
+
+            </div>
+            <div class="adcolumn">
+                <script>
+    if (!window["carbon-disable"] && window.matchMedia("(max-width: 767px)").matches) {
+        (function() {
+            var po = document.createElement("script");
+            po.type = "text/javascript";
+            po.async = true;
+            po.src  = "//cdn.carbonads.com/carbon.js?serve=CKYIL53W&placement=octoprintorg";
+            po.id = "_carbonads_js";
+            var s = document.currentScript;
+            s.parentNode.insertBefore(po, s);
+        })();
+    }
+</script>
+
+            </div>
+        </div>
+        <div class="span9 text">
+            <h1 id="octopi">OctoPi</h1>
+
+<p><a href="https://github.com/guysoft">Guy Sheffer</a> maintains <a href="https://github.com/guysoft/OctoPi">“OctoPi”</a>,
+a <a href="http://www.raspbian.org/">Raspbian (and thus Debian) based</a> SD card image for the Raspberry Pi
+that already includes OctoPrint plus everything you need to run it:</p>
+
+<ul>
+  <li>OctoPrint plus its dependencies</li>
+  <li><a href="https://github.com/jacksonliam/mjpg-streamer">MJPG-Streamer</a>
+for live viewing of prints and timelapse video creation, compatible with various
+USB webcams and the Raspberry Pi camera</li>
+</ul>
+
+<p><strong>Recommended hardware: Raspberry Pi 3B, 3B+ or 4B. Expect print artifacts and long loading times with other 
+options, especially when adding a webcam or installing third party plugins.</strong> Setups not using
+recommended hardware are not officially supported.</p>
+
+<p>Please note that the <strong>Raspberry Pi Zero W is not recommended explicitly</strong> since severe performance 
+issues were observed, caused by the WiFi interface when bandwidth is utilized (e.g. the webcam is streamed), negatively 
+impacting printing quality. <a href="https://github.com/guysoft/OctoPi/issues/318#issuecomment-284762963">See also here</a>.</p>
+
+<p>You can download the latest OctoPi image via the following button.</p>
+
+<div class="text-center">
+    <a class="btn btn-large btn-block" href="https://octopi.octoprint.org/latest" data-event-category="download" data-event-action="latest"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;0.17.0</a>
+    <small>MD5Sum of the .zip: <code>8a550602b8ccc5df8381924757f88ab9</code></small><br />
+    <small><strong>Raspberry Pi 3B, 3B+ or 4B strongly recommended, Raspberry Pi Zero/Zero W not recommended at all!</strong></small><br />
+    <small>Image compatible with Raspberry Pi A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B, Zero and Zero W.</small><br />
+</div>
+
+<p>or simply buy one of the available</p>
+
+<div class="text-center">
+    <a class="btn btn-large btn-block" href="/support-octoprint/#kits" data-event-category="download" data-event-action="kits">All-in-one OctoPrint Kits</a>
+</div>
+
+<h2 id="setting-up-octopi">Setting up OctoPi</h2>
+
+<p>Please follow these steps after downloading:</p>
+
+<ol>
+  <li>
+    <p>Unzip the image and install the contained <code class="language-plaintext highlighter-rouge">.img</code> file to an SD card
+<a href="https://etcher.io/">using Etcher</a>. <strong>Do not at any point format the SD from your Operating System, even if prompted to do so</strong> - 
+that will break it and you’ll have to start over. Just use Etcher to flash the <code class="language-plaintext highlighter-rouge">.img</code> file, that is enough!</p>
+  </li>
+  <li>
+    <p>Configure your WiFi connection by editing <code class="language-plaintext highlighter-rouge">octopi-wpa-supplicant.txt</code> on the root of the
+flashed card when using it like a thumb drive. <strong>Important: Do not use WordPad (Windows) or TextEdit (MacOS X)</strong>
+for this, those editors are known to mangle the file, making configuration fail. Use something like 
+Notepad++, Atom or VSCode instead or at the very least heed the warnings in the file.</p>
+
+    <p><strong>Note:</strong> This changed with OctoPi 0.15.0, earlier versions had you edit <code class="language-plaintext highlighter-rouge">octopi-network.txt</code> which has a different
+format. This old method is <em>no longer supported</em> and the contents of this file will be ignored. Just 
+use <code class="language-plaintext highlighter-rouge">octopi-wpa-supplicant.txt</code>.</p>
+
+    <p>Please also refer take a look at the <a href="https://faq.octoprint.org/wifi-setup">full WiFi setup guide in the FAQ</a> that also includes Troubleshooting tips.</p>
+  </li>
+  <li>
+    <p>Boot the Pi from the card.</p>
+  </li>
+  <li>
+    <p>Log into your Pi via SSH (it is located at <code class="language-plaintext highlighter-rouge">octopi.local</code>
+<a href="https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview">if your computer supports bonjour</a>
+or the IP address assigned by your router), default username is “pi”,
+default password is “raspberry”. Run <code class="language-plaintext highlighter-rouge">sudo raspi-config</code>. Once that is open:</p>
+
+    <ol>
+      <li>Change the password via “Change User Password”</li>
+      <li>Optionally: Change the configured timezone via “Localization Options” &gt; “Timezone”.</li>
+      <li>Optionally: Change the hostname via “Network Options” &gt; “Hostname”. Your OctoPi instance will then no longer be reachable under <code class="language-plaintext highlighter-rouge">octopi.local</code> but rather the hostname you chose postfixed with <code class="language-plaintext highlighter-rouge">.local</code>, so keep that in mind.</li>
+    </ol>
+
+    <p>You can navigate in the menus using the arrow keys and <key>Enter</key>. To switch to selecting the buttons at the bottom use <key>Tab</key>.</p>
+
+    <p><strong>You do not need to expand the filesystem</strong>, current versions of OctoPi do this automatically.</p>
+
+    <p><strong>You also do not need to manually enable the RaspiCam</strong> if you have one, that is already taken care of on the image as well.</p>
+  </li>
+  <li>
+    <p>Access OctoPrint through <code class="language-plaintext highlighter-rouge">http://octopi.local</code> or <code class="language-plaintext highlighter-rouge">http://&lt;your pi's ip address&gt;</code>. https is available too,
+with a self-signed certificate (which means your browser will warn you about it being invalid).</p>
+  </li>
+</ol>
+
+<p>Please also refer to <a href="https://github.com/guysoft/OctoPi">OctoPi’s README</a>, especially the <a href="https://github.com/guysoft/OctoPi#how-to-use-it">“How to use it” section</a>.</p>
+
+<p><a href="https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A">Thomas Sanladerer</a> created a great video guide on how to get OctoPi 0.12 up an running.</p>
+
+<div class="responsive_iframe">
+	<div class="yt-with-consent" data-vid="MwsxO3ksxm4"></div>
+</div>
+
+<h2 id="further-resources">Further resources</h2>
+
+<ul>
+  <li><a href="https://www.raspberrypi.org/magpi/issues/36/">The MagPi issue #36</a> contains a “Getting Started” guide on 
+pages 50-51. You can find an excerpt <a href="/assets/download/MagPi36_OctoPrint.pdf">here</a> 
+(MagPi License: <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA</a>).</li>
+  <li>Scripts to build (and customize) the image yourself can be found in <a href="https://github.com/guysoft/OctoPi">OctoPi’s Github repository</a>.</li>
+  <li>Nightly builds can be found <a href="http://gnethomelinux.com/OctoPi/nightly/">here</a>.</li>
+</ul>
+
+<hr />
+
+<h1 id="installing-manually">Installing manually</h1>
+
+<p>The generic setup instructions boil down to</p>
+
+<ol>
+  <li>Installing <a href="https://www.python.org/">Python</a> including <a href="https://pip.pypa.io/en/latest/installing.html">pip</a> and <a href="https://virtualenv.pypa.io/en/stable/installation/">virtualenv</a>.
+<strong>Please note:</strong> While OctoPrint itself supports running under Python 3.7+ starting with version 1.4.0, many of the available plugins still are
+Python 2 only. If you want to make use of plugins from the plugin repository, you should for now still install OctoPrint under Python 2.7. Note that
+migrating to Python 3 at a later date is easily done.</li>
+  <li>Creating a virtual environment somewhere: <code class="language-plaintext highlighter-rouge">virtualenv OctoPrint</code></li>
+  <li>Installing OctoPrint <em>into that virtual environment</em>: <code class="language-plaintext highlighter-rouge">OctoPrint/bin/pip install OctoPrint</code></li>
+  <li>OctoPrint may then be started through <code class="language-plaintext highlighter-rouge">./OctoPrint/bin/octoprint serve</code> or with an absolute path <code class="language-plaintext highlighter-rouge">/path/to/OctoPrint/bin/octoprint serve</code></li>
+</ol>
+
+<p>More specific setup instructions for the most common runtime environments can be found below.</p>
+
+<h2 id="linux">Linux</h2>
+
+<p>For installing OctoPrint from source, please take a look at <a href="https://community.octoprint.org/t/setting-up-octoprint-on-a-raspberry-pi-running-raspbian/2337/">the setup instructions for Raspbian on the forum</a>.
+They should be pretty much identical on other Linux distributions.</p>
+
+<h2 id="windows">Windows</h2>
+
+<p>For installing the OctoPrint server on a Windows system, please take a look at <a href="https://community.octoprint.org/t/setting-up-octoprint-on-windows/383/1">the setup instructions for Windows on the forum</a>.</p>
+
+<h2 id="mac">Mac</h2>
+
+<p>For installing the OctoPrint server on a Mac, please take a look at <a href="https://community.octoprint.org/t/setting-up-octoprint-on-macos/13425">the setup instructions for MacOS on the forum</a>.</p>
+
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+      <footer>
+          <div class="container">
+              <div class="row">
+                  <div class="span4 footer-left-column">
+                      <h2>On the web</h2>
+                      <ul class="fa-ul">
+                          <li><span class="fa-li"><i class="fas fa-users fa-fw"></i></span><a href="https://community.octoprint.org">Community Forum</a></li>
+                          <li><span class="fa-li"><i class="fas fa-comments fa-fw"></i></span><a href="irc://chat.freenode.net/octoprint" target="_blank">#octoprint on freenode</a> (<a href="https://chat.octoprint.org">Webchat</a>, <a href="https://freenode.logbot.info/octoprint">Logs</a>)</li>
+                          <li><span class="fa-li"><i class="fab fa-twitter fa-fw"></i></span><a href="https://twitter.com/OctoPrint3D" target="_blank">@OctoPrint3D</a></li>
+                          <li><span class="fa-li"><i class="fab fa-facebook-f fa-fw"></i></span><a href="https://facebook.com/OctoPrint" target="_blank">OctoPrint</a></li>
+                          <li><span class="fa-li"><i class="fab fa-youtube fa-fw"></i></span><a href="https://www.youtube.com/c/OctoPrint3D" target="_blank">OctoPrint</a></li>
+                          <li><span class="fa-li"><i class="fas fa-tachometer-alt fa-fw"></i></span><a href="https://status.octoprint.org" target="_blank">Site Status</a></li>
+                          <li><span class="fa-li"><i class="fas fa-gavel fa-fw"></i></span><a href="/imprint/" rel="nofollow">Legal Notice</a></li>
+                          <li><span class="fa-li"><i class="fas fa-gavel fa-fw"></i></span><a href="/privacy/" rel="nofollow">Privacy Policy</a></li>
+                      </ul>
+                  </div>
+                  <div class="span4">
+                      <h2>Recent Posts</h2>
+                      <div class="recent-posts">
+                          
+                          <div><a class="post-link" href="/blog/2020/03/31/3d-printing-against-corona/">Help to fight the Corona Crisis using your 3D printer</a><br><small>31 Mar 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/03/19/octoprint-on-air-30-announcement/">Announcement: OctoPrint On Air #30 LIVE</a><br><small>19 Mar 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/03/04/new-release-candidate-1.4.0/">New release: 1.4.0</a><br><small>04 Mar 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/02/27/octoprint-on-air-29/">OctoPrint On Air #29</a><br><small>27 Feb 2020</small></div>
+                          
+                          <div><a class="post-link" href="/blog/2020/02/26/new-release-candidate-1.4.0rc6/">New release candidate: 1.4.0rc6</a><br><small>26 Feb 2020</small></div>
+                          
+                      </div>
+                  </div>
+                  <div class="span4 footer-right-column">
+                      <h2>Big Thanks</h2>
+                      <p>
+                          Cross-browser testing services are kindly provided by <a href="https://www.browserstack.com">BrowserStack</a>.
+                          Profiling is done with the help of <a href="https://www.pyvmmonitor.com">PyVmMonitor</a>.
+                          Error tracking is powered and sponsored by <a href="https://sentry.io">Sentry</a>.
+                      </p>
+                      <p>
+                          Development would be impossible without the <a href="/support-octoprint/" data-event-category="supportlink" data-event-action="footer">financial support of the community</a>.
+                      </p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="span12 text-center legal">
+                      <small>"OctoPrint" is a <a href="/trademark-rules/">registered trademark</a></small>
+                  </div>
+              </div>
+          </div>
+      </footer>
+
+
+<a href="#top" class="to-top" title="Back to top" data-scroll><i class="fa fa-arrow-up fa-2x"></i></a>
+
+<script src="/assets/js/jquery-1.9.1.min.js?_=1588679698"></script>
+<script src="/assets/js/underscore-1.4.4.min.js?_=1588679698"></script>
+<script src="/assets/js/prettify-r224.js?_=1588679698"></script>
+<script src="/assets/js/holder-2.9.3.min.js?_=1588679698"></script>
+<script src="/assets/vendor/slick-1.5.9/slick.min.js?_=1588679698"></script>
+<script src="/assets/js/bootstrap.min.js?_=1588679698"></script>
+<script src="/assets/js/lightbox.min.js?_=1588679698"></script>
+<script src="/assets/js/smooth-scroll.min.js?_=1588679698"></script>
+<script src="/assets/js/site.js?_=1588679698"></script>
+<script src="/assets/js/yt-with-consent.js?_=1588679698"></script>
+<script src="/assets/js/autotrack.js?_=1588679698"></script>
+
+<!-- Google Analytics -->
+<script>
+    var gaBaseProperty = 'UA-62479257';
+    var gaProperty = gaBaseProperty + '-1';
+
+    // opt out
+    var disableStr = 'ga-disable-' + gaProperty;
+    var disableCookie = 'ga-disable-' + gaBaseProperty;
+    function gaOptout() {
+        document.cookie = disableCookie + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org';
+        window[disableStr] = true;
+        alert("Google Analytics ist jetzt deaktiviert! / Google Analytics is now deactivated!")
+    }
+
+    // tracking code
+    if (document.cookie.indexOf(disableCookie + '=true') > -1) {
+        window[disableStr] = true;
+    } else {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', gaProperty, 'auto');
+        ga('require', 'autotrack');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+</script>
+
+</body>
+</html>
