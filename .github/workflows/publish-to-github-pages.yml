@@ -22,7 +22,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: published
+          publish_branch: master
           publish_dir: ./_site
           enable_jekyll: false
           user_name: 'github-actions[bot]'
