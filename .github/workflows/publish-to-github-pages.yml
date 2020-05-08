@@ -30,6 +30,13 @@ jobs:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
 
+      - name: 📧 Discord success notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.discord_webhook }}
+        uses: Ilshidur/action-discord@master
+        with:
+          args: '☑️ Page build for octoprint.org was successful'
+
       - name: 📧 Discord failure notification
         if: failure()
         env:
