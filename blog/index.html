@@ -9,28 +9,30 @@ title: OctoBlog
     <div class="row-fluid">
         {% include pagination.html %}
     </div>
-    <div class="row-fluid">
-        <div class="span12 content">
-            {% for post in paginator.posts %}
-            <article class="post">
-                {% if post.categories %}
-                <div class="categories">{% include post_category categories=post.categories %}</div>
-                {% endif %}
-                <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-                
-                <div class="postmeta muted">
-                    <span class="author">by {{ site.data.authors[post.author].name }}</span> &middot; <span class="date">{{ post.date | date_to_string }}</span>
-                </div>
-                
-                <div class="excerpt">
-                    {{ post.excerpt }}
-                </div>
-                
-                {% if post.excerpt != post.content %}<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More...</a>{% endif %}
-            </article>
-            {% endfor %}
-        </div>
+
+    {% for post in paginator.posts %}
+    {% assign mod2 = forloop.index | modulo: 2 %}
+    <div class="row-fluid post">
+        <article class="{% if post.card %}span9{% else %}span9{% endif %}">
+            {% if post.categories %}
+            <div class="categories">{% include post_category categories=post.categories %}</div>
+            {% endif %}
+            <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+            <div class="postmeta muted">
+                <span class="author">by {{ site.data.authors[post.author].name }}</span> &middot; <span class="date">{{ post.date | date_to_string }}</span>
+            </div>
+
+            <div class="excerpt">
+                {{ post.excerpt }}
+            </div>
+
+            {% if post.excerpt != post.content %}<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More...</a>{% endif %}
+        </article>
+        {% if post.card %}<div class="post-card span3"><img src="{{ post.card }}"></div>{% endif %}
     </div>
+    {% endfor %}
+
     <div class="row-fluid">
         {% include pagination.html %}
     </div>
