@@ -27,10 +27,12 @@ a) The words "compatible with" or "can be used with" must be placed
 alongside the OctoPrint brand.
 
 b) The text "OctoPrint is a registered trademark" must be
-placed alongside the OctoPrint brand.
+placed alongside the OctoPrint brand. A placement in the page footer 
+is compliant as well.
 
-c) If the OctoPrint brand is used in an application or on a website, it must be hyperlinked to the
-URL octoprint.org.
+c) If the OctoPrint brand is used in an application or on a website, it must be hyperlinked
+at least in the aforementioned "OctoPrint is a registered trademark" text to the URL 
+`https://octoprint.org`.
 
 d) The OctoPrint brand cannot be larger, positioned more prominently or stand
 out more than the name of the product itself, the brand to which said product 
@@ -60,7 +62,7 @@ way associated with OctoPrint or Gina Häußge.
 b) To indicate compatibility with OctoPrint when this is not entirely the case. The 
 product or service must be fully compatible with OctoPrint, not partially.
 
-c) To link a product or service to OctoPrint in order to benefit from OctoPrint’s 
+c) To link a product or service to OctoPrint in order to benefit from OctoPrint's 
 reputation.  
 
 d) In relation to products or services that are illegal or contain violent or explicit 
@@ -72,10 +74,14 @@ The OctoPrint logo must be reproduced without altering any of its characteristic
 (colour, size relationship or perspective) and must appear sharp, not pixelated or 
 deformed. 
 
+You can find PNGs of various sizes for use on screens [here](./logo_png_kit.zip).
+Please get in touch via contact -at- octoprint.org if you need other formats or 
+exceptions from this rule due to your own design requirements.
+
 # 4. Use of the name
 
-The OctoPrint name must be reproduced as "OctoPrint" - upper case O, upper
-case P, rest lower case.
+The OctoPrint name must be reproduced either as "OctoPrint" - upper case O, upper
+case P, rest lower case, or in all upper case: "OCTOPRINT".
 
 # 5. Unfair use
 
@@ -110,3 +116,7 @@ Gina Häußge reserves the right to take legal action in order to prevent an ind
 company from continuing to use the OctoPrint brand name if they are using it in a way 
 that violates any of these General Conditions or if, in general, she considers said use to
 impact negatively upon the brand.
+
+---
+
+*This document was last updated on May 18th, 2020.*
