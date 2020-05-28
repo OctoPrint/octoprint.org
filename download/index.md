@@ -29,8 +29,9 @@ You can download the latest OctoPi image via the following button.
 <div class="text-center">
     <a class="btn btn-large btn-block" href="https://octopi.octoprint.org/latest" data-event-category="download" data-event-action="latest"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;0.17.0</a>
     <small>MD5Sum of the .zip: <code>8a550602b8ccc5df8381924757f88ab9</code></small><br>
-    <small><strong>Raspberry Pi 3B, 3B+ or 4B strongly recommended, Raspberry Pi Zero/Zero W not recommended at all!</strong></small><br>
-    <small>Image compatible with Raspberry Pi A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B, Zero and Zero W.</small><br>
+    <small><strong>Raspberry Pi 3B, 3B+ or 4B 1/2/4GB strongly recommended, Raspberry Pi Zero/Zero W not recommended at all!</strong></small><br>
+    <small>Image compatible with Raspberry Pi A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4GB, Zero and Zero W.</small><br>
+    <small>Unknown compatibility to Raspberry Pi 4B 8GB. Only 32bit builds available.</small>
 </div>
 
 or simply buy one of the available
