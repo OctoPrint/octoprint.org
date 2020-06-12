@@ -23,7 +23,7 @@ jobs:
       - name: ️‍♂️ Run link check
         uses: peter-evans/link-checker@v1
         with:
-          args: -v -r -d ./_site/ ./site/
+          args: -v -r -d ./_site/ ./_site/
 
       - name: 🚀 Deploy page
         uses: peaceiris/actions-gh-pages@v3
