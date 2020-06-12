@@ -20,6 +20,11 @@ jobs:
           -v ${{ github.workspace }}:/srv/jekyll \
           jekyll/builder:3.8.6 /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
 
+      - name: ️‍♂️ Run link check
+        uses: peter-evans/link-checker@v1
+        with:
+          args: -v -r -d ./_site/ ./site/
+
       - name: 🚀 Deploy page
         uses: peaceiris/actions-gh-pages@v3
         with:
