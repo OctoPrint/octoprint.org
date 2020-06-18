@@ -1,8 +1,15 @@
 ---
 layout: page
-title: Slides & Videos about OctoPrint
-description: Interested in some presentation of the project? Here you can find some slide decks and videos of past talks about OctoPrint.
+title: Media about OctoPrint
+description: Interested in some a presentation of the project? Or some articles or interviews? Here you can find some media about OctoPrint.
+redirect_from: /slides/
 ---
+
+## Selected Interviews
+
+  * ["HackSpace magazine meets... Gina Häußge"](https://hackspace.raspberrypi.org/issues/32). HackSpace magazine, Issue 32, July 2020
+  * ["3D-Druck mit Raspberry Pi. Interview mit Gina Häußge"](http://www.chip.de/downloads/MagPi-Sonderheft-01_17-Vollversion_119062677.html). Magpi: Das offizielle Raspberry Pi Magazin, Ausgabe 01/2017
+  * ["Interview with OctoPrint's Gina Häußge"](https://makezine.com/2014/12/09/interview-with-octoprints-gina-hausge/). Make, December 9th, 2014
 
 ## Slides
 
