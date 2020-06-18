@@ -3,6 +3,8 @@ exclude:
 - Gemfile
 - Gemfile.lock
 - vendor
+- bundle
+- .github
 - "*.iml"
 - fetch_yt_preview
 - README.md
@@ -19,6 +21,8 @@ description: OctoPrint is the snappy web interface for your 3D printer that allo
 
 paginate: 10
 paginate_path: "/blog/page:num/"
+
+repository: OctoPrint/OctoPrint
 
 permalink: /blog/:year/:month/:day/:title/
 excerpt_separator: <!-- more -->

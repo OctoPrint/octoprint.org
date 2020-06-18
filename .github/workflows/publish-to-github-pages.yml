@@ -14,10 +14,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: 📦 Cache jekyll build bundle
+        uses: actions/cache@v2
+        with:
+          path: ./bundle
+          key: ${{ runner.os }}-jekyll-build-bundle
+
       - name: 🔨 Build page
         run: |
           docker run \
           -v ${{ github.workspace }}:/srv/jekyll \
+          -v ${{ github.workspace }}/bundle:/usr/local/bundle \
           jekyll/builder:3.8.6 /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
 
       #- name: 🔎 Run link check
