@@ -5,11 +5,13 @@ description: Interested in some a presentation of the project? Or some articles 
 redirect_from: /slides/
 ---
 
-## Selected Interviews
+## Selected Articles & Interviews
 
-  * ["HackSpace magazine meets... Gina Häußge"](https://hackspace.raspberrypi.org/issues/32). HackSpace magazine, Issue 32, July 2020
-  * ["3D-Druck mit Raspberry Pi. Interview mit Gina Häußge"](http://www.chip.de/downloads/MagPi-Sonderheft-01_17-Vollversion_119062677.html). Magpi: Das offizielle Raspberry Pi Magazin, Ausgabe 01/2017
-  * ["Interview with OctoPrint's Gina Häußge"](https://makezine.com/2014/12/09/interview-with-octoprints-gina-hausge/). Make, December 9th, 2014
+  * ["HackSpace magazine meets... Gina Häußge"](https://hackspace.raspberrypi.org/issues/32). HackSpace magazine, Issue 32, July 2020.
+  * ["Set up a 3D printer with Raspberry Pi"](https://magpi.raspberrypi.org/issues/69). The MagPi, Issue 69, May 2018.
+  * ["3D-Druck mit Raspberry Pi. Interview mit Gina Häußge"](http://www.chip.de/downloads/MagPi-Sonderheft-01_17-Vollversion_119062677.html). Magpi: Das offizielle Raspberry Pi Magazin, Ausgabe 01/2017.
+  * ["Unchaining your 3D printer with OctoPrint"](https://magpi.raspberrypi.org/issues/36). The MagPi, Issue 36, August 2015.
+  * ["Interview with OctoPrint's Gina Häußge"](https://makezine.com/2014/12/09/interview-with-octoprints-gina-hausge/). Make, December 9th, 2014.
 
 ## Slides
 
