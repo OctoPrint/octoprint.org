@@ -47,6 +47,10 @@ respond to commands and send you snapshots from your webcam, if you have one ins
 
 The telegram plugin operates similarly to the DiscordRemote plugin, in that it creates a telegram bot with which you can interact. It has relatively fine grained ACL capabilities, which allows you to grant permissions to individual users who interact with it. It can be configured to send status updates for different events in the printing process, including configurable periodic updates on layer change or at a specific time interval. The initial setup isn't complicated, but does require following the steps in the readme. It only takes a few minutes to get setup, and the plugin is available [here](https://plugins.octoprint.org/plugins/telegram/).
 
+#### ngrok (*edit: added 2020-06-22*)
+
+The plugin creates a secure tunnel to access OctoPrint remotely through [ngrok](https://ngrok.com/). The tunnel is encrypted with SSL and proper certificates (even if your OctoPrint instance is not accessible via HTTPS locally), and is further protected with Basic Authentication (username and password) out of the box. It pretty much wraps the "Reverse Proxy" scenario from below into an easily installable plugin.
+
 ### Advanced Access
 
 Plugins are a fantastic way for a beginner (or veteran) to access their printer remotely, but the more advanced user has a few more tools at their disposal. Beyond this point in this post, I will intentionally not go into too much detail. I am mentioning these methods for the sake of completeness, unless you have previous experience setting up web and/or vpn servers, I highly suggest you stick with the plugins. It's not that I'm against one learning about these things, quite the contrary... I'm against learning them with a 3D printer. There is too much that can go wrong (remember, printers can cause fires!) if you misconfigure something, accidentally skip over something, and unintentionally leave your printer open to the world. 
