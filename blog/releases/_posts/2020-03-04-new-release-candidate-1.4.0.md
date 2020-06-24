@@ -20,9 +20,9 @@ images:
 poster: /assets/img/blog/2020-03/2020-03-04-octoprint-1.4.0-poster.png
 excerpt: A new release that brings a new granular permission system, Python 3 compatibility and
   plenty more features, improvements and bug fixes!
- 
+
 redirect_from:
-- /blog/2020/03/04/new-release-candidate-1.4.0/
+- /blog/2020/03/04/new-release-1.4.0/
 
 ---
 
