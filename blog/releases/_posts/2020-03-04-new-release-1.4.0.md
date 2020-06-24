@@ -20,6 +20,9 @@ images:
 poster: /assets/img/blog/2020-03/2020-03-04-octoprint-1.4.0-poster.png
 excerpt: A new release that brings a new granular permission system, Python 3 compatibility and
   plenty more features, improvements and bug fixes!
+ 
+redirect_from:
+- /blog/2020/03/04/new-release-candidate-1.4.0/
 
 ---
 
@@ -75,7 +78,7 @@ Due to the new Python 3 compatibility there's a heads-up for plugin authors:
 > Additionally, the Plugin Repository has been expanded to include a new field `compatibility.python` which signals Python compatibility on the listing as well so that OctoPrint's Plugin Manager will only show such plugins from the repository as installable under Python 3 which are configured as such.
 >
 >
-> Please see [this guide in the documentation](https://docs.octoprint.org/en/staging-maintenance/plugins/python3_migration.html) on how to go about compatibility testing and how to modify existing plugins to work with OctoPrint when running under Python 3.
+> Please see [this guide in the documentation](https://docs.octoprint.org/en/master/plugins/python3_migration.html) on how to go about compatibility testing and how to modify existing plugins to work with OctoPrint when running under Python 3.
 >
 >
 > By default, OctoPrint will assume compatibility to Python 2 only.
