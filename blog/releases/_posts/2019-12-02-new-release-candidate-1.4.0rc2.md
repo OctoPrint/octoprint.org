@@ -11,7 +11,7 @@ excerpt: The second release candidate for the upcoming 1.4.0 release fixes some 
 
 ---
 
-This second RC of 1.3.12 fixes some regressions observed with the first one:
+This second RC of 1.4.0 fixes some regressions observed with the first one:
 
 > **Bug fixes**
 >
