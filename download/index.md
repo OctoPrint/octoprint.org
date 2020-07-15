@@ -99,7 +99,7 @@ Please also refer to [OctoPi's README](https://github.com/guysoft/OctoPi), espec
 
 The generic setup instructions boil down to
 
-1. Installing [Python](https://www.python.org/) including [pip](https://pip.pypa.io/en/latest/installing.html) and [virtualenv](https://virtualenv.pypa.io/en/stable/installation/).
+1. Installing [Python](https://www.python.org/) including [pip](https://pip.pypa.io/en/latest/installing.html) and [virtualenv](https://virtualenv.pypa.io/en/stable/installation.html).
    **Please note:** While OctoPrint itself supports running under Python 3.7+ starting with version 1.4.0, many of the available plugins still are
    Python 2 only. If you want to make use of plugins from the plugin repository, you should for now still install OctoPrint under Python 2.7. Note that
    migrating to Python 3 at a later date is easily done.
