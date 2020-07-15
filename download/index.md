@@ -37,7 +37,7 @@ You can download the latest OctoPi image via the following button.
 or simply buy one of the available
 
 <div class="text-center">
-    <a class="btn btn-large btn-block" href="/support-octoprint/#kits" data-event-category="download" data-event-action="kits">All-in-one OctoPrint Kits</a>
+    <a class="btn btn-large btn-block" href="/merch/#kits" data-event-category="download" data-event-action="kits">All-in-one OctoPrint Kits</a>
 </div>
 
 ##  Setting up OctoPi
