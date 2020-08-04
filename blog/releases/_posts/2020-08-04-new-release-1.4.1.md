@@ -71,7 +71,15 @@ ImportError: No module named ext.babel
 ```
 
 then this outdated import syntax is the reason. That is something that needs to be fixed by the plugin maintainers by pushing out a new release. Please do not open issues about this on the OctoPrint repository, I cannot do anything about this.
- 
+
+#### Heads-up for users of the TouchUI plugin v0.3.14 or lower
+
+The TouchUI plugin up until the currently latest version 0.3.14 from March 11 2020 is incompatible to OctoPrint as it makes assumptions about the structure of the UI that are no longer true, leading to the plugin breaking the OctoPrint UI when active.
+
+A fix is ready but no release has been pushed out yet. Until a fixed version is released it is suggested to disable the plugin under 1.4.1.
+
+See also the ticket [here](https://github.com/BillyBlaze/OctoPrint-TouchUI/issues/413).
+
 #### Heads-up for plugin authors: Jinja2 update has one backwards incompatibility, please read
 
 Current Jinja versions no longer allow modifying variables set outside of for loops inside them. See also [#1697](https://github.com/OctoPrint/OctoPrint/issues/1697) and [the Jinja docs here](https://jinja.palletsprojects.com/en/2.11.x/templates/#assignments).
