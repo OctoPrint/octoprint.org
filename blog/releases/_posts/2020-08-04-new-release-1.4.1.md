@@ -33,7 +33,7 @@ some of the highlights:
 
   * The temperature tab got a new control to select preconfigured temperature profiles on all heaters with one click
   * The newly bundled "File Check" plugin will sanity check uploaded files and warn about potential issues. Currently the plugin only detects `{travel_speed}` place holders left in GCODE. Read more in [the plugin's README](https://github.com/OctoPrint/OctoPrint-FileCheck/blob/master/README.md).
-  * The first run wizard now allows to restore from a plugin right away.
+  * The first run wizard now allows to restore from a backup right away.
   * You can now move files in the file list to other folders without the need of a third party plugin.
   * The Plugin Manager now shows stats on the plugins available on the repository, such as number of known installs, date of last release etc. Installed plugins now also make it more transparent whether they are already compatible to Python 3 or not.
   * The Plugin Manager now also supports installing so called single-file plugins - mini plugins only consisting of a single python file which are a quick and easy way to work around broken communication or similar backend-only situations. This feature was developed live on air, you can learn more about it [in this episode of OctoPrint Code & Chat](https://www.youtube.com/watch?v=59xEaUwWU30). Consequently, the Software Update plugin was also extended with some new version check and updater types to support auto-updating single file plugins, read more [in the docs here](https://docs.octoprint.org/en/1.4.1rc1/bundledplugins/softwareupdate.html).
