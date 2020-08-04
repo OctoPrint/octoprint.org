@@ -48,7 +48,7 @@ jobs:
       - name: 📧 Discord success notification
         env:
           DISCORD_WEBHOOK: ${{ secrets.discord_webhook }}
-        uses: Ilshidur/action-discord@fbd91a9
+        uses: Ilshidur/action-discord@master
         with:
           args: '☑️ Page build for octoprint.org was successful'
 
@@ -56,6 +56,6 @@ jobs:
         if: failure()
         env:
           DISCORD_WEBHOOK: ${{ secrets.discord_webhook }}
-        uses: Ilshidur/action-discord@fbd91a9
+        uses: Ilshidur/action-discord@master
         with:
           args: '🚫 Page build for octoprint.org failed'
