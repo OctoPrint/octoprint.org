@@ -31,7 +31,7 @@ where to find help and how to roll back.
  
 ### Thanks
 
-Special thanks to everyone who contributed to this release and provided full, analyzable bug reports and pull requests, especially  [@drifkind](https://github.com/drifkind), [@eyal0](https://github.com/eyal0), [@FedericoNembrini](https://github.com/FedericoNembrini), [@fieldOfView](https://github.com/fieldOfView), [@flaviut](https://github.com/flaviut), [@jneilliii](https://github.com/jneilliii), [@joshfriend](https://github.com/joshfriend), [@justfalter](https://github.com/justfalter), [@kerber](https://github.com/kerber), [@lachyc](https://github.com/lachyc), [@osubuu](https://github.com/osubuu) and [@tedder](https://github.com/tedder) for their PRs!
+Special thanks to everyone who contributed to this release and provided full, analyzable bug reports and pull requests, especially to Special thanks to everyone who contributed to this release and provided full, analyzable bug reports and pull requests, especially to [@osubuu](https://github.com/osubuu) for their PR!
 
 ### Further Information
 
