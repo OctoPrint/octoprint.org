@@ -25,7 +25,7 @@ through your continued **[support of my work](/support-octoprint/)** 💕
 
 ### Heads-ups
 
-The heads-ups from 1.4.1 still apply, [please read them carefully](), they might impact you and how you use OctoPrint!
+The heads-ups from 1.4.1 still apply, [please read them carefully](/blog/2020/08/04/new-release-1.4.1/), they might impact you and how you use OctoPrint!
 Also see the **Further Information** and **Links** below for more information,
 where to find help and how to roll back.
  
