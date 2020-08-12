@@ -30,15 +30,15 @@
       powerful plugin system allows extending its functionality in various ways. To name a few:
 
 
-      * Have OctoPrint send you **push notifications** on job progress via [Pushbullet](http://plugins.octoprint.org/plugins/octobullet/) or [Pushover](http://plugins.octoprint.org/plugins/pushover/).
+      * **Visualize your bed leveling** via [Bed Level Visualizer](http://plugins.octoprint.org/plugins/bedlevelvisualizer/).
 
-      * Completely **replace OctoPrint''s UI** on mobile devices via [TouchUI](http://plugins.octoprint.org/plugins/touchui/).
+      * Create **stunning timelapses** that seem to just grow out of the print bed using [Octolapse](https://plugins.octoprint.org/plugins/octolapse/).
 
-      * Integrate OctoPrint into your **messaging tool** of choice, like [Telegram](http://plugins.octoprint.org/plugins/telegram/) or [Slack](http://plugins.octoprint.org/plugins/slack/).
+      * Completely control the **themeing of OctoPrint''s UI** with [Themeify](https://plugins.octoprint.org/plugins/themeify/).
 
-      * Collect **statistics** of your printer and print jobs via the [Print History](http://plugins.octoprint.org/plugins/printhistory/) or the [Printer Statistics](http://plugins.octoprint.org/plugins/stats/) plugin.
+      * Easily **update your printer''s firmware** right from within OctoPrint via [Firmware Updater](https://plugins.octoprint.org/plugins/firmwareupdater/).
 
-      * Add **support for specific printers** like [Flashforge printers or older Makerbots](http://plugins.octoprint.org/plugins/gpx/) or the [Micro 3D printer](http://plugins.octoprint.org/plugins/m33fio/).
+      * Add **support for specific printers** like [older Flashforge printers or older Makerbots](http://plugins.octoprint.org/plugins/gpx/) or [current Flashforge, Dremel or PowerSpec machines](https://plugins.octoprint.org/plugins/FlashForge/).
 
 
     OctoPrint''s [official plugin repository](http://plugins.octoprint.org/) is integrated right within OctoPrint and installing a plugin is only
