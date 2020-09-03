@@ -7,6 +7,7 @@ redirect_from: /slides/
 
 ## Selected Articles & Interviews
 
+  * ["Gina Häußge and OctoPrint. How to make a living off of your pet passion projects - An Interview"](https://dot.kde.org/2020/08/15/gina-h%C3%A4u%C3%9Fge-and-octoprint). KDE.news, August 15th 2020.
   * ["HackSpace magazine meets... Gina Häußge"](https://hackspace.raspberrypi.org/issues/32). HackSpace magazine, Issue 32, July 2020.
   * ["Set up a 3D printer with Raspberry Pi"](https://magpi.raspberrypi.org/issues/69). The MagPi, Issue 69, May 2018.
   * ["3D-Druck mit Raspberry Pi. Interview mit Gina Häußge"](http://www.chip.de/downloads/MagPi-Sonderheft-01_17-Vollversion_119062677.html). Magpi: Das offizielle Raspberry Pi Magazin, Ausgabe 01/2017.
