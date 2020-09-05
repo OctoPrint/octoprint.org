@@ -9,7 +9,7 @@ date: 2020-09-03 12:00:00 +0200  # TODO change to publishing date
 excerpt: Give OctoPrint a spin on Python 3! Run this simple install script.
 ---
 
-Since OctoPrint version 1.4.0, it has supported both Python 2 and Python 3 *simultaneously*, as a result of Python 2's EOL status. However, at the time of writing, less than 2% of tracked installs are running on Python 3. 
+Since OctoPrint version 1.4.0, the codebase has supported installation on both Python 2 and Python 3 environments, as a result of Python 2's EOL status. However, at the time of writing, less than 2% of tracked installs are running on Python 3.
 
 The main reason for this, was the plugin repository - there was no point installing on Python 3, if you then couldn't install any plugins! These Python 3 installs tended to be manual ones, or developers who needed to test against OctoPrint running on Python 3.
 
