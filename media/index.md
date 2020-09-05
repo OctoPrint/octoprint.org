@@ -16,6 +16,7 @@ redirect_from: /slides/
 
 ## Slides
 
+* ["Adventures in Open Source Development" at Akademy 2020](../slides/akademy2020.pdf) on September 5th 2020 (english talk, english slides)
 * ["Driving 3D Printers with Python - Lessons Learned" at PyConDE 2019](../slides/3dms19/) on October 11th 2019 (english talk, english slides), that talk is also available on [YouTube](https://www.youtube.com/watch?v=zlBk5vWwJCs)
 * ["Developing OctoPrint" at 3D Meetup Sweden 2019](../slides/3dms19/) on April 27th and 28th 2019 (english language, english slides), that talk is also available on [YouTube](https://www.youtube.com/watch?v=DBFWfXfqS_U)
 * ["OctoPrint in a Nutshell" @ Webmontag Frankfurt #77](../slides/wmfra77.pdf) on January 11th 2016 ([Ignite talk](https://en.wikipedia.org/wiki/Ignite_(event)), german language, german slides), that talk is also available on [YouTube](https://www.youtube.com/watch?v=lhkX18r4Qcc)
