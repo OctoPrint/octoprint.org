@@ -36,6 +36,9 @@ Give it a minute to run through, installing OctoPrint takes the longest, but it 
 
 Once the script is finished, reload your web interface and you should be good to go!
 
+## Reverting to your previous install
+Just in case something goes wrong, I also built a script that can revert to your old install. You can find more details on the [repository here](https://github.com/cp2004/Octoprint-Upgrade-To-Py3#returning-to-the-old-install)
+
 ## Problems, questions or need help?
 Get in touch!
 * For bugs, or issues running the script, please open an issue on the [Github repository](https://github.com/cp2004/OctoPrint-Upgrade-To-Py3/issues)
