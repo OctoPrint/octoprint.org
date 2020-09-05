@@ -2,7 +2,6 @@
 layout: page
 title: Media about OctoPrint
 description: Interested in some a presentation of the project? Or some articles or interviews? Here you can find some media about OctoPrint.
-redirect_from: /slides/
 ---
 
 ## Selected Articles & Interviews
