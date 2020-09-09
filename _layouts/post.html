@@ -101,14 +101,25 @@ banner: true
                     <img src="{{ page.featuredimage }}" class="img-rounded">
                 </dl>
                 {% endif %}
+                {% if page.authors %}
+                <dl class="author">
+                    <dt>Authors</dt>
+                    <dd>
+                        {% for author in page.authors %}
+                        <a class="authorlink" href="{{ site.data.authors[author].link }}" target="_blank"><span class="authoravatar"><img src="{{ site.data.authors[author].avatar }}" /></span> {{ site.data.authors[author].name }}</a>
+                        {% endfor %}
+                    </dd>
+                </dl>
+                {% else %}
                 <dl class="author">
                     <dt>Author</dt>
                     <dd>
-                        <a href="{{ site.data.authors[page.author].link }}" target="_blank">{{ site.data.authors[page.author].name }}</a>
+                        <a class="authorlink" href="{{ site.data.authors[page.author].link }}" target="_blank"><span class="authoravatar"><img src="{{ site.data.authors[page.author].avatar }}" /></span> {{ site.data.authors[page.author].name }}</a>
                     </dd>
-                    </dl>
-                    <dl class="published">
-                        <dt>Published</dt>
+                </dl>
+                {% endif %}
+                <dl class="published">
+                    <dt>Published</dt>
                     <dd>{{ page.date | date_to_string }}</dd>
                 </dl>
                 {% assign thecategories = page.categories | shift %}

@@ -1,12 +1,12 @@
 foosel:
   name: Gina Häußge
   link: https://github.com/foosel
+  avatar: https://github.com/foosel.png?size=100
 jubaleth:
   name: Jubaleth
   link: https://jubaleth.wtf
+  avatar: https://github.com/Jubaleth.png?size=100
 od-git:
   name: Oliver Dathe
   link: https://github.com/od-git
-cp2004:
-  name: Charlie Powell
-  link: https://github.com/cp2004
+  avatar: https://github.com/od-git.png?size=100

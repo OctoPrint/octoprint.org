@@ -20,7 +20,7 @@ title: OctoBlog
             <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
             <div class="postmeta muted">
-                <span class="author">by {{ site.data.authors[post.author].name }}</span> &middot; <span class="date">{{ post.date | date_to_string }}</span>
+                <span class="author">by {% if post.authors %}{% for author in post.authors %}{{ site.data.authors[author].name }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}{{ site.data.authors[post.author].name }}{% endif %}</span> &middot; <span class="date">{{ post.date | date_to_string }}</span>
             </div>
 
             <div class="excerpt">
