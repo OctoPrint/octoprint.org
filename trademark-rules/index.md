@@ -5,7 +5,7 @@ title: Trademark Rules
 
 OctoPrint is a registered trademark owned by Gina Häußge.
 
-# 1. Use of the brand name
+# 1. Use of the brand
 
 Gina Häußge owns all the rights pertaining to the OctoPrint brand ("brand" shall be
 taken to mean both the brand name and/or logo, together or separately) and is the only 
@@ -52,9 +52,9 @@ products or services of a for-profit nature must request express permission from
 Häußge, which shall have the right to stipulate the terms and conditions for said use or to
 refuse the request.
 
-# 2. Limitations to the use of the brand name
+# 2. Limitations to the use of the brand
 
-The OctoPrint brand name may not be used:
+The OctoPrint brand may not be used:
 
 a) To give the false impression that a product or service is supported by or in any 
 way associated with OctoPrint or Gina Häußge.
@@ -85,7 +85,7 @@ case P, rest lower case, or in all upper case: "OCTOPRINT".
 
 # 5. Unfair use
 
-"Unfair use" of the brand name is defined as use which seeks to imply that the product or 
+"Unfair use" of the brand is defined as use which seeks to imply that the product or 
 service in question has some kind of relationship to OctoPrint or Gina Häußge. Such
 uses include, but are not limited to, the following: 
 
@@ -99,13 +99,13 @@ c) Using the colours or typeface of OctoPrint.
 
 d) Using logos that are similar to, or variations of, the official logo of OctoPrint. 
 
-# 6. Use of the brand name in promotional material
+# 6. Use of the brand in promotional material
 
 The commercial manufacture, sale or distribution of promotional products that bear the OctoPrint
-brand name is prohibited. Such products include, but are not limited to, clothing,
+brand is prohibited. Such products include, but are not limited to, clothing,
 accessories, decorative items, printed materials and products of a technical nature. Only 
 Gina Häußge and any third parties to which she has granted express authorisation may
-use the OctoPrint brand name for the aforementioned purposes.
+use the OctoPrint brand for the aforementioned purposes.
 
 Personal non-commercial use in this manner is allowed, as is the free sharing
 of CAD designs which incorporate the brand for enthusiastic purposes.
@@ -113,10 +113,10 @@ of CAD designs which incorporate the brand for enthusiastic purposes.
 # 7. Legal action
 
 Gina Häußge reserves the right to take legal action in order to prevent an individual or
-company from continuing to use the OctoPrint brand name if they are using it in a way 
+company from continuing to use the OctoPrint brand if they are using it in a way 
 that violates any of these General Conditions or if, in general, she considers said use to
 impact negatively upon the brand.
 
 ---
 
-*This document was last updated on May 18th, 2020.*
+*This document was last updated on September 10th, 2020.*
