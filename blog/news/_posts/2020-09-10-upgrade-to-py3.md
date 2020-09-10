@@ -2,30 +2,37 @@
 layout: post
 title: "Upgrade your OctoPrint install to Python 3!"
 author: cp2004
-# card: /assets/img/blog/  # TODO image?
-# featuredimage: /assets/img/blog/  # TODO image
-# poster: /assets/img/blog/  # TODO image
-date: 2020-09-03 12:00:00 +0200  # TODO change to publishing date
+card: /assets/img/blog/2020-09/20200910-octoprint-py3-card.png
+featuredimage: /assets/img/blog/2020-09/20200910-octoprint-py3-card.png
+poster: /assets/img/blog/2020-09/20200910-octoprint-py3-poster.png
+date: 2020-09-10 13:45:00 +0200
 excerpt: Give OctoPrint a spin on Python 3! Run this simple install script.
 ---
 
-Since OctoPrint version 1.4.0, the codebase has supported installation on both Python 2 and Python 3 environments, as a result of Python 2's EOL status. However, at the time of writing, less than 2% of tracked installs are running on Python 3.
+Since OctoPrint version 1.4.0, the codebase has supported installation on both Python 2 and Python 3 
+environments, as a result of Python 2's EOL status. However, at the time of writing, only 2.3% of all tracked installs are running on Python 3.
 
-The main reason for this, was the plugin repository - there was no point installing on Python 3, if you then couldn't install any plugins! These Python 3 installs tended to be manual ones, or developers who needed to test against OctoPrint running on Python 3.
+The main reason for this is that all current OctoPi releases up until now shipped with OctoPrint installed under Python 2. 
+But there was also the issue of compatibility of the plugins in the plugin repository - 
+there's no point installing on Python 3, if you then can't install any plugins! Thus so far Python 3 
+installs tended to be manual ones, or developers who needed to test against OctoPrint running on Python 3.
 
-First of all, there needs to be a massive shoutout to everyone who worked to make this possible, from those who contributed to core OctoPrint, to each and every plugin developer who heard the call to update their plugins to be both Python 2 & 3 compatible. As I'm writing this now, 67% of plugins are compatible with Python 3!
+Things have changed though! As I'm writing this now, 67% of plugins are compatible with Python 3! There needs to 
+be a massive shoutout to everyone who worked to make this possible, from those who contributed to core 
+OctoPrint, to each and every plugin developer who heard the call to update their plugins to be both 
+Python 2 & 3 compatible. It's now time to migrate more installs to Python 3.
 
-### Python 2 EOL? Python 3? What does all of this even mean?
+### Wait a second! Python 2 EOL? Python 3? What does all of this even mean?
 
 Python is the programming language that OctoPrint is primarily written in. Up until the start of the year, there were
 two versions of Python -- Python 2 and 3 -- with some big changes and incompatibilities between them. 
 Python 2 has been officially declared end-of-life (EOL) by the Python maintainers 
-as of January 1st of 2020, meaning it will no longer get any more updates (but obviously still continue to work as-is). 
+as of January 1st of 2020, meaning it will no longer get any more updates (but obviously still continue to work as-is!). 
 
 This meant that OctoPrint, only compatible to Python 2 up until version 1.4.0, had to become Python 3 compatible in 
 order to be future-proof (and also to profit of the new possibilities and performance gains that Python 3 offers). 
-However, as OctoPrint up until version 1.4.0 was still Python 2 exclusive and all OctoPi images up to 
-and including 0.17 also shipped with Python 2, going Python 3 exclusive was not an option either. Thus OctoPrint was 
+However, as all OctoPi images up to and including 0.17 also shipped with a Python 2 environment for OctoPrint, 
+going Python 3 *exclusive* was not an option. Thus OctoPrint was 
 made compatible with both 2 **and** 3. This happened with the release of OctoPrint 1.4.0 and took well over a year and 
 the combined work of Gina and four awesome contributors to get done and shipped.
  
@@ -61,7 +68,7 @@ Once the script is finished, reload your web interface and you should be good to
 
 ## Reverting to your previous install
 
-Just in case something goes wrong, I also built a script that can revert to your old install. You can find more details on the [repository here](https://github.com/cp2004/Octoprint-Upgrade-To-Py3#returning-to-the-old-install)
+Just in case something goes wrong, I also built a script that can revert to your old install. You can find more details on the [repository here](https://github.com/cp2004/Octoprint-Upgrade-To-Py3#returning-to-the-old-install).
 
 ## Problems, questions or need help?
 
