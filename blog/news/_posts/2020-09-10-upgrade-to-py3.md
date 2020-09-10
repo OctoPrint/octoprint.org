@@ -57,7 +57,7 @@ That's why I'm writing this blog post! I'm Charlie Powell ([@cp2004](https://git
 1. Open a command prompt to where your OctoPrint install is. This could be via SSH, or connected via a monitor & keyboard.
 2. Download & run my script with these two commands:
   ```
-  curl https://get.octoprint.org/py3/upgrade.py --output upgrade.py
+  curl -L https://get.octoprint.org/py3/upgrade.py --output upgrade.py
   python3 upgrade.py
   ```
 You can then follow the prompts in the script - if you are running OctoPi then the information is automatically collected. If not (or the default install cannot be found) you will be asked for the path to your virtual environment, then the config folder, and start and stop commands.
