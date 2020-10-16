@@ -70,7 +70,8 @@ representative at an online or offline event.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement by emailing
-`safety@octoprint.org`, which currently goes to Gina Häußge, Billie Ruben and Jubaleth.
+`safety@octoprint.org`, which currently goes to Gina Häußge, Billie Ruben and Jubaleth,
+or by using the report/flag feature of the medium used.
 
 All complaints will be reviewed and investigated promptly and fairly.
 
