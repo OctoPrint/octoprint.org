@@ -2,7 +2,7 @@
 layout: page
 title: Privacy Policy
 robots: noindex,nofollow
-lastupdate: 2019-06-24 00:00:00 +0000
+lastupdate: 2020-10-20 00:00:00 +0000
 ---
 
 ## 1. An overview of data protection
@@ -217,3 +217,14 @@ handling user data can be found in the privacy policy of community.octoprint.org
 [https://community.octoprint.org/privacy](https://community.octoprint.org/privacy){:target="_blank" rel="noopener"}.
 
 <center><em>This document was last updated on {{ page.lastupdate | date: "%B %-d, %Y" }}.</em></center>
+
+### GitHub integration on plugins.octoprint.org
+
+The GitHub integration on plugins.octoprint.org is provided by a custom service run by
+us hosted on the same server which acts as an API proxy. 
+
+The login session with GitHub is stored exclusively on the user's machine in form of a 
+session cookie. The user's browser will send this session cookie to the server, which
+unpacks it, uses it to perform actions with GitHub on behalf of the user, and then throw
+the session information away again once the request is processed. At no point is session
+information or personable identifiable information of the user persisted in any way.
