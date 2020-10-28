@@ -24,6 +24,9 @@ Please note that the **Raspberry Pi Zero W is not recommended explicitly** since
 issues were observed, caused by the WiFi interface when bandwidth is utilized (e.g. the webcam is streamed), negatively 
 impacting printing quality. [See also here](https://github.com/guysoft/OctoPi/issues/318#issuecomment-284762963).
 
+There have been some reports regarding current revisions of the **Raspberry Pi 4 1/2/4 GB refusing to boot** with the below
+OctoPi 0.17.0 image. If that affects you, please use an [OctoPi 0.18 nightly image](http://unofficialpi.org/Distros/OctoPi/nightly/).
+
 You can download the latest OctoPi image via the following button. 
 
 <div class="text-center">
@@ -34,7 +37,9 @@ You can download the latest OctoPi image via the following button.
     <small>Unknown compatibility to Raspberry Pi 4B 8GB. Only 32bit builds available.</small>
 </div>
 
-or simply buy one of the available
+or get the [32bit 0.18 nightlies here](http://unofficialpi.org/Distros/OctoPi/nightly/) or the highly experimental [64bit 0.18 nightlies for the RPi4 8GB here](http://unofficialpi.org/Distros/OctoPi/nightly-arm64/).
+
+Alternatively simply buy one of the available
 
 <div class="text-center">
     <a class="btn btn-large btn-block" href="/merch/#kits" data-event-category="download" data-event-action="kits">All-in-one OctoPrint Kits</a>
