@@ -24,6 +24,9 @@ Please note that the **Raspberry Pi Zero W is not recommended explicitly** since
 issues were observed, caused by the WiFi interface when bandwidth is utilized (e.g. the webcam is streamed), negatively 
 impacting printing quality. [See also here](https://github.com/guysoft/OctoPi/issues/318#issuecomment-284762963).
 
+There have been some reports regarding current revisions of the **Raspberry Pi 4 1/2/4 GB refusing to boot** with the below
+OctoPi 0.17.0 image. If that affects you, please use an [OctoPi 0.18 nightly image](http://unofficialpi.org/Distros/OctoPi/nightly/).
+
 You can download the latest OctoPi image via the following button. 
 
 <div class="text-center">
@@ -34,7 +37,9 @@ You can download the latest OctoPi image via the following button.
     <small>Unknown compatibility to Raspberry Pi 4B 8GB. Only 32bit builds available.</small>
 </div>
 
-or simply buy one of the available
+or get the [32bit 0.18 nightlies here](http://unofficialpi.org/Distros/OctoPi/nightly/) or the highly experimental [64bit 0.18 nightlies for the RPi4 8GB here](http://unofficialpi.org/Distros/OctoPi/nightly-arm64/).
+
+Alternatively simply buy one of the available
 
 <div class="text-center">
     <a class="btn btn-large btn-block" href="/merch/#kits" data-event-category="download" data-event-action="kits">All-in-one OctoPrint Kits</a>
@@ -100,9 +105,9 @@ Please also refer to [OctoPi's README](https://github.com/guysoft/OctoPi), espec
 The generic setup instructions boil down to
 
 1. Installing [Python](https://www.python.org/) including [pip](https://pip.pypa.io/en/latest/installing.html) and [virtualenv](https://virtualenv.pypa.io/en/stable/installation.html).
-   **Please note:** While OctoPrint itself supports running under Python 3.7+ starting with version 1.4.0, many of the available plugins still are
-   Python 2 only. If you want to make use of plugins from the plugin repository, you should for now still install OctoPrint under Python 2.7. Note that
-   migrating to Python 3 at a later date is easily done.
+   **Please note:** While OctoPrint itself supports running under both Python 2.7 and Python 3.6+, it is recommended that you install 
+   using Python 3.6+ since Python 2 is now end-of-life. A majority of the plugins are compatible to Python 3 now, full details can be 
+   found on the [plugin repository](https://plugins.octoprint.org)
 2. Creating a virtual environment somewhere: `virtualenv OctoPrint`
 3. Installing OctoPrint *into that virtual environment*: `OctoPrint/bin/pip install OctoPrint`
 4. OctoPrint may then be started through `./OctoPrint/bin/octoprint serve` or with an absolute path `/path/to/OctoPrint/bin/octoprint serve`
@@ -111,7 +116,7 @@ More specific setup instructions for the most common runtime environments can be
 
 ##  Linux
 
-For installing OctoPrint from source, please take a look at [the setup instructions for Raspbian on the forum](https://community.octoprint.org/t/setting-up-octoprint-on-a-raspberry-pi-running-raspbian/2337/).
+For installing OctoPrint on Linux, please take a look at [the setup instructions for Raspbian on the forum](https://community.octoprint.org/t/setting-up-octoprint-on-a-raspberry-pi-running-raspbian/2337/).
 They should be pretty much identical on other Linux distributions.
 
 ##  Windows
