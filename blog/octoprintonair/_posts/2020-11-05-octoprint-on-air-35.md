@@ -6,7 +6,7 @@ author: foosel
 featuredimage: /assets/img/blog/2020-11/20201105-octoprint-on-air-35-card.png
 card: /assets/img/blog/2020-11/20201105-octoprint-on-air-35-card.png
 poster: /assets/img/blog/2020-11/20201105-octoprint-on-air-35-poster.png
-excerpt: The thirty-fourth episode of a monthly live broadcast for Patrons which aired live on 
+excerpt: The thirty-fifth episode of a monthly live broadcast for Patrons which aired live on 
     October 30th 2020.
 date: 2020-11-05 14:30:00 +0100
 
