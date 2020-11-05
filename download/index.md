@@ -25,7 +25,7 @@ issues were observed, caused by the WiFi interface when bandwidth is utilized (e
 impacting printing quality. [See also here](https://github.com/guysoft/OctoPi/issues/318#issuecomment-284762963).
 
 There have been some reports regarding current revisions of the **Raspberry Pi 4 1/2/4 GB refusing to boot** with the below
-OctoPi 0.17.0 image. If that affects you, please use an [OctoPi 0.18 nightly image](http://unofficialpi.org/Distros/OctoPi/nightly/).
+OctoPi 0.17.0 image. If that affects you, please try [OctoPi 0.18.0rc1](https://github.com/guysoft/OctoPi/issues/692).
 
 You can download the latest OctoPi image via the following button. 
 
