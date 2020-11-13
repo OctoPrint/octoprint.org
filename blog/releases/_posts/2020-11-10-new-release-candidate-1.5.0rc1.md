@@ -97,6 +97,12 @@ than just bug fixes in this one :) Let's have a look at some of the highlights f
     plugins and plugin installation under Windows, several performance improvements and
     much much more.
 
+There's also a **heads-up** concerning the now mandatory Access Control:
+
+> **Heads-up: Access Control is now mandatory and no longer can be disabled**
+> 
+> If you so far had Access Control disabled, upon upgrading to 1.5.0, OctoPrint will prompt you to create a user name and password for the (first) admin user. This step was sadly necessary as too many people still will happily expose their completely unsecured OctoPrint instance on the public internet, causing additional support overhead from both attacked users and security researchers. See [this guide](https://community.octoprint.org/t/how-to-set-up-octoprint-to-autologin-a-single-user-when-connecting-from-the-internal-network/26235) for a way to have OctoPrint log you in automatically when connecting from an internal IP.
+
 You can find the full changelog and release notes as usual [on Github](https://github.com/OctoPrint/OctoPrint/releases/tag/1.5.0rc1).
 
 Special thanks to everyone who contributed to this release candidate and provided full, analyzable bug reports, you help
