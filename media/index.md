@@ -16,7 +16,7 @@ description: Interested in some a presentation of the project? Or some articles 
 ## Slides
 
 * ["A very brief look at OctoPrint 1.5.0" at VERRF2020](../slides/verrf2020.pdf) on October 11th 2020 (english talk, english slides)
-* ["Adventures in Open Source Development" at Akademy 2020](../slides/akademy2020.pdf) on September 5th 2020 (english talk, english slides)
+* ["Adventures in Open Source Development" at Akademy 2020](../slides/akademy2020.pdf) on September 5th 2020 (english talk, english slides), that talk is also available on [YouTube](https://www.youtube.com/watch?v=6ILoSjQ94HY)
 * ["Driving 3D Printers with Python - Lessons Learned" at PyConDE 2019](../slides/3dms19/) on October 11th 2019 (english talk, english slides), that talk is also available on [YouTube](https://www.youtube.com/watch?v=zlBk5vWwJCs)
 * ["Developing OctoPrint" at 3D Meetup Sweden 2019](../slides/3dms19/) on April 27th and 28th 2019 (english language, english slides), that talk is also available on [YouTube](https://www.youtube.com/watch?v=DBFWfXfqS_U)
 * ["OctoPrint in a Nutshell" @ Webmontag Frankfurt #77](../slides/wmfra77.pdf) on January 11th 2016 ([Ignite talk](https://en.wikipedia.org/wiki/Ignite_(event)), german language, german slides), that talk is also available on [YouTube](https://www.youtube.com/watch?v=lhkX18r4Qcc)
@@ -29,6 +29,10 @@ description: Interested in some a presentation of the project? Or some articles 
 ### "Behind the scenes of OctoPrint (with Gina Häußge)" (The Meltzone Podcast, episode 39, 2020)
 
 {% include youtube.html vid="aZAOPt1UQFU" %}
+
+### "Adventures in Open Source Development" (Akademy 2020)
+
+{% include youtube.html vid="6ILoSjQ94HY" %}
 
 ### "3D Drucker Online Lab Night" (Freie Maker e.V., 2020)
 
