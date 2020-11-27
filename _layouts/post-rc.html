@@ -1,0 +1,74 @@
+---
+layout: post
+---
+
+{{ content | markdownify }}
+
+{% if page.headsups %}
+<p>
+    Please also take a look at the following <strong>heads-ups</strong>:
+</p>
+
+
+{% for headsup in page.headsups %}
+<blockquote>
+<strong>{{ headsup.title }}</strong>
+
+{{ headsup.content | markdownify }}
+</blockquote>
+{% endfor %}
+
+{% endif %}
+
+<p>
+    You can find the full changelog and release notes as usual <a href="https://github.com/OctoPrint/OctoPrint/releases/tag/{{ release }}">on Github</a>.
+</p>
+<p>
+    Special thanks to everyone who contributed to this release candidate and provided full, analyzable bug reports, you help
+    making the next release as stable as possible! {% if page.contributors %}And a big Thank You to {% include github_users users=page.contributors %} for their PRs!{% endif %}
+</p>
+<p>
+    As the past RCs have shown me that a lot of people appear to be unaware of this: <strong>Please do <em>not</em> install this RC if you
+    expect a fully stable version</strong>. It is not a stable release, it is a release <em>candidate</em>:
+    severe bugs may occur, and they might be bad enough that they make a manual downgrade to an earlier version
+    necessary - maybe even from the command line.
+</p>
+<p>
+    You should feel comfortable with and capable of possibly having to do this <em>before</em> installing an RC.
+</p>
+<p>
+    If you want to and can help test this release candidate, you can find information on how to switch to the
+    <strong>"{{ page.channel }}"</strong> release channel <a href="https://community.octoprint.org/t/how-to-use-the-release-channels-to-help-test-release-candidates/402">in this guide</a>
+    if not already done (also linked below).
+</p>
+<p>
+    <strong>Please provide feedback</strong> on this RC. For general feedback you can use
+    <a href="https://github.com/OctoPrint/OctoPrint/issues/{{ page.feedback }}">this ticket on the tracker</a>.
+    The information that everything works fine for you is also valuable feedback 😄.
+    <strong>For bug reports</strong> please follow
+    <a href="https://github.com/OctoPrint/OctoPrint/blob/master/CONTRIBUTING.md#how-to-file-a-bug-report">How to file a bug report</a> -
+    I need logs and reproduction steps to fix issues, not just the information that something doesn't work so make sure to
+    <strong>fill out all fields of the issue template</strong>.
+</p>
+<p>
+    Thanks!
+</p>
+<p>
+    Depending on the feedback regarding this version I'll look into fixing
+    any observed regressions and bugs and pushing out a follow-up version
+    as soon as possible and necessary.
+</p>
+
+<h3 id="links">Links</h3>
+
+<ul>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/issues/{{ page.feedback }}">Ticket for general feedback</a></li>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/releases/tag/{{ page.release }}">Changelog and Release Notes</a></li>
+    <li><a href="https://community.octoprint.org/t/how-to-use-the-release-channels-to-help-test-release-candidates/402">How to use release channels to help test release candidate</a></li>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/blob/master/CONTRIBUTING.md#how-to-file-a-bug-report">How to file a bug report</a></li>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/blob/master/CONTRIBUTING.md">Contribution Guidelines (also relevant for creating bug reports!)</a></li>
+    <li><a href="https://faq.octoprint.org">FAQ</a></li>
+    <li><a href="http://docs.octoprint.org/">Documentation</a></li>
+    <li><a href="https://community.octoprint.org/t/how-can-i-revert-to-an-older-version-of-the-octoprint-installation-on-my-octopi-image/205">How to roll back to an earlier release (OctoPi)</a></li>
+    <li><a href="https://community.octoprint.org/t/how-can-i-roll-back-to-an-earlier-version-after-an-update/234">How to roll back to an earlier release (manual install)</a></li>
+</ul>

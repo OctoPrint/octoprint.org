@@ -1,1 +1,1 @@
-{% for user in include.users %}{% unless forloop.first or forloop.last %}, {% endunless %}{% if forloop.last %} and {% endif %}<a href="https://github.com/{{ user }}">@{{ user }}</a>{% endfor %}
+{% if include.users.size == 1 %}{% assign user = include.users[0] %}<a href="https://github.com/{{ user }}">@{{ user }}</a>{% else %}{% for user in include.users %}{% unless forloop.first or forloop.last %}, {% endunless %}{% if forloop.last %} and {% endif %}<a href="https://github.com/{{ user }}">@{{ user }}</a>{% endfor %}{% endif %}
