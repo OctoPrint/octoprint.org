@@ -1,0 +1,10 @@
+<div class="github_user_grid">
+    {% for user in include.users %}
+    <div class="github_user">
+        <a href="https://github.com/{{ user }}">
+            <img src="https://github.com/{{ user }}.png?size=100" alt="@{{ user }}" /><br />
+            @{{ user }}
+        </a>
+    </div>
+    {% endfor %}
+</div>

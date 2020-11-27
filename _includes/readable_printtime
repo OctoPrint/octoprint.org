@@ -1,0 +1,1 @@
+{% if include.hours > 8760 %}{{ include.hours }}h or {{ include.hours | divided_by: 8760.0 | round: 1 }} years{% elsif include.hours > 720 %}{{ include.hours }}h or {{ include.hours | divided_by: 720.0 | round: 1 }} months{% else %}{{ include.hours}}h{% endif %}

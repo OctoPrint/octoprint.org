@@ -1,0 +1,132 @@
+---
+layout: post
+---
+
+{{ content | markdownify }}
+
+{% if page.headsups or page.pluginincompatibilities %}
+<h3 id="headsups">Heads-ups</h3>
+
+<p>
+    Please read the following carefully, it might impact you and how you use OctoPrint!
+    Also see the <a href="#further-information"><strong>Further Information</strong></a>
+    and <a href="#links"><strong>Links</strong></a> below for more information, where to
+    find help and how to roll back.
+</p>
+
+{% if page.headsups %}
+{% for headsup in page.headsups %}
+<h4>{{ headsup.title }}</h4>
+
+{{ headsup.content | markdownify }}
+{% endfor %}
+{% endif %}
+
+{% if page.pluginincompatibilities %}
+<h4>Known plugin incompatibilities</h4>
+
+<p>
+  The following plugins are confirmed to have issues with OctoPrint {{ page.release }}, as
+  revealed during the RC phase. Their authors have been informed of this but no
+  fixed version was available at the time of release:
+</p>
+
+<ul>
+  {% for plugin in page.pluginincompatibilities %}
+  <li><a href="{{ plugin.page }}">{{ plugin.name }}</a> (see <a href="{{ plugin.link }}">{{ plugin.linktitle }}</a> for details)</li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% endif %}
+
+<h3 id="thanks">Thanks</h3>
+
+<p>
+    Thanks to everyone who contributed to this release and provided full,
+    analyzable bug reports, suggestions and feedback!
+</p>
+
+{% if page.contributors %}
+<p>
+    A special <strong>Thank you!</strong> to these fine people for their PRs:
+</p>
+{% include github_user_grid.html users=page.contributors %}
+{% endif %}
+
+{% if page.testers %}
+<p>
+    And last but not least, another <strong>shoutout</strong> to everyone who
+    reported back on the release candidates this time: {% include github_users users=page.testers %}.
+</p>
+{% endif %}
+
+{% if page.stats %}
+<h3 id="insights">Insights</h3>
+
+<p>
+    If you are interested in some numbers, here's some data extracted from the
+    <strong>anonymous usage tracking</strong> for the {{ page.stats.rcs | size }} RCs that
+    went before {{ page.release }}'s stable release:
+</p>
+
+<ul>
+{% for rc in page.stats.rcs %}
+    <li>{{ rc.tag }} ({{ rc.date }}): {{ rc.instances }} instances, {% include readable_printtime hours=rc.printtime %} of accumulative printing time</li>
+{% endfor %}
+</ul>
+
+<p>
+    Overall there were {{ page.stats.totalinstances }} instances that participated in the
+    RC testing phase and which collectively completed {% include readable_printtime hours=page.stats.totalprinttime %} of print jobs.
+</p>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="{{ page.stats.instancegraph }}" data-lightbox="{{ page.id }}" data-title="{{ page.release }}rc instances over the past month, per hour"><img src="{{ page.stats.instancegraph }}"></a>
+    </div>
+</div>
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="{{ page.stats.printtimegraph }}" data-lightbox="{{ page.id }}" data-title="Accumulated {{ page.release }}rc print times over the past month, per hour"><img src="{{ page.stats.printtimegraph }}"></a>
+    </div>
+</div>
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a href="{{ page.stats.piecharts }}" data-lightbox="{{ page.id }}" data-title="{{ page.release }}rc instances and accumulated print time over the past month, total"><img src="{{ page.stats.piecharts }}"></a>
+    </div>
+</div>
+{% endif %}
+
+<h3 id="further-information">Further Information</h3>
+
+<p>
+    It may take up to 24h for your update notification to pop up, so don't
+    be alarmed if it doesn't show up immediately after reading this. You
+    can force the update however via Settings > Software Update >
+    Advanced options > Force check for update.
+</p>
+<p>
+    If you get an error about "no suitable distribution" during update, please read
+    <a href="https://community.octoprint.org/t/i-got-some-error-about-no-suitable-distribution-during-update-and-now-my-server-wont-start/235">this</a>.
+</p>
+<p>
+    <strong>
+        If you have any problems with your OctoPrint installation, please seek
+        support on the <a href="https://community.octoprint.org">community forum</a>.
+    </strong>
+</p>
+
+<h3 id="links">Links</h3>
+
+<ul>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/releases/tag/{{ page.release }}">Changelog and Release Notes</a></li>
+    <li><a href="https://community.octoprint.org">Community forum</a></li>
+    <li><a href="https://discord.octoprint.org">Discord Server</a></li>
+    <li><a href="https://faq.octoprint.org">FAQ</a></li>
+    <li><a href="http://docs.octoprint.org/">Documentation</a></li>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/blob/master/CONTRIBUTING.md">Contribution Guidelines (also relevant for creating bug reports!)</a></li>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/blob/master/CONTRIBUTING.md#how-to-file-a-bug-report">How to file a bug report</a></li>
+    <li><a href="https://community.octoprint.org/t/how-can-i-revert-to-an-older-version-of-the-octoprint-installation-on-my-octopi-image/205">How to roll back to an earlier release (OctoPi)</a></li>
+    <li><a href="https://community.octoprint.org/t/how-can-i-roll-back-to-an-earlier-version-after-an-update/234">How to roll back to an earlier release (manual install)</a></li>
+</ul>
