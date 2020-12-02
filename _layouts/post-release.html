@@ -26,14 +26,18 @@ layout: post
 <h4>Known plugin incompatibilities</h4>
 
 <p>
-  The following plugins are confirmed to have issues with OctoPrint {{ page.release }}, as
-  revealed during the RC phase. Their authors have been informed of this but no
-  fixed version was available at the time of release:
+  The following plugins are confirmed to have issues with OctoPrint {{ page.release }}.
+  Their authors have been informed of this but no fixed version was yet available at the
+  time of release:
 </p>
 
 <ul>
   {% for plugin in page.pluginincompatibilities %}
-  <li><a href="{{ plugin.page }}">{{ plugin.name }}</a> (see <a href="{{ plugin.link }}">{{ plugin.linktitle }}</a> for details)</li>
+    {% if plugin.rcavailable %}
+      <li><a href="{{ plugin.page }}">{{ plugin.name }}</a> (<a href="{{ plugin.rcavailable }}">a release candidate containing a fix is available</a>)</li>
+    {% else %}
+      <li><a href="{{ plugin.page }}">{{ plugin.name }}</a> (see <a href="{{ plugin.link }}">{{ plugin.linktitle }}</a> for details)</li>
+    {% endif %}
   {% endfor %}
 </ul>
 {% endif %}
