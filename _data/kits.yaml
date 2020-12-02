@@ -10,6 +10,10 @@
   url: https://www.th3dstudio.com/product/ezpi-pro/
   image: th3d-ezpi.jpg
   description: Raspberry Pi 4 2GB, power supply, pre-flashed & configured SD card & case, heatsink, optional webcam, support included.
+- title: Alien3D OctoPi Kit (US)
+  url: https://www.alien3d.us/product/alien3d-octopi/
+  image: alien3d-octoprint-kit.jpg
+  description: Raspberry Pi 4B 4GB, USB-C power supply, pre-flashed & configured SD card & case, heatsinks, RGB fan, Wifi hotspot, network configuration.
 - title: Raspberry Pi 3 OctoPrint Bundle by Watterott electronic (DE)
   url: https://shop.watterott.com/Raspberry-Pi-3-OctoPrint-Bundle-OctoPi_1
   image: watterott-octoprint-kit.jpg
