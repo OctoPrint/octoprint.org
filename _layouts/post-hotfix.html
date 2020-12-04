@@ -1,0 +1,93 @@
+---
+layout: post
+---
+
+{{ content | markdownify }}
+
+{% if page.release.headsups or page.headsups %}
+<h3 id="headsups">Heads-ups</h3>
+
+{% if page.release.headsups %}
+<p>
+    The heads-ups from {{ page.release.tag }} still apply,
+    <a href="{{ page.release.link }}#headsups">please read them carefully</a>,
+    they might impact you and how you use OctoPrint!
+    Also see the <a href="#further-information"><strong>Further Information</strong></a>
+    and <a href="#links"><strong>Links</strong></a> below for more information, where to
+    find help and how to roll back.
+</p>
+{% endif %}
+
+{% if page.headsups %}
+<p>
+    For this hotfix release there are additional heads-ups:
+</p>
+
+{% for headsup in page.headsups %}
+<h4>{{ headsup.title }}</h4>
+
+{{ headsup.content | markdownify }}
+{% endfor %}
+{% endif %}
+
+{% if page.pluginincompatibilities %}
+<h4>Known plugin incompatibilities</h4>
+
+<p>
+  The following plugins are confirmed to have issues with OctoPrint {{ page.hotfix }}.
+  Their authors have been informed of this but no fixed version was yet available at the
+  time of release:
+</p>
+
+<ul>
+  {% for plugin in page.pluginincompatibilities %}
+    {% if plugin.rcavailable %}
+      <li><a href="{{ plugin.page }}">{{ plugin.name }}</a> (<a href="{{ plugin.rcavailable }}">a release candidate containing a fix is available</a>)</li>
+    {% else %}
+      <li><a href="{{ plugin.page }}">{{ plugin.name }}</a> (see <a href="{{ plugin.link }}">{{ plugin.linktitle }}</a> for details)</li>
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% endif %}
+
+<h3 id="thanks">Thanks</h3>
+
+<p>
+    Thanks to everyone who contributed to this hotfix release and provided full,
+    analyzable bug reports, suggestions and feedback!
+</p>
+
+<h3 id="further-information">Further Information</h3>
+
+<p>
+    It may take up to 24h for your update notification to pop up, so don't
+    be alarmed if it doesn't show up immediately after reading this. You
+    can force the update however via Settings > Software Update >
+    Advanced options > Force check for update.
+</p>
+<p>
+    If you get an error about "no suitable distribution" during update, please read
+    <a href="https://community.octoprint.org/t/i-got-some-error-about-no-suitable-distribution-during-update-and-now-my-server-wont-start/235">this</a>.
+</p>
+<p>
+    <strong>
+        If you have any problems with your OctoPrint installation, please seek
+        support on the <a href="https://community.octoprint.org">community forum</a>.
+    </strong>
+</p>
+
+<h3 id="links">Links</h3>
+
+<ul>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/releases/tag/{{ page.hotfix }}">Changelog and Release Notes</a></li>
+    <li><a href="https://community.octoprint.org">Community forum</a></li>
+    <li><a href="https://discord.octoprint.org">Discord Server</a></li>
+    <li><a href="https://faq.octoprint.org">FAQ</a></li>
+    <li><a href="http://docs.octoprint.org/">Documentation</a></li>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/blob/master/CONTRIBUTING.md">Contribution Guidelines (also relevant for creating bug reports!)</a></li>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/blob/master/CONTRIBUTING.md#how-to-file-a-bug-report">How to file a bug report</a></li>
+    <li><a href="https://community.octoprint.org/t/how-can-i-revert-to-an-older-version-of-the-octoprint-installation-on-my-octopi-image/205">How to roll back to an earlier release (OctoPi)</a></li>
+    <li><a href="https://community.octoprint.org/t/how-can-i-roll-back-to-an-earlier-version-after-an-update/234">How to roll back to an earlier release (manual install)</a></li>
+</ul>
