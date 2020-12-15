@@ -95,7 +95,7 @@ to build Top10 lists!
 ## GitHub metadata and parsing ASTs
 
 So now we had information about the popularity and usage attached to the plugins. But 
-there still was no information at all about whether a plugin was also actively maintainer
+there still was no information at all about whether a plugin was also actively maintained
 by its maintainer(s), when the last release happened and there was also still no guarantee
 of the compatibility data being correct.
 
