@@ -54,14 +54,10 @@ Alternatively simply buy one of the available
 The current <strong>release candidate for 0.18.0</strong> can be found here: 
 
 <div class="text-center">
-    <a class="btn btn-large btn-block" href="https://github.com/guysoft/OctoPi/issues/692" data-event-category="download" data-event-action="next"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;OctoPi&nbsp;0.18.0rc1 (32 & 64 bit)</a>
+    <a class="btn btn-large btn-block" href="https://github.com/guysoft/OctoPi/issues/710" data-event-category="download" data-event-action="next"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;OctoPi&nbsp;0.18.0rc2</a>
     <small><strong>Raspberry Pi 3B, 3B+ or 4B strongly recommended, Raspberry Pi Zero/Zero W not officially supported!</strong></small><br>
-    <small>Image compatible with Raspberry Pi A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4/8GB, Zero and Zero W.</small><br>
-    <small>32 bit recommended</small>
+    <small>Image compatible with Raspberry Pi A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4/8GB, 400, Zero and Zero W.</small><br>
 </div>
-
-Use this if you cannot get 0.17.0 to boot on your Pi. **It is strongly recommended to use
-the 32bit build for now** as the 64bit build of Raspbian is altogether still rather experimental.
 
 ### Nightlies
 
