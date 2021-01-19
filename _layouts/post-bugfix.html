@@ -20,7 +20,7 @@ layout: post
 
 {% if page.headsups %}
 <p>
-    For this hotfix release there are additional heads-ups:
+    For this bugfix release there are additional heads-ups:
 </p>
 
 {% for headsup in page.headsups %}
@@ -34,7 +34,7 @@ layout: post
 <h4>Known plugin incompatibilities</h4>
 
 <p>
-  The following plugins are confirmed to have issues with OctoPrint {{ page.hotfix }}.
+  The following plugins are confirmed to have issues with OctoPrint {{ page.bugfix }}.
   Their authors have been informed of this but no fixed version was yet available at the
   time of release:
 </p>
@@ -55,9 +55,16 @@ layout: post
 <h3 id="thanks">Thanks</h3>
 
 <p>
-    Thanks to everyone who contributed to this hotfix release and provided full,
+    Thanks to everyone who contributed to this bugfix release and provided full,
     analyzable bug reports, suggestions and feedback!
 </p>
+
+{% if page.contributors %}
+<p>
+    A special <strong>Thank you!</strong> to these fine people for their PRs:
+</p>
+{% include github_user_grid.html users=page.contributors %}
+{% endif %}
 
 <h3 id="further-information">Further Information</h3>
 
@@ -81,7 +88,7 @@ layout: post
 <h3 id="links">Links</h3>
 
 <ul>
-    <li><a href="https://github.com/OctoPrint/OctoPrint/releases/tag/{{ page.hotfix }}">Changelog and Release Notes</a></li>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/releases/tag/{{ page.bugfix }}">Changelog and Release Notes</a></li>
     <li><a href="https://community.octoprint.org">Community forum</a></li>
     <li><a href="https://discord.octoprint.org">Discord Server</a></li>
     <li><a href="https://faq.octoprint.org">FAQ</a></li>

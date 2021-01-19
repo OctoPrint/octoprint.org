@@ -1,6 +1,6 @@
 ---
 
-layout: post-hotfix
+layout: post-bugfix
 title: 'New release: 1.5.1'
 author: foosel
 date: 2020-12-04 11:50:00 +0100
@@ -9,7 +9,7 @@ featuredimage: /assets/img/blog/2020-12/2020-12-04-octoprint-1.5.1-card.png
 poster: /assets/img/blog/2020-12/2020-12-04-octoprint-1.5.1-poster.png
 excerpt: "This is a hotfix release to fix two bugs in 1.5 that sadly only were reported after the release candidate phase."
 
-hotfix: 1.5.1
+bugfix: 1.5.1
 release:
   tag: 1.5.0
   link: /blog/2020/11/30/new-release-1.5.0/
