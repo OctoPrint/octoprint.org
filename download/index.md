@@ -26,21 +26,23 @@ impacting printing quality. [See also here](https://github.com/guysoft/OctoPi/is
 
 ## Images
 
+<!--
 <div class="alert">
     There have been some reports regarding current revisions of the <strong>Raspberry Pi 4 1/2/4 GB refusing to boot</strong> with the stable
     OctoPi 0.17.0 image. If that affects you, please try the OctoPi 0.18.0 release candidate.
 </div>
+-->
 
 ### Stable
 
 You can download the latest OctoPi image via the following button. 
 
 <div class="text-center">
-    <a class="btn btn-large btn-primary btn-block" href="https://octopi.octoprint.org/latest" data-event-category="download" data-event-action="latest"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;0.17.0</a>
-    <small>MD5Sum of the .zip: <code>8a550602b8ccc5df8381924757f88ab9</code></small><br>
-    <small><strong>Raspberry Pi 3B, 3B+ or 4B 1/2/4GB strongly recommended, Raspberry Pi Zero/Zero W not officially supported!</strong></small><br>
-    <small>Image compatible with Raspberry Pi A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4GB, Zero and Zero W.</small><br>
-    <small>Incompatible to Raspberry Pi 4B 8GB. Only 32bit builds available.</small>
+    <a class="btn btn-large btn-primary btn-block" href="https://octopi.octoprint.org/latest" data-event-category="download" data-event-action="latest"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;0.18.0</a>
+    <small>MD5: <code>43387c99873210969a21083520ec963b</code></small><br>
+    <small>SHA256: <code>582ff1e5d8726e0a74c54cc75545dbcb6e09066ca172660bc961dd7501941e5b</code></small><br>
+    <small><strong>Raspberry Pi 3B, 3B+ or 4B 1/2/4/8GB strongly recommended, Raspberry Pi Zero/Zero W not officially supported!</strong></small><br>
+    <small>Image compatible with Raspberry Pi A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4/8GB, 400, Zero and Zero W.</small><br>
 </div>
 
 Alternatively simply buy one of the available
@@ -49,6 +51,7 @@ Alternatively simply buy one of the available
     <a class="btn btn-large btn-block" href="/merch/#kits" data-event-category="download" data-event-action="kits">All-in-one OctoPrint Kits</a>
 </div>
 
+<!--
 ### Release Candidate
 
 The current <strong>release candidate for 0.18.0</strong> can be found here: 
@@ -58,10 +61,11 @@ The current <strong>release candidate for 0.18.0</strong> can be found here:
     <small><strong>Raspberry Pi 3B, 3B+ or 4B strongly recommended, Raspberry Pi Zero/Zero W not officially supported!</strong></small><br>
     <small>Image compatible with Raspberry Pi A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4/8GB, 400, Zero and Zero W.</small><br>
 </div>
+-->
 
 ### Nightlies
 
-You can also get the [32bit 0.18 nightlies here](http://unofficialpi.org/Distros/OctoPi/nightly/) or the highly experimental [64bit 0.18 nightlies for the RPi4 8GB here](http://unofficialpi.org/Distros/OctoPi/nightly-arm64/).
+You can also get the [32bit nightlies here](http://unofficialpi.org/Distros/OctoPi/nightly/) or the highly experimental [64bit nightlies here](http://unofficialpi.org/Distros/OctoPi/nightly-arm64/).
 
 ##  Setting up OctoPi
 
