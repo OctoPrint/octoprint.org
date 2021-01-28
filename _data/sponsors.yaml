@@ -1,12 +1,3 @@
-#- title: OctoPrint's users on Patreon
-#  logo: patreon.png
-#  url: https://www.patreon.com/foosel
-#- title: LulzBot®
-#  logo: lulzbot.png
-#  url: https://www.lulzbot.com/
-#- title: BEEVERYCREATIVE
-#  logo: bee.png
-#  url: https://beeverycreative.com/
 - title: 3DPrinterOS
   logo: 3dprinteros.png
   url: https://www.3dprinteros.com/3dprinteros-software-development-kit/?utm_source=referral&utm_medium=octoprint&utm_campaign=sdk_sponsorship
@@ -22,3 +13,6 @@
 - title: Raise 3D
   logo: raise3d.png
   url: https://www.raise3d.com
+- title: The Spaghetti Detective
+  logo: tsd.png
+  url: https://www.thespaghettidetective.com/
