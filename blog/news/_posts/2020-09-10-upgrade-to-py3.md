@@ -52,6 +52,8 @@ than Python 2 out of the box!
 
 That's why I'm writing this blog post! I'm Charlie Powell ([@cp2004](https://github.com/cp2004) elsewhere), and I wrote [OctoPrint-Upgrade-To-Py3](https://github.com/cp2004/OctoPrint-Upgrade-To-Py3). It's a neat installation script that will convert your existing OctoPrint install to Python 3, hassle free. Here's how:
 
+*Edit (2020-02-03):* OctoPi 0.18 has now been released, which uses Python 3 by default. Flashing this image is an alternative to updating using this script.
+
 **Unfortunately it the script is only compatible with Linux installs (majority of setups out in the world).** If you are running Windows, you will unfortunately have to run this manually, since the backup/restore functionality is not available there. MacOS users will be able to create a backup, a new virtual environment, then restore it.
 
 **This script is only compatible for users running OctoPi 0.17 and above, or if you have installed OctoPrint manually you will require Python 3.6 or higher**
