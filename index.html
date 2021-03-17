@@ -49,13 +49,16 @@ banner: true
                         </div>
                     </div>
                     <div class="row-fluid sponsorrow">
-                    {% for sponsor in site.data.sponsors %}
-                        <div class="sponsor">
-                            <a href="{{ sponsor.url }}" title="{{ sponsor.title }}" data-event-category="sponsor" data-event-action="{{ sponsor.title }}">
-                                <img src="{{ BASE_PATH }}/assets/img/sponsors/{{ sponsor.logo }}" alt="{{ sponsor.title }}">
-                            </a>
+                        {% assign remainder = site.data.sponsors.size | modulo: 6 %}
+                        <div class="{% if remainder == 1 %}offset1 span10{% else %}span12{% endif %}">
+                        {% for sponsor in site.data.sponsors %}
+                            <div class="sponsor">
+                                <a href="{{ sponsor.url }}" title="{{ sponsor.title }}" data-event-category="sponsor" data-event-action="{{ sponsor.title }}">
+                                    <img src="{{ BASE_PATH }}/assets/img/sponsors/{{ sponsor.logo }}" alt="{{ sponsor.title }}">
+                                </a>
+                            </div>
+                        {% endfor %}
                         </div>
-                    {% endfor %}
                     </div>
                 {% else %}
                     <div class="row-fluid">
