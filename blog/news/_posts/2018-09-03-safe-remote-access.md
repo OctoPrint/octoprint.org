@@ -51,7 +51,7 @@ The telegram plugin operates similarly to the DiscordRemote plugin, in that it c
 
 The plugin creates a secure tunnel to access OctoPrint remotely through [ngrok](https://ngrok.com/). The tunnel is encrypted with SSL and proper certificates (even if your OctoPrint instance is not accessible via HTTPS locally), and is further protected with Basic Authentication (username and password) out of the box. It pretty much wraps the "Reverse Proxy" scenario from below into an easily installable plugin.
 
-### OctoEverywhere.com (*edit: added 2021-01-05*)
+#### OctoEverywhere.com (*edit: added 2021-01-05*)
 
 [OctoEverywhere.com](https://octoeverywhere.com/?source=octoprint_blog) is a free, secure, and easy to use cloud service that allows you to access your entire OctoPrint web portal from anywhere! OctoEverywhere is a community funded effort that focuses empowering everyone to create better with full remote access to their OctoPrint setup. The service supports webcam streaming, remote printer control, full plugin support, and more! To start the 2-minute setup process go [here](https://octoeverywhere.com/getStarted?source=octoprint_blog), or checkout the official plugin listed [here](https://plugins.octoprint.org/plugins/octoeverywhere/).
 
