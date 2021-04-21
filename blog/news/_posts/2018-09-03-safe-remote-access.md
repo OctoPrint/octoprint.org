@@ -27,20 +27,16 @@ So, with that said, how can we accomplish remote access to monitor or control a 
 
 Remote access via a plugin is certainly the easiest way for you to access your instance and control/monitor your printer. Unless you really know what you're doing, this is very likely the method that you're going to want to be using. There are a few different options available that accomplish remote access, without opening up OctoPrint to the rest of the world.
 
-### OctoEverywhere.com
-
-[OctoEverywhere.com](https://octoeverywhere.com/?source=octoprint_blog) is a free, secure, and easy to use cloud service that allows you to access your entire OctoPrint web portal from anywhere! OctoEverywhere is a community funded effort that focuses empowering everyone to create better with full remote access to their OctoPrint setup. The service supports webcam streaming, remote printer control, full plugin support, and more! To start the 2-minute setup process go [here](https://octoeverywhere.com/getStarted?source=octoprint_blog), or checkout the official plugin listed [here](https://plugins.octoprint.org/plugins/octoeverywhere/).
-
 #### Polar Cloud
 
 The Polar Cloud plugin lets you connect OctoPrint to your [Polar Cloud](https://polar3d.com) account. Polar Cloud is a cloud based service that adds a whole lot of flexibility to your workflow. It's certainly more than just an app to monitor/control your printer, it's a whole community of printers, designers and makers. The process of selecting an object, slicing and sending to your printer are streamlined into a simple workflow. The plugin is available [here](https://plugins.octoprint.org/plugins/polarcloud/) and is definitely worth checking out.
 
-#### OctoPrint Anywhere (*edit: or its successor The Spaghetti Detective*)
+#### The Spaghetti Detective (*edit: updated 2021-04-21*)
 
-This plugin is a cloud service that allows you to access your OctoPrint instance through a web interface.
-Setup is relatively simple, install the plugin, either from the Plugin Manager, or you can grab it [here](https://plugins.octoprint.org/plugins/anywhere/). After installing, you will be greated by a setup wizard that will guide you through the rest of the steps. In just a few moments, you'll be up and running, and able to access your OctoPrint instance, without forwaring any ports, or exposing your instance to the internet.
+This plugin is a cloud service that allows you to access your OctoPrint instance through a web interface, among other things.
+Setup is relatively simple, install the plugin, either from the Plugin Manager, or you can grab it [here](https://plugins.octoprint.org/plugins/thespaghettidetective/). After installing, you will be greated by a setup wizard that will guide you through the rest of the steps. In just a few moments, you'll be up and running, and able to access your OctoPrint instance, without forwaring any ports, or exposing your instance to the internet.
 
-*edit*: Check out Kenneth's new project [The Spaghetti Detective](https://plugins.octoprint.org/plugins/thespaghettidetective/)
+The Spaghetti Detective has replaced the formerly mentioned OctoPrint Anywhere.
 
 #### OctoPrint-DiscordRemote
 
@@ -54,6 +50,10 @@ The telegram plugin operates similarly to the DiscordRemote plugin, in that it c
 #### ngrok (*edit: added 2020-06-22*)
 
 The plugin creates a secure tunnel to access OctoPrint remotely through [ngrok](https://ngrok.com/). The tunnel is encrypted with SSL and proper certificates (even if your OctoPrint instance is not accessible via HTTPS locally), and is further protected with Basic Authentication (username and password) out of the box. It pretty much wraps the "Reverse Proxy" scenario from below into an easily installable plugin.
+
+### OctoEverywhere.com (*edit: added 2021-01-05*)
+
+[OctoEverywhere.com](https://octoeverywhere.com/?source=octoprint_blog) is a free, secure, and easy to use cloud service that allows you to access your entire OctoPrint web portal from anywhere! OctoEverywhere is a community funded effort that focuses empowering everyone to create better with full remote access to their OctoPrint setup. The service supports webcam streaming, remote printer control, full plugin support, and more! To start the 2-minute setup process go [here](https://octoeverywhere.com/getStarted?source=octoprint_blog), or checkout the official plugin listed [here](https://plugins.octoprint.org/plugins/octoeverywhere/).
 
 ### Advanced Access
 
@@ -74,3 +74,15 @@ Whether you use a reverse proxy, or VPN to access OctoPrint; I recommend putting
 All in all, there are many ways one can **safely** access an OctoPrint instance remotely, that do not involve blindly forwarding ports on your router and putting yourself at risk. Plugins are a fantastic tool that I recommend beginners take advantage of. Putting OctoPrint on the internet is nothing short of dangerous. If you must do this, take advantage of the ACL system built into OctoPrint, and even better, put another form of authentication in front. Even if it seems like extra work to setup a plugin, or a VPN/reverse proxy, it's worth it. Anything with the potential to burn down your house should be treated with the utmost care. It may seem more convenient to cut corners... but is it really worth it?
 
 *If you need help with setting up any of the proposed solutions here, get in touch on the [OctoPrint Community Forums](https://discourse.octoprint.org), you might find some help there. Also be sure to check [this topic on the forum](https://discourse.octoprint.org/t/access-your-octoprint-remotely/3628) for some more info.*
+
+---
+
+*Update 2019-11-28:* "The Spaghetti Detective" is set to replace "OctoPrint Anywhere" by the
+same author. Mentioned accordingly.
+
+*Update 2020-06-23:* Mentioned new option "ngrok".
+
+*Update 2021-01-04:* Mentioned new option "OctoEverywhere".
+
+*Update 2021-04-21:* As of today, "OctoPrint Anywhere" has been retired in favor of its 
+successor "The Spaghetti Detective". Updated accordingly
