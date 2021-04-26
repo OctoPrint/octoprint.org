@@ -40,7 +40,7 @@ headsups:
     heads-up that they will no longer be utilized in OctoPrint 1.6+.
 
 contributors:
-- costa-bastekis
+- costas-basdekis
 - cp2004
 - drifkind
 - eumiro
