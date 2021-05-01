@@ -11,6 +11,24 @@ excerpt: In this guest post, community member Jubaleth will tell you about safe 
 
 ---
 
+<div class="alert alert-warning">
+<p>
+<strong>This blog post was written in September 2018</strong>. Many things have changed since then, especially with regards 
+to your options when it comes to plugins that enable cloud or messenger based remote access to OctoPrint, without directly 
+exposing your instance on the public internet.
+</p>
+<p>
+<strong>
+A special curated list of Remote Access related plugin has been created on the official plugin repository for your convenience: 
+<a href="https://plugins.octoprint.org/topics/remote_access/">Remote Access plugins</a>.
+</strong>
+</p>
+<p>
+Other than this blog post it will be kept up to date.
+</p>
+</div>
+
+
 *A guest post by [Jubaleth](https://jubaleth.wtf/) on a topic that is very dear to my heart and on which I'm starting
 to sound like a broken record - please head this warning and invest the time that properly securing internal services
 needs. ~Gina*
@@ -24,6 +42,9 @@ Putting OctoPrint onto the public internet is a *terrible* idea, and I really ca
 So, with that said, how can we accomplish remote access to monitor or control a printer, without putting OctoPrint on the public internet for everyone to abuse?  This guide will show you how.
 
 ### Plugins (The Easy Way)
+
+_**Please note**: As mentioned in the warning box at the start of this post, this section will no longer be kept up to date. If you want
+a list of currently available Remote Access related plugins, please refer to the [Remote Access Topic on the Plugin Repository](https://plugins.octoprint.org/topics/remote_access/)._
 
 Remote access via a plugin is certainly the easiest way for you to access your instance and control/monitor your printer. Unless you really know what you're doing, this is very likely the method that you're going to want to be using. There are a few different options available that accomplish remote access, without opening up OctoPrint to the rest of the world.
 
@@ -86,3 +107,6 @@ same author. Mentioned accordingly.
 
 *Update 2021-04-21:* As of today, "OctoPrint Anywhere" has been retired in favor of its 
 successor "The Spaghetti Detective". Updated accordingly
+
+*Update 2021-05-01:* Link to Remote Access topic on plugin repository instead of constantly updating
+this post with new plugins.
