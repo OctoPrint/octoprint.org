@@ -24,7 +24,7 @@ A special curated list of Remote Access related plugin has been created on the o
 </strong>
 </p>
 <p>
-Other than this blog post it will be kept up to date.
+This blog post will no longer be updated, please refer to the list.
 </p>
 </div>
 
