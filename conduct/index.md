@@ -60,7 +60,7 @@ an individual is officially representing the community in public spaces.
 Examples of our community spaces include OctoPrint's [GitHub projects](https://github.com/OctoPrint) 
 (including the issue trackers), the [community forums](https://community.octoprint.org), 
 the official [OctoPrint Discord server](https://discord.octoprint.org), the IRC channel 
-`#octoprint` on the Freenode network, or any of the official social media outlets.
+`#octoprint` on the Libera.Chat network, or any of the official social media outlets.
 
 Examples of representing our community include using an official e-mail address,
 posting via an official social media account, or acting as an appointed
