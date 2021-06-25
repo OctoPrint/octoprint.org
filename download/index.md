@@ -108,9 +108,9 @@ Please follow these steps after downloading:
 
 Please also refer to [OctoPi's README](https://github.com/guysoft/OctoPi), especially the ["How to use it" section](https://github.com/guysoft/OctoPi#how-to-use-it).
 
-[Thomas Sanladerer](https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A) created a great video guide on how to get OctoPi 0.12 up an running.
+[Thomas Sanladerer](https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A) created a great video guide on how to get OctoPi 0.18 up an running.
 
-{% include youtube.html vid="MwsxO3ksxm4" %}
+{% include youtube.html vid="HBd0olxI-No" %}
 
 ## Further resources
 
