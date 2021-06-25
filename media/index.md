@@ -6,6 +6,7 @@ description: Interested in some a presentation of the project? Or some articles 
 
 ## Selected Articles & Interviews
 
+  * ["From a 3D side project to the dream job"](https://github.com/readme/3d-sideproject-octoprint). The ReadME Podcast, Episode 01, May 2021.
   * ["Gina Häußge and OctoPrint. How to make a living off of your pet passion projects - An Interview"](https://dot.kde.org/2020/08/15/gina-h%C3%A4u%C3%9Fge-and-octoprint). KDE.news, August 15th 2020.
   * ["HackSpace magazine meets... Gina Häußge"](https://hackspace.raspberrypi.org/issues/32). HackSpace magazine, Issue 32, July 2020.
   * ["Set up a 3D printer with Raspberry Pi"](https://magpi.raspberrypi.org/issues/69). The MagPi, Issue 69, May 2018.
@@ -15,6 +16,8 @@ description: Interested in some a presentation of the project? Or some articles 
 
 ## Slides
 
+* ["How to deal with toxic people" at Upstream 2021](../slides/upstream2021.pdf) on June 7th 2021 (english talk, english slides)
+* ["Abenteuer Open Source Entwicklung" at Grazer Linuxtage 2021](../slides/glt2021.pdf) on April 10th 2021 (german talk, german slides)
 * ["A very brief look at OctoPrint 1.5.0" at VERRF2020](../slides/verrf2020.pdf) on October 11th 2020 (english talk, english slides)
 * ["Adventures in Open Source Development" at Akademy 2020](../slides/akademy2020.pdf) on September 5th 2020 (english talk, english slides), that talk is also available on [YouTube](https://www.youtube.com/watch?v=6ILoSjQ94HY)
 * ["Driving 3D Printers with Python - Lessons Learned" at PyConDE 2019](../slides/3dms19/) on October 11th 2019 (english talk, english slides), that talk is also available on [YouTube](https://www.youtube.com/watch?v=zlBk5vWwJCs)
@@ -25,6 +28,10 @@ description: Interested in some a presentation of the project? Or some articles 
 * ["OctoPrint - 3D printing unchained" @ OS3DC 2013](../slides/os3dc/) on September 21st 2013 (english slides)
 
 ## Videos
+
+### "How to deal with toxic people" (Upstream 2021)
+
+{% include youtube.html vid="Z0azm7YXzME" %}
 
 ### "Behind the scenes of OctoPrint (with Gina Häußge)" (The Meltzone Podcast, episode 39, 2020)
 
