@@ -72,11 +72,11 @@ on the root of the installed card when using it like a thumb drive.
 the file, making configuration fail. Use something like Notepad++, Atom or VSCode instead or at the very 
 least heed the warnings in the file.
 
-Please also refer take a look at the [full WiFi setup guide in the FAQ](https://faq.octoprint.org/wifi-setup) that alsoincludes Troubleshooting tips.
+Please also refer take a look at the [full WiFi setup guide in the FAQ](https://faq.octoprint.org/wifi-setup) that also includes troubleshooting tips.
 
 ### Video
 
-[Thomas Sanladerer](https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A) created a great video guide on how to get OctoPi 0.18 up an running.
+[Thomas Sanladerer](https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A) created a great video guide on how to get OctoPi 0.18 up and running.
 
 {% include youtube.html vid="HBd0olxI-No" %}
 
