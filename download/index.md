@@ -68,7 +68,7 @@ Please also refer to [OctoPi's README](https://github.com/guysoft/OctoPi), espec
 
 If you aren't using Raspberry Pi Imager, then you can also setup the Wifi connection using the `octopi-wpa-supplicant.txt` file
 on the root of the installed card when using it like a thumb drive. 
-**Important: Do not use WordPad (Windows) or TextEdit (MacOS X**  for this, those editors are known to mangle
+**Important: Do not use WordPad (Windows) or TextEdit (MacOS X)**  for this, those editors are known to mangle
 the file, making configuration fail. Use something like Notepad++, Atom or VSCode instead or at the very 
 least heed the warnings in the file.
 
