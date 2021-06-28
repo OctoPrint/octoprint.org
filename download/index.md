@@ -8,7 +8,7 @@ description: Learn how to setup OctoPrint using the preinstalled OctoPi image fo
 # OctoPi
 
 [Guy Sheffer](https://github.com/guysoft) maintains ["OctoPi"](https://github.com/guysoft/OctoPi),
-a [Raspbian (and thus Debian) based](http://www.raspbian.org/) SD card image for the Raspberry Pi
+a [Raspbian (and thus Debian) based](https://www.raspbian.org/) SD card image for the Raspberry Pi
 that already includes OctoPrint plus everything you need to run it:
 
 * OctoPrint plus its dependencies
@@ -116,7 +116,7 @@ The current <strong>release candidate for 0.18.0</strong> can be found here:
 
 ### Nightlies
 
-You can also get the [32bit nightlies here](http://unofficialpi.org/Distros/OctoPi/nightly/) or the highly experimental [64bit nightlies here](http://unofficialpi.org/Distros/OctoPi/nightly-arm64/).
+You can also get the [32bit nightlies here](https://unofficialpi.org/Distros/OctoPi/nightly/) or the highly experimental [64bit nightlies here](https://unofficialpi.org/Distros/OctoPi/nightly-arm64/).
 
 
 ## Further resources
