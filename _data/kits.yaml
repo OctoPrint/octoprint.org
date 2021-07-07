@@ -6,10 +6,10 @@
 #  - title: reseller title
 #    country: country of reseller
 #    url: url to reseller, ideally product page
-- title: EZPi Pro (Pi 4B) – Plug and Play Octoprint Setup by TH3D (US)
+- title: EZPi Pro+ V2 – Silent Plug and Play Octoprint Setup by TH3D (US)
   url: https://www.th3dstudio.com/product/ezpi-pro/
   image: th3d-ezpi.jpg
-  description: Raspberry Pi 4 2GB, power supply, pre-flashed & configured SD card & case, heatsink, optional webcam, support included.
+  description: Raspberry Pi 4 4GB, power supply, pre-flashed & configured SD card & case, heatsink, optional webcam, support included.
 - title: Alien3D OctoPi Kit (US)
   url: https://www.alien3d.us/product/alien3d-octopi/
   image: alien3d-octoprint-kit.jpg
