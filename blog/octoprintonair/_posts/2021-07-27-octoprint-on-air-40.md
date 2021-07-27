@@ -6,7 +6,7 @@ author: foosel
 featuredimage: /assets/img/blog/2021-07/2021-07-27-octoprint-on-air-40-card.png
 card: /assets/img/blog/2021-07/2021-07-27-octoprint-on-air-40-card.png
 poster: /assets/img/blog/2021-07/2021-07-27-octoprint-on-air-40-poster.png
-excerpt: The fourtieth episode of a monthly live broadcast for Patrons which was recorded on 
+excerpt: The fortieth episode of a monthly live broadcast for Patrons which was recorded on 
     July 21st 2021.
 date: 2021-07-27 15:30:00 +0200
 
