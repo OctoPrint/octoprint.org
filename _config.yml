@@ -4,6 +4,7 @@ exclude:
 - Gemfile.lock
 - vendor
 - bundle
+- node_modules
 - .github
 - "*.iml"
 - fetch_yt_preview
@@ -56,3 +57,4 @@ youtubelink: https://www.youtube.com/c/OctoPrint3D
 plugins:
   - jekyll-paginate
   - jekyll-redirect-from
+
