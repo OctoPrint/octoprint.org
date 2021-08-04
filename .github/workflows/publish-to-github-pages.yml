@@ -14,6 +14,73 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: 🏗 Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: 🏗 Install dependencies
+        run: npm install node-fetch
+      - name: 🔨 Build rpi-imager.json
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const fs = require("fs");
+            const fetch = require("node-fetch");
+
+            const query = `query {
+              repository(owner:"OctoPrint", name:"OctoPi-UpToDate") {
+                releases(first:100, orderBy: {field:CREATED_AT, direction:DESC}) {
+                  nodes {
+                    tag {
+                      name
+                    }
+                    isPrerelease
+                    releaseAssets(first:1, name:"rpi-imager.json") {
+                      nodes {
+                        downloadUrl
+                      }
+                    }
+                  }
+                }
+              }
+            }`;
+
+            const result = await github.graphql(query);
+
+            let stable = null;
+            let prerelease = null;
+            for (const release of result.repository.releases.nodes) {
+              if (stable === null && prerelease === null && release.isPrerelease) {
+                // newer prerelease than current stable, we take the latest
+                prerelease = release;
+              } else if (stable === null && !release.isPrerelease) {
+                // latest stable
+                stable = release;
+              }
+            }
+
+            if (stable !== null && stable.releaseAssets.nodes.length > 0) {
+              const stable_data = await fetch(stable.releaseAssets.nodes[0].downloadUrl).then(r => r.json())
+              stable_data.name += " (stable)";
+
+              const data = { 
+                os_list : [
+                  stable_data
+                ] 
+              };
+
+              if (prerelease !== null && prerelease.releaseAssets.nodes.length > 0) {
+                const prerelease_data = await fetch(prerelease.releaseAssets.nodes[0].downloadUrl).then(r => r.json())
+                prerelease_data.name += " (prerelease)";
+                data.os_list.push(prerelease_data);
+              }
+
+              const serialized = JSON.stringify(data, null, 2);
+              console.log("rpi-imager.json:", serialized);
+
+              fs.writeFileSync("./files/rpi-imager.json", serialized);
+            }
+
       - name: 📦 Cache jekyll build bundle
         uses: actions/cache@v2
         with:
@@ -34,7 +101,7 @@ jobs:
       #    args: -v -r -d ./_site/ ./_site/
       #- name: 🔎 Evaluate link check
       #  run: exit ${{ steps.lc.outputs.exit_code }}
-
+    
       - name: 🚀 Deploy page
         uses: peaceiris/actions-gh-pages@v3
         with:
