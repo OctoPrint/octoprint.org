@@ -61,7 +61,8 @@ jobs:
 
             if (stable !== null && stable.releaseAssets.nodes.length > 0) {
               const stable_data = await fetch(stable.releaseAssets.nodes[0].downloadUrl).then(r => r.json())
-              stable_data.name += " (stable)";
+              stable_data.description = stable_data.name;
+              stable_data.name = "OctoPi (stable)";
 
               const data = { 
                 os_list : [
@@ -71,7 +72,8 @@ jobs:
 
               if (prerelease !== null && prerelease.releaseAssets.nodes.length > 0) {
                 const prerelease_data = await fetch(prerelease.releaseAssets.nodes[0].downloadUrl).then(r => r.json())
-                prerelease_data.name += " (prerelease)";
+                prerelease_data.description = prerelease_data.name;
+                prerelease_data.name = "OctoPi (prerelease)";
                 data.os_list.push(prerelease_data);
               }
 
