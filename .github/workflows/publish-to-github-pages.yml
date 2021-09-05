@@ -14,14 +14,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: 🔨 Build rpi-imager.json
-        uses: OctoPrint/actions/rpi-imager-json@main
-        with:
-          owner: OctoPrint
-          repo: OctoPi-UpToDate
-          output: ./files/rpi-imager.json
-          nameStable: "OctoPi (stable)"
-          namePrerelease: "OctoPi (prerelease)"
+      #- name: 🔨 Build rpi-imager.json
+      #  uses: OctoPrint/actions/rpi-imager-json@main
+      #  with:
+      #    owner: OctoPrint
+      #    repo: OctoPi-UpToDate
+      #    output: ./files/rpi-imager.json
+      #    nameStable: "OctoPi (stable)"
+      #    namePrerelease: "OctoPi (prerelease)"
 
       - name: 📦 Cache jekyll build bundle
         uses: actions/cache@v2
