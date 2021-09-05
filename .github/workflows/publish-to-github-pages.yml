@@ -17,6 +17,7 @@ jobs:
       - name: 🔨 Build rpi-imager.json
         uses: OctoPrint/actions/rpi-imager-json@main
         with:
+          token: "${{ secrets.GITHUB_TOKEN }}"
           owner: OctoPrint
           repo: OctoPi-UpToDate
           output: ./files/rpi-imager.json
