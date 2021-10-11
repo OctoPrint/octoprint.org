@@ -70,7 +70,7 @@ layout: post
 
 <p>
     If you are interested in some numbers, here's some data extracted from the
-    <strong>anonymous usage tracking</strong> for the {{ page.stats.rcs | size }} RCs that
+    <strong>anonymous usage tracking</strong> for the RCs that
     went before {{ page.release }}'s stable release:
 </p>
 
@@ -79,6 +79,17 @@ layout: post
     <li>{{ rc.tag }} ({{ rc.date }}): {{ rc.instances }} instances, {% include readable_printtime hours=rc.printtime %} of accumulative printing time</li>
 {% endfor %}
 </ul>
+
+{% if page.stats.rcs_incomplete %}
+Due to this RC phase taking longer than 60 days, which is the current limit of the anonymous usage tracking,
+data for these RCs is not fully available anymore:
+
+<ul>
+{% for rc in page.stats.rcs_incomplete %}
+    <li>{{ rc.tag }} ({{ rc.date }})</li>
+{% endfor %}
+</ul>
+{% endif %}
 
 <p>
     Overall there were {{ page.stats.totalinstances }} instances that participated in the
