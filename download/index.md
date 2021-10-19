@@ -95,8 +95,9 @@ yourself you can do so here.
 ### Stable OctoPi
 
 <div class="text-center">
-    <a class="btn btn-large btn-primary btn-block" href="{{ site.data.octopi.latest.url }}" data-event-category="download" data-event-action="latest"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;{{ site.data.octopi.latest.octopi_version }}</a>
-    <small>Ships with OctoPrint {{ site.data.octopi.latest.octoprint_version }}</small><br>
+    <a class="btn btn-large btn-primary btn-block" href="{{ site.data.octopi.latest.url }}" data-event-category="download" data-event-action="latest">
+      OctoPi&nbsp;{{ site.data.octopi.latest.octopi_version }} &amp; OctoPrint&nbsp;{{ site.data.octopi.latest.octoprint_version }}
+    </a>
     <small>SHA256: <code>{{ site.data.octopi.latest.sha256 }}</code></small><br>
     <small><strong>{{ site.data.octopi.recommendation }}</strong></small><br>
     <small>Image compatible with Raspberry Pi {{ site.data.octopi.latest.pi_models }}.</small><br>
@@ -105,10 +106,12 @@ yourself you can do so here.
 {% if site.data.octopi.next_octoprint %}
 ### Stable OctoPi with OctoPrint Release Candidate
 
-The current <strong>stable OctoPi {{ site.data.octopi.latest.octopi_version }} with OctoPrint {{ site.data.octopi.next_octoprint.octoprint_version }}</strong> can be found here: 
+The current <strong>stable OctoPi {{ site.data.octopi.latest.octopi_version }} with OctoPrint Release Candidate {{ site.data.octopi.next_octoprint.octoprint_version }}</strong> can be found here: 
 
 <div class="text-center">
-    <a class="btn btn-large btn-block" href="{{ site.data.octopi.next_octoprint.url }}" data-event-category="download" data-event-action="next"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;OctoPi&nbsp;{{ site.data.octopi.latest.octopi_version }} &amp; OctoPrint {{ site.data.octopi.next_octoprint.octoprint_version }}</a>
+    <a class="btn btn-large btn-block" href="{{ site.data.octopi.next_octoprint.url }}" data-event-category="download" data-event-action="next">
+      OctoPi&nbsp;{{ site.data.octopi.latest.octopi_version }} &amp; OctoPrint&nbsp;{{ site.data.octopi.next_octoprint.octoprint_version }}
+    </a>
     <small>SHA256: <code>{{ site.data.octopi.next_octoprint.sha256 }}</code></small><br>
     <small><strong>{{ site.data.octopi.recommendation }}</strong></small><br>
     <small>Image compatible with Raspberry Pi {{ site.data.octopi.latest.pi_models }}.</small><br>
@@ -118,11 +121,12 @@ The current <strong>stable OctoPi {{ site.data.octopi.latest.octopi_version }} w
 {% if site.data.octopi.next_octopi %}
 ### OctoPi Release Candidate
 
-The current <strong>release candidate {{ site.data.octopi.next_octopi.octopi_version }}</strong> can be found here: 
+The current <strong>OctoPi Release Candidate {{ site.data.octopi.next_octopi.octopi_version }}</strong> can be found here: 
 
 <div class="text-center">
-    <a class="btn btn-large btn-block" href="{{ site.data.octopi.next_octopi.url }}" data-event-category="download" data-event-action="next"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;OctoPi&nbsp;{{ site.data.octopi.next_octopi.octopi_version }}</a>
-    <small>Ships with OctoPrint {{ site.data.octopi.next_octopi.octoprint_version }}</small><br>
+    <a class="btn btn-large btn-block" href="{{ site.data.octopi.next_octopi.url }}" data-event-category="download" data-event-action="next">
+      OctoPi&nbsp;{{ site.data.octopi.next_octopi.octopi_version }} &amp; OctoPrint&nbsp;{{ site.data.octopi.next_octopi.octoprint_version }}
+    </a>
     <small><strong>{{ site.data.octopi.recommendation }}</strong></small><br>
     <small>Image compatible with Raspberry Pi {{ site.data.octopi.next_octopi.pi_models }}.</small><br>
 </div>
