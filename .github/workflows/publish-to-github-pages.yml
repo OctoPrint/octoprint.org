@@ -37,7 +37,7 @@ jobs:
       - name: 🔁 Update octopi.yaml
         run: |
           cd .github/scripts
-          python update_page_from_rpiimagerjson.py ./files/rpi-imager.json ./_data/octopi.yaml
+          python update_page_from_rpiimagerjson.py
 
       - name: 📦 Cache jekyll build bundle
         uses: actions/cache@v2
