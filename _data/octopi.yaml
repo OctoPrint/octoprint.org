@@ -1,0 +1,12 @@
+latest:
+  octopi_version: "0.18.0"
+  octoprint_version: "1.5.2"
+  sha256: 582ff1e5d8726e0a74c54cc75545dbcb6e09066ca172660bc961dd7501941e5b
+  pi_models: A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4/8GB, 400, Zero and Zero W
+  url: https://octopi.octoprint.org/latest
+#next_octopi:
+#  url: https://octopi.octoprint.org/latest
+#  octopi_version: "1.0.0rc1"
+#  octoprint_version: "?"
+#  pi_models: A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4/8GB, 400, Zero and Zero W
+recommendation: Raspberry Pi 3B, 3B+ or 4B 1/2/4/8GB strongly recommended, Raspberry Pi Zero/Zero W not officially supported!

@@ -92,29 +92,43 @@ Please also refer take a look at the [full WiFi setup guide in the FAQ](https://
 Raspberry Pi Imager will download the latest version of OctoPi for you, but if you want to download the images 
 yourself you can do so here.
 
-### Stable
+### Stable OctoPi
 
 <div class="text-center">
-    <a class="btn btn-large btn-primary btn-block" href="https://octopi.octoprint.org/latest" data-event-category="download" data-event-action="latest"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;0.18.0</a>
-    <small>MD5: <code>43387c99873210969a21083520ec963b</code></small><br>
-    <small>SHA256: <code>582ff1e5d8726e0a74c54cc75545dbcb6e09066ca172660bc961dd7501941e5b</code></small><br>
-    <small><strong>Raspberry Pi 3B, 3B+ or 4B 1/2/4/8GB strongly recommended, Raspberry Pi Zero/Zero W not officially supported!</strong></small><br>
-    <small>Image compatible with Raspberry Pi A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4/8GB, 400, Zero and Zero W.</small><br>
+    <a class="btn btn-large btn-primary btn-block" href="{{ site.data.octopi.latest.url }}" data-event-category="download" data-event-action="latest"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;Download&nbsp;OctoPi&nbsp;{{ site.data.octopi.latest.octopi_version }}</a>
+    <small>Ships with OctoPrint {{ site.data.octopi.latest.octoprint_version }}</small><br>
+    <small>SHA256: <code>{{ site.data.octopi.latest.sha256 }}</code></small><br>
+    <small><strong>{{ site.data.octopi.recommendation }}</strong></small><br>
+    <small>Image compatible with Raspberry Pi {{ site.data.octopi.latest.pi_models }}.</small><br>
 </div>
 
-<!--
-### Release Candidate
+{% if site.data.octopi.next_octoprint %}
+### Stable OctoPi with OctoPrint Release Candidate
 
-The current <strong>release candidate for 0.18.0</strong> can be found here: 
+The current <strong>stable OctoPi {{ site.data.octopi.latest.octopi_version }} with OctoPrint {{ site.data.octopi.next_octoprint.octoprint_version }}</strong> can be found here: 
 
 <div class="text-center">
-    <a class="btn btn-large btn-block" href="https://github.com/guysoft/OctoPi/issues/710" data-event-category="download" data-event-action="next"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;OctoPi&nbsp;0.18.0rc2</a>
-    <small><strong>Raspberry Pi 3B, 3B+ or 4B strongly recommended, Raspberry Pi Zero/Zero W not officially supported!</strong></small><br>
-    <small>Image compatible with Raspberry Pi A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4/8GB, 400, Zero and Zero W.</small><br>
+    <a class="btn btn-large btn-block" href="{{ site.data.octopi.next_octoprint.url }}" data-event-category="download" data-event-action="next"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;OctoPi&nbsp;{{ site.data.octopi.latest.octopi_version }} &amp; OctoPrint {{ site.data.octopi.next_octoprint.octoprint_version }}</a>
+    <small>SHA256: <code>{{ site.data.octopi.next_octoprint.sha256 }}</code></small><br>
+    <small><strong>{{ site.data.octopi.recommendation }}</strong></small><br>
+    <small>Image compatible with Raspberry Pi {{ site.data.octopi.latest.pi_models }}.</small><br>
 </div>
--->
+{% endif %}
 
-### Nightlies
+{% if site.data.octopi.next_octopi %}
+### OctoPi Release Candidate
+
+The current <strong>release candidate {{ site.data.octopi.next_octopi.octopi_version }}</strong> can be found here: 
+
+<div class="text-center">
+    <a class="btn btn-large btn-block" href="{{ site.data.octopi.next_octopi.url }}" data-event-category="download" data-event-action="next"><i class="fa fa-download-alt fa-lg"></i>&nbsp;&nbsp;OctoPi&nbsp;{{ site.data.octopi.next_octopi.octopi_version }}</a>
+    <small>Ships with OctoPrint {{ site.data.octopi.next_octopi.octoprint_version }}</small><br>
+    <small><strong>{{ site.data.octopi.recommendation }}</strong></small><br>
+    <small>Image compatible with Raspberry Pi {{ site.data.octopi.next_octopi.pi_models }}.</small><br>
+</div>
+{% endif %}
+
+### OctoPi Nightlies
 
 You can also get the [32bit nightlies here](https://unofficialpi.org/Distros/OctoPi/nightly/) or the highly experimental [64bit nightlies here](https://unofficialpi.org/Distros/OctoPi/nightly-arm64/).
 
@@ -124,7 +138,8 @@ You can also get the [32bit nightlies here](https://unofficialpi.org/Distros/Oct
   * [The MagPi issue #36](https://www.raspberrypi.org/magpi/issues/36/) contains a "Getting Started" guide on 
     pages 50-51. You can find an excerpt [here](/assets/download/MagPi36_OctoPrint.pdf) 
     (MagPi License: [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/)).
-  * Scripts to build (and customize) the image yourself can be found in [OctoPi's Github repository](https://github.com/guysoft/OctoPi).
+  * For customizing OctoPi, take a look at [CustoPiZer](https://github.com/OctoPrint/CustoPiZer).
+  * Scripts to build the image yourself can be found in [OctoPi's Github repository](https://github.com/guysoft/OctoPi).
 
 ----
 

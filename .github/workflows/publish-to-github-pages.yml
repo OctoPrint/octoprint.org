@@ -25,6 +25,20 @@ jobs:
           nameStable: "OctoPi (stable)"
           namePrerelease: "OctoPi (prerelease)"
 
+      - name: 🐍 Set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.7"
+
+      - name: 🐍 Install requirements
+        run: |
+          pip install -r ./.github/scripts/requirements.txt
+
+      - name: 🔁 Update octopi.yaml
+        run: |
+          cd .github/scripts
+          python update_page_from_rpiimagerjson.py ./files/rpi-imager.json ./_data/octopi.yaml
+
       - name: 📦 Cache jekyll build bundle
         uses: actions/cache@v2
         with:
