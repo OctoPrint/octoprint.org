@@ -36,7 +36,7 @@ OctoPi is available through the [Raspberry Pi Imager](https://www.raspberrypi.or
 
 1. If you haven't already, **download and install [Raspberry Pi Imager](https://raspberrypi.org/software)** on your computer
 
-2. **Find the OctoPi image** under 'Choose OS', by selecting 'Other Specific Purpose OS' followed by 'OctoPi'
+2. **Find the OctoPi image** under 'Choose OS', by selecting 'Other Specific Purpose OS' followed by 'OctoPi' and then the 'stable' version.
 
 3. **Open advanced options** by using the keyboard shortcut <code>ctrl</code>+<code>shift</code>+<code>x</code> to configure your Wifi connection:
   * Set your SSID, password and WiFi country using the options:
