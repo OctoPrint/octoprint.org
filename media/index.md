@@ -16,6 +16,7 @@ description: Interested in some a presentation of the project? Or some articles 
 
 ## Slides
 
+* ["Raspberry Pi image customization with GitHub Actions" at Universe 2021](../slides/universe2021.pdf) on October 27th/28th 2021 (english talk, english slides)
 * ["How to deal with toxic people" at Upstream 2021](../slides/upstream2021.pdf) on June 7th 2021 (english talk, english slides)
 * ["Abenteuer Open Source Entwicklung" at Grazer Linuxtage 2021](../slides/glt2021.pdf) on April 10th 2021 (german talk, german slides)
 * ["A very brief look at OctoPrint 1.5.0" at VERRF2020](../slides/verrf2020.pdf) on October 11th 2020 (english talk, english slides)
