@@ -30,7 +30,7 @@ headsups:
 
 
     If you are one of the ~5% of users still on OctoPi 0.15, create a backup of your 
-    OctoPrint data, flash the latest OctoPrint 0.18 to ideally a fresh SD card (they age 
+    OctoPrint data, flash the latest OctoPi 0.18 to ideally a fresh SD card (they age 
     too...) and restore from backup. That should get you up and running under a *current* 
     OctoPi release in no time and additionally migrate you to Python 3.
 
