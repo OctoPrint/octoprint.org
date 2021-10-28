@@ -16,13 +16,14 @@ that already includes OctoPrint plus everything you need to run it:
   for live viewing of prints and timelapse video creation, compatible with various
   USB webcams and the Raspberry Pi camera
 
-**Recommended hardware: Raspberry Pi 3B, 3B+ or 4B. Expect print artifacts and long loading times with other 
+**Recommended hardware: Raspberry Pi 3B, 3B+, 4B or Zero 2. Expect print artifacts and long loading times with other 
 options, especially when adding a webcam or installing third party plugins.** Setups not using
 recommended hardware are not officially supported. 
 
-Please note that the **Raspberry Pi Zero W is not recommended explicitly** since severe performance 
+Please note that the **Raspberry Pi Zero and Zero W are not recommended explicitly** since severe performance 
 issues were observed, caused by the WiFi interface when bandwidth is utilized (e.g. the webcam is streamed), negatively 
-impacting printing quality. [See also here](https://github.com/guysoft/OctoPi/issues/318#issuecomment-284762963).
+impacting printing quality. [See also here](https://github.com/guysoft/OctoPi/issues/318#issuecomment-284762963). The Zero 2
+however *is* recommended.
 
 ## Installing OctoPi
 
