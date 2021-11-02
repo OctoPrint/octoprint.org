@@ -9,7 +9,7 @@ fi
 
 REPO="OctoPrint/OctoPi-UpToDate"
 URL="https://api.github.com/repos/$REPO/releases"
-CONFIG="/etc/nginx/sites-enabled/octopi.octoprint.org"
+CONFIG="/etc/nginx/sites-available/octopi.octoprint.org"
 DATA=$(curl --silent "$URL")
 
 latest=$(echo $DATA | jq -r '[ .[] | select(.prerelease != true) ][0].assets | [ .[] | select(.content_type == "application/zip") ] | .[0].browser_download_url')
