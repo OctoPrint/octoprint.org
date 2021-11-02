@@ -58,18 +58,26 @@ server {
 	}
 
 	location /latest {
+		expires 0d;
+		add_header Cache-Control "no-cache";
 		return 302 $latest_image;
 	}
 
 	location /latest.sha256 {
+		expires 0d;
+		add_header Cache-Control "no-cache";
 		return 302 $latest_image.sha256;
 	}
 
 	location /next {
+		expires 0d;
+		add_header Cache-Control "no-cache";
 		return 302 $next_image;
 	}
 	
 	location /next.sha256 {
+		expires 0d;
+		add_header Cache-Control "no-cache";
 		return 302 $next_image.sha256;
 	}
 
