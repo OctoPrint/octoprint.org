@@ -2,9 +2,10 @@
 
 set -e
 
-source ../helpers.sh
-
 CONFIG="$1"
+SCRIPT_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+
+source "$SCRIPT_DIR/../helpers.sh"
 
 REPO="OctoPrint/OctoPrint"
 URL="https://api.github.com/repos/$REPO/releases"
