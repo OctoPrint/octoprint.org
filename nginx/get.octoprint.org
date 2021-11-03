@@ -1,0 +1,80 @@
+server {
+	listen 80;
+	listen [::]:80;
+	listen 443 ssl;
+	listen [::]:443 ssl;
+
+	server_name get.octoprint.org;
+	server_tokens off;
+
+	ssl_certificate /etc/letsencrypt/live/get.octoprint.org/fullchain.pem;
+	ssl_certificate_key /etc/letsencrypt/live/get.octoprint.org/privkey.pem;
+	include hardened_ssl.conf;
+	
+	access_log /var/log/nginx/get.octoprint.org/access.log;
+	error_log /var/log/nginx/get.octoprint.org/error.log;
+
+	# managed by updater
+	set $stable "1.7.2";
+	set $maintenance "1.7.2";
+	set $devel "1.7.2";
+	set $last "1.6.1";
+	# / managed by updater
+
+	set $next $maintenance;
+
+	location / {
+		expires 0d;
+		add_header Cache-Control "no-cache";
+		return 302 https://octoprint.org/download/;
+	}
+
+	location /latest {
+		expires 0d;
+		add_header Cache-Control "no-cache";
+		return 302 https://github.com/foosel/OctoPrint/archive/$stable.zip;
+	}
+
+	location /last {
+		expires 0d;
+		add_header Cache-Control "no-cache";
+		return 302 https://github.com/foosel/OctoPrint/archive/$last.zip;
+	}
+
+	location /next {
+		expires 0d;
+		add_header Cache-Control "no-cache";
+		return 302 https://github.com/foosel/OctoPrint/archive/$next.zip;
+	}
+
+	location /maintenance-rc {
+		expires 0d;
+		add_header Cache-Control "no-cache";
+		return 302 https://github.com/foosel/OctoPrint/archive/$maintenance.zip;
+	}
+
+	location /devel-rc {
+		expires 0d;
+		add_header Cache-Control "no-cache";
+		return 302 https://github.com/foosel/OctoPrint/archive/$devel.zip;
+	}
+
+	location /py3/upgrade.py {
+		expires 0d;
+		add_header Cache-Control "no-cache";
+		return 302 https://raw.githubusercontent.com/cp2004/Octoprint-Upgrade-To-Py3/master/upgrade.py;
+	}
+
+	location /plugins/cleanup_logging.py {
+		expires 0d;
+		add_header Cache-Control "no-cache";
+		return 302 https://gist.githubusercontent.com/foosel/e8e9739f2c7975bb2c9b91e6210a9253/raw/920bdb5afddbf55be8f7b3892f5f394e19271cd2/cleanup_logging.py;
+	}
+
+	location /.well-known/acme-challenge/ {
+		default_type "text/plain";
+		root /usr/share/nginx/html/acme;
+	}
+}
+
+
