@@ -7,9 +7,11 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 
+NGINX_SITES=/etc/nginx/sites-available
+
 for updater in $(ls ./updaters); do
-    echo "Running updater $updater..."
-    ./updaters/$updater
+    site=$(basename $updater .sh)
+    [ -f "$NGINX_SITES/$site" ] && echo "Running updater $updater..." && ./updaters/$updater $NGINX_SITES/$site
 done
 
 systemctl reload nginx

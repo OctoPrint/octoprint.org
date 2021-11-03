@@ -12,7 +12,7 @@ NGINX_SITES=/etc/nginx/sites-available
 for site in $(ls ./nginx); do
     echo "Updating $site..."
     cp ./nginx/$site $NGINX_SITES/$site
-    [ -f ./updaters/$site.sh ] && echo "Found updater, running it..." && ./updaters/$site.sh
+    [ -f ./updaters/$site.sh ] && echo "Found updater, running it..." && ./updaters/$site.sh $NGINX_SITES/$site
 done
 
 systemctl reload nginx

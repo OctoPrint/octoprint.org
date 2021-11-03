@@ -38,8 +38,10 @@ server {
 	# Add index.php to the list if you are using PHP
 	index index.html index.htm index.nginx-debian.html;
 
+	# managed by updater
  	set $latest_image "https://github.com/guysoft/OctoPi/releases/download/0.18.0/octopi-buster-armhf-lite-0.18.0.zip";
 	set $next_image "https://github.com/guysoft/OctoPi/releases/download/0.18.0/octopi-buster-armhf-lite-0.18.0.zip";
+	# / managed by updater
 
 	location / {
 		return 301 https://octoprint.org/download/;
