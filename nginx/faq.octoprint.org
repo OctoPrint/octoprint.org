@@ -1,0 +1,29 @@
+server {
+	listen 80;
+	listen [::]:80;
+	listen 443 ssl;
+	listen [::]:443 ssl;
+
+	server_name faq.octoprint.org;
+	server_tokens off;
+
+	ssl_certificate /etc/letsencrypt/live/faq.octoprint.org/fullchain.pem;
+	ssl_certificate_key /etc/letsencrypt/live/faq.octoprint.org/privkey.pem;
+	include hardened_ssl.conf;
+	
+	access_log /var/log/nginx/faq.octoprint.org/access.log;
+	error_log /var/log/nginx/faq.octoprint.org/error.log;
+
+	location / {
+		#return 301 https://community.octoprint.org/c/support/faq;
+		return 301 https://community.octoprint.org/docs;
+	}
+
+	# managed by updater
+	# / managed by updater
+
+	location /.well-known/acme-challenge/ {
+		default_type "text/plain";
+		root /usr/share/nginx/html/acme;
+	}
+}
