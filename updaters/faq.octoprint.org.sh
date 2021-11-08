@@ -11,9 +11,6 @@ DATA_FILE="$SCRIPT_DIR/../data/faq.octoprint.org/mapping.json"
 
 ENTRIES=$(cat $DATA_FILE | jq -r "to_entries | map(\"\tlocation /\" + .key + \" {\n\t\treturn 301 \" + .value + \";\n\t}\n\") | join(\"\n\")")
 
-echo "Entries:"
-echo "$ENTRIES"
-
 prefix=$(sed '/# managed by updater/q' "$CONFIG")
 suffix=$(sed '/# \/ managed by updater/,$!d' "$CONFIG")
 
