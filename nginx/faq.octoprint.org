@@ -15,7 +15,6 @@ server {
 	error_log /var/log/nginx/faq.octoprint.org/error.log;
 
 	location / {
-		#return 301 https://community.octoprint.org/c/support/faq;
 		return 301 https://community.octoprint.org/docs;
 	}
 
