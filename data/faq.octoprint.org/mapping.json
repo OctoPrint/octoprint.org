@@ -1,6 +1,8 @@
 {
     "serialerror": "https://community.octoprint.org/t/octoprint-randomly-loses-connection-to-the-printer-with-a-serialexception/228",
     "communication-errors": "https://community.octoprint.org/t/octoprint-keeps-running-into-communication-errors-and-timeouts/227",
+    "no-candidates": "https://community.octoprint.org/t/octoprint-cant-connect-to-my-printer/223#no_port",
+    "connection-error": "https://community.octoprint.org/t/octoprint-cant-connect-to-my-printer/223#no_connection",
     "warning-firmware-unsafe": "https://community.octoprint.org/t/octoprint-tells-me-that-my-printers-firmware-lacks-mandatory-safety-features-what-does-this-mean/350",
     "warning-firmware-broken-cbd": "https://community.octoprint.org/t/i-cannot-successfully-print-on-my-printer-running-a-firmware-identifying-itself-only-as-cbd-make-it-or-zwlf-make-it/17481",
     "warning-firmware-broken-creality-temp": "https://community.octoprint.org/t/octoprint-doesnt-show-a-temperature-graph-for-my-creality-printer/23901",
