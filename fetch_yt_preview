@@ -15,6 +15,10 @@ then
 	do
 		fetch_img $name
 	done
+	for name in $(grep -oh "vid: [[:alnum:]_-]*" blog/octoprintonair/_posts/*.md | awk '{print $2}')
+	do
+		fetch_img $name
+	done
 else
 	fetch_img $1;
 fi

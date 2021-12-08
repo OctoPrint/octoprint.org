@@ -1,0 +1,33 @@
+---
+layout: post
+---
+
+{% include youtube.html vid=page.vid %}
+
+<p>
+    Topics in this episode of OctoPrint On Air, which was recorded on {{ page.recorded }}:
+</p>
+
+{{ content | markdownify }}
+
+<p>
+    Full contents with jump marks available in the 
+    <a href="https://youtu.be/{{ page.vid }}">YouTube description</a>.
+</p>
+
+<p>
+    You can find all public past episodes in 
+    <strong><a href="https://www.youtube.com/playlist?list=PL9j2DtsIPVkOFIMRrnnbXsnXtQmwj1IId">the OctoPrint On Air Playlist</a></strong>.
+</p>
+
+<hr>
+
+<p><em>
+    OctoPrint On Air is a roughly monthly live broadcast done by me (Gina Häußge)
+    for all <a href="https://patreon.com/foosel">Patrons on the Patreon campaign</a> or 
+    <a href="https://github.com/sponsors/foosel">GitHub Sponsors</a> pledging at the $5 perk or above. 
+    Attendees can ask questions which will be answered on air and I also report 
+    what's been going on in the background, what happened, what the current 
+    challenges are and what the near future holds, plus talk about whatever else
+    might be interesting in the world of OctoPrint.
+</em></p>
