@@ -5,6 +5,10 @@ title: Download & Setup OctoPrint
 description: Learn how to setup OctoPrint using the preinstalled OctoPi image for Raspberry Pi, or how to install from source on Windows, Linux and Mac.
 ---
 
+<center>
+  <a href="#octopi">OctoPi (Raspberry Pi)</a> &middot; <a href="#octo4a">Octo4a (Android)</a> &middot; <a href="#installing-manually">Manual install</a>
+</center>
+
 # OctoPi
 
 [Guy Sheffer](https://github.com/guysoft) maintains ["OctoPi"](https://github.com/guysoft/OctoPi),
@@ -153,6 +157,24 @@ You can also get the [32bit nightlies here](https://unofficialpi.org/Distros/Oct
     (MagPi License: [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/)).
   * For customizing OctoPi, take a look at [CustoPiZer](https://github.com/OctoPrint/CustoPiZer).
   * Scripts to build the image yourself can be found in [OctoPi's Github repository](https://github.com/guysoft/OctoPi).
+
+----
+
+# Octo4a
+
+[Filip Grzywok](https://github.com/feelfreelinux) maintains 
+["Octo4a"](https://github.com/feelfreelinux/octo4a), an Android
+app that allows you to use an Android based smart phone as an OctoPrint host. Root
+is not required!
+
+Check out the [Octo4a README](https://github.com/feelfreelinux/octo4a) for information on 
+how to obtain the app, install and run it.
+
+### Video
+
+There's also a video guide on how to get Octo4a up and running by [Thomas Sanladerer](https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A).
+
+{% include youtube.html vid="74xdib_-X38" %}
 
 ----
 
