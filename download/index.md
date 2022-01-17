@@ -33,6 +33,14 @@ OctoPi is available through the [Raspberry Pi Imager](https://www.raspberrypi.or
     <a class="btn btn-large btn-block" href="/merch/#kits" data-event-category="download" data-event-action="kits">All-in-one OctoPrint Kits</a>
 </div>
 
+<div class="alert">
+  Please note that there have been some reports regarding current revisions of the 
+  <strong>Raspberry Pi 4 refusing to boot</strong> with the latest stable OctoPi image. If that affects 
+  you, please try to manually flash <a href="https://unofficialpi.org/Distros/OctoPi/nightly/" target="_blank">the latest OctoPi nightly build</a>
+  instead. For this, follow the following install instructions, but in step 2 select the 
+  downloaded <code>.img</code> instead of going through "Choose OS".
+</div>
+
 **Here's how to get started installing OctoPi**:
 
 1. If you haven't already, **download and install [Raspberry Pi Imager](https://raspberrypi.org/software)** on your computer
