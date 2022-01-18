@@ -33,7 +33,7 @@ def generate_data(octopi_and_octoprint_version, sha256, url):
     }
 
 def convert_rpi_imager_json(data):
-    return list(map(lambda x: generate_data(x["description"], x["image_download_sha256"], x["url"]), data["os_list"]))
+    return list(map(lambda x: generate_data(x["description"], x["image_download_sha256"], x["url"]), filter(lambda x: "subitems" not in x and "subitems_url" not in x, data["os_list"])))
 
 def update_octopi_data(path, latest, next_octoprint):
     data = read_octopi_data(path)

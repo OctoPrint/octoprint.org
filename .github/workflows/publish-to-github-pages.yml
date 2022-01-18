@@ -24,6 +24,50 @@ jobs:
           output: ./files/rpi-imager.json
           nameStable: "OctoPi (stable)"
           namePrerelease: "OctoPi (prerelease)"
+        
+      - name: 🔨 Build rpi-imager-nightlies.json
+        run: |
+          OUTPUT=./files/rpi-imager-nightlies.json
+          N=5
+
+          nightlies="https://unofficialpi.org/Distros/OctoPi/nightly/"
+          page=$(curl --silent $nightlies)
+
+          last=$(echo $page | grep -o 'href="[^"]*\.zip"' | cut -d '"' -f 2 | uniq | tail -n $N)
+
+          cat <<EOF > $OUTPUT
+          {
+              "os_list": [
+          EOF
+          comma=""
+          for f in $last; do
+              download="$nightlies$f"
+              size=$(curl -I --silent "$download" | grep -i "content-length" | cut -d ' ' -f 2)
+              date=$(echo $f | cut -d '_' -f 1)
+
+              cat <<EOF >> $OUTPUT
+                  $comma
+                  {
+                      "name": "OctoPi nightly $date",
+                      "description": "OctoPi nightly from $date",
+                      "url": "$download",
+                      "icon": "https://octopi.octoprint.org/rpi-imager.png",
+                      "release_date": "$date",
+                      "image_download_size": $size
+                  }
+          EOF
+              comma=","
+          done
+
+          cat <<EOF >> $OUTPUT
+              ]
+          }
+          EOF
+      
+      - name: 🔨 Extend rpi-imager.json
+        run: |
+          # add nightlies
+          cat ./files/rpi-imager.json | jq '.os_list += {"name": "OctoPi Nightlies","description": "Nightly OctoPi builds, untested, bleeding edge","website": "https://unofficialpi.org/Distros/OctoPi/nightly/","subitems_url": "https://octoprint.org/files/rpi-imager-nightlies.json"}' > ./files/rpi-imager-extended.json
 
       - name: 🐍 Set up Python 3.7
         uses: actions/setup-python@v2
