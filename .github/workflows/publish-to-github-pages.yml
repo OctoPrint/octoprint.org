@@ -51,7 +51,7 @@ jobs:
                       "name": "OctoPi nightly $date",
                       "description": "OctoPi nightly from $date",
                       "url": "$download",
-                      "icon": "https://octopi.octoprint.org/rpi-imager.png",
+                      "icon": "https://octoprint.org/files/rpi-imager-nightlies.png",
                       "release_date": "$date",
                       "image_download_size": $size
                   }
@@ -67,7 +67,7 @@ jobs:
       - name: 🔨 Extend rpi-imager.json
         run: |
           # add nightlies
-          jq '.os_list += [{"name": "OctoPi Nightlies","description": "Nightly OctoPi builds, untested, bleeding edge","website": "https://unofficialpi.org/Distros/OctoPi/nightly/","subitems_url": "https://octoprint.org/files/rpi-imager-nightlies.json"}]' ./files/rpi-imager.json > ./files/rpi-imager.json.tmp && mv ./files/rpi-imager.json.tmp ./files/rpi-imager.json
+          jq '.os_list += [{"name": "OctoPi Nightlies","description": "Nightly OctoPi builds, untested, bleeding edge","subitems_url": "https://octoprint.org/files/rpi-imager-nightlies.json"}]' ./files/rpi-imager.json > ./files/rpi-imager.json.tmp && mv ./files/rpi-imager.json.tmp ./files/rpi-imager.json
 
           echo "Generated rpi-imager.json:"
           cat ./files/rpi-imager.json
