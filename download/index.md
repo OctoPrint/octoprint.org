@@ -6,7 +6,7 @@ description: Learn how to setup OctoPrint using the preinstalled OctoPi image fo
 ---
 
 <center>
-  <a href="#octopi">OctoPi (Raspberry Pi)</a> &middot; <a href="#octo4a">Octo4a (Android)</a> &middot; <a href="#installing-manually">Manual install</a>
+  <a href="#octopi">OctoPi (Raspberry Pi)</a> &middot; <a href="#octo4a">Octo4a (Android)</a> &middot; <a href="#docker">Docker install</a> &middot; <a href="#installing-manually">Manual install (Linux, Windows, Mac)</a>
 </center>
 
 # OctoPi
@@ -175,6 +175,16 @@ how to obtain the app, install and run it.
 There's also a video guide on how to get Octo4a up and running by [Thomas Sanladerer](https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A).
 
 {% include youtube.html vid="74xdib_-X38" %}
+
+----
+
+# Docker
+
+There's also an official OctoPrint Docker image, `octoprint/octoprint`. It is maintained
+by [Brian Vanderbush](https://github.com/LongLiveCHIEF) and team [on GitHub](https://github.com/OctoPrint/octoprint-docker).
+
+Please refer to its entry [on dockerhub](https://hub.docker.com/r/octoprint/octoprint) for
+more details on usage and configuration.
 
 ----
 
