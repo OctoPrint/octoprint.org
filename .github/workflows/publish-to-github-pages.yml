@@ -69,6 +69,9 @@ jobs:
           # add nightlies
           cat ./files/rpi-imager.json | jq '.os_list += [{"name": "OctoPi Nightlies","description": "Nightly OctoPi builds, untested, bleeding edge","website": "https://unofficialpi.org/Distros/OctoPi/nightly/","subitems_url": "https://octoprint.org/files/rpi-imager-nightlies.json"}]' > ./files/rpi-imager.json
 
+          echo "Generated rpi-imager.json:"
+          cat ./files/rpi-imager.json
+
       - name: 🐍 Set up Python 3.7
         uses: actions/setup-python@v2
         with:
