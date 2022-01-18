@@ -33,7 +33,7 @@ jobs:
           nightlies="https://unofficialpi.org/Distros/OctoPi/nightly/"
           page=$(curl --silent $nightlies)
 
-          last=$(echo $page | grep -o 'href="[^"]*\.zip"' | cut -d '"' -f 2 | uniq | tail -n $N)
+          last=$(echo $page | grep -o 'href="[^"]*\.zip"' | cut -d '"' -f 2 | uniq | tail -n $N | sort -r)
 
           cat <<EOF > $OUTPUT
           {
@@ -67,7 +67,7 @@ jobs:
       - name: 🔨 Extend rpi-imager.json
         run: |
           # add nightlies
-          cat ./files/rpi-imager.json | jq '.os_list += [{"name": "OctoPi Nightlies","description": "Nightly OctoPi builds, untested, bleeding edge","website": "https://unofficialpi.org/Distros/OctoPi/nightly/","subitems_url": "https://octoprint.org/files/rpi-imager-nightlies.json"}]' > ./files/rpi-imager-extended.json
+          cat ./files/rpi-imager.json | jq '.os_list += [{"name": "OctoPi Nightlies","description": "Nightly OctoPi builds, untested, bleeding edge","website": "https://unofficialpi.org/Distros/OctoPi/nightly/","subitems_url": "https://octoprint.org/files/rpi-imager-nightlies.json"}]' > ./files/rpi-imager.json
 
       - name: 🐍 Set up Python 3.7
         uses: actions/setup-python@v2
