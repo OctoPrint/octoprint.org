@@ -37,6 +37,7 @@ OctoPi is available through the [Raspberry Pi Imager](https://www.raspberrypi.or
     <a class="btn btn-large btn-block" href="/merch/#kits" data-event-category="download" data-event-action="kits">All-in-one OctoPrint Kits</a>
 </div>
 
+<!--
 <div class="alert">
   Please note that there have been some reports regarding current revisions of the 
   <strong>Raspberry Pi 4 refusing to boot</strong> with the latest stable OctoPi image. If that affects 
@@ -44,6 +45,7 @@ OctoPi is available through the [Raspberry Pi Imager](https://www.raspberrypi.or
   You can find the nightlies in the Raspberry Pi Imager as well, in a subfolder located 
   right next to the stable image.
 </div>
+-->
 
 **Here's how to get started installing OctoPi**:
 
@@ -94,13 +96,6 @@ Please also refer take a look at the [full WiFi setup guide in the FAQ](https://
 {% include youtube.html vid="HBd0olxI-No" %}
 
 ## Image Downloads
-
-<!--
-<div class="alert">
-    There have been some reports regarding current revisions of the <strong>Raspberry Pi 4 1/2/4 GB refusing to boot</strong> with the stable
-    OctoPi 0.17.0 image. If that affects you, please try the OctoPi 0.18.0 release candidate.
-</div>
--->
 
 Raspberry Pi Imager will download the latest version of OctoPi for you, but if you want to download the images 
 yourself you can do so here.
