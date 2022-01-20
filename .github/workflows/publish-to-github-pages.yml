@@ -66,6 +66,9 @@ jobs:
       
       - name: 🔨 Extend rpi-imager.json
         run: |
+          # add OctoPi-Klipper
+          jq '.os_list += [{"name": "OctoPi-Klipper","description": "OctoPi + Klipper 3D printer firmware service","icon": "https://github.com/guysoft/OctoPi-Klipper/raw/main/media/rpi-imager-OctoPi-Klipper.png", "subitems_url": "https://unofficialpi.org/rpi-imager/rpi-imager-octopi-klipper.json"}]' ./files/rpi-imager.json > ./files/rpi-imager.json.tmp && mv ./files/rpi-imager.json.tmp ./files/rpi-imager.json
+
           # add nightlies
           jq '.os_list += [{"name": "OctoPi Nightlies","description": "Nightly OctoPi builds, untested, bleeding edge","subitems_url": "https://octoprint.org/files/rpi-imager-nightlies.json"}]' ./files/rpi-imager.json > ./files/rpi-imager.json.tmp && mv ./files/rpi-imager.json.tmp ./files/rpi-imager.json
 
