@@ -24,6 +24,7 @@ jobs:
           output: ./files/rpi-imager.json
           nameStable: "OctoPi (stable)"
           namePrerelease: "OctoPi (prerelease)"
+          initFormat: systemd
         
       - name: 🔨 Build rpi-imager-nightlies.json
         run: |
@@ -53,7 +54,8 @@ jobs:
                       "url": "$download",
                       "icon": "https://octoprint.org/files/rpi-imager-nightlies.png",
                       "release_date": "$date",
-                      "image_download_size": $size
+                      "image_download_size": $size,
+                      "init_format": "systemd"
                   }
           EOF
               comma=","
