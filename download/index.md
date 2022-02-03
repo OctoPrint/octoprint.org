@@ -37,57 +37,71 @@ OctoPi is available through the [Raspberry Pi Imager](https://www.raspberrypi.or
     <a class="btn btn-large btn-block" href="/merch/#kits" data-event-category="download" data-event-action="kits">All-in-one OctoPrint Kits</a>
 </div>
 
-<!--
-<div class="alert">
-  Please note that there have been some reports regarding current revisions of the 
-  <strong>Raspberry Pi 4 refusing to boot</strong> with the latest stable OctoPi image. If that affects 
-  you, please try to flash the latest nightly build instead of the stable version.
-  You can find the nightlies in the Raspberry Pi Imager as well, in a subfolder located 
-  right next to the stable image.
-</div>
--->
-
 **Here's how to get started installing OctoPi**:
 
 1. If you haven't already, **download and install [Raspberry Pi Imager](https://raspberrypi.org/software)** on your computer
 
-2. **Find the OctoPi image** under 'Choose OS', by selecting 'Other Specific Purpose OS' followed by 'OctoPi' and then the 'stable' version.
+2. **Find the OctoPi image** under "Choose OS", by selecting "Other Specific Purpose OS" > "3D printing" > "OctoPi" and then the "stable" version.
 
-3. **Open advanced options** by using the keyboard shortcut <code>ctrl</code>+<code>shift</code>+<code>x</code> to configure your Wifi connection:
-  * Set your SSID, password and WiFi country using the options:
-  ![Advanced Options - Wifi Setup](/assets/img/download/advanced-wifi.png)
+3. **Open advanced options** by clicking on the button with the cog, or by using the keyboard shortcut <code>ctrl</code>+<code>shift</code>+<code>x</code> and then:
+
+   * **Configure your wifi options**: Set your SSID, password and WiFi country:
+     ![Advanced Options - Wifi Setup](/assets/img/download/advanced-wifi.png)
+ 
+   * **Change the *system* password** in "Set username and password" by entering a new password to use for the system user "pi". This is *not* the password you'll use for logging into
+     OctoPrint but one that you'll have to use to log into your Pi via SSH should you ever need to. **Leave the username as "pi", do not change it to anything else!**
+     ![Advanced Options - Wifi Setup](/assets/img/download/advanced-password.png)
+ 
+   * Optionally: Change the configured timezone in "Set locale settings"
+ 
+   * Optionally: Change the hostname in "Set hostname"
 
 4. **Install the image to your SD card**, then plug everything in to your Raspberry Pi and boot it up. **Do not format the SD card after installing, even if prompted to do so.** This will break the installation and you will have to start over!
 
-5. **Log into your Pi via SSH** (it is located at ``octopi.local``
-   [if your computer supports bonjour](https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview)
-   or the IP address assigned by your router), default username is `pi`,
-   default password is `raspberry`. Run ``sudo raspi-config``. Once that is open:
-    
-   1. Change the password via "Change User Password"
-   2. Optionally: Change the configured timezone via "Localization Options" > "Timezone".
-   3. Optionally: Change the hostname via "Network Options" > "Hostname". Your OctoPi instance will then no longer be reachable under ``octopi.local`` but rather the hostname you chose postfixed with ``.local``, so keep that in mind.
-    
-   You can navigate in the menus using the arrow keys and <key>Enter</key>. To switch to selecting the buttons at the bottom use <key>Tab</key>.
-    
-   **You do not need to expand the filesystem**, current versions of OctoPi do this automatically.
-   
-   **You also do not need to manually enable the RaspiCam** if you have one, that is already taken care of on the image as well.
-
-5. **Access OctoPrint** through ``http://octopi.local`` or ``http://<your pi's ip address>``. `https` is available too,
-   with a self-signed certificate (which means your browser will warn you about it being invalid).
+5. **Access OctoPrint from your browser** via ``http://octopi.local`` or the hostname you 
+   chose ([if your computer supports bonjour](https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview)) 
+   or ``http://<your pi's ip address>``. `https` is available too, with a self-signed certificate 
+   (which means your browser will warn you about it being invalid - it isn't, it's just not recognized by your browser).
 
 Please also refer to [OctoPi's README](https://github.com/guysoft/OctoPi), especially the ["How to use it" section](https://github.com/guysoft/OctoPi#how-to-use-it).
 
-### Alternative Wifi Setup
+### Alternative Initial Setup
 
-If you aren't using Raspberry Pi Imager, then you can also setup the Wifi connection using the `octopi-wpa-supplicant.txt` file
-on the root of the installed card when using it like a thumb drive. 
-**Important: Do not use WordPad (Windows) or TextEdit (MacOS X)**  for this, those editors are known to mangle
-the file, making configuration fail. Use something like Notepad++, Atom or VSCode instead or at the very 
-least heed the warnings in the file.
+If you decide against using the Raspberry Pi Imager, here are some alternative steps to get started:
 
-Please also refer take a look at the [full WiFi setup guide in the FAQ](https://faq.octoprint.org/wifi-setup) that also includes troubleshooting tips.
+1. **Flash the image to your SD card** through whatever alternative means you've chosen.
+
+2. With the SD card still attached to your computer, set up the Wifi connection using the `octopi-wpa-supplicant.txt` file
+   on the root of the installed card when using it like a thumb drive. 
+   **Important: Do not use WordPad (Windows) or TextEdit (MacOS X)**  for this, those editors are known to mangle
+   the file, making configuration fail. Use something like Notepad++, Atom or VSCode instead or at the very 
+   least heed the warnings in the file. If your computer doesn't see the card right away after flashing, try
+   ejecting and inserting it again. **Do not format the SD card after installing, even if prompted to do so.** This will break the installation and you will have to start over!
+
+   Please also refer take a look at the [full WiFi setup guide in the FAQ](https://faq.octoprint.org/wifi-setup) that also includes troubleshooting tips.
+
+3. **Plug everything into your Raspberry Pi and boot it up**
+
+4. **Log into your Pi via SSH** (it is located at ``octopi.local``
+   [if your computer supports bonjour](https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview)
+   or the IP address assigned by your router), default username is `pi`, default password is `raspberry`.
+   Run ``sudo raspi-config``. Once that is open:
+
+   1. Change the password via "Change User Password"
+   2. Optionally: Change the configured timezone via "Localization Options" > "Timezone".
+   3. Optionally: Change the hostname via "Network Options" > "Hostname". Your OctoPi instance will then no longer be reachable under ``octopi.local`` but rather the hostname you chose postfixed with ``.local``, so keep that in mind.
+
+   You can navigate in the menus using the arrow keys and <key>Enter</key>. To switch to selecting the buttons at the bottom use <key>Tab</key>.
+
+   **You do not need to expand the filesystem**, current versions of OctoPi do this automatically.
+
+   **You also do not need to manually enable the RaspiCam** if you have one, that is already taken care of on the image as well.
+
+5. **Access OctoPrint** through ``http://octopi.local`` ([if your computer supports bonjour](https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview)) 
+   or ``http://<your pi's ip address>``. `https` is available too, with a self-signed certificate 
+   (which means your browser will warn you about it being invalid - it isn't, it's just not recognized by your browser).
+
+Please also refer to [OctoPi's README](https://github.com/guysoft/OctoPi), especially the ["How to use it" section](https://github.com/guysoft/OctoPi#how-to-use-it).
 
 ### Video
 
