@@ -43,7 +43,7 @@ OctoPi is available through the [Raspberry Pi Imager](https://www.raspberrypi.or
 
 2. **Find the OctoPi image** under "Choose OS", by selecting "Other Specific Purpose OS" > "3D printing" > "OctoPi" and then the "stable" version.
 
-3. **Open advanced options** by clicking on the button with the cog, or by using the keyboard shortcut <code>ctrl</code>+<code>shift</code>+<code>x</code> and then:
+3. **Open advanced options** by clicking on the button with the gear, or by using the keyboard shortcut <code>ctrl</code>+<code>shift</code>+<code>x</code> and then:
 
    * **Configure your wifi options**: Set your SSID, password and WiFi country:
      ![Advanced Options - Wifi Setup](/assets/img/download/advanced-wifi.png)
