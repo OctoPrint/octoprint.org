@@ -15,7 +15,9 @@ server {
 	error_log /var/log/nginx/faq.octoprint.org/error.log;
 
 	location / {
-		return 301 https://community.octoprint.org/docs;
+		expires 0d;
+		add_header Cache-Control "no-cache";
+		return 302 https://community.octoprint.org/docs;
 	}
 
 	# managed by updater
