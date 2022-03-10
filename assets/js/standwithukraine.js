@@ -3,6 +3,10 @@ var SWU__DOMReady = function(callback) {
   document.readyState === 'interactive' || document.readyState === 'complete' ? callback() : document.addEventListener('DOMContentLoaded', callback);
 };
 SWU__DOMReady(function() {
+  if (window.matchMedia("only screen and (max-width: 760px)").matches) {
+      return;
+  }
+
   const el = document.createElement('div');
 
   // Options
