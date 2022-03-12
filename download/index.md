@@ -41,7 +41,7 @@ OctoPi is available through the [Raspberry Pi Imager](https://www.raspberrypi.or
 
 > 🤚 **Before you begin**
 > 
-> Read and follow these instructions **precisely**. Most importantly, **leave the system username as "pi", do not change it to anything else or OctoPrint won't work!**.
+> Read and follow these instructions **precisely**. Most importantly, **leave the system username as "pi", do not change it to anything else or OctoPrint won't work!**
 
 1. If you haven't already, **download and install [Raspberry Pi Imager](https://raspberrypi.org/software)** on your computer
 
