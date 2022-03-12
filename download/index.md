@@ -103,12 +103,6 @@ If you decide against using the Raspberry Pi Imager, here are some alternative s
 
 Please also refer to [OctoPi's README](https://github.com/guysoft/OctoPi), especially the ["How to use it" section](https://github.com/guysoft/OctoPi#how-to-use-it).
 
-### Video
-
-[Thomas Sanladerer](https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A) created a great video guide on how to get OctoPi 0.18 up and running.
-
-{% include youtube.html vid="HBd0olxI-No" %}
-
 ## Image Downloads
 
 Raspberry Pi Imager will download the latest version of OctoPi for you, but if you want to download the images 
