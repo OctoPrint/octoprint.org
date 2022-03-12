@@ -159,9 +159,6 @@ You can also get the [32bit nightlies here](https://unofficialpi.org/Distros/Oct
 
 ## Further resources
 
-  * [The MagPi issue #36](https://www.raspberrypi.org/magpi/issues/36/) contains a "Getting Started" guide on 
-    pages 50-51. You can find an excerpt [here](/assets/download/MagPi36_OctoPrint.pdf) 
-    (MagPi License: [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/)).
   * For customizing OctoPi, take a look at [CustoPiZer](https://github.com/OctoPrint/CustoPiZer).
   * Scripts to build the image yourself can be found in [OctoPi's Github repository](https://github.com/guysoft/OctoPi).
 
