@@ -21,7 +21,8 @@ jobs:
           token: "${{ secrets.GITHUB_TOKEN }}"
           owner: OctoPrint
           repo: OctoPi-UpToDate
-          ignoreRegex: "mark:untested"
+          ignoreRegex: "rc|mark:untested"
+          #versionRegex: "^(?<octopi>.*?)-(?<octoprint>.*?)-\\d+$"
           output: ./files/rpi-imager.json
           nameStable: "OctoPi (stable)"
           namePrerelease: "OctoPi (prerelease)"
