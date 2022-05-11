@@ -1,0 +1,5 @@
+Contact: mailto:security@octoprint.org
+Expires: 2023-05-14T22:00:00.000Z
+Preferred-Languages: en, de
+Canonical: https://octoprint.org/.well-known/security.txt
+Policy: https://github.com/OctoPrint/OctoPrint/security/policy
