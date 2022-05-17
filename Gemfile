@@ -5,3 +5,5 @@ gem 'hitimes', '1.2.1'
 
 gem 'html-proofer'
 gem 'jsonlint'
+
+gem "webrick", "~> 1.7"
