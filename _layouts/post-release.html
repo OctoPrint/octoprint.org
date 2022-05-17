@@ -68,9 +68,16 @@ layout: post
 {% include github_user_grid.html users=page.contributors %}
 {% endif %}
 
+{% if page.security %}
+<p>
+    Also another <strong>Thank you!</strong> to {% include security_shoutouts people=page.security %} for
+    the responsible disclosure of vulnerabilities fixed in this release.
+</p>
+{% endif %}
+
 {% if page.testers %}
 <p>
-    And last but not least, another <strong>shoutout</strong> to everyone who
+    And last but not least, a <strong>big shoutout</strong> to everyone who
     reported back on the release candidates this time: {% include github_users users=page.testers %}.
 </p>
 {% endif %}
