@@ -141,10 +141,10 @@ let me first get some big announcements out of the way (that are also included i
 heads-ups below!):
 
 * The biggest announcement is probably that with the 1.8.0 release **OctoPrint is dropping Python 2 support**.
-  I already wrote about this in a [past post here](/blog/2022/01/31/octoprint-1.8.0-will-require-python-3/), and this is now the first release candidate that 
-  is Python 3 exclusive. As of the publication of this first release candidate, any OctoPrint instances
-  still on Python 2 have been redirected to the legacy repository for update checks and thus will also
-  no longer be able to partake in this RC phase - which they wouldn't anyway as the code base
+  I already wrote about this in a [past post here](/blog/2022/01/31/octoprint-1.8.0-will-require-python-3/), and this is now the first release that 
+  is Python 3 exclusive. As of the publication of the first release candidate 1.8.0rc1, any OctoPrint instances
+  still on Python 2 have already been redirected to the legacy repository for update checks and thus will also
+  no longer be able to partake in future updates - which they wouldn't anyway as the code base
   has already been migrated to be Python 3 exclusive, removing all the workarounds so painstakingly
   put in over the past three years.
 * **Three security vulnerabilities were fixed** that were disclosed to me while the final release candidate was undergoing testing.
