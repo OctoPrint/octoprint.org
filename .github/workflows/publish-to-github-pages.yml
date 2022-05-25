@@ -2,7 +2,7 @@ name: Publish to Github Pages
 
 on:
   schedule:
-    - cron: '0 */12 * * *'
+    - cron: '23 * * * *'
   push:
     branches:
       - gh-pages

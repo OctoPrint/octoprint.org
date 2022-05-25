@@ -5,7 +5,9 @@
     </div>
 
     <div class="sponsors">
-        {% for sponsor in site.data.sponsors %}
+        {% assign sponsor_count = site.data.sponsors.size %}
+        {% assign sponsors = site.data.sponsors | sample: sponsor_count %}
+        {% for sponsor in sponsors %}
             <div class="sponsor">
                 <a href="{{ sponsor.url }}" title="{{ sponsor.title }}" data-event-category="sponsor" data-event-action="{{ sponsor.title }}">
                     <img src="{{ BASE_PATH }}/assets/img/sponsors/{{ sponsor.logo }}" alt="{{ sponsor.title }}" title="{{ sponsor.title }}">
