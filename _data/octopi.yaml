@@ -5,8 +5,8 @@ latest:
   pi_models: A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4/8GB, 400, Zero, Zero W and Zero 2
   url: https://octopi.octoprint.org/latest
 next_octopi:
-  url: https://unofficialpi.org/Distros/OctoPi/nightly/2022-02-27_2022-01-28-octopi-bullseye-armhf-lite-1.0.0.zip
-  octopi_version: "1.0.0rc1"
-  octoprint_version: "1.7.3"
+  url: https://unofficialpi.org/Distros/OctoPi/nightly/2022-08-03_2022-04-04-octopi-bullseye-armhf-lite-1.0.0.zip
+  octopi_version: "1.0.0rc2"
+  octoprint_version: "1.8.1"
   pi_models: A, B, A+, B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4/8GB, 400, Zero, Zero W and Zero 2
 recommendation: Raspberry Pi 3B, 3B+, 4B or Zero 2 strongly recommended, Raspberry Pi Zero/Zero W not officially supported!
