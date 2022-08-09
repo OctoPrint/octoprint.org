@@ -7,7 +7,7 @@ date: 2022-08-09 14:30:00 +0200
 card: /assets/img/blog/2022-08/2022-08-09-octoprint-1.8.2-card.png
 featuredimage: /assets/img/blog/2022-08/2022-08-09-octoprint-1.8.2-card.png
 poster: /assets/img/blog/2022-08/2022-08-09-octoprint-1.8.2-poster.png
-excerpt: "This first bugfix & security release for 1.8.0 fixes a few new issues reported, including one security vulnerability."
+excerpt: "This second bugfix & security release for 1.8.0 fixes a few new issues reported, including one security vulnerability."
 
 bugfix: 1.8.2
 release:
