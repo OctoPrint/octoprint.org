@@ -6,7 +6,7 @@ $(function() {
         var vid = embed.dataset.vid;
         if (!vid) continue;
 
-        var preview = embed.dataset.preview || "/assets/img/yt-with-consent/" + vid + ".jpg";
+        var preview = embed.dataset.preview || "/assets/img/yt-with-consent/" + vid + ".webp";
         embed.style.backgroundImage = "url(" + preview + ")";
         embed.style.backgroundSize = "contain";
         embed.style.backgroundRepeat = "no-repeat";
