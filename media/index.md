@@ -6,6 +6,7 @@ description: Interested in some a presentation of the project? Or some articles 
 
 ## Selected Articles & Interviews
 
+  * ["OctoPrint With Gina Häußge"](https://fosspod.content.town/episodes/octoprint-with-gina-hauge). The FOSSPod S1:E13, September 2022.
   * ["From a 3D side project to the dream job"](https://github.com/readme/3d-sideproject-octoprint). The ReadME Podcast, Episode 01, May 2021.
   * ["Gina Häußge and OctoPrint. How to make a living off of your pet passion projects - An Interview"](https://dot.kde.org/2020/08/15/gina-h%C3%A4u%C3%9Fge-and-octoprint). KDE.news, August 15th 2020.
   * ["HackSpace magazine meets... Gina Häußge"](https://hackspace.raspberrypi.org/issues/32). HackSpace magazine, Issue 32, July 2020.
