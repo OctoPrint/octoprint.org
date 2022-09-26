@@ -11,7 +11,7 @@ excerpt: "This first bugfix & security release for 1.8.0 fixes a few new issues 
 
 bugfix: 1.8.1
 release:
-  tag: 1.8.1
+  tag: 1.8.0
   link: /blog/2022/05/17/new-release-1.8.0/
   headsups: true
 
