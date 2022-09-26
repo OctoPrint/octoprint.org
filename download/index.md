@@ -6,7 +6,7 @@ description: Learn how to setup OctoPrint using the preinstalled OctoPi image fo
 ---
 
 <center>
-  <a href="#octopi">OctoPi (Raspberry Pi)</a> &middot; <a href="#octo4a">Octo4a (Android)</a> &middot; <a href="#docker">Docker install</a> &middot; <a href="#installing-manually">Manual install (Linux, Windows, Mac)</a>
+  <a href="#octopi">OctoPi (Raspberry Pi)</a> &middot; <a href="#octo4a">Octo4a (Android)</a> &middot; <a href="#docker">Docker install</a> &middot; <a href="#octoprint_deploy--octoprint_install">octoprint_deploy & octoprint_install (Linux)</a> &middot; <a href="#installing-manually">Manual install (Linux, Windows, Mac)</a>
 </center>
 
 # OctoPi
@@ -189,6 +189,18 @@ by [Brian Vanderbush](https://github.com/LongLiveCHIEF) and team [on GitHub](htt
 
 Please refer to its entry [on dockerhub](https://hub.docker.com/r/octoprint/octoprint) for
 more details on usage and configuration.
+
+----
+
+# octoprint_deploy & octoprint_install
+
+[octoprint_deploy](https://github.com/paukstelis/octoprint_deploy) is a guided script for creating multiple OctoPrint instances.
+This enables control of multiple printers on a single piece of hardware. It is compatible with OctoPi and also functions as a 
+general Linux installer for OctoPrint, video streamers, haproxy, etc.
+
+The related [octoprint_install](https://github.com/paukstelis/octoprint_install) serves as a single instance Linux installer.
+
+Both are maintained by [Paul Paukstelis](https://github.com/ppaukstelis).
 
 ----
 
