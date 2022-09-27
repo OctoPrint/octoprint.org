@@ -3,7 +3,7 @@
 layout: post-bugfix
 title: 'New release: 1.8.4'
 author: foosel
-date: 2022-09-27 17:00:00 +0200
+date: 2022-09-27 17:20:00 +0200
 card: /assets/img/blog/2022-09/2022-09-27-octoprint-1.8.4-card.png
 featuredimage: /assets/img/blog/2022-09/2022-09-27-octoprint-1.8.4-card.png
 poster: /assets/img/blog/2022-09/2022-09-27-octoprint-1.8.4-poster.png
