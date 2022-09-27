@@ -14,7 +14,7 @@ layout: post
     fixes solve your problem.
 </p>
 
-{% if page.release.headsups or page.headsups %}
+{% if page.release.headsups or page.prior.headsups or page.headsups %}
 <h3 id="headsups">Heads-ups</h3>
 
 {% if page.release.headsups %}
@@ -26,6 +26,18 @@ layout: post
     and <a href="#links"><strong>Links</strong></a> below for more information, where to
     find help and how to roll back.
 </p>
+{% endif %}
+
+{% if page.prior.headsups %}
+<p>
+  The following heads-ups from earlier releases {% if page.release.headsups %}also{% endif %} still apply:
+</p>
+
+<ul>
+{% for headsup in page.prior.headsups %}
+  <li><a href="{{ headsup.link }}#headsups">{{ headsup.release }}</a></li>
+{% endfor %}
+</ul>
 {% endif %}
 
 {% if page.headsups %}
