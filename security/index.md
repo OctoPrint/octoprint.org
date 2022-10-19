@@ -47,7 +47,8 @@ We will publish GitHub Security Advisories, and through those will also request 
 - The vulnerability is in OctoPrint itself, not a third party library
 - The vulnerability is not already known to us
 - The vulnerability is not already known to the public
-- The vulnerability has an agreed severity of Medium or higher
+
+CVEs will only be requested for vulnerabilities with a severity of Medium or higher.
 
 ## Bounties
 
