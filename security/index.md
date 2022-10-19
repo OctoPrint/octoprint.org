@@ -8,7 +8,7 @@ lastupdate: 2022-10-19 08:30:00 +0000
 
 We are mostly interested in reports by actual OctoPrint users that are familiar with the platform, but all high quality contributions are welcome. Please do your best to describe a clear and realistic impact for your report.
 
-For the sake of OctoPrint's user base, **do not make vulnerabilities public without notifying us and giving us at least 90 days to deploy fixes**. We will do our best to respond to your report within 7 days, and also to keep you informed of the progress of our efforts to resolve the issue, but understand that OctoPrint like many Open Source projects is primarily a volunteer project with only one full-time resource, and we may not be able to respond as quickly as you would like due to other responsibilities.
+For the sake of OctoPrint's user base, **do not make vulnerabilities public without notifying us and giving us at least 90 days to release a fixed version**. We will do our best to respond to your report within 7 days, and also to keep you informed of the progress of our efforts to resolve the issue, but understand that OctoPrint like many Open Source projects is primarily a volunteer project with only one full-time resource, and we may not be able to respond as quickly as you would like due to other responsibilities.
 
 If you are going to write about OctoPrint's security, please get in touch, so we can make sure that all claims are correct.
 
@@ -34,9 +34,9 @@ We will not accept reports of vulnerabilities of the following types:
 
 ## Severity scoring
 
-Score the severity of OctoPrint using [CVSS3.1](https://www.first.org/cvss/v3.1/specification-document). There's a calculator [here](https://www.first.org/cvss/calculator/3.1). Provide the vector string in your report.
+If you are familiar with [CVSS3.1](https://www.first.org/cvss/v3.1/specification-document), then please provide the score of the vulnerability in your report in the shape of a vector string. There's a calculator [here](https://www.first.org/cvss/calculator/3.1). If you are not sure how or unable to score a vulnerability, state that in your report and we will look into it.
 
-Please make yourself familiar with CVSS *first* (we strongly recommend reading specification and also [the Scoring Guide](https://www.first.org/cvss/v3.1/user-guide#Scoring-Guide)), as we will not accept reports that do not use it, or use it incorrectly. If you are not sure how to score a vulnerability, please ask us.
+If you intend to provide a score yourself, please make yourself familiar with CVSS *first* (we strongly recommend reading [Specification](https://www.first.org/cvss/v3.1/specification-document) and [Scoring Guide](https://www.first.org/cvss/v3.1/user-guide#Scoring-Guide)), as we will not accept reports that use it incorrectly.
 
 When scoring Attack Vector, use `Adjacent` as a maximum. OctoPrint is supposed to be deployed in a secure private network. Deployments on the public internet or other hostile networks are considered a severe misconfiguration, not the default deployment scenario. We also stress this point in several places in the FAQ and OctoPrint itself.
 
