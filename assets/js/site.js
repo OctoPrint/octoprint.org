@@ -80,7 +80,7 @@ $(function() {
   $("#banner .close-banner").click(function() {
       $("#banner").slideUp({complete: function() {
         evalHeader();
-        ga("send", "event", "banner", "close");
+        plausible("Banner closed");
       }});
   });
 
@@ -90,7 +90,7 @@ $(function() {
       $("#banner").slideDown({
           complete: function() {
             evalHeader();
-            ga("send", "event", "banner", "show");
+            plausible("Banner shown");
           }
       });
       setCookie("banner_shown", true, 14, "/");

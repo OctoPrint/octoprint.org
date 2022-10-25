@@ -7,8 +7,8 @@
       <a href="javascript:void(0)" class="btn btn-burger btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><i class="fas fa-bars"></i></a>
       <div class="pull-right">
         <ul class="nav social-navbar">
-          <li><a href="/merch/" title="Get some merchandise!"><i class="fa fa-shopping-basket"></i></a></li>
-          <li><a href="/support-octoprint/" title="Support OctoPrint!" data-event-category="supportlink" data-event-action="navigation"><i class="fas fa-donate"></i></a></li>
+          <li><a href="/merch/" title="Get some merchandise!" data-analytics='"Merch Click", { "props": { "origin": "navbar"} }'><i class="fa fa-shopping-basket"></i></a></li>
+          <li><a href="/support-octoprint/" title="Support OctoPrint!" data-analytics='"Support Click", { "props": { "origin": "navbar"} }'><i class="fas fa-donate"></i></a></li>
         </ul>
       </div>
       <div class="nav-collapse collapse">
@@ -16,8 +16,8 @@
           <li><a href="/blog/">Blog</a></li>
           <li><a href="https://community.octoprint.org">Forum</a></li>
           <li><a href="/download/">Download</a></li>
-          <li><a href="/support-octoprint/" title="Support the project!" data-event-category="supportlink" data-event-action="donate">Donate</a></li>
-          <li><a href="/merch/" title="Get some merchandise!" data-event-category="merchlink" data-event-action="navbar">Merchandise</a></li>
+          <li><a href="/support-octoprint/" title="Support the project!" data-analytics='"Support Click", { "props": { "origin": "menu"} }'>Donate</a></li>
+          <li><a href="/merch/" title="Get some merchandise!" data-analytics='"Merch Click", { "props": { "origin": "menu"} }'>Merchandise</a></li>
           <li><a href="http://plugins.octoprint.org">Plugins</a></li>
           <li class="dropdown">
             <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">More... <b class="caret"></b></a>

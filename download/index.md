@@ -34,7 +34,7 @@ however *is* recommended.
 OctoPi is available through the [Raspberry Pi Imager](https://www.raspberrypi.org/software/), which you can use to download and setup OctoPi. You can install it yourself, or alternatively simply buy one of the available
 
 <div class="text-center" style="margin-bottom: 1rem;">
-    <a class="btn btn-large btn-block" href="/merch/#kits" data-event-category="download" data-event-action="kits">All-in-one OctoPrint Kits</a>
+    <a class="btn btn-large btn-block" href="/merch/#kits" data-analytics='"Merch Click", { "props": { "origin": "download"} }'>All-in-one OctoPrint Kits</a>
 </div>
 
 ### Installing OctoPi using the Raspberry Pi Imager
@@ -115,7 +115,7 @@ yourself you can do so here.
 ### Stable OctoPi
 
 <div class="text-center">
-    <a class="btn btn-large btn-primary btn-block" href="{{ site.data.octopi.latest.url }}" data-event-category="download" data-event-action="latest">
+    <a class="btn btn-large btn-primary btn-block" href="{{ site.data.octopi.latest.url }}" data-analytics='"Download Click", { "props": { "target": "latest"} }'>
       OctoPi&nbsp;{{ site.data.octopi.latest.octopi_version }} &amp; OctoPrint&nbsp;{{ site.data.octopi.latest.octoprint_version }}
     </a>
     <small>SHA256: <code>{{ site.data.octopi.latest.sha256 }}</code></small><br>
@@ -129,7 +129,7 @@ yourself you can do so here.
 The current <strong>stable OctoPi {{ site.data.octopi.latest.octopi_version }} with OctoPrint Release Candidate {{ site.data.octopi.next_octoprint.octoprint_version }}</strong> can be found here: 
 
 <div class="text-center">
-    <a class="btn btn-large btn-block" href="{{ site.data.octopi.next_octoprint.url }}" data-event-category="download" data-event-action="next">
+    <a class="btn btn-large btn-block" href="{{ site.data.octopi.next_octoprint.url }}" data-analytics='"Download Click", { "props": { "target": "next_octoprint"} }'>
       OctoPi&nbsp;{{ site.data.octopi.latest.octopi_version }} &amp; OctoPrint&nbsp;{{ site.data.octopi.next_octoprint.octoprint_version }}
     </a>
     <small>SHA256: <code>{{ site.data.octopi.next_octoprint.sha256 }}</code></small><br>
@@ -144,7 +144,7 @@ The current <strong>stable OctoPi {{ site.data.octopi.latest.octopi_version }} w
 The current <strong>OctoPi Release Candidate {{ site.data.octopi.next_octopi.octopi_version }}</strong> can be found here: 
 
 <div class="text-center">
-    <a class="btn btn-large btn-block" href="{{ site.data.octopi.next_octopi.url }}" data-event-category="download" data-event-action="next">
+    <a class="btn btn-large btn-block" href="{{ site.data.octopi.next_octopi.url }}" data-analytics='"Download Click", { "props": { "target": "next_octopi"} }'>
       OctoPi&nbsp;{{ site.data.octopi.next_octopi.octopi_version }} &amp; OctoPrint&nbsp;{{ site.data.octopi.next_octopi.octoprint_version }}
     </a>
     <small><strong>{{ site.data.octopi.recommendation }}</strong></small><br>
