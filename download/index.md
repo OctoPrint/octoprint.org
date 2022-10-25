@@ -33,9 +33,9 @@ however *is* recommended.
 
 OctoPi is available through the [Raspberry Pi Imager](https://www.raspberrypi.org/software/), which you can use to download and setup OctoPi. You can install it yourself, or alternatively simply buy one of the available
 
-<div class="text-center" style="margin-bottom: 1rem;">
+<!--div class="text-center" style="margin-bottom: 1rem;">
     <a class="btn btn-large btn-block" href="/merch/#kits" data-analytics='"Merch Click", { "props": { "origin": "download"} }'>All-in-one OctoPrint Kits</a>
-</div>
+</div-->
 
 ### Installing OctoPi using the Raspberry Pi Imager
 
