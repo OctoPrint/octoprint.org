@@ -34,5 +34,6 @@
     "pi-default-password": "https://community.octoprint.org/t/40956",
     "latin-1": "https://community.octoprint.org/t/42684",
     "rollback-1-8-3": "https://community.octoprint.org/t/46646",
-    "reverse-proxy": "https://community.octoprint.org/t/1107"
+    "reverse-proxy": "https://community.octoprint.org/t/1107",
+    "reinstall": "https://community.octoprint.org/t/36628"
 }
