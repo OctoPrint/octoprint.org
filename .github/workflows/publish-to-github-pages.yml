@@ -89,19 +89,16 @@ jobs:
         run: |
           cd .github/scripts
           python update_page_from_rpiimagerjson.py
-
-      - name: 📦 Cache jekyll build bundle
-        uses: actions/cache@v3
+      
+      - name: 💎 Set up Ruby 3
+        uses: ruby/setup-ruby@v1
         with:
-          path: ./bundle
-          key: ${{ runner.os }}-jekyll-build-bundle-${{ hashFiles('**/Gemfile') }}
-
+          ruby-version: '3.0'
+          bundler-cache: true
+      
       - name: 🔨 Build page
         run: |
-          docker run \
-          -v ${{ github.workspace }}:/srv/jekyll \
-          -v ${{ github.workspace }}/bundle:/usr/local/bundle \
-          jekyll/jekyll:4 /bin/bash -c "chmod 777 /srv/jekyll && bundle install && bundle exec jekyll build --future"
+          bundle exec jekyll build --future --trace
 
       #- name: 🔎 Run link check
       #  id: lc
