@@ -94,14 +94,14 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ./bundle
-          key: ${{ runner.os }}-jekyll-build-bundle
+          key: ${{ runner.os }}-jekyll-build-bundle-${{ hashFiles('**/Gemfile') }}
 
       - name: 🔨 Build page
         run: |
           docker run \
           -v ${{ github.workspace }}:/srv/jekyll \
           -v ${{ github.workspace }}/bundle:/usr/local/bundle \
-          jekyll/builder:3.8.6 /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+          jekyll/jekyll:4 /bin/bash -c "chmod 777 /srv/jekyll && bundle install && bundle exec jekyll build --future"
 
       #- name: 🔎 Run link check
       #  id: lc
