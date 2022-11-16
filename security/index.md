@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Security Policy
-lastupdate: 2022-10-19 08:30:00 +0000
+lastupdate: 2022-11-16 15:45:00 +0100
 ---
 
-**If you think that you have found a security vulnerability in OctoPrint, please disclose it to us via our security e-mail address at [security@octoprint.org](mailto:security@octoprint.org).**
+**If you think that you have found a security vulnerability in OctoPrint, please disclose it to us via our security e-mail address at [security@octoprint.org](mailto:security@octoprint.org) or via a [GitHub Security Advisory](https://github.com/OctoPrint/OctoPrint/security/advisories).**
 
 We are mostly interested in reports by actual OctoPrint users that are familiar with the platform, but all high quality contributions are welcome. Please do your best to describe a clear and realistic impact for your report.
 
