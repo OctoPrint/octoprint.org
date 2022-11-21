@@ -41,7 +41,7 @@ donorbox_regularly: https://donorbox.org/support-octoprint?recurring=true
 donorbox_once: https://donorbox.org/support-octoprint
 github_sponsors: https://github.com/users/foosel/sponsorship
 
-sourcerepo: https://github.com/foosel/OctoPrint
+sourcerepo: https://github.com/OctoPrint/OctoPrint
 forum: https://community.octoprint.org
 discord: https://discord.octoprint.org
 irc: ircs://irc.libera.chat:6697/#octoprint
