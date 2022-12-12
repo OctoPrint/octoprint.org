@@ -200,7 +200,7 @@ general Linux installer for OctoPrint, video streamers, haproxy, etc.
 
 The related [octoprint_install](https://github.com/paukstelis/octoprint_install) serves as a single instance Linux installer.
 
-Both are maintained by [Paul Paukstelis](https://github.com/ppaukstelis).
+Both are maintained by [Paul Paukstelis](https://github.com/paukstelis).
 
 ----
 
