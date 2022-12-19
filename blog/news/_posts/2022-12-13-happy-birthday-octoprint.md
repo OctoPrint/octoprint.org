@@ -4,7 +4,7 @@ layout: post
 title: "Happy Birthday, OctoPrint!"
 author: foosel
 card: /assets/img/blog/2022-12/2022-12-13-octoprint-birthday-card.png
-featuredimage: /assets/img/blog/2022-12/2022-12-13-octoprint-birthday-poster.png
+featuredimage: /assets/img/blog/2022-12/2022-12-13-octoprint-birthday-card.png
 poster: /assets/img/blog/2022-12/2022-12-13-octoprint-birthday-poster.png
 date: 2022-12-13 14:30:00 +0100
 excerpt: OctoPrint is turning 10 years old this holiday season! Time to reflect a bit on its history, and to eat cake!
