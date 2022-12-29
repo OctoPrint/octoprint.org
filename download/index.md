@@ -6,7 +6,7 @@ description: Learn how to setup OctoPrint using the preinstalled OctoPi image fo
 ---
 
 <center>
-  <a href="#octopi">OctoPi (Raspberry Pi)</a> &middot; <a href="#octo4a">Octo4a (Android)</a> &middot; <a href="#docker">Docker install</a> &middot; <a href="#octoprint_deploy--octoprint_install">octoprint_deploy & octoprint_install (Linux)</a> &middot; <a href="#installing-manually">Manual install (Linux, Windows, Mac)</a>
+  <a href="#octopi">OctoPi (Raspberry Pi)</a> &middot; <a href="#octo4a">Octo4a (Android)</a> &middot; <a href="#docker">Docker install</a> &middot; <a href="#octoprint_deploy--octoprint_install">octoprint_deploy & octoprint_install (Linux)</a> &middot; <a href="#windows-installer">Windows Installer</a> &middot; <a href="#installing-manually">Manual install (Linux, Windows, Mac)</a>
 </center>
 
 # OctoPi
@@ -201,6 +201,13 @@ general Linux installer for OctoPrint, video streamers, haproxy, etc.
 The related [octoprint_install](https://github.com/paukstelis/octoprint_install) serves as a single instance Linux installer.
 
 Both are maintained by [Paul Paukstelis](https://github.com/paukstelis).
+
+----
+
+# Windows Installer
+
+[OctoPrint-WindowsInstaller](https://github.com/jneilliii/OctoPrint-WindowsInstaller) is a windows installation wizard for OctoPrint. It
+is maintained by [jneilliii](https://github.com/jneilliii). Please report issues [here](https://github.com/jneilliii/OctoPrint-WindowsInstaller/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
 
 ----
 
