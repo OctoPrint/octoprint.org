@@ -206,7 +206,7 @@ Both are maintained by [Paul Paukstelis](https://github.com/paukstelis).
 
 # Windows Installer
 
-[OctoPrint-WindowsInstaller](https://github.com/jneilliii/OctoPrint-WindowsInstaller) is a windows installation wizard for OctoPrint. It
+[OctoPrint-WindowsInstaller](https://github.com/jneilliii/OctoPrint-WindowsInstaller) is a Windows installation wizard for OctoPrint. It
 is maintained by [jneilliii](https://github.com/jneilliii). Please report issues [here](https://github.com/jneilliii/OctoPrint-WindowsInstaller/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
 
 ----
