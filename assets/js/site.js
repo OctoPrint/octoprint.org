@@ -12,7 +12,7 @@ $(function() {
   function setCookie(c_name, value, exdays, path) {
     var exdate = new Date();
     exdate.setDate(exdate.getDate() + exdays);
-    var c_value = escape(value) + ((exdays === null) ? "" : "; expires=" + exdate.toUTCString()) + ((path === null) ? "" : "; path=" + path);
+    var c_value = escape(value) + ((exdays === null) ? "" : "; expires=" + exdate.toUTCString()) + ((path === null) ? "" : "; path=" + path) + "; SameSite=Strict";
     document.cookie=c_name + "=" + c_value;
   }
   function getCookie(c_name) {
@@ -34,7 +34,7 @@ $(function() {
     return c_value;
   }
   function delCookie(name, path) {
-    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;' + ((path === null) ? "" : "; path=" + path);
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;' + ((path === null) ? "" : "; path=" + path) + "; SameSite=Strict";
   }
 
   // scroll sensitive stuff
@@ -80,7 +80,7 @@ $(function() {
   $("#banner .close-banner").click(function() {
       $("#banner").slideUp({complete: function() {
         evalHeader();
-        ga("send", "event", "banner", "close");
+        plausible("Banner closed");
       }});
   });
 
@@ -90,7 +90,7 @@ $(function() {
       $("#banner").slideDown({
           complete: function() {
             evalHeader();
-            ga("send", "event", "banner", "show");
+            plausible("Banner shown");
           }
       });
       setCookie("banner_shown", true, 14, "/");

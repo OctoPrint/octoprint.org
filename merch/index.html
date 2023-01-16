@@ -5,7 +5,7 @@ description: Show some love, get some swag, support the project!
 ---
 
 If you are looking for some OctoPrint merchandise, be it apparel, stickers or all-in-one kits, this is the right
-place to find <strong>officially endorsed products</strong> whose sales also help <strong><a href="/support-octoprint/" data-event-category="supportlink" data-event-action="merch">fund the project</a></strong>!
+place to find <strong>officially endorsed products</strong> whose sales also help <strong><a href="/support-octoprint/"  data-analytics='"Support Click", { "props": { "origin": "merch"} }'>fund the project</a></strong>!
 
 <div class="container support">
     <div class="row-fluid">
@@ -16,7 +16,7 @@ place to find <strong>officially endorsed products</strong> whose sales also hel
                     {% for merch in site.data.merchandise %}
                         <div class="merch">
                             {% if merch.url %}
-                            <a href="{{ merch.url }}" title="{{ merch.title }}" target="_blank" rel="noopener noreferrer" data-event-category="merch" data-event-action="{{ merch.title }}">
+                            <a href="{{ merch.url }}" title="{{ merch.title }}" target="_blank" rel="noopener noreferrer" data-analytics='"Merch Link", { "props": { "merch": "{{ merch.title }}"} }'>
                                 <span class="imgcontainer">
                                     <img src="{{ BASE_PATH }}/assets/img/merchandise/{{ merch.image }}" alt="{{ merch.title }}" title="{{ merch.title }}">
                                 </span><br>
@@ -45,7 +45,7 @@ place to find <strong>officially endorsed products</strong> whose sales also hel
                     {% for kit in site.data.kits %}
                         <div class="kit">
                             {% if kit.url %}
-                            <a href="{{ kit.url }}" title="{{ kit.title }}" target="_blank" rel="noopener noreferrer" data-event-category="kit" data-event-action="{{ kit.title }}">
+                            <a href="{{ kit.url }}" title="{{ kit.title }}" target="_blank" rel="noopener noreferrer" data-analytics='"Merch: Kit", { "props": { "kit": "{{ kit.title }}"} }'>
                                 <span class="imgcontainer">
                                     <img src="{{ BASE_PATH }}/assets/img/kits/{{ kit.image }}" alt="{{ kit.title }}" title="{{ kit.title }}">
                                 </span><br>
@@ -64,7 +64,7 @@ place to find <strong>officially endorsed products</strong> whose sales also hel
                             <em>Available from</em>
                             <ul class="resellers">
                                 {% for reseller in kit.resellers %}
-                                    <li><a href="{{ reseller.url }}" target="_blank" rel="noopener noreferrer" title="{{ reseller.title }}" data-event-category="kit" data-event-action="{{ kit.title }}">{{ reseller.title }}</a> [{{ reseller.country }}]</li>
+                                    <li><a href="{{ reseller.url }}" target="_blank" rel="noopener noreferrer" title="{{ reseller.title }}"  data-analytics='"Merch: Kit Reseller", { "props": { "kit": "{{ kit.title }}", "reseller": "{{ reseller.title }}"} }'>{{ reseller.title }}</a> [{{ reseller.country }}]</li>
                                 {% endfor %}
                             </ul>
                             {% endif %}

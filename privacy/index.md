@@ -2,7 +2,7 @@
 layout: page
 title: Privacy Policy
 robots: noindex,nofollow
-lastupdate: 2020-10-20 00:00:00 +0000
+lastupdate: 2022-10-20 00:00:00 +0000
 ---
 
 ## 1. An overview of data protection
@@ -170,8 +170,6 @@ To use the comment function you'll need to register at and log into community.oc
 handling user data can be found in the privacy policy of community.octoprint.org at
 [https://community.octoprint.org/privacy](https://community.octoprint.org/privacy){:target="_blank" rel="noopener"}.
 
-<center><em>This document was last updated on {{ page.lastupdate | date: "%B %-d, %Y" }}.</em></center>
-
 ### GitHub integration on plugins.octoprint.org
 
 The GitHub integration on plugins.octoprint.org is provided by a custom service run by
@@ -182,3 +180,5 @@ session cookie. The user's browser will send this session cookie to the server, 
 unpacks it, uses it to perform actions with GitHub on behalf of the user, and then throw
 the session information away again once the request is processed. At no point is session
 information or personable identifiable information of the user persisted in any way.
+
+<center><em>This document was last updated on {{ page.lastupdate | date: "%B %-d, %Y" }}.</em></center>

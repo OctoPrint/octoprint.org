@@ -1,6 +1,6 @@
 {% if site.data.sponsors.size > 0 %}
     <div class="flufftext">
-        OctoPrint's development is made possible only through the <strong><a href="/support-octoprint/" rel="noopener noreferrer" data-event-category="supportlink" data-event-action="downloadblurb">financial support</a></strong>
+        OctoPrint's development is made possible only through the <strong><a href="/support-octoprint/" rel="noopener noreferrer" data-analytics='"Support Click", { "props": { "origin": "downloadblurb"} }'>financial support</a></strong>
         of its awesome supporters and
     </div>
 
@@ -9,7 +9,7 @@
         {% assign sponsors = site.data.sponsors | sample: sponsor_count %}
         {% for sponsor in sponsors %}
             <div class="sponsor">
-                <a href="{{ sponsor.url }}" title="{{ sponsor.title }}" data-event-category="sponsor" data-event-action="{{ sponsor.title }}">
+                <a href="{{ sponsor.url }}" title="{{ sponsor.title }}" data-analytics='"Sponsor Link", { "props": { "sponsor": "{{ sponsor.title }}"} }'>
                     <img src="{{ BASE_PATH }}/assets/img/sponsors/{{ sponsor.logo }}" alt="{{ sponsor.title }}" title="{{ sponsor.title }}">
                 </a>
             </div>
@@ -17,11 +17,11 @@
     </div>
 {% else %}
     <div class="flufftext">
-        OctoPrint's development is made possible only through the <strong><a href="/support-octoprint/" rel="noopener noreferrer" data-event-category="supportlink" data-event-action="downloadblurb">financial support</a></strong>
+        OctoPrint's development is made possible only through the <strong><a href="/support-octoprint/" rel="noopener noreferrer" data-analytics='"Support Click", { "props": { "origin": "downloadblurb"} }'>financial support</a></strong>
         of its awesome supporters.
     </div>
 {% endif %}
 
-<a class="btn btn-primary btn-block donatelink" href="/support-octoprint/" title="Support the project!" data-event-category="supportlink" data-event-action="download">
+<a class="btn btn-primary btn-block donatelink" href="/support-octoprint/" title="Support the project!" data-analytics='"Support Click", { "props": { "origin": "download"} }'>
     <i class="fa fa-heart"></i> Support the project! <i class="fa fa-heart"></i>
 </a>

@@ -44,7 +44,7 @@ banner: true
                 {% if site.data.sponsors.size > 0 %}
                     <div class="row-fluid">
                         <div class="span12">
-                            OctoPrint's development is made possible only through the <strong><a href="/support-octoprint/" rel="noopener noreferrer" data-event-category="supportlink" data-event-action="startblurb">financial support</a></strong>
+                            OctoPrint's development is made possible only through the <strong><a href="/support-octoprint/" rel="noopener noreferrer" data-analytics='"Support Click", { "props": { "origin": "startblurb"} }'>financial support</a></strong>
                             of its awesome supporters and
                         </div>
                     </div>
@@ -55,7 +55,7 @@ banner: true
                         <div class="{% if remainder == 1 %}offset1 span10{% else %}span12{% endif %}">
                         {% for sponsor in sponsors %}
                             <div class="sponsor">
-                                <a href="{{ sponsor.url }}" title="{{ sponsor.title }}" data-event-category="sponsor" data-event-action="{{ sponsor.title }}">
+                                <a href="{{ sponsor.url }}" title="{{ sponsor.title }}" data-analytics='"Sponsor Link", { "props": { "sponsor": "{{ sponsor.title }}"} }'>
                                     <img src="{{ BASE_PATH }}/assets/img/sponsors/{{ sponsor.logo }}" alt="{{ sponsor.title }}">
                                 </a>
                             </div>
@@ -65,7 +65,7 @@ banner: true
                 {% else %}
                     <div class="row-fluid">
                         <div class="span12">
-                            OctoPrint's development is made possible only through the <strong><a href="/support-octoprint/" rel="noopener noreferrer" data-event-category="supportlink" data-event-action="startblurb">financial support</a></strong>
+                            OctoPrint's development is made possible only through the <strong><a href="/support-octoprint/" rel="noopener noreferrer" data-analytics='"Support Click", { "props": { "origin": "startblurb"} }'>financial support</a></strong>
                             of its awesome supporters.
                         </div>
                     </div>
@@ -76,7 +76,7 @@ banner: true
 
         <div class="row-fluid">
             <div class="offset2 span8 actionbox">
-                <a class="btn btn-large btn-block donatelink" href="/support-octoprint/" title="Support the project!" data-event-category="supportlink" data-event-action="home">
+                <a class="btn btn-large btn-block donatelink" href="/support-octoprint/" title="Support the project!" data-analytics='"Support Click", { "props": { "origin": "home"} }'>
                     <i class="fa fa-heart octo-heart"></i> Support the project!
                 </a>
                 <a class="btn btn-primary btn-large btn-block" title="Download" href="/download/"><i class="fa fa-download"></i> Download</a>
