@@ -6,14 +6,10 @@
 #  - title: reseller title
 #    country: country of reseller
 #    url: url to reseller, ideally product page
-#- title: EZPi Pro+ V2 – Silent Plug and Play Octoprint Setup by TH3D (US)
-#  url: https://www.th3dstudio.com/product/ezpi-pro/
-#  image: th3d-ezpi.jpg
-#  description: Raspberry Pi 4 4GB, power supply, pre-flashed & configured SD card & case, heatsink, optional webcam, support included.
-- title: Alien3D OctoPi Kit (US)
-  url: https://www.alien3d.us/product/alien3d-octopi/
-  image: alien3d-octoprint-kit.jpg
-  description: Raspberry Pi 4B 2GB, USB-C power supply, pre-flashed & configured SD card & case, heatsinks, RGB fan, Wifi hotspot, network configuration.
+#- title: Alien3D OctoPi Kit (US)
+#  url: https://www.alien3d.us/product/alien3d-octopi/
+#  image: alien3d-octoprint-kit.jpg
+#  description: Raspberry Pi 4B 2GB, USB-C power supply, pre-flashed & configured SD card & case, heatsinks, RGB fan, Wifi hotspot, network configuration.
 - title: Inland Pi 4B 2gb Octoprint Kit by Micro Center (US)
   url: https://www.microcenter.com/product/629382/inland-pi-4b-2gb-octoprint-kit
   image: microcenter-octoprint-kit.jpg
@@ -22,15 +18,4 @@
   url: https://www.microcenter.com/product/640437/micro-center-octoprint-32gb-micro-sd-card-3d-print-monitoring-and-controlling
   image: microcenter-octoprint-sdcard.jpg
   description: Pre-flashed 32GB SD card with logo.
-#- title: Raspberry Pi 3 OctoPrint Bundle by Watterott electronic (DE)
-#  url: https://shop.watterott.com/Raspberry-Pi-3-OctoPrint-Bundle-OctoPi_1
-#  image: watterott-octoprint-kit.jpg
-#  description: Raspberry Pi 3 incl. WiFi, power supply, pre-flashed SD card & case with logo.
-#- title: 3DPi 3D Printer Direct Wire OctoPrint Server (UK)
-#  url: https://www.ebay.co.uk/itm/3DPi-3D-Printer-Direct-Wire-Octoprint-Server-OctoPi-Raspberry-Pi-3B-16Gb-SD/223180691961?hash=item33f69b19f9:g:BsoAAOSwDOpbuyye
-#  image: 3dpi-octoprint-kit.jpg
-#  description: Raspberry Pi 3b+, power supply, pre-flashed & optionally configured 16GB SD, custom 3d printed case
-#- title: 3DPi 3D Printer Direct Wire OctoPrint Server with camera (UK)
-#  url: https://www.ebay.co.uk/itm/3DPi-3D-Printer-Direct-Wire-Octoprint-Server-Raspberry-Pi-3B-16Gb-SD-Web-Camera/253923242848?hash=item3b1f013360:g:nmcAAOSwR8pbuzEM
-#  image: 3dpi-octoprint-cam-kit.jpg
-#  description: Raspberry Pi 3b+, Logitech webcam, power supply, pre-flashed & optionally configured 16GB SD, custom 3d printed case
+
