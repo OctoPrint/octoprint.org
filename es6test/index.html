@@ -1,0 +1,124 @@
+---
+layout: page
+title: ES6 Quick Check
+description: Check if your browser supports ES6 features that OctoPrint uses
+---
+
+<script>
+    function print(data)
+    {
+        document.write(data);
+    }
+    
+    function runFunction(func)
+    {
+            if (typeof func !== undefined && typeof func === "function") 
+            { 
+                func(); 
+            } else { 
+                print("Fail"); 
+            };
+    
+    }
+
+    PASS = "Yes";
+    FAIL = "No";
+</script>
+<script>
+    function testAsyncAwait() {
+        try {
+            var testFunc = async function() {
+                print(PASS);
+            }
+            var testFunc2 = async function() {
+                await testFunc();
+            }
+            testFunc();
+        } catch(err) {
+            print(FAIL + " (" + err.message + ")");
+        }
+    }
+</script>
+<script>
+    function testGenerator() {
+        try {
+            var generator = function* () {
+                yield 1;
+                yield 2;
+                yield 3;
+                yield 4;
+                yield 5;
+            }
+            
+            var testFunc = async function() {
+                var j = 1;
+                for await(var i of generator()) {
+                    if (j != i) break;
+                    j++;
+                }
+                if (j != 6) print(FAIL);
+            
+                print(PASS);
+            }
+            testFunc();
+        } catch(err) {
+            print(FAIL + " (" + err.message + ")");
+        }
+    }
+</script>
+<script>
+    function testLet()
+    {
+        try {
+            let test = 1;
+            if (typeof test !== undefined && test === 1) {
+                print(PASS);
+            } else {
+                print(FAIL);
+            }
+        } catch(err) {
+            print(FAIL + " (" + err.message + ")");
+        }
+    }
+</script>
+<script>
+    testArrowFunctions = () => {
+        print(PASS);
+    }
+</script>
+
+This page allows you to do a quick check whether your browser supports the ES6 features that OctoPrint uses.
+
+<table class="table es6-table">
+    <thead>
+        <tr>
+            <th class="es6-feature">Feature</th>
+            <th class="es6-since">Required since</th>
+            <th class="es6-supported">Supported?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="es6-feature"><a href="https://caniuse.com/arrow-functions" target="_blank" rel="noopener noreferrer">arrow functions</a></td>
+            <td class="es6-since">1.9.0</td>
+            <td class="es6-supported"><script>(typeof testArrowFunctions !== undefined && typeof testArrowFunctions === "function") ? testArrowFunctions() : print(FAIL)</script></td>
+        </tr>
+        <tr>
+            <td class="es6-feature"><a href="https://caniuse.com/async-functions" target="_blank" rel="noopener noreferrer">async/await</a></td>
+            <td class="es6-since">1.9.0</td>
+            <td class="es6-supported"><script>(typeof testAsyncAwait !== undefined && typeof testAsyncAwait === "function") ? testAsyncAwait() : print(FAIL)</script></td>
+        </tr>
+        <tr>
+            <td class="es6-feature"><a href="https://caniuse.com/es6-generators" target="_blank" rel="noopener noreferrer">generator</a></td>
+            <td class="es6-since">1.9.0</td>
+            <td class="es6-supported"><script>(typeof testGenerator !== undefined && typeof testGenerator === "function") ? testGenerator() : print(FAIL)</script></td>
+        </tr>
+        <tr>
+            <td class="es6-feature"><a href="https://caniuse.com/let" target="_blank" rel="noopener noreferrer">let</a></td>
+            <td class="es6-since">1.9.0</td>
+            <td class="es6-supported"><script>(typeof testLet !== undefined && typeof testLet === "function") ? testLet() : print(FAIL)</script></td>
+        </tr>
+    </tbody>
+</table>
+
+If any of the tests above say "No", you will need to use a different browser or update your current browser to a newer version before you can use OctoPrint.
