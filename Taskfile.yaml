@@ -1,0 +1,12 @@
+version: "3"
+
+tasks:
+  serve:
+    cmds:
+      - |
+        bundle exec jekyll s --future
+  
+  assets:
+    cmds:
+      - |
+        lessc "--clean-css=--s1 --advanced --compatibility=ie8" assets/less/site.less assets/css/site.css
