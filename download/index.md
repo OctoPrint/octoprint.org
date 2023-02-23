@@ -41,7 +41,7 @@ OctoPi is available through the [Raspberry Pi Imager](https://www.raspberrypi.or
 
 > 🤚 **Before you begin**
 > 
-> Read and follow these instructions **precisely**. Most importantly, **leave the system username as "pi", do not change it to anything else or OctoPrint won't work!**
+> Read and follow these instructions **precisely**.
 
 1. If you haven't already, **download and install [Raspberry Pi Imager](https://raspberrypi.org/software)** on your computer
 
@@ -49,16 +49,16 @@ OctoPi is available through the [Raspberry Pi Imager](https://www.raspberrypi.or
 
 3. **Open advanced options** by clicking on the button with the gear, or by using the keyboard shortcut <code>ctrl</code>+<code>shift</code>+<code>x</code> and then:
 
-   * **Configure your wifi options**: Set your SSID, password and WiFi country:
-     ![Advanced Options - Wifi Setup](/assets/img/download/advanced-wifi.png)
+   * **Configure your wifi options**: Set your SSID, password and WiFi country.
  
    * **Change the *system* password** in "Set username and password" by entering a new password to use for the system user "pi". This is *not* the password you'll use for logging into
-     OctoPrint but one that you'll have to use to log into your Pi via SSH should you ever need to. **Leave the username as "pi", do not change it to anything else!**
-     ![Advanced Options - Wifi Setup](/assets/img/download/advanced-password.png)
+     OctoPrint but one that you'll have to use to log into your Pi via SSH should you ever need to.
  
    * Optionally: Change the configured timezone in "Set locale settings"
  
    * Optionally: Change the hostname in "Set hostname"
+
+   ![Advanced options, showing the "Set username and password" box ticked and a new password set, and showing the "Configure wireless LAN" box ticked and an SSID and Password set.](/assets/img/download/advanced-options.png)
 
 4. **Install the image to your SD card**, then plug everything in to your Raspberry Pi and boot it up. **Do not format the SD card after installing, even if prompted to do so.** This will break the installation and you will have to start over!
 
@@ -154,7 +154,7 @@ The current <strong>OctoPi Release Candidate {{ site.data.octopi.next_octopi.oct
 
 ### OctoPi Nightlies
 
-You can also get the [32bit nightlies here](https://unofficialpi.org/Distros/OctoPi/nightly/) or the highly experimental [64bit nightlies here](https://unofficialpi.org/Distros/OctoPi/nightly-arm64/).
+You can also get the [32bit nightlies here](https://unofficialpi.org/Distros/OctoPi/nightly/) or the [64bit nightlies here](https://unofficialpi.org/Distros/OctoPi/nightly-arm64/).
 
 
 ## Further resources
