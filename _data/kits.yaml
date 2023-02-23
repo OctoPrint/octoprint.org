@@ -18,4 +18,7 @@
   url: https://www.microcenter.com/product/640437/micro-center-octoprint-32gb-micro-sd-card-3d-print-monitoring-and-controlling
   image: microcenter-octoprint-sdcard.jpg
   description: Pre-flashed 32GB SD card with logo.
-
+- title: Orange Pi for OctoPrint by the Obico Team (US)
+  url: https://store.obico.io/collections/orange-pi-for-octoprint
+  image: obico-orange-pi.png
+  description: Orange Pi SBC, USB-C Power Supply, 3D-printable Case, Logitech C270 Webcam, Downloadable OctoPrint Image, One Year Obico Pro Plan
