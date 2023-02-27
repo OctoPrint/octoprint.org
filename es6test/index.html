@@ -67,8 +67,7 @@ description: Check if your browser supports ES6 features that OctoPrint uses
     }
 </script>
 <script>
-    function testLet()
-    {
+    function testLet() {
         try {
             let test = 1;
             if (typeof test !== undefined && test === 1) {
@@ -84,6 +83,15 @@ description: Check if your browser supports ES6 features that OctoPrint uses
 <script>
     testArrowFunctions = () => {
         print(PASS);
+    }
+</script>
+<script>
+    function testTemplateLiterals() {
+        try {
+            print(`${PASS}`);
+        } catch (err) {
+            print(FAIL + " (" + err.message + ")");
+        }
     }
 </script>
 
@@ -117,6 +125,11 @@ This page allows you to do a quick check whether your browser supports the ES6 f
             <td class="es6-feature"><a href="https://caniuse.com/let" target="_blank" rel="noopener noreferrer">let</a></td>
             <td class="es6-since">1.9.0</td>
             <td class="es6-supported"><script>(typeof testLet !== undefined && typeof testLet === "function") ? testLet() : print(FAIL)</script></td>
+        </tr>
+        <tr>
+            <td class="es6-feature"><a href="https://caniuse.com/template-literals" target="_blank" rel="noopener noreferrer">template literals</a></td>
+            <td class="es6-since">1.9.0</td>
+            <td class="es6-supported"><script>(typeof testTemplateLiterals !== undefined && typeof testTemplateLiterals === "function") ? testTemplateLiterals() : print(FAIL)</script></td>
         </tr>
     </tbody>
 </table>
