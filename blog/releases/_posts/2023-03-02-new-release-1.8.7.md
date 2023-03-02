@@ -32,7 +32,7 @@ I was hoping to make 1.9.0 the first release of this year, but instead here's a 
 > 
 > **🐛 Bug fixes**
 > 
-> - [#4744](https://github.com/OctoPrint/OctoPrint/issues/4744) - Do not send `None` to `Locale.parse` if no match can be made between the request's accepted languages and the installed languages. Fixes a 500 server error on the API in case of Babel being at of version of 2.12 or higher.
+> - [#4744](https://github.com/OctoPrint/OctoPrint/issues/4744) - Do not send `None` to `Locale.parse` if no match can be made between the request's accepted languages and the installed languages. Fixes a 500 server error on the API in case of Babel being at a version of 2.12 or higher.
 
 You can also take a look at the [changelog on GitHub](https://github.com/OctoPrint/OctoPrint/releases/tag/1.8.7), but it's really short this time.
 
