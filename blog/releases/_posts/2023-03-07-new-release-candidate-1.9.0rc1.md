@@ -105,7 +105,7 @@ first_time_contributors:
 ---
 
 <div class="alert">
-  No matter how much you test, sometimes something slips through. 1.9.0rc2 is incoming due to the <code>octoprint_setuptools</code> refactoring breaking most plugin installs on 1.9.0rc1 after all. Sorry for the inconvenience, new RC asap!
+  No matter how much you test, sometimes something slips through. 1.9.0rc2 is incoming due to the <code>octoprint_setuptools</code> refactoring breaking most plugin installs on 1.9.0rc1 after all. Sorry for the inconvenience, <strike>new RC asap</strike>1.9.0rc2 has been pushed to fix this!
 </div>
 
 Originally planned for late 2022, I'm happy to finally present you the first release candidate of the upcoming 1.9.0 release. Given how long this has been brewing, the [changelog](https://gist.github.com/foosel/f67a7a5b697d68f94ecbf4d49647c572) has grown quite large (Gist since 1.9.0rc1 had to be pulled). Let's take a look at some of the highlights, shall we?
