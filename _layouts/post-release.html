@@ -63,9 +63,9 @@ layout: post
 
 {% if page.contributors %}
 <p>
-    A special <strong>Thank you!</strong> to these fine people for their PRs:
+    A special <strong>Thank You!</strong> to these {{ page.contributors | size }} fine people for their PRs{% if page.first_time_contributors %}, and an extra warm welcome to our <em> {{ page.first_time_contributors | size }} first-time contributors! 🎉</em>{% else %}!{% endif %}
 </p>
-{% include github_user_grid.html users=page.contributors %}
+{% include github_user_grid.html users=page.contributors highlight=page.first_time_contributors %}
 {% endif %}
 
 {% if page.security %}

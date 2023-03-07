@@ -25,7 +25,14 @@ layout: post
 </p>
 <p>
     Special thanks to everyone who contributed to this release candidate and provided full, analyzable bug reports, you help
-    making the next release as stable as possible! {% if page.contributors %}And a big Thank You to {% include github_users users=page.contributors %} for their PRs!{% endif %}
+    making the next release as stable as possible! 
+</p>
+{% if page.contributors %}
+<p>
+    A special <strong>Thank You!</strong> to these {{ page.contributors | size }} fine people for their PRs{% if page.first_time_contributors %}, and an extra warm welcome to our <em> {{ page.first_time_contributors | size }} first-time contributors! 🎉</em>{% else %}!{% endif %}
+</p>
+{% include github_user_grid.html users=page.contributors highlight=page.first_time_contributors %}
+{% endif %}
 </p>
 <p>
     As the past RCs have shown me that a lot of people appear to be unaware of this: <strong>Please do <em>not</em> install this RC if you
