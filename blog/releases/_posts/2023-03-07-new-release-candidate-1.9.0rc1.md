@@ -23,6 +23,7 @@ excerpt: The first release candidate for the upcoming 1.9.0 release containing n
 release: 1.9.0rc1
 channel: Maintenance RCs
 feedback: 4748
+changelog: https://gist.github.com/foosel/f67a7a5b697d68f94ecbf4d49647c572
 
 headsups:
 - title: "Heads-up: OctoPrint's web interface now requires ES9 (EcmaScript 2018) support in your browser"
@@ -107,7 +108,7 @@ first_time_contributors:
   No matter how much you test, sometimes something slips through. 1.9.0rc2 is incoming due to the <code>octoprint_setuptools</code> refactoring breaking most plugin installs on 1.9.0rc1 after all. Sorry for the inconvenience, new RC asap!
 </div>
 
-Originally planned for late 2022, I'm happy to finally present you the first release candidate of the upcoming 1.9.0 release. Given how long this has been brewing, the [changelog](https://github.com/OctoPrint/OctoPrint/releases/tag/1.9.0rc1) has grown quite large. Let's take a look at some of the highlights, shall we?
+Originally planned for late 2022, I'm happy to finally present you the first release candidate of the upcoming 1.9.0 release. Given how long this has been brewing, the [changelog](https://gist.github.com/foosel/f67a7a5b697d68f94ecbf4d49647c572) has grown quite large (Gist since 1.9.0rc1 had to be pulled). Let's take a look at some of the highlights, shall we?
 
 * **The Webcam integration now offers a plugin interface** and the existing webcam support has been extracted into its own (bundled) "Classic Webcam" plugin. Third party plugins will now be able to offer new [webcam providers](https://docs.octoprint.org/en/maintenance/plugins/mixins.html#webcamproviderplugin) for snapshots, and also [webcam templates](https://docs.octoprint.org/en/maintenance/plugins/mixins.html#octoprint.plugin.TemplatePlugin) for embedding streams. This also includes native multi cam support in the core UI - if there's more than one plugin providing webcam templates, they will be offered to switch to, see [this GIF](#image-1).
 * With 1.9.0 plugins can now **customize the temperature chart markers** introduced in 1.8.0, thanks to the work by @rfinnie, who also promptly utilized it in recent versions of his BedCooldown plugin as can be seen in the [below screenshot](#image-2).
