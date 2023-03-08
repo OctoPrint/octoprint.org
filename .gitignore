@@ -7,3 +7,4 @@ _site
 Gemfile.lock
 .vscode/
 venv/
+vendor/

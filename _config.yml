@@ -9,7 +9,7 @@ exclude:
 - "*.iml"
 - fetch_yt_preview
 - README.md
-- docker-compose.yml
+- Taskfile.yaml
 
 highlighter: rouge
 markdown: kramdown
