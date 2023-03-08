@@ -6,7 +6,7 @@ description: Learn how to setup OctoPrint using the preinstalled OctoPi image fo
 ---
 
 <center>
-  <a href="#octopi">OctoPi (Raspberry Pi)</a> &middot; <a href="#octo4a">Octo4a (Android)</a> &middot; <a href="#docker">Docker install</a> &middot; <a href="#octoprint_deploy--octoprint_install">octoprint_deploy & octoprint_install (Linux)</a> &middot; <a href="#windows-installer">Windows Installer</a> &middot; <a href="#installing-manually">Manual install (Linux, Windows, Mac)</a>
+  <a href="#octopi">OctoPi (Raspberry Pi)</a> &middot; <a href="#octo4a">Octo4a (Android)</a> &middot; <a href="#octoprint-for-orange-pi">OctoPrint for Orange Pi</a> &middot; <a href="#docker">Docker install</a> &middot; <a href="#octoprint_deploy--octoprint_install">octoprint_deploy & octoprint_install (Linux)</a> &middot; <a href="#windows-installer">Windows Installer</a> &middot; <a href="#installing-manually">Manual install (Linux, Windows, Mac)</a>
 </center>
 
 # OctoPi
@@ -179,6 +179,12 @@ how to obtain the app, install and run it.
 There's also a video guide on how to get Octo4a up and running by [Thomas Sanladerer](https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A).
 
 {% include youtube.html vid="74xdib_-X38" %}
+
+----
+
+# OctoPrint for Orange Pi
+
+The [people at Obico](https://www.obico.io/) maintains an image suitable for use with the Orange Pi Zero 2 and the Orange Pi 3. You can find it [here](https://www.obico.io/docs/user-guides/orange-pi-for-octoprint-download-setup/). Please report issues to Obico.
 
 ----
 
