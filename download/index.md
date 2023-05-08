@@ -6,7 +6,7 @@ description: Learn how to setup OctoPrint using the preinstalled OctoPi image fo
 ---
 
 <center>
-  <a href="#octopi">OctoPi (Raspberry Pi)</a> &middot; <a href="#octo4a">Octo4a (Android)</a> &middot; <a href="#octoprint-for-orange-pi">OctoPrint for Orange Pi</a> &middot; <a href="#docker">Docker install</a> &middot; <a href="#octoprint_deploy--octoprint_install">octoprint_deploy & octoprint_install (Linux)</a> &middot; <a href="#windows-installer">Windows Installer</a> &middot; <a href="#installing-manually">Manual install (Linux, Windows, Mac)</a>
+  <a href="#octopi">OctoPi (Raspberry Pi)</a> &middot; <a href="#octo4a">Octo4a (Android)</a> &middot; <a href="#octoprint-for-orange-pi">OctoPrint for Orange Pi</a> &middot; <a href="#docker">Docker install</a> &middot; <a href="#octoprint_deploy--octoprint_install">octoprint_install & octoprint_deploy (Linux)</a> &middot; <a href="#windows-installer">Windows Installer</a> &middot; <a href="#installing-manually">Manual install (Linux, Windows, Mac)</a>
 </center>
 
 # OctoPi
@@ -198,13 +198,12 @@ more details on usage and configuration.
 
 ----
 
-# octoprint_deploy & octoprint_install
-
+# octoprint_install & octoprint_deploy (Linux)
+[octoprint_install](https://github.com/paukstelis/octoprint_install) is a guided script for setting up OctoPrint and a webcam streamer on
+virtually any Linux system. For those without a Linux background it provides the simplest solution to getting OctoPrint up and running.
 [octoprint_deploy](https://github.com/paukstelis/octoprint_deploy) is a guided script for creating multiple OctoPrint instances.
 This enables control of multiple printers on a single piece of hardware. It is compatible with OctoPi and also functions as a 
 general Linux installer for OctoPrint, video streamers, haproxy, etc.
-
-The related [octoprint_install](https://github.com/paukstelis/octoprint_install) serves as a single instance Linux installer.
 
 Both are maintained by [Paul Paukstelis](https://github.com/paukstelis).
 
