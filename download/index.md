@@ -231,7 +231,7 @@ More specific setup instructions for the most common runtime environments can be
 ##  Linux
 
 For installing OctoPrint on Linux, please take a look at [the setup instructions for Raspbian on the forum](https://community.octoprint.org/t/setting-up-octoprint-on-a-raspberry-pi-running-raspbian/2337/).
-They should be pretty much identical on other Linux distributions.
+They should be pretty much identical on other Linux distributions. See <a href="#octoprint_deploy--octoprint_install">octoprint_install & octoprint_deploy (Linux)</a> above for simplified scripted options.
 
 ##  Windows
 
