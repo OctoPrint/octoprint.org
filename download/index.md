@@ -6,7 +6,7 @@ description: Learn how to setup OctoPrint using the preinstalled OctoPi image fo
 ---
 
 <center>
-  <a href="#octopi">OctoPi (Raspberry Pi)</a> &middot; <a href="#octo4a">Octo4a (Android)</a> &middot; <a href="#octoprint-for-orange-pi">OctoPrint for Orange Pi</a> &middot; <a href="#docker">Docker install</a> &middot; <a href="#octoprint_deploy--octoprint_install">octoprint_install & octoprint_deploy (Linux)</a> &middot; <a href="#windows-installer">Windows Installer</a> &middot; <a href="#installing-manually">Manual install (Linux, Windows, Mac)</a>
+  <a href="#octopi">OctoPi (Raspberry Pi)</a> &middot; <a href="#octo4a">Octo4a (Android)</a> &middot; <a href="#octoprint-for-orange-pi">OctoPrint for Orange Pi</a> &middot; <a href="#docker">Docker install</a> &middot; <a href="#octoprint_install--octoprint_deploy">octoprint_install & octoprint_deploy (Linux)</a> &middot; <a href="#windows-installer">Windows Installer</a> &middot; <a href="#installing-manually">Manual install (Linux, Windows, Mac)</a>
 </center>
 
 # OctoPi
@@ -231,7 +231,7 @@ More specific setup instructions for the most common runtime environments can be
 ##  Linux
 
 For installing OctoPrint on Linux, please take a look at [the setup instructions for Raspbian on the forum](https://community.octoprint.org/t/setting-up-octoprint-on-a-raspberry-pi-running-raspbian/2337/).
-They should be pretty much identical on other Linux distributions. See <a href="#octoprint_deploy--octoprint_install">octoprint_install & octoprint_deploy (Linux)</a> above for simplified scripted options.
+They should be pretty much identical on other Linux distributions. See <a href="#octoprint_install--octoprint_deploy">octoprint_install & octoprint_deploy (Linux)</a> above for simplified scripted options.
 
 ##  Windows
 
