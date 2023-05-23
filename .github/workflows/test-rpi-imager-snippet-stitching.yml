@@ -28,7 +28,7 @@ jobs:
           output: /tmp/rpi-imager-camerastack.json
           includePrereleases: true
           matchRegex: "camera-streamer"
-          ignoreRegex: "rc|mark:untested|mark:ignored"
+          ignoreRegex: "rc|mark:untested"
 
       - name: 🔨 Preprocess the snippets
         run: |
