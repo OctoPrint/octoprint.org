@@ -32,12 +32,12 @@ jobs:
 
       - name: 🔨 Preprocess the snippets
         run: |
-          if [-f /tmp/rpi-imager-stable.json]; then
+          if [ -f /tmp/rpi-imager-stable.json ]; then
             description=$(jq -r '.name' /tmp/rpi-imager-stable.json)
             jq '. + {"name": "OctoPi (stable)", "description": "'"$description"'", "init_format": "systemd"}' /tmp/rpi-imager-stable.json > /tmp/rpi-imager-stable.json.tmp && mv /tmp/rpi-imager-stable.json.tmp /tmp/rpi-imager-stable.json
           fi
 
-          if [-f /tmp/rpi-imager-camerastack.json]; then
+          if [ -f /tmp/rpi-imager-camerastack.json ]; then
             description=$(jq -r '.name' /tmp/rpi-imager-camerastack.json)
             jq '. + {"name": "OctoPi (new camera stack)", "description": "'"$description"'", "init_format": "systemd"}' /tmp/rpi-imager-camerastack.json > /tmp/rpi-imager-camerastack.json.tmp && mv /tmp/rpi-imager-camerastack.json.tmp /tmp/rpi-imager-camerastack.json
           fi
