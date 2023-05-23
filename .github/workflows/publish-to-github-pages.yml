@@ -15,18 +15,43 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: 🔨 Build rpi-imager.json
-        uses: OctoPrint/actions/rpi-imager-json@main
+      - name: ⬇ Fetch rpi-imager.json snippet for stable
+        uses: OctoPrint/actions/fetch-rpi-imager-snippet@main
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
           owner: OctoPrint
           repo: OctoPi-UpToDate
+          output: /tmp/rpi-imager-stable.json
           ignoreRegex: "rc|branch|mark:untested|mark:ignored"
-          #versionRegex: "^(?<octopi>.*?)-(?<octoprint>.*?)-\\d+$"
+
+      - name: ⬇ Fetch rpi-imager.json snippet for new camera stack
+        uses: OctoPrint/actions/fetch-rpi-imager-snippet@main
+        with:
+          token: "${{ secrets.GITHUB_TOKEN }}"
+          owner: OctoPrint
+          repo: OctoPi-UpToDate
+          output: /tmp/rpi-imager-camerastack.json
+          includePrereleases: true
+          matchRegex: "camera-streamer"
+          ignoreRegex: "rc|mark:untested"
+
+      - name: 🔨 Preprocess the snippets
+        run: |
+          if [ -f /tmp/rpi-imager-stable.json ]; then
+            description=$(jq -r '.name' /tmp/rpi-imager-stable.json)
+            jq '. + {"name": "OctoPi (stable)", "description": "'"$description"'", "init_format": "systemd"}' /tmp/rpi-imager-stable.json > /tmp/rpi-imager-stable.json.tmp && mv /tmp/rpi-imager-stable.json.tmp /tmp/rpi-imager-stable.json
+          fi
+
+          if [ -f /tmp/rpi-imager-camerastack.json ]; then
+            description=$(jq -r '.name' /tmp/rpi-imager-camerastack.json)
+            jq '. + {"name": "OctoPi (new camera stack)", "description": "'"$description"'", "init_format": "systemd"}' /tmp/rpi-imager-camerastack.json > /tmp/rpi-imager-camerastack.json.tmp && mv /tmp/rpi-imager-camerastack.json.tmp /tmp/rpi-imager-camerastack.json
+          fi
+
+      - name: 🔨 Build rpi-imager.json
+        uses: OctoPrint/actions/stitch-rpi-imager-snippets@main
+        with:
           output: ./files/rpi-imager.json
-          nameStable: "OctoPi (stable)"
-          namePrerelease: "OctoPi (prerelease)"
-          initFormat: systemd
+          snippets: /tmp/rpi-imager-stable.json /tmp/rpi-imager-camerastack.json
         
       #- name: 🔨 Build rpi-imager-nightlies.json
       #  run: |
