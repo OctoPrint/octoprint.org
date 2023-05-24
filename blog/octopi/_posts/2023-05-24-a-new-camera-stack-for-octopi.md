@@ -37,7 +37,7 @@ The goal is to make the new camera stack the default in the future, but for now 
 
 If you want to help with testing, just play around with it or if you have been waiting for something that supports the RPiCamV3 out of the box, please grab the new image, either via the RPi Imager or by picking the latest "branch camera-streamer" build from [the OctoPi-UpToDate release page](https://github.com/OctoPrint/OctoPi-UpToDate/releases), and give it a spin! 
 
-At this point it can be considered fairly stable based on the initial testing by some awesome members of the community 💕, but if you encounter any issues with *camera functionality* specifically, **please report them on the [OctoPi-UpToDate repository](https://github.com/OctoPrint/OctoPi-UpToDate)** (*not* the OctoPi repository please - this new stack is not (yet?) part of stock OctoPi and I don't want to confuse people and especially the OctoPi maintainer by having issues with it reported there).
+At this point it can be considered fairly stable based on the initial testing by some awesome members of the community 💕, but if you encounter any issues with *camera functionality* specifically, **please report them on the [OctoPi-UpToDate repository](https://github.com/OctoPrint/OctoPi-UpToDate/tree/camera-streamer)** (*not* the OctoPi repository please - this new stack is not (yet?) part of stock OctoPi and I don't want to confuse people and especially the OctoPi maintainer by having issues with it reported there).
 
 ## What's next?
 
