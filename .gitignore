@@ -8,4 +8,4 @@ Gemfile.lock
 .vscode/
 venv/
 vendor/
-**/Thumbs.db
+**/Thumbs.db*
