@@ -126,29 +126,29 @@ stats:
   printtimegraph: /assets/img/blog/2023-05/2023-05-23-rc-prints.png
   piecharts: /assets/img/blog/2023-05/2023-05-23-rc-piecharts.png
   totalinstances: 1683
-  totalprinttime: 131214
+  totalprinttime: 103811
   rcs:
   - tag: 1.9.0rc3
     date: 2023-03-22
     instances: 893
-    printtime: 27633
+    printtime: 27635
   - tag: 1.9.0rc4
     date: 2023-04-12
     instances: 195
-    printtime: 16195
+    printtime: 1351
   - tag: 1.9.0rc5
     date: 2023-04-13
     instances: 1035
-    printtime: 14239
+    printtime: 42893
   - tag: 1.9.0rc6
     date: 2022-05-08
     instances: 780
-    printtime: 56103
+    printtime: 14869
   rcs_incomplete:
   - tag: 1.9.0rc1
     date: 2023-03-07
     instances: 18
-    printtime: 131
+    printtime: 150
   - tag: 1.9.0rc2
     date: 2023-03-07
     instances: 714
