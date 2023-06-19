@@ -15,3 +15,9 @@ tasks:
     cmds:
       - |
         lessc "--clean-css=--s1 --advanced --compatibility=ie8" assets/less/site.less assets/css/site.css
+  
+  yt-preview:
+    cmds:
+      - |
+        ./fetch_yt_preview
+
