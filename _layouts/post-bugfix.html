@@ -82,10 +82,12 @@ layout: post
 </p>
 
 {% if page.contributors %}
+{% assign contributor_count = page.contributors | size %}
+{% assign first_timer_count = page.first_time_contributors | size %}
 <p>
-    A special <strong>Thank you!</strong> to these fine people for their PRs:
+    A special <strong>Thank You!</strong> to {% if contributor_count > 1 %}these {{ contributor_count }} fine people{% else %}this fine person{% endif %} for their PRs{% if page.first_time_contributors %}, and an extra warm welcome to our <em>{% if first_timer_count > 1 %}{{ first_timer_count }} first-time contributors{% else %}one first-time contributor{% endif %}! 🎉</em>{% else %}!{% endif %}
 </p>
-{% include github_user_grid.html users=page.contributors %}
+{% include github_user_grid.html users=page.contributors highlight=page.first_time_contributors %}
 {% endif %}
 
 <h3 id="further-information">Further Information</h3>

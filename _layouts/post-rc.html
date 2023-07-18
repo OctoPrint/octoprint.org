@@ -28,12 +28,13 @@ layout: post
     making the next release as stable as possible! 
 </p>
 {% if page.contributors %}
+{% assign contributor_count = page.contributors | size %}
+{% assign first_timer_count = page.first_time_contributors | size %}
 <p>
-    A special <strong>Thank You!</strong> to these {{ page.contributors | size }} fine people for their PRs{% if page.first_time_contributors %}, and an extra warm welcome to our <em> {{ page.first_time_contributors | size }} first-time contributors! 🎉</em>{% else %}!{% endif %}
+    A special <strong>Thank You!</strong> to {% if contributor_count > 1 %}these {{ contributor_count }} fine people{% else %}this fine person{% endif %} for their PRs{% if page.first_time_contributors %}, and an extra warm welcome to our <em>{% if first_timer_count > 1 %}{{ first_timer_count }} first-time contributors{% else %}one first-time contributor{% endif %}! 🎉</em>{% else %}!{% endif %}
 </p>
 {% include github_user_grid.html users=page.contributors highlight=page.first_time_contributors %}
 {% endif %}
-</p>
 <p>
     As the past RCs have shown me that a lot of people appear to be unaware of this: <strong>Please do <em>not</em> install this RC if you
     expect a fully stable version</strong>. It is not a stable release, it is a release <em>candidate</em>:
