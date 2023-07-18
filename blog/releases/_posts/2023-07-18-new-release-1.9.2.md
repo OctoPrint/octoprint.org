@@ -2,7 +2,7 @@
 layout: post-bugfix
 title: 'New release: 1.9.2'
 author: foosel
-date: 2023-07-27 13:15:00 +0200
+date: 2023-07-18 13:15:00 +0200
 card: /assets/img/blog/2023-07/2023-07-18-octoprint-1.9.2-card.png
 featuredimage: /assets/img/blog/2023-07/2023-07-18-octoprint-1.9.2-card.png
 poster: /assets/img/blog/2023-07/2023-07-18-octoprint-1.9.2-poster.png
