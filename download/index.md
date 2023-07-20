@@ -200,7 +200,7 @@ more details on usage and configuration.
 
 # octoprint_deploy (Linux)
 
-[octoprint_deploy](https://github.com/paukstelis/octoprint_deploy) is a guided script for installing OctoPrint, video streamers, haproxy, etc on virtually any Linux system. It guides the user through creation of one or more OctoPrint instances. Creating multiple instances with the script allows control of multiple printers on a single piece of hardware. It is compatible with OctoPi.
+[octoprint_deploy](https://github.com/paukstelis/octoprint_deploy) is a guided script for installing OctoPrint and additional tools (video streamer, haproxy) on virtually any Linux system. It guides the user through creation of one or more OctoPrint instances. Creating multiple instances with the script allows control of multiple printers on a single piece of hardware. A variety of utilities improve the multi-instance experience, including automated creation of udev rules, syncing users between instances, and sharing file uploads between instances. It is compatible with OctoPi.
 
 Maintained by [Paul Paukstelis](https://github.com/paukstelis).
 
