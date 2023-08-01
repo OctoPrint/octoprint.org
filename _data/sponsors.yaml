@@ -1,30 +1,15 @@
 - title: 3DPrinterOS
   logo: 3dprinteros.png
   url: https://www.3dprinteros.com/?utm_source=referral&utm_medium=octoprint&utm_campaign=sdk_sponsorship
-#- title: Artillery 3D
-#  logo: artillery3d.png
-#  url: https://www.artillery3d.com/
 - title: BigTreeTech
   logo: bigtreetech.png
   url: https://www.biqu.equipment/
-#- title: BuildBee
-#  logo: buildbee.png
-#  url: https://buildbee.com/
-- title: Creality
-  logo: creality.png
-  url: https://www.creality3dofficial.com/
 - title: Fiberpunk
   logo: fiberpunk.png
   url: https://fiber-punk.com/
 - title: Raise 3D
   logo: raise3d.png
   url: https://www.raise3d.com
-#- title: TH3D Studio
-#  logo: th3d.png
-#  url: https://www.th3dstudio.com
 - title: Obico
   logo: obico.png
   url: https://www.obico.io/octoprint.html
-- title: Makerbase
-  logo: makerbase.png
-  url: https://makerbase.store/
