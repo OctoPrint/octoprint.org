@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Browser Check
-description: Check if your browser supports the features that OctoPrint uses
+description: Check if your browser supports the JavaScript features that OctoPrint uses
 ---
 
 <script>
@@ -118,6 +118,20 @@ description: Check if your browser supports the features that OctoPrint uses
     }
 </script>
 <script>
+    function testConst() {
+        try {
+            const test = 1;
+            if (typeof test !== undefined && test === 1) {
+                print(PASS);
+            } else {
+                print(FAIL);
+            }
+        } catch(err) {
+            print(FAIL + " (" + err.message + ")");
+        }
+    }
+</script>
+<script>
     function testSpread() {
         var arr1 = [1, 2, 3];
         var obj1 = { a: 1, b: 2, c: 3 };
@@ -155,7 +169,7 @@ description: Check if your browser supports the features that OctoPrint uses
     }
 </script>
 
-This page allows you to do a quick check whether your browser supports the features that OctoPrint uses.
+This page allows you to do a quick check whether your browser supports the JavaScript features that OctoPrint uses.
 
 <table class="table es-table">
     <thead>
@@ -166,45 +180,62 @@ This page allows you to do a quick check whether your browser supports the featu
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td class="es-feature"><a href="https://caniuse.com/es5" target="_blank" rel="noopener noreferrer">ES5</a></td>
+        <tr class="es-entry">
+            <td colspan="3">ES5</td>
+        </tr>
+        <tr class="es-subentry">
+            <td class="es-feature"><a href="https://caniuse.com/es5" target="_blank" rel="noopener noreferrer">general ES5 support</a></td>
             <td class="es-since"></td>
             <td class="es-supported"><script>(typeof testES5 !== undefined && typeof testES5 === "function") ? testES5() : print(FAIL)</script></td>
         </tr>
-        <tr>
+        <tr class="es-entry">
+            <td colspan="3" class="es-feature">ES6</td>
+        </tr>
+        <tr class="es-subentry">
             <td class="es-feature"><a href="https://caniuse.com/arrow-functions" target="_blank" rel="noopener noreferrer">arrow functions</a></td>
             <td class="es-since">1.9.0</td>
             <td class="es-supported"><script>(typeof testArrowFunctions !== undefined && typeof testArrowFunctions === "function") ? testArrowFunctions() : print(FAIL)</script></td>
         </tr>
-        <tr>
-            <td class="es-feature"><a href="https://caniuse.com/async-functions" target="_blank" rel="noopener noreferrer">async/await</a></td>
+        <tr class="es-subentry">
+            <td class="es-feature"><a href="https://caniuse.com/const" target="_blank" rel="noopener noreferrer">const</a></td>
             <td class="es-since">1.9.0</td>
-            <td class="es-supported"><script>(typeof testAsyncAwait !== undefined && typeof testAsyncAwait === "function") ? testAsyncAwait() : print(FAIL)</script></td>
+            <td class="es-supported"><script>(typeof testConst !== undefined && typeof testConst === "function") ? testConst() : print(FAIL)</script></td>
         </tr>
-        <tr>
-            <td class="es-feature"><a href="https://caniuse.com/mdn-javascript_functions_method_definitions_async_generator_methods" target="_blank" rel="noopener noreferrer">async generators</a></td>
-            <td class="es-since">1.9.0</td>
-            <td class="es-supported"><script>(typeof testAsyncGenerator !== undefined && typeof testAsyncGenerator === "function") ? testAsyncGenerator() : print(FAIL)</script></td>
-        </tr>
-        <tr>
+        <tr class="es-subentry">
             <td class="es-feature"><a href="https://caniuse.com/es6-generators" target="_blank" rel="noopener noreferrer">generators</a></td>
             <td class="es-since">1.9.0</td>
             <td class="es-supported"><script>(typeof testGenerator !== undefined && typeof testGenerator === "function") ? testGenerator() : print(FAIL)</script></td>
         </tr>
-        <tr>
+        <tr class="es-subentry">
             <td class="es-feature"><a href="https://caniuse.com/let" target="_blank" rel="noopener noreferrer">let</a></td>
             <td class="es-since">1.9.0</td>
             <td class="es-supported"><script>(typeof testLet !== undefined && typeof testLet === "function") ? testLet() : print(FAIL)</script></td>
         </tr>
-        <tr>
-            <td class="es-feature"><a href="https://caniuse.com/mdn-javascript_operators_spread" target="_blank" rel="noopener noreferrer">spread syntax</a></td>
-            <td class="es-since">1.9.0</td>
-            <td class="es-supported"><script>(typeof testSpread !== undefined && typeof testSpread === "function") ? testSpread() : print(FAIL)</script></td>
-        </tr>
-        <tr>
+        <tr class="es-subentry">
             <td class="es-feature"><a href="https://caniuse.com/template-literals" target="_blank" rel="noopener noreferrer">template literals</a></td>
             <td class="es-since">1.9.0</td>
             <td class="es-supported"><script>(typeof testTemplateLiterals !== undefined && typeof testTemplateLiterals === "function") ? testTemplateLiterals() : print(FAIL)</script></td>
+        </tr>
+        <tr class="es-entry">
+            <td colspan="3" class="es-feature">ES8</td>
+        </tr>
+        <tr class="es-subentry">
+            <td class="es-feature"><a href="https://caniuse.com/async-functions" target="_blank" rel="noopener noreferrer">async/await</a></td>
+            <td class="es-since">1.9.0</td>
+            <td class="es-supported"><script>(typeof testAsyncAwait !== undefined && typeof testAsyncAwait === "function") ? testAsyncAwait() : print(FAIL)</script></td>
+        </tr>
+        <tr class="es-entry">
+            <td colspan="3" class="es-feature">ES9</td>
+        </tr>
+        <tr class="es-subentry">
+            <td class="es-feature"><a href="https://caniuse.com/mdn-javascript_functions_method_definitions_async_generator_methods" target="_blank" rel="noopener noreferrer">async generators</a></td>
+            <td class="es-since">1.9.0</td>
+            <td class="es-supported"><script>(typeof testAsyncGenerator !== undefined && typeof testAsyncGenerator === "function") ? testAsyncGenerator() : print(FAIL)</script></td>
+        </tr>
+        <tr class="es-subentry">
+            <td class="es-feature"><a href="https://caniuse.com/mdn-javascript_operators_spread" target="_blank" rel="noopener noreferrer">spread syntax</a></td>
+            <td class="es-since">1.9.0</td>
+            <td class="es-supported"><script>(typeof testSpread !== undefined && typeof testSpread === "function") ? testSpread() : print(FAIL)</script></td>
         </tr>
     </tbody>
 </table>
