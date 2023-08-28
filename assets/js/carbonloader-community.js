@@ -1,15 +1,23 @@
-(function() {
-    if (document.getElementById("_carbonads_js") === null && document.getElementById("carbonads") === null) {
-        var serve = "CK7DT2QE";
-        var placement = "discourseoctoprintorg";
+(function () {
+  if (
+    document.getElementById("_carbonads_js") === null &&
+    document.getElementById("carbonads") === null &&
+    document.cookie.indexOf("carbon-disable=true") === -1
+  ) {
+    var serve = "CK7DT2QE";
+    var placement = "discourseoctoprintorg";
 
-        var po = document.createElement("script");
-        po.type = "text/javascript";
-        po.async = true;
-        po.src = "//cdn.carbonads.com/carbon.js?serve=" + serve + "&placement=" + placement;
-        po.id = "_carbonads_js";
+    var po = document.createElement("script");
+    po.type = "text/javascript";
+    po.async = true;
+    po.src =
+      "//cdn.carbonads.com/carbon.js?serve=" +
+      serve +
+      "&placement=" +
+      placement;
+    po.id = "_carbonads_js";
 
-        var s = document.currentScript;
-        s.parentNode.insertBefore(po, s);
-    }
+    var s = document.currentScript;
+    s.parentNode.insertBefore(po, s);
+  }
 })();
