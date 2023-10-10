@@ -595,11 +595,18 @@ ol.slick-dots {
       margin: 0;
     }
 
-    .featuredimage {
-      text-align: left;
+    .postinfo {
+      dl {
+        margin: 0 0 1em 0;
+      }
 
-      @media (max-width: 767px) {
-        text-align: center;
+      .featuredimage {
+        text-align: left;
+  
+        @media (max-width: 767px) {
+          text-align: center;
+          margin-top: 1em;
+        }
       }
     }
 
@@ -981,4 +988,34 @@ pre {
 
 .footnotes {
   font-size: 85%;
+}
+
+// funding banner
+
+.funding-banner {
+  display: flex; 
+  flex-grow: 1;
+  flex-direction: row; 
+  align-items: center;
+  padding: 1em;
+  margin-bottom: 1em;
+
+  border: 1px solid #85ba80;
+  border-radius: 0.5em;
+  background-color: #cae1c9;
+
+  @media (max-width: 767px) {
+    align-items: flex-start;
+  }
+
+  .banner-icon {
+    display: inline-block;
+    font-size: 4em;
+    line-height: 1em;
+  }
+
+  .banner-text {
+    font-size: 1em;
+    margin: 0 0 0 1.5em;
+  }
 }
