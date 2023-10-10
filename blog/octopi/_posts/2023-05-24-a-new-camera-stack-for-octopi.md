@@ -9,6 +9,8 @@ featuredimage: /assets/img/blog/2023-05/2023-05-24-new-camera-stack-card.png
 poster: /assets/img/blog/2023-05/2023-05-24-new-camera-stack-poster.png
 ---
 
+{% include funding_banner.html text="This new camera stack was made possible only through continued financial support by people like you!" %}
+
 For the past few months, I've not only worked on OctoPrint 1.9.0 and its RCs, but I've also been working on a new camera stack for OctoPi.
 
 The current camera stack in OctoPi is using [mjpg-streamer](https://github.com/jacksonliam/mjpg-streamer), and while that has been working great for a decade now (and also was pretty much the only thing that worked reliably on the available hardware back when I originally created OctoPrint in late 2012), with the release of the Raspberry Pi Camera v3 which requires the use of something called [`libcamera`](https://libcamera.org/) that sadly no longer was the case. Add to that the fact that mjpg streams are notoriously bandwidth heavy and more modern alternatives exist these days, and it was clear that it was time for a change.
