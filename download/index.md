@@ -123,17 +123,18 @@ yourself you can do so here.
     <small>Image compatible with Raspberry Pi {{ site.data.octopi.latest.pi_models }}.</small><br>
 </div>
 
-{% if site.data.octopi.camera_octopi %}
+{% if site.data.octopi.latest_cam %}
 ### Stable OctoPi with New Camera Stack
 
-The same OctoPi image with a <strong>new camera stack</strong> can be found here: 
+The same OctoPi image with the <strong><a href="/blog/2023/05/24/a-new-camera-stack-for-octopi/">new camera stack</a></strong> can be found here: 
 
 <div class="text-center">
-    <a class="btn btn-large btn-block" href="{{ site.data.octopi.camera_octopi.url }}" data-analytics='"Download Click", { "props": { "target": "camera_octopi"} }'>
-      OctoPi&nbsp;{{ site.data.octopi.camera_octopi.octopi_version }} &amp; OctoPrint&nbsp;{{ site.data.octopi.camera_octopi.octoprint_version }} (new&nbsp;camera&nbsp;stack)
+    <a class="btn btn-large btn-block" href="{{ site.data.octopi.latest_cam.url }}" data-analytics='"Download Click", { "props": { "target": "latest_cam"} }'>
+      OctoPi&nbsp;{{ site.data.octopi.latest_cam.octopi_version }} &amp; OctoPrint&nbsp;{{ site.data.octopi.latest_cam.octoprint_version }} (new&nbsp;camera&nbsp;stack)
     </a>
+    <small>SHA256: <code>{{ site.data.octopi.latest_cam.sha256 }}</code></small><br>
     <small><strong>{{ site.data.octopi.recommendation }}</strong></small><br>
-    <small>Image compatible with Raspberry Pi {{ site.data.octopi.camera_octopi.pi_models }}.</small><br>
+    <small>Image compatible with Raspberry Pi {{ site.data.octopi.latest.pi_models }}.</small><br>
 </div>
 {% endif %}
 
@@ -146,6 +147,7 @@ The current <strong>OctoPi Release Candidate {{ site.data.octopi.next_octopi.oct
     <a class="btn btn-large btn-block" href="{{ site.data.octopi.next_octopi.url }}" data-analytics='"Download Click", { "props": { "target": "next_octopi"} }'>
       OctoPi&nbsp;{{ site.data.octopi.next_octopi.octopi_version }} &amp; OctoPrint&nbsp;{{ site.data.octopi.next_octopi.octoprint_version }}
     </a>
+    <small>SHA256: <code>{{ site.data.octopi.next_octopi.sha256 }}</code></small><br>
     <small><strong>{{ site.data.octopi.recommendation }}</strong></small><br>
     <small>Image compatible with Raspberry Pi {{ site.data.octopi.next_octopi.pi_models }}.</small><br>
 </div>
