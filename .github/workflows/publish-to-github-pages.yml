@@ -114,6 +114,7 @@ jobs:
         run: |
           cd .github/scripts
           python update_page_from_rpiimagerjson.py
+          cat ../../_data/octopi.yaml
       
       - name: 💎 Set up Ruby 3
         uses: ruby/setup-ruby@v1

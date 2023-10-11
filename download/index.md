@@ -123,18 +123,17 @@ yourself you can do so here.
     <small>Image compatible with Raspberry Pi {{ site.data.octopi.latest.pi_models }}.</small><br>
 </div>
 
-{% if site.data.octopi.next_octoprint %}
-### Stable OctoPi with OctoPrint Release Candidate
+{% if site.data.octopi.camera_octopi %}
+### Stable OctoPi with New Camera Stack
 
-The current <strong>stable OctoPi {{ site.data.octopi.latest.octopi_version }} with OctoPrint Release Candidate {{ site.data.octopi.next_octoprint.octoprint_version }}</strong> can be found here: 
+The same OctoPi image with a <strong>new camera stack</strong> can be found here: 
 
 <div class="text-center">
-    <a class="btn btn-large btn-block" href="{{ site.data.octopi.next_octoprint.url }}" data-analytics='"Download Click", { "props": { "target": "next_octoprint"} }'>
-      OctoPi&nbsp;{{ site.data.octopi.latest.octopi_version }} &amp; OctoPrint&nbsp;{{ site.data.octopi.next_octoprint.octoprint_version }}
+    <a class="btn btn-large btn-block" href="{{ site.data.octopi.camera_octopi.url }}" data-analytics='"Download Click", { "props": { "target": "camera_octopi"} }'>
+      OctoPi&nbsp;{{ site.data.octopi.camera_octopi.octopi_version }} &amp; OctoPrint&nbsp;{{ site.data.octopi.camera_octopi.octoprint_version }} (new&nbsp;camera&nbsp;stack)
     </a>
-    <small>SHA256: <code>{{ site.data.octopi.next_octoprint.sha256 }}</code></small><br>
     <small><strong>{{ site.data.octopi.recommendation }}</strong></small><br>
-    <small>Image compatible with Raspberry Pi {{ site.data.octopi.latest.pi_models }}.</small><br>
+    <small>Image compatible with Raspberry Pi {{ site.data.octopi.camera_octopi.pi_models }}.</small><br>
 </div>
 {% endif %}
 
