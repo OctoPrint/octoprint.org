@@ -26,11 +26,11 @@ This third bugfix release & security for 1.9.x includes a fix for one security v
 
 > **🔒 Security fixes**
 > 
-> - Severity Medium (6.4): It was possible for a malicious admin to configure a specially crafted [GCODE script](https://docs.octoprint.org/en/master/features/gcode_scripts.html) through the Settings that would allow code execution during rendering of that script. An attacker could have used this to extract data managed by > OctoPrint, or manipulate data managed by OctoPrint, as well as execute arbitrary commands with the rights of the OctoPrint process on the server system. 
+> - Severity Medium (6.4): It was possible for a malicious admin to configure a specially crafted [GCODE script](https://docs.octoprint.org/en/master/features/gcode_scripts.html) through the Settings that would allow code execution during rendering of that script. An attacker could have used this to extract data managed by OctoPrint, or manipulate data managed by OctoPrint, as well as execute arbitrary commands with the rights of the OctoPrint process on the server system. 
 >   
->   Please note that GCODE files uploaded to be printed were not affected! This vulnerability exclusively affected GCODE Scripts to be executed on connection to the > printer, print pause, resume etc, as described [in the documentation](https://docs.octoprint.org/en/master/features/gcode_scripts.html), to be found under Settings > > GCODE Scripts and configurable only by users with the `ADMIN` permission.
+>   Please note that GCODE files uploaded to be printed were not affected! This vulnerability exclusively affected GCODE Scripts to be executed on connection to the printer, print pause, resume etc, as described [in the documentation](https://docs.octoprint.org/en/master/features/gcode_scripts.html), to be found under Settings > GCODE Scripts and configurable only by users with the `ADMIN` permission.
 > 
->   <!-- See also the [GitHub Security Advisory]() and [CVE-2023-41047](https://nvd.nist.gov/vuln/detail/CVE-2023-41047). -->
+>   See also the [GitHub Security Advisory](https://github.com/OctoPrint/OctoPrint/security/advisories/GHSA-fwfg-vprh-97ph) and [CVE-2023-41047](https://nvd.nist.gov/vuln/detail/CVE-2023-41047).
 > 
 > **🐛 Bug fixes**
 > 
