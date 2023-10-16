@@ -40,5 +40,9 @@
     "insuffienct-disk-space": "https://community.octoprint.org/t/238#insufficient-disk-space",
     "insufficient-disk-space": "https://community.octoprint.org/t/238#insufficient-disk-space",
     "update-not-possible-windows": "https://community.octoprint.org/t/238#windows",
-    "update-not-possible": "https://community.octoprint.org/t/238"
+    "update-not-possible": "https://community.octoprint.org/t/238",
+    "system-info-bundle": "https://community.octoprint.org/t/29887",
+    "systeminfo-bundle": "https://community.octoprint.org/t/29887",
+    "systeminfobundle": "https://community.octoprint.org/t/29887",
+    "bundle": "https://community.octoprint.org/t/29887"
 }
