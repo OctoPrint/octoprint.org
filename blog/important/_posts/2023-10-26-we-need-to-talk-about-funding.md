@@ -9,6 +9,11 @@ featuredimage: /assets/img/blog/2023-10/2023-10-26-funding-card.png
 poster: /assets/img/blog/2023-10/2023-10-26-funding-poster.png
 ---
 
+<div class="alert">
+    <strong>Important update from October 30th 2023:</strong> <a href="/blog/2023/10/30/funding-update/">You did it! 🥳</a>
+    I received an overwhelming outpour of support and we totally turned it around! Thank you so much! ❤️
+</div>
+
 You might have missed this, but since 2016 my full-time work on OctoPrint has been
 **100% funded by people like you.** OctoPrint, at its core, is still
 mostly a one-woman show, with me its creator as its only full time resource, and I've only been 
