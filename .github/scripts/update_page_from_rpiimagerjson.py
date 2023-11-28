@@ -31,14 +31,51 @@ def parse_versions(octopi_and_octoprint_version):
     return octopi_version, octoprint_version
 
 
-def generate_data(name, octopi_and_octoprint_version, sha256, url):
+def parse_devices(devices):
+    if not devices:
+        devices = ["pi1-32bit", "pi2-32bit", "pi3-32bit", "pi4-32bit"]
+
+    result = []
+    if "pi1-32bit" in devices:  # Pi1
+        result += ["1A", "1A+", "1B", "1B+"]
+    if "pi2-32bit" in devices:  # Pi2
+        result += ["2B"]
+    if "pi3-32bit" in devices or "pi3-64bit" in devices:  # Pi3
+        result += ["3A+", "3B", "3B+"]
+    if "pi4-32bit" in devices or "pi4-64bit" in devices:  # Pi4
+        result += ["4B 1/2/4/8GB"]
+    if "pi5-32bit" in devices or "pi5-64bit" in devices:  # Pi5
+        result += ["5B 4/8GB"]
+
+    # now the zeroes
+    if "pi1-32bit" in devices:  # Zero & Zero W
+        result += ["Zero", "Zero W"]
+    if "pi3-32bit" in devices or "pi3-64bit" in devices:  # Zero 2
+        result += ["Zero 2"]
+
+    # and the 400
+    if "pi4-32bit" in devices or "pi4-64bit" in devices:  # Pi4
+        result += ["400"]
+
+    if not result:
+        return ""
+
+    if len(result) == 1:
+        return result[0]
+
+    return ", ".join(result[:-1]) + " and " + result[-1]
+
+
+def generate_data(name, octopi_and_octoprint_version, sha256, url, devices):
     octopi_version, octoprint_version = parse_versions(octopi_and_octoprint_version)
+
     return {
         "name": name,
         "octoprint_version": octoprint_version,
         "octopi_version": octopi_version,
         "sha256": sha256,
         "url": url,
+        "pi_models": parse_devices(devices),
     }
 
 
@@ -46,7 +83,11 @@ def convert_rpi_imager_json(data):
     return list(
         map(
             lambda x: generate_data(
-                x["name"], x["description"], x["image_download_sha256"], x["url"]
+                x["name"],
+                x["description"],
+                x["image_download_sha256"],
+                x["url"],
+                x.get("devices", []),
             ),
             filter(
                 lambda x: "subitems" not in x and "subitems_url" not in x,
