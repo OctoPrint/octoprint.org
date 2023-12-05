@@ -44,5 +44,10 @@
     "system-info-bundle": "https://community.octoprint.org/t/29887",
     "systeminfo-bundle": "https://community.octoprint.org/t/29887",
     "systeminfobundle": "https://community.octoprint.org/t/29887",
-    "bundle": "https://community.octoprint.org/t/29887"
+    "bundle": "https://community.octoprint.org/t/29887",
+    "firmware-mintemp": "https://community.octoprint.org/t/55469#mintemp",
+    "firmware-maxtemp": "https://community.octoprint.org/t/55469#maxtemp",
+    "firmware-thermal-runaway": "https://community.octoprint.org/t/55469#thermal-runaway",
+    "firmware-heating-failed": "https://community.octoprint.org/t/55469#heating-failed",
+    "firmware-probing-failed": "https://community.octoprint.org/t/55469#probing-failed"
 }
