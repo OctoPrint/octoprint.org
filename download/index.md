@@ -218,7 +218,7 @@ is maintained by [jneilliii](https://github.com/jneilliii). Please report issues
 
 The generic setup instructions boil down to
 
-1. Installing [Python 3](https://www.python.org/) (version 3.10 or lower), including [pip](https://pip.pypa.io/en/latest/installing.html).
+1. Installing [Python 3](https://www.python.org/), including [pip](https://pip.pypa.io/en/latest/installing.html).
 2. Creating a virtual environment somewhere: `python -m venv OctoPrint`
 3. Installing OctoPrint *into that virtual environment*: `OctoPrint/bin/pip install OctoPrint`
 4. OctoPrint may then be started through `./OctoPrint/bin/octoprint serve` or with an absolute path `/path/to/OctoPrint/bin/octoprint serve`
