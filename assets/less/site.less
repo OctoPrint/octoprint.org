@@ -994,9 +994,8 @@ pre {
 
 .funding-banner {
   display: flex; 
-  flex-grow: 1;
   flex-direction: row; 
-  align-items: center;
+  align-items: flex-start;
   padding: 1em;
   margin-bottom: 1em;
 
@@ -1004,17 +1003,13 @@ pre {
   border-radius: 0.5em;
   background-color: #cae1c9;
 
-  @media (max-width: 767px) {
-    align-items: flex-start;
-  }
 
   .banner-icon {
-    display: inline-block;
-    font-size: 4em;
-    line-height: 1em;
+    flex-shrink: 0;
   }
 
   .banner-text {
+    flex-grow: 1;
     font-size: 1em;
     margin: 0 0 0 1.5em;
   }
