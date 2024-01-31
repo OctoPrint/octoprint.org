@@ -58,6 +58,19 @@ layout: post
     I need logs and reproduction steps to fix issues, not just the information that something doesn't work so make sure to
     <strong>fill out all fields of the issue template</strong>.
 </p>
+
+{% if page.closer_look %}
+<p>
+    While testing the release candidate, please <strong>take a closer look at these things</strong>:
+</p>
+
+<ul>
+{% for item in page.closer_look %}
+<li>{{ item | markdownify }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
 <p>
     Thanks!
 </p>
