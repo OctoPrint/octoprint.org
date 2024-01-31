@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 31 Jan 2024 17:25:58 +0000</pubDate>
-    <lastBuildDate>Wed, 31 Jan 2024 17:25:58 +0000</lastBuildDate>
+    <pubDate>Wed, 31 Jan 2024 17:32:10 +0000</pubDate>
+    <lastBuildDate>Wed, 31 Jan 2024 17:32:10 +0000</lastBuildDate>
     <generator>Jekyll v3.9.3</generator>
+    
+      <item>
+        <title>New release candidate: 1.10.0rc1</title>
+        <description>
+          <![CDATA[
+            The first release candidate for the upcoming 1.10.0 release containing new features, improvements & bug fixes!
+          ]]>
+        </description>
+        <pubDate>Wed, 31 Jan 2024 17:00:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2024/01/31/new-release-candidate-1.10.0rc1/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2024/01/31/new-release-candidate-1.10.0rc1/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>OctoPrint On Air #55</title>
@@ -123,19 +136,6 @@
         <link>https://octoprint.org/blog/2023/06/19/octoprint-on-air-52/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2023/06/19/octoprint-on-air-52/</guid>
         <category>OctoPrint On Air</category>
-      </item>
-    
-      <item>
-        <title>A new camera stack for OctoPi</title>
-        <description>
-          <![CDATA[
-            For the past few months, I've not only worked on OctoPrint 1.9.0 and its RCs, but I've also been working on a new camera stack for OctoPi. Today I want to tell you a bit more about it.
-          ]]>
-        </description>
-        <pubDate>Wed, 24 May 2023 12:00:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2023/05/24/a-new-camera-stack-for-octopi/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2023/05/24/a-new-camera-stack-for-octopi/</guid>
-        <category>OctoPi Announcements</category>
       </item>
     
   </channel>
