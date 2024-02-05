@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Security Policy
-lastupdate: 2022-11-16 15:45:00 +0100
+lastupdate: 2024-02-05 13:30:00 +0100
 ---
 
 **If you think that you have found a security vulnerability in OctoPrint, please disclose it to us via our security e-mail address at [security@octoprint.org](mailto:security@octoprint.org) or via a [GitHub Security Advisory](https://github.com/OctoPrint/OctoPrint/security/advisories).**
@@ -31,6 +31,7 @@ We will not accept reports of vulnerabilities of the following types:
 - Attacks that require the user to install a malicious language pack
 - Attacks that require the user to expose their OctoPrint instance on the public internet or another hostile network
 - Attacks that the user can only perform on themselves
+- Attacks that require the user to have seriously misconfigured their OctoPrint instance
 
 ## Severity scoring
 
@@ -48,7 +49,7 @@ We will publish GitHub Security Advisories, and through those will also request 
 - The vulnerability is not already known to us
 - The vulnerability is not already known to the public
 
-CVEs will only be requested for vulnerabilities with a severity of Medium or higher.
+CVEs will only be requested for vulnerabilities with a severity of Moderate or higher.
 
 ## Bounties
 
