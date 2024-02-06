@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Security Policy
-lastupdate: 2024-02-05 13:30:00 +0100
+lastupdate: 2024-02-06 22:00:00 +0100
 ---
 
 **If you think that you have found a security vulnerability in OctoPrint, please disclose it to us via our security e-mail address at [security@octoprint.org](mailto:security@octoprint.org) or via a [GitHub Security Advisory](https://github.com/OctoPrint/OctoPrint/security/advisories).**
@@ -26,12 +26,13 @@ We will not accept reports of vulnerabilities of the following types:
 - Theoretical attacks without proof of exploitability
 - Attacks that are the result of a third party library (these should instead be reported to the library maintainers)
 - Social engineering
-- Attacks involving physical access to a user's device, or involving a device or network that's already seriously compromised (eg man-in-the-middle).
+- Attacks involving physical access to a user's device, or involving a device or network that's already seriously compromised (eg man-in-the-middle, compromised SSH access, ...).
 - Attacks that require the user to install a malicious plugin
 - Attacks that require the user to install a malicious language pack
 - Attacks that require the user to expose their OctoPrint instance on the public internet or another hostile network
 - Attacks that the user can only perform on themselves
 - Attacks that require the user to have seriously misconfigured their OctoPrint instance
+- Attacks that require admin access to the OctoPrint instance
 
 ## Severity scoring
 
