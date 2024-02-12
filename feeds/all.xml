@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Feb 2024 11:24:58 +0000</pubDate>
-    <lastBuildDate>Mon, 12 Feb 2024 11:24:58 +0000</lastBuildDate>
+    <pubDate>Mon, 12 Feb 2024 12:37:27 +0000</pubDate>
+    <lastBuildDate>Mon, 12 Feb 2024 12:37:27 +0000</lastBuildDate>
     <generator>Jekyll v3.9.4</generator>
+    
+      <item>
+        <title>New release candidate: 1.10.0rc2</title>
+        <description>
+          <![CDATA[
+            The second release candidate for the upcoming 1.10.0 release containing some fixes of observed regressions and improvements of newly added functionality!
+          ]]>
+        </description>
+        <pubDate>Mon, 12 Feb 2024 12:30:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2024/02/12/new-release-candidate-1.10.0rc2/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2024/02/12/new-release-candidate-1.10.0rc2/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>New release candidate: 1.10.0rc1</title>
@@ -123,19 +136,6 @@
         <link>https://octoprint.org/blog/2023/06/27/new-release-1.9.1/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2023/06/27/new-release-1.9.1/</guid>
         <category>OctoPrint Release Announcements</category>
-      </item>
-    
-      <item>
-        <title>OctoPrint On Air #52</title>
-        <description>
-          <![CDATA[
-            The 52nd episode of a regular live broadcast for Patrons which was recorded on June 15th 2023.
-          ]]>
-        </description>
-        <pubDate>Mon, 19 Jun 2023 12:05:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2023/06/19/octoprint-on-air-52/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2023/06/19/octoprint-on-air-52/</guid>
-        <category>OctoPrint On Air</category>
       </item>
     
   </channel>
