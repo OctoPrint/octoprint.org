@@ -29,6 +29,10 @@ robots: noindex,nofollow
     Germany
 </address>
 
+<p style="text-align: center"><small>
+    (For postcards, letters, fanpost and the like, <a href="#postcards-letters-fanpost">please see below</a>.)
+</small></p>
+
 ### Contact
 
 <p style="text-align: center">
