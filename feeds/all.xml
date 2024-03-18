@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Mar 2024 10:30:06 +0000</pubDate>
-    <lastBuildDate>Mon, 18 Mar 2024 10:30:06 +0000</lastBuildDate>
+    <pubDate>Mon, 18 Mar 2024 11:04:59 +0000</pubDate>
+    <lastBuildDate>Mon, 18 Mar 2024 11:04:59 +0000</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>New release candidate: 1.10.0rc3</title>
+        <description>
+          <![CDATA[
+            The third release candidate for the upcoming 1.10.0 release containing some fixes of observed regressions and improvements of newly added functionality, plus one security fix!
+          ]]>
+        </description>
+        <pubDate>Mon, 18 Mar 2024 10:50:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2024/03/18/new-release-candidate-1.10.0rc3/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2024/03/18/new-release-candidate-1.10.0rc3/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>New release candidate: 1.10.0rc2</title>
@@ -122,19 +135,6 @@
         <pubDate>Tue, 18 Jul 2023 11:15:00 +0000</pubDate>
         <link>https://octoprint.org/blog/2023/07/18/new-release-1.9.2/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2023/07/18/new-release-1.9.2/</guid>
-        <category>OctoPrint Release Announcements</category>
-      </item>
-    
-      <item>
-        <title>New release: 1.9.1</title>
-        <description>
-          <![CDATA[
-            A first bugfix release for 1.9.x, fixing a few issues reported since the release of 1.9.0.
-          ]]>
-        </description>
-        <pubDate>Tue, 27 Jun 2023 08:00:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2023/06/27/new-release-1.9.1/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2023/06/27/new-release-1.9.1/</guid>
         <category>OctoPrint Release Announcements</category>
       </item>
     
