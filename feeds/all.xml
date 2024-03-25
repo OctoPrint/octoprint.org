@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 25 Mar 2024 08:29:52 +0000</pubDate>
-    <lastBuildDate>Mon, 25 Mar 2024 08:29:52 +0000</lastBuildDate>
+    <pubDate>Mon, 25 Mar 2024 09:21:33 +0000</pubDate>
+    <lastBuildDate>Mon, 25 Mar 2024 09:21:33 +0000</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>OctoPrint On Air #56</title>
+        <description>
+          <![CDATA[
+            The 56th episode of a regular devlog about all things OctoPrint which was recorded on March 19th 2024.
+          ]]>
+        </description>
+        <pubDate>Mon, 25 Mar 2024 09:15:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2024/03/25/octoprint-on-air-56/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2024/03/25/octoprint-on-air-56/</guid>
+        <category>OctoPrint On Air</category>
+      </item>
     
       <item>
         <title>New release candidate: 1.10.0rc3</title>
@@ -123,19 +136,6 @@
         <link>https://octoprint.org/blog/2023/08/03/octoprint-on-air-53/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2023/08/03/octoprint-on-air-53/</guid>
         <category>OctoPrint On Air</category>
-      </item>
-    
-      <item>
-        <title>New release: 1.9.2</title>
-        <description>
-          <![CDATA[
-            The second bugfix release for 1.9.x, mostly to work around a new bug in a third party dependency.
-          ]]>
-        </description>
-        <pubDate>Tue, 18 Jul 2023 11:15:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2023/07/18/new-release-1.9.2/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2023/07/18/new-release-1.9.2/</guid>
-        <category>OctoPrint Release Announcements</category>
       </item>
     
   </channel>

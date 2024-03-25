@@ -5,9 +5,22 @@
     
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/octoprintonair.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 25 Mar 2024 08:29:52 +0000</pubDate>
-    <lastBuildDate>Mon, 25 Mar 2024 08:29:52 +0000</lastBuildDate>
+    <pubDate>Mon, 25 Mar 2024 09:21:33 +0000</pubDate>
+    <lastBuildDate>Mon, 25 Mar 2024 09:21:33 +0000</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>OctoPrint On Air #56</title>
+        <description>
+          <![CDATA[
+            The 56th episode of a regular devlog about all things OctoPrint which was recorded on March 19th 2024.
+          ]]>
+        </description>
+        <pubDate>Mon, 25 Mar 2024 09:15:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2024/03/25/octoprint-on-air-56/?utm_source=rss&amp;utm_medium=octoprintonair</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2024/03/25/octoprint-on-air-56/</guid>
+        <category>OctoPrint On Air</category>
+      </item>
     
       <item>
         <title>OctoPrint On Air #55</title>
@@ -123,19 +136,6 @@
         <pubDate>Mon, 22 Aug 2022 13:45:00 +0000</pubDate>
         <link>https://octoprint.org/blog/2022/08/22/octoprint-on-air-47/?utm_source=rss&amp;utm_medium=octoprintonair</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2022/08/22/octoprint-on-air-47/</guid>
-        <category>OctoPrint On Air</category>
-      </item>
-    
-      <item>
-        <title>OctoPrint On Air #46</title>
-        <description>
-          <![CDATA[
-            The 46th episode of a regular live broadcast for Patrons which was recorded on June 23rd 2022.
-          ]]>
-        </description>
-        <pubDate>Tue, 28 Jun 2022 08:25:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2022/06/28/octoprint-on-air-46/?utm_source=rss&amp;utm_medium=octoprintonair</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2022/06/28/octoprint-on-air-46/</guid>
         <category>OctoPrint On Air</category>
       </item>
     
