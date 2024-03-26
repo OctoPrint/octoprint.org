@@ -13,6 +13,7 @@
     "warning-firmware-development-mfs": "https://community.octoprint.org/t/nightly-builds-of-marlin-by-the-marlin-firmware-service/35013",
     "warning-firmware-hostcommands": "https://community.octoprint.org/t/octoprint-tells-me-im-running-a-firmware-development-version-why/34588",
     "file-check-travel-speed": "https://community.octoprint.org/t/when-i-try-to-print-something-i-keep-getting-a-format-error-from-the-printer-on-a-line-containing-travel-speed/8640",
+    "file-check-leaked-api-key": "https://community.octoprint.org/t/57612",
     "using-release-channels": "https://community.octoprint.org/t/how-to-use-the-release-channels-to-help-test-release-candidates/402",
     "forgotten-password": "https://community.octoprint.org/t/i-forgot-my-octoprint-password-how-can-i-reset-it/215",
     "mjpg-streamer-config": "https://community.octoprint.org/t/available-mjpg-streamer-configuration-options/1106",
