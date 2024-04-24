@@ -56,6 +56,18 @@ layout: post
 
 {% endif %}
 
+{% if page.known_issues %}
+<h3 id="known-issues">Known Issues</h3>
+
+The following issues were discovered in earlier versions, but discovered too late to still be fixed in {{ page.release }}, and are going to get a fix in an upcoming bugfix release:
+
+<ul>
+{% for issue in page.known_issues %}
+    <li><a href="https://github.com/OctoPrint/OctoPrint/issues/{{ issue.issue }}" target="_blank" rel="noopener noreferer">#{{ issue.issue }}</a>: {{ issue.content | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
 <h3 id="thanks">Thanks</h3>
 
 <p>
