@@ -2,14 +2,14 @@
   "os_list": [
     {
       "name": "OctoPi (stable)",
-      "description": "OctoPi 1.0.0 with OctoPrint 1.10.0 (build 20240425094544)",
-      "url": "https://github.com/OctoPrint/OctoPi-UpToDate/releases/download/1.0.0-1.10.0-20240425094544/octopi-1.0.0-1.10.0-20240425094544.zip",
+      "description": "OctoPi 1.0.0 with OctoPrint 1.10.1 (build 20240514100113)",
+      "url": "https://github.com/OctoPrint/OctoPi-UpToDate/releases/download/1.0.0-1.10.1-20240514100113/octopi-1.0.0-1.10.1-20240514100113.zip",
       "icon": "https://octopi.octoprint.org/rpi-imager.png",
-      "release_date": "2024-04-25",
+      "release_date": "2024-05-14",
       "extract_size": 2906653696,
-      "extract_sha256": "df6fc6cd7eb325ec77d4970ed3e08fc7934f3d67e06d709cb9c542d990878b26",
-      "image_download_size": 1078655574,
-      "image_download_sha256": "18b2c29baaff5e3a870c76f9020d65ecb9d0198994693f61c1a64ff62d50e2f8",
+      "extract_sha256": "5dbb956ed399c942be7c5ad8585242df7c131900a5b11fa0f4e6d9d55ec8cf29",
+      "image_download_size": 1080056421,
+      "image_download_sha256": "68515c2e98df1a4880ca678be57e9f3d0c674fe8f0273d1fd8fa93bee7e648ef",
       "devices": [
         "pi4-32bit",
         "pi3-32bit",
