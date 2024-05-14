@@ -5,9 +5,22 @@
     
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/releases.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 May 2024 09:26:56 +0000</pubDate>
-    <lastBuildDate>Tue, 14 May 2024 09:26:56 +0000</lastBuildDate>
+    <pubDate>Tue, 14 May 2024 09:56:43 +0000</pubDate>
+    <lastBuildDate>Tue, 14 May 2024 09:56:43 +0000</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>New release: 1.10.1</title>
+        <description>
+          <![CDATA[
+            The first bugfix & security release for 1.10.x, fixing one security vulnerability, several bugs and also adding the one or other improvement.
+          ]]>
+        </description>
+        <pubDate>Tue, 14 May 2024 09:30:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2024/05/14/new-release-1.10.1/?utm_source=rss&amp;utm_medium=releases</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2024/05/14/new-release-1.10.1/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>New release: 1.10.0</title>
@@ -123,19 +136,6 @@
         <pubDate>Tue, 23 May 2023 08:00:00 +0000</pubDate>
         <link>https://octoprint.org/blog/2023/05/23/new-release-1.9.0/?utm_source=rss&amp;utm_medium=releases</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2023/05/23/new-release-1.9.0/</guid>
-        <category>OctoPrint Release Announcements</category>
-      </item>
-    
-      <item>
-        <title>New release candidate: 1.9.0rc6</title>
-        <description>
-          <![CDATA[
-            The sixth release candidate for the upcoming 1.9.0 release, fixing a regression reported on the last one.
-          ]]>
-        </description>
-        <pubDate>Mon, 08 May 2023 13:30:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2023/05/08/new-release-candidate-1.9.0rc6/?utm_source=rss&amp;utm_medium=releases</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2023/05/08/new-release-candidate-1.9.0rc6/</guid>
         <category>OctoPrint Release Announcements</category>
       </item>
     

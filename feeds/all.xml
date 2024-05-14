@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 May 2024 09:26:56 +0000</pubDate>
-    <lastBuildDate>Tue, 14 May 2024 09:26:56 +0000</lastBuildDate>
+    <pubDate>Tue, 14 May 2024 09:56:43 +0000</pubDate>
+    <lastBuildDate>Tue, 14 May 2024 09:56:43 +0000</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>New release: 1.10.1</title>
+        <description>
+          <![CDATA[
+            The first bugfix & security release for 1.10.x, fixing one security vulnerability, several bugs and also adding the one or other improvement.
+          ]]>
+        </description>
+        <pubDate>Tue, 14 May 2024 09:30:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2024/05/14/new-release-1.10.1/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2024/05/14/new-release-1.10.1/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>New release: 1.10.0</title>
@@ -123,19 +136,6 @@
         <link>https://octoprint.org/blog/2023/10/26/we-need-to-talk-about-funding/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2023/10/26/we-need-to-talk-about-funding/</guid>
         <category>Important OctoPrint Announcements</category>
-      </item>
-    
-      <item>
-        <title>OctoPrint On Air #54</title>
-        <description>
-          <![CDATA[
-            The 54th episode of a regular devlog about all things OctoPrint which was recorded on October 23rd 2023.
-          ]]>
-        </description>
-        <pubDate>Wed, 25 Oct 2023 10:00:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2023/10/25/octoprint-on-air-54/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2023/10/25/octoprint-on-air-54/</guid>
-        <category>OctoPrint On Air</category>
       </item>
     
   </channel>
