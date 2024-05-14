@@ -11,7 +11,7 @@ excerpt: "The first bugfix & security release for 1.10.x, fixing one security vu
 
 bugfix: 1.10.1
 release:
-  tag: 1.10.1
+  tag: 1.10.0
   link: /blog/2024/04/24/new-release-1.10.0/
   headsups: true
 
