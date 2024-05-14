@@ -16,6 +16,12 @@ layout: post
     fixes solve your problem.
 </p>
 
+{% if page.headsups or page.release.headsups or page.prior.headsups or page.pluginincompatibilities %}
+<p>
+  Also make sure to check any of the heads-ups or plugin incompatibilities listed below.
+</p>
+{% endif %}
+
 {% if page.release.headsups or page.prior.headsups or page.headsups %}
 <h3 id="headsups">Heads-ups</h3>
 
@@ -90,6 +96,13 @@ layout: post
     A special <strong>Thank You!</strong> to {% if contributor_count > 1 %}these {{ contributor_count }} fine people{% else %}this fine person{% endif %} for their PRs{% if page.first_time_contributors %}, and an extra warm welcome to our <em>{% if first_timer_count > 1 %}{{ first_timer_count }} first-time contributors{% else %}one first-time contributor{% endif %}! 🎉</em>{% else %}!{% endif %}
 </p>
 {% include github_user_grid.html users=page.contributors highlight=page.first_time_contributors %}
+{% endif %}
+
+{% if page.security %}
+<p>
+    Also another <strong>Thank you!</strong> to {% include security_shoutouts people=page.security %} for
+    the responsible disclosure of vulnerabilities fixed in this release.
+</p>
 {% endif %}
 
 <h3 id="further-information">Further Information</h3>
