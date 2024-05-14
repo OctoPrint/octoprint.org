@@ -87,8 +87,8 @@ first_time_contributors:
 - neod123
 
 security:
-- Timothy "TK" Ruppert
-- Jacopo Tediosi
+- '[Timothy "TK" Ruppert](https://github.com/tkruppert)'
+- "[Jacopo Tediosi](https://github.com/jacopotediosi)"
 
 testers:
 - b-morgan
