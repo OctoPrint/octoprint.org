@@ -43,7 +43,7 @@ This first bugfix & security release for 1.10.x fixes one security vulnerability
 >
 >   If you have `autologinLocal` enabled and your OctoPrint instance is reachable from a hostile network like the internet, e.g. through a port forward, this *does* affect you and you need to update ASAP. Until you are able to update, it is strongly recommended to disable the autologin feature and/or make your instance inaccessible from potentially hostile networks.
 >
->   See also the [GitHub Security Advisory](https://github.com/OctoPrint/OctoPrint/security/advisories/GHSA-fwfg-vprh-97ph) and [CVE-2024-32977](https://nvd.nist.gov/vuln/detail/CVE-2024-32977).
+>   See also the [GitHub Security Advisory](https://github.com/OctoPrint/OctoPrint/security/advisories/GHSA-2vjq-hg5w-5gm7) and [CVE-2024-32977](https://nvd.nist.gov/vuln/detail/CVE-2024-32977).
 > 
 > **✨ Improvements**
 >
