@@ -5,9 +5,22 @@
     
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/releases.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 18 Jun 2024 07:26:23 +0000</pubDate>
-    <lastBuildDate>Tue, 18 Jun 2024 07:26:23 +0000</lastBuildDate>
+    <pubDate>Tue, 18 Jun 2024 08:24:59 +0000</pubDate>
+    <lastBuildDate>Tue, 18 Jun 2024 08:24:59 +0000</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>New release: 1.10.2</title>
+        <description>
+          <![CDATA[
+            The second bugfix release for 1.10.x, fixing several bugs reported since the release of 1.10.1.
+          ]]>
+        </description>
+        <pubDate>Tue, 18 Jun 2024 08:00:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2024/06/18/new-release-1.10.2/?utm_source=rss&amp;utm_medium=releases</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2024/06/18/new-release-1.10.2/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>New release: 1.10.1</title>
@@ -123,19 +136,6 @@
         <pubDate>Tue, 27 Jun 2023 08:00:00 +0000</pubDate>
         <link>https://octoprint.org/blog/2023/06/27/new-release-1.9.1/?utm_source=rss&amp;utm_medium=releases</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2023/06/27/new-release-1.9.1/</guid>
-        <category>OctoPrint Release Announcements</category>
-      </item>
-    
-      <item>
-        <title>New release: 1.9.0</title>
-        <description>
-          <![CDATA[
-            Almost a year in development, followed by close to 3 months of an RC phase, it's finally time to push out 1.9.0!
-          ]]>
-        </description>
-        <pubDate>Tue, 23 May 2023 08:00:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2023/05/23/new-release-1.9.0/?utm_source=rss&amp;utm_medium=releases</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2023/05/23/new-release-1.9.0/</guid>
         <category>OctoPrint Release Announcements</category>
       </item>
     

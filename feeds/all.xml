@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 18 Jun 2024 07:26:23 +0000</pubDate>
-    <lastBuildDate>Tue, 18 Jun 2024 07:26:23 +0000</lastBuildDate>
+    <pubDate>Tue, 18 Jun 2024 08:24:59 +0000</pubDate>
+    <lastBuildDate>Tue, 18 Jun 2024 08:24:59 +0000</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>New release: 1.10.2</title>
+        <description>
+          <![CDATA[
+            The second bugfix release for 1.10.x, fixing several bugs reported since the release of 1.10.1.
+          ]]>
+        </description>
+        <pubDate>Tue, 18 Jun 2024 08:00:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2024/06/18/new-release-1.10.2/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2024/06/18/new-release-1.10.2/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>New release: 1.10.1</title>
@@ -123,19 +136,6 @@
         <link>https://octoprint.org/blog/2023/10/30/funding-update/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2023/10/30/funding-update/</guid>
         <category>OctoPrint News</category>
-      </item>
-    
-      <item>
-        <title>We need to talk about funding</title>
-        <description>
-          <![CDATA[
-            OctoPrint relies on your financial support to keep going. Please consider chipping in if you can.
-          ]]>
-        </description>
-        <pubDate>Thu, 26 Oct 2023 08:50:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2023/10/26/we-need-to-talk-about-funding/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2023/10/26/we-need-to-talk-about-funding/</guid>
-        <category>Important OctoPrint Announcements</category>
       </item>
     
   </channel>
