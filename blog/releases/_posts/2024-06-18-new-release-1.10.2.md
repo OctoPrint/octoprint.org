@@ -15,6 +15,12 @@ release:
   link: /blog/2024/04/24/new-release-1.10.0/
   headsups: true
 
+prior:
+  headsups:
+  - release: 1.10.1
+    link: /blog/2024/05/14/new-release-1.10.1/
+
+
 ---
 
 This second bugfix release for 1.10.x fixes several bugs:
