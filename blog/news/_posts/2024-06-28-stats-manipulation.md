@@ -104,3 +104,4 @@ Based on the findings presented, I reached out to OctoEverywhere about this on J
 >
 > OctoEverywhere also wants to make this right in our communities. Anyone who feels wronged by this incident, please use the support system on the OctoEverywhere website to contact us directly. We will work with you to make it right.
 
+**Update 2024-06-28 @ 10:20 CEST**: OctoEverywhere has now also put out a post about this. You can find it [here](https://blog.octoeverywhere.com/our-3d-printing-community-responsiblity/).
