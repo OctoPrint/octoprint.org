@@ -5,9 +5,22 @@
     
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/news.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 28 Jun 2024 04:31:08 +0000</pubDate>
-    <lastBuildDate>Fri, 28 Jun 2024 04:31:08 +0000</lastBuildDate>
+    <pubDate>Fri, 28 Jun 2024 05:23:11 +0000</pubDate>
+    <lastBuildDate>Fri, 28 Jun 2024 05:23:11 +0000</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>OctoPrint&apos;s anonymous usage stats were manipulated</title>
+        <description>
+          <![CDATA[
+            OctoPrint's anonymous usage stats were manipulated, here's what we know
+          ]]>
+        </description>
+        <pubDate>Fri, 28 Jun 2024 05:20:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2024/06/28/stats-manipulation/?utm_source=rss&amp;utm_medium=news</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2024/06/28/stats-manipulation/</guid>
+        <category>OctoPrint News</category>
+      </item>
     
       <item>
         <title>Funding update: You are amazing!</title>
@@ -123,19 +136,6 @@
         <pubDate>Mon, 03 Sep 2018 16:20:00 +0000</pubDate>
         <link>https://octoprint.org/blog/2018/09/03/safe-remote-access/?utm_source=rss&amp;utm_medium=news</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2018/09/03/safe-remote-access/</guid>
-        <category>OctoPrint News</category>
-      </item>
-    
-      <item>
-        <title>New community forum launched!</title>
-        <description>
-          <![CDATA[
-            OctoPrint finally has its own community forum at discourse.octoprint.org!
-          ]]>
-        </description>
-        <pubDate>Tue, 20 Mar 2018 11:40:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2018/03/20/community-forum-launched/?utm_source=rss&amp;utm_medium=news</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2018/03/20/community-forum-launched/</guid>
         <category>OctoPrint News</category>
       </item>
     
