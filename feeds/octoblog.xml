@@ -4,10 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/octoblog.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 01 Jul 2024 08:32:37 +0000</pubDate>
-    <lastBuildDate>Mon, 01 Jul 2024 08:32:37 +0000</lastBuildDate>
+    <pubDate>Mon, 01 Jul 2024 09:13:22 +0000</pubDate>
+    <lastBuildDate>Mon, 01 Jul 2024 09:13:22 +0000</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
     
+    <item>
+      <title>OctoPrint On Air #57</title>
+      <description>
+        <![CDATA[
+          The 57th episode of a regular devlog about all things OctoPrint which was recorded on June 25th 2024.
+        ]]>
+      </description>
+      <pubDate>Mon, 01 Jul 2024 09:10:00 +0000</pubDate>
+      <link>https://octoprint.org/blog/2024/07/01/octoprint-on-air-57/</link>
+      <guid isPermaLink="true">https://octoprint.org/blog/2024/07/01/octoprint-on-air-57/</guid>
+      <category>OctoPrint On Air</category>
+    </item>
     <item>
       <title>OctoPrint&apos;s anonymous usage stats were manipulated</title>
       <description>
@@ -115,18 +127,6 @@
       <link>https://octoprint.org/blog/2022/12/13/happy-birthday-octoprint/</link>
       <guid isPermaLink="true">https://octoprint.org/blog/2022/12/13/happy-birthday-octoprint/</guid>
       <category>OctoPrint News</category>
-    </item>
-    <item>
-      <title>Announcement: OctoPrint On Air #50 LIVE</title>
-      <description>
-        <![CDATA[
-          All of you are invited to join me on Monday, December 12th at 17:00 CET on YouTube, where the next OctoPrint On Air episode will air live. It will be a birthday special as OctoPrint is turning 10!
-        ]]>
-      </description>
-      <pubDate>Mon, 05 Dec 2022 15:50:00 +0000</pubDate>
-      <link>https://octoprint.org/blog/2022/12/05/octoprint-on-air-50/</link>
-      <guid isPermaLink="true">https://octoprint.org/blog/2022/12/05/octoprint-on-air-50/</guid>
-      <category>OctoPrint On Air</category>
     </item>
   </channel>
 </rss>

@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 01 Jul 2024 08:32:37 +0000</pubDate>
-    <lastBuildDate>Mon, 01 Jul 2024 08:32:37 +0000</lastBuildDate>
+    <pubDate>Mon, 01 Jul 2024 09:13:22 +0000</pubDate>
+    <lastBuildDate>Mon, 01 Jul 2024 09:13:22 +0000</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>OctoPrint On Air #57</title>
+        <description>
+          <![CDATA[
+            The 57th episode of a regular devlog about all things OctoPrint which was recorded on June 25th 2024.
+          ]]>
+        </description>
+        <pubDate>Mon, 01 Jul 2024 09:10:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2024/07/01/octoprint-on-air-57/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2024/07/01/octoprint-on-air-57/</guid>
+        <category>OctoPrint On Air</category>
+      </item>
     
       <item>
         <title>OctoPrint&apos;s anonymous usage stats were manipulated</title>
@@ -123,19 +136,6 @@
         <link>https://octoprint.org/blog/2024/01/31/new-release-candidate-1.10.0rc1/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2024/01/31/new-release-candidate-1.10.0rc1/</guid>
         <category>OctoPrint Release Announcements</category>
-      </item>
-    
-      <item>
-        <title>OctoPrint On Air #55</title>
-        <description>
-          <![CDATA[
-            The 55th episode of a regular devlog about all things OctoPrint which was recorded on December 14th 2023.
-          ]]>
-        </description>
-        <pubDate>Mon, 18 Dec 2023 08:00:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2023/12/18/octoprint-on-air-55/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2023/12/18/octoprint-on-air-55/</guid>
-        <category>OctoPrint On Air</category>
       </item>
     
   </channel>
