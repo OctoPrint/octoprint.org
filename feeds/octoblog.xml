@@ -4,10 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/octoblog.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Jul 2024 07:25:58 +0000</pubDate>
-    <lastBuildDate>Thu, 04 Jul 2024 07:25:58 +0000</lastBuildDate>
+    <pubDate>Thu, 04 Jul 2024 07:30:32 +0000</pubDate>
+    <lastBuildDate>Thu, 04 Jul 2024 07:30:32 +0000</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
     
+    <item>
+      <title>More manipulation of OctoPrint&apos;s anonymous usage stats</title>
+      <description>
+        <![CDATA[
+          It has barely been a week since I discovered that someone had been manipulating OctoPrint's anonymous usage stats in OctoEverywhere's favor, and now it has come to my attention that Obico has also been doing the same
+        ]]>
+      </description>
+      <pubDate>Thu, 04 Jul 2024 07:25:00 +0000</pubDate>
+      <link>https://octoprint.org/blog/2024/07/04/more-stats-manipulation/</link>
+      <guid isPermaLink="true">https://octoprint.org/blog/2024/07/04/more-stats-manipulation/</guid>
+      <category>OctoPrint News</category>
+    </item>
     <item>
       <title>OctoPrint On Air #57</title>
       <description>
@@ -115,18 +127,6 @@
       <link>https://octoprint.org/blog/2023/02/28/octoprint-on-air-51/</link>
       <guid isPermaLink="true">https://octoprint.org/blog/2023/02/28/octoprint-on-air-51/</guid>
       <category>OctoPrint On Air</category>
-    </item>
-    <item>
-      <title>Happy Birthday, OctoPrint!</title>
-      <description>
-        <![CDATA[
-          OctoPrint is turning 10 years old this holiday season! Time to reflect a bit on its history, and to eat cake!
-        ]]>
-      </description>
-      <pubDate>Tue, 13 Dec 2022 13:30:00 +0000</pubDate>
-      <link>https://octoprint.org/blog/2022/12/13/happy-birthday-octoprint/</link>
-      <guid isPermaLink="true">https://octoprint.org/blog/2022/12/13/happy-birthday-octoprint/</guid>
-      <category>OctoPrint News</category>
     </item>
   </channel>
 </rss>

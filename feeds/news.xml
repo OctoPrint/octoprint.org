@@ -5,9 +5,22 @@
     
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/news.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Jul 2024 07:25:58 +0000</pubDate>
-    <lastBuildDate>Thu, 04 Jul 2024 07:25:58 +0000</lastBuildDate>
+    <pubDate>Thu, 04 Jul 2024 07:30:32 +0000</pubDate>
+    <lastBuildDate>Thu, 04 Jul 2024 07:30:32 +0000</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>More manipulation of OctoPrint&apos;s anonymous usage stats</title>
+        <description>
+          <![CDATA[
+            It has barely been a week since I discovered that someone had been manipulating OctoPrint's anonymous usage stats in OctoEverywhere's favor, and now it has come to my attention that Obico has also been doing the same
+          ]]>
+        </description>
+        <pubDate>Thu, 04 Jul 2024 07:25:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2024/07/04/more-stats-manipulation/?utm_source=rss&amp;utm_medium=news</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2024/07/04/more-stats-manipulation/</guid>
+        <category>OctoPrint News</category>
+      </item>
     
       <item>
         <title>OctoPrint&apos;s anonymous usage stats were manipulated</title>
@@ -123,19 +136,6 @@
         <pubDate>Wed, 06 Mar 2019 10:20:00 +0000</pubDate>
         <link>https://octoprint.org/blog/2019/03/06/community-forum-migration/?utm_source=rss&amp;utm_medium=news</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2019/03/06/community-forum-migration/</guid>
-        <category>OctoPrint News</category>
-      </item>
-    
-      <item>
-        <title>A Guide To Safe Remote Access of OctoPrint</title>
-        <description>
-          <![CDATA[
-            In this guest post, community member Jubaleth will tell you about safe ways to access your OctoPrint instance from the internet.
-          ]]>
-        </description>
-        <pubDate>Mon, 03 Sep 2018 16:20:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2018/09/03/safe-remote-access/?utm_source=rss&amp;utm_medium=news</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2018/09/03/safe-remote-access/</guid>
         <category>OctoPrint News</category>
       </item>
     
