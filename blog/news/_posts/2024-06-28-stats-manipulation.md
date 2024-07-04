@@ -77,7 +77,7 @@ I have since cleaned up the data, soft-blocked the offending bad clients and am 
 The result of that manipulation was a whopping **38000 fake instances** reported on OctoPrint's anonymous usage stats:
 
 <div class="row-fluid" style="margin-bottom: 10px">
-    <div class="span6 offset3">
+    <div class="span12">
         <a href="/assets/img/blog/2024-06/2024-06-28-usage-number-change.png" data-lightbox="{{ page.id }}" data-title="Instance stats, showing a drop of 33k after clean-up on June 26th"><img src="/assets/img/blog/2024-06/2024-06-28-usage-number-change.png"></a>
     </div>
 </div>
@@ -85,7 +85,7 @@ The result of that manipulation was a whopping **38000 fake instances** reported
 and had an equally strong affect on the popularity stats of the plugins:
 
 <div class="row-fluid" style="margin-bottom: 10px">
-    <div class="span6 offset3">
+    <div class="span12">
         <a href="/assets/img/blog/2024-06/2024-06-28-plugin-stats-change.png" data-lightbox="{{ page.id }}" data-title="Plugin stats, before the clean-up and after"><img src="/assets/img/blog/2024-06/2024-06-28-plugin-stats-change.png"></a>
     </div>
 </div>
@@ -105,3 +105,5 @@ Based on the findings presented, I reached out to OctoEverywhere about this on J
 > OctoEverywhere also wants to make this right in our communities. Anyone who feels wronged by this incident, please use the support system on the OctoEverywhere website to contact us directly. We will work with you to make it right.
 
 **Update 2024-06-28 @ 10:20 CEST**: OctoEverywhere has now also put out a post about this. You can find it [here](https://blog.octoeverywhere.com/our-3d-printing-community-responsiblity/).
+
+**Update 2024-07-04 @ 09:00 CEST**: It has come to my attention that Obico has also been manipulating the stats. You can find the details [here](/blog/2024/07/04/more-stats-manipulation/).
