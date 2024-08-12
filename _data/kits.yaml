@@ -10,15 +10,3 @@
 #  url: https://www.alien3d.us/product/alien3d-octopi/
 #  image: alien3d-octoprint-kit.jpg
 #  description: Raspberry Pi 4B 2GB, USB-C power supply, pre-flashed & configured SD card & case, heatsinks, RGB fan, Wifi hotspot, network configuration.
-- title: Inland Pi 4B 2gb Octoprint Kit by Micro Center (US)
-  url: https://www.microcenter.com/product/629382/inland-pi-4b-2gb-octoprint-kit
-  image: microcenter-octoprint-kit.jpg
-  description: Raspberry Pi 4B 2GB, USB-C power supply, pre-flashed 32GB SD card with print, case, webcam, card reader.
-- title: OctoPrint 32gb SD card by Micro Center (US)
-  url: https://www.microcenter.com/product/640437/micro-center-octoprint-32gb-micro-sd-card-3d-print-monitoring-and-controlling
-  image: microcenter-octoprint-sdcard.jpg
-  description: Pre-flashed 32GB SD card with logo.
-- title: Orange Pi for OctoPrint by the Obico Team (US)
-  url: https://store.obico.io/collections/orange-pi-for-octoprint
-  image: obico-orange-pi.png
-  description: Orange Pi SBC, USB-C Power Supply, 3D-printable Case, Logitech C270 Webcam, Downloadable OctoPrint Image, One Year Obico Pro Plan
