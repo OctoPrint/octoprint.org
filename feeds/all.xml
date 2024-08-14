@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Aug 2024 11:25:56 +0000</pubDate>
-    <lastBuildDate>Wed, 14 Aug 2024 11:25:56 +0000</lastBuildDate>
+    <pubDate>Wed, 14 Aug 2024 11:26:37 +0000</pubDate>
+    <lastBuildDate>Wed, 14 Aug 2024 11:26:37 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>OctoPrint On Air #58</title>
+        <description>
+          <![CDATA[
+            The 58th episode of a regular devlog about all things OctoPrint which was recorded on August 7th 2024.
+          ]]>
+        </description>
+        <pubDate>Wed, 14 Aug 2024 11:25:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2024/08/14/octoprint-on-air-58/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2024/08/14/octoprint-on-air-58/</guid>
+        <category>OctoPrint On Air</category>
+      </item>
     
       <item>
         <title>More manipulation of OctoPrint&apos;s anonymous usage stats</title>
@@ -122,19 +135,6 @@
         <pubDate>Mon, 18 Mar 2024 10:50:00 +0000</pubDate>
         <link>https://octoprint.org/blog/2024/03/18/new-release-candidate-1.10.0rc3/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2024/03/18/new-release-candidate-1.10.0rc3/</guid>
-        <category>OctoPrint Release Announcements</category>
-      </item>
-    
-      <item>
-        <title>New release candidate: 1.10.0rc2</title>
-        <description>
-          <![CDATA[
-            The second release candidate for the upcoming 1.10.0 release containing some fixes of observed regressions and improvements of newly added functionality!
-          ]]>
-        </description>
-        <pubDate>Mon, 12 Feb 2024 12:30:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2024/02/12/new-release-candidate-1.10.0rc2/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2024/02/12/new-release-candidate-1.10.0rc2/</guid>
         <category>OctoPrint Release Announcements</category>
       </item>
     

@@ -4,10 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/octoblog.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Aug 2024 11:25:56 +0000</pubDate>
-    <lastBuildDate>Wed, 14 Aug 2024 11:25:56 +0000</lastBuildDate>
+    <pubDate>Wed, 14 Aug 2024 11:26:37 +0000</pubDate>
+    <lastBuildDate>Wed, 14 Aug 2024 11:26:37 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
     
+    <item>
+      <title>OctoPrint On Air #58</title>
+      <description>
+        <![CDATA[
+          The 58th episode of a regular devlog about all things OctoPrint which was recorded on August 7th 2024.
+        ]]>
+      </description>
+      <pubDate>Wed, 14 Aug 2024 11:25:00 +0000</pubDate>
+      <link>https://octoprint.org/blog/2024/08/14/octoprint-on-air-58/</link>
+      <guid isPermaLink="true">https://octoprint.org/blog/2024/08/14/octoprint-on-air-58/</guid>
+      <category>OctoPrint On Air</category>
+    </item>
     <item>
       <title>More manipulation of OctoPrint&apos;s anonymous usage stats</title>
       <description>
@@ -114,18 +126,6 @@
       <pubDate>Mon, 19 Jun 2023 12:05:00 +0000</pubDate>
       <link>https://octoprint.org/blog/2023/06/19/octoprint-on-air-52/</link>
       <guid isPermaLink="true">https://octoprint.org/blog/2023/06/19/octoprint-on-air-52/</guid>
-      <category>OctoPrint On Air</category>
-    </item>
-    <item>
-      <title>OctoPrint On Air #51</title>
-      <description>
-        <![CDATA[
-          The 51st episode of a regular live broadcast for Patrons which was recorded on February 16th 2023.
-        ]]>
-      </description>
-      <pubDate>Tue, 28 Feb 2023 13:20:00 +0000</pubDate>
-      <link>https://octoprint.org/blog/2023/02/28/octoprint-on-air-51/</link>
-      <guid isPermaLink="true">https://octoprint.org/blog/2023/02/28/octoprint-on-air-51/</guid>
       <category>OctoPrint On Air</category>
     </item>
   </channel>
