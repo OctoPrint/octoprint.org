@@ -65,6 +65,12 @@ server {
 		return 302 https://raw.githubusercontent.com/cp2004/Octoprint-Upgrade-To-Py3/master/upgrade.py;
 	}
 
+        location /octoprint-venv-tool {
+                expires 0d;
+                add_header Cache-Control "no-cache";
+                return 302 https://github.com/OctoPrint/venv-tool/raw/refs/heads/main/octoprint-venv-tool;
+        }
+
 	location /plugins/cleanup_logging.py {
 		expires 0d;
 		add_header Cache-Control "no-cache";
