@@ -6,14 +6,23 @@
 
     <div class="sponsors">
         {% assign sponsor_count = site.data.sponsors.size %}
-        {% assign sponsors = site.data.sponsors | sample: sponsor_count %}
-        {% for sponsor in sponsors %}
+        {% if sponsor_count == 1 %}
+            {% assign sponsor = site.data.sponsors[0] %}
             <div class="sponsor">
-                <a href="{{ sponsor.url }}" title="{{ sponsor.title }}" data-analytics='"Sponsor Link", { "props": { "sponsor": "{{ sponsor.title }}"} }'>
+                <a href="{{ sponsor.url }}" title="{{ sponsor[0].title }}" data-analytics='"Sponsor Link", { "props": { "sponsor": "{{ sponsor.title }}"} }'>
                     <img src="{{ BASE_PATH }}/assets/img/sponsors/{{ sponsor.logo }}" alt="{{ sponsor.title }}" title="{{ sponsor.title }}">
                 </a>
             </div>
-        {% endfor %}
+        {% else %}
+            {% assign sponsors = site.data.sponsors | sample: sponsor_count %}
+            {% for sponsor in sponsors %}
+            <div class="sponsor">
+                <a href="{{ sponsor.url }}" title="{{ sponsor[0].title }}" data-analytics='"Sponsor Link", { "props": { "sponsor": "{{ sponsor.title }}"} }'>
+                    <img src="{{ BASE_PATH }}/assets/img/sponsors/{{ sponsor.logo }}" alt="{{ sponsor.title }}" title="{{ sponsor.title }}">
+                </a>
+            </div>
+            {% endfor %}
+        {% endif %}
     </div>
 {% else %}
     <div class="flufftext">
