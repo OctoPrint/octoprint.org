@@ -17,22 +17,22 @@
     
 
     <!--[if lt IE 9]>
-    <script src="/assets/js/html5shim.js?_=1727792112"></script>
+    <script src="/assets/js/html5shim.js?_=1727792651"></script>
     <![endif]-->
 
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Le styles -->
-    <link rel="stylesheet" href="/assets/css/site.css?_=1727792112">
-    <link rel="stylesheet" href="/assets/css/bootstrap-responsive.css?_=1727792112">
-    <link rel="stylesheet" href="/assets/css/prettify.css?_=1727792112">
-    <link rel="stylesheet" href="/assets/css/lightbox.css?_=1727792112">
-    <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css?_=1727792112">
-    <link rel="stylesheet" href="/assets/css/syntax.css?_=1727792112">
+    <link rel="stylesheet" href="/assets/css/site.css?_=1727792651">
+    <link rel="stylesheet" href="/assets/css/bootstrap-responsive.css?_=1727792651">
+    <link rel="stylesheet" href="/assets/css/prettify.css?_=1727792651">
+    <link rel="stylesheet" href="/assets/css/lightbox.css?_=1727792651">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css?_=1727792651">
+    <link rel="stylesheet" href="/assets/css/syntax.css?_=1727792651">
 
-    <link rel="stylesheet" type="text/css" href="/assets/vendor/slick-1.5.9/slick.css?_=1727792112"/>
-    <link rel="stylesheet" type="text/css" href="/assets/vendor/slick-1.5.9/slick-theme.css?_=1727792112"/>
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/slick-1.5.9/slick.css?_=1727792651"/>
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/slick-1.5.9/slick-theme.css?_=1727792651"/>
 
 
     <!-- Le fav and touch icons -->
@@ -262,6 +262,47 @@
     <div class="row-fluid post">
         <article class="span9">
             
+            <div class="categories">Important Announcement</div>
+            
+            <h1><a href="/blog/2015/12/07/bug-in-1.2.7-prevents-updates/">Bug in 1.2.7 prevents updates</a></h1>
+
+            <div class="postmeta muted">
+                <span class="author">by Gina Häußge</span> &middot; <span class="date">07 Dec 2015</span>
+            </div>
+
+            <div class="excerpt">
+                <p>If you are currently running version 1.2.7 you’ll need to install the 
+<a href="http://plugins.octoprint.org/plugins/updatefix127/">“Updatefix 1.2.7” plugin</a> from the plugin repository before you can 
+update your OctoPrint installation.</p>
+
+<p>Version 1.2.7 sadly contains a bug that breaks updating OctoPrint. When 
+attempting to update, you’ll simply get presented with an 
+“update successful” message, but nothing was actually updated. Version 
+1.2.8 contains a fix, but naturally we have a hen-egg-problem here. To 
+allow you updating to 1.2.8, a plugin was made available that basically 
+backports the needed fix to 1.2.7 by monkey patching your existing 
+installation during runtime: “Updatefix 1.2.7”. It can be found in the 
+plugin repository and can be installed directly through your plugin 
+manager - just refresh the plugin list from the repository (via the 
+little wrench icon in the plugin manager install dialog) if it doesn’t 
+show up immediately when you search for “update”.</p>
+
+<p>The section “A bug in 1.2.7 prevents directly updating to 1.2.8, here’s what to do” 
+in the <a href="https://github.com/foosel/OctoPrint/releases/tag/1.2.8">release notes</a> explains everything and also offers you 
+a work around if you can’t or don’t want to install the plugin. The FAQ 
+has been updated as well.</p>
+
+            </div>
+
+            
+        </article>
+        
+    </div>
+    
+    
+    <div class="row-fluid post">
+        <article class="span9">
+            
             <div class="categories">Community Spotlight</div>
             
             <h1><a href="/blog/2015/11/19/community-spotlight-touchui-plugin/">Community Spotlight: TouchUI Plugin</a></h1>
@@ -474,30 +515,6 @@
         
     </div>
     
-    
-    <div class="row-fluid post">
-        <article class="span9">
-            
-            <div class="categories">Release</div>
-            
-            <h1><a href="/blog/2015/06/25/new-release-1-2-0/">New release: 1.2.0</a></h1>
-
-            <div class="postmeta muted">
-                <span class="author">by Gina Häußge</span> &middot; <span class="date">25 Jun 2015</span>
-            </div>
-
-            <div class="excerpt">
-                The day has finally arrived, I&#39;m declaring 1.2.0 as stable :) Just pushed and tagged 1.2.0 on the master branch, no &quot;-RC&quot; postfix on this one ;)<br />
-
-
-
-            </div>
-
-            <a href="/blog/2015/06/25/new-release-1-2-0/" class="read-more">Read More...</a>
-        </article>
-        
-    </div>
-    
 
     <div class="row-fluid">
         <nav class="pagination" role="pagination">
@@ -538,6 +555,8 @@
                     <h2>Recent Posts</h2>
                     <div class="recent-posts">
                         
+                        <div><a class="post-link" href="/blog/2024/10/01/octoprint-on-air-59/">OctoPrint On Air #59</a><br><small>01 Oct 2024</small></div>
+                        
                         <div><a class="post-link" href="/blog/2024/08/14/octoprint-on-air-58/">OctoPrint On Air #58</a><br><small>14 Aug 2024</small></div>
                         
                         <div><a class="post-link" href="/blog/2024/07/04/more-stats-manipulation/">More manipulation of OctoPrint's anonymous usage stats</a><br><small>04 Jul 2024</small></div>
@@ -545,8 +564,6 @@
                         <div><a class="post-link" href="/blog/2024/07/01/octoprint-on-air-57/">OctoPrint On Air #57</a><br><small>01 Jul 2024</small></div>
                         
                         <div><a class="post-link" href="/blog/2024/06/28/stats-manipulation/">OctoPrint's anonymous usage stats were manipulated</a><br><small>28 Jun 2024</small></div>
-                        
-                        <div><a class="post-link" href="/blog/2024/06/18/new-release-1.10.2/">New release: 1.10.2</a><br><small>18 Jun 2024</small></div>
                         
                     </div>
                 </div>
@@ -573,16 +590,16 @@
 
 <a href="#top" class="to-top" title="Back to top" data-scroll><i class="fa fa-arrow-up fa-2x"></i></a>
 
-<script src="/assets/js/jquery.min.js?_=1727792112"></script>
-<script src="/assets/js/lodash.min.js?_=1727792112"></script>
-<script src="/assets/js/prettify.min.js?_=1727792112"></script>
-<script src="/assets/js/holder-2.9.3.min.js?_=1727792112"></script>
-<script src="/assets/vendor/slick-1.5.9/slick.min.js?_=1727792112"></script>
-<script src="/assets/js/bootstrap.min.js?_=1727792112"></script>
-<script src="/assets/js/lightbox.min.js?_=1727792112"></script>
-<script src="/assets/js/smooth-scroll.min.js?_=1727792112"></script>
-<script src="/assets/js/site.js?_=1727792112"></script>
-<script src="/assets/js/yt-with-consent.js?_=1727792112"></script>
+<script src="/assets/js/jquery.min.js?_=1727792651"></script>
+<script src="/assets/js/lodash.min.js?_=1727792651"></script>
+<script src="/assets/js/prettify.min.js?_=1727792651"></script>
+<script src="/assets/js/holder-2.9.3.min.js?_=1727792651"></script>
+<script src="/assets/vendor/slick-1.5.9/slick.min.js?_=1727792651"></script>
+<script src="/assets/js/bootstrap.min.js?_=1727792651"></script>
+<script src="/assets/js/lightbox.min.js?_=1727792651"></script>
+<script src="/assets/js/smooth-scroll.min.js?_=1727792651"></script>
+<script src="/assets/js/site.js?_=1727792651"></script>
+<script src="/assets/js/yt-with-consent.js?_=1727792651"></script>
 
 </body>
 </html>
