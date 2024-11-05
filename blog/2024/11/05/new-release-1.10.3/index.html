@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+
+    <title>OctoPrint.org - New release: 1.10.3</title>
+    <meta name="description" content="OctoPrint is the snappy web interface for your 3D printer that allows you to control and monitor all aspects of your printer and print jobs, right from your browser.">
+    <meta name="author" content="Gina Häußge">
+    <meta name="google-site-verification" content="0EFsbaNygJcEinKPmzP-hTf0Ju6wDIpJxO5zvQtOQT0" />
+    <meta name="google-site-verification" content="i7e8SG0JfDqFkxQgr1_ZuirRzwJomS8xzPvb0mLHujM" />
+    <meta name="referrer" content="same-origin">
+
+    
+
+    <!--[if lt IE 9]>
+    <script src="/assets/js/html5shim.js?_=1730798692"></script>
+    <![endif]-->
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/assets/css/site.css?_=1730798692">
+    <link rel="stylesheet" href="/assets/css/bootstrap-responsive.css?_=1730798692">
+    <link rel="stylesheet" href="/assets/css/prettify.css?_=1730798692">
+    <link rel="stylesheet" href="/assets/css/lightbox.css?_=1730798692">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css?_=1730798692">
+    <link rel="stylesheet" href="/assets/css/syntax.css?_=1730798692">
+
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/slick-1.5.9/slick.css?_=1730798692"/>
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/slick-1.5.9/slick-theme.css?_=1730798692"/>
+
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/assets/img/tentacle-32x32.png">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144.png">
+
+    <!-- Le RSS feed -->
+    <link rel="alternate" type="application/rss+xml" title="OctoPrint.org: OctoBlog" href="/feeds/all.xml">
+
+    <!-- Le social media meta data -->
+    
+    
+
+    
+
+    
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@OctoPrint3D" />
+    <meta name="twitter:title" content="New release: 1.10.3" />
+    <meta name="twitter:description" content="The third security & bugfix release for 1.10.x, fixing some security vulnerabilities and bugs reported since the release of 1.10.2." />
+    <meta name="twitter:image" content="https://octoprint.org/assets/img/blog/2024-11/2024-11-05-octoprint-1.10.3-card.png" />
+
+    <meta property="og:title" content="New release: 1.10.3" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://octoprint.org/assets/img/blog/2024-11/2024-11-05-octoprint-1.10.3-poster.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:description" content="The third security & bugfix release for 1.10.x, fixing some security vulnerabilities and bugs reported since the release of 1.10.2." />
+    <meta property="og:site_name" content="OctoPrint.org" />
+    <meta property="og:url" content="https://octoprint.org/blog/2024/11/05/new-release-1.10.3/" />
+
+    <meta itemscope itemtype="http://schema.org/WebPage" />
+    <meta itemprop="headline" content="New release: 1.10.3" />
+    <meta itemprop="description" content="The third security & bugfix release for 1.10.x, fixing some security vulnerabilities and bugs reported since the release of 1.10.2." />
+    <meta itemprop="image" content="https://octoprint.org/assets/img/blog/2024-11/2024-11-05-octoprint-1.10.3-poster.png" />
+
+    <script>
+        var shiftWindow = function() { scrollBy(0, -40) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+    </script>
+
+    <!-- Plausible -->
+    <script defer data-domain="octoprint.org" src="https://plausible.octoprint.org/js/plausible.outbound-links.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    <script>
+        function handleLinkEvent(event) {
+            var link = event.target;
+            var middle = event.type == "auxclick" && event.which == 2;
+            var click = event.type == "click";
+            while (link && (typeof link.tagName == 'undefined' || link.tagName.toLowerCase() != 'a' || !link.href)) {
+                link = link.parentNode;
+            }
+            if (middle || click) {
+                let attributes = link.getAttribute('data-analytics').split(/,(.+)/);
+                let events = [JSON.parse(attributes[0]), JSON.parse(attributes[1] || '{}')];
+                plausible(...events);
+            }
+            if (!link.target) {
+                if (!(event.ctrlKey || event.metaKey || event.shiftKey) && click) {
+                    setTimeout(function () {
+                        location.href = link.href;
+                    }, 150);
+                    event.preventDefault();
+                }
+            }
+        }
+
+        window.addEventListener("load", () => {
+            let links = document.querySelectorAll('a[data-analytics]');
+            for (var i = 0; i < links.length; i++) {
+                links[i].addEventListener('click', handleLinkEvent);
+                links[i].addEventListener('auxclick', handleLinkEvent);
+            }
+        })
+    </script>
+
+    <!-- Carbon -->
+    <script>
+        var disableStr = "carbon-disable";
+        function carbonOptout() {
+            //document.cookie = disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org";
+            document.cookie = disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; domain=octoprint.org; SameSite=Strict";
+            window[disableStr] = true;
+            alert("Carbon Ads sind jetzt deaktiviert! / Carbon Ads are now deactivated!");
+        }
+        if (document.cookie.indexOf(disableStr + "=true") > -1) {
+            window[disableStr] = true;
+        }
+    </script>
+
+    <!-- Cookie consent -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/cookieconsent.min.css" />
+    <script src="/assets/js/cookieconsent.min.js"></script>
+    <script>
+        if (!String.prototype.startsWith) {
+            String.prototype.startsWith = function(search, pos) {
+            return this.substr(!pos || pos < 0 ? 0 : +pos, search.length) === search;
+            };
+        }
+
+        
+        window.addEventListener("load", function(){
+            window.cookieconsent.hasTransition = false;
+            window.cookieconsent.initialise({
+                "position": "bottom",
+                "theme": "edgeless",
+                "palette": {
+                    "popup": {
+                        "background": "#000000",
+                        "link": "#10a800"
+                    },
+                    "button": {
+                        "background": "#0b7500"
+                    }
+                },
+                "elements": {
+                    "messagelink": '<span id="cookieconsent:desc" class="cc-message">{{message}} <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank">{{link}}</a> or <a aria-label="privacy policy" tabindex="1" class="cc-link" href="/privacy/" target="_blank">read our Privacy Policy</a></span>'
+                }
+            })
+        });
+        
+
+        /**
+         * Make sure octoprint.github.io stuff gets rewritten to octoprint.org.
+         * See https://github.com/OctoPrint/plugins.octoprint.org/issues/146.
+         */
+        var githubio = "octoprint.github.io/octoprint.org";
+        var url = window.location.href;
+        if (url && (url.startsWith("http://" + githubio) || url.startsWith("https://" + githubio))) {
+            url = url.replace(githubio, "octoprint.org");
+            window.location.replace(url);
+        }
+    </script>
+</head>
+
+<body onload="load()">
+
+<div id="top"></div>
+
+<div id="banner" style="display: none">
+    <a class="close-banner" href="javascript:void(0)">&times;</a>
+    <div class="container content">
+        <p class="text">
+            I work full time on OctoPrint and can only continue thanks to funding by people like you. Give the
+            button a click and learn how you can help!
+        </p>
+        <p class="signature">
+            Thank you,<br>
+            Gina<br>
+            <small>(Creator & Maintainer of OctoPrint)</small>
+        </p>
+        <div class="span4 button">
+            <a class="btn btn-primary btn-large btn-block" href="/support-octoprint/" data-analytics='"Support Click", { "props": { "origin": "banner"} }'><i class="fa fa-heart"></i> Support my work! <i class="fa fa-heart"></i></a>
+        </div>
+    </div>
+</div>
+
+<div id="navigation" class="navbar navbar-inverse navbar-fixed-top unfixed" data-scroll-header>
+  <span class="support-ukraine">
+    🇺🇦 We stand with Ukraine! 🇺🇦
+</span>
+
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand hidden-phone" href="/"><img src="/assets/img/tentacle-20x20.png" alt="Tentacle logo" class="tentacle"> OctoPrint.org</a>
+      <a class="brand visible-phone" href="/"><img src="/assets/img/tentacle-20x20.png" alt="Tentacle logo" class="tentacle"></a>
+      <a href="javascript:void(0)" class="btn btn-burger btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><i class="fas fa-bars"></i></a>
+      <div class="pull-right">
+        <ul class="nav social-navbar">
+          <li><a href="/merch/" title="Get some merchandise!" data-analytics='"Merch Click", { "props": { "origin": "navbar"} }'><i class="fa fa-shopping-basket"></i></a></li>
+          <li><a href="/support-octoprint/" title="Support OctoPrint!" data-analytics='"Support Click", { "props": { "origin": "navbar"} }'><i class="fas fa-donate"></i></a></li>
+        </ul>
+      </div>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/help/">Get Help</a></li>
+          <li><a href="/download/">Download</a></li>
+          <li><a href="/support-octoprint/" title="Support the project!" data-analytics='"Support Click", { "props": { "origin": "menu"} }'>Donate</a></li>
+          <li><a href="/merch/" title="Get some merchandise!" data-analytics='"Merch Click", { "props": { "origin": "menu"} }'>Merchandise</a></li>
+          <li><a href="http://plugins.octoprint.org">Plugins</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">More... <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="http://docs.octoprint.org">Documentation</a></li>
+              <li><a href="https://community.octoprint.org/c/support/faq">FAQ</a></li>
+              <li><a href="/media/">Media</a></li>
+              <li class="divider"></li>
+              <li><a href="/conduct/">Code of Conduct</a></li>
+              <li><a href="/security/">Security Policy</a></li>
+              <li class="divider"></li>
+              <li><a href="https://github.com/OctoPrint/OctoPrint">Source</a></li>
+              <li><a href="https://github.com/OctoPrint/OctoPrint/blob/master/CONTRIBUTING.md">Contribution Guidelines</a></li>
+              <li><a href="https://github.com/OctoPrint/OctoPrint/issues">Issuetracker</a></li>
+              <li class="divider"></li>
+              <li><a href="/browser-check/">Browser Check</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="wrap">
+    <div id="main">
+    <div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="hero-content pageheader">
+                    <h1>New release: 1.10.3</h1>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container blogpost">
+    <div class="row-fluid pagination">
+        <div class="span12">
+            
+            &nbsp;
+            
+                <small><a class="older-posts" href="/blog/2024/10/01/octoprint-on-air-59/" title="Previous Page">OctoPrint On Air #59 &raquo;</a></small>
+            
+        </div>
+    </div>
+    <div class="row-fluid content">
+        <div class="span8 text" id="blogpost-content">
+            <div class="funding-banner">
+    <span class="banner-icon"><img src="/assets/img/financial-support-64x64.png" alt="Hand receiving a coin" /></span>
+    <p class="banner-text">
+        This release was made possible only through continued financial support by people like you!<br />
+        <strong><a href="/support-octoprint/" target="_blank" data-analytics='"Support Click", { "props": { "origin": "funding_banner"} }'>Click here if you enjoy OctoPrint and want to help with its funding!</a></strong>
+    </p>
+</div>
+
+
+<p>This third security &amp; bugfix release for 1.10.x fixes some security vulnerabilities and bugs reported since the release of 1.10.2:</p>
+
+<blockquote>
+  <p><strong>🔒 Security fixes</strong></p>
+
+  <ul>
+    <li>
+      <p>Severity Moderate (5.5): OctoPrint versions up until and including 1.10.2 are vulnerable to reflected XSS vulnerabilities through its Jinja2 template system, as this is not configured to enforce automatic escaping. This affects, among other places, the login dialog and the standalone application key confirmation dialog.</p>
+
+      <p>An attacker who successfully talked a victim into clicking on or through a malicious third party app successfully redirected a victim to a specially crafted link could use this to retrieve or modify sensitive configuration settings, interrupt prints or otherwise interact with the OctoPrint instance in a malicious way.</p>
+
+      <p>The above mentioned specific vulnerabilities of the login dialog and the standalone application key confirmation dialog have been fixed in 1.10.3 by individual escaping of the detected locations. A global change throughout all of OctoPrint’s templating system with the upcoming 1.11.0 release will handle this further, switching to globally enforced automatic escaping and thus reducing the attack surface in general.</p>
+
+      <p>The latter will also improve the security of third party plugins. During a transition period, third party plugins will be able to opt <em>into</em> the automatic escaping. With OctoPrint 1.13.0, automatic escaping will be switched over to be enforced even for third party plugins, unless they explicitly <em>opt-out</em>.</p>
+
+      <p>See also the <a href="https://github.com/OctoPrint/OctoPrint/security/advisories/GHSA-xvxq-g8hw-fx4g">GitHub Security Advisory</a> and <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-49377">CVE-2024-49377</a>.</p>
+    </li>
+    <li>
+      <p>Severity Moderate (5.3): OctoPrint versions up until and including 1.10.2 contain a vulnerability that allows an attacker that has gained temporary control over an authenticated victim’s OctoPrint browser session to retrieve/recreate/delete the user’s or - if the victim has admin permissions - the global API key without having to reauthenticate by re-entering the user account’s password.</p>
+
+      <p>An attacker could use a stolen API key to access OctoPrint through its API, or disrupt workflows depending on the API key they deleted.</p>
+
+      <p>See also the <a href="https://github.com/OctoPrint/OctoPrint/security/advisories/GHSA-cc6x-8cc7-9953">GitHub Security Advisory</a> and <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-51493">CVE-2024-51493</a>.</p>
+    </li>
+  </ul>
+
+  <p><em>Minor security fixes</em></p>
+
+  <ul>
+    <li>
+      <p>Core, <a href="https://github.com/OctoPrint/OctoPrint/pull/5070">PR#5070</a>: Use <code class="language-plaintext highlighter-rouge">secrets</code> lib to generate Flask secret key, API keys and user session IDs.</p>
+    </li>
+    <li>
+      <p>Discovery Plugin: Removed version number from <code class="language-plaintext highlighter-rouge">discovery.xml</code> of SSDP discovery. Combats information leakage.</p>
+    </li>
+    <li>
+      <p>GCODE Viewer Plugin: Limited access to <code class="language-plaintext highlighter-rouge">skip_until</code> check API to available <code class="language-plaintext highlighter-rouge">GCODE_VIEWER</code> and <code class="language-plaintext highlighter-rouge">FILES_DOWNLOAD</code> permissions. Combats information leakage.</p>
+    </li>
+  </ul>
+
+  <p><strong>🐛 Bug fixes</strong></p>
+
+  <p><em>Core</em></p>
+
+  <ul>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/issues/5036">#5036</a>: Fixed a typo where the config setting <code class="language-plaintext highlighter-rouge">server.reverseProxy.trustedUpstream</code> was used instead of <code class="language-plaintext highlighter-rouge">server.reverseProxy.trustedDownstream</code>. Also made the SockJS trusted proxy check align with that of Flask &amp; Tornado.</li>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/issues/5049">#5049</a>: Fixed file list cache being created before all extension tree providing plugins have had a chance to act.</li>
+  </ul>
+
+  <p><em>Plugin Manager</em></p>
+
+  <ul>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/issues/5057">#5057</a>: Fixed dequeuing of plugin installs. See also <a href="https://github.com/OctoPrint/OctoPrint/pull/5061">PR#5061</a>.</li>
+  </ul>
+</blockquote>
+
+<p>You can also take a look at the <a href="https://github.com/OctoPrint/OctoPrint/releases/tag/1.10.3">changelog on GitHub</a>.</p>
+
+<p>Like every single release (and release candidate) of OctoPrint ever since early 2016 this release was made possible only
+through continued financial support by people like you! 💕</p>
+
+<p><strong><a href="/support-octoprint/">Click here</a> if you enjoy OctoPrint and want to help with its funding!</strong></p>
+
+
+<h3>Issues while updating?</h3>
+
+<p>
+    On every new OctoPrint release we see some people run into the same issues with 
+    outdated or broken environments all over again. If you encounter a problem during update, please check 
+    <a href="https://community.octoprint.org/t/my-octoprint-update-fails/37880">this collection of the most common issues</a> 
+    encountered over the past couple of release cycles first, and test if the included 
+    fixes solve your problem.
+</p>
+
+
+<p>
+  Also make sure to check any of the heads-ups or plugin incompatibilities listed below.
+</p>
+
+
+
+<h3 id="headsups">Heads-ups</h3>
+
+
+<p>
+    The heads-ups from 1.10.0 still apply,
+    <a href="/blog/2024/04/24/new-release-1.10.0/#headsups">please read them carefully</a>,
+    they might impact you and how you use OctoPrint!
+    Also see the <a href="#further-information"><strong>Further Information</strong></a>
+    and <a href="#links"><strong>Links</strong></a> below for more information, where to
+    find help and how to roll back.
+</p>
+
+
+
+<p>
+  The following heads-ups from earlier releases also still apply:
+</p>
+
+<ul>
+
+  <li><a href="/blog/2024/05/14/new-release-1.10.1/#headsups">1.10.1</a></li>
+
+</ul>
+
+
+
+
+
+
+
+
+<h3 id="thanks">Thanks</h3>
+
+<p>
+    Thanks to everyone who contributed to this bugfix release and provided full,
+    analyzable bug reports, suggestions, feedback and - of course - funding!
+</p>
+
+
+
+
+<p>
+    A special <strong>Thank You!</strong> to these 2 fine people for their PRs!
+</p>
+<div class="github_user_grid">
+    
+    <div class="github_user">
+        <a href="https://github.com/jacopotediosi">
+            <img src="https://github.com/jacopotediosi.png?size=100" alt="@jacopotediosi" /><br />
+            
+                @jacopotediosi
+            
+        </a>
+    </div>
+    
+    <div class="github_user">
+        <a href="https://github.com/jneilliii">
+            <img src="https://github.com/jneilliii.png?size=100" alt="@jneilliii" /><br />
+            
+                @jneilliii
+            
+        </a>
+    </div>
+    
+</div>
+
+
+
+
+<p>
+    Also another <strong>Thank you!</strong> to <a href="https://github.com/jacopotediosi">Jacopo Tediosi</a>
+ for
+    the responsible disclosure of vulnerabilities fixed in this release.
+</p>
+
+
+<h3 id="further-information">Further Information</h3>
+
+<p>
+  If connected to the internet, OctoPrint will allow you to apply this update automatically via an update notification.
+  It may take up to 24h for this notification to pop up, so don't
+  be alarmed if it doesn't show up immediately after reading this. You
+  can force the update however via Settings > Software Update >
+  Advanced options > Force check for update.
+</p>
+<p>
+  <strong>If your update fails</strong> chances are high you are running into one of the common
+  update issues listed with fixes <a href="https://community.octoprint.org/t/my-octoprint-update-fails/37880">here</a>, 
+  so please <a href="https://community.octoprint.org/t/my-octoprint-update-fails/37880">go through that FAQ entry <strong>first</strong></a>.
+</p>
+<p>
+    <strong>
+        If you have any problems with your OctoPrint installation, please seek
+        support on the <a href="https://community.octoprint.org">community forum</a>.
+    </strong>
+</p>
+
+<h3 id="links">Links</h3>
+
+<ul>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/releases/tag/1.10.3">Changelog and Release Notes</a></li>
+    <li><a href="https://community.octoprint.org/t/my-octoprint-update-fails/37880">FAQ entry "My OctoPrint update fails"</a> <strong>(Read in case of any update problems!)</strong></li>
+    <li><a href="https://community.octoprint.org">Community forum</a></li>
+    <li><a href="https://discord.octoprint.org">Discord Server</a></li>
+    <li><a href="https://faq.octoprint.org">FAQ</a></li>
+    <li><a href="http://docs.octoprint.org/">Documentation</a></li>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/blob/master/CONTRIBUTING.md">Contribution Guidelines (also relevant for creating bug reports!)</a></li>
+    <li><a href="https://github.com/OctoPrint/OctoPrint/blob/master/CONTRIBUTING.md#how-to-file-a-bug-report">How to file a bug report</a></li>
+    <li><a href="https://community.octoprint.org/t/how-can-i-revert-to-an-older-version-of-the-octoprint-installation-on-my-octopi-image/205">How to roll back to an earlier release (OctoPi)</a></li>
+    <li><a href="https://community.octoprint.org/t/how-can-i-roll-back-to-an-earlier-version-after-an-update/234">How to roll back to an earlier release (manual install)</a></li>
+</ul>
+
+
+            
+            
+            
+            <div class="postcomments">
+                <h2>Discuss!</h2>
+
+                <div id='discourse-comments'></div>
+
+                <script type="text/javascript">
+                  if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+                    // Apparently Safari is a special snow flake and doesn't understand the referer policies. So
+                    // no comments for Safari. Complain to Apple.
+                    document.getElementById("discourse-comments").innerHTML = "It looks like you are using Safari. " +
+                        "Comment embedding is sadly not supported in Safari. You'll need to " +
+                        "<a href='https://community.octoprint.org/c/blog/'>go to the comment forum instead.</a>";
+                  } else {
+                    DiscourseEmbed = { discourseUrl: 'https://community.octoprint.org/',
+                                       discourseEmbedUrl: 'https://octoprint.org/blog/2024/11/05/new-release-1.10.3/',
+                                       discourseReferrerPolicy: 'no-referrer-when-downgrade'};
+
+                    (function() {
+                      var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+                      d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+                      //d.src = "/assets/js/comments.js";
+                      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+                    })();
+                  }
+
+                </script>
+            </div>
+            
+        </div>
+        <div class="span4">
+            <div class="postinfo">
+                
+                <dl class="featuredimage">
+                    <img src="/assets/img/blog/2024-11/2024-11-05-octoprint-1.10.3-card.png" class="img-rounded">
+                </dl>
+                
+                
+                <dl class="author">
+                    <dt>Author</dt>
+                    <dd>
+                        <a class="authorlink" href="https://github.com/foosel" target="_blank"><span class="authoravatar"><img src="https://github.com/foosel.png?size=100" /></span> Gina Häußge</a>
+                    </dd>
+                </dl>
+                
+                <dl class="published">
+                    <dt>Published</dt>
+                    <dd>05 Nov 2024</dd>
+                </dl>
+                
+                
+                <dl class="category">
+                    <dt>Category</dt>
+                    <dd>Release</dd>
+                </dl>
+                
+                
+            </div>
+            <div class="ad visible-desktop visible-tablet invisible-mobile">
+                <script>
+    if (!window["carbon-disable"] && !window.matchMedia("(max-width: 767px)").matches) {
+        (function() {
+            var po = document.createElement("script");
+            po.type = "text/javascript";
+            po.async = true;
+            po.src  = "//cdn.carbonads.com/carbon.js?serve=CKYIL53W&placement=octoprintorg";
+            po.id = "_carbonads_js";
+            var s = document.currentScript;
+            s.parentNode.insertBefore(po, s);
+        })();
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+      <footer>
+          <div class="container">
+              <div class="row">
+                <div class="span4 footer-left-column">
+                    <h2>On the web</h2>
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fab fa-github fa-fw"></i></span><a href="https://github.com/OctoPrint/OctoPrint" target="_blank">GitHub</a></li>
+                        <li><span class="fa-li"><i class="fas fa-users fa-fw"></i></span><a href="https://community.octoprint.org" target="_blank">Community Forum</a></li>
+                        <li><span class="fa-li"><i class="fab fa-discord fa-fw"></i></span><a href="https://discord.octoprint.org" target="_blank">Discord</a></li>
+                        <li><span class="fa-li"><i class="fas fa-hashtag fa-fw"></i></span><a href="ircs://irc.libera.chat:6697/#octoprint" target="_blank">IRC</a> (#octoprint on <a href="https://libera.chat" target="_blank">libera.chat</a>)</li>
+                        <li><span class="fa-li"><i class="fab fa-mastodon fa-fw"></i></span><a href="https://fosstodon.org/@octoprint" target="_blank" rel="me">Mastodon</a></li>
+                        <li><span class="fa-li"><i class="fab fa-youtube fa-fw"></i></span><a href="https://www.youtube.com/c/OctoPrint3D" target="_blank">YouTube</a></li>
+                        <li><span class="fa-li"><i class="fas fa-tachometer-alt fa-fw"></i></span><a href="https://status.octoprint.org" target="_blank">Site Status</a></li>
+                        <li><span class="fa-li"><i class="fas fa-hammer fa-fw"></i></span><a href="/conduct/" rel="nofollow">Code of Conduct</a></li>
+                        <li><span class="fa-li"><i class="fas fa-lock fa-fw"></i></span><a href="/security/" rel="nofollow">Security Policy</a></li>
+                    </ul>
+                </div>
+                <div class="span4">
+                    <h2>Recent Posts</h2>
+                    <div class="recent-posts">
+                        
+                        <div><a class="post-link" href="/blog/2024/11/05/new-release-1.10.3/">New release: 1.10.3</a><br><small>05 Nov 2024</small></div>
+                        
+                        <div><a class="post-link" href="/blog/2024/10/01/octoprint-on-air-59/">OctoPrint On Air #59</a><br><small>01 Oct 2024</small></div>
+                        
+                        <div><a class="post-link" href="/blog/2024/08/14/octoprint-on-air-58/">OctoPrint On Air #58</a><br><small>14 Aug 2024</small></div>
+                        
+                        <div><a class="post-link" href="/blog/2024/07/04/more-stats-manipulation/">More manipulation of OctoPrint's anonymous usage stats</a><br><small>04 Jul 2024</small></div>
+                        
+                        <div><a class="post-link" href="/blog/2024/07/01/octoprint-on-air-57/">OctoPrint On Air #57</a><br><small>01 Jul 2024</small></div>
+                        
+                    </div>
+                </div>
+                <div class="span4 footer-right-column">
+                    <h2>Big Thanks</h2>
+                    <p>
+                        Cross-browser testing services are kindly provided by <a href="https://www.browserstack.com">BrowserStack</a>.
+                        Profiling is done with the help of <a href="https://www.pyvmmonitor.com">PyVmMonitor</a>.
+                        Error tracking is powered and sponsored by <a href="https://sentry.io">Sentry</a>.
+                    </p>
+                    <p>
+                        Development would be impossible without the <a href="/support-octoprint/" data-analytics='"Support Click", { "props": { "origin": "footer"} }'>financial support of the community</a>.
+                    </p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="span12 text-center legal">
+                      <small>"OctoPrint" is a <a href="/trademark-rules/">registered trademark</a> &middot; <a href="/imprint/" rel="nofollow">Imprint</a> &middot; <a href="/privacy/" rel="nofollow">Privacy Policy</a></small>
+                  </div>
+              </div>
+          </div>
+      </footer>
+
+
+<a href="#top" class="to-top" title="Back to top" data-scroll><i class="fa fa-arrow-up fa-2x"></i></a>
+
+<script src="/assets/js/jquery.min.js?_=1730798692"></script>
+<script src="/assets/js/lodash.min.js?_=1730798692"></script>
+<script src="/assets/js/prettify.min.js?_=1730798692"></script>
+<script src="/assets/js/holder-2.9.3.min.js?_=1730798692"></script>
+<script src="/assets/vendor/slick-1.5.9/slick.min.js?_=1730798692"></script>
+<script src="/assets/js/bootstrap.min.js?_=1730798692"></script>
+<script src="/assets/js/lightbox.min.js?_=1730798692"></script>
+<script src="/assets/js/smooth-scroll.min.js?_=1730798692"></script>
+<script src="/assets/js/site.js?_=1730798692"></script>
+<script src="/assets/js/yt-with-consent.js?_=1730798692"></script>
+
+</body>
+</html>

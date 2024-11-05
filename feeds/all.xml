@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Nov 2024 08:35:08 +0000</pubDate>
-    <lastBuildDate>Tue, 05 Nov 2024 08:35:08 +0000</lastBuildDate>
+    <pubDate>Tue, 05 Nov 2024 09:24:52 +0000</pubDate>
+    <lastBuildDate>Tue, 05 Nov 2024 09:24:52 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>New release: 1.10.3</title>
+        <description>
+          <![CDATA[
+            The third security & bugfix release for 1.10.x, fixing some security vulnerabilities and bugs reported since the release of 1.10.2.
+          ]]>
+        </description>
+        <pubDate>Tue, 05 Nov 2024 09:21:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2024/11/05/new-release-1.10.3/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2024/11/05/new-release-1.10.3/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>OctoPrint On Air #59</title>
@@ -123,19 +136,6 @@
         <link>https://octoprint.org/blog/2024/04/08/new-release-candidate-1.10.0rc4/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2024/04/08/new-release-candidate-1.10.0rc4/</guid>
         <category>OctoPrint Release Announcements</category>
-      </item>
-    
-      <item>
-        <title>OctoPrint On Air #56</title>
-        <description>
-          <![CDATA[
-            The 56th episode of a regular devlog about all things OctoPrint which was recorded on March 19th 2024.
-          ]]>
-        </description>
-        <pubDate>Mon, 25 Mar 2024 09:15:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2024/03/25/octoprint-on-air-56/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2024/03/25/octoprint-on-air-56/</guid>
-        <category>OctoPrint On Air</category>
       </item>
     
   </channel>
