@@ -5,15 +5,28 @@
     
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/octoprintonair.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Nov 2024 07:31:02 +0000</pubDate>
-    <lastBuildDate>Wed, 20 Nov 2024 07:31:02 +0000</lastBuildDate>
+    <pubDate>Wed, 20 Nov 2024 07:34:05 +0000</pubDate>
+    <lastBuildDate>Wed, 20 Nov 2024 07:34:05 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>OctoPrint On Air #60</title>
+        <description>
+          <![CDATA[
+            The 60th episode of a regular devlog about all things OctoPrint which was recorded on November 14th 2024.
+          ]]>
+        </description>
+        <pubDate>Wed, 20 Nov 2024 07:30:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2024/11/20/octoprint-on-air-60/?utm_source=rss&amp;utm_medium=octoprintonair</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2024/11/20/octoprint-on-air-60/</guid>
+        <category>OctoPrint On Air</category>
+      </item>
     
       <item>
         <title>OctoPrint On Air #59</title>
         <description>
           <![CDATA[
-            The 58th episode of a regular devlog about all things OctoPrint which was recorded on September 25th 2024.
+            The 59th episode of a regular devlog about all things OctoPrint which was recorded on September 25th 2024.
           ]]>
         </description>
         <pubDate>Tue, 01 Oct 2024 14:20:00 +0000</pubDate>
@@ -123,19 +136,6 @@
         <pubDate>Tue, 28 Feb 2023 13:20:00 +0000</pubDate>
         <link>https://octoprint.org/blog/2023/02/28/octoprint-on-air-51/?utm_source=rss&amp;utm_medium=octoprintonair</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2023/02/28/octoprint-on-air-51/</guid>
-        <category>OctoPrint On Air</category>
-      </item>
-    
-      <item>
-        <title>Announcement: OctoPrint On Air #50 LIVE</title>
-        <description>
-          <![CDATA[
-            All of you are invited to join me on Monday, December 12th at 17:00 CET on YouTube, where the next OctoPrint On Air episode will air live. It will be a birthday special as OctoPrint is turning 10!
-          ]]>
-        </description>
-        <pubDate>Mon, 05 Dec 2022 15:50:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2022/12/05/octoprint-on-air-50/?utm_source=rss&amp;utm_medium=octoprintonair</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2022/12/05/octoprint-on-air-50/</guid>
         <category>OctoPrint On Air</category>
       </item>
     

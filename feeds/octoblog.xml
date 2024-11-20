@@ -4,15 +4,27 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/octoblog.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Nov 2024 07:31:02 +0000</pubDate>
-    <lastBuildDate>Wed, 20 Nov 2024 07:31:02 +0000</lastBuildDate>
+    <pubDate>Wed, 20 Nov 2024 07:34:05 +0000</pubDate>
+    <lastBuildDate>Wed, 20 Nov 2024 07:34:05 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
     
+    <item>
+      <title>OctoPrint On Air #60</title>
+      <description>
+        <![CDATA[
+          The 60th episode of a regular devlog about all things OctoPrint which was recorded on November 14th 2024.
+        ]]>
+      </description>
+      <pubDate>Wed, 20 Nov 2024 07:30:00 +0000</pubDate>
+      <link>https://octoprint.org/blog/2024/11/20/octoprint-on-air-60/</link>
+      <guid isPermaLink="true">https://octoprint.org/blog/2024/11/20/octoprint-on-air-60/</guid>
+      <category>OctoPrint On Air</category>
+    </item>
     <item>
       <title>OctoPrint On Air #59</title>
       <description>
         <![CDATA[
-          The 58th episode of a regular devlog about all things OctoPrint which was recorded on September 25th 2024.
+          The 59th episode of a regular devlog about all things OctoPrint which was recorded on September 25th 2024.
         ]]>
       </description>
       <pubDate>Tue, 01 Oct 2024 14:20:00 +0000</pubDate>
@@ -114,18 +126,6 @@
       <pubDate>Wed, 25 Oct 2023 10:00:00 +0000</pubDate>
       <link>https://octoprint.org/blog/2023/10/25/octoprint-on-air-54/</link>
       <guid isPermaLink="true">https://octoprint.org/blog/2023/10/25/octoprint-on-air-54/</guid>
-      <category>OctoPrint On Air</category>
-    </item>
-    <item>
-      <title>OctoPrint On Air #53</title>
-      <description>
-        <![CDATA[
-          The 53rd episode of a regular devlog about all things OctoPrint which was recorded on August 1st 2023.
-        ]]>
-      </description>
-      <pubDate>Thu, 03 Aug 2023 11:05:00 +0000</pubDate>
-      <link>https://octoprint.org/blog/2023/08/03/octoprint-on-air-53/</link>
-      <guid isPermaLink="true">https://octoprint.org/blog/2023/08/03/octoprint-on-air-53/</guid>
       <category>OctoPrint On Air</category>
     </item>
   </channel>
