@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 18 Dec 2024 06:41:11 +0000</pubDate>
-    <lastBuildDate>Wed, 18 Dec 2024 06:41:11 +0000</lastBuildDate>
+    <pubDate>Wed, 18 Dec 2024 06:46:22 +0000</pubDate>
+    <lastBuildDate>Wed, 18 Dec 2024 06:46:22 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>OctoPrint On Air #61</title>
+        <description>
+          <![CDATA[
+            The 61st episode of a regular devlog about all things OctoPrint which was recorded on December 11th 2024.
+          ]]>
+        </description>
+        <pubDate>Wed, 18 Dec 2024 07:30:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2024/12/18/octoprint-on-air-61/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2024/12/18/octoprint-on-air-61/</guid>
+        <category>OctoPrint On Air</category>
+      </item>
     
       <item>
         <title>OctoPrint On Air #60</title>
@@ -122,19 +135,6 @@
         <pubDate>Tue, 14 May 2024 09:30:00 +0000</pubDate>
         <link>https://octoprint.org/blog/2024/05/14/new-release-1.10.1/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2024/05/14/new-release-1.10.1/</guid>
-        <category>OctoPrint Release Announcements</category>
-      </item>
-    
-      <item>
-        <title>New release: 1.10.0</title>
-        <description>
-          <![CDATA[
-            Ten months in development, followed by close to three months of an RC phase, it's finally time to push out 1.10.0!
-          ]]>
-        </description>
-        <pubDate>Wed, 24 Apr 2024 11:15:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2024/04/24/new-release-1.10.0/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2024/04/24/new-release-1.10.0/</guid>
         <category>OctoPrint Release Announcements</category>
       </item>
     

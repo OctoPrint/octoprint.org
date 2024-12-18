@@ -4,10 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/octoblog.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 18 Dec 2024 06:41:11 +0000</pubDate>
-    <lastBuildDate>Wed, 18 Dec 2024 06:41:11 +0000</lastBuildDate>
+    <pubDate>Wed, 18 Dec 2024 06:46:22 +0000</pubDate>
+    <lastBuildDate>Wed, 18 Dec 2024 06:46:22 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
     
+    <item>
+      <title>OctoPrint On Air #61</title>
+      <description>
+        <![CDATA[
+          The 61st episode of a regular devlog about all things OctoPrint which was recorded on December 11th 2024.
+        ]]>
+      </description>
+      <pubDate>Wed, 18 Dec 2024 07:30:00 +0000</pubDate>
+      <link>https://octoprint.org/blog/2024/12/18/octoprint-on-air-61/</link>
+      <guid isPermaLink="true">https://octoprint.org/blog/2024/12/18/octoprint-on-air-61/</guid>
+      <category>OctoPrint On Air</category>
+    </item>
     <item>
       <title>OctoPrint On Air #60</title>
       <description>
@@ -115,18 +127,6 @@
       <link>https://octoprint.org/blog/2023/10/30/funding-update/</link>
       <guid isPermaLink="true">https://octoprint.org/blog/2023/10/30/funding-update/</guid>
       <category>OctoPrint News</category>
-    </item>
-    <item>
-      <title>OctoPrint On Air #54</title>
-      <description>
-        <![CDATA[
-          The 54th episode of a regular devlog about all things OctoPrint which was recorded on October 23rd 2023.
-        ]]>
-      </description>
-      <pubDate>Wed, 25 Oct 2023 10:00:00 +0000</pubDate>
-      <link>https://octoprint.org/blog/2023/10/25/octoprint-on-air-54/</link>
-      <guid isPermaLink="true">https://octoprint.org/blog/2023/10/25/octoprint-on-air-54/</guid>
-      <category>OctoPrint On Air</category>
     </item>
   </channel>
 </rss>
