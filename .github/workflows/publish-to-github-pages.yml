@@ -101,10 +101,10 @@ jobs:
       #    echo "Generated rpi-imager.json:"
       #    cat ./files/rpi-imager.json
 
-      - name: 🐍 Set up Python 3.7
+      - name: 🐍 Set up Python 3.11
         uses: actions/setup-python@v4
         with:
-          python-version: "3.7"
+          python-version: "3.11"
 
       - name: 🐍 Install requirements
         run: |
