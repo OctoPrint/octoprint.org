@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 28 Jan 2025 13:31:50 +0000</pubDate>
-    <lastBuildDate>Tue, 28 Jan 2025 13:31:50 +0000</lastBuildDate>
+    <pubDate>Tue, 28 Jan 2025 14:30:56 +0000</pubDate>
+    <lastBuildDate>Tue, 28 Jan 2025 14:30:56 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>New release candidate: 1.11.0rc1</title>
+        <description>
+          <![CDATA[
+            The first release candidate for the upcoming 1.11.0 release containing new features, improvements & bug fixes!
+          ]]>
+        </description>
+        <pubDate>Tue, 28 Jan 2025 14:15:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2025/01/28/new-release-candidate-1.11.0rc1/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2025/01/28/new-release-candidate-1.11.0rc1/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>OctoPrint On Air #61</title>
@@ -122,19 +135,6 @@
         <pubDate>Tue, 18 Jun 2024 08:00:00 +0000</pubDate>
         <link>https://octoprint.org/blog/2024/06/18/new-release-1.10.2/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2024/06/18/new-release-1.10.2/</guid>
-        <category>OctoPrint Release Announcements</category>
-      </item>
-    
-      <item>
-        <title>New release: 1.10.1</title>
-        <description>
-          <![CDATA[
-            The first bugfix & security release for 1.10.x, fixing one security vulnerability, several bugs and also adding the one or other improvement.
-          ]]>
-        </description>
-        <pubDate>Tue, 14 May 2024 09:30:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2024/05/14/new-release-1.10.1/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2024/05/14/new-release-1.10.1/</guid>
         <category>OctoPrint Release Announcements</category>
       </item>
     

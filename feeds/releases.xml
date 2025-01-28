@@ -5,9 +5,22 @@
     
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/releases.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 28 Jan 2025 13:31:50 +0000</pubDate>
-    <lastBuildDate>Tue, 28 Jan 2025 13:31:50 +0000</lastBuildDate>
+    <pubDate>Tue, 28 Jan 2025 14:30:56 +0000</pubDate>
+    <lastBuildDate>Tue, 28 Jan 2025 14:30:56 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>New release candidate: 1.11.0rc1</title>
+        <description>
+          <![CDATA[
+            The first release candidate for the upcoming 1.11.0 release containing new features, improvements & bug fixes!
+          ]]>
+        </description>
+        <pubDate>Tue, 28 Jan 2025 14:15:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2025/01/28/new-release-candidate-1.11.0rc1/?utm_source=rss&amp;utm_medium=releases</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2025/01/28/new-release-candidate-1.11.0rc1/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>New release: 1.10.3</title>
@@ -123,19 +136,6 @@
         <pubDate>Mon, 09 Oct 2023 14:45:00 +0000</pubDate>
         <link>https://octoprint.org/blog/2023/10/09/new-release-1.9.3/?utm_source=rss&amp;utm_medium=releases</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2023/10/09/new-release-1.9.3/</guid>
-        <category>OctoPrint Release Announcements</category>
-      </item>
-    
-      <item>
-        <title>New release: 1.9.2</title>
-        <description>
-          <![CDATA[
-            The second bugfix release for 1.9.x, mostly to work around a new bug in a third party dependency.
-          ]]>
-        </description>
-        <pubDate>Tue, 18 Jul 2023 11:15:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2023/07/18/new-release-1.9.2/?utm_source=rss&amp;utm_medium=releases</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2023/07/18/new-release-1.9.2/</guid>
         <category>OctoPrint Release Announcements</category>
       </item>
     
