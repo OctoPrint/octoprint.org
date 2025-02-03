@@ -5,9 +5,22 @@
     
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/releases.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Feb 2025 13:31:52 +0000</pubDate>
-    <lastBuildDate>Mon, 03 Feb 2025 13:31:52 +0000</lastBuildDate>
+    <pubDate>Mon, 03 Feb 2025 14:26:09 +0000</pubDate>
+    <lastBuildDate>Mon, 03 Feb 2025 14:26:09 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>New release candidate: 1.11.0rc2</title>
+        <description>
+          <![CDATA[
+            The second release candidate for the upcoming 1.11.0 release containing some fixes of observed regressions and bugs in the first one!
+          ]]>
+        </description>
+        <pubDate>Mon, 03 Feb 2025 14:15:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2025/02/03/new-release-candidate-1.11.0rc2/?utm_source=rss&amp;utm_medium=releases</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2025/02/03/new-release-candidate-1.11.0rc2/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>New release candidate: 1.11.0rc1</title>
@@ -123,19 +136,6 @@
         <pubDate>Wed, 31 Jan 2024 17:00:00 +0000</pubDate>
         <link>https://octoprint.org/blog/2024/01/31/new-release-candidate-1.10.0rc1/?utm_source=rss&amp;utm_medium=releases</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2024/01/31/new-release-candidate-1.10.0rc1/</guid>
-        <category>OctoPrint Release Announcements</category>
-      </item>
-    
-      <item>
-        <title>New release: 1.9.3</title>
-        <description>
-          <![CDATA[
-            The third bugfix & security release for 1.9.x, fixing one security vulnerability, one bug and adding one workaround for an issue with a third party dependency.
-          ]]>
-        </description>
-        <pubDate>Mon, 09 Oct 2023 14:45:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2023/10/09/new-release-1.9.3/?utm_source=rss&amp;utm_medium=releases</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2023/10/09/new-release-1.9.3/</guid>
         <category>OctoPrint Release Announcements</category>
       </item>
     

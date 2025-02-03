@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Feb 2025 13:31:52 +0000</pubDate>
-    <lastBuildDate>Mon, 03 Feb 2025 13:31:52 +0000</lastBuildDate>
+    <pubDate>Mon, 03 Feb 2025 14:26:09 +0000</pubDate>
+    <lastBuildDate>Mon, 03 Feb 2025 14:26:09 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>New release candidate: 1.11.0rc2</title>
+        <description>
+          <![CDATA[
+            The second release candidate for the upcoming 1.11.0 release containing some fixes of observed regressions and bugs in the first one!
+          ]]>
+        </description>
+        <pubDate>Mon, 03 Feb 2025 14:15:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2025/02/03/new-release-candidate-1.11.0rc2/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2025/02/03/new-release-candidate-1.11.0rc2/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>New release candidate: 1.11.0rc1</title>
@@ -123,19 +136,6 @@
         <link>https://octoprint.org/blog/2024/06/28/stats-manipulation/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2024/06/28/stats-manipulation/</guid>
         <category>OctoPrint News</category>
-      </item>
-    
-      <item>
-        <title>New release: 1.10.2</title>
-        <description>
-          <![CDATA[
-            The second bugfix release for 1.10.x, fixing several bugs reported since the release of 1.10.1.
-          ]]>
-        </description>
-        <pubDate>Tue, 18 Jun 2024 08:00:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2024/06/18/new-release-1.10.2/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2024/06/18/new-release-1.10.2/</guid>
-        <category>OctoPrint Release Announcements</category>
       </item>
     
   </channel>
