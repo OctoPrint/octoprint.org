@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Mar 2025 13:37:26 +0000</pubDate>
-    <lastBuildDate>Tue, 11 Mar 2025 13:37:26 +0000</lastBuildDate>
+    <pubDate>Tue, 11 Mar 2025 13:49:48 +0000</pubDate>
+    <lastBuildDate>Tue, 11 Mar 2025 13:49:48 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>New release candidate: 1.11.0rc4</title>
+        <description>
+          <![CDATA[
+            The fourth release candidate for the upcoming 1.11.0 release containing a fix of an observed regression in the previous ones, a fix of a bug in a new feature and a small fix for an issue in 1.10.x!
+          ]]>
+        </description>
+        <pubDate>Tue, 11 Mar 2025 13:30:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2025/03/11/new-release-candidate-1.11.0rc4/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2025/03/11/new-release-candidate-1.11.0rc4/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>OctoPrint On Air #62</title>
@@ -123,19 +136,6 @@
         <link>https://octoprint.org/blog/2024/08/14/octoprint-on-air-58/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2024/08/14/octoprint-on-air-58/</guid>
         <category>OctoPrint On Air</category>
-      </item>
-    
-      <item>
-        <title>More manipulation of OctoPrint&apos;s anonymous usage stats</title>
-        <description>
-          <![CDATA[
-            It has barely been a week since I discovered that someone had been manipulating OctoPrint's anonymous usage stats in OctoEverywhere's favor, and now it has come to my attention that Obico has also been doing the same
-          ]]>
-        </description>
-        <pubDate>Thu, 04 Jul 2024 07:25:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2024/07/04/more-stats-manipulation/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2024/07/04/more-stats-manipulation/</guid>
-        <category>OctoPrint News</category>
       </item>
     
   </channel>
