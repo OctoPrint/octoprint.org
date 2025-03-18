@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 18 Mar 2025 13:38:50 +0000</pubDate>
-    <lastBuildDate>Tue, 18 Mar 2025 13:38:50 +0000</lastBuildDate>
+    <pubDate>Tue, 18 Mar 2025 14:27:14 +0000</pubDate>
+    <lastBuildDate>Tue, 18 Mar 2025 14:27:14 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>New release candidate: 1.11.0rc5</title>
+        <description>
+          <![CDATA[
+            The fifth release candidate for the upcoming 1.11.0 release containing a fix of an observed regression in the previous ones!
+          ]]>
+        </description>
+        <pubDate>Tue, 18 Mar 2025 14:15:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2025/03/18/new-release-candidate-1.11.0rc5/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2025/03/18/new-release-candidate-1.11.0rc5/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>New release candidate: 1.11.0rc4</title>
@@ -122,19 +135,6 @@
         <pubDate>Tue, 01 Oct 2024 14:20:00 +0000</pubDate>
         <link>https://octoprint.org/blog/2024/10/01/octoprint-on-air-59/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2024/10/01/octoprint-on-air-59/</guid>
-        <category>OctoPrint On Air</category>
-      </item>
-    
-      <item>
-        <title>OctoPrint On Air #58</title>
-        <description>
-          <![CDATA[
-            The 58th episode of a regular devlog about all things OctoPrint which was recorded on August 7th 2024.
-          ]]>
-        </description>
-        <pubDate>Wed, 14 Aug 2024 11:25:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2024/08/14/octoprint-on-air-58/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2024/08/14/octoprint-on-air-58/</guid>
         <category>OctoPrint On Air</category>
       </item>
     
