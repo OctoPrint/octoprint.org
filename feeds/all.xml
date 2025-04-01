@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Apr 2025 09:34:06 +0000</pubDate>
-    <lastBuildDate>Tue, 01 Apr 2025 09:34:06 +0000</lastBuildDate>
+    <pubDate>Tue, 01 Apr 2025 10:21:56 +0000</pubDate>
+    <lastBuildDate>Tue, 01 Apr 2025 10:21:56 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>New release candidate: 1.11.0rc6</title>
+        <description>
+          <![CDATA[
+            The sixth release candidate for the upcoming 1.11.0 release containing a few fixes of observed regressions & bugs in the previous ones!
+          ]]>
+        </description>
+        <pubDate>Tue, 01 Apr 2025 10:15:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2025/04/01/new-release-candidate-1.11.0rc6/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2025/04/01/new-release-candidate-1.11.0rc6/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>New release candidate: 1.11.0rc5</title>
@@ -123,19 +136,6 @@
         <link>https://octoprint.org/blog/2024/11/05/new-release-1.10.3/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2024/11/05/new-release-1.10.3/</guid>
         <category>OctoPrint Release Announcements</category>
-      </item>
-    
-      <item>
-        <title>OctoPrint On Air #59</title>
-        <description>
-          <![CDATA[
-            The 59th episode of a regular devlog about all things OctoPrint which was recorded on September 25th 2024.
-          ]]>
-        </description>
-        <pubDate>Tue, 01 Oct 2024 14:20:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2024/10/01/octoprint-on-air-59/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2024/10/01/octoprint-on-air-59/</guid>
-        <category>OctoPrint On Air</category>
       </item>
     
   </channel>
