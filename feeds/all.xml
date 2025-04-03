@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Apr 2025 12:57:20 +0000</pubDate>
-    <lastBuildDate>Thu, 03 Apr 2025 12:57:20 +0000</lastBuildDate>
+    <pubDate>Thu, 03 Apr 2025 13:30:16 +0000</pubDate>
+    <lastBuildDate>Thu, 03 Apr 2025 13:30:16 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>New release candidate: 1.11.0rc7</title>
+        <description>
+          <![CDATA[
+            The seventh release candidate for the upcoming 1.11.0 release containing a for a regression in the previous one!
+          ]]>
+        </description>
+        <pubDate>Thu, 03 Apr 2025 13:20:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2025/04/03/new-release-candidate-1.11.0rc7/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2025/04/03/new-release-candidate-1.11.0rc7/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>New release candidate: 1.11.0rc6</title>
@@ -123,19 +136,6 @@
         <link>https://octoprint.org/blog/2024/11/20/octoprint-on-air-60/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2024/11/20/octoprint-on-air-60/</guid>
         <category>OctoPrint On Air</category>
-      </item>
-    
-      <item>
-        <title>New release: 1.10.3</title>
-        <description>
-          <![CDATA[
-            The third security & bugfix release for 1.10.x, fixing some security vulnerabilities and bugs reported since the release of 1.10.2.
-          ]]>
-        </description>
-        <pubDate>Tue, 05 Nov 2024 09:21:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2024/11/05/new-release-1.10.3/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2024/11/05/new-release-1.10.3/</guid>
-        <category>OctoPrint Release Announcements</category>
       </item>
     
   </channel>
