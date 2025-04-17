@@ -5,9 +5,22 @@
     
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/octoprintonair.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Apr 2025 10:39:34 +0000</pubDate>
-    <lastBuildDate>Thu, 17 Apr 2025 10:39:34 +0000</lastBuildDate>
+    <pubDate>Thu, 17 Apr 2025 11:03:10 +0000</pubDate>
+    <lastBuildDate>Thu, 17 Apr 2025 11:03:10 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>OctoPrint On Air #63</title>
+        <description>
+          <![CDATA[
+            The 63rd episode of a regular devlog about all things OctoPrint which was recorded on April 11th 2025.
+          ]]>
+        </description>
+        <pubDate>Thu, 17 Apr 2025 11:00:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2025/04/17/octoprint-on-air-63/?utm_source=rss&amp;utm_medium=octoprintonair</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2025/04/17/octoprint-on-air-63/</guid>
+        <category>OctoPrint On Air</category>
+      </item>
     
       <item>
         <title>OctoPrint On Air #62</title>
@@ -123,19 +136,6 @@
         <pubDate>Wed, 25 Oct 2023 10:00:00 +0000</pubDate>
         <link>https://octoprint.org/blog/2023/10/25/octoprint-on-air-54/?utm_source=rss&amp;utm_medium=octoprintonair</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2023/10/25/octoprint-on-air-54/</guid>
-        <category>OctoPrint On Air</category>
-      </item>
-    
-      <item>
-        <title>OctoPrint On Air #53</title>
-        <description>
-          <![CDATA[
-            The 53rd episode of a regular devlog about all things OctoPrint which was recorded on August 1st 2023.
-          ]]>
-        </description>
-        <pubDate>Thu, 03 Aug 2023 11:05:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2023/08/03/octoprint-on-air-53/?utm_source=rss&amp;utm_medium=octoprintonair</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2023/08/03/octoprint-on-air-53/</guid>
         <category>OctoPrint On Air</category>
       </item>
     
