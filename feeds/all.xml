@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 22 Apr 2025 09:33:29 +0000</pubDate>
-    <lastBuildDate>Tue, 22 Apr 2025 09:33:29 +0000</lastBuildDate>
+    <pubDate>Tue, 22 Apr 2025 09:40:26 +0000</pubDate>
+    <lastBuildDate>Tue, 22 Apr 2025 09:40:26 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>New release: 1.11.0</title>
+        <description>
+          <![CDATA[
+            In development now since January 2024, and in community testing since January 2025, I'm proud to finally present you with OctoPrint 1.11.0!
+          ]]>
+        </description>
+        <pubDate>Tue, 22 Apr 2025 09:30:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2025/04/22/new-release-1.11.0/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2025/04/22/new-release-1.11.0/</guid>
+        <category>OctoPrint Release Announcements</category>
+      </item>
     
       <item>
         <title>OctoPrint On Air #63</title>
@@ -123,19 +136,6 @@
         <link>https://octoprint.org/blog/2025/01/28/new-release-candidate-1.11.0rc1/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2025/01/28/new-release-candidate-1.11.0rc1/</guid>
         <category>OctoPrint Release Announcements</category>
-      </item>
-    
-      <item>
-        <title>OctoPrint On Air #61</title>
-        <description>
-          <![CDATA[
-            The 61st episode of a regular devlog about all things OctoPrint which was recorded on December 11th 2024.
-          ]]>
-        </description>
-        <pubDate>Wed, 18 Dec 2024 07:30:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2024/12/18/octoprint-on-air-61/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2024/12/18/octoprint-on-air-61/</guid>
-        <category>OctoPrint On Air</category>
       </item>
     
   </channel>
