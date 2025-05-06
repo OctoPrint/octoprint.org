@@ -134,7 +134,7 @@ The same OctoPi image with the <strong><a href="/blog/2023/05/24/a-new-camera-st
     </a>
     <small>SHA256: <code>{{ site.data.octopi.latest_cam.sha256 }}</code></small><br>
     <small><strong>{{ site.data.octopi.recommendation }}</strong></small><br>
-    <small>Image compatible with Raspberry Pi {{ site.data.octopi.latest.pi_models }}.</small><br>
+    <small>Image compatible with Raspberry Pi {{ site.data.octopi.latest_cam.pi_models }}.</small><br>
 </div>
 {% endif %}
 
