@@ -5,9 +5,22 @@
     
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/octopi.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 06 May 2025 07:32:05 +0000</pubDate>
-    <lastBuildDate>Tue, 06 May 2025 07:32:05 +0000</lastBuildDate>
+    <pubDate>Tue, 06 May 2025 07:39:44 +0000</pubDate>
+    <lastBuildDate>Tue, 06 May 2025 07:39:44 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>New OctoPi Release: 1.1.0</title>
+        <description>
+          <![CDATA[
+            OctoPi 1.1.0 comes with Debian Bookworm and support for the RPi5, among other things.
+          ]]>
+        </description>
+        <pubDate>Tue, 06 May 2025 07:15:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2025/05/06/octopi-release-1-1-0/?utm_source=rss&amp;utm_medium=octopi</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2025/05/06/octopi-release-1-1-0/</guid>
+        <category>OctoPi Announcements</category>
+      </item>
     
       <item>
         <title>A new camera stack for OctoPi</title>
@@ -123,19 +136,6 @@
         <pubDate>Thu, 14 Nov 2019 09:15:00 +0000</pubDate>
         <link>https://octoprint.org/blog/2019/11/14/octopi-release-0-17-0/?utm_source=rss&amp;utm_medium=octopi</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2019/11/14/octopi-release-0-17-0/</guid>
-        <category>OctoPi Announcements</category>
-      </item>
-    
-      <item>
-        <title>OctoPi Release Candidate 0.17.0rc1 needs testers!</title>
-        <description>
-          <![CDATA[
-            Guy Sheffer published a release candidate for the release of OctoPi 0.17.0 and is looking for feedback!
-          ]]>
-        </description>
-        <pubDate>Wed, 30 Oct 2019 09:40:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2019/10/30/octopi-release-candidate-0-17-0rc1/?utm_source=rss&amp;utm_medium=octopi</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2019/10/30/octopi-release-candidate-0-17-0rc1/</guid>
         <category>OctoPi Announcements</category>
       </item>
     

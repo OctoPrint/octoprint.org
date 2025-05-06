@@ -4,9 +4,22 @@
     <title>OctoBlog</title>
     <link>https://octoprint.org/blog/</link>
     <atom:link href="https://octoprint.org/feeds/all.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 06 May 2025 07:32:05 +0000</pubDate>
-    <lastBuildDate>Tue, 06 May 2025 07:32:05 +0000</lastBuildDate>
+    <pubDate>Tue, 06 May 2025 07:39:44 +0000</pubDate>
+    <lastBuildDate>Tue, 06 May 2025 07:39:44 +0000</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>New OctoPi Release: 1.1.0</title>
+        <description>
+          <![CDATA[
+            OctoPi 1.1.0 comes with Debian Bookworm and support for the RPi5, among other things.
+          ]]>
+        </description>
+        <pubDate>Tue, 06 May 2025 07:15:00 +0000</pubDate>
+        <link>https://octoprint.org/blog/2025/05/06/octopi-release-1-1-0/?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">https://octoprint.org/blog/2025/05/06/octopi-release-1-1-0/</guid>
+        <category>OctoPi Announcements</category>
+      </item>
     
       <item>
         <title>New release: 1.11.0</title>
@@ -122,19 +135,6 @@
         <pubDate>Mon, 03 Feb 2025 14:15:00 +0000</pubDate>
         <link>https://octoprint.org/blog/2025/02/03/new-release-candidate-1.11.0rc2/?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">https://octoprint.org/blog/2025/02/03/new-release-candidate-1.11.0rc2/</guid>
-        <category>OctoPrint Release Announcements</category>
-      </item>
-    
-      <item>
-        <title>New release candidate: 1.11.0rc1</title>
-        <description>
-          <![CDATA[
-            The first release candidate for the upcoming 1.11.0 release containing new features, improvements & bug fixes!
-          ]]>
-        </description>
-        <pubDate>Tue, 28 Jan 2025 14:15:00 +0000</pubDate>
-        <link>https://octoprint.org/blog/2025/01/28/new-release-candidate-1.11.0rc1/?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">https://octoprint.org/blog/2025/01/28/new-release-candidate-1.11.0rc1/</guid>
         <category>OctoPrint Release Announcements</category>
       </item>
     
