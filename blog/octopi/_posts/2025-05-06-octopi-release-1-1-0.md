@@ -33,14 +33,6 @@ OctoPi 1.1.0 contains the following changes (see also its [changelog](https://gi
 
 You can download OctoPi 1.1.0 from the Raspberry Pi imager and of course [the download page](http://octoprint.org/download/). If you are asking yourself how to update from an earlier version of OctoPi, please read on.
 
-<div class="alert alert-info">
-    <p>
-        It has come to my attention that I forgot some important bits in the OctoPi-UpToDate workflow to accomodate the 64bit variant and Pi5 support. If you want to flash the stock OctoPi 1.1.0 image that's also available in 64bit flavor, you can find it <a href="https://github.com/guysoft/OctoPi/releases/tag/1.1.0" target="_blank">here</a> - you can download it manually there and flash it via the RPi imager.
-    </p><p>
-        A fresh OctoPi-UpToDate build will be made available in the RPi-Imager once the above issues are solved.
-    </p>
-</div>
-
 **"How do I update?"**
 
 There is currently no way to update from earlier *OctoPi* versions to a new version of that image. It's not strictly necessary though - a new image basically means that if you have to setup a new instance you'll start at a newer version of everything bundled with the image. Anything included on the image however can also be kept up to date without having to reflash. OctoPrint will have prompted you to update itself and will continue to do so, and most of the image itself [can be kept up to date like every other RaspberryPi OS image](https://www.raspberrypi.com/documentation/computers/os.html#updating-and-upgrading-raspberry-pi-os).

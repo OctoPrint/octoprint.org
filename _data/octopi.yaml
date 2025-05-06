@@ -1,8 +1,8 @@
 latest:
-  octopi_version: "0.18.0"
-  octoprint_version: "1.5.2"
-  sha256: 582ff1e5d8726e0a74c54cc75545dbcb6e09066ca172660bc961dd7501941e5b
-  url: https://octopi.octoprint.org/latest
+  octopi_version: "1.1.0"
+  octoprint_version: "1.11.0"
+  sha256: 686bad3459d0f4c892c69814a9c29ebe93b71a72b513d81d517bd401c521da30
+  url: https://github.com/OctoPrint/OctoPi-UpToDate/releases/download/1.1.0-1.11.0-20250506135300/octopi-1.1.0-1.11.0-20250506135300.zip
 #latest_cam:
 #  url: https://unofficialpi.org/Distros/OctoPi/nightly/2022-10-27_2022-09-22-octopi-bullseye-armhf-lite-1.0.0.zip
 #  octopi_version: "1.0.0rc3"
@@ -11,4 +11,4 @@ latest:
 #  url: https://unofficialpi.org/Distros/OctoPi/nightly/2022-10-27_2022-09-22-octopi-bullseye-armhf-lite-1.0.0.zip
 #  octopi_version: "1.0.0rc3"
 #  octoprint_version: "1.8.6"
-recommendation: Raspberry Pi 3B, 3B+, 4B or Zero 2 strongly recommended, Raspberry Pi Zero/Zero W not officially supported, Raspberry Pi 5 currently unsupported!
+recommendation: Raspberry Pi 3B, 3B+, 4B or Zero 2 strongly recommended, Raspberry Pi Zero/Zero W not officially supported!
