@@ -3,9 +3,9 @@ layout: post-bugfix
 title: 'New release: 1.11.1'
 author: foosel
 date: 2025-05-13 15:30:00 +0200
-card: /assets/img/blog/2024-11/2024-11-05-octoprint-1.10.3-card.png
-featuredimage: /assets/img/blog/2024-11/2024-11-05-octoprint-1.10.3-card.png
-poster: /assets/img/blog/2024-11/2024-11-05-octoprint-1.10.3-poster.png
+card: /assets/img/blog/2025-05/2025-05-13-octoprint-1.11.1-card.png
+featuredimage: /assets/img/blog/2025-05/2025-05-13-octoprint-1.11.1-card.png
+poster: /assets/img/blog/2025-05/2025-05-13-octoprint-1.11.1-poster.png
 
 excerpt: "The first bugfix release for 1.11.x, fixing some bugs and user experience issues reported since the release of 1.11.0."
 
