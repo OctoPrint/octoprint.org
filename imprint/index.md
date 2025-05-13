@@ -29,10 +29,6 @@ robots: noindex,nofollow
     Germany
 </address>
 
-<p style="text-align: center"><small>
-    (For postcards, letters, fanpost and the like, <a href="#postcards-letters-fanpost">please see below</a>.)
-</small></p>
-
 ### Contact
 
 <p style="text-align: center">
@@ -44,23 +40,6 @@ robots: noindex,nofollow
 
 <p style="text-align: center">
     VAT Id number according to Sec. 27 a German Value Added Tax Act: DE306757045
-</p>
-
-## Postcards, letters, fanpost?
-
-<p>
-    If you want to send me a postcard or a letter, please use the following address:
-</p>
-
-<address>
-  <strong>Gina Häußge</strong><br>
-  Postfach 11 24<br>
-  63166 Obertshausen<br>
-  Germany<br>
-</address>
-
-<p>
-    Please note that this is a PO box. I cannot accept packages or other deliveries there, only letters or postcards. If you want to send me something else, please contact me via email first.
 </p>
 
 ## Dispute resolution
