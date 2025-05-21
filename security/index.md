@@ -34,6 +34,18 @@ We will not accept reports of vulnerabilities of the following types:
 - Attacks that require the user to have seriously misconfigured their OctoPrint instance
 - Attacks that require admin access to the OctoPrint instance
 
+## On the use of AI
+
+If you asked an AI tool to find problems in OctoPrint, you must make sure to reveal this fact in your report.
+
+You must also double-check the findings carefully before reporting them to us to validate that the issues are indeed existing and working exactly as the AI says. AI-based tools frequently generate inaccurate or fabricated results.
+
+Further: it is rarely a good idea to just copy and paste an AI generated report to the project. Those generated reports typically are too wordy and rarely to the point (in addition to the common fabricated details). If you actually find a problem with an AI and you have verified it yourself to be true: write the report yourself and explain the problem as you have learned it. This makes sure the AI-generated inaccuracies and invented issues are filtered out early before they waste more people's time.
+
+As we take security reports seriously, we investigate each report with priority. This work is both time and energy consuming and pulls us away from doing other meaningful work. Fake and otherwise made up security problems effectively prevent us from doing real project work and make us waste time and resources.
+
+We will ban users immediately who submit made up fake reports to the project.
+
 ## Severity scoring
 
 If you are familiar with [CVSS3.1](https://www.first.org/cvss/v3.1/specification-document), then please provide the score of the vulnerability in your report in the shape of a vector string. There's a calculator [here](https://www.first.org/cvss/calculator/3.1). If you are not sure how or unable to score a vulnerability, state that in your report and we will look into it.
@@ -55,18 +67,6 @@ CVEs will only be requested for vulnerabilities with a severity of Moderate or h
 ## Bounties
 
 As a crowd-funded community project, OctoPrint is not able to offer bounties for security vulnerabilities. However, if so desired we will give credit to the discoverer of a vulnerability in our release notes and the release announcements on the blog.
-
-## On the use of AI to create Security Issues
-
-If you asked an AI tool to find problems in OctoPrint, you must make sure to reveal this fact in your report.
-
-You must also double-check the findings carefully before reporting them to us to validate that the issues are indeed existing and working exactly as the AI says. AI-based tools frequently generate inaccurate or fabricated results.
-
-Further: it is rarely a good idea to just copy and paste an AI generated report to the project. Those generated reports typically are too wordy and rarely to the point (in addition to the common fabricated details). If you actually find a problem with an AI and you have verified it yourself to be true: write the report yourself and explain the problem as you have learned it. This makes sure the AI-generated inaccuracies and invented issues are filtered out early before they waste more people's time.
-
-As we take security reports seriously, we investigate each report with priority. This work is both time and energy consuming and pulls us away from doing other meaningful work. Fake and otherwise made up security problems effectively prevent us from doing real project work and make us waste time and resources.
-
-We will ban users immediately who submit made up fake reports to the project.
 
 ---
 
