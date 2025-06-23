@@ -44,9 +44,6 @@ robots: noindex,nofollow
 
 ## Dispute resolution
 
-The European Commission provides a platform for online dispute resolution (OS): [https://ec.europa.eu/consumers/odr](https://ec.europa.eu/consumers/odr).
-Please find my email above.
-
 I do not take part in online dispute resolutions at consumer arbitration boards.
 
 ## Liability for Contents
