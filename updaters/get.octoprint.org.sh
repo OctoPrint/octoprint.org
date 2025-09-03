@@ -31,7 +31,7 @@ current_next=$(get_nginx_var "next" "$CONFIG")
 current_last=$(get_nginx_var "last" "$CONFIG")
 
 echo "Current stable: $current_stable"
-echo "Current next: $current_maintenance"
+echo "Current next: $current_next"
 echo "Current last: $current_last"
 
 if [[ "$stable" != "$current_stable" ]]; then
