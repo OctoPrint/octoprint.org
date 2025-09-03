@@ -2,85 +2,86 @@
   title: Full remote control & monitoring
   icon: fa fa-wifi
   short-description: Control and monitor every aspect of your 3D printer and your printing jobs right from within your browser.
-  description: 'Control and monitor every aspect of your 3D printer and your printing jobs right from within your browser:
+  description:
+    "Control and monitor every aspect of your 3D printer and your printing jobs right from within your browser:
 
 
-      * Access the **embedded webcam feed** and watch remotely how your printer is creating your newest thing.
+    * Access the **embedded webcam feed** and watch remotely how your printer is creating your newest thing.
 
-      * Get constant feedback regarding the **current progress of your print job**.
+    * Get constant feedback regarding the **current progress of your print job**.
 
-      * Take a look at the **integrated GCODE visualizer** to see a rendition of the GCODE you are currently printing.
+    * Take a look at the **integrated GCODE visualizer** to see a rendition of the GCODE you are currently printing.
 
-      * Keep an eye on the **temperatures** of your hotends and print bed and adapt them on the fly.
+    * Keep an eye on the **temperatures** of your hotends and print bed and adapt them on the fly.
 
-      * Move the print head **along all axes**, extrude, retract or just define your own [custom controls](http://docs.octoprint.org/en/master/features/custom_controls.html).
+    * Move the print head **along all axes**, extrude, retract or just define your own [custom controls](http://docs.octoprint.org/en/main/features/custom_controls.html).
 
-      * **Start, stop or just pause your current print job**, you are in full control at any time.'
+    * **Start, stop or just pause your current print job**, you are in full control at any time."
   screenshots:
-  - features/temperature-tab.png
-  - features/control-tab.png
-  - features/gcodeviewer-tab.png
-  - features/terminal-tab.png
+    - features/temperature-tab.png
+    - features/control-tab.png
+    - features/gcodeviewer-tab.png
+    - features/terminal-tab.png
 
 - id: compatible-and-extendable
   title: Compatible and extendable
   icon: fa fa-puzzle-piece
   short-description: OctoPrint's powerful plugin system allows extending its functionality with awesome plugins from the community.
-  description: 'Out of the box OctoPrint is **compatible with most of the available consumer 3D printers**. And its
-      powerful plugin system allows extending its functionality in various ways. To name a few:
+  description:
+    "Out of the box OctoPrint is **compatible with most of the available consumer 3D printers**. And its
+    powerful plugin system allows extending its functionality in various ways. To name a few:
 
 
-      * **Visualize your bed leveling** via [Bed Level Visualizer](http://plugins.octoprint.org/plugins/bedlevelvisualizer/).
+    * **Visualize your bed leveling** via [Bed Level Visualizer](http://plugins.octoprint.org/plugins/bedlevelvisualizer/).
 
-      * Create **stunning timelapses** that seem to just grow out of the print bed using [Octolapse](https://plugins.octoprint.org/plugins/octolapse/).
+    * Create **stunning timelapses** that seem to just grow out of the print bed using [Octolapse](https://plugins.octoprint.org/plugins/octolapse/).
 
-      * Completely control the **theming of OctoPrint''s UI** with [Themeify](https://plugins.octoprint.org/plugins/themeify/).
+    * Completely control the **theming of OctoPrint's UI** with [Themeify](https://plugins.octoprint.org/plugins/themeify/).
 
-      * Easily **update your printer''s firmware** right from within OctoPrint via [Firmware Updater](https://plugins.octoprint.org/plugins/firmwareupdater/).
+    * Easily **update your printer's firmware** right from within OctoPrint via [Firmware Updater](https://plugins.octoprint.org/plugins/firmwareupdater/).
 
-      * Add **support for specific printers** like [older Flashforge printers or older Makerbots](http://plugins.octoprint.org/plugins/gpx/) or [current Flashforge, Dremel or PowerSpec machines](https://plugins.octoprint.org/plugins/FlashForge/).
+    * Add **support for specific printers** like [older Flashforge printers or older Makerbots](http://plugins.octoprint.org/plugins/gpx/) or [current Flashforge, Dremel or PowerSpec machines](https://plugins.octoprint.org/plugins/FlashForge/).
 
 
-    OctoPrint''s [official plugin repository](http://plugins.octoprint.org/) is integrated right within OctoPrint and installing a plugin is only
-    a click away. And [getting started](http://docs.octoprint.org/en/master/plugins/index.html) on plugin development is easy!'
+    OctoPrint's [official plugin repository](http://plugins.octoprint.org/) is integrated right within OctoPrint and installing a plugin is only
+    a click away. And [getting started](http://docs.octoprint.org/en/main/plugins/index.html) on plugin development is easy!"
   screenshots:
-  - features/printerprofile-dialog.png
-  - features/pluginrepo-dialog.png
+    - features/printerprofile-dialog.png
+    - features/pluginrepo-dialog.png
 
 - id: 100-percent-open-source
   title: 100% Open Source
   icon: fab fa-github
   short-description: Free and open source software released under the Affero General Public License (AGPL).
-  description: 'OctoPrint is Free and Open Source Software released under the GNU Affero General Public License (AGPL).
+  description:
+    "OctoPrint is Free and Open Source Software released under the GNU Affero General Public License (AGPL).
 
 
     All its source code is [available in its GitHub repository](https://github.com/OctoPrint/OctoPrint) and everyone can
     modify it to their own needs.
 
-    '
+    "
   screenshots:
-  - features/opensource.png
+    - features/opensource.png
 
 - id: even-more
   title: And even more!
-  description: '
+  description: "
 
-      * Create awesome **timelapse recordings** of your prints!
+    * Create awesome **timelapse recordings** of your prints!
 
-      * **Slice** your STL files directly within OctoPrint.
+    * **Slice** your STL files directly within OctoPrint.
 
-      * Control who can control your printer with the built-in **access controls**.
+    * Control who can control your printer with the built-in **access controls**.
 
-      * Add **system commands** to the menu to easily shutdown or reboot your OctoPrint server or even your printer.
+    * Add **system commands** to the menu to easily shutdown or reboot your OctoPrint server or even your printer.
 
-      * Configure **event hooks** to react to certain events within OctoPrint by calling external commands or sending custom GCODE to your printer.
+    * Configure **event hooks** to react to certain events within OctoPrint by calling external commands or sending custom GCODE to your printer.
 
-      * and so much more...'
-
+    * and so much more..."
 
   screenshots:
-  - features/timelapse-tab.png
-  - features/slicing-dialog.png
-  - features/accesscontrol-dialog.png
-  - features/system-menu.png
-
+    - features/timelapse-tab.png
+    - features/slicing-dialog.png
+    - features/accesscontrol-dialog.png
+    - features/system-menu.png
