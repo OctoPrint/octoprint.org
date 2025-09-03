@@ -14,14 +14,13 @@ server {
 	access_log /var/log/nginx/get.octoprint.org/access.log;
 	error_log /var/log/nginx/get.octoprint.org/error.log;
 
-	# managed by updater
-	set $stable "1.7.2";
-	set $maintenance "1.7.2";
-	set $devel "1.7.2";
-	set $last "1.6.1";
-	# / managed by updater
+	set $repo "https://github.com/OctoPrint/OctoPrint";
 
-	set $next $maintenance;
+	# managed by updater
+	set $stable "1.11.2";
+	set $next "1.11.2";
+	set $last "1.10.3";
+	# / managed by updater
 
 	location / {
 		expires 0d;
@@ -32,31 +31,31 @@ server {
 	location /latest {
 		expires 0d;
 		add_header Cache-Control "no-cache";
-		return 302 https://github.com/foosel/OctoPrint/archive/$stable.zip;
+		return 302 $repo/archive/$stable.zip;
 	}
 
 	location /last {
 		expires 0d;
 		add_header Cache-Control "no-cache";
-		return 302 https://github.com/foosel/OctoPrint/archive/$last.zip;
+		return 302 $repo/archive/$last.zip;
 	}
 
 	location /next {
 		expires 0d;
 		add_header Cache-Control "no-cache";
-		return 302 https://github.com/foosel/OctoPrint/archive/$next.zip;
+		return 302 $repo/archive/$next.zip;
 	}
 
 	location /maintenance-rc {
 		expires 0d;
 		add_header Cache-Control "no-cache";
-		return 302 https://github.com/foosel/OctoPrint/archive/$maintenance.zip;
+		return 302 $repo/archive/$next.zip;
 	}
 
 	location /devel-rc {
 		expires 0d;
 		add_header Cache-Control "no-cache";
-		return 302 https://github.com/foosel/OctoPrint/archive/$devel.zip;
+		return 302 $repo/archive/$next.zip;
 	}
 
 	location /py3/upgrade.py {
@@ -65,11 +64,17 @@ server {
 		return 302 https://raw.githubusercontent.com/cp2004/Octoprint-Upgrade-To-Py3/master/upgrade.py;
 	}
 
-        location /octoprint-venv-tool {
-                expires 0d;
-                add_header Cache-Control "no-cache";
-                return 302 https://github.com/OctoPrint/venv-tool/raw/refs/heads/main/octoprint-venv-tool;
-        }
+	location /octoprint-venv-tool {
+		expires 0d;
+		add_header Cache-Control "no-cache";
+		return 302 https://github.com/OctoPrint/venv-tool/raw/refs/heads/main/octoprint-venv-tool;
+	}
+
+	location /python-eol {
+		expires 0d;
+		add_header Cache-Control "no-cache";
+		return 302 https://octoprint.org/api/python_eol.json;
+	}
 
 	location /plugins/cleanup_logging.py {
 		expires 0d;
