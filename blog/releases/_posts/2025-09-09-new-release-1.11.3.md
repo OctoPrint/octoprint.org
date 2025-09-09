@@ -50,7 +50,8 @@ security:
   </p>
   <p>
     This issue <a href="https://github.com/piwheels/packages/issues/582" target="_blank">has already been reported to piwheels</a>, but until it is
-    fixed, if you are still on a version prior to 1.11.x, e.g. 1.10.x, please either hold off from updating to 1.11.x for now <em>and check back here periodically</em>,
+    fixed, if you are one of the ~150 people <strong>on an RPi with Python 3.11 and an OctoPrint version prior to 1.11.x</strong>, e.g. 1.10.x, please either hold 
+    off from updating to 1.11.x for now <em>and check back here periodically</em>,
     or update and follow <a href="https://community.octoprint.org/t/64761" target="_blank">the steps outlined in the FAQ about this issue</a>.
   </p>
 </div>
