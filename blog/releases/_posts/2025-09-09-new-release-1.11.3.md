@@ -43,19 +43,6 @@ security:
   - "[@prabhatverma47](https://github.com/prabhatverma47)"
 ---
 
-<div class="alert">
-  <p>
-    piwheels is currently pushing out a broken tornado package on Raspberry Pis <em>running Python 3.11</em> (e.g. OctoPi 1.1.0), which causes a semi-broken
-    OctoPrint UI when updating from an earlier version to 1.11.x.
-  </p>
-  <p>
-    This issue <a href="https://github.com/piwheels/packages/issues/582" target="_blank">has already been reported to piwheels</a>, but until it is
-    fixed, if you are one of the ~150 people <strong>on an RPi with Python 3.11 and an OctoPrint version prior to 1.11.x</strong>, e.g. 1.10.x, please either hold 
-    off from updating to 1.11.x for now <em>and check back here periodically</em>,
-    or update and follow <a href="https://community.octoprint.org/t/64761" target="_blank">the steps outlined in the FAQ about this issue</a>.
-  </p>
-</div>
-
 This third bugfix release for 1.11.x fixes some bugs, security issues and user experience problems reported since the release of 1.11.0:
 
 > **🔒 Security fixes**
