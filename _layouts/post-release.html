@@ -2,186 +2,261 @@
 layout: post
 ---
 
-{% include funding_banner.html text="This release was made possible only through continued financial support by people like you!" %}
-
-{{ content | markdownify }}
+{% include funding_banner.html text="This release was made possible only through
+continued financial support by people like you!" %} {{ content | markdownify }}
 
 <h3>Issues while updating?</h3>
 
 <p>
-    On every new OctoPrint release we see some people run into the same issues with 
-    outdated or broken environments all over again. If you encounter a problem during update, please check 
-    <a href="https://community.octoprint.org/t/my-octoprint-update-fails/37880">this collection of the most common issues</a> 
-    encountered over the past couple of release cycles first, and test if the included 
-    fixes solve your problem.
+  On every new OctoPrint release we see some people run into the same issues
+  with outdated or broken environments all over again. If you encounter a
+  problem during update, please check
+  <a href="https://community.octoprint.org/t/my-octoprint-update-fails/37880"
+    >this collection of the most common issues</a
+  >
+  encountered over the past couple of release cycles first, and test if the
+  included fixes solve your problem.
 </p>
 
 {% if page.headsups or page.pluginincompatibilities %}
 <p>
-    Also make sure to check any of the heads-ups or plugin incompatibilities listed below.
+  Also make sure to check any of the heads-ups or plugin incompatibilities
+  listed below.
 </p>
 
 <h3 id="headsups">Heads-ups</h3>
 
 <p>
-    Please read the following carefully, it might impact you and how you use OctoPrint!
-    Also see the <a href="#further-information"><strong>Further Information</strong></a>
-    and <a href="#links"><strong>Links</strong></a> below for more information, where to
-    find help and how to roll back.
+  Please read the following carefully, it might impact you and how you use
+  OctoPrint! Also see the
+  <a href="#further-information"><strong>Further Information</strong></a> and
+  <a href="#links"><strong>Links</strong></a> below for more information, where
+  to find help and how to roll back.
 </p>
 
-{% if page.headsups %}
-{% for headsup in page.headsups %}
+{% if page.headsups %} {% for headsup in page.headsups %}
 <h4>{{ headsup.title }}</h4>
 
-{{ headsup.content | markdownify }}
-{% endfor %}
-{% endif %}
-
-{% if page.pluginincompatibilities %}
+{{ headsup.content | markdownify }} {% endfor %} {% endif %} {% if
+page.pluginincompatibilities %}
 <h4>Known plugin incompatibilities</h4>
 
 <p>
-  The following plugins are confirmed to have issues with OctoPrint {{ page.release }}.
-  Their authors have been informed of this but no fixed version was yet available at the
-  time of release:
+  The following plugins are confirmed to have issues with OctoPrint {{
+  page.release }}. Their authors have been informed of this but no fixed version
+  was yet available at the time of release:
 </p>
 
 <ul>
-  {% for plugin in page.pluginincompatibilities %}
-    {% if plugin.rcavailable %}
-      <li><a href="{{ plugin.page }}">{{ plugin.name }}</a> (<a href="{{ plugin.rcavailable }}">a release candidate containing a fix is available</a>)</li>
-    {% else %}
-      <li><a href="{{ plugin.page }}">{{ plugin.name }}</a> (see <a href="{{ plugin.link }}">{{ plugin.linktitle }}</a> for details)</li>
-    {% endif %}
-  {% endfor %}
+  {% for plugin in page.pluginincompatibilities %} {% if plugin.rcavailable %}
+  <li>
+    <a href="{{ plugin.page }}">{{ plugin.name }}</a> (<a
+      href="{{ plugin.rcavailable }}"
+      >a release candidate containing a fix is available</a
+    >)
+  </li>
+  {% else %}
+  <li>
+    <a href="{{ plugin.page }}">{{ plugin.name }}</a> (see
+    <a href="{{ plugin.link }}">{{ plugin.linktitle }}</a> for details)
+  </li>
+  {% endif %} {% endfor %}
 </ul>
-{% endif %}
-
-{% endif %}
-
-{% if page.known_issues %}
+{% endif %} {% endif %} {% if page.known_issues %}
 <h3 id="known-issues">Known Issues</h3>
 
-The following issues were discovered in earlier versions, but discovered too late to still be fixed in {{ page.release }}, and are going to get a fix in an upcoming bugfix release:
+The following issues were discovered in earlier versions, but discovered too
+late to still be fixed in {{ page.release }}, and are going to get a fix in an
+upcoming bugfix release:
 
 <ul>
-{% for issue in page.known_issues %}
-    <li><a href="https://github.com/OctoPrint/OctoPrint/issues/{{ issue.issue }}" target="_blank" rel="noopener noreferer">#{{ issue.issue }}</a>: {{ issue.content | markdownify | remove: '<p>' | remove: '</p>' }}</li>
-{% endfor %}
+  {% for issue in page.known_issues %}
+  <li>
+    <a
+      href="https://github.com/OctoPrint/OctoPrint/issues/{{ issue.issue }}"
+      target="_blank"
+      rel="noopener noreferer"
+      >#{{ issue.issue }}</a
+    >: {{ issue.content | markdownify | remove: '
+    <p>' | remove: '</p>
+    ' }}
+  </li>
+  {% endfor %}
 </ul>
 {% endif %}
 
 <h3 id="thanks">Thanks</h3>
 
 <p>
-    Thanks to everyone who contributed to this release and provided full,
-    analyzable bug reports, suggestions, feedback and - of course - funding!
+  Thanks to everyone who contributed to this release and provided full,
+  analyzable bug reports, suggestions, feedback and - of course -
+  <a
+    href="/support-octoprint/"
+    target="_blank"
+    data-analytics='"Support Click", { "props": { "origin": "funding_banner"} }'
+    ><strong>funding</strong></a
+  >!
 </p>
 
-{% if page.contributors %}
-{% assign contributor_count = page.contributors | size %}
-{% assign first_timer_count = page.first_time_contributors | size %}
+{% if page.contributors %} {% assign contributor_count = page.contributors |
+size %} {% assign first_timer_count = page.first_time_contributors | size %}
 <p>
-    A special <strong>Thank You!</strong> to {% if contributor_count > 1 %}these {{ contributor_count }} fine people{% else %}this fine person{% endif %} for their PRs{% if page.first_time_contributors %}, and an extra warm welcome to our <em>{% if first_timer_count > 1 %}{{ first_timer_count }} first-time contributors{% else %}one first-time contributor{% endif %}! 🎉</em>{% else %}!{% endif %}
+  A special <strong>Thank You!</strong> to {% if contributor_count > 1 %}these
+  {{ contributor_count }} fine people{% else %}this fine person{% endif %} for
+  their PRs{% if page.first_time_contributors %}, and an extra warm welcome to
+  our
+  <em
+    >{% if first_timer_count > 1 %}{{ first_timer_count }} first-time
+    contributors{% else %}one first-time contributor{% endif %}! 🎉</em
+  >{% else %}!{% endif %}
 </p>
-{% include github_user_grid.html users=page.contributors highlight=page.first_time_contributors %}
-{% endif %}
-
-{% if page.security %}
+{% include github_user_grid.html users=page.contributors
+highlight=page.first_time_contributors %} {% endif %} {% if page.security %}
 <p>
-    Also another <strong>Thank you!</strong> to {% include security_shoutouts people=page.security %} for
-    the responsible disclosure of vulnerabilities fixed in this release.
+  Also another <strong>Thank you!</strong> to {% include security_shoutouts
+  people=page.security %} for the responsible disclosure of vulnerabilities
+  fixed in this release.
 </p>
-{% endif %}
-
-{% if page.testers %}
+{% endif %} {% if page.testers %}
 <p>
-    And last but not least, a <strong>big shoutout</strong> to everyone who
-    reported back on the release candidates this time: {% include github_users users=page.testers %}.
+  And last but not least, a <strong>big shoutout</strong> to everyone who
+  reported back on the release candidates this time: {% include github_users
+  users=page.testers %}.
 </p>
-{% endif %}
-
-{% if page.stats %}
+{% endif %} {% if page.stats %}
 <h3 id="insights">Insights</h3>
 
 <p>
-    If you are interested in some numbers, here's some data extracted from the
-    <strong>anonymous usage tracking</strong> for the RCs that
-    went before {{ page.release }}'s stable release:
+  If you are interested in some numbers, here's some data extracted from the
+  <strong>anonymous usage tracking</strong> for the RCs that went before {{
+  page.release }}'s stable release:
 </p>
 
 <ul>
-{% for rc in page.stats.rcs %}
-    <li>{{ rc.tag }} ({{ rc.date }}): {{ rc.instances }} instances, {% include readable_printtime hours=rc.printtime %} of accumulative printing time</li>
-{% endfor %}
+  {% for rc in page.stats.rcs %}
+  <li>
+    {{ rc.tag }} ({{ rc.date }}): {{ rc.instances }} instances, {% include
+    readable_printtime hours=rc.printtime %} of accumulative printing time
+  </li>
+  {% endfor %}
 </ul>
 
-{% if page.stats.rcs_incomplete %}
-Due to this RC phase taking longer than 60 days, which is the current limit of the anonymous usage tracking,
-data for these RCs is not fully available anymore:
+{% if page.stats.rcs_incomplete %} Due to this RC phase taking longer than 60
+days, which is the current limit of the anonymous usage tracking, data for these
+RCs is not fully available anymore:
 
 <ul>
-{% for rc in page.stats.rcs_incomplete %}
-    <li>{{ rc.tag }} ({{ rc.date }})</li>
-{% endfor %}
+  {% for rc in page.stats.rcs_incomplete %}
+  <li>{{ rc.tag }} ({{ rc.date }})</li>
+  {% endfor %}
 </ul>
 {% endif %}
 
 <p>
-    Overall there were {{ page.stats.totalinstances }} instances that participated in the
-    RC testing phase and which collectively completed {% include readable_printtime hours=page.stats.totalprinttime %} of print jobs.
+  Overall there were {{ page.stats.totalinstances }} instances that participated
+  in the RC testing phase and which collectively completed {% include
+  readable_printtime hours=page.stats.totalprinttime %} of print jobs.
 </p>
 
 <div class="row-fluid" style="margin-bottom: 10px">
-    <div class="span12">
-        <a href="{{ page.stats.instancegraph }}" data-lightbox="{{ page.id }}" data-title="{{ page.release }}rc instances over the past month, per hour"><img src="{{ page.stats.instancegraph }}"></a>
-    </div>
+  <div class="span12">
+    <a
+      href="{{ page.stats.instancegraph }}"
+      data-lightbox="{{ page.id }}"
+      data-title="{{ page.release }}rc instances over the past month, per hour"
+      ><img src="{{ page.stats.instancegraph }}"
+    /></a>
+  </div>
 </div>
 <div class="row-fluid" style="margin-bottom: 10px">
-    <div class="span12">
-        <a href="{{ page.stats.printtimegraph }}" data-lightbox="{{ page.id }}" data-title="Accumulated {{ page.release }}rc print times over the past month, per hour"><img src="{{ page.stats.printtimegraph }}"></a>
-    </div>
+  <div class="span12">
+    <a
+      href="{{ page.stats.printtimegraph }}"
+      data-lightbox="{{ page.id }}"
+      data-title="Accumulated {{ page.release }}rc print times over the past month, per hour"
+      ><img src="{{ page.stats.printtimegraph }}"
+    /></a>
+  </div>
 </div>
 <div class="row-fluid" style="margin-bottom: 10px">
-    <div class="span12">
-        <a href="{{ page.stats.piecharts }}" data-lightbox="{{ page.id }}" data-title="{{ page.release }}rc instances and accumulated print time over the past month, total"><img src="{{ page.stats.piecharts }}"></a>
-    </div>
+  <div class="span12">
+    <a
+      href="{{ page.stats.piecharts }}"
+      data-lightbox="{{ page.id }}"
+      data-title="{{ page.release }}rc instances and accumulated print time over the past month, total"
+      ><img src="{{ page.stats.piecharts }}"
+    /></a>
+  </div>
 </div>
 {% endif %}
 
 <h3 id="further-information">Further Information</h3>
 
 <p>
-    If connected to the internet, OctoPrint will allow you to apply this update automatically via an update notification.
-    It may take up to 24h for this notification to pop up, so don't
-    be alarmed if it doesn't show up immediately after reading this. You
-    can force the update however via Settings > Software Update >
-    Advanced options > Force check for update.
+  If connected to the internet, OctoPrint will allow you to apply this update
+  automatically via an update notification. It may take up to 24h for this
+  notification to pop up, so don't be alarmed if it doesn't show up immediately
+  after reading this. You can force the update however via Settings > Software
+  Update > Advanced options > Force check for update.
 </p>
 <p>
-    <strong>If your update fails</strong> chances are high you are running into one of the common
-    update issues listed with fixes <a href="https://community.octoprint.org/t/my-octoprint-update-fails/37880">here</a>, 
-    so please <a href="https://community.octoprint.org/t/my-octoprint-update-fails/37880">go through that FAQ entry <strong>first</strong></a>.
+  <strong>If your update fails</strong> chances are high you are running into
+  one of the common update issues listed with fixes
+  <a href="https://community.octoprint.org/t/my-octoprint-update-fails/37880"
+    >here</a
+  >, so please
+  <a href="https://community.octoprint.org/t/my-octoprint-update-fails/37880"
+    >go through that FAQ entry <strong>first</strong></a
+  >.
 </p>
 <p>
-    <strong>
-        If you have any problems with your OctoPrint installation, please seek
-        support on the <a href="https://community.octoprint.org">community forum</a>.
-    </strong>
+  <strong>
+    If you have any problems with your OctoPrint installation, please seek
+    support on the
+    <a href="https://community.octoprint.org">community forum</a>.
+  </strong>
 </p>
 
 <h3 id="links">Links</h3>
 
 <ul>
-    <li><a href="https://github.com/OctoPrint/OctoPrint/releases/tag/{{ page.release }}">Changelog and Release Notes</a></li>
-    <li><a href="https://community.octoprint.org/t/my-octoprint-update-fails/37880">FAQ entry "My OctoPrint update fails"</a> <strong>(Read in case of any update problems!)</strong></li>
-    <li><a href="https://community.octoprint.org">Community forum</a></li>
-    <li><a href="https://discord.octoprint.org">Discord Server</a></li>
-    <li><a href="https://faq.octoprint.org">FAQ</a></li>
-    <li><a href="http://docs.octoprint.org/">Documentation</a></li>
-    <li><a href="https://github.com/OctoPrint/OctoPrint/blob/master/CONTRIBUTING.md">Contribution Guidelines (also relevant for creating bug reports!)</a></li>
-    <li><a href="https://github.com/OctoPrint/OctoPrint/blob/master/CONTRIBUTING.md#how-to-file-a-bug-report">How to file a bug report</a></li>
-    <li><a href="https://community.octoprint.org/t/how-can-i-revert-to-an-older-version-of-the-octoprint-installation-on-my-octopi-image/205">How to roll back to an earlier release (OctoPi)</a></li>
-    <li><a href="https://community.octoprint.org/t/how-can-i-roll-back-to-an-earlier-version-after-an-update/234">How to roll back to an earlier release (manual install)</a></li>
+  <li>
+    <a
+      href="https://github.com/OctoPrint/OctoPrint/releases/tag/{{ page.release }}"
+      >Changelog and Release Notes</a
+    >
+  </li>
+  <li>
+    <a href="https://community.octoprint.org/t/my-octoprint-update-fails/37880"
+      >FAQ entry "My OctoPrint update fails"</a
+    >
+    <strong>(Read in case of any update problems!)</strong>
+  </li>
+  <li><a href="https://community.octoprint.org">Community forum</a></li>
+  <li><a href="https://discord.octoprint.org">Discord Server</a></li>
+  <li><a href="https://faq.octoprint.org">FAQ</a></li>
+  <li><a href="http://docs.octoprint.org/">Documentation</a></li>
+  <li>
+    <a href="https://github.com/OctoPrint/OctoPrint/blob/master/CONTRIBUTING.md"
+      >Contribution Guidelines (also relevant for creating bug reports!)</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://github.com/OctoPrint/OctoPrint/blob/master/CONTRIBUTING.md#how-to-file-a-bug-report"
+      >How to file a bug report</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://community.octoprint.org/t/how-can-i-revert-to-an-older-version-of-the-octoprint-installation-on-my-octopi-image/205"
+      >How to roll back to an earlier release (OctoPi)</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://community.octoprint.org/t/how-can-i-roll-back-to-an-earlier-version-after-an-update/234"
+      >How to roll back to an earlier release (manual install)</a
+    >
+  </li>
 </ul>
