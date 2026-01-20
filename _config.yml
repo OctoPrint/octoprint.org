@@ -1,15 +1,15 @@
 exclude:
-- CNAME
-- Gemfile
-- Gemfile.lock
-- vendor
-- bundle
-- node_modules
-- .github
-- "*.iml"
-- fetch_yt_preview
-- README.md
-- Taskfile.yaml
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - bundle
+  - node_modules
+  - .github
+  - "*.iml"
+  - fetch_yt_preview
+  - README.md
+  - Taskfile.yaml
 
 highlighter: rouge
 markdown: kramdown
@@ -17,7 +17,7 @@ markdown: kramdown
 external: https://octoprint.org
 baseurl: ""
 
-title : OctoPrint.org
+title: OctoPrint.org
 tagline: The snappy web interface for your 3D printer.
 description: OctoPrint is the snappy web interface for your 3D printer that allows you to control and monitor all aspects of your printer and print jobs, right from your browser.
 
@@ -51,15 +51,12 @@ carbon: //cdn.carbonads.com/carbon.js?serve=CKYIL53W&placement=octoprintorg
 
 twitter: OctoPrint3D
 mastodon: "@octoprint@floss.social"
-facebook: OctoPrint
 youtube: OctoPrint3D
 
 twitterlink: https://twitter.com/OctoPrint3D
 mastodonlink: https://floss.social/@octoprint
-facebooklink: https://facebook.com/OctoPrint
 youtubelink: https://www.youtube.com/c/OctoPrint3D
 
 plugins:
   - jekyll-paginate
   - jekyll-redirect-from
-
