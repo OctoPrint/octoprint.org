@@ -28,8 +28,7 @@ security:
   - "[@yueyueL](https://github.com/yueyueL)"
 ---
 
-The year is coming to an end, and while I'm currently mostly focused on 1.12.0 (and Moonraker & Bambu Connector Plugins for the new comm layer), I still wanted to push out
-this bugfix release for 1.11.x with fixes for two issues that were reported in the past few weeks, and a logic error I spotted during development:
+Welcome to the first release of 2026, a bugfix release for 1.11.x, fixing a bunch of issues and one security problem:
 
 > **🔒 Security fixes**
 >
