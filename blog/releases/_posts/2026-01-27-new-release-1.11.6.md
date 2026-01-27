@@ -61,7 +61,7 @@ Welcome to the first release of 2026, a bugfix release for 1.11.x, fixing a bunc
 > - [#5216](https://github.com/OctoPrint/OctoPrint/issues/5216): Fix multi select on MacOS, now uses Cmd+Click.
 > - [#5217](https://github.com/OctoPrint/OctoPrint/issues/5217): Fix shift select logic to be more inline with common operating system file explorers.
 
-You can also take a look at the [changelog on GitHub](https://github.com/OctoPrint/OctoPrint/releases/tag/1.11.3).
+You can also take a look at the [changelog on GitHub](https://github.com/OctoPrint/OctoPrint/releases/tag/1.11.6).
 
 Like every single release (and release candidate) of OctoPrint ever since early 2016 this release was made possible only
 through continued financial support by people like you! 💕
