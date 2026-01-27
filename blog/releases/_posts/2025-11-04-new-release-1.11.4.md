@@ -64,7 +64,7 @@ Prepared in between working heavily on 1.12.0 that will bring native support for
 > - Pinned the `click` dependency to a version below 8.3 due to breaking changes. This is a temporary solution for the 1.11.x release in particular, 1.12.0 will ship with full compatibility to current `click` releases again.
 > - Pinned the `markupsafe` dependency to <=3.0.2 under Python 3.9 and armv7 due to the stock Python 3 environment found on Debian Bullseye that matches these parameters containing a buggy `toml` library that can no longer parse the packaging file of recent releases.
 
-You can also take a look at the [changelog on GitHub](https://github.com/OctoPrint/OctoPrint/releases/tag/1.11.3).
+You can also take a look at the [changelog on GitHub](https://github.com/OctoPrint/OctoPrint/releases/tag/1.11.4).
 
 Like every single release (and release candidate) of OctoPrint ever since early 2016 this release was made possible only
 through continued financial support by people like you! 💕

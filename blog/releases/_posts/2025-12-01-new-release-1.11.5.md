@@ -36,7 +36,7 @@ this bugfix release for 1.11.x with fixes for two issues that were reported in t
 >
 > - Apply `--no-build-isolation` during installation of plugins with legacy packaging
 
-You can also take a look at the [changelog on GitHub](https://github.com/OctoPrint/OctoPrint/releases/tag/1.11.3).
+You can also take a look at the [changelog on GitHub](https://github.com/OctoPrint/OctoPrint/releases/tag/1.11.5).
 
 Like every single release (and release candidate) of OctoPrint ever since early 2016 this release was made possible only
 through continued financial support by people like you! 💕
