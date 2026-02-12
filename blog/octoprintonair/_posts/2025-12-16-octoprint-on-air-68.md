@@ -12,6 +12,10 @@ date: 2025-12-16 11:00:00 +0100
 
 recorded: December 11th
 vid: 38eCoca5czo
+
+guid: /blog/2025/11/16/octoprint-on-air-68/
+redirect_from:
+  - /blog/2025/11/16/octoprint-on-air-68/
 ---
 
 - 1.11.5
