@@ -72,7 +72,7 @@ As mentioned in [a recent post](/blog/2026/04/20/octoprint-2.0.0-is-coming-soon/
 
 As the changes required to do this were massive, and the one or other backwards compatibility issue surely crept in, I decided to go all in with this release, finally increase the major version to "2" and also do a long necessary clean up of bits and pieces that had been deprecated for the better part of a the past decade now.
 
-Given the amount of internal changes, I should also be adding an extra word of warning here: More than usual, consider that this is a release candidate, NOT a stable release, and there might still be bugs in here that will break your usual workflows. You really should feel comfortable with possibly having to do a downgrade to an earlier version, potentially even manually via the command line.
+Given the amount of internal changes, I should also be adding an extra word of warning here: More than usual, consider that this is a release candidate, NOT a stable release, and there might still be bugs in here that will break your usual workflows. You really should feel comfortable with possibly having to do a downgrade to an earlier version, potentially even manually via the command line. Also remember that you can always access a recovery page at `/recovery/` that allows you to restart OctoPrint in safe mode, should a misbehaving plugin render your UI unusable.
 
 With that being said, let's take a look at the changes. Unsurprisingly, the [changelog](https://github.com/OctoPrint/OctoPrint/releases/tag/2.0.0rc1) is too long to include here in full, but I still want to give some more details on some personal highlights here:
 
