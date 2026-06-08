@@ -6,6 +6,7 @@ exclude:
   - bundle
   - node_modules
   - .github
+  - .gitignore
   - "*.iml"
   - fetch_yt_preview
   - README.md
