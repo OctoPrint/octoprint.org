@@ -145,13 +145,14 @@ jobs:
         env:
           DISCORD_WEBHOOK: ${{ secrets.discord_webhook }}
         run: |
-          curl -H "Content-Type: application/json" -d '{"content": "☑️ Page build for octoprint.org was successful"}' "$DISCORD_WEBHOOK"
+          curl -H "Content-Type: application/json" -d '{"username": "GitHub Actions", "content": "☑️ Page build for octoprint.org was successful"}' "$DISCORD_WEBHOOK"
 
       - name: 📧 Discord failure notification
+        if: failure()
         env:
           DISCORD_WEBHOOK: ${{ secrets.discord_webhook }}
         run: |
-          curl -H "Content-Type: application/json" -d '{"content": "🚫 Page build for octoprint.org failed"}' "$DISCORD_WEBHOOK"
+          curl -H "Content-Type: application/json" -d '{"username": "GitHub Actions", "content": "🚫 Page build for octoprint.org failed"}' "$DISCORD_WEBHOOK"
 
   deploy:
     name: "Deploy"
