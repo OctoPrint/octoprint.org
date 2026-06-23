@@ -30,8 +30,6 @@ security:
   - "[@seankohjs](https://github.com/seankohjs)"
 ---
 
-<div class="alert">For some reason GitHub's release API endpoint is currently not showing this release, which means you currently can't get an update notification for it. I'm monitoring the situation, and should things not change I'll try my luck with tagging 2.0.0rc4 to hopefully make things work. In the meantime you should be able to manually install 2.0.0rc3 through `pip` or by pasting the release URL into the plugin manager.</div>
-
 This third release candidate for the upcoming 2.0.0 release fixes several regressions that were reported with the first one, as well as some newly found bugs. It also improves on newly added functionality, and the two security issues just fixed in 1.11.x have also been fixed here:
 
 > **🔒 Security fixes**
