@@ -45,7 +45,13 @@ size %} {% assign first_timer_count = page.first_time_contributors | size %}
   >{% else %}!{% endif %}
 </p>
 {% include github_user_grid.html users=page.contributors
-highlight=page.first_time_contributors %} {% endif %}
+highlight=page.first_time_contributors %} {% endif %} {% if page.security %}
+<p>
+  Also another <strong>Thank you!</strong> to {% include security_shoutouts
+  people=page.security %} for the responsible disclosure of vulnerabilities
+  fixed in this release.
+</p>
+{% endif %}
 <p>
   As the past RCs have shown me that a lot of people appear to be unaware of
   this:
