@@ -55,7 +55,7 @@ We will ban users immediately who submit made up fake reports to the project.
 
 ## Severity scoring
 
-If you are familiar with [**CVSS4.0**](https://www.first.org/cvss/v4-0/specification-document), then you are welcome to provide the score of the vulnerability in your report in the shape of a vector string. There's a calculator [here](https://www.first.org/cvss/calculator/4-0). Be advised that we most likely will rescore the vulnerability however, as we know the project and its deployment scenarios and thread model best.
+If you are familiar with [**CVSS4.0**](https://www.first.org/cvss/v4-0/specification-document), then you are welcome to provide the score of the vulnerability in your report in the shape of a vector string. There's a calculator [here](https://www.first.org/cvss/calculator/4-0). Be advised that we most likely will rescore the vulnerability however, as we know the project and its deployment scenarios and threat model best.
 
 If you intend to _do_ provide a score yourself, please make yourself familiar with CVSS4.0 _first_ (we strongly recommend reading [the Specification](https://www.first.org/cvss/v4.0/specification-document) and [the Assessment Guide](https://www.first.org/cvss/v4-0/user-guide#Assessment-Guide)), as we will not accept reports that use it incorrectly.
 
