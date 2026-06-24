@@ -41,9 +41,11 @@ We will not accept reports of vulnerabilities of the following types:
 
 ## On the use of AI
 
-If you utlised one or more AI tools to find problems in OctoPrint, you **MUST** reveal this in your report. State what tools were used and in which steps.
+If AI is used to generate any portion of the vulnerability report, contributors must adhere to the following requirements:
 
-You must also double-check the findings carefully before reporting them to us to validate that the issues are indeed existing and working exactly as the AI says. AI-based tools frequently generate inaccurate or fabricated results.
+1. Explicitly disclose the manner in which AI was employed: what tools where used, in which steps where they used, ...
+2. Double-check the findings carefully before reporting them to us to validate that the issues are indeed existing and working exactly as the AI says. AI-based tools frequently generate inaccurate or fabricated results.
+3. Be prepared to share the used prompts.
 
 Further: It is rarely a good idea to just copy and paste an AI generated report to the project. Those generated reports typically are too wordy and rarely to the point (in addition to the common fabricated details). If you actually find a problem with an AI and you have verified it yourself to be true: Write the report yourself and explain the problem as you have verified it. This makes sure the AI-generated inaccuracies and invented issues are filtered out early before they waste more people's time.
 
