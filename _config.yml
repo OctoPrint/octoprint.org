@@ -61,3 +61,7 @@ youtubelink: https://www.youtube.com/c/OctoPrint3D
 plugins:
   - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll-gfm-admonitions
+
+gfm_admonitions:
+  inject_css: false
