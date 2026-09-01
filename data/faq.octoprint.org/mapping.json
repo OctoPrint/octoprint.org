@@ -53,5 +53,6 @@
   "firmware-thermal-runaway": "https://community.octoprint.org/t/55469#thermal-runaway",
   "firmware-heating-failed": "https://community.octoprint.org/t/55469#heating-failed",
   "firmware-probing-failed": "https://community.octoprint.org/t/55469#probing-failed",
-  "gtt-unavailable": "https://community.octoprint.org/t/66368"
+  "gtt-unavailable": "https://community.octoprint.org/t/66368",
+  "restore-space": "https://community.octoprint.org/t/66465"
 }
