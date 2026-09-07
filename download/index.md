@@ -12,7 +12,7 @@ description: Learn how to setup OctoPrint using the preinstalled OctoPi image fo
 # OctoPi
 
 [Guy Sheffer](https://github.com/guysoft) maintains ["OctoPi"](https://github.com/guysoft/OctoPi),
-a [Raspbian (and thus Debian) based](https://www.raspbian.org/) SD card image for the Raspberry Pi
+a [Raspberry Pi OS (and thus Debian) based](https://www.raspberrypi.com/software/operating-systems/) SD card image for the Raspberry Pi
 that already includes OctoPrint plus everything you need to run it:
 
 - OctoPrint plus its dependencies
