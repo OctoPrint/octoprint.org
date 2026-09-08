@@ -75,7 +75,7 @@
   border: 1px solid var(--color-bg-inset);
   border-radius: var(--radius-md);
   padding: 1em;
-  width: 160px;
+  width: 100%;
 
   margin: 2em 0;
   font-size: var(--text-sm);
@@ -194,52 +194,44 @@
 /* Carbon Ads */
 
 #carbonads {
-  text-align: center;
+  display: flex;
 
-  display: block;
+  width: 100%;
 
-  overflow: hidden;
-  font-family: var(--font-sans);
-  line-height: 1.5;
+  justify-content: center;
 
-  border: 1px solid var(--color-bg-inset);
-  padding: 1em;
-  width: 160px;
-
-  span {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    text-align: center;
+  .carbon-img {
+    display: inline-block;
+    margin: 0 auto 10px;
   }
 
   .carbon-text {
     display: block;
+
     margin-bottom: 10px;
-    font-size: 0.7em;
+
     color: var(--color-text);
+    font-size: 0.7em;
+
     width: 100%;
     max-width: 100%;
+
     float: none;
   }
 
   .carbon-poweredby {
-    position: relative;
     display: block;
+
+    color: var(--color-text);
     font-size: 0.5em;
     text-transform: uppercase;
+    text-align: right;
     line-height: 1;
     letter-spacing: 1px;
-    color: var(--color-text);
+
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 5px;
-    text-align: right;
-  }
-
-  .carbon-img {
-    display: block;
-    margin: 0 auto 10px;
   }
 }
 
