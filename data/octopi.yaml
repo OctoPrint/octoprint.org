@@ -4,16 +4,16 @@ latest:
   sha256: 686bad3459d0f4c892c69814a9c29ebe93b71a72b513d81d517bd401c521da30
   url: https://github.com/OctoPrint/OctoPi-UpToDate/releases/download/1.1.0-1.11.0-20250506135300/octopi-1.1.0-1.11.0-20250506135300.zip
   pi_models: 1A, 1A+, 1B, 1B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4/8GB, 5B 4/8GB, Zero, Zero W, Zero 2 and 400
-latest_cam:
-  url: https://unofficialpi.org/Distros/OctoPi/nightly/2022-10-27_2022-09-22-octopi-bullseye-armhf-lite-1.0.0.zip
-  sha256: 686bad3459d0f4c892c69814a9c29ebe93b71a72b513d81d517bd401c521da30
-  octopi_version: "1.0.0rc3"
-  octoprint_version: "1.8.6"
-  pi_models: 1A, 1A+, 1B, 1B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4/8GB, 5B 4/8GB, Zero, Zero W, Zero 2 and 400
-next_octopi:
-  url: https://unofficialpi.org/Distros/OctoPi/nightly/2022-10-27_2022-09-22-octopi-bullseye-armhf-lite-1.0.0.zip
-  sha256: 686bad3459d0f4c892c69814a9c29ebe93b71a72b513d81d517bd401c521da30
-  octopi_version: "1.0.0rc3"
-  octoprint_version: "1.8.6"
-  pi_models: 1A, 1A+, 1B, 1B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4/8GB, 5B 4/8GB, Zero, Zero W, Zero 2 and 400
+#latest_cam:
+#  url: https://unofficialpi.org/Distros/OctoPi/nightly/2022-10-27_2022-09-22-octopi-bullseye-armhf-lite-1.0.0.zip
+#  sha256: 686bad3459d0f4c892c69814a9c29ebe93b71a72b513d81d517bd401c521da30
+#  octopi_version: "1.0.0rc3"
+#  octoprint_version: "1.8.6"
+#  pi_models: 1A, 1A+, 1B, 1B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4/8GB, 5B 4/8GB, Zero, Zero W, Zero 2 and 400
+#next_octopi:
+#  url: https://unofficialpi.org/Distros/OctoPi/nightly/2022-10-27_2022-09-22-octopi-bullseye-armhf-lite-1.0.0.zip
+#  sha256: 686bad3459d0f4c892c69814a9c29ebe93b71a72b513d81d517bd401c521da30
+#  octopi_version: "1.0.0rc3"
+#  octoprint_version: "1.8.6"
+#  pi_models: 1A, 1A+, 1B, 1B+, 2B, 3A+, 3B, 3B+, 4B 1/2/4/8GB, 5B 4/8GB, Zero, Zero W, Zero 2 and 400
 recommendation: Raspberry Pi 3B, 3B+, 4B or Zero 2 strongly recommended, Raspberry Pi Zero/Zero W not officially supported!
