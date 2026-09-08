@@ -1,0 +1,71 @@
+{{- /*
+Footer. Three regions:
+
+  1. Brand block: logo mark, site title, tagline, optional address
+     (site.Params.footer.address), social icons.
+  2. Column menus pulled from site.Menus.footer.
+  3. Bottom bar with copyright.
+*/ -}}
+<div class="site-footer__grid">
+  <div class="site-footer__brand">
+    <a class="site-footer__logo" href="{{ site.Home.RelPermalink }}">
+      {{ partial "brand-mark.html" . }}
+      <span class="site-footer__brand-title">{{ site.Title }}</span>
+    </a>
+    {{- with site.Params.tagline }}
+      <p class="site-footer__tagline">{{ . }}</p>
+    {{- end }}
+    {{- with site.Params.footer }}
+      {{- with .address }}
+        <address class="site-footer__address">{{ . | markdownify }}</address>
+      {{- end }}
+    {{- end }}
+    {{ partial "social-icons.html" . }}
+  </div>
+
+  {{- with index site.Menus "footer" }}
+    {{- range . }}
+      <div class="site-footer__col">
+        <h2>{{ .Name }}</h2>
+        {{- with .Children }}
+          <ul>
+            {{- range . }}
+              <li><a href="{{ partial "menu-url.html" . }}">{{ .Name }}</a></li>
+            {{- end }}
+          </ul>
+        {{- end }}
+      </div>
+    {{- end }}
+  {{- end }}
+  <div class="site-footer__col">
+    <h2>Recent posts</h2>
+    {{- $pages := where site.RegularPages "Section" "blog" }}
+    <ul>
+      {{- with $pages }}
+        {{- range .Limit 3 }}
+          <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a><br>
+            <small>{{ .Lastmod.Format "2006-01-02" }}</small>
+          </li>
+        {{- end }}
+      {{- end }}
+    </ul>
+  </div>
+</div>
+
+{{- $owner := site.Params.copyrightOwner | default site.Title -}}
+{{- $themeRepo := "https://codeberg.org/head1328/hugo-liftoff" -}}
+<div class="site-footer__bottom">
+  <span class="site-footer__copy">
+    &copy; {{ now.Year }} {{ $owner }}{{ with site.Params.copyrightSuffix }}. {{ . | markdownify }}{{ end }}
+  </span>
+  <span class="site-footer__legal">
+    {{ with site.Params.legalFooter }}{{ . | markdownify }}{{ end }}
+  </span>
+  <span class="site-footer__powered">
+    {{ i18n "powered_by" | default "Powered by" }}
+    <a href="https://gohugo.io/" rel="noopener noreferrer">Hugo</a>
+    &amp;
+    <a href="{{ $themeRepo }}" rel="noopener noreferrer">Liftoff</a>
+  </span>
+</div>

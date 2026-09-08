@@ -1,0 +1,16 @@
+<script>
+  if (
+    !window["carbon-disable"] &&
+    !window.matchMedia("(max-width: 767px)").matches
+  ) {
+    (() => {
+      const po = document.createElement("script");
+      po.type = "text/javascript";
+      po.async = true;
+      po.src = "{{ .Site.Params.carbon }}";
+      po.id = "_carbonads_js";
+      const s = document.currentScript;
+      s.parentNode.insertBefore(po, s);
+    })();
+  }
+</script>

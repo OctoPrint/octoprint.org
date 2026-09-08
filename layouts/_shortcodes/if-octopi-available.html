@@ -1,0 +1,3 @@
+{{- $variant := .Get "variant" | default "latest" -}} {{- $octopi :=
+hugo.Data.octopi }} {{- $data := index $octopi $variant }} {{- if $data }} {{
+.Inner | markdownify }} {{- end }}

@@ -1,0 +1,12 @@
+{{ $logo := .Get "logo" }}
+{{ $link := .Get "link" }}
+{{ $title := .Get "title" }}
+{{ $subtitle := .Get "subtitle" | default "Regularly or one-time - you decide!" }}
+<div class="support-option">
+    <a href="{{ $link }}" rel="noopener noreferrer" target="_blank">
+        <img class="img__light" src="/img/support/{{ $logo }}-light.png" alt="{{- $title }}">
+        <img class="img__dark" src="/img/support/{{ $logo }}-dark.png" alt="{{- $title }}">
+    </a>
+    <strong>{{ $title }}</strong>
+    <small>{{ $subtitle }}</small>
+</div>

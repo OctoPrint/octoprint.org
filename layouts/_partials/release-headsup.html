@@ -1,0 +1,11 @@
+{{- with .Params.releasecandidate.headsups }} 
+    <p>Please also take a look at the following <strong>heads-ups</strong>:</p>
+
+    {{- range . }}
+        <blockquote>
+            <strong>{{ .title }}</strong>
+
+            {{ .content | markdownify }}
+        </blockquote>
+    {{- end }}
+{{- end }}

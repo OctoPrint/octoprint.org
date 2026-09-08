@@ -1,0 +1,18 @@
+{{- $variant := .Get "variant" | default "latest" -}}
+{{- $octopi := hugo.Data.octopi }}
+{{- $data := index $octopi $variant }}
+{{- $recommendation := index $data "recommendation" | default (index $octopi "recommendation") }}
+{{- with $data }}
+<p>
+    <a class="btn btn--primary btn--lg" href="{{ .url }}" data-analytics='"Download Click", { "props": { "target": "latest"} }'>
+        {{ partial "icon.html" "download" }}
+        <span>OctoPi&nbsp;{{ .octopi_version }} &amp; OctoPrint&nbsp;{{ .octoprint_version }}</span>
+    </a>
+</p>
+<p>
+    <small>SHA256: <code>{{ .sha256 }}</code></small><br>{{ with .pi_models }}
+    <small>Image compatible with Raspberry Pi {{ . }}.</small>{{ end }}{{ with $recommendation }}
+    <small><strong>{{ . }}</strong></small><br>{{ end }}
+</p>
+{{- end }}
+

@@ -1,0 +1,266 @@
+/*** assets/css/custom.css ***/
+
+/* Theme customization */
+
+[data-accent="octoprint"] {
+  --color-accent: #169300;
+  --color-accent-strong: #13c100;
+  --color-accent-soft: #13c1001f;
+  --color-secondary: #13c100;
+  --color-secondary-soft: #1693001f;
+  --shadow-glow: 0 0 24px rgba(16, 185, 129, 0.25);
+
+  --color-bg: #010101;
+  --color-bg-inset: #111111;
+  --color-bg-surface: hsl(111, 100%, 10%);
+  --color-bg-surface-2: hsl(111, 100%, 5%);
+}
+
+[data-theme="light"][data-accent="octoprint"] {
+  --color-accent: #0d8400;
+  --color-accent-strong: #0b4600;
+  --color-accent-soft: #0b46001f;
+  --color-secondary: #0b4600;
+  --color-secondary-soft: #0b46001f;
+  --shadow-glow: 0 0 24px rgba(190, 18, 60, 0.2);
+
+  --color-bg: #efefef;
+  --color-bg-inset: #dddddd;
+  --color-bg-surface: hsl(115, 58%, 80%);
+  --color-bg-surface-2: hsl(115, 58%, 90%);
+}
+
+.site-footer__col {
+  font-size: var(--text-sm);
+
+  small {
+    font-size: var(--text-xs);
+  }
+}
+
+.site-footer__bottom {
+  a {
+    color: var(--color-text-muted);
+  }
+}
+
+.btn--block {
+  display: block;
+}
+
+/* light & dark images */
+
+[data-theme="dark"] .img__light {
+  display: none;
+}
+[data-theme="light"] .img__dark {
+  display: none;
+}
+
+/* Aside box */
+
+.aside-box {
+  text-align: center;
+
+  display: block;
+
+  overflow: hidden;
+  font-family: var(--font-sans);
+  line-height: 1.5;
+
+  border: 1px solid var(--color-bg-inset);
+  padding: 1em;
+  width: 160px;
+
+  margin: 2em 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.aside-box__supporters {
+  p a {
+    color: var(--color-accent);
+  }
+
+  a.sponsor {
+    display: block;
+    margin: 1em 0;
+  }
+
+  a.btn {
+    color: var(--color-bg);
+    font-size: var(--text-xs);
+  }
+}
+
+/* Supporters */
+
+.supporters {
+  text-align: center;
+
+  .sponsors {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 8rem;
+      max-height: 8rem;
+    }
+  }
+}
+
+.support-box {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  h3 {
+    text-align: center;
+  }
+
+  .support-option {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    height: 18ch;
+  }
+}
+
+/* GitHub User Grid */
+
+.github-user-grid {
+  text-align: center;
+  margin: 1em 0;
+
+  .github-user {
+    display: inline-block;
+    width: 8rem;
+    vertical-align: top;
+    text-align: center;
+    word-wrap: break-word;
+    overflow: hidden;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      width: 5rem;
+      height: 5rem;
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+  }
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "Arvo";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/arvo/arvo-v10-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Arvo";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/arvo/arvo-v10-latin-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Arvo";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/arvo/arvo-v10-latin-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Arvo";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/arvo/arvo-v10-latin-700italic.woff2") format("woff2");
+}
+
+/* Carbon Ads */
+
+#carbonads {
+  text-align: center;
+
+  display: block;
+
+  overflow: hidden;
+  font-family: var(--font-sans);
+  line-height: 1.5;
+
+  border: 1px solid var(--color-bg-inset);
+  padding: 1em;
+  width: 160px;
+
+  span {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .carbon-text {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.7em;
+    color: var(--color-text);
+    width: 100%;
+    max-width: 100%;
+    float: none;
+  }
+
+  .carbon-poweredby {
+    position: relative;
+    display: block;
+    font-size: 0.5em;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: var(--color-text);
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    text-align: right;
+  }
+
+  .carbon-img {
+    display: block;
+    margin: 0 auto 10px;
+  }
+}
+
+/* Get Help */
+
+.help-box {
+  border: 1px solid var(--color-accent);
+  border-radius: 0.5em;
+  background-color: var(--color-bg-surface);
+  overflow: hidden;
+  margin: 1em 0;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .help-content {
+    padding: 0 1em 1em 1em;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

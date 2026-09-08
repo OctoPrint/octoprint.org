@@ -1,0 +1,3 @@
+[submodule "themes/liftoff"]
+	path = themes/liftoff
+	url = https://codeberg.org/head1328/hugo-liftoff.git

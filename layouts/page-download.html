@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <div class="container docs-page">
+    <header class="docs__header">
+      <h1>{{ .Title }}</h1>
+    </header>
+    <div class="docs">
+      <article class="docs__content">
+        {{ .Content }}
+      </article>
+      <aside class="docs__toc" aria-label="{{ i18n "on_this_page" }}">
+        {{- with .TableOfContents }}
+          <h2>{{ i18n "on_this_page" }}</h2>
+          {{ . }}
+        {{- end }}
+        {{- partial "aside-supporter.html" }}
+        {{- partial "aside-ad.html" }}
+      </aside>
+    </div>
+  </div>
+{{ end }}

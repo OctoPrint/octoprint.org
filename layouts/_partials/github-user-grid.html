@@ -1,0 +1,15 @@
+{{- $highlight := .highlight }}
+<div class="github-user-grid">
+    {{ range .users }}
+        <div class="github-user">
+            <a href="https://github.com/{{ . }}">
+                <img src="https://github.com/{{ . }}.png?size=100" alt="@{{ . }}" /><br />
+                {{- if (in $highlight .) }}
+                    <em>@{{ . }}</em>
+                {{ else }}
+                    @{{ . }}
+                {{ end }}
+            </a>
+        </div>
+    {{ end }}
+</div>

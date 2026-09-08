@@ -1,0 +1,18 @@
+{{- $sponsors := hugo.Data.sponsors }}
+<div class="supporters">
+    OctoPrint's development is made possible only through the 
+    <a href="/support">financial support</a> of its awesome supporters
+    {{- if $sponsors }} 
+        and
+        <div class="row sponsors">
+            {{- range $sponsors }}
+                <a href="{{- .url }}" rel="noopener noreferrer" target="_blank">
+                    <img class="img__light" src="/img/sponsors/{{- .logo }}-light.png" alt="{{- .title }}">
+                    <img class="img__dark" src="/img/sponsors/{{- .logo }}-dark.png" alt="{{- .title }}">
+                </a>
+            {{- end }}
+        </div>
+    {{- else -}}
+        !
+    {{- end -}}
+</div>

@@ -1,0 +1,10 @@
+# Hugo build artefacts
+public/
+resources/_gen/
+.hugo_build.lock
+
+# OS / editor noise
+.DS_Store
+.idea/
+.vscode/
+*.swp

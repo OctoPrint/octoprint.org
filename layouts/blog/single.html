@@ -1,0 +1,57 @@
+{{ define "main" }}
+  <div class="container docs-page">
+    <nav class="docs__breadcrumb" aria-label="breadcrumb">
+      <a href="{{ site.Home.RelPermalink }}">{{ i18n "home" | default "Home" }}</a>
+      <span aria-hidden="true">/</span>
+      <a href="{{ "/blog" | relLangURL }}">{{ i18n "blog" | default "Blog" }}</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ .Title }}</span>
+    </nav>
+    <header class="docs__header">
+      <h1>{{ .Title }}</h1>
+      <div class="docs__meta">
+        {{- with .ReadingTime }}<span>{{ i18n "reading_time" (dict "Count" .) }}</span>{{ end }}
+        {{- if not .Lastmod.IsZero }}
+          <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ i18n "last_updated" }}: {{ .Lastmod.Format "2006-01-02" }}</time>
+        {{- end }}
+      </div>
+    </header>
+    <div class="docs">
+      <article class="docs__content">
+        {{ .Content }}
+        {{- with .Params.releasecandidate }}
+          {{- partial "release-candidate-blurb.html" . }}
+        {{- end }}
+        {{- /* Hugo's .PrevInSection/.NextInSection are inverted vs. the
+               intuitive forward/backward reading direction: in a
+               weight-ASC sort, .PrevInSection returns the *higher*-
+               weighted (later) page. We flip them here so the arrows
+               match the natural reading order. */ -}}
+        {{- with .GetTerms "tags" }}
+          <div class="article__tags">
+            {{- range . }}
+              <a class="badge" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            {{- end }}
+          </div>
+        {{- end }}
+        <nav class="docs__pagination" aria-label="pagination">
+          {{- with .NextInSection }}
+            <a class="prev" href="{{ .RelPermalink }}">
+              <small>{{ i18n "previous" | default "Previous" }}</small>
+              <span>{{ .LinkTitle }}</span>
+            </a>
+          {{- end }}
+          {{- with .PrevInSection }}
+            <a class="next" href="{{ .RelPermalink }}">
+              <small>{{ i18n "next" | default "Next" }}</small>
+              <span>{{ .LinkTitle }}</span>
+            </a>
+          {{- end }}
+        </nav>
+      </article>
+      <aside class="docs__tocs">
+        {{- partial "aside-ad.html" }}
+      </aside>
+    </div>
+  </div>
+{{ end }}

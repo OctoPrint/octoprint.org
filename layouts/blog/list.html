@@ -1,0 +1,29 @@
+{{ define "main" }} {{ partial "hero.html" . }}
+<section class="section">
+  <div class="container">
+    {{- if not .Params.hero }}
+    <h1>{{ .Title }}</h1>
+    {{- end }} {{ .Content }} {{- $pages := where site.RegularPages "Section"
+    "blog" }} {{- with $pages }}
+    <div class="doc-grid">
+      {{- range . }}
+      <a class="doc-card" href="{{ .RelPermalink }}">
+        <h3 class="doc-card__title">{{ .LinkTitle }}</h3>
+        <p class="doc-card__summary">
+          {{ or .Description (.Summary | plainify) }}
+        </p>
+        <div class="doc-card__meta">
+          {{- with .ReadingTime }}<span
+            >{{ i18n "reading_time" (dict "Count" .) }}</span
+          >{{ end }} {{- with .GetTerms "tags" }} {{- range . }}<span
+            class="badge"
+            >{{ .LinkTitle }}</span
+          >{{- end }} {{- end }}
+        </div>
+      </a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+</section>
+{{ end }}
