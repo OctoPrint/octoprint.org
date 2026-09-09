@@ -4,11 +4,6 @@ title: Security Policy
 lastupdate: 2026-06-24 10:15:00 +0200
 ---
 
-> [!WARNING]
-> **OctoPrint is participating in the [Summer of Bliss](https://daniel.haxx.se/blog/2026/06/15/curl-summer-of-bliss/) and will not be processing any security reports between July 10th & August 23rd 2026**. Any reports sent during this time will get processed from August 24th onward. This also extends the reaction & mitigation times accordingly.
->
-> OctoPrint's maintainer needs a vacation too.
-
 **If you think that you have found a security vulnerability in OctoPrint, please disclose it to us via a [GitHub Security Advisory (GHSA)](https://github.com/OctoPrint/OctoPrint/security/advisories) or alternatively our security e-mail address at [security@octoprint.org](mailto:security@octoprint.org)**.
 
 We are mostly interested in reports by actual OctoPrint users that are familiar with the platform, but all high quality contributions are welcome. Please do your best to describe a clear and realistic impact for your report.
