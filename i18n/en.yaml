@@ -1,0 +1,6 @@
+published: Published
+reading_time: "{{ .Count }} min"
+release_type:
+  stable: "release"
+  rc: "release candidate"
+  bugfix: "release"

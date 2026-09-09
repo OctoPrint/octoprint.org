@@ -1,6 +1,9 @@
-{{- if .contributors }}
-    {{- $contributor := .contributors | len }}
-    {{- $first_timer := .first_time_contributors | len }}
+{{- with .Params.contributors }}
+    {{- $contributor := . | len }}
+    {{- $first_timer := 0 }}
+    {{- with $.Params.first_time_contributors }}
+        {{- $first_timer = . | len }}
+    {{- end }}
     <p>
         A special <strong>Thank You!</strong> to 
         {{- if gt $contributor 1 }}
@@ -9,25 +12,17 @@
             this fine person
         {{- end }} 
         for their PRs
-        {{- if $first_timer }}
+        {{- if $first_timer -}}
             , and an extra warm welcome to our <em>
-            {{- if gt $first_timer 1 }}
+            {{- if gt $first_timer 1 -}}
                 {{ $first_timer }} first-time contributors
-            {{- else }}
+            {{- else -}}
                 one first-time contributor
-            {{- end }}! 🎉</em>
-        {{- else }}
+            {{- end -}}!&nbsp;🎉</em>
+        {{- else -}}
             !
-        {{- end }}
+        {{- end -}}
     </p>
 
-    {{- partial "github-user-grid.html" (dict "users" .contributors "highlight" .first_time_contributors ) }}
+    {{- partial "github-user-grid.html" (dict "users" . "highlight" $.Params.first_time_contributors ) }}
 {{- end }} 
-
-{{- if .security }} 
-    <p>
-        Also another <strong>Thank you!</strong> to {% include security_shoutouts
-        people=page.security %} for the responsible disclosure of vulnerabilities
-        fixed in this release.
-    </p>
-{{- end }}

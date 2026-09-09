@@ -45,7 +45,7 @@ Footer. Three regions:
         {{- range .Limit 3 }}
           <li>
             <a href="{{ .Permalink }}">{{ .Title }}</a><br>
-            <small>{{ .Lastmod.Format "2006-01-02" }}</small>
+            <small>{{ .Date.Format "2006-01-02" }}</small>
           </li>
         {{- end }}
       {{- end }}

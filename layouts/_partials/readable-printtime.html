@@ -1,0 +1,6 @@
+{{- . }}h
+{{ if gt . 8760 -}}
+    or {{ printf "%.1f" (div . 8760.0) }} years
+{{ else if gt . 720 -}}
+    or {{ printf "%.1f" (div . 720.0) }} months
+{{ end -}}

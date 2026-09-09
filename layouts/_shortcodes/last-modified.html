@@ -1,0 +1,4 @@
+{{- $lastmod := $.Page.Lastmod }}
+{{- if not $lastmod.IsZero }}
+<em>This document was last updated on <time datetime="{{ $lastmod.Format "2006-01-02" }}">{{ $lastmod.Format "January 2, 2006" }}</time>.</em>
+{{- end }}

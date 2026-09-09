@@ -1,0 +1,10 @@
+{{- $author := . }}
+{{- with $author }}
+    {{- $authors := hugo.Data.authors }}
+    {{- $data := index $authors $author }}
+    {{- with $data }}
+        <span class="author" aria-label="Author">
+            <a href="{{ .link }}"><img src="{{ .avatar }}" alt="{{ .name }}">&nbsp;{{ .name }}</a>
+        </span>
+    {{- end }}
+{{- end }}

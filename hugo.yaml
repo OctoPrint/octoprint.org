@@ -1,0 +1,122 @@
+baseURL: https://octoprint.org/
+locale: en-us
+title: OctoPrint
+theme: liftoff
+
+enableRobotsTXT: true
+enableEmoji: false
+pagination:
+  pagerSize: 6
+
+params:
+  description: ""
+  tagline: Your printer. Your rules.
+  accent: octoprint
+  copyrightOwner: Gina Häußge
+  copyrightSuffix: ""
+  legalFooter: |
+    "OctoPrint" is a [registered trademark](/trademark-rules) &middot;
+    [Imprint](/imprint) &middot;
+    [Privacy Policy](/privacy)
+  carbon: "//cdn.carbonads.com/carbon.js?serve=CKYIL53W&placement=octoprintorg"
+  social:
+    - icon: simple-icons:github
+      name: GitHub
+      url: https://octoprint.org/OctoPrint
+    - icon: simple-icons:discourse
+      name: Forum
+      url: https://community.octoprint.org
+    - icon: simple-icons:discord
+      name: Discord
+      url: https://discord.octoprint.org
+    - icon: simple-icons:mastodon
+      name: Mastodon
+      url: https://floss.social/@OctoPrint
+    - icon: mdi:rss
+      name: RSS
+      url: /index.xml
+
+menus:
+  main:
+    - name: Blog
+      pageRef: /blog
+      weight: 20
+    - name: Get Help
+      pageRef: /help
+      weight: 30
+    - name: Download
+      pageRef: /download
+      weight: 40
+    - name: Donate
+      pageRef: /support
+      weight: 50
+    - name: Merchandise
+      pageRef: /merch
+      weight: 60
+
+  footer:
+    - identifier: links
+      name: On the web
+      weight: 10
+    - parent: links
+      name: YouTube
+      url: https://www.youtube.com/c/OctoPrint3D
+      weight: 10
+    - parent: links
+      name: Status
+      url: https://status.octoprint.org/
+      weight: 20
+    - identifier: legal
+      name: Legal
+      weight: 20
+    - parent: legal
+      name: Code of Conduct
+      url: /coc/
+    - parent: legal
+      name: Security Policy
+      url: /security/
+    - parent: legal
+      name: Imprint
+      url: /imprint/
+    - parent: legal
+      name: Privacy Policy
+      url: /privacy/
+    - parent: legal
+      name: Trademark Policy
+      url: /trademark/
+
+frontmatter:
+  date:
+  - date
+  - publishdate
+  - pubdate
+  - published
+
+  lastmod:
+  - lastmod
+  - modified
+
+permalinks:
+  page:
+    blog: /blog/:year/:month/:day/:slug/
+
+markup:
+  highlight:
+    style: github-dark
+    noClasses: true
+    lineNos: false
+    codeFences: true
+    tabWidth: 2
+  goldmark:
+    renderer:
+      unsafe: true
+
+privacy:
+  youTube:
+    disable: false
+    privacyEnhanced: true
+
+module:
+  hugoVersion:
+    extended: true
+    min: 0.146.0

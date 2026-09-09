@@ -6,7 +6,7 @@
     {{- range .Limit $limit }}
       <li>
         <a href="{{ .Permalink }}">{{ .Title }}</a><br>
-        {{ .Lastmod.Format "2006-01-02" }}
+        {{ .Date.Format "2006-01-02" }}
       </li>
     {{- end }}
   {{- end }}

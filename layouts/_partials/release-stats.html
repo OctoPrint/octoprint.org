@@ -1,0 +1,67 @@
+{{- with .Params.stats }}
+<h3 id="insights">Insights</h3>
+
+<p>
+    If you are interested in some numbers, here's some data extracted from the
+    <strong>anonymous usage tracking</strong> for the RCs that went before 
+    {{ $.Params.release }}'s stable release:
+</p>
+
+<ul>
+    {{- range .rcs }}
+    <li>
+        {{ .tag }} ({{ .date }}): {{ .instances }} instances, 
+        {{ partial "readable-printtime.html" .printtime }} of accumulative printing time
+    </li>
+    {{- end }}
+</ul>
+
+{{- with .rcs_incomplete }}
+Due to this RC phase taking longer than 60
+days, which is the current limit of the anonymous usage tracking, data for these
+RCs is not fully available anymore:
+
+<ul>
+    {{- range . }}
+    <li>{{ .tag }} ({{ .date }})</li>
+    {{- end }}
+</ul>
+{{- end }}
+
+<p>
+    Overall there were {{ .totalinstances }} instances that
+    participated in the RC testing phase and which collectively completed 
+    {{ partial "readable-printtime.html" .totalprinttime }} of print jobs.
+</p>
+
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a
+            href="{{ .instancegraph }}"
+            data-lightbox=""
+            data-title="{{ $.Params.release }}rc instances over the past month, per hour"
+            ><img src="{{ .instancegraph }}"
+        /></a>
+    </div>
+</div>
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a
+            href="{{ .printtimegraph }}"
+            data-lightbox=""
+            data-title="Accumulated {{ $.Params.release }}rc print times over the past month, per hour"
+            ><img src="{{ .printtimegraph }}"
+        /></a>
+    </div>
+</div>
+<div class="row-fluid" style="margin-bottom: 10px">
+    <div class="span12">
+        <a
+            href="{{ .piecharts }}"
+            data-lightbox=""
+            data-title="{{ $.Params.release }}rc instances and accumulated print time over the past month, total"
+            ><img src="{{ .piecharts }}"
+        /></a>
+    </div>
+</div>
+{{- end -}}

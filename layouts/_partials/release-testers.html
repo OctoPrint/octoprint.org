@@ -1,0 +1,11 @@
+{{- with .Params.testers }}
+    {{- $testers := slice }}
+    {{- range . }}
+        {{- $testers = $testers | append (printf "[%s](https://github.com/%s)" . .) }}
+    {{- end }}
+    {{- $markdown := delimit $testers ", " " and " }}
+    <p>
+        And last but not least, a <strong>big shoutout</strong> to everyone who
+        reported back on the release candidates this time: {{ $markdown | markdownify }}.
+    </p>
+{{- end }}

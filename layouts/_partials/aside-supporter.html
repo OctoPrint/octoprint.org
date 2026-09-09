@@ -8,7 +8,7 @@
 
     <div class="sponsors">
         {{- range $sponsors }}
-            <a class="sponsor" href="{{- .url }}" rel="noopener noreferrer" target="_blank">
+            <a class="sponsor" href="{{- .url }}" title="{{ .title }}" data-analytics='"Sponsor Link", { "props": { "sponsor": "{{ .title }}"} }'></a>
                 <img class="img__light" src="/img/sponsors/{{- .logo }}-light.png" alt="{{- .title }}">
                 <img class="img__dark" src="/img/sponsors/{{- .logo }}-dark.png" alt="{{- .title }}">
             </a>

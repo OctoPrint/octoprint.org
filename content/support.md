@@ -15,9 +15,6 @@ As you might imagine, **working on OctoPrint takes a lot of time and effort**. T
 If this sounds like a full time job, that's because it is. **My full time work on OctoPrint is 100% crowd funded** by people just like you!
 
 You can **support OctoPrint's development directly** either regularly or through one time contributions. You can also support my work by buying the Merchandise articles listed here from whose proceedings I'll receive a share.
-
-**With a company and open to a sponsorship?** [Get in touch with me!](mailto:sponsoring@octoprint.org)
-
 {{< /section >}}
 
 <section class="section">
@@ -41,3 +38,7 @@ You can **support OctoPrint's development directly** either regularly or through
         </div>
     </div>
 </section>
+
+{{< section width="narrow" >}}
+{{< cta title="With a company and open to a sponsorship?" primary="Get in touch with me!|mailto:sponsoring@octoprint.org" />}}
+{{< /section >}}

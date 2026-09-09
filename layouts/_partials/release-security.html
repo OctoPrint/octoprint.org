@@ -1,0 +1,7 @@
+{{- with .Params.security }}
+    {{- $shoutout := (delimit . ", " " and ") -}}
+    <p>
+        Also another <strong>Thank you!</strong> to {{ $shoutout | markdownify }} for the responsible disclosure of vulnerabilities
+        fixed in this release.
+    </p>
+{{- end }}

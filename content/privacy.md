@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: page-toc
 title: Privacy Policy
 robots: noindex,nofollow
-lastupdate: 2022-10-20 00:00:00 +0000
+modified: 2022-10-20 00:00:00 +0000
 ---
 
 ## 1. An overview of data protection
@@ -182,4 +182,4 @@ unpacks it, uses it to perform actions with GitHub on behalf of the user, and th
 the session information away again once the request is processed. At no point is session
 information or personable identifiable information of the user persisted in any way.
 
-<center><em>This document was last updated on {{ page.lastupdate | date: "%B %-d, %Y" }}.</em></center>
+{{< last-modified >}}

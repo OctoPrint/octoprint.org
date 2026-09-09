@@ -8,11 +8,8 @@
         {{ .Content }}
       </article>
       <aside class="docs__toc" aria-label="{{ i18n "on_this_page" }}">
-        {{- with .TableOfContents }}
-          <h2>{{ i18n "on_this_page" }}</h2>
-          {{ . }}
-        {{- end }}
-        {{- partial "aside-supporter.html" }}
+        {{- partial "toc.html" . }}
+        {{- partial "aside-supporter.html" . }}
         {{- partial "aside-ad.html" . }}
       </aside>
     </div>

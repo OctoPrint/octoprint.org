@@ -52,6 +52,85 @@
   background-color: var(--color-bg-surface-2);
 }
 
+.docs__meta {
+  gap: var(--space-2);
+  
+  *:not(:last-child)::after {
+    content: "·";
+    padding-left: var(--space-2);
+  }
+
+  .docs__meta__date,
+  .docs__meta__lastmod,
+  .docs__meta__readtime {
+    display: flex;
+  }
+}
+
+@media (max-width: 1080px) {
+  .docs__meta {
+    flex-direction: column;
+    align-items: flex-start;
+
+    *:not(:last-child)::after {
+      content: "";
+      padding-left: 0;
+    }
+
+    .docs__meta__readtime {
+      display: none;
+    }
+  }
+
+}
+
+.cta {
+  background:
+    radial-gradient(ellipse 80% 110% at 12% 0%,
+      color-mix(in srgb, var(--color-accent) 36%, transparent) 0%, transparent 68%),
+    radial-gradient(ellipse 80% 110% at 88% 100%,
+      color-mix(in srgb, var(--color-secondary) 32%, transparent) 0%, transparent 68%),
+    var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  text-align: center;
+  display: grid;
+  gap: var(--space-5);
+}
+
+[data-theme="light"] .cta {
+  background:
+    radial-gradient(ellipse 80% 110% at 12% 0%,
+      color-mix(in srgb, var(--color-accent) 18%, transparent) 0%, transparent 68%),
+    radial-gradient(ellipse 80% 110% at 88% 100%,
+      color-mix(in srgb, var(--color-secondary) 16%, transparent) 0%, transparent 68%),
+    var(--color-bg-surface);
+}
+
+/* */
+
+.img-card {
+  border-radius: var(--radius-md);
+  margin: 0 0 2em 0;
+
+}
+
+.author {
+  display: flex;
+
+  a {
+    display: flex;
+    gap: var(--space-1);
+  }
+
+  img {
+    width: 1.5em;
+    border-radius: 50%;
+    aspect-ratio: 1;
+  }
+}
+
 /* light & dark images */
 
 [data-theme="dark"] .img__light {
@@ -82,6 +161,10 @@
   color: var(--color-text-muted);
 }
 
+.aside-box:first-child {
+  margin: 0 0 2em 0;
+}
+
 .aside-box__supporters {
   p a {
     color: var(--color-accent);
@@ -110,6 +193,8 @@
     justify-content: center;
     align-items: center;
 
+    margin-top: 1em;
+
     img {
       max-width: 8rem;
       max-height: 8rem;
@@ -134,6 +219,10 @@
     align-items: center;
 
     height: 18ch;
+  }
+
+  .support-option:last-child {
+    height: auto;
   }
 }
 
@@ -238,7 +327,7 @@
 /* Get Help */
 
 .help-box {
-  border: 1px solid var(--color-accent);
+  border: 1px solid var(--color-border);
   border-radius: 0.5em;
   background-color: var(--color-bg-surface);
   overflow: hidden;

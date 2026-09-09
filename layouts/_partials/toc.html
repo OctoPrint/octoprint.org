@@ -1,0 +1,7 @@
+{{- with .TableOfContents }}
+    {{- $count := . | strings.Count "<li>" }}
+    {{- if $count }}
+        <h2>{{ i18n "on_this_page" }}</h2>
+        {{ . }}
+    {{- end }}
+{{- end }}

@@ -1,0 +1,12 @@
+{{- $href := .Get "href" }}
+{{- $title := .Get "title" }}
+{{- $track := .Get "track" }}
+{{- $props := .Get "props" }}
+{{- $cls := .Get "class" }}
+{{- $analytics := (printf "\"%s\"" $track) }}
+{{- with $props }}
+    {{- $analytics := (printf "%s, { \"props\": { %s } }" $analytics $props) }}
+{{- end }}
+<a {{ with $cls }}class="{{ $cls }}"{{ end }} href="{{ $href }}" title="{{ $title }}" data-analytics='{{ $analytics }}'></a>
+    {{- .Inner }}
+</a>

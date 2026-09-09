@@ -2,36 +2,37 @@
 layout: post-rc
 title: "New release candidate: 2.0.0rc5"
 date: 2026-08-24 13:15:00 +0200
+modified: 2026-09-09 13:15:00 +0200
 summary: The fifth release candidate for the upcoming 2.0.0 release with some more fixes of regressions and some long standing bugs.
+tags:
+- release
 
-#card: /assets/img/blog/2026-08/2026-08-24-octoprint-2.0.0rc5-card.png
-#featuredimage: /assets/img/blog/2026-08/2026-08-24-octoprint-2.0.0rc5-card.png
-#poster: /assets/img/blog/2026-08/2026-08-24-octoprint-2.0.0rc5-poster.png
+card: card.png
+featuredimage: card.png
+poster: poster.png
 
-params:
-  author: foosel
+author: foosel
 
-  releasecandidate:
-    release: 2.0.0rc5
-    channel: Release Candidates
-    feedback: 5448
+release: 2.0.0rc5
+channel: Release Candidates
+feedback: 5448
 
-    contributors:
-      - jacopotediosi
-      - sanjay900
+contributors:
+  - jacopotediosi
+  - sanjay900
 
-    first_time_contributors:
-      - sanjay900
+first_time_contributors:
+  - sanjay900
 
-    closer_look:
-      - Proper behaviour when using the included web interface as well as any third party clients at your disposal.
-      - Printing via serial connection.
-      - Managing files on your printers storage via a serial connection.
-      - Blocklisted serial ports and/or baud rates are properly migrated to the serial connector (one per line, not comma-separated).
-      - |
-        **If your printer's disconnected state happens to be "after error", please report back on which connector you used and what the reported error is.**
-      - "If you have a Klipper/Moonraker based printer available: can you use it through OctoPrint when you install the [Moonraker Connector](https://github.com/OctoPrint/OctoPrint-MoonrakerConnector) (work in progress)?"
-      - "If you have a Bambu based printer available: can you use it through OctoPrint when you install the [Bambu Connector](https://github.com/OctoPrint/OctoPrint-BambuConnector) (work in progress)?"
+closer_look:
+  - Proper behaviour when using the included web interface as well as any third party clients at your disposal.
+  - Printing via serial connection.
+  - Managing files on your printers storage via a serial connection.
+  - Blocklisted serial ports and/or baud rates are properly migrated to the serial connector (one per line, not comma-separated).
+  - |
+    **If your printer's disconnected state happens to be "after error", please report back on which connector you used and what the reported error is.**
+  - "If you have a Klipper/Moonraker based printer available: can you use it through OctoPrint when you install the [Moonraker Connector](https://github.com/OctoPrint/OctoPrint-MoonrakerConnector) (work in progress)?"
+  - "If you have a Bambu based printer available: can you use it through OctoPrint when you install the [Bambu Connector](https://github.com/OctoPrint/OctoPrint-BambuConnector) (work in progress)?"
 ---
 
 The fifth release candidate for the upcoming 2.0.0 release with some more fixes of regressions and some long standing newly discovered bugs:

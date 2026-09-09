@@ -1,5 +1,10 @@
 ---
-title: Trademark Rules
+layout: page-toc
+title: Trademark Policy
+modified: 2020-09-10 00:00:00 +0000
+
+aliases:
+- /trademark-rules/
 ---
 
 OctoPrint is a registered trademark owned by Gina Häußge.
@@ -116,6 +121,4 @@ company from continuing to use the OctoPrint brand if they are using it in a way
 that violates any of these General Conditions or if, in general, she considers said use to
 impact negatively upon the brand.
 
----
-
-_This document was last updated on September 10th, 2020._
+{{< last-modified >}}

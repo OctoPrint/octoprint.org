@@ -10,30 +10,42 @@
     <header class="docs__header">
       <h1>{{ .Title }}</h1>
       <div class="docs__meta">
-        {{- with .ReadingTime }}<span>{{ i18n "reading_time" (dict "Count" .) }}</span>{{ end }}
+        {{ partial "author.html" .Params.author }}
+        {{- if not .Date.IsZero }}
+          <span class="docs__meta__date" aria-label="{{ i18n "published" }}">
+            {{ partial "icon.html" "mdi:calendar-month-outline" }}&nbsp;<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+          </span>
+        {{- end }}
         {{- if not .Lastmod.IsZero }}
-          <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ i18n "last_updated" }}: {{ .Lastmod.Format "2006-01-02" }}</time>
+          <span class="docs__meta__lastmod" aria-label="{{ i18n "last_updated" }}">
+            {{ partial "icon.html" "mdi:calendar-edit" }}&nbsp;<time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time>
+          </span>
+        {{- end }}
+        {{- with .ReadingTime }}
+          <span class="docs__meta__readtime" aria-label="Reading time">
+            {{ partial "icon.html" "mdi:clock-time-four-outline" }}&nbsp;{{ i18n "reading_time" (dict "Count" .) }}
+          </span>
+        {{ end }}
+        {{- with .GetTerms "tags" }}
+          <div class="docs__meta__tags" aria-label="Tags">
+            {{- range . }}
+              <a class="badge" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            {{- end }}
+          </div>
         {{- end }}
       </div>
     </header>
     <div class="docs">
       <article class="docs__content">
         {{ .Content }}
-        {{- with .Params.releasecandidate }}
-          {{- partial "release-candidate-blurb.html" . }}
+        {{- if .Params.release }}
+          {{- partial "release-blurb.html" . }}
         {{- end }}
         {{- /* Hugo's .PrevInSection/.NextInSection are inverted vs. the
                intuitive forward/backward reading direction: in a
                weight-ASC sort, .PrevInSection returns the *higher*-
                weighted (later) page. We flip them here so the arrows
                match the natural reading order. */ -}}
-        {{- with .GetTerms "tags" }}
-          <div class="article__tags">
-            {{- range . }}
-              <a class="badge" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-            {{- end }}
-          </div>
-        {{- end }}
         <nav class="docs__pagination" aria-label="pagination">
           {{- with .NextInSection }}
             <a class="prev" href="{{ .RelPermalink }}">
@@ -49,8 +61,9 @@
           {{- end }}
         </nav>
       </article>
-      <aside class="docs__tocs">
-        {{- partial "aside-ad.html" }}
+      <aside class="docs__toc">
+        {{- partial "toc.html" . }}
+        {{- partial "aside-ad.html" . }}
       </aside>
     </div>
   </div>
