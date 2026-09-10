@@ -84,30 +84,6 @@
 
 }
 
-.cta {
-  background:
-    radial-gradient(ellipse 80% 110% at 12% 0%,
-      color-mix(in srgb, var(--color-accent) 36%, transparent) 0%, transparent 68%),
-    radial-gradient(ellipse 80% 110% at 88% 100%,
-      color-mix(in srgb, var(--color-secondary) 32%, transparent) 0%, transparent 68%),
-    var(--color-bg-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-2xl);
-  padding: var(--space-8);
-  text-align: center;
-  display: grid;
-  gap: var(--space-5);
-}
-
-[data-theme="light"] .cta {
-  background:
-    radial-gradient(ellipse 80% 110% at 12% 0%,
-      color-mix(in srgb, var(--color-accent) 18%, transparent) 0%, transparent 68%),
-    radial-gradient(ellipse 80% 110% at 88% 100%,
-      color-mix(in srgb, var(--color-secondary) 16%, transparent) 0%, transparent 68%),
-    var(--color-bg-surface);
-}
-
 blockquote {
   background-color: var(--color-bg-surface-2);
 }
