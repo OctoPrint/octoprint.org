@@ -1,10 +1,7 @@
 {{- with .Params.headsups }} 
-    <p>Please also take a look at the following <strong>heads-ups</strong>:</p>
-
     {{- range . }}
-        <aside class="note note--danger">
-            <p class="note__title">{{ .title | markdownify }}</p>
-            {{ .content | markdownify }}
-        </aside>
+        <h3>{{ .title | markdownify }}</h3>
+        {{ .content | markdownify }}
     {{- end }}
 {{- end }}
+

@@ -1,0 +1,29 @@
+{{- $headlines := .headlines }}
+{{- $minlevel := .minlevel | default 2 }}
+{{- $maxlevel := .maxlevel | default 3 }}
+{{- $lastlevel := 0 }}
+{{- $opened := false }}
+{{- with $headlines }}
+    {{- range . }}
+        {{- $level := index . 1 }}
+        {{- $id := index . 2 }}
+        {{- $title := index . 3 }}
+
+        {{- if eq $lastlevel 0 }}{{ $lastlevel = $level }}{{ end }}
+
+        {{- if (and (ge $level $minlevel) (le $level $maxlevel)) }}
+            {{- if (gt $level $lastlevel ) }}
+                <ul>
+            {{- else if (lt $level $lastlevel ) }}
+                    </ul>
+                </li>
+            {{- end }}
+
+            <li>
+                <a href="#{{ $id }}">{{ $title | htmlUnescape }}</a>
+            {{- $opened = true }}
+            {{- $lastlevel = $level }}
+        {{- end }}
+    {{- end }}
+    {{- if $opened }}</li>{{ end -}}
+{{- end }}

@@ -1,4 +1,15 @@
 {{ define "main" }}
+  {{- $prefix := "" }}
+  {{- $suffix := "" }}
+  {{- if .Params.release }}
+    {{- $prefix = (partial "release-prefix.html" .) }}
+    {{- $suffix = (partial "release-suffix.html" .) }}
+  {{- else if .Params.vid }}
+    {{- $prefix = (partial "ooa-prefix.html" .) }}
+    {{- $suffix = (partial "ooa-suffix.html" .)}}
+  {{- end }}
+  {{- $prefix_headlines := findRESubmatch `<h(\d+).+id="(.*?)".*?>(.*?)</` $prefix }}
+  {{- $suffix_headlines := findRESubmatch `<h(\d+).+id="(.*?)".*?>(.*?)</` $suffix }}
   <div class="container docs-page">
     <nav class="docs__breadcrumb" aria-label="breadcrumb">
       <a href="{{ site.Home.RelPermalink }}">{{ i18n "home" | default "Home" }}</a>
@@ -22,8 +33,9 @@
           </span>
         {{- end }}
         {{- with .ReadingTime }}
+          {{ $readingtime := (add . (div ((add ($prefix | plainify) ($suffix | plainify)) | countwords) 212)) }}
           <span class="docs__meta__readtime" aria-label="Reading time">
-            {{ partial "icon.html" "mdi:clock-time-four-outline" }}&nbsp;{{ i18n "reading_time" (dict "Count" .) }}
+            {{ partial "icon.html" "mdi:clock-time-four-outline" }}&nbsp;{{ i18n "reading_time" (dict "Count" $readingtime) }}
           </span>
         {{ end }}
         {{- with .GetTerms "tags" }}
@@ -37,10 +49,9 @@
     </header>
     <div class="docs">
       <article class="docs__content">
+        {{ $prefix }}
         {{ .Content }}
-        {{- if .Params.release }}
-          {{- partial "release-blurb.html" . }}
-        {{- end }}
+        {{ $suffix }}
         {{- /* Hugo's .PrevInSection/.NextInSection are inverted vs. the
                intuitive forward/backward reading direction: in a
                weight-ASC sort, .PrevInSection returns the *higher*-
@@ -62,7 +73,7 @@
         </nav>
       </article>
       <aside class="docs__toc">
-        {{- partial "toc.html" . }}
+        {{- partial "toc.html" (dict "fragments" .Fragments "prefix_headlines" $prefix_headlines "suffix_headlines" $suffix_headlines ) }}
         {{- partial "aside-ad.html" . }}
       </aside>
     </div>

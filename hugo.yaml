@@ -1,7 +1,8 @@
 baseURL: https://octoprint.org/
 locale: en-us
 title: OctoPrint
-theme: liftoff
+theme:
+- liftoff
 
 enableRobotsTXT: true
 enableEmoji: false
@@ -47,11 +48,11 @@ menus:
     - name: Download
       pageRef: /download
       weight: 40
-    - name: Donate
-      pageRef: /support
-      weight: 50
     - name: Merchandise
       pageRef: /merch
+      weight: 50
+    - name: Donate
+      pageRef: /support
       weight: 60
 
   footer:

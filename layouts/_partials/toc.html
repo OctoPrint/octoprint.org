@@ -1,7 +1,21 @@
-{{- with .TableOfContents }}
-    {{- $count := . | strings.Count "<li>" }}
-    {{- if $count }}
-        <h2>{{ i18n "on_this_page" }}</h2>
-        {{ . }}
-    {{- end }}
+{{- $fragments := .fragments }}
+{{- $prefix_headlines := .prefix_headlines | default slice }}
+{{- $suffix_headlines := .suffix_headlines | default slice }}
+{{- $minlevel := .minlevel | default 2 }}
+{{- $maxlevel := .maxlevel | default 3 }}
+{{- $has_fragments := gt ($fragments.Headings | len) 0 }}
+{{- $has_headlines := or (gt ($prefix_headlines | len) 0) (gt ($suffix_headlines | len) 0) }}
+{{- if (or $has_fragments $has_headlines) }}
+    <h2>{{ i18n "on_this_page" }}</h2>
+    <ul>
+        {{- with $prefix_headlines }}
+            {{- partial "toc-headlines" (dict "headlines" . "minlevel" $minlevel "maxlevel" $maxlevel) }}
+        {{- end }}
+        {{- with $fragments }}
+            {{- partial "toc-fragment-level.html" (dict "headings" .Headings "minlevel" $minlevel "maxlevel" $maxlevel) }}
+        {{- end }}
+        {{- with $suffix_headlines }}
+            {{- partial "toc-headlines" (dict "headlines" . "minlevel" $minlevel "maxlevel" $maxlevel) }}
+        {{- end }}
+    </ul>
 {{- end }}

@@ -1,10 +1,10 @@
--[ ] Plausible
+-[x] Plausible
 -[ ] Privacy Policy re carbon
 -[x] Check for external assets
 -[ ] blog overview
--[ ] Youtube shortcode
+    - also adjust reading time!
 -[ ] Support banner partials
-    -[ ] posts
+    -[x] posts
     -[ ] website
 -[ ] tooling to migrate posts
     -[ ] Markdown posts
@@ -15,15 +15,15 @@
 -[ ] rss feeds per category (tags?)
 -[x] URL format for blog posts: yyyy/mm/dd/slug
 -[ ] Discourse embed
--[ ] social icons & brightness overlay menu on mobile
+-[ ] BUG: social icons & brightness overlay menu on mobile
 -[x] meta line on blog posts incl. author
--[ ] custom post layouts
+-[x] custom post layouts
     -[x] release candidates
     -[x] stable
-    -[ ] bugfix
-    -[ ] ooa
-    -[ ] problem: reading time
-    -[ ] problem: toc
+    -[x] bugfix
+    -[x] ooa
+    -[x] problem: reading time
+    -[x] problem: toc
 -[ ] pages
     -[ ] Landing
         -[x] Hero
@@ -34,7 +34,7 @@
     -[x] Get Help
     -[x] Download
     -[x] Donate
-    -[ ] Merch
+    -[x] Merch
     -[x] CoC
     -[x] Imprint
     -[x] Privacy policy

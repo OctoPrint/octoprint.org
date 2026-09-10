@@ -1,0 +1,19 @@
+{{- $headings := .headings }}
+{{- $minlevel := .minlevel | default 1 }}
+{{- $maxlevel := .maxlevel | default 2 }}
+{{- range $headings }}
+    {{- if and (le .Level $maxlevel) (ge .Level $minlevel) }}
+        <li>
+            <a href="#{{ .ID }}">{{ .Title | htmlUnescape }}</a>
+            {{- with .Headings }}
+                <ul>
+                    {{ partial "toc-fragment-level.html" (dict "headings" . "minlevel" $minlevel "maxlevel" $maxlevel) }}
+                </ul>
+            {{- end }}
+        </li>
+    {{- else }}
+        {{- with .Headings }}
+            {{ partial "toc-fragment-level.html" (dict "headings" . "minlevel" $minlevel "maxlevel" $maxlevel) }}
+        {{- end }}
+    {{- end }}
+{{- end -}}

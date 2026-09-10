@@ -1,0 +1,16 @@
+{{- $id := .Params.vid }}
+{{- $host := "www.youtube-nocookie.com" }}
+{{- $src := printf "https://%s/embed/%s" $host $id }}
+{{- $title := .Params.title | default "YouTube Video" }}
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+        referrerpolicy="strict-origin-when-cross-origin"
+        src="{{ $src }}"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+        title="{{ $title }}"></iframe>
+</div>
+
+<p>
+    Topics in this episode of OctoPrint On Air, which was recorded on {{ .Params.recorded }}:
+</p>

@@ -1,0 +1,13 @@
+{{- $release := .Params.release }}
+
+{{- $release_type := "bugfix" }}
+{{- if hasSuffix $release ".0" }}
+  {{- $release_type = "stable" }}
+{{- else if (findRE `rc\d+$` $release) }}
+  {{- $release_type = "rc" }}
+{{- end }}
+{{- $is_rc := eq $release_type "rc" }}
+
+{{- if not $is_rc }}
+    {{- partial "funding-banner.html" "This release was made possible only through continued financial support by people like you!" }}
+{{- end }}

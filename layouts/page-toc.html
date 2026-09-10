@@ -8,7 +8,7 @@
         {{ .Content }}
       </article>
       <aside class="docs__toc" aria-label="{{ i18n "on_this_page" }}">
-        {{ partial "toc.html" . }}
+        {{ partial "toc.html" (dict "fragments" .Fragments "headlines" slice ) }}
       </aside>
     </div>
   </div>

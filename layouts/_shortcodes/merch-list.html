@@ -1,0 +1,12 @@
+{{- $merch := $.Page.Params.merch }}
+<div class="merch-list grid grid-4">
+    {{- range $merch }}
+        <div class="merch-list__item">
+            <a href="{{ .url }}" title="{{ .title }}" target="_blank" rel="noopener noreferrer" data-analytics='"Merch Link", { "props": { "merch": "{{ .title }}"} }'>
+                <img src="{{ .image }}" alt="{{ .title }}" title="{{ .title }}">
+                <strong>{{ .title }}</strong>
+            </a>
+            {{ .description }}
+        </div>
+    {{- end }}
+</div>

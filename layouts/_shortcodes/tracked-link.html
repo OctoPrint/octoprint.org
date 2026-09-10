@@ -5,8 +5,8 @@
 {{- $cls := .Get "class" }}
 {{- $analytics := (printf "\"%s\"" $track) }}
 {{- with $props }}
-    {{- $analytics := (printf "%s, { \"props\": { %s } }" $analytics $props) }}
+    {{- $analytics = (printf "%s, { \"props\": { %s } }" $analytics $props) }}
 {{- end }}
-<a {{ with $cls }}class="{{ $cls }}"{{ end }} href="{{ $href }}" title="{{ $title }}" data-analytics='{{ $analytics }}'></a>
-    {{- .Inner }}
+<a href="{{ $href }}" {{ with $cls }}class="{{ $cls }}"{{ end }} {{ with $title }}title="{{ $title }}"{{ end }} data-analytics='{{ $analytics }}'>
+    {{- .Inner | markdownify -}}
 </a>

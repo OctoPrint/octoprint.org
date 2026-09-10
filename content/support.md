@@ -1,6 +1,9 @@
 ---
 title: Support OctoPrint
 layout: page-support
+
+aliases:
+- /support-octoprint/
 ---
 
 {{< hero title="Support OctoPrint. Help" titleAccent="fund this project." subtitle="Hi! I'm **Gina Häußge**, the creator and main developer of OctoPrint. Thank you for following this link!" >}}
@@ -14,7 +17,7 @@ As you might imagine, **working on OctoPrint takes a lot of time and effort**. T
 
 If this sounds like a full time job, that's because it is. **My full time work on OctoPrint is 100% crowd funded** by people just like you!
 
-You can **support OctoPrint's development directly** either regularly or through one time contributions. You can also support my work by buying the Merchandise articles listed here from whose proceedings I'll receive a share.
+You can **support OctoPrint's development directly** either regularly or through one time contributions. You can also support my work by buying the [Merchandise articles listed here](/merch/) from whose proceedings I'll receive a share.
 {{< /section >}}
 
 <section class="section">

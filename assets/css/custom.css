@@ -10,8 +10,8 @@
   --color-secondary-soft: #1693001f;
   --shadow-glow: 0 0 24px rgba(16, 185, 129, 0.25);
 
-  --color-bg: #010101;
-  --color-bg-inset: #111111;
+  --color-bg: #131313;
+  --color-bg-inset: #161616;
   --color-bg-surface: hsl(111, 100%, 10%);
   --color-bg-surface-2: hsl(111, 100%, 5%);
 }
@@ -22,7 +22,7 @@
   --color-accent-soft: #0b46001f;
   --color-secondary: #0b4600;
   --color-secondary-soft: #0b46001f;
-  --shadow-glow: 0 0 24px rgba(190, 18, 60, 0.2);
+  --shadow-glow: 0 0 24px rgba(16, 185, 129, 0.25);
 
   --color-bg: #efefef;
   --color-bg-inset: #dddddd;
@@ -106,6 +106,10 @@
     radial-gradient(ellipse 80% 110% at 88% 100%,
       color-mix(in srgb, var(--color-secondary) 16%, transparent) 0%, transparent 68%),
     var(--color-bg-surface);
+}
+
+blockquote {
+  background-color: var(--color-bg-surface-2);
 }
 
 /* */
@@ -348,5 +352,85 @@
     p:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+.help-box:hover {
+  border: 1px solid var(--color-border-strong);
+}
+
+/* Merchandise */
+
+.merch-list {
+  .merch-list__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-2);
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-2);
+
+      img {
+        width: 80%;
+        border-radius: var(--radius-2xl);
+      }
+    }
+
+  }
+}
+
+/* Funding banner */
+
+.funding-banner {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-4);
+
+  margin: 0 0 var(--space-4);
+  padding: var(--space-4) var(--space-5);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-lg); 
+
+  background-color: var(--color-bg-surface);
+  color: var(--color-text);
+}
+
+.funding-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--liftoff-gradient-angle, 0deg),
+    transparent 0deg 240deg,
+    var(--color-accent) 290deg,
+    var(--color-secondary) 330deg,
+    transparent 360deg
+  );
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+  animation: liftoff-rotate 4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .funding-banner::before {
+    animation: none;
   }
 }
