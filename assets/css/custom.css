@@ -5,7 +5,7 @@
 [data-accent="octoprint"] {
   --color-accent: #169300;
   --color-accent-strong: #13c100;
-  --color-accent-soft: #13c1001f;
+  --color-accent-soft: #13c1003f;
   --color-secondary: #13c100;
   --color-secondary-soft: #1693001f;
   --shadow-glow: 0 0 24px rgba(16, 185, 129, 0.25);
@@ -14,12 +14,19 @@
   --color-bg-inset: #161616;
   --color-bg-surface: hsl(111, 100%, 10%);
   --color-bg-surface-2: hsl(111, 100%, 5%);
+
+  --color-neutral: #5757f0;
+  --lumi-note-bg: 20;
+  --color-bg-neutral: hsl(from var(--color-neutral) h s var(--lumi-note-bg));
+  --color-bg-success: hsl(from var(--color-success) h s var(--lumi-note-bg));
+  --color-bg-warning: hsl(from var(--color-warning) h s var(--lumi-note-bg));
+  --color-bg-danger: hsl(from var(--color-danger) h s var(--lumi-note-bg));
 }
 
 [data-theme="light"][data-accent="octoprint"] {
   --color-accent: #0d8400;
   --color-accent-strong: #0b4600;
-  --color-accent-soft: #0b46001f;
+  --color-accent-soft: #13c1003f;
   --color-secondary: #0b4600;
   --color-secondary-soft: #0b46001f;
   --shadow-glow: 0 0 24px rgba(16, 185, 129, 0.25);
@@ -28,6 +35,8 @@
   --color-bg-inset: #dddddd;
   --color-bg-surface: hsl(115, 58%, 80%);
   --color-bg-surface-2: hsl(115, 58%, 90%);
+
+  --lumi-note-bg: 90;
 }
 
 .site-footer__col {
@@ -88,8 +97,27 @@ blockquote {
   background-color: var(--color-bg-surface-2);
 }
 
+.note {
+  background-color: var(--color-bg-neutral);
+  border-left: 3px solid var(--color-neutral);
+}
+
+.note--warning { background-color: var(--color-bg-warning); border-left-color: var(--color-warning); }
+.note--tip { background-color: var(--color-bg-success); border-left-color: var(--color-success); }
+.note--danger { background-color: var(--color-bg-danger); border-left-color: var(--color-danger); }
+
+.note__title {
+  color: var(--color-neutral);
+}
+.note--warning .note__title { color: var(--color-warning); }
+.note--tip .note__title { color: var(--color-success); }
+.note--danger .note__title { color: var(--color-danger); }
+
 /* Fixes */
 
+[data-theme="light"] .codeblock ::selection {
+  background-color: var(--color-accent);
+}
 
 /* */
 

@@ -196,7 +196,7 @@ how to obtain the app, install and run it.
 
 There's also a video guide on how to get Octo4a up and running by [Thomas Sanladerer](https://www.youtube.com/channel/UCb8Rde3uRL1ohROUVg46h1A).
 
-{% include youtube.html vid="74xdib_-X38" %}
+{{< youtube 74xdib_-X38 >}}
 
 ## OctoPrint for Orange Pi
 

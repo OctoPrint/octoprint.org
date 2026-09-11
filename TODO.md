@@ -1,42 +1,42 @@
--[x] Plausible
--[ ] Privacy Policy re carbon
--[x] Check for external assets
--[ ] blog overview
+- [x] Plausible
+- [ ] Privacy Policy re carbon
+- [x] Check for external assets
+- [ ] blog overview
     - also adjust reading time!
--[ ] Support banner partials
-    -[x] posts
-    -[ ] website
--[ ] tooling to migrate posts
-    -[ ] Markdown posts
-    -[ ] really old html posts
+- [ ] Support banner partials
+    - [x] posts
+    - [ ] website
+- [ ] tooling to migrate posts
+    - [ ] Markdown posts
+    - [ ] really old html posts
     - frontmatter:
         - excerpt -> summary
         - tags from category
--[ ] rss feeds per category (tags?)
--[x] URL format for blog posts: yyyy/mm/dd/slug
--[ ] Discourse embed
--[ ] BUG: social icons & brightness overlay menu on mobile
--[x] meta line on blog posts incl. author
--[x] custom post layouts
-    -[x] release candidates
-    -[x] stable
-    -[x] bugfix
-    -[x] ooa
-    -[x] problem: reading time
-    -[x] problem: toc
--[ ] pages
-    -[ ] Landing
-        -[x] Hero
-        -[x] Sponsors
-        -[x] Features
-        -[ ] Screenshots
-        -[ ] Recent posts?
-    -[x] Get Help
-    -[x] Download
-    -[x] Donate
-    -[x] Merch
-    -[x] CoC
-    -[x] Imprint
-    -[x] Privacy policy
-    -[x] Security policy
-    -[x] Trademark policy
+- [ ] rss feeds per category (tags?)
+- [x] URL format for blog posts: yyyy/mm/dd/slug
+- [ ] Discourse embed
+- [x] BUG: social icons & brightness overlay menu on mobile
+- [x] meta line on blog posts incl. author
+- [x] custom post layouts
+    - [x] release candidates
+    - [x] stable
+    - [x] bugfix
+    - [x] ooa
+    - [x] problem: reading time
+    - [x] problem: toc
+- [ ] pages
+    - [ ] Landing
+        - [x] Hero
+        - [x] Sponsors
+        - [x] Features
+        - [ ] Screenshots
+        - [ ] Recent posts?
+    - [x] Get Help
+    - [x] Download
+    - [x] Donate
+    - [x] Merch
+    - [x] CoC
+    - [x] Imprint
+    - [x] Privacy policy
+    - [x] Security policy
+    - [x] Trademark policy
