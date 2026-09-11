@@ -104,7 +104,7 @@ permalinks:
 markup:
   highlight:
     style: github-dark
-    noClasses: true
+    noClasses: false
     lineNos: false
     codeFences: true
     tabWidth: 2
