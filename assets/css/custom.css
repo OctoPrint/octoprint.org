@@ -1,6 +1,6 @@
 /*** assets/css/custom.css ***/
 
-/* Theme customization */
+/** "octoprint" theme */
 
 [data-accent="octoprint"] {
   --color-accent: #169300;
@@ -39,6 +39,10 @@
   --lumi-note-bg: 90;
 }
 
+/** Customizations */
+
+/* footer */
+
 .site-footer__col {
   font-size: var(--text-sm);
 
@@ -53,13 +57,13 @@
   }
 }
 
+/* custom block display button */
+
 .btn--block {
   display: block;
 }
 
-.tabs__panel {
-  background-color: var(--color-bg-surface-2);
-}
+/* blog post meta area */
 
 .docs__meta {
   gap: var(--space-2);
@@ -93,9 +97,17 @@
 
 }
 
+/* different background color on blockquote & tabs panels */
+
 blockquote {
   background-color: var(--color-bg-surface-2);
 }
+
+.tabs__panel {
+  background-color: var(--color-bg-surface-2);
+}
+
+/* admonition colors */
 
 .note {
   background-color: var(--color-bg-neutral);
@@ -113,19 +125,17 @@ blockquote {
 .note--tip .note__title { color: var(--color-success); }
 .note--danger .note__title { color: var(--color-danger); }
 
-/* Fixes */
+/** Fixes */
 
-[data-theme="light"] .codeblock ::selection {
-  background-color: var(--color-accent);
-}
-
-/* */
+/** Custom elements */
 
 .img-card {
   border-radius: var(--radius-md);
   margin: 0 0 2em 0;
 
 }
+
+/* blog post author image */
 
 .author {
   display: flex;
@@ -176,6 +186,8 @@ blockquote {
   margin: 0 0 2em 0;
 }
 
+/* Supporters */
+
 .aside-box__supporters {
   p a {
     color: var(--color-accent);
@@ -191,8 +203,6 @@ blockquote {
     font-size: var(--text-xs);
   }
 }
-
-/* Supporters */
 
 .supporters {
   text-align: center;
@@ -237,7 +247,7 @@ blockquote {
   }
 }
 
-/* GitHub User Grid */
+/* GitHub user grid */
 
 .github-user-grid {
   text-align: center;
@@ -261,34 +271,6 @@ blockquote {
       border-radius: 50%;
     }
   }
-}
-
-/* Fonts */
-
-@font-face {
-  font-family: "Arvo";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/arvo/arvo-v10-latin-regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Arvo";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/arvo/arvo-v10-latin-italic.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Arvo";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/arvo/arvo-v10-latin-700.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Arvo";
-  font-style: italic;
-  font-weight: 700;
-  src: url("../fonts/arvo/arvo-v10-latin-700italic.woff2") format("woff2");
 }
 
 /* Carbon Ads */
@@ -390,7 +372,7 @@ blockquote {
   }
 }
 
-/* Funding banner */
+/* Inline funding banner */
 
 .funding-banner {
   position: relative;
@@ -440,4 +422,32 @@ blockquote {
   .funding-banner::before {
     animation: none;
   }
+}
+
+/** Fonts */
+
+@font-face {
+  font-family: "Arvo";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/arvo/arvo-v10-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Arvo";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/arvo/arvo-v10-latin-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Arvo";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/arvo/arvo-v10-latin-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Arvo";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/arvo/arvo-v10-latin-700italic.woff2") format("woff2");
 }
