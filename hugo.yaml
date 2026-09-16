@@ -1,6 +1,6 @@
 baseURL: https://octoprint.org/
 locale: en-us
-title: OctoPrint
+title: OctoPrint.org
 theme:
 - liftoff
 
@@ -100,6 +100,42 @@ frontmatter:
 permalinks:
   page:
     blog: /blog/:year/:month/:day/:slug/
+
+mainSections:
+- blog
+
+outputs:
+  home:
+    - HTML
+    - allRSS
+    - releasesRSS
+    - importantRSS
+    - octoblogRSS
+    - octopiRSS
+
+outputFormats:
+  rss:
+    basename: feed
+  allRSS:
+    mediaType: application/rss
+    basename: feeds/all
+    notAlternative: true
+  releasesRSS:
+    mediaType: application/rss
+    basename: feeds/releases
+    notAlternative: true
+  importantRSS:
+    mediaType: application/rss
+    basename: feeds/important
+    notAlternative: true
+  octopiRSS:
+    mediaType: application/rss
+    basename: feeds/octopi
+    notAlternative: true
+  octoblogRSS:
+    mediaType: application/rss
+    basename: feeds/octoblog
+    notAlternative: true
 
 markup:
   highlight:

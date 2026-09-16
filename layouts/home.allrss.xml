@@ -1,0 +1,9 @@
+{{- $pages := where site.Pages ".Section" "in" site.MainSections }}
+{{- $pages = where $pages "Kind" "page" }}
+{{- $pages = where $pages "Params.hiddenInRss" "!=" true -}}
+{{- $limit := site.Config.Services.RSS.Limit }}
+{{- if ge $limit 1 }}
+{{- $pages = $pages | first $limit }}
+{{- end }}
+{{- $buildDate := (index $pages.ByLastmod.Reverse 0).Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}
+{{- partial "rss.xml" (dict "title" "OctoBlog" "feed" "all" "pages" $pages ) }}

@@ -1,0 +1,26 @@
+{{- $title := .title }}
+{{- $feed := .feed }}
+{{- $pages := .pages }}
+{{- $buildDate := (index $pages.ByLastmod.Reverse 0).Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ $title | safeHTML }}</title>
+    <link>https://octoprint.org/blog/</link>
+    <atom:link href="https://octoprint.org/feeds/{{ $feed }}.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>{{ $buildDate | safeHTML }}</pubDate>
+    <lastBuildDate>{{ $buildDate | safeHTML }}</lastBuildDate>
+    <generator>Hugo</generator>
+    {{- range $pages -}}
+      <item>
+        <title>{{ .Title }}</title>
+        <description>
+          {{ .Summary | transform.XMLEscape | safeHTML }}
+        </description>
+        <pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+        <link>{{ .Permalink }}?utm_source=rss&amp;utm_medium=all</link>
+        <guid isPermaLink="true">{{ .Permalink }}</guid>
+      </item>
+    {{- end -}}
+  </channel>
+</rss>

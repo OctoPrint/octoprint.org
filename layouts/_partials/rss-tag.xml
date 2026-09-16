@@ -1,0 +1,12 @@
+{{- $title := .title }}
+{{- $feed := .feed }}
+{{- $tag := .tag }}
+{{- $pages := where site.Pages ".Section" "in" site.MainSections }}
+{{- $pages = where $pages "Params.tags" "intersect" (slice $tag) }}
+{{- $pages = where $pages "Params.hiddenInRss" "!=" true -}}
+{{- $limit := site.Config.Services.RSS.Limit }}
+{{- if ge $limit 1 }}
+{{- $pages = $pages | first $limit }}
+{{- end }}
+{{- $buildDate := (index $pages.ByLastmod.Reverse 0).Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}
+{{- partial "rss.xml" (dict "title" $title "feed" $feed "pages" $pages ) }}
