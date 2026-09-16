@@ -1,1 +1,1 @@
-{{- partial "rss-tag.xml" (dict "title" "OctoPrint Release Announcements" "feed" "important" "tag" "important" ) }}
+{{- partial "rss-tag.xml" (dict "title" "Important OctoPrint Announcements" "feed" "important" "tag" "important" ) }}
