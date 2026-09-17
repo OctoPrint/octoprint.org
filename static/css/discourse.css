@@ -1,0 +1,97 @@
+/** Discourse Embed CSS */
+
+/*
+ * Currently this is not actually fetched from here but rather
+ * configured as a theme component on the community forums,
+ * but to have everything together we'll keep it here too.
+ */
+
+html.hugo {
+    --color-accent: #169300;
+    --color-accent-strong: #13c100;
+    --color-accent-soft: #13c1003f;
+    --color-secondary: #13c100;
+    --color-secondary-soft: #1693001f;
+    --shadow-glow: 0 0 24px rgba(16, 185, 129, 0.25);
+
+    --color-bg: #131313;
+    --color-bg-inset: #161616;
+    --color-bg-surface: hsl(111, 100%, 10%);
+    --color-bg-surface-2: hsl(111, 100%, 5%);
+
+    --color-text: #e7ecff;
+    --color-text-muted: #9aa3c0;
+    --color-text-dim: #6b7494;
+
+    --radius-md: 8px;
+
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-5: 1.5rem;
+  
+    --transition-fast: 100ms ease;
+    --transition-base: 150ms ease;
+    
+    --color-border: var(--color-accent-soft);
+
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  
+    body {
+        padding: 1em;
+    }
+  
+    a {
+        color: var(--color-accent);
+    }
+  
+    header.discourse {
+        border-bottom-color: var(--color-border);
+      
+        .replies {
+            color: var(--color-text-muted);
+        }
+    }
+    
+    article.post {
+        border-bottom-color: var(--color-border);
+
+        .post-date {
+            color: var(--color-text-muted);
+        }
+        
+        .username a,
+        .username a.new-user {
+            color: var(--color-accent);
+        }
+        
+        .username span.title {
+            color: var(--color-text-dim);
+        }
+        
+        .username a.staff {
+            background-color: var(--color-accent-soft);
+        }
+    }
+    
+    footer a.button {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        padding: var(--space-3) var(--space-5);
+        border-radius: var(--radius-md);
+        border: 1px solid transparent;
+        font-family: inherit;
+        cursor: pointer;
+        transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-fast);
+        white-space: nowrap;
+  
+        background-color: var(--color-accent);
+        color: var(--color-bg);
+    }
+    
+    footer a.button:hover {
+      background-color: var(--color-accent-strong);
+      color: var(--color-bg);
+    }
+}

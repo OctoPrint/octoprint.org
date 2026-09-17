@@ -424,6 +424,12 @@ blockquote {
   }
 }
 
+/** Discourse Embed */
+
+#discourse-comments iframe {
+  border-radius: var(--radius-md);
+}
+
 /** Fonts */
 
 @font-face {
