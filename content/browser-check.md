@@ -1,0 +1,242 @@
+---
+title: Browser Check
+description: Check if your browser supports the JavaScript features that OctoPrint uses
+---
+
+<script>
+    function print(data)
+    {
+        document.write(data);
+    }
+    
+    function runFunction(func)
+    {
+            if (typeof func !== undefined && typeof func === "function") 
+            { 
+                func(); 
+            } else { 
+                print("Fail"); 
+            };
+    
+    }
+
+    PASS = "Yes";
+    FAIL = "No";
+</script>
+<script>
+    "use strict";
+    function testES5() {
+        if (Function.prototype.bind) {
+            print(PASS);
+        } else {
+            print(FAIL);
+        }
+    }
+</script>
+<script>
+    function testAsyncAwait() {
+        try {
+            var testFunc = async function() {
+                print(PASS);
+            }
+            var testFunc2 = async function() {
+                await testFunc();
+            }
+            testFunc();
+        } catch(err) {
+            print(FAIL + " (" + err.message + ")");
+        }
+    }
+</script>
+<script>
+    function testGenerator() {
+        try {
+            var generator = function*() {
+                yield 1;
+                yield 2;
+                yield 3;
+                yield 4;
+                yield 5;
+            }
+
+            var testFunc = function() {
+                var j = 1;
+                for (var i of generator()) {
+                    if (j != i) break;
+                    j++;
+                }
+                if (j != 6) print(FAIL);
+            
+                print(PASS);
+            }
+            testFunc();
+        } catch(err) {
+            print(FAIL + " (" + err.message + ")");
+        }
+    }
+</script>
+<script>
+    function testAsyncGenerator() {
+        try {
+            var generator = function* () {
+                yield 1;
+                yield 2;
+                yield 3;
+                yield 4;
+                yield 5;
+            }
+            
+            var testFunc = async function() {
+                var j = 1;
+                for await(var i of generator()) {
+                    if (j != i) break;
+                    j++;
+                }
+                if (j != 6) print(FAIL);
+            
+                print(PASS);
+            }
+            testFunc();
+        } catch(err) {
+            print(FAIL + " (" + err.message + ")");
+        }
+    }
+</script>
+<script>
+    function testLet() {
+        try {
+            let test = 1;
+            if (typeof test !== undefined && test === 1) {
+                print(PASS);
+            } else {
+                print(FAIL);
+            }
+        } catch(err) {
+            print(FAIL + " (" + err.message + ")");
+        }
+    }
+</script>
+<script>
+    function testConst() {
+        try {
+            const test = 1;
+            if (typeof test !== undefined && test === 1) {
+                print(PASS);
+            } else {
+                print(FAIL);
+            }
+        } catch(err) {
+            print(FAIL + " (" + err.message + ")");
+        }
+    }
+</script>
+<script>
+    function testSpread() {
+        var arr1 = [1, 2, 3];
+        var obj1 = { a: 1, b: 2, c: 3 };
+        try {
+            // spread in array literals
+            var arr2 = [...arr1];
+            
+            // spread in object literals
+            var obj2 = { ...obj1 };
+
+            // spread in function calls
+            function myFunction(x, y, z) {};
+            var args = [0, 1, 2];
+            myFunction(...args);
+
+            // still here? pass
+            print(PASS);
+        } catch (err) {
+            print(FAIL + " (" + err.message + ")");
+        }
+    }
+</script>
+<script>
+    testArrowFunctions = () => {
+        print(PASS);
+    }
+</script>
+<script>
+    function testTemplateLiterals() {
+        try {
+            print(`${PASS}`);
+        } catch (err) {
+            print(FAIL + " (" + err.message + ")");
+        }
+    }
+</script>
+
+This page allows you to do a quick check whether your browser supports the JavaScript features that OctoPrint uses.
+
+<table class="table es-table">
+    <thead>
+        <tr>
+            <th class="table__cell--left">Feature</th>
+            <th class="table__cell--center">Required since</th>
+            <th class="table__cell--right">Supported?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="es-entry">
+            <td colspan="3">ES5</td>
+        </tr>
+        <tr class="es-subentry">
+            <td class="table__cell--left"><a href="https://caniuse.com/es5" target="_blank" rel="noopener noreferrer">general ES5 support</a></td>
+            <td class="table__cell--center"></td>
+            <td class="table__cell--right"><script>(typeof testES5 !== undefined && typeof testES5 === "function") ? testES5() : print(FAIL)</script></td>
+        </tr>
+        <tr class="es-entry">
+            <td colspan="3" class="table__cell--left">ES6</td>
+        </tr>
+        <tr class="es-subentry">
+            <td class="table__cell--left"><a href="https://caniuse.com/arrow-functions" target="_blank" rel="noopener noreferrer">arrow functions</a></td>
+            <td class="table__cell--center">1.9.0</td>
+            <td class="table__cell--right"><script>(typeof testArrowFunctions !== undefined && typeof testArrowFunctions === "function") ? testArrowFunctions() : print(FAIL)</script></td>
+        </tr>
+        <tr class="es-subentry">
+            <td class="table__cell--left"><a href="https://caniuse.com/const" target="_blank" rel="noopener noreferrer">const</a></td>
+            <td class="table__cell--center">1.9.0</td>
+            <td class="table__cell--right"><script>(typeof testConst !== undefined && typeof testConst === "function") ? testConst() : print(FAIL)</script></td>
+        </tr>
+        <tr class="es-subentry">
+            <td class="table__cell--left"><a href="https://caniuse.com/es6-generators" target="_blank" rel="noopener noreferrer">generators</a></td>
+            <td class="table__cell--center">1.9.0</td>
+            <td class="table__cell--right"><script>(typeof testGenerator !== undefined && typeof testGenerator === "function") ? testGenerator() : print(FAIL)</script></td>
+        </tr>
+        <tr class="es-subentry">
+            <td class="table__cell--left"><a href="https://caniuse.com/let" target="_blank" rel="noopener noreferrer">let</a></td>
+            <td class="table__cell--center">1.9.0</td>
+            <td class="table__cell--right"><script>(typeof testLet !== undefined && typeof testLet === "function") ? testLet() : print(FAIL)</script></td>
+        </tr>
+        <tr class="es-subentry">
+            <td class="table__cell--left"><a href="https://caniuse.com/template-literals" target="_blank" rel="noopener noreferrer">template literals</a></td>
+            <td class="table__cell--center">1.9.0</td>
+            <td class="table__cell--right"><script>(typeof testTemplateLiterals !== undefined && typeof testTemplateLiterals === "function") ? testTemplateLiterals() : print(FAIL)</script></td>
+        </tr>
+        <tr class="es-entry">
+            <td colspan="3" class="table__cell--left">ES8</td>
+        </tr>
+        <tr class="es-subentry">
+            <td class="table__cell--left"><a href="https://caniuse.com/async-functions" target="_blank" rel="noopener noreferrer">async/await</a></td>
+            <td class="table__cell--center">1.9.0</td>
+            <td class="table__cell--right"><script>(typeof testAsyncAwait !== undefined && typeof testAsyncAwait === "function") ? testAsyncAwait() : print(FAIL)</script></td>
+        </tr>
+        <tr class="es-entry">
+            <td colspan="3" class="table__cell--left">ES9</td>
+        </tr>
+        <tr class="es-subentry">
+            <td class="table__cell--left"><a href="https://caniuse.com/mdn-javascript_functions_method_definitions_async_generator_methods" target="_blank" rel="noopener noreferrer">async generators</a></td>
+            <td class="table__cell--center">1.9.0</td>
+            <td class="table__cell--right"><script>(typeof testAsyncGenerator !== undefined && typeof testAsyncGenerator === "function") ? testAsyncGenerator() : print(FAIL)</script></td>
+        </tr>
+        <tr class="es-subentry">
+            <td class="table__cell--left"><a href="https://caniuse.com/mdn-javascript_operators_spread" target="_blank" rel="noopener noreferrer">spread syntax</a></td>
+            <td class="table__cell--center">1.9.0</td>
+            <td class="table__cell--right"><script>(typeof testSpread !== undefined && typeof testSpread === "function") ? testSpread() : print(FAIL)</script></td>
+        </tr>
+    </tbody>
+</table>
+
+If any of the tests above say "No", you will need to use a different browser or update your current browser to a newer version before you can use OctoPrint.

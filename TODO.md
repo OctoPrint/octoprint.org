@@ -47,3 +47,4 @@
     - [x] Privacy policy
     - [x] Security policy
     - [x] Trademark policy
+    - [x] Browser check

@@ -439,6 +439,12 @@ blockquote {
   }
 }
 
+/** Browser check */
+
+.es-entry {
+  background-color: var(--color-bg-surface-2)
+}
+
 /** Fonts */
 
 @font-face {
