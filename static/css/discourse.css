@@ -72,6 +72,15 @@ html.hugo {
         .username a.staff {
             background-color: var(--color-accent-soft);
         }
+        
+        aside.onebox {
+            background: var(--color-bg-surface-2);
+            box-shadow: 0 0 0 1px var(--color-accent),0 0 0 4px var(--color-accent-soft);
+            
+            a {
+                color: var(--color-accent);
+            }
+        }
     }
     
     footer a.button {
