@@ -10,13 +10,16 @@
     - [ ] Markdown posts
     - [ ] really old html posts
     - frontmatter:
-        - excerpt -> summary
-        - tags from category
-        - images from assets folder (card, poster, anything else)
-        - slug = markdown name w/o date
-        - headlines shifted to 2+
-        - layout removed
-        - release related frontmatter
+        - [x] excerpt -> summary
+        - [x] tags from category
+        - [x] images from assets folder (card, poster, anything else)
+        - [x] slug = markdown name w/o date
+        - [x] headlines shifted to 2+
+        - [x] layout removed
+        - [x] release related frontmatter
+        - [x] YouTube shortcode
+        - [ ] alerts
+        - [ ] image galleries
 - [x] simple gallery shortcode
 - [x] rss feeds per category (tags?)
 - [x] URL format for blog posts: yyyy/mm/dd/slug

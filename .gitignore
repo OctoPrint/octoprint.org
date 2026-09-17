@@ -8,3 +8,5 @@ resources/_gen/
 .idea/
 .vscode/
 *.swp
+
+.venv/
