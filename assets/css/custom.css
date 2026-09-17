@@ -433,6 +433,10 @@ blockquote {
 /** Post images */
 
 .blog-post__images {
+  a {
+    text-decoration: none;
+  }
+
   img {
     margin: 0 auto;
     max-height: 400px;

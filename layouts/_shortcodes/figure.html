@@ -1,0 +1,49 @@
+{{- $u := urls.Parse (.Get "src") -}}
+{{- $src := $u.String -}}
+{{- if not $u.IsAbs -}}
+    {{- with or (.Page.Resources.Get $u.Path) (resources.Get $u.Path) -}}
+        {{- $src = .RelPermalink -}}
+    {{- end -}}
+{{- end -}}
+
+{{- $lightbox := .Get "lightbox" -}}
+{{- $link := .Get "link" -}}
+{{- if $lightbox -}}
+    {{- $link = $src -}}
+{{- end -}}
+
+{{- $caption := .Get "caption" -}}
+
+{{- $uid := $.Page.File.UniqueID -}}
+
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+    {{- if $link -}}
+        <a href="{{ $link }}"
+            {{- with .Get "target" }} target="{{ . }}"{{ end }}
+            {{- with .Get "rel" }} rel="{{ . }}"{{ end }}
+            {{- with $lightbox }} data-lightbox="{{ $uid }}" 
+                {{- with $caption }} data-caption="{{ $caption | markdownify | plainify }}"{{ end }}
+            {{- end }}>
+    {{- end -}}
+
+    <img src="{{ $src }}"
+        {{- if or (.Get "alt") (.Get "caption") }}
+            alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ $caption | markdownify | plainify }}{{ end }}"
+        {{- end -}}{{- with .Get "width" }} width="{{ . }}"{{ end -}}{{- with .Get "height" }} height="{{ . }}"{{ end -}}{{- with .Get "loading" }} loading="{{ . }}"{{ end -}}><!-- Closing img tag -->
+    {{- if $link }}</a>{{ end -}}
+    {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+        <figcaption>
+            {{ with (.Get "title") -}}
+                <h4>{{ . }}</h4>
+            {{- end -}}
+            {{- if or $caption (.Get "attr") -}}<p>
+                    {{- $caption | markdownify -}}
+                    {{- with .Get "attrlink" }}
+                        <a href="{{ . }}">
+                    {{- end -}}
+                    {{- .Get "attr" | markdownify -}}
+                    {{- if .Get "attrlink" }}</a>{{ end }}</p>
+            {{- end }}
+        </figcaption>
+    {{- end }}
+</figure>
