@@ -430,6 +430,15 @@ blockquote {
   border-radius: var(--radius-md);
 }
 
+/** Post images */
+
+.blog-post__images {
+  img {
+    margin: 0 auto;
+    max-height: 400px;
+  }
+}
+
 /** Fonts */
 
 @font-face {

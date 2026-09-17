@@ -11,21 +11,21 @@ featuredimage: /assets/img/blog/2025-04/2025-04-22-octoprint-1.11.0-card.png
 poster: /assets/img/blog/2025-04/2025-04-22-octoprint-1.11.0-poster.png
 
 images:
-- url: /assets/img/blog/2025-01/2025-01-28-screenshot-upload-manager-button.png
+- url: screenshots/upload-manager-button.png
   title: The button to launch the new Upload Manager in the file list sidebar.
-- url: /assets/img/blog/2025-01/2025-01-28-screenshot-upload-manager.png
+- url: screenshots/upload-manager.png
   title: The newly added Upload Manager.
-- url: /assets/img/blog/2025-01/2025-01-28-screenshot-custom-controls-manager.png
+- url: screenshots/custom-controls-manager.png
   title: The newly added Custom Control Manager.
-- url: /assets/img/blog/2025-01/2025-01-28-screenshot-2fa.png
+- url: screenshots/2fa.png
   title: Example of a two-factor authentication request on the login.
-- url: /assets/img/blog/2025-01/2025-01-28-screenshot-health-check.png
+- url: screenshots/health-check.png
   title: Health checks allow you to get notified about issues with your installation.
-- url: /assets/img/blog/2025-01/2025-01-28-screenshot-webcam-credentials.png
+- url: screenshots/webcam-credentials.png
   title: You can now enter credentials for accessing the webcam snapshot URL.
-- url: /assets/img/blog/2025-01/2025-01-28-screenshot-page-reload-recommended.png
+- url: screenshots/page-reload-recommended.png
   title: The new reload popup notification that in large parts replaces the blocking reload modal.
-- url: /assets/img/blog/2025-01/2025-01-28-screenshot-third-party-warning.png
+- url: screenshots/third-party-warning.png
   title: The new information popup about third party plugins.
 
 release: "1.11.0"
@@ -96,9 +96,6 @@ testers:
 - XxInvictus
 
 stats:
-  instancegraph: /assets/img/blog/2025-04/2025-04-22-rc-instances.png
-  printtimegraph: /assets/img/blog/2025-04/2025-04-22-rc-prints.png
-  piecharts: /assets/img/blog/2025-04/2025-04-22-rc-piecharts.png
   totalinstances: 876
   totalprinttime: 24792
   rcs:

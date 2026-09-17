@@ -17,7 +17,7 @@
         - headlines shifted to 2+
         - layout removed
         - release related frontmatter
-- [ ] simple gallery shortcode
+- [x] simple gallery shortcode
 - [x] rss feeds per category (tags?)
 - [x] URL format for blog posts: yyyy/mm/dd/slug
 - [x] Discourse embed

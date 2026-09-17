@@ -19,11 +19,7 @@ Since I found out about the manipulation last week I've been busy with further i
 
 Some details of the observed requests didn't add up (version discrepancies), but on first look this could have been some automated testing or similar development related activity with some weird enviornment, just as well as anything sinister. In any case, I blocked the IP address of the client in question and promptly moved on to clean-up all of the **15000** instances it had created the past 30 days.
 
-<div class="row-fluid" style="margin-bottom: 10px">
-    <div class="span12">
-        <a href="usage-number-change.png" data-lightbox="{{ page.id }}" data-title="A graph of OctoPrint's long term usage numbers, dropping first from ~145k to ~107k and then a few days later further down to ~91k"><img src="usage-number-change.png"></a>
-    </div>
-</div>
+{{< lightbox image="usage-number-change.png" caption="A graph of OctoPrint's long term usage numbers, dropping first from ~145k to ~107k and then a few days later further down to ~91k" >}}
 
 I reached out to Obico and asked if they had any CI matching the public IP I was seeing, and they confirmed that it was one of their VMs. They promised to investigate whether some CI runs were causing this. Meanwhile I dug deeper on my end with the help of some analysis scripts I built. It turns out that the overwhelming majority of these instances were alive for less than 30min, but their lifetime ranged from less than that to up to 12h. There was no clear pattern in start hour distribution or start date distribution. The reported versions were all over the place, but the majority was focused on versions 1.8.6, 1.9.0 and 1.7.2. The Python version distribution had clear peaks at 3.7.3, the version found on OctoPi 0.18, and 3.9.2, the version found on OctoPi 1.0, however none of these instances reported running OctoPi. What really stood out though was that some of these instances reported running Python 2.7 and OctoPrint versions of 1.8.0 and up - which is impossible since OctoPrint dropped Python 2 support with that version.
 

@@ -1,0 +1,23 @@
+{{- $id := .Page.File.UniqueID }}
+{{- with .Params.images }}
+    <h2 id="images">Images</h2>
+
+    <div class="grid grid-3 blog-post__images">
+        {{- range $idx, $img := . }}
+        <figure id="image-{{ $idx }}">
+            {{- if reflect.IsMap $img }}
+                <a href="{{ $img.url }}" data-lightbox="{{ $id }}"{{ with $img.title }} data-title="{{ . }}"{{ end }}>
+                    <img alt="{{ $img.alt }}" src="{{ $img.url }}" class="post-image">
+                    {{- with $img.title }}
+                    <figcaption>{{ . }}</figcaption>
+                    {{- end }}
+                </a>
+            {{- else }}
+                <a href="{{ $img }}" data-lightbox="{{ $id }}">
+                    <img src="{{ $img }}" class="post-image">
+                </a>
+            {{- end }}
+        </figure>
+    {{- end }}
+    </div>
+{{- end }}

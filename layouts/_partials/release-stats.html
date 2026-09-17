@@ -34,34 +34,17 @@ RCs is not fully available anymore:
     {{ partial "readable-printtime.html" .totalprinttime }} of print jobs.
 </p>
 
-<div class="row-fluid" style="margin-bottom: 10px">
-    <div class="span12">
-        <a
-            href="{{ .instancegraph }}"
-            data-lightbox=""
-            data-title="{{ $.Params.release }}rc instances over the past month, per hour"
-            ><img src="{{ .instancegraph }}"
-        /></a>
-    </div>
-</div>
-<div class="row-fluid" style="margin-bottom: 10px">
-    <div class="span12">
-        <a
-            href="{{ .printtimegraph }}"
-            data-lightbox=""
-            data-title="Accumulated {{ $.Params.release }}rc print times over the past month, per hour"
-            ><img src="{{ .printtimegraph }}"
-        /></a>
-    </div>
-</div>
-<div class="row-fluid" style="margin-bottom: 10px">
-    <div class="span12">
-        <a
-            href="{{ .piecharts }}"
-            data-lightbox=""
-            data-title="{{ $.Params.release }}rc instances and accumulated print time over the past month, total"
-            ><img src="{{ .piecharts }}"
-        /></a>
-    </div>
-</div>
+{{- $instances := $.Page.Resources.Get "stats/instances.png" }}
+{{- $prints := $.Page.Resources.Get "stats/prints.png" }}
+{{- $piecharts := $.Page.Resources.Get "stats/piecharts.png" }}
+{{- with $instances }}
+    {{- partial "lightbox.html" (dict "page" $.Page "image" .RelPermalink "caption" "{{ $.Params.release }}rc instances over the past month, per hour") }}
+{{- end }}
+{{- with $prints }}
+    {{- partial "lightbox.html" (dict "page" $.Page "image" .RelPermalink "caption" "Accumulated {{ $.Params.release }}rc print times over the past month, per hour") }}
+{{- end }}
+{{- with $piecharts }}
+    {{- partial "lightbox.html" (dict "page" $.Page "image" .RelPermalink "caption" "{{ $.Params.release }}rc instances and accumulated print time over the past month, total") }}
+{{- end }}
+
 {{- end -}}

@@ -1,0 +1,14 @@
+{{- $image := .Get "image" }}
+{{- $alt := .Get "alt" }}
+{{- $caption := .Get "caption" | default nil }}
+{{- $id := .Get "id" | default nil }}
+{{- $thumb := .Get "thumb" | default nil }}
+{{- $params := dict 
+    "page" .Page
+    "image" $image
+    "alt" $alt
+    "caption" $caption
+    "id" $id
+    "thumb" $thumb
+}}
+{{- partial "lightbox.html" $params }}

@@ -8,6 +8,7 @@
     {{- $prefix = (partial "ooa-prefix.html" .) }}
     {{- $suffix = (partial "ooa-suffix.html" .) }}
   {{- end }}
+  {{- $suffix = printf "%s%s" $suffix (partial "page-images.html" .) | safeHTML }}
   {{- $suffix = printf "%s%s" $suffix (partial "discourse-comments.html" .) | safeHTML }}
   {{- $prefix_headlines := findRESubmatch `<h(\d+).+id="(.*?)".*?>(.*?)</` $prefix }}
   {{- $suffix_headlines := findRESubmatch `<h(\d+).+id="(.*?)".*?>(.*?)</` $suffix }}

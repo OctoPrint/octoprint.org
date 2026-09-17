@@ -1,0 +1,14 @@
+{{- $page := .page }}
+{{- $image := .image }}
+{{- $alt := .alt }}
+{{- $caption := .caption | default nil }}
+{{- $id := .id | default $page.File.UniqueID }}
+{{- $thumb := .thumb | default nil }}
+{{- $thumbimage := $image }}
+{{- if $thumb }}
+    {{- $resource := $page.Resources.Get $image }}
+    {{- $thumbimage = ($resource.Fill $thumb).RelPermalink }}
+{{- end }}
+<a href="{{ $image }}" data-lightbox{{ with $id }}="{{ . }}"{{ end }}{{ with $caption }} data-caption="{{ . }}"{{ end }}>
+    <img src="{{ $thumbimage }}" alt="{{ $alt }}">
+</a>
