@@ -12,9 +12,16 @@
     - frontmatter:
         - excerpt -> summary
         - tags from category
-- [ ] rss feeds per category (tags?)
+        - images from assets folder (card, poster, anything else)
+        - slug = markdown name w/o date
+        - headlines shifted to 2+
+        - layout removed
+        - release related frontmatter
+- [ ] simple gallery shortcode
+- [x] rss feeds per category (tags?)
 - [x] URL format for blog posts: yyyy/mm/dd/slug
-- [ ] Discourse embed
+- [x] Discourse embed
+- [ ] Card and Poster
 - [x] BUG: social icons & brightness overlay menu on mobile
 - [x] meta line on blog posts incl. author
 - [x] custom post layouts

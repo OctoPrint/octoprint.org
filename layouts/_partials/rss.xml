@@ -10,8 +10,9 @@
     <atom:link href="https://octoprint.org/feeds/{{ $feed }}.xml" rel="self" type="application/rss+xml"/>
     <pubDate>{{ $buildDate | safeHTML }}</pubDate>
     <lastBuildDate>{{ $buildDate | safeHTML }}</lastBuildDate>
+    <language>{{ site.Language.Locale }}</language>
     <generator>Hugo</generator>
-    {{- range $pages -}}
+    {{- range $pages }}
       <item>
         <title>{{ .Title }}</title>
         <description>
@@ -21,6 +22,6 @@
         <link>{{ .Permalink }}?utm_source=rss&amp;utm_medium=all</link>
         <guid isPermaLink="true">{{ .Permalink }}</guid>
       </item>
-    {{- end -}}
+    {{- end }}
   </channel>
 </rss>

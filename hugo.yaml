@@ -106,12 +106,15 @@ mainSections:
 
 outputs:
   home:
-    - HTML
+    - html
     - allRSS
     - releasesRSS
     - importantRSS
     - octoblogRSS
     - octopiRSS
+  term:
+    - html
+    - rss
 
 outputFormats:
   rss:
