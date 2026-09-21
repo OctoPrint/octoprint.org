@@ -1,4 +1,7 @@
 {{ define "main" }} {{ partial "hero.html" . }}
+{{- $prefix := "" }}
+{{- $suffix := "" }}
+{{- $readingtime := 0 }}
 <section class="section">
   <div class="container">
     {{- if not .Params.hero }}
@@ -7,18 +10,32 @@
     "blog" }} {{- with $pages }}
     <div class="doc-grid">
       {{- range . }}
-      <a class="doc-card" href="{{ .RelPermalink }}">
+        {{- with . }}
+          {{- $prefix = "" }}
+          {{- $suffix = "" }}
+          {{- if .Params.release }}
+            {{- $prefix = (partial "post/release-prefix.html" .) }}
+            {{- $suffix = (partial "post/release-suffix.html" .) }}
+          {{- else if .Params.vid }}
+            {{- $prefix = (partial "post/ooa-prefix.html" .) }}
+            {{- $suffix = (partial "post/ooa-suffix.html" .) }}
+          {{- end }}
+          {{- $suffix = printf "%s%s" $suffix (partial "post/page-images.html" .) | safeHTML }}
+          {{- $suffix = printf "%s%s" $suffix (partial "post/discourse-comments.html" .) | safeHTML }}
+          {{- $readingtime = (add .ReadingTime (div ((add ($prefix | plainify) ($suffix | plainify)) | countwords) 212)) }}
+        {{- end }}
+        <a class="doc-card" href="{{ .RelPermalink }}">
         <h3 class="doc-card__title">{{ .LinkTitle }}</h3>
         <p class="doc-card__summary">
           {{ or .Description (.Summary | plainify) }}
         </p>
         <div class="doc-card__meta">
-          {{- with .ReadingTime }}<span
-            >{{ i18n "reading_time" (dict "Count" .) }}</span
-          >{{ end }} {{- with .GetTerms "tags" }} {{- range . }}<span
-            class="badge"
-            >{{ .LinkTitle }}</span
-          >{{- end }} {{- end }}
+          {{- with $readingtime }}
+            <span>{{ i18n "reading_time" (dict "Count" .) }}</span>
+          {{ end }} 
+          {{- with .GetTerms "tags" }} {{- range . }}
+            <span class="badge">{{ .LinkTitle }}</span>
+          {{- end }} {{- end }}
         </div>
       </a>
       {{- end }}
