@@ -2,14 +2,14 @@
   {{- $prefix := "" }}
   {{- $suffix := "" }}
   {{- if .Params.release }}
-    {{- $prefix = (partial "release-prefix.html" .) }}
-    {{- $suffix = (partial "release-suffix.html" .) }}
+    {{- $prefix = (partial "post/release-prefix.html" .) }}
+    {{- $suffix = (partial "post/release-suffix.html" .) }}
   {{- else if .Params.vid }}
-    {{- $prefix = (partial "ooa-prefix.html" .) }}
-    {{- $suffix = (partial "ooa-suffix.html" .) }}
+    {{- $prefix = (partial "post/ooa-prefix.html" .) }}
+    {{- $suffix = (partial "post/ooa-suffix.html" .) }}
   {{- end }}
-  {{- $suffix = printf "%s%s" $suffix (partial "page-images.html" .) | safeHTML }}
-  {{- $suffix = printf "%s%s" $suffix (partial "discourse-comments.html" .) | safeHTML }}
+  {{- $suffix = printf "%s%s" $suffix (partial "post/page-images.html" .) | safeHTML }}
+  {{- $suffix = printf "%s%s" $suffix (partial "post/discourse-comments.html" .) | safeHTML }}
   {{- $prefix_headlines := findRESubmatch `<h(\d+).+id="(.*?)".*?>(.*?)</` $prefix }}
   {{- $suffix_headlines := findRESubmatch `<h(\d+).+id="(.*?)".*?>(.*?)</` $suffix }}
   <div class="container docs-page">

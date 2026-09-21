@@ -9,13 +9,13 @@
     <h2>{{ i18n "on_this_page" }}</h2>
     <ul>
         {{- with $prefix_headlines }}
-            {{- partial "toc-headlines" (dict "headlines" . "minlevel" $minlevel "maxlevel" $maxlevel) }}
+            {{- partial "toc/headlines" (dict "headlines" . "minlevel" $minlevel "maxlevel" $maxlevel) }}
         {{- end }}
         {{- with $fragments }}
-            {{- partial "toc-fragment-level.html" (dict "headings" .Headings "minlevel" $minlevel "maxlevel" $maxlevel) }}
+            {{- partial "toc/fragment-level.html" (dict "headings" .Headings "minlevel" $minlevel "maxlevel" $maxlevel) }}
         {{- end }}
         {{- with $suffix_headlines }}
-            {{- partial "toc-headlines" (dict "headlines" . "minlevel" $minlevel "maxlevel" $maxlevel) }}
+            {{- partial "toc/headlines" (dict "headlines" . "minlevel" $minlevel "maxlevel" $maxlevel) }}
         {{- end }}
     </ul>
 {{- end }}

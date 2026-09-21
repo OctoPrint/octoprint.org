@@ -7,13 +7,13 @@
             <a href="#{{ .ID }}">{{ .Title | htmlUnescape }}</a>
             {{- with .Headings }}
                 <ul>
-                    {{ partial "toc-fragment-level.html" (dict "headings" . "minlevel" $minlevel "maxlevel" $maxlevel) }}
+                    {{ partial "toc/fragment-level.html" (dict "headings" . "minlevel" $minlevel "maxlevel" $maxlevel) }}
                 </ul>
             {{- end }}
         </li>
     {{- else }}
         {{- with .Headings }}
-            {{ partial "toc-fragment-level.html" (dict "headings" . "minlevel" $minlevel "maxlevel" $maxlevel) }}
+            {{ partial "toc/fragment-level.html" (dict "headings" . "minlevel" $minlevel "maxlevel" $maxlevel) }}
         {{- end }}
     {{- end }}
 {{- end -}}

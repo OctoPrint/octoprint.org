@@ -130,7 +130,7 @@
       <p>For this bugfix release there are additional heads-ups:</p>
     {{- end }}
   {{- end }}
-  {{- partial "release-headsups.html" . }}
+  {{- partial "post/release-headsups.html" . }}
 
   {{- with .Params.pluginincompatibilities }}
     <h3>Known plugin incompatibilities</h3>
@@ -167,13 +167,13 @@
   !
 </p>
 
-{{ partial "release-contributors.html" . }}
-{{ partial "release-security.html" . }}
+{{ partial "post/release-contributors.html" . }}
+{{ partial "post/release-security.html" . }}
 
 {{- if not $is_rc }}
-  {{ partial "release-testers.html" . }}
+  {{ partial "post/release-testers.html" . }}
 
-  {{ partial "release-stats.html" . }}
+  {{ partial "post/release-stats.html" . }}
 
   <h2 id="further-information">Further Information</h3>
 
