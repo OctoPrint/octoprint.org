@@ -125,6 +125,13 @@ blockquote {
 .note--tip .note__title { color: var(--color-success); }
 .note--danger .note__title { color: var(--color-danger); }
 
+/* brand */
+
+.site-header__brand,
+.site-footer__logo {
+  align-items: start;
+}
+
 /** Fixes */
 
 /** Custom elements */
