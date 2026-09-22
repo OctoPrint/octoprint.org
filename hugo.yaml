@@ -7,10 +7,10 @@ theme:
 enableRobotsTXT: true
 enableEmoji: false
 pagination:
-  pagerSize: 6
+  pagerSize: 9
 
 params:
-  description: ""
+  product: OctoPrint
   tagline: Your printer. Your rules.
   accent: octoprint
   copyrightOwner: Gina Häußge

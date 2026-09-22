@@ -2,7 +2,7 @@
 - [ ] Privacy Policy re carbon
 - [x] Check for external assets
 - [ ] blog overview
-    - also adjust reading time!
+    - [x] also adjust reading time!
 - [ ] Support banner partials
     - [x] posts
     - [ ] website
@@ -24,7 +24,7 @@
 - [x] rss feeds per category (tags?)
 - [x] URL format for blog posts: yyyy/mm/dd/slug
 - [x] Discourse embed
-- [ ] Card and Poster
+- [x] Card and Poster -> generated image!
 - [x] BUG: social icons & brightness overlay menu on mobile
 - [x] meta line on blog posts incl. author
 - [x] custom post layouts

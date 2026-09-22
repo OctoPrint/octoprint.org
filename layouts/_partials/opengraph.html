@@ -1,0 +1,50 @@
+{{/* Generate opengraph image */}}
+{{- $title := cond .IsHome site.Params.Product (printf "%s | %s" .Title site.Title) -}}
+{{- $ogtitle := cond .IsHome (printf "%s\n%s" site.Params.Product site.Params.Tagline ) .Page.Title }}
+{{- $description := or .Description .Summary site.Params.Description "" -}}
+{{- $base := resources.Get "/img/og/og-bg.png" }}
+{{- $logo := resources.Get "/img/og/og-logo.png" }}
+{{- $font := resources.Get "/fonts/arvo/arvo-bold.ttf" }}
+{{- if .IsPage }}
+    {{- $customLogo := .Resources.Get "og-logo.png" }}
+    {{- if $customLogo }}
+        {{- $logo = $customLogo }}
+    {{- else if .Params.oglogo }}
+        {{- $logopath := printf "/img/og/%s.png" .Params.oglogo }}
+        {{- $customLogo = resources.Get $logopath }}
+        {{- with $customLogo }}
+            {{- $logo = . }}
+        {{- end }}
+    {{- end }}
+{{- end }}
+
+{{- $img := "" }}
+{{- if and $logo $font }}
+    {{- $img = $base.Filter (images.Text $ogtitle (dict
+        "color" "#ffffff"
+        "size" 72
+        "linespacing" 2
+        "x" 40
+        "y" 40
+        "font" $font
+    ))}}
+    {{- $img = $img.Filter (images.Overlay $logo (sub 1160 $logo.Width ) (sub 590 $logo.Height)) }}
+    {{- $img = resources.Copy (path.Join .Page.RelPermalink "og.png") $img }}
+{{- end }}
+
+{{- if $img }}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="{{$img.Permalink}}">
+    <meta property="og:image:width" content="{{$img.Width}}" />
+    <meta property="og:image:height" content="{{$img.Height}}" />
+    <meta name="twitter:image" content="{{$img.Permalink}}" />
+{{- else }}
+    <meta name="twitter:card" content="summary" />
+{{- end }}
+
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}"/>
+
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description }}"/>
