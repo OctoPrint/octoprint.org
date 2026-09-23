@@ -144,6 +144,20 @@ blockquote {
     gap: var(--space-3);
     padding: var(--space-5);
     overflow: hidden;
+
+    .post-card__meta {
+      gap: var(--space-2);
+
+      span {
+        display: flex;
+      }
+
+      *:not(:last-child)::after {
+        content: "·";
+        padding-left: var(--space-2);
+      }
+    }
+
   }
 }
 
@@ -151,6 +165,18 @@ blockquote {
 
 .codeblock {
   clear: both;
+}
+
+/* footer */
+
+.site-footer__tagline {
+  color: var(--color-text);
+  font-size: var(--text-md);
+}
+
+.site-footer__est {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
 }
 
 /** Fixes */

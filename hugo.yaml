@@ -35,7 +35,7 @@ params:
       url: https://floss.social/@OctoPrint
     - icon: mdi:rss
       name: RSS
-      url: /index.xml
+      url: /feed.xml
 
 menus:
   main:
@@ -57,18 +57,39 @@ menus:
 
   footer:
     - identifier: links
-      name: On the web
+      name: Links
       weight: 10
+    - parent: links
+      name: GitHub
+      url: https://github.com/OctoPrint
+      weight: 10
+    - parent: links
+      name: Community Forum
+      url: https://community.octoprint.org
+      weight: 20
+    - parent: links
+      name: Discord
+      url: https://discord.octoprint.org
+      weight: 30
+    - parent: links
+      name: Mastodon
+      url: https://floss.social/@OctoPrint
+      weight: 40
     - parent: links
       name: YouTube
       url: https://www.youtube.com/c/OctoPrint3D
-      weight: 10
+      weight: 50
     - parent: links
-      name: Status
+      name: Browser Check
+      url: /browser-check/
+      weight: 60
+    - parent: links
+      name: Status Page
       url: https://status.octoprint.org/
-      weight: 20
+      weight: 70
+
     - identifier: legal
-      name: Legal
+      name: Rules & Policies
       weight: 20
     - parent: legal
       name: Code of Conduct
@@ -76,12 +97,6 @@ menus:
     - parent: legal
       name: Security Policy
       url: /security/
-    - parent: legal
-      name: Imprint
-      url: /imprint/
-    - parent: legal
-      name: Privacy Policy
-      url: /privacy/
     - parent: legal
       name: Trademark Policy
       url: /trademark/
@@ -112,6 +127,7 @@ outputs:
     - importantRSS
     - octoblogRSS
     - octopiRSS
+    - rss
   term:
     - html
     - rss

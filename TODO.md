@@ -1,14 +1,14 @@
 - [x] Plausible
-- [ ] Privacy Policy re carbon
+- [x] Privacy Policy re carbon
 - [x] Check for external assets
-- [ ] blog overview
+- [x] blog overview
     - [x] also adjust reading time!
 - [ ] Support banner partials
     - [x] posts
     - [ ] website
-- [ ] tooling to migrate posts
-    - [ ] Markdown posts
-    - [ ] really old html posts
+- [x] tooling to migrate posts
+    - [x] Markdown posts
+    - [x] really old html posts
     - frontmatter:
         - [x] excerpt -> summary
         - [x] tags from category
@@ -18,8 +18,8 @@
         - [x] layout removed
         - [x] release related frontmatter
         - [x] YouTube shortcode
-        - [ ] alerts
-        - [ ] image galleries
+        - [x] alerts
+        - [x] image galleries
 - [x] simple gallery shortcode
 - [x] rss feeds per category (tags?)
 - [x] URL format for blog posts: yyyy/mm/dd/slug
@@ -40,7 +40,6 @@
         - [x] Sponsors
         - [x] Features
         - [ ] Screenshots
-        - [ ] Recent posts?
     - [x] Get Help
     - [x] Download
     - [x] Donate

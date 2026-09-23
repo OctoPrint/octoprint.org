@@ -28,13 +28,13 @@ contain dateless pages (blueprints), so the date block is guarded.
     <div class="post-card__meta">
         {{- with $author }}
             <span class="author" aria-label="Author">
-                <img src="{{ .avatar }}" alt="{{ .name }}" />
+                <img src="{{ .avatar }}" alt="{{ .name }}">&nbsp;{{ .name }}
             </span>
         {{- end }}
         {{- if not .Date.IsZero }}
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+        <span>{{ partial "icon.html" "mdi:calendar-month-outline" }}&nbsp;<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></span>
         {{- end }}
-        {{- with $readingtime }}<span>{{ i18n "reading_time" (dict "Count" .) }}</span>{{ end }}
+        {{- with $readingtime }}<span>{{ partial "icon.html" "mdi:clock-time-four-outline" }}&nbsp;{{ i18n "reading_time" (dict "Count" .) }}</span>{{ end }}
     </div>
     <p class="post-card__summary">{{ or .Description (.Summary | plainify) }}</p>
     {{- with .GetTerms "tags" }}

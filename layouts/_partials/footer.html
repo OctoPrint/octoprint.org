@@ -15,6 +15,9 @@ Footer. Three regions:
     {{- with site.Params.tagline }}
       <p class="site-footer__tagline">{{ . }}</p>
     {{- end }}
+    <p class="site-footer__est">
+      Created & maintained by Gina Häußge ever since December of 2012.
+    </p>
     {{- with site.Params.footer }}
       {{- with .address }}
         <address class="site-footer__address">{{ . | markdownify }}</address>
@@ -23,20 +26,6 @@ Footer. Three regions:
     {{ partial "social-icons.html" . }}
   </div>
 
-  {{- with index site.Menus "footer" }}
-    {{- range . }}
-      <div class="site-footer__col">
-        <h2>{{ .Name }}</h2>
-        {{- with .Children }}
-          <ul>
-            {{- range . }}
-              <li><a href="{{ partial "menu-url.html" . }}">{{ .Name }}</a></li>
-            {{- end }}
-          </ul>
-        {{- end }}
-      </div>
-    {{- end }}
-  {{- end }}
   <div class="site-footer__col">
     <h2>Recent posts</h2>
     {{- $pages := where site.RegularPages "Section" "blog" }}
@@ -51,6 +40,20 @@ Footer. Three regions:
       {{- end }}
     </ul>
   </div>
+  {{- with index site.Menus "footer" }}
+    {{- range . }}
+      <div class="site-footer__col">
+        <h2>{{ .Name }}</h2>
+        {{- with .Children }}
+          <ul>
+            {{- range . }}
+              <li><a href="{{ partial "menu-url.html" . }}">{{ .Name }}</a></li>
+            {{- end }}
+          </ul>
+        {{- end }}
+      </div>
+    {{- end }}
+  {{- end }}
 </div>
 
 {{- $owner := site.Params.copyrightOwner | default site.Title -}}

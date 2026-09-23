@@ -143,7 +143,7 @@ be set to prevent ad display and by this your data from being collected on futur
 <a href="javascript:carbonOptout();">Disable Carbon Ads</a>.
 
 For more information about how BuySellAds handles user data, see their data collection statement and their privacy policy:
-[https://content.buysellads.com/articles/what-data-does-buysellads-collect/](https://content.buysellads.com/articles/what-data-does-buysellads-collect/){:target="\_blank" rel="noopener"} and [https://carbonads.net/privacy.php](https://carbonads.net/privacy.php){:target="\_blank" rel="noopener"}.
+[https://content.buysellads.com/articles/what-data-does-buysellads-collect/](https://content.buysellads.com/articles/what-data-does-buysellads-collect/) and [https://carbonads.net/privacy.php](https://carbonads.net/privacy.php).
 
 ## 5. Plugins and tools
 
@@ -161,7 +161,7 @@ personal profile. You can prevent this by logging out of your YouTube account.
 YouTube is used to help make our website appealing. This constitutes a justified interest pursuant to Art. 6 (1) (f) GDPR.
 
 Further information about handling user data can be found in the data protection declaration of YouTube under
-[https://www.google.de/intl/en/policies/privacy](https://www.google.de/intl/en/policies/privacy){:target="\_blank" rel="noopener"}.
+[https://www.google.de/intl/en/policies/privacy](https://www.google.de/intl/en/policies/privacy).
 
 ### Comment function
 
@@ -169,7 +169,7 @@ The comment function available on this website is provided by our forum at commu
 
 To use the comment function you'll need to register at and log into community.octoprint.org. Further information about
 handling user data can be found in the privacy policy of community.octoprint.org at
-[https://community.octoprint.org/privacy](https://community.octoprint.org/privacy){:target="\_blank" rel="noopener"}.
+[https://community.octoprint.org/privacy](https://community.octoprint.org/privacy).
 
 ### GitHub integration on plugins.octoprint.org
 
