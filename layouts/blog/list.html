@@ -1,45 +1,20 @@
-{{ define "main" }} {{ partial "hero.html" . }}
-{{- $prefix := "" }}
-{{- $suffix := "" }}
-{{- $readingtime := 0 }}
+{{ define "main" }}
+{{ partial "hero.html" . }}
 <section class="section">
   <div class="container">
     {{- if not .Params.hero }}
-    <h1>{{ .Title }}</h1>
-    {{- end }} {{ .Content }} {{- $pages := where site.RegularPages "Section"
-    "blog" }} {{- with $pages }}
-    <div class="doc-grid">
-      {{- range . }}
-        {{- with . }}
-          {{- $prefix = "" }}
-          {{- $suffix = "" }}
-          {{- if .Params.release }}
-            {{- $prefix = (partial "post/release-prefix.html" .) }}
-            {{- $suffix = (partial "post/release-suffix.html" .) }}
-          {{- else if .Params.vid }}
-            {{- $prefix = (partial "post/ooa-prefix.html" .) }}
-            {{- $suffix = (partial "post/ooa-suffix.html" .) }}
-          {{- end }}
-          {{- $suffix = printf "%s%s" $suffix (partial "post/page-images.html" .) | safeHTML }}
-          {{- $suffix = printf "%s%s" $suffix (partial "post/discourse-comments.html" .) | safeHTML }}
-          {{- $readingtime = (add .ReadingTime (div ((add ($prefix | plainify) ($suffix | plainify)) | countwords) 212)) }}
+      <h1>{{ .Title }}</h1>
+    {{- end }}
+    {{ .Content }}
+    {{- $pages := where site.RegularPages "Section" "blog" }}
+    {{- if $pages }}
+      {{- $paginator := .Paginate $pages }}
+      <div class="article-listing">
+        {{- range $paginator.Pages }}
+          {{- partial "post-card.html" . }}
         {{- end }}
-        <a class="doc-card" href="{{ .RelPermalink }}">
-        <h3 class="doc-card__title">{{ .LinkTitle }}</h3>
-        <p class="doc-card__summary">
-          {{ or .Description (.Summary | plainify) }}
-        </p>
-        <div class="doc-card__meta">
-          {{- with $readingtime }}
-            <span>{{ i18n "reading_time" (dict "Count" .) }}</span>
-          {{ end }} 
-          {{- with .GetTerms "tags" }} {{- range . }}
-            <span class="badge">{{ .LinkTitle }}</span>
-          {{- end }} {{- end }}
-        </div>
-      </a>
-      {{- end }}
-    </div>
+      </div>
+      {{- partial "pagination.html" . }}
     {{- end }}
   </div>
 </section>

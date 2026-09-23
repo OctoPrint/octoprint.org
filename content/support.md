@@ -36,7 +36,7 @@ You can **support OctoPrint's development directly** either regularly or through
                 {{< support-option logo="github" link="https://github.com/users/foosel/sponsorship" title="Send a one-time contribution via GitHub Sponsors!" subtitle="Whether regularly or only once, either way I get every cent due to zero fees!" >}}
                 {{< support-option logo="paypal" link="https://paypal.me/octoprint3d" title="Make a one-time contribution through PayPal!" subtitle="No paypal.me? Send funds via PayPal to funding@octoprint.org" >}}
                 {{< support-option logo="kofi" link="https://ko-fi.com/octoprint" title="Support me on Ko-fi!" >}}
-                {{< support-option logo="donorbox" link="https://donorbox.org/support-octoprint?recurring=true" title="Support me on Donorbox!" >}}
+                {{< support-option logo="donorbox" link="https://donorbox.org/support-octoprint?recurring=false" title="Support me on Donorbox!" >}}
             </div>
         </div>
     </div>

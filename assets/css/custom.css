@@ -450,6 +450,27 @@ blockquote {
   }
 }
 
+/** lightbox & lightbox grid */
+
+a[data-lightbox] img {
+  margin: 2em auto;
+}
+
+.grid-lightbox {
+  margin: 2em auto;
+
+  a img {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1080px) {
+  a[data-lightbox] img,
+  .grid-lightbox {
+    max-width: 90%;
+  }
+}
+
 /** Browser check */
 
 .es-entry {

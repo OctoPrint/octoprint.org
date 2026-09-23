@@ -1,6 +1,6 @@
 {{- $image := .Get "image" }}
 {{- $alt := .Get "alt" }}
-{{- $caption := .Get "caption" | default nil }}
+{{- $caption := .Get "caption" | default $alt }}
 {{- $id := .Get "id" | default nil }}
 {{- $thumb := .Get "thumb" | default nil }}
 {{- $params := dict 

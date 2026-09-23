@@ -1,13 +1,13 @@
 baseURL: https://octoprint.org/
 locale: en-us
-title: OctoPrint.org
+title: OctoPrint
 theme:
 - liftoff
 
 enableRobotsTXT: true
 enableEmoji: false
 pagination:
-  pagerSize: 9
+  pagerSize: 18
 
 params:
   product: OctoPrint
