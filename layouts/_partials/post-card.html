@@ -1,0 +1,33 @@
+{{- /*
+Article-style teaser card. Context: a Page.
+
+Used by the articles listing and by taxonomy term pages, which may also
+contain dateless pages (blueprints), so the date block is guarded.
+*/ -}}
+{{- $prefix := "" }}
+{{- $suffix := "" }}
+{{- if .Params.release }}
+  {{- $prefix = (partial "post/release-prefix.html" .) }}
+  {{- $suffix = (partial "post/release-suffix.html" .) }}
+{{- else if .Params.vid }}
+  {{- $prefix = (partial "post/ooa-prefix.html" .) }}
+  {{- $suffix = (partial "post/ooa-suffix.html" .) }}
+{{- end }}
+{{- $suffix = printf "%s%s" $suffix (partial "post/page-images.html" .) | safeHTML }}
+{{- $suffix = printf "%s%s" $suffix (partial "post/discourse-comments.html" .) | safeHTML }}
+{{- $readingtime := (add .ReadingTime (div ((add ($prefix | plainify) ($suffix | plainify)) | countwords) 212)) }}
+<a class="post-card" href="{{ .RelPermalink }}">
+  <div class="post-card__meta">
+    {{- if not .Date.IsZero }}
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+    {{- end }}
+    {{- with $readingtime }}<span>{{ i18n "reading_time" (dict "Count" .) }}</span>{{ end }}
+  </div>
+  <h2 class="post-card__title">{{ .Title }}</h2>
+  <p class="post-card__summary">{{ or .Description (.Summary | plainify) }}</p>
+  {{- with .GetTerms "tags" }}
+    <div class="post-card__tags">
+      {{- range . }}<span class="badge">{{ .LinkTitle }}</span>{{- end }}
+    </div>
+  {{- end }}
+</a>
