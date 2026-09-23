@@ -24,7 +24,7 @@ IMAGE_RE = re.compile(r'([\'"])(/assets/img/blog/.+?)\1')
 
 AUTO_EXCERPT_MAX = 250
 
-PostProcessingResult = collections.namedtuple("PostProcessingResult", ["bundle", "has_alerts", "has_lightbox"])
+PostProcessingResult = collections.namedtuple("PostProcessingResult", ["bundle", "has_alerts", "has_lightbox", "created"])
 CategoryProcessingResult = collections.namedtuple("CategoryProcessingResult", ["posts_with_alerts", "posts_with_lightboxes"])
 
 def md_to_text(md):
@@ -136,8 +136,10 @@ def process_post(path: Path, category: str) -> PostProcessingResult:
     bundle = TARGET_NAME.format(date=date.strftime("%Y-%m-%d"), slug=slug)
 
     bundle_path = Path(TARGET_FOLDER) / Path(bundle)
-    if not bundle_path.exists():
-        os.mkdir(bundle_path)
+    if bundle_path.exists():
+        # bundle already exists!
+        return PostProcessingResult(bundle=bundle, has_alerts=False, has_lightbox=False, created=False)
+    os.mkdir(bundle_path)
 
     # remove old image stuff
     if "card" in data:
