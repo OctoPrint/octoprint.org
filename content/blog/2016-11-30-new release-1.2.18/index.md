@@ -6,8 +6,8 @@ comments: false
 
 tags:
 - Release
-summary: "With 1.2.18 I hereby present you with what will hopefully be the final\n\
-  1.2.x release we see. The idea is to fix a couple of things just in case\n1.3.0
+summary: "With 1.2.18 I hereby present you with what will hopefully be the final
+  1.2.x release we see. The idea is to fix a couple of things just in case 1.3.0
   won't prove to be stable enough for a pre-holiday release after all."
 slug: new release-1.2.18
 ---
@@ -15,8 +15,6 @@ slug: new release-1.2.18
 With 1.2.18 I hereby present you with what will hopefully be the final
 1.2.x release we see. The idea is to fix a couple of things just in case
 1.3.0 won't prove to be stable enough for a pre-holiday release after all.
-
-<!-- more -->
 
 For this reason we are only looking at a very short change list here, which 
 pretty much boils down to this:

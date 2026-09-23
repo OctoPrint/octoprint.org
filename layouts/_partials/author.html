@@ -4,7 +4,7 @@
     {{- $data := index $authors $author }}
     {{- with $data }}
         <span class="author" aria-label="Author">
-            <a href="{{ .link }}"><img src="{{ .avatar }}" alt="{{ .name }}">&nbsp;{{ .name }}</a>
+            <a href="{{ .link }}"><img src="{{ .avatar }}" alt="{{ .name }}" />&nbsp;{{ .name }}</a>
         </span>
     {{- end }}
 {{- end }}

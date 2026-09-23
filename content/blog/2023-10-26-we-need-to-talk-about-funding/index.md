@@ -7,12 +7,15 @@ tags:
 summary: OctoPrint relies on your financial support to keep going. Please 
   consider chipping in if you can.
 slug: we-need-to-talk-about-funding
+oglogo: og-logo-worried
 ---
 
 > [!NOTE]
 > **Important update from October 30th 2023:** [You did it! 🥳](/blog/2023/10/30/funding-update/)
 >
 > I received an overwhelming outpour of support and we totally turned it around! Thank you so much! ❤️
+
+{{< img-float src="/img/og/og-logo-worried.png" alt="Worried looking OctoPrint octopus mascot" >}}
 
 You might have missed this, but since 2016 my full-time work on OctoPrint has been
 **100% funded by people like you.** OctoPrint, at its core, is still

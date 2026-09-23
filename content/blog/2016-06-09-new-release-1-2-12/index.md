@@ -5,15 +5,13 @@ date: 2016-06-09 10:00:00 +0200
 comments: false
 tags:
 - Release
-summary: "A fresh release with lots of bug fixes (especially some for some quite\n\
+summary: "A fresh release with lots of bug fixes (especially some for some quite
   annoying issues) and improvements. A true maintenance release for once ;)"
 slug: new-release-1-2-12
 ---
 
 A fresh release with lots of bug fixes (especially some for some quite
 annoying issues) and improvements. A true maintenance release for once ;)
-
-<!-- more -->
 
 Bug fixes are usually a quite boring affair, but personally I believe
 this release really killed some major annoyances that were hard to track

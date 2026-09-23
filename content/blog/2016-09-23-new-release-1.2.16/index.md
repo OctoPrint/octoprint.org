@@ -6,7 +6,7 @@ comments: false
 
 tags:
 - Release
-summary: "Another shiny maintenance release with various improvements and bug fixes\n\
+summary: "Another shiny maintenance release with various improvements and bug fixes
   plus the new release channel feature awaits you!"
 slug: new-release-1.2.16
 images:
@@ -15,8 +15,6 @@ images:
 
 Another shiny maintenance release with various improvements and bug fixes
 plus the new release channel feature awaits you!
-
-<!-- more -->
 
 A small glance and what's new:
 

@@ -7,7 +7,7 @@ comments: false
 
 tags:
 - Release
-summary: "I'm very happy to finally present you with a first preview\nof the upcoming
+summary: "I'm very happy to finally present you with a first preview of the upcoming
   major 1.3.0 release: 1.3.0rc1!"
 slug: first-preview-of-1.3.0
 images:
@@ -27,8 +27,6 @@ images:
 
 I'm very happy to finally present you with a first preview
 of the upcoming major 1.3.0 release: 1.3.0rc1!
-
-<!-- more -->
 
 There's a multitude of new features and improvements plus of course also
 a small handful of bug fixes going to be in this release, way too much 

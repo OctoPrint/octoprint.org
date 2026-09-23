@@ -132,7 +132,42 @@ blockquote {
   align-items: start;
 }
 
+/* article listing */
+
+.article-listing {
+  display: flex;
+  flex-direction: column;
+
+  .post-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-5);
+    overflow: hidden;
+  }
+}
+
+/* code block */
+
+.codeblock {
+  clear: both;
+}
+
 /** Fixes */
+
+.pagination {
+  align-items: start;
+  flex-wrap: nowrap;
+
+  .pagination__step {
+    min-width: 5rem;
+  }
+
+  .pagination__pages {
+    justify-content: center;
+    flex-shrink: 1;
+  }
+}
 
 /** Custom elements */
 
@@ -166,6 +201,32 @@ blockquote {
 }
 [data-theme="light"] .img__dark {
   display: none;
+}
+
+/* floating image */
+
+.img-float__left,
+.img-float__right {
+    max-width: min(320px, 100%);
+    max-height: 320px;
+}
+
+.img-float__left {
+  float: left;
+  margin: 1em 1em 1em 0;
+}
+
+.img-float__right {
+  float: right;
+  margin: 1em 0 1em 1em;
+}
+
+@media (max-width: 880px) {
+  .img-float__left,
+  .img-float__right {
+    float: none;
+    margin: 1em auto;
+  }
 }
 
 /* Aside box */
@@ -398,6 +459,15 @@ blockquote {
 
   background-color: var(--color-bg-surface);
   color: var(--color-text);
+
+  img {
+    width: 64px;
+    height: 64px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .funding-banner::before {

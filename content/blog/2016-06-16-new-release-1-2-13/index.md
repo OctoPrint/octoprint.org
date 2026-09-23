@@ -5,15 +5,13 @@ date: 2016-06-16 12:30:00 +0200
 comments: false
 tags:
 - Release
-summary: "What's this, another release just one week after the last one? Yep, and\n\
+summary: "What's this, another release just one week after the last one? Yep, and
   it's just to make your OctoPrint experience as smooth as possible :)"
 slug: new-release-1-2-13
 ---
 
 What's this, another release just one week after the last one? Yep, and
 it's just to make your OctoPrint experience as smooth as possible :)
-
-<!-- more -->
 
 I sadly had to discover yesterday that the last minute fix I made for the
 1.2.12 release last week had unintended side effects, leading to the

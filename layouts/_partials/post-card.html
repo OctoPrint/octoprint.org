@@ -16,18 +16,30 @@ contain dateless pages (blueprints), so the date block is guarded.
 {{- $suffix = printf "%s%s" $suffix (partial "post/page-images.html" .) | safeHTML }}
 {{- $suffix = printf "%s%s" $suffix (partial "post/discourse-comments.html" .) | safeHTML }}
 {{- $readingtime := (add .ReadingTime (div ((add ($prefix | plainify) ($suffix | plainify)) | countwords) 212)) }}
+
+{{- $author := "" }}
+{{- with .Params.author }}
+    {{- $authors := hugo.Data.authors }}
+    {{- $author = index $authors . }}
+{{- end }}
+
 <a class="post-card" href="{{ .RelPermalink }}">
-  <div class="post-card__meta">
-    {{- if not .Date.IsZero }}
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-    {{- end }}
-    {{- with $readingtime }}<span>{{ i18n "reading_time" (dict "Count" .) }}</span>{{ end }}
-  </div>
-  <h2 class="post-card__title">{{ .Title }}</h2>
-  <p class="post-card__summary">{{ or .Description (.Summary | plainify) }}</p>
-  {{- with .GetTerms "tags" }}
-    <div class="post-card__tags">
-      {{- range . }}<span class="badge">{{ .LinkTitle }}</span>{{- end }}
+    <h2 class="post-card__title">{{ .Title }}</h2>
+    <div class="post-card__meta">
+        {{- with $author }}
+            <span class="author" aria-label="Author">
+                <img src="{{ .avatar }}" alt="{{ .name }}" />
+            </span>
+        {{- end }}
+        {{- if not .Date.IsZero }}
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+        {{- end }}
+        {{- with $readingtime }}<span>{{ i18n "reading_time" (dict "Count" .) }}</span>{{ end }}
     </div>
-  {{- end }}
+    <p class="post-card__summary">{{ or .Description (.Summary | plainify) }}</p>
+    {{- with .GetTerms "tags" }}
+        <div class="post-card__tags">
+        {{- range . }}<span class="badge">{{ .LinkTitle }}</span>{{- end }}
+        </div>
+    {{- end }}
 </a>

@@ -6,7 +6,10 @@ tags:
 - News
 summary: OctoPrint's anonymous usage stats were manipulated, here's what we know
 slug: stats-manipulation
+oglogo: og-logo-angry-2
 ---
+
+{{< img-float src="/img/og/og-logo-angry-2.png" alt="Angry looking OctoPrint octopus mascot" >}}
 
 While recording the latest episode of OctoPrint on Air on June 25th, I noticed that something was up with the stats. Going through the graphs on `data.octoprint.org` and commenting on them, I saw a quite irregular amount of instances running a very old version. I figured I had an issue with my data queries and decided to investigate the next day.
 

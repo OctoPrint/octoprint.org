@@ -5,8 +5,8 @@ date: 2016-05-04 16:00:00 +0200
 comments: false
 tags:
 - Release
-summary: "This shiny new release contains two new pieces\nof functionality on top
-  of the usual fixes of bugs and little annoyances,\nthe \"About\" dialog and the
+summary: "This shiny new release contains two new pieces of functionality on top
+  of the usual fixes of bugs and little annoyances, the \"About\" dialog and the
   Announcement Plugin."
 slug: new-release-1-2-11
 images:
@@ -17,8 +17,6 @@ images:
 This shiny new release contains two new pieces
 of functionality on top of the usual fixes of bugs and little annoyances,
 the "About" dialog and the Announcement Plugin.
-
-<!-- more -->
 
 The new **"About" dialog** within OctoPrint not only
 contains information about the project (such as homepage, license etc)

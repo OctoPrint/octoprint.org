@@ -8,7 +8,10 @@ summary: It has barely been a week since I discovered that someone had been
   manipulating OctoPrint's anonymous usage stats in OctoEverywhere's favor, and 
   now it has come to my attention that Obico has also been doing the same
 slug: more-stats-manipulation
+oglogo: og-logo-angry-3
 ---
+
+{{< img-float src="/img/og/og-logo-angry-3.png" alt="Very angry looking OctoPrint octopus mascot" >}}
 
 It has barely been a week since [I discovered that someone had been manipulating OctoPrint's anonymous usage stats in OctoEverywhere's favor](/blog/2024/06/28/stats-manipulation/), and now I had to discover that Obico has also been doing the same. 😡
 

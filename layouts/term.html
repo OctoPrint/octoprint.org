@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <section class="section">
+    <div class="container-narrow">
+      <header class="term__header">
+        <p class="term__kind">{{ .Data.Plural | humanize }}</p>
+        <h1>{{ .Title }}</h1>
+      </header>
+      {{ .Content }}
+      {{- $paginator := .Paginate .Pages }}
+      <div class="article-listing">
+        {{- range $paginator.Pages }}
+          {{ partial "post-card.html" . }}
+        {{- end }}
+      </div>
+      {{- partial "pagination.html" . }}
+    </div>
+  </section>
+{{ end }}

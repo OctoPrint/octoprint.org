@@ -7,7 +7,7 @@ theme:
 enableRobotsTXT: true
 enableEmoji: false
 pagination:
-  pagerSize: 18
+  pagerSize: 10
 
 params:
   product: OctoPrint

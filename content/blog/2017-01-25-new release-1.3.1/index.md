@@ -4,6 +4,9 @@ author: foosel
 date: 2017-01-25 11:20:00 +0100
 comments: false
 
+summary: "As the first release of 2017, 1.3.1 brings you a long list of fixes and improvements
+  again."
+
 tags:
 - Release
 slug: new release-1.3.1
@@ -11,8 +14,6 @@ slug: new release-1.3.1
 
 As the first release of 2017, 1.3.1 brings you a long list of fixes and improvements
 again.
-
-<!-- more -->
 
 Judging by some of the feedback I got over the past couple of weeks since
 releasing 1.3.0 one of the most anticipated changes in this release might

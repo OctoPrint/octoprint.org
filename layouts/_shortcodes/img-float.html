@@ -1,0 +1,14 @@
+{{- $src := .Get "src" }}
+{{- $alt := .Get "alt" }}
+{{- $side := .Get "side" | default "right" }}
+{{- if hasPrefix $src "/" }}
+    {{- $img := resources.Get $src }}
+    {{- if $img }}
+        {{- $src = $img.RelPermalink }}
+    {{- else }}
+        {{- $src = "" }}
+    {{- end }}
+{{- end }}
+{{- with $src }}
+<img class="img-float__{{ $side }}" src="{{ $src }}" {{ with $alt }}alt="{{ $alt }}"{{ end }} />
+{{- end }}

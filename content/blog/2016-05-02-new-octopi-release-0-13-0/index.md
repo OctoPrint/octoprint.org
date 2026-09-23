@@ -5,10 +5,7 @@ date: 2016-05-02 16:50:00 +0200
 comments: false
 tags:
 - Octopi
-summary: "Guy Sheffer just released a new version of \nOctoPi, version 0.13.0.\nThe
-  long awaited release brings not only Raspberry Pi 3 (and Zero) support\nout of the
-  box by being based on Raspbian Jessie, but also utilizes\nthe new lite image as
-  base for the build, meaning the download size could\nbe halfed."
+summary: "Guy Sheffer just released a new version of OctoPi, version 0.13.0."
 slug: new-octopi-release-0-13-0
 ---
 
@@ -19,8 +16,6 @@ The long awaited release brings not only Raspberry Pi 3 (and Zero) support
 out of the box by being based on Raspbian Jessie, but also utilizes
 the new lite image as base for the build, meaning the download size could
 be halfed.
-
-<!-- more -->
 
 The desktop subsystem is not included by default anymore since *most*
 people don't actually use it (OctoPi is meant to run as a headless

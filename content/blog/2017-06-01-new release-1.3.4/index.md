@@ -6,8 +6,8 @@ comments: false
 
 tags:
 - Release
-summary: "Due to reports from three people who ran into\na particular issue with\n\
-  the 1.3.3 release overnight I decided to push out a hotfix release 1.3.4, even though\n\
+summary: "Due to reports from three people who ran into a particular issue with
+  the 1.3.3 release overnight I decided to push out a hotfix release 1.3.4, even though
   only a very small number of users seem to be affected."
 slug: new release-1.3.4
 ---
@@ -16,8 +16,6 @@ Due to reports from three people who ran into
 [a particular issue](https://github.com/foosel/OctoPrint/issues/1942) with
 the 1.3.3 release overnight I decided to push out a hotfix release 1.3.4, even though
 only a very small number of users seem to be affected.
-
-<!-- more -->
 
 Apparently under particular (and so far unknown) circumstances the
 default printer profile can become corrupted in a way that leads to a **server crash on startup if

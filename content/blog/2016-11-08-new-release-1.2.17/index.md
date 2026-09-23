@@ -6,15 +6,13 @@ comments: false
 
 tags:
 - Release
-summary: "Another true maintenance release with various improvements and a couple\n\
+summary: "Another true maintenance release with various improvements and a couple
   of bug fixes for good measure: I finally present you 1.2.17!"
 slug: new-release-1.2.17
 ---
 
 Another true maintenance release with various improvements and a couple
 of bug fixes for good measure: I finally present you 1.2.17!
-
-<!-- more -->
 
 First things first though: **If you are currently running 1.2.16**, make sure
 you open the Settings dialog once before updating and clicking "Save" there.

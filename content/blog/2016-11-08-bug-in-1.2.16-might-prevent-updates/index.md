@@ -17,8 +17,6 @@ upgrade not being possible upon attempting to upgrade your OctoPrint
 installation, open the Settings dialog, click "Save" once (you don't 
 have to modify anything!) and then try again[^1]. Your update should work now.
 
-<!-- more -->
-
 The reason for this being necessary is a small bug in 1.2.16: a missing 
 migration step for a changed setting required for the update mechanism 
 to work. Saving the settings triggers the migration step and fixes the issue.

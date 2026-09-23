@@ -8,6 +8,7 @@ tags:
 summary: OctoPrint is turning 10 years old this holiday season! Time to reflect 
   a bit on its history, and to eat cake!
 slug: happy-birthday-octoprint
+oglogo: og-logo-party
 ---
 
 Like every December, I'm not only looking forward to the holidays 🎄 for my yearly end-of-year vacation, some silent rest time with friends and

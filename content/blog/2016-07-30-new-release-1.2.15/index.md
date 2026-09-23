@@ -5,9 +5,9 @@ date: 2016-07-30 09:00:00 +0200
 comments: false
 tags:
 - Release
-summary: "Late on the 28th it sadly came to my attention that some users were\nexperiencing
-  severe problems with their printer communication after\nupgrading to the 1.2.14
-  release just published earlier that day. I immediately \nstopped the roll out of
+summary: "Late on the 28th it sadly came to my attention that some users were experiencing
+  severe problems with their printer communication after upgrading to the 1.2.14
+  release just published earlier that day. I immediately stopped the roll out of
   1.2.14 and went to investigate."
 slug: new-release-1.2.15
 ---
@@ -17,8 +17,6 @@ experiencing severe problems with their printer communication after
 upgrading to the 1.2.14 release just published earlier that day. I immediately 
 stopped the roll out of 1.2.14 and went to investigate.
 
-<!-- more -->
- 
 Since I couldn't reproduce the issue myself, I had to depend
 on affected users to help in determining the cause of the problems.
 
