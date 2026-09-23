@@ -1,71 +1,78 @@
 ---
-layout: post-rc
 title: "New release candidate: 2.0.0rc1"
 author: foosel
 date: 2026-04-27 15:00:00 +0200
-card: /assets/img/blog/2026-04/2026-04-27-octoprint-2.0.0rc1-card.png
-featuredimage: /assets/img/blog/2026-04/2026-04-27-octoprint-2.0.0rc1-card.png
-poster: /assets/img/blog/2026-04/2026-04-27-octoprint-2.0.0rc1-poster.png
-images:
-  - url: /assets/img/blog/2026-04/2026-04-27-connection-options.png
-    title: OctoPrint now supports adding new connection options through plugins.
-  - url: /assets/img/blog/2026-04/2026-04-27-thumbnails-storage-filelist.png
-    title: The filelist now natively supports thumbnails, and allows better management of local and printer storage.
-  - url: /assets/img/blog/2026-04/2026-04-27-thumbnails-upmgr.png
-    title: The Upload Manager plugin natively supports thumbnails too, and of course also supports selecting the active storage.
-
-summary: The first release candidate for the upcoming 2.0.0 release that brings support for connection options other than serial, native thumbnail support, better integration of the printer's storage, multi-storage management, and of course also comes with improvements and bugfixes on top!
-tags:
-- release
-
 release: 2.0.0rc1
 channel: Release Candidates
 feedback: 5373
 
 closer_look:
-  - Proper behaviour when using the included web interface as well as any third party clients at your disposal.
-  - Printing via serial connection.
-  - Managing files on your printers storage via a serial connection.
-  - "If you have a Klipper/Moonraker based printer available: can you use it through OctoPrint when you install the [Moonraker Connector](https://github.com/OctoPrint/OctoPrint-MoonrakerConnector) (work in progress)?"
-  - "If you have a Bambu based printer available: can you use it through OctoPrint when you install the [Bambu Connector](https://github.com/OctoPrint/OctoPrint-BambuConnector) (work in progress)?"
+- Proper behaviour when using the included web interface as well as any third 
+  party clients at your disposal.
+- Printing via serial connection.
+- Managing files on your printers storage via a serial connection.
+- "If you have a Klipper/Moonraker based printer available: can you use it through
+  OctoPrint when you install the [Moonraker Connector](https://github.com/OctoPrint/OctoPrint-MoonrakerConnector)
+  (work in progress)?"
+- "If you have a Bambu based printer available: can you use it through OctoPrint when
+  you install the [Bambu Connector](https://github.com/OctoPrint/OctoPrint-BambuConnector)
+  (work in progress)?"
 
 contributors:
-  - Ajimaru
-  - beelsebob
-  - bradyjoh
-  - emmanuel-ferdman
-  - Hillshum
-  - jacopotediosi
-  - jneilliii
-  - kubedzero
-  - willschlitzer
+- Ajimaru
+- beelsebob
+- bradyjoh
+- emmanuel-ferdman
+- Hillshum
+- jacopotediosi
+- jneilliii
+- kubedzero
+- willschlitzer
 
 first_time_contributors:
-  - Ajimaru
-  - beelsebob
-  - bradyjoh
-  - emmanuel-ferdman
-  - Hillshum
-  - kubedzero
-  - willschlitzer
+- Ajimaru
+- beelsebob
+- bradyjoh
+- emmanuel-ferdman
+- Hillshum
+- kubedzero
+- willschlitzer
 
 headsups:
-  - title: "Heads-up: OctoPrint 2.0.0 requires Python 3.9+"
-    content: |
-      This release of OctoPrint requires **Python 3.9+**. Python 3.7 & 3.8, still supported by OctoPrint 1.11.x, are no longer supported. [Please also see this FAQ entry on OctoPrint's Python version requirements](https://community.octoprint.org/t/61076).
-  - title: "Heads-up: A new setting is available to configure trusted authentication proxies"
-    content: |
-      So far, if you set `accessControl.trustRemoteUser` to `true` in your `config.yaml`, OctoPrint would trust any incoming `X-Remote-User` header. That could of course in theory be abused if your OctoPrint instance was reachable directly in addition through your trusted authentication proxy. In OctoPrint 2.0.0, the `accessControl.trustedRemoteUser` setting has been replaced with a list of trusted authentication proxies. This defaults to empty, but if you had `trustedRemoteUser` enabled it will get set to your list of configured trusted reverse proxies. OctoPrint will now only accept and evaluate the `X-Remote-User` header if the request it is seeing came via any of your configured trusted authentication proxies - which must also be among your trusted reverse proxies. 
+- title: "Heads-up: OctoPrint 2.0.0 requires Python 3.9+"
+  content: |
+    This release of OctoPrint requires **Python 3.9+**. Python 3.7 & 3.8, still supported by OctoPrint 1.11.x, are no longer supported. [Please also see this FAQ entry on OctoPrint's Python version requirements](https://community.octoprint.org/t/61076).
+- title: "Heads-up: A new setting is available to configure trusted authentication
+    proxies"
+  content: |
+    So far, if you set `accessControl.trustRemoteUser` to `true` in your `config.yaml`, OctoPrint would trust any incoming `X-Remote-User` header. That could of course in theory be abused if your OctoPrint instance was reachable directly in addition through your trusted authentication proxy. In OctoPrint 2.0.0, the `accessControl.trustedRemoteUser` setting has been replaced with a list of trusted authentication proxies. This defaults to empty, but if you had `trustedRemoteUser` enabled it will get set to your list of configured trusted reverse proxies. OctoPrint will now only accept and evaluate the `X-Remote-User` header if the request it is seeing came via any of your configured trusted authentication proxies - which must also be among your trusted reverse proxies. 
 
-      If you are currently using the `accessControl.trustedRemoteUser` feature in OctoPrint, you will want to check whether your list of trusted reverse proxies is configured correctly & contains your trusted authentication proxy prior to upgrading. And once upgraded, you'll want to limit the list of trusted authentication proxies further to only those of your reverse proxies that actually provide authentication.
+    If you are currently using the `accessControl.trustedRemoteUser` feature in OctoPrint, you will want to check whether your list of trusted reverse proxies is configured correctly & contains your trusted authentication proxy prior to upgrading. And once upgraded, you'll want to limit the list of trusted authentication proxies further to only those of your reverse proxies that actually provide authentication.
 
-  - title: "Heads-up: Plugin authors need to check if they are still using any of the now removed deprecated features"
-    content: |
-      OctoPrint has been logging deprecations warnings for some of its APIs, classes and utility methods for years, some of which even for a decade now.
+- title: "Heads-up: Plugin authors need to check if they are still using any of the
+    now removed deprecated features"
+  content: |
+    OctoPrint has been logging deprecations warnings for some of its APIs, classes and utility methods for years, some of which even for a decade now.
 
-      Plenty of plugins have been ignoring these deprecation warnings. With the advent of OctoPrint 2.0.0, most of those long deprecated bits and pieces have however now been removed, and those plugins that have been ignoring deprecations without changes will effectively break.
+    Plenty of plugins have been ignoring these deprecation warnings. With the advent of OctoPrint 2.0.0, most of those long deprecated bits and pieces have however now been removed, and those plugins that have been ignoring deprecations without changes will effectively break.
 
-      If you are a plugin author, you **NEED** to consult [this migration guide](https://docs.octoprint.org/en/dev/plugins/migration_2_0_0.html) to check and update your plugin so it continues to work against OctoPrint 2.0.0. You might want to check out [this scanner tool by @jacopotediosi](https://github.com/jacopotediosi/octoscanner) that allows you to scan your plugin's source code for any deprecated usages, upcoming issues with 2.0.0 and also packaging related problems.
+    If you are a plugin author, you **NEED** to consult [this migration guide](https://docs.octoprint.org/en/dev/plugins/migration_2_0_0.html) to check and update your plugin so it continues to work against OctoPrint 2.0.0. You might want to check out [this scanner tool by @jacopotediosi](https://github.com/jacopotediosi/octoscanner) that allows you to scan your plugin's source code for any deprecated usages, upcoming issues with 2.0.0 and also packaging related problems.
+tags:
+- Release
+summary: The first release candidate for the upcoming 2.0.0 release that brings 
+  support for connection options other than serial, native thumbnail support, 
+  better integration of the printer's storage, multi-storage management, and of 
+  course also comes with improvements and bugfixes on top!
+slug: new-release-candidate-2.0.0rc1
+images:
+- url: images/2026-04-27-connection-options.png
+  title: OctoPrint now supports adding new connection options through plugins.
+- url: images/2026-04-27-thumbnails-storage-filelist.png
+  title: The filelist now natively supports thumbnails, and allows better 
+    management of local and printer storage.
+- url: images/2026-04-27-thumbnails-upmgr.png
+  title: The Upload Manager plugin natively supports thumbnails too, and of 
+    course also supports selecting the active storage.
 ---
 
 It makes me extremely happy (and to be honest also quite anxious) to hereby present to you the very first release candidate of the upcoming 2.0.0 release! 🥳

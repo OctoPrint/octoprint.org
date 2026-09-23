@@ -1,3 +1,4 @@
+import collections
 import datetime
 import os
 import re
@@ -23,6 +24,9 @@ IMAGE_RE = re.compile(r'([\'"])(/assets/img/blog/.+?)\1')
 
 AUTO_EXCERPT_MAX = 250
 
+PostProcessingResult = collections.namedtuple("PostProcessingResult", ["bundle", "has_alerts", "has_lightbox"])
+CategoryProcessingResult = collections.namedtuple("CategoryProcessingResult", ["posts_with_alerts", "posts_with_lightboxes"])
+
 def md_to_text(md):
     html = markdown.markdown(md)
     soup = BeautifulSoup(html, features="html.parser")
@@ -47,7 +51,7 @@ def convert_md_headlines(text: str) -> str:
 
     return text
 
-def process_post(path: Path, category: str):
+def process_post(path: Path, category: str) -> PostProcessingResult:
     print(f"Processing {path.resolve()}...")
 
     path_base = path.parents[0] / ".." / ".." / ".."
@@ -127,6 +131,7 @@ def process_post(path: Path, category: str):
         datestr = data["date"]
     else:
         datestr = filename[:len("YYYY-MM-DD")] + " 00:00:00 +0000"
+        data["date"] = datestr
     date = datetime.datetime.strptime(datestr, "%Y-%m-%d %H:%M:%S %z")
     bundle = TARGET_NAME.format(date=date.strftime("%Y-%m-%d"), slug=slug)
 
@@ -134,12 +139,11 @@ def process_post(path: Path, category: str):
     if not bundle_path.exists():
         os.mkdir(bundle_path)
 
-    # move card & poster
+    # remove old image stuff
     if "card" in data:
-        copy_image(data.pop("card"), bundle_path, "card.{ext}")
+        data.pop("card")
     if "poster" in data:
-        copy_image(data.pop("poster"), bundle_path, "poster.{ext}")
-
+        data.pop("poster")
     if "featuredimage" in data:
         data.pop("featuredimage")
 
@@ -188,6 +192,10 @@ def process_post(path: Path, category: str):
     if youtube:
         content = content.replace(youtube.group(0), "{{< youtube " + youtube.group(1) + " >}}")
 
+    # find any alerts & lightboxes
+    has_alerts = '<div class="alert' in content
+    has_lightbox = 'data-lightbox="' in content
+
     # convert headline levels
     content = convert_md_headlines(content)
 
@@ -197,21 +205,60 @@ def process_post(path: Path, category: str):
         f.write("---")
         f.write(content)
 
+    return PostProcessingResult(bundle=bundle, has_alerts=has_alerts, has_lightbox=has_lightbox)
+
 def process_category(path: Path):
     category = path.name
     post_dir = path / "_posts"
 
+    posts_with_alerts = []
+    posts_with_lightboxes = []
+
+    print()
     print(f"--- Processing category {category}")
 
     for entry in os.scandir(post_dir):
         if not entry.name.endswith(".md"):
             continue
-        process_post(Path(entry.path), category)
+        result = process_post(Path(entry.path), category)
+        if result.has_alerts:
+            posts_with_alerts.append(result.bundle)
+        if result.has_lightbox:
+            posts_with_lightboxes.append(result.bundle)
+
+    return CategoryProcessingResult(posts_with_alerts=posts_with_alerts, posts_with_lightboxes=posts_with_lightboxes)
 
 if __name__ == "__main__":
     path = "../../octoprint.org/blog"
+
+    result = []
     for entry in os.scandir(Path(__file__).parents[0] / Path(path)):
         if not entry.is_dir():
             continue
 
-        process_category(Path(entry.path))
+        #if entry.name != "development": continue
+
+        result.append(process_category(Path(entry.path)))
+
+    posts_with_alerts = []
+    posts_with_lightboxes = []
+    for r in result:
+        if r.posts_with_alerts:
+            posts_with_alerts += r.posts_with_alerts
+        if r.posts_with_lightboxes:
+            posts_with_lightboxes += r.posts_with_lightboxes
+
+    print()
+    print("--- Processing done")
+
+    if posts_with_alerts:
+        print()
+        print("The following posts have alerts that need manual processing:")
+        for p in sorted(posts_with_alerts):
+            print("\t" + p)
+
+    if posts_with_lightboxes:
+        print()
+        print("The following posts have lightboxes that need manual processing:")
+        for p in sorted(posts_with_lightboxes):
+            print("\t" + p)

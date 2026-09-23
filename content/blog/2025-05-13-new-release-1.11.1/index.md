@@ -2,14 +2,11 @@
 title: 'New release: 1.11.1'
 author: foosel
 date: 2025-05-13 15:30:00 +0200
-summary: "The first bugfix release for 1.11.x, fixing some bugs and user experience issues reported since the release of 1.11.0."
 tags:
-- release
-
-card: /assets/img/blog/2025-05/2025-05-13-octoprint-1.11.1-card.png
-featuredimage: /assets/img/blog/2025-05/2025-05-13-octoprint-1.11.1-card.png
-poster: /assets/img/blog/2025-05/2025-05-13-octoprint-1.11.1-poster.png
-
+- Release
+summary: "The first bugfix release for 1.11.x, fixing some bugs and user experience
+  issues reported since the release of 1.11.0."
+slug: new-release-1.11.1
 release: 1.11.1
 stable:
   tag: 1.11.0

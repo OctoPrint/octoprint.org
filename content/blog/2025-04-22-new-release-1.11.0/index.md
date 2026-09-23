@@ -1,33 +1,8 @@
 ---
+
 title: 'New release: 1.11.0'
 author: foosel
 date: 2025-04-22 11:30:00 +0200
-summary: "In development now since January 2024, and in community testing since January 2025, I'm proud to finally present you with OctoPrint 1.11.0!"
-tags:
-- release
-
-card: /assets/img/blog/2025-04/2025-04-22-octoprint-1.11.0-card.png
-featuredimage: /assets/img/blog/2025-04/2025-04-22-octoprint-1.11.0-card.png
-poster: /assets/img/blog/2025-04/2025-04-22-octoprint-1.11.0-poster.png
-
-images:
-- url: screenshots/upload-manager-button.png
-  title: The button to launch the new Upload Manager in the file list sidebar.
-- url: screenshots/upload-manager.png
-  title: The newly added Upload Manager.
-- url: screenshots/custom-controls-manager.png
-  title: The newly added Custom Control Manager.
-- url: screenshots/2fa.png
-  title: Example of a two-factor authentication request on the login.
-- url: screenshots/health-check.png
-  title: Health checks allow you to get notified about issues with your installation.
-- url: screenshots/webcam-credentials.png
-  title: You can now enter credentials for accessing the webcam snapshot URL.
-- url: screenshots/page-reload-recommended.png
-  title: The new reload popup notification that in large parts replaces the blocking reload modal.
-- url: screenshots/third-party-warning.png
-  title: The new information popup about third party plugins.
-
 release: "1.11.0"
 
 contributors:
@@ -59,23 +34,26 @@ first_time_contributors:
 - zaventh
 
 headsups:
-- title: "Heads-up: OctoPrint 1.11.x is the last version of OctoPrint to support Python 3.7 and 3.8"
+- title: "Heads-up: OctoPrint 1.11.x is the last version of OctoPrint to support Python
+    3.7 and 3.8"
   content: |
     Python 3.7 has now been EOL since June 27th **2023**, and the maintenance overhead caused by still having to support it is becoming unfeasible. Python 3.8 has now been EOL since October 31st 2024, and it is to be expected that the maintenance overhead will further rise due to that.
-    
+
     As a consequence, OctoPrint 1.11.x is the final OctoPrint version to support both Python 3.7 and 3.8. OctoPrint 1.12.0+ will require at least Python 3.9.
-    
+
     How do you know if you will be affected and need to update? A newly added healthcheck mechanism has been added that will now alert you if your environment is outdated and about to be left behind, an [a new FAQ entry](https://community.octoprint.org/t/61076) is in place to help you figure out how to update your runtime environment. 
-    
+
     This will be kept updated, so that you will also receive early warnings about future deprecations this way.
 
-- title: "Heads-up: OctoPrint will now auto-escape all internal templates, plugin authors should opt-in as well!"
+- title: "Heads-up: OctoPrint will now auto-escape all internal templates, plugin
+    authors should opt-in as well!"
   content: |
     Starting with OctoPrint 1.11.0, OctoPrint will ship with auto-escaping all injected template variables and other included expressions in its template system. For 1.11.0 and 1.12.0, this will only be done for bundled plugins and those third party plugins that have *opted into* autoescaping. Starting with OctoPrint 1.13.0 however, third party plugins will have to *opt out* in order to not have autoescaping enabled on their templates.
-    
+
     [A new entry has been added to the FAQ](https://community.octoprint.org/t/61067) that has further details.
 
-- title: "Heads-up: `WebcamProviderPlugin.take_webcam_snapshot` has gotten its parameters fixed"
+- title: "Heads-up: `WebcamProviderPlugin.take_webcam_snapshot` has gotten its parameters
+    fixed"
   content: |
     If you are the maintainer of a third party plugin using the [`WebcamProviderPlugin`](https://docs.octoprint.org/en/master/plugins/mixins.html#webcamproviderplugin) mixin and have implemented its [`take_snapshot`](https://docs.octoprint.org/en/master/plugins/mixins.html#octoprint.plugin.WebcamProviderPlugin.take_webcam_snapshot) method, be advised that an implementation error in OctoPrint has been fixed and the implementation aligned with the documentation: the method will now be called with the `webcamName` parameter being a string containing the name of the requested webcam, as documented, not a full webcam configuration object as previously wrongly implemented.
 
@@ -129,6 +107,30 @@ stats:
     instances: 324
     printtime: 2288
 
+tags:
+- Release
+summary: "In development now since January 2024, and in community testing since January
+  2025, I'm proud to finally present you with OctoPrint 1.11.0!"
+slug: new-release-1.11.0
+images:
+- url: images/2025-01-28-screenshot-upload-manager-button.png
+  title: The button to launch the new Upload Manager in the file list sidebar.
+- url: images/2025-01-28-screenshot-upload-manager.png
+  title: The newly added Upload Manager.
+- url: images/2025-01-28-screenshot-custom-controls-manager.png
+  title: The newly added Custom Control Manager.
+- url: images/2025-01-28-screenshot-2fa.png
+  title: Example of a two-factor authentication request on the login.
+- url: images/2025-01-28-screenshot-health-check.png
+  title: Health checks allow you to get notified about issues with your 
+    installation.
+- url: images/2025-01-28-screenshot-webcam-credentials.png
+  title: You can now enter credentials for accessing the webcam snapshot URL.
+- url: images/2025-01-28-screenshot-page-reload-recommended.png
+  title: The new reload popup notification that in large parts replaces the 
+    blocking reload modal.
+- url: images/2025-01-28-screenshot-third-party-warning.png
+  title: The new information popup about third party plugins.
 ---
 
 After 12 months in development and a further 3 months of community testing during the release candidate phase, it makes me feel very happy (and to be honest also relieved) to finally release 1.11.0 for good!

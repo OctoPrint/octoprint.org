@@ -2,51 +2,29 @@
 title: "New release: 1.11.8"
 author: foosel
 date: 2026-06-23 11:55:00 +0200
-summary: "The eighth bugfix release for 1.11.x, fixing two security issues and one bug reported since the release of 1.11.0."
+prior:
+  headsups:
+  - release: 1.11.2
+    link: /blog/2025/06/10/new-release-1.11.2/
+  - release: 1.11.3
+    link: /blog/2025/09/09/new-release-1.11.3/
+
+contributors:
+- jacopotediosi
+
+security:
+- "[@jacopotediosi](https://github.com/jacopotediosi)"
+- "[@seankohjs](https://github.com/seankohjs)"
 tags:
-- release
-
-card: /assets/img/blog/2026-06/2026-06-23-octoprint-1.11.8-card.png
-featuredimage: /assets/img/blog/2026-06/2026-06-23-octoprint-1.11.8-card.png
-poster: /assets/img/blog/2026-06/2026-06-23-octoprint-1.11.8-poster.png
-
+- Release
+summary: "The eighth bugfix release for 1.11.x, fixing two security issues and one
+  bug reported since the release of 1.11.0."
+slug: new-release-1.11.8
 release: 1.11.8
-
 stable:
   tag: 1.11.0
   link: /blog/2025/04/22/new-release-1.11.0/
   headsups: true
-
-prior:
-  headsups:
-    - release: 1.11.2
-      link: /blog/2025/06/10/new-release-1.11.2/
-    - release: 1.11.3
-      link: /blog/2025/09/09/new-release-1.11.3/
-
-pluginincompatibilities:
-- name: OctoPrint-GcodeLeveling
-  page: https://plugins.octoprint.org/plugins/gcodeleveling/
-  link: https://github.com/Willmac16/OctoPrint-GcodeLeveling/issues/5
-  linktitle: Willmac16/OctoPrint-GcodeLeveling#5
-- name: Octolapse < 0.4.1rc1
-  page: https://plugins.octoprint.org/plugins/octolapse/
-  rcavailable: https://github.com/FormerLurker/Octolapse/releases/tag/v0.4.1rc1
-- name: OctoPrint-PrettyGCode
-  page: https://plugins.octoprint.org/plugins/prettygcode/
-  link: https://github.com/Kragrathea/OctoPrint-PrettyGCode/issues/75
-  linktitle: Kragrathea/OctoPrint-PrettyGCode#75
-- name: OctoPrint-WebcamTab
-  page: https://plugins.octoprint.org/plugins/webcamtab/
-  link: https://github.com/malnvenshorn/OctoPrint-WebcamTab/issues/13
-  linktitle: malnvenshorn/OctoPrint-WebcamTab#13
-
-contributors:
-  - jacopotediosi
-
-security:
-  - "[@jacopotediosi](https://github.com/jacopotediosi)"
-  - "[@seankohjs](https://github.com/seankohjs)"
 ---
 
 I would have preferred to continue to fully focus on the current RC phase for the upcoming 2.0.0 release, but I got two security reports and as one of these has a severity of High, I decided to push out yet another bugfix release for 1.11.x: 1.11.8 brings you fixes for the two security issues (which will also fixed in the 2.0.0 RC later today) as well as a fix for a long standing bug that was initially tagged as a regression on 2.0.0. Here's the changelog:

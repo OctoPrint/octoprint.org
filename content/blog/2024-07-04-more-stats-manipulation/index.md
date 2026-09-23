@@ -1,14 +1,13 @@
 ---
 title: "More manipulation of OctoPrint's anonymous usage stats"
 author: foosel
-summary: It has barely been a week since I discovered that someone had been manipulating OctoPrint's anonymous usage stats in OctoEverywhere's favor, and now it has come to my attention that Obico has also been doing the same
 date: 2024-07-04 09:25:00 +0200
-card: /assets/img/blog/2024-07/2024-07-04-stats-manipulation-card.png
-featuredimage: /assets/img/blog/2024-07/2024-07-04-stats-manipulation-card.png
-poster: /assets/img/blog/2024-07/2024-07-04-stats-manipulation-poster.png
-slug: more-stats-manipulation
 tags:
-- news
+- News
+summary: It has barely been a week since I discovered that someone had been 
+  manipulating OctoPrint's anonymous usage stats in OctoEverywhere's favor, and 
+  now it has come to my attention that Obico has also been doing the same
+slug: more-stats-manipulation
 ---
 
 It has barely been a week since [I discovered that someone had been manipulating OctoPrint's anonymous usage stats in OctoEverywhere's favor](/blog/2024/06/28/stats-manipulation/), and now I had to discover that Obico has also been doing the same. 😡
@@ -19,7 +18,7 @@ Since I found out about the manipulation last week I've been busy with further i
 
 Some details of the observed requests didn't add up (version discrepancies), but on first look this could have been some automated testing or similar development related activity with some weird enviornment, just as well as anything sinister. In any case, I blocked the IP address of the client in question and promptly moved on to clean-up all of the **15000** instances it had created the past 30 days.
 
-{{< lightbox image="usage-number-change.png" caption="A graph of OctoPrint's long term usage numbers, dropping first from ~145k to ~107k and then a few days later further down to ~91k" >}}
+{{< lightbox image="images/2024-07-04-usage-number-change.png" alt="A graph of OctoPrint's long term usage numbers, dropping first from ~145k to ~107k and then a few days later further down to ~91k" >}}
 
 I reached out to Obico and asked if they had any CI matching the public IP I was seeing, and they confirmed that it was one of their VMs. They promised to investigate whether some CI runs were causing this. Meanwhile I dug deeper on my end with the help of some analysis scripts I built. It turns out that the overwhelming majority of these instances were alive for less than 30min, but their lifetime ranged from less than that to up to 12h. There was no clear pattern in start hour distribution or start date distribution. The reported versions were all over the place, but the majority was focused on versions 1.8.6, 1.9.0 and 1.7.2. The Python version distribution had clear peaks at 3.7.3, the version found on OctoPi 0.18, and 3.9.2, the version found on OctoPi 1.0, however none of these instances reported running OctoPi. What really stood out though was that some of these instances reported running Python 2.7 and OctoPrint versions of 1.8.0 and up - which is impossible since OctoPrint dropped Python 2 support with that version.
 
