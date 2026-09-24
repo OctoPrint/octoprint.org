@@ -1,0 +1,28 @@
+{{- /*
+Base template for all pages.
+Body class is composed from section so site-level CSS can target sections.
+*/ -}}
+<!DOCTYPE html>
+{{- $accent := site.Params.accent | default "cyan" -}}
+<html lang="{{ site.Language.Lang }}" dir="{{ or site.Language.Direction `ltr` }}" data-theme="dark"{{ if ne $accent "cyan" }} data-accent="{{ $accent }}"{{ end }}>
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="page page--{{ if .IsHome }}home{{ else }}{{ with .Section }}{{ . }}{{ else }}other{{ end }}{{ end }}">
+  {{ partial "site-banner.html" . }}
+  <a class="skip-link" href="#main-content">{{ i18n "skip_to_content" | default "Skip to content" }}</a>
+  <header class="site-header" data-menu-open="false">
+    <div class="container site-header__inner">
+      {{ partial "header.html" . }}
+    </div>
+  </header>
+  <main id="main-content">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      {{ partial "footer.html" . }}
+    </div>
+  </footer>
+</body>
+</html>

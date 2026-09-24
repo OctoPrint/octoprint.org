@@ -1,6 +1,7 @@
 ---
 title: "OctoPrint"
 description: "Your printer. Your rules."
+banner: true
 ---
 
 {{< hero title="OctoPrint. Your printer." titleAccent="Your rules." subtitle="Monitor every aspect of your 3D printer right from your browser.  Extend what's possible through a powerful plugin system. Stay in control. All of that 100% Open Source and [funded by the community](/support)!" >}}

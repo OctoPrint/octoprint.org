@@ -1,0 +1,30 @@
+{{- $blog := false }}
+{{- with .Site.GetPage "/blog" }}
+    {{- $blog = $.IsDescendant . }}
+{{- end }}
+{{- if or .Params.Banner $blog }}
+<div id="banner" class="container" style="display: none">
+    <a class="site-banner__close" href="javascript:void(0)">&times;</a>
+    <img class="site-banner__photo" src="/img/me.jpg" />
+    <div class="site-banner__body">
+        <div class="site-banner__text">
+            <p>Hi! 👋</p>
+            <p>
+                I'm Gina Häußge, the creator & maintainer of OctoPrint.
+                I work full time on OctoPrint and can only continue thanks to
+                funding by people like you. Give the button a click and learn
+                how you can help!
+            </p>
+            <p>Thank you! 🫶</p>
+        </div>
+        <a
+            class="site-banner__button btn btn--secondary btn--lg"
+            href="/support-octoprint/"
+            data-analytics='"Support Click", { "props": { "origin": "banner"} }'
+        >
+            {{ partial "icon.html" "mdi:heart" }} Support my work! {{
+            partial "icon.html" "mdi:heart" }}
+        </a>
+    </div>
+</div>
+{{- end }}

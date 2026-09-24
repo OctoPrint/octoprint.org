@@ -1,0 +1,58 @@
+#banner {
+    position: relative;
+    overflow-y: hidden;
+
+    transition: max-height 200ms ease-in-out;
+
+    max-height: 0;
+
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-5);
+
+    .site-banner__photo {
+        width: 8em;
+        height: 8em;
+        border-radius: 50%;
+        margin-top: var(--space-5);
+    }
+
+    .site-banner__body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--space-5) 0;
+    }
+
+    .site-banner__close {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        color: var(--color-text);
+        font-size: var(--text-xl);
+        text-decoration: none;
+        margin-right: var(--container-padding);
+    }
+}
+
+#banner.active {
+    max-height: 500px;
+
+    transition: max-height 1s ease-in-out;
+}
+
+@media (max-width: 500px) {
+    #banner {
+        flex-direction: column;
+        align-items: center;
+
+        .site-banner__body {
+            padding: 0;
+            align-items: center;
+        }
+
+        .site-banner__close {
+        }
+    }
+}

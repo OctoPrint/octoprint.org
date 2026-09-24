@@ -4,6 +4,7 @@ description: |
   Learn how to setup OctoPrint using the preinstalled OctoPi image for Raspberry Pi, 
   or how to install from source on Windows, Linux and Mac.
 layout: page-download
+banner: true
 ---
 
 ## OctoPi
