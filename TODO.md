@@ -3,9 +3,9 @@
 - [x] Check for external assets
 - [x] blog overview
     - [x] also adjust reading time!
-- [ ] Support banner partials
+- [x] Support banner partials
     - [x] posts
-    - [ ] website
+    - [x] website
 - [x] tooling to migrate posts
     - [x] Markdown posts
     - [x] really old html posts
@@ -50,3 +50,4 @@
     - [x] Security policy
     - [x] Trademark policy
     - [x] Browser check
+- [ ] Favicon
