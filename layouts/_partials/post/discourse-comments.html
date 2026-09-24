@@ -23,6 +23,7 @@
             d.type = "text/javascript"; 
             d.async = true;
             d.src = DiscourseEmbed.discourseUrl + "javascripts/embed.js";
+            //d.src = "/js/discourse-embed.js";  // if local check doesn't load, load once with this, then switch back
             (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(d);
         })();
     }
