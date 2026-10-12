@@ -51,3 +51,4 @@
     - [x] Trademark policy
     - [x] Browser check
 - [ ] Favicon
+- [x] Test RSS feeds against OctoPrint & RSS reader, should both detect no changes
