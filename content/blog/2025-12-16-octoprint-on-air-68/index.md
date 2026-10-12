@@ -7,7 +7,7 @@ recorded: December 11th
 vid: 38eCoca5czo
 
 guid: /blog/2025/11/16/octoprint-on-air-68/
-redirect_from:
+aliases:
 - /blog/2025/11/16/octoprint-on-air-68/
 tags:
 - octoprint on air

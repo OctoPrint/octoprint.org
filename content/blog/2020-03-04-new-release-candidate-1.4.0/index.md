@@ -3,7 +3,7 @@
 title: 'New release: 1.4.0'
 author: foosel
 date: 2020-03-04 12:45:00 +0100
-redirect_from:
+aliases:
 - /blog/2020/03/04/new-release-1.4.0/
 
 tags:

@@ -126,6 +126,10 @@ def process_post(path: Path, category: str) -> PostProcessingResult:
         data["release"] = data.pop("bugfix")
         data["stable"] = stable
 
+    # rename redirect_from to aliases
+    if "redirect_from" in data:
+        data["aliases"] = data.pop("redirect_from")
+
     # prepare page bundle
     if "date" in data:
         datestr = data["date"]
