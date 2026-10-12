@@ -20,7 +20,7 @@
         </description>
         <pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
         <link>{{ .Permalink }}?utm_source=rss&amp;utm_medium=all</link>
-        <guid isPermaLink="true">{{ .Permalink }}</guid>
+        <guid isPermaLink="true">https://octoprint.org{{ if .Params.guid }}{{ .Params.guid }}{{ else }}{{ .RelPermalink }}{{ end }}</guid>
       </item>
     {{- end }}
   </channel>
