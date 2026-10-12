@@ -6,7 +6,7 @@ date: 2016-10-17 13:30:00 +0200
 comments: false
 
 tags:
-- Release
+- release
 summary: Another RC after all before we get out the stable 1.2.17 release, due 
   to another bug that was found and fixed since pushing out 1.2.17rc3.
 slug: new-release-candidate-1.2.17rc4

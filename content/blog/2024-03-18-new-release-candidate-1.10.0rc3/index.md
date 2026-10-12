@@ -23,7 +23,7 @@ first_time_contributors:
 - jacopotediosi
 
 tags:
-- Release
+- release
 summary: The third release candidate for the upcoming 1.10.0 release containing 
   some fixes of observed regressions and improvements of newly added 
   functionality, plus one security fix!

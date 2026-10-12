@@ -4,11 +4,11 @@ author: foosel
 date: 2016-07-30 09:00:00 +0200
 comments: false
 tags:
-- Release
+- release
 summary: "Late on the 28th it sadly came to my attention that some users were experiencing
-  severe problems with their printer communication after upgrading to the 1.2.14
-  release just published earlier that day. I immediately stopped the roll out of
-  1.2.14 and went to investigate."
+  severe problems with their printer communication after upgrading to the 1.2.14 release
+  just published earlier that day. I immediately stopped the roll out of 1.2.14 and
+  went to investigate."
 slug: new-release-1.2.15
 ---
 

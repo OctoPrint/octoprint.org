@@ -6,7 +6,7 @@ date: 2025-08-04 09:30:00 +0200
 recorded: July 28th
 vid: pSn9GuVLKRg
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 65th episode of a regular devlog about all things OctoPrint which 
   was recorded on July 28th 2025.
 slug: octoprint-on-air-65

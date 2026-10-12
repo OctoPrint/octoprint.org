@@ -3,7 +3,7 @@ title: 'New release: 1.3.7'
 author: foosel
 date: 2018-04-09 16:50:00 +0200
 tags:
-- Release
+- release
 summary: After several months of work I'm happy to present you OctoPrint 1.3.7. 
   This a true maintenance release again, consisting of various improvements and 
   fixes.

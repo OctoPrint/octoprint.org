@@ -3,7 +3,7 @@ title: "New release candidate: 1.4.1rc4"
 author: foosel
 date: 2020-07-29 12:10:00 +0200
 tags:
-- Release
+- release
 summary: The fourth release candidate for the upcoming 1.4.1 release that fixes 
   three regressions observed in the prior ones.
 slug: new-release-candidate-1.4.1rc4

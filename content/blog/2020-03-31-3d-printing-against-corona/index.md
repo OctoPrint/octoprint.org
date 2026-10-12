@@ -4,7 +4,7 @@ title: 'Help to fight the Corona Crisis using your 3D printer'
 author: od-git
 date: 2020-03-31 15:00:00 +0200
 tags:
-- News
+- news
 summary: A guest post by Oliver Dathe on how you can help in the fight against 
   the ongoing SARS-CoV-2 pandemic. If you have any printing capacities free, 
   please consider joining the community effort!

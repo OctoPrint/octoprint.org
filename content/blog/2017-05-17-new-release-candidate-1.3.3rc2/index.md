@@ -6,7 +6,7 @@ date: 2017-05-17 11:45:00 +0200
 comments: false
 
 tags:
-- Release
+- release
 summary: The second release candidate of the 1.3.3 release, fixing three minor 
   regressions found in 1.3.3rc1.
 slug: new-release-candidate-1.3.3rc2

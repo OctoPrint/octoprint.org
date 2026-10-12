@@ -6,7 +6,7 @@ date: 2017-12-08 16:00:00 +0100
 comments: false
 
 tags:
-- Release
+- release
 summary: This third release candidate of the 1.3.6 release fixes two small bugs 
   found in the second one that were an issue with new/improved functionality and
   also switches plugin blacklist access to https.

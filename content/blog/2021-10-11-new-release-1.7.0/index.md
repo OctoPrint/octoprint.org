@@ -103,7 +103,7 @@ stats:
     date: 2021-08-04
 
 tags:
-- Release
+- release
 summary: "After over 5 months of development and a two month long RC phase, I'm proud
   to present you OctoPrint 1.7.0!"
 slug: new-release-1.7.0

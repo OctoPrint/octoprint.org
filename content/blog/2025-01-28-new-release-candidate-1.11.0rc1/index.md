@@ -68,7 +68,7 @@ headsups:
     If you are the maintainer of a third party plugin using the [`WebcamProviderPlugin`](https://docs.octoprint.org/en/master/plugins/mixins.html#webcamproviderplugin) mixin and have implemented its [`take_snapshot`](https://docs.octoprint.org/en/master/plugins/mixins.html#octoprint.plugin.WebcamProviderPlugin.take_webcam_snapshot) method, be advised that an implementation error in OctoPrint has been fixed and the implementation aligned with the documentation: the method will now be called with the `webcamName` parameter being a string containing the name of the requested webcam, as documented, not a full webcam configuration object as previously wrongly implemented.
 
 tags:
-- Release
+- release
 summary: The first release candidate for the upcoming 1.11.0 release containing 
   new features, improvements & bug fixes!
 slug: new-release-candidate-1.11.0rc1

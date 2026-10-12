@@ -5,7 +5,7 @@ author: foosel
 date: 2019-11-13 11:55:00 +0100
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The twenty seventh episode of a monthly live broadcast for Patrons 
   which aired live on November 8th 2019.
 slug: octoprint-on-air-27

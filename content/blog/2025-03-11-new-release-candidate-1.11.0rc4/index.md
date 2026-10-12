@@ -24,7 +24,7 @@ first_time_contributors:
 - Hillshum
 
 tags:
-- Release
+- release
 summary: The fourth release candidate for the upcoming 1.11.0 release containing
   a fix of an observed regression in the previous ones, a fix of a bug in a new 
   feature and a small fix for an issue in 1.10.x!

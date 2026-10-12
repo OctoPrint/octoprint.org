@@ -7,7 +7,7 @@ date: 2023-08-03 13:05:00 +0200
 recorded: August 1st
 vid: rmCBYweZ9po
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 53rd episode of a regular devlog about all things OctoPrint which 
   was recorded on August 1st 2023.
 slug: octoprint-on-air-53

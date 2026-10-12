@@ -54,7 +54,7 @@ first_time_contributors:
 - neod123
 
 tags:
-- Release
+- release
 summary: The first release candidate for the upcoming 1.10.0 release containing 
   new features, improvements & bug fixes!
 slug: new-release-candidate-1.10.0rc1

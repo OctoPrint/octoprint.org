@@ -88,7 +88,7 @@ first_time_contributors:
 - tommywienert
 
 tags:
-- Release
+- release
 summary: The first release candidate for the upcoming 1.9.0 release containing 
   new features, improvements & bug fixes!
 slug: new-release-candidate-1.9.0rc1

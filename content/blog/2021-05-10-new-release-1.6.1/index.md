@@ -4,7 +4,7 @@ title: 'New release: 1.6.1'
 author: foosel
 date: 2021-05-10 15:20:00 +0200
 tags:
-- Release
+- release
 summary: "This is a bugfix release to fix two bugs in OctoPrint 1.6.0."
 slug: new-release-1.6.1
 release: 1.6.1

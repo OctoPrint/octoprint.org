@@ -9,7 +9,7 @@ prior:
     link: /blog/2022/09/20/new-release-1.8.3/
 
 tags:
-- Release
+- release
 summary: "This sixth bugfix release for 1.8.0 fixes a bug that was supposed to be
   fixed in 1.8.5."
 slug: new-release-1.8.6

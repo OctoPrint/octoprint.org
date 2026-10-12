@@ -41,7 +41,7 @@ contributors:
 - tirkarthi
 
 tags:
-- Release
+- release
 summary: The first release candidate for the upcoming 1.6.0 release, containing 
   new features, improvements and bug fixes.
 slug: new-release-candidate-1.6.0rc1

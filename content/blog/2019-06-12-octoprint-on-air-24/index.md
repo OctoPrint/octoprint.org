@@ -5,7 +5,7 @@ author: foosel
 date: 2019-06-12 13:15:00 +0200
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The twenty fourth episode of a monthly live broadcast for Patrons which
   aired live on June 8th 2019.
 slug: octoprint-on-air-24

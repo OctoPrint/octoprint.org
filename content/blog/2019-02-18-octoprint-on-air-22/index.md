@@ -5,7 +5,7 @@ author: foosel
 date: 2019-02-18 14:00:00 +0100
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The twenty second episode of a monthly live broadcast for Patrons which
   aired live on February 9th 2019.
 slug: octoprint-on-air-22

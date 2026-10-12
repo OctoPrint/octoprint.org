@@ -3,7 +3,7 @@ title: "New release: 1.4.2"
 author: foosel
 date: 2020-08-06 13:50:00 +0200
 tags:
-- Release
+- release
 summary: "This is a hotfix release to fix three bugs in 1.4.1 that sadly only were
   reported after the release candidate phase for 1.4.1."
 slug: new-release-1.4.2

@@ -125,7 +125,7 @@ stats:
     date: 2022-03-14
 
 tags:
-- Release
+- release
 summary: "After over 5 months of development and a two month long RC phase, I'm proud
   to present you OctoPrint 1.8.0!"
 slug: new-release-1.8.0

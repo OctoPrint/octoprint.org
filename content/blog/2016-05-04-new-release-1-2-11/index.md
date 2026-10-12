@@ -4,10 +4,10 @@ author: foosel
 date: 2016-05-04 16:00:00 +0200
 comments: false
 tags:
-- Release
-summary: "This shiny new release contains two new pieces of functionality on top
-  of the usual fixes of bugs and little annoyances, the \"About\" dialog and the
-  Announcement Plugin."
+- release
+summary: "This shiny new release contains two new pieces of functionality on top of
+  the usual fixes of bugs and little annoyances, the \"About\" dialog and the Announcement
+  Plugin."
 slug: new-release-1-2-11
 images:
 - images/2016-05-04-about-dialog.png

@@ -4,7 +4,7 @@ title: 'New release candidate: 1.3.10rc1'
 author: foosel
 date: 2018-11-06 12:10:00 +0100
 tags:
-- Release
+- release
 summary: The first release candidate of the 1.3.10 release, with various 
   improvements and bug fixes.
 slug: new-release-candidate-1.3.10rc1

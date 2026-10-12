@@ -4,7 +4,7 @@ title: 'New release candidate: 1.3.9rc4'
 author: foosel
 date: 2018-07-20 12:10:00 +0200
 tags:
-- Release
+- release
 summary: The fourth release candidate of the 1.3.9 release, with three fixes for
   regressions discovered in 1.3.9rc1, rc2 and rc3.
 slug: new-release-candidate-1.3.9rc4

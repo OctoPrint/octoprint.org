@@ -8,7 +8,7 @@ recorded: December 11th
 vid: IuOcdVX-gFw
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 61st episode of a regular devlog about all things OctoPrint which 
   was recorded on December 11th 2024.
 slug: octoprint-on-air-61

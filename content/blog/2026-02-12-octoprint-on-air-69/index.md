@@ -6,7 +6,7 @@ date: 2026-02-12 11:23:00 +0100
 recorded: February 5th
 vid: Xiqfr6Z50DI
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 69th episode of a regular devlog about all things OctoPrint which 
   was recorded on February 5th 2026.
 slug: octoprint-on-air-69

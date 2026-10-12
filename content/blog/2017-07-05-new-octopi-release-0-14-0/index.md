@@ -4,7 +4,7 @@ title: "New OctoPi Release: 0.14.0"
 date: 2017-07-05 13:10:00 +0200
 comments: false
 tags:
-- Octopi
+- octopi
 summary: OctoPi 0.14 comes with the latest OctoPrint 1.3.4 and Pi Zero W 
   support, among other things.
 slug: new-octopi-release-0-14-0

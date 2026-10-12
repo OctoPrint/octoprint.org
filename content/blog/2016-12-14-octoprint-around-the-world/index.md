@@ -5,7 +5,7 @@ author: foosel
 date: 2016-12-14 13:45:00 +0100
 comments: false
 tags:
-- Spotlight
+- spotlight
 summary: A little exhibit of some awesome OctoPrint setups from all around the 
   world, as shared by enthusiastic users - the very first "OctoPrint around the 
   World" community spotlight feature!

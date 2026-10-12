@@ -5,7 +5,7 @@ author: foosel
 date: 2019-04-12 19:00:00 +0200
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The twentythird episode of a monthly live broadcast for Patrons which 
   aired live on April 12th 2019.
 slug: octoprint-on-air-23

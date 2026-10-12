@@ -5,7 +5,7 @@ author: foosel
 date: 2018-09-29 19:00:00 +0200
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The nineteenth episode of a monthly live broadcast for Patrons which 
   aired live earlier today on September 29th 2018.
 slug: octoprint-on-air-19

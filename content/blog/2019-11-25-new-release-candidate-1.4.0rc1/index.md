@@ -4,7 +4,7 @@ title: 'New release candidate: 1.4.0rc1'
 author: foosel
 date: 2019-11-25 17:30:00 +0100
 tags:
-- Release
+- release
 summary: The very first release candidate for the upcoming 1.4.0 release!
 slug: new-release-candidate-1.4.0rc1
 images:

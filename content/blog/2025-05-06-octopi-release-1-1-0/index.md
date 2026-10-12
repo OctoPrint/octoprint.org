@@ -3,7 +3,7 @@ author: foosel
 title: "New OctoPi Release: 1.1.0"
 date: 2025-05-06 09:15:00 +0200
 tags:
-- Octopi
+- octopi
 summary: OctoPi 1.1.0 comes with Debian Bookworm and support for the RPi5, among
   other things.
 slug: octopi-release-1-1-0

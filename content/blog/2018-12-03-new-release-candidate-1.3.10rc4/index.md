@@ -4,7 +4,7 @@ title: 'New release candidate: 1.3.10rc4'
 author: foosel
 date: 2018-12-03 14:00:00 +0100
 tags:
-- Release
+- release
 summary: The fourth release candidate of the 1.3.10 release, with fixes and 
   improvements for the newly introduced backup & restore plugin.
 slug: new-release-candidate-1.3.10rc4

@@ -5,7 +5,7 @@ author: foosel
 date: 2017-02-23 12:00:00 +0100
 comments: false
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The recording of the eighth episode of a monthly live broadcast for 
   Patrons, which aired live on February 18th.
 slug: octoprint-on-air-8

@@ -23,7 +23,7 @@ contributors:
 - cp2004
 
 tags:
-- Release
+- release
 summary: The second release candidate for the upcoming 1.5.0 release, with some 
   fixes of regressions from the first one and some improvements in newly added 
   functionality.

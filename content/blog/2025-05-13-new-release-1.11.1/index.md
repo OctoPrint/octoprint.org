@@ -3,7 +3,7 @@ title: 'New release: 1.11.1'
 author: foosel
 date: 2025-05-13 15:30:00 +0200
 tags:
-- Release
+- release
 summary: "The first bugfix release for 1.11.x, fixing some bugs and user experience
   issues reported since the release of 1.11.0."
 slug: new-release-1.11.1

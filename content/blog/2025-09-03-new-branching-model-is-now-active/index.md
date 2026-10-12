@@ -3,7 +3,7 @@ title: "Heads-up devs: New branching model is now active"
 author: foosel
 date: 2025-09-03 13:45:00 +0200
 tags:
-- Development
+- development
 summary: OctoPrint's branching model has changed. If you have a local checkout 
   of OctoPrint, this might affect you.
 slug: new-branching-model-is-now-active

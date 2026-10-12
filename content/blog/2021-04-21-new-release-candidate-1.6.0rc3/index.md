@@ -22,7 +22,7 @@ headsups:
     here's a  heads-up that they will no longer be utilized in OctoPrint 1.6+.
 
 tags:
-- Release
+- release
 summary: The third release candidate for the upcoming 1.6.0 release, with a one 
   fix of a regression and one work around for a discovered firmware bug.
 slug: new-release-candidate-1.6.0rc3

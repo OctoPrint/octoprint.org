@@ -3,7 +3,7 @@ author: foosel
 title: "New OctoPi Release: 0.18.0"
 date: 2021-01-25 11:00:00 +0100
 tags:
-- Octopi
+- octopi
 summary: OctoPi 0.18.0 comes with OctoPrint 1.5.2 and Python 3, among other 
   things.
 slug: octopi-release-0-18-0

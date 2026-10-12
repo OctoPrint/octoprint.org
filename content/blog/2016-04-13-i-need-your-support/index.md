@@ -12,7 +12,7 @@ links:
 originalUrl: https://plus.google.com/+OctoprintOrg/posts/5m53jf6cdme
 comments: false
 tags:
-- Important
+- important
 summary: If you love OctoPrint and want to see its development continue at the 
   pace of the past two years, please read on about its current funding situation
   and how you can help.

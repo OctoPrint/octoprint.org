@@ -33,7 +33,7 @@ contributors:
 - TwoRedCells
 
 tags:
-- Release
+- release
 summary: The first release candidate for the upcoming 1.7.0 release, containing 
   new features, improvements and bug fixes.
 slug: new-release-candidate-1.7.0rc1

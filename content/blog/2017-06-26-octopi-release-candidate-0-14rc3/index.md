@@ -4,7 +4,7 @@ title: "OctoPi Release Candidate 0.14rc3 needs testers!"
 date: 2017-06-26 12:00:00 +0200
 comments: false
 tags:
-- Octopi
+- octopi
 summary: Prompted by the release of a new Raspbian Lite base image, Guy Sheffer 
   just published a third release candidate for the next OctoPi release 0.14 and 
   is looking for feedback!

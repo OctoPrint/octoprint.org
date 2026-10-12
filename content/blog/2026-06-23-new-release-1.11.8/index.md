@@ -16,7 +16,7 @@ security:
 - "[@jacopotediosi](https://github.com/jacopotediosi)"
 - "[@seankohjs](https://github.com/seankohjs)"
 tags:
-- Release
+- release
 summary: "The eighth bugfix release for 1.11.x, fixing two security issues and one
   bug reported since the release of 1.11.0."
 slug: new-release-1.11.8

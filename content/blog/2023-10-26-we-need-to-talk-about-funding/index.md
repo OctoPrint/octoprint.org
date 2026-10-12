@@ -3,7 +3,7 @@ title: We need to talk about funding
 author: foosel
 date: 2023-10-26 10:50:00 +0200
 tags:
-- Important
+- important
 summary: OctoPrint relies on your financial support to keep going. Please 
   consider chipping in if you can.
 slug: we-need-to-talk-about-funding

@@ -5,7 +5,7 @@ date: 2016-11-08 15:10:00 +0100
 comments: false
 
 tags:
-- Release
+- release
 summary: "Another true maintenance release with various improvements and a couple
   of bug fixes for good measure: I finally present you 1.2.17!"
 slug: new-release-1.2.17

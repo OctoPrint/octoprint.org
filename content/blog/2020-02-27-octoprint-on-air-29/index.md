@@ -5,7 +5,7 @@ author: foosel
 date: 2020-02-27 11:40:00 +0100
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The twenty ninth episode of a monthly live broadcast for Patrons which 
   aired live on February 21st 2020.
 slug: octoprint-on-air-29

@@ -4,7 +4,7 @@ title: "Turning a static website more dynamic"
 author: foosel
 date: 2020-12-15 15:15:00 +0100
 tags:
-- Development
+- development
 summary: Since its creation in 2015 the OctoPrint plugin repository has been a 
   static page powered by Jekyll. Read how over the course of 2020 it got more 
   dynamic through the power of GitHub Actions.

@@ -7,7 +7,7 @@ redirect_from:
 - /blog/2020/03/04/new-release-1.4.0/
 
 tags:
-- Release
+- release
 summary: A new release that brings a new granular permission system, Python 3 
   compatibility and plenty more features, improvements and bug fixes!
 slug: new-release-candidate-1.4.0

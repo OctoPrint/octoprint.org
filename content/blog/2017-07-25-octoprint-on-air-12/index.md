@@ -5,7 +5,7 @@ author: foosel
 date: 2017-07-25 13:45:00 +0200
 comments: false
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The twelfth episode of a monthly live broadcast for Patrons which aired
   live on July 22nd 2017.
 slug: octoprint-on-air-12

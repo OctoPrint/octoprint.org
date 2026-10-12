@@ -11,7 +11,7 @@ contributors:
 - jneilliii
 
 tags:
-- Release
+- release
 summary: The sixth release candidate for the upcoming 1.9.0 release, fixing a 
   regression reported on the last one.
 slug: new-release-candidate-1.9.0rc6

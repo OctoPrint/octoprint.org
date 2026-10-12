@@ -5,7 +5,7 @@ date: 2017-12-12 12:45:00 +0100
 comments: false
 
 tags:
-- Release
+- release
 summary: As an early christmas present I'm happy to present you OctoPrint 1.3.6.
   This a true maintenance release again, consisting of various improvements and 
   fixes.

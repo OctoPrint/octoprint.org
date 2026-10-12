@@ -3,7 +3,7 @@ author: foosel
 title: "New OctoPi Release: 1.0.0"
 date: 2023-02-22 11:40:00 +0100
 tags:
-- Octopi
+- octopi
 summary: OctoPi 1.0.0 comes with OctoPrint 1.8.6 and Debian Bullseye, among 
   other things.
 slug: octopi-release-1-0-0

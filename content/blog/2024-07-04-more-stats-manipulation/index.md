@@ -3,7 +3,7 @@ title: "More manipulation of OctoPrint's anonymous usage stats"
 author: foosel
 date: 2024-07-04 09:25:00 +0200
 tags:
-- News
+- news
 summary: It has barely been a week since I discovered that someone had been 
   manipulating OctoPrint's anonymous usage stats in OctoEverywhere's favor, and 
   now it has come to my attention that Obico has also been doing the same

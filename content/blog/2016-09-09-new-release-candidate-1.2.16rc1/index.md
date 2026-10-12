@@ -5,7 +5,7 @@ author: foosel
 date: 2016-09-09 10:30:00 +0200
 comments: false
 tags:
-- Release
+- release
 summary: The first release candidate of the 1.2.16 release, with various 
   improvements and bug fixes plus the new release channel feature.
 slug: new-release-candidate-1.2.16rc1

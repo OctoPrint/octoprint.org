@@ -4,7 +4,7 @@ title: 'New release: 1.7.2'
 author: foosel
 date: 2021-11-02 18:30:00 +0100
 tags:
-- Release
+- release
 summary: "This bugfix release fixes an issue just discovered in OctoPrint 1.7.1."
 slug: new-release-1.7.2
 release: 1.7.2

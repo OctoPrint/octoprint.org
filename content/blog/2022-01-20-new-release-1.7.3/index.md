@@ -7,7 +7,7 @@ contributors:
 - kantlivelong
 
 tags:
-- Release
+- release
 summary: "This bugfix release fixes an issue in 1.7.x and works around a new dependency
   incompatibility."
 slug: new-release-1.7.3

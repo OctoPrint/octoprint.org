@@ -5,7 +5,7 @@ author: foosel
 date: 2020-03-19 15:30:00 +0100
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: On Friday, March 27th at 17:00 CET the next OctoPrint On Air episode 
   will air live - this time for everyone, as a chance to virtually get together 
   as a community in these troubling times!

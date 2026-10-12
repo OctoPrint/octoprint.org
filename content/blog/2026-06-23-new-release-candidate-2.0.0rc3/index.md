@@ -29,7 +29,7 @@ security:
 - "[@jacopotediosi](https://github.com/jacopotediosi)"
 - "[@seankohjs](https://github.com/seankohjs)"
 tags:
-- Release
+- release
 summary: The third release candidate for the upcoming 2.0.0 release with fixes 
   of observed regressions and newly discovered long standing bugs as well as 
   some improvements and also two security fixes.

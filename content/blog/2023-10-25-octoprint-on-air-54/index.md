@@ -7,7 +7,7 @@ date: 2023-10-25 12:00:00 +0200
 recorded: October 23rd
 vid: HafWvGrsnzo
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 54th episode of a regular devlog about all things OctoPrint which 
   was recorded on October 23rd 2023.
 slug: octoprint-on-air-54

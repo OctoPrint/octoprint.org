@@ -8,7 +8,7 @@ recorded: September 29th
 vid: y1uYcYvYILg
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 48th episode of a regular live broadcast for Patrons which was 
   recorded on September 29th 2022.
 slug: octoprint-on-air-48

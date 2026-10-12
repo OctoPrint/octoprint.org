@@ -4,7 +4,7 @@ title: "Automating OctoPrint's release tests"
 author: foosel
 date: 2020-07-29 16:45:00 +0200
 tags:
-- Development
+- development
 summary: OctoPrint's release tests so far involved a lot of card juggling and 
   other manual steps with a lot of wasted time. Read how I was finally able to 
   automate this after a long journey.

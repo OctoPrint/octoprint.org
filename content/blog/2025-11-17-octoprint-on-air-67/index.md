@@ -6,7 +6,7 @@ date: 2025-11-17 11:00:00 +0100
 recorded: November 10th
 vid: PwVG1EKRT-4
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 67th episode of a regular devlog about all things OctoPrint which 
   was recorded on November 10th 2025.
 slug: octoprint-on-air-67

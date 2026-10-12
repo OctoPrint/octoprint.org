@@ -5,9 +5,9 @@ date: 2017-06-01 16:00:00 +0200
 comments: false
 
 tags:
-- Release
-summary: "Due to reports from three people who ran into a particular issue with
-  the 1.3.3 release overnight I decided to push out a hotfix release 1.3.4, even though
+- release
+summary: "Due to reports from three people who ran into a particular issue with the
+  1.3.3 release overnight I decided to push out a hotfix release 1.3.4, even though
   only a very small number of users seem to be affected."
 slug: new release-1.3.4
 ---

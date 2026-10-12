@@ -3,7 +3,7 @@ title: 'New release: 1.3.8'
 author: foosel
 date: 2018-04-13 16:55:00 +0200
 tags:
-- Release
+- release
 summary: An update of a third party dependency that OctoPrint relies on was 
   released today that made a hotfix release necessary.
 slug: new-release-1.3.8

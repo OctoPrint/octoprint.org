@@ -17,7 +17,7 @@ closer_look:
 - Timelapse creation, especially with a configured rendering delay.
 
 tags:
-- Release
+- release
 summary: The second release candidate for the upcoming 1.11.0 release containing
   some fixes of observed regressions and bugs in the first one!
 slug: new-release-candidate-1.11.0rc2

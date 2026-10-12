@@ -34,7 +34,7 @@ contributors:
 - urish
 
 tags:
-- Release
+- release
 summary: The first release candidate for the upcoming 1.5.0 release, containing 
   new features, improvements and bug fixes.
 slug: new-release-candidate-1.5.0rc1

@@ -9,7 +9,7 @@ prior:
 
 
 tags:
-- Release
+- release
 summary: "The second bugfix release for 1.10.x, fixing several bugs reported since
   the release of 1.10.1."
 slug: new-release-1.10.2

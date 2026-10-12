@@ -4,7 +4,7 @@ title: 'New release candidate: 1.3.9rc2'
 author: foosel
 date: 2018-07-06 14:00:00 +0200
 tags:
-- Release
+- release
 summary: The second release candidate of the 1.3.9 release, with a fix for a 
   regression discovered in 1.3.9rc1 and also a small number of improvements.
 slug: new-release-candidate-1.3.9rc2

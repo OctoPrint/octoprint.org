@@ -8,7 +8,7 @@ contributors:
 first_time_contributors:
 - srLinux
 tags:
-- Release
+- release
 summary: "The third bugfix & security release for 1.9.x, fixing one security vulnerability,
   one bug and adding one workaround for an issue with a third party dependency."
 slug: new-release-1.9.3

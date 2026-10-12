@@ -4,7 +4,7 @@ title: 'New release candidate: 1.4.0rc6'
 author: foosel
 date: 2020-02-26 15:10:00 +0100
 tags:
-- Release
+- release
 summary: The sixth release candidate for the upcoming 1.4.0 release fixes some 
   regressions observed with the prior ones.
 slug: new-release-candidate-1.4.0rc6

@@ -3,7 +3,7 @@ author: foosel
 title: "New OctoPi Release: 0.15.0"
 date: 2018-05-02 11:15:00 +0200
 tags:
-- Octopi
+- octopi
 summary: OctoPi 0.15 comes with the latest OctoPrint 1.3.8 and Pi 3+ support, 
   among other things.
 slug: octopi-release-0-15-0

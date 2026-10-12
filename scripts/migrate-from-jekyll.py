@@ -93,11 +93,11 @@ def process_post(path: Path, category: str) -> PostProcessingResult:
 
     # map category
     if category == "releases":
-        data["tags"] = ["Release"]
+        data["tags"] = ["release"]
     elif category == "octoprintonair":
-        data["tags"] = ["OctoPrint on Air"]
+        data["tags"] = ["octoprint on air"]
     else:
-        data["tags"] = [category.capitalize()]
+        data["tags"] = [category.lower()]
 
     # rename excerpt to summary
     if "excerpt" in data:
@@ -207,7 +207,7 @@ def process_post(path: Path, category: str) -> PostProcessingResult:
         f.write("---")
         f.write(content)
 
-    return PostProcessingResult(bundle=bundle, has_alerts=has_alerts, has_lightbox=has_lightbox)
+    return PostProcessingResult(bundle=bundle, has_alerts=has_alerts, has_lightbox=has_lightbox, created=True)
 
 def process_category(path: Path):
     category = path.name

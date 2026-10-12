@@ -7,7 +7,7 @@ date: 2024-07-01 11:10:00 +0200
 recorded: June 25th
 vid: zAZVomhDROg
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 57th episode of a regular devlog about all things OctoPrint which 
   was recorded on June 25th 2024.
 slug: octoprint-on-air-57

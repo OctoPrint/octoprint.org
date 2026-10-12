@@ -8,7 +8,7 @@ recorded: February 17th
 vid: a3lnYw8_87U
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 43rd episode of a regular live broadcast for Patrons which was 
   recorded on February 17th 2022.
 slug: octoprint-on-air-43

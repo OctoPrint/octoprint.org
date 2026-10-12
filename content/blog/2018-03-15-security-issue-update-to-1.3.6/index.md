@@ -4,7 +4,7 @@ author: foosel
 title: "Security vulnerability: Update to 1.3.6 ASAP!"
 date: 2018-03-15 12:00:00 +0100
 tags:
-- Important
+- important
 summary: If you still haven't updated to OctoPrint 1.3.6, please do so ASAP. 
   There is a security vulnerability present in versions 1.3.0rc1 through 1.3.5 
   that puts your instance at risk if it is accessible directly via the internet 

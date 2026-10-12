@@ -113,7 +113,7 @@ stats:
     instances: 1480
     printtime: 26986
 tags:
-- Release
+- release
 summary: "Ten months in development, followed by close to three months of an RC phase,
   it's finally time to push out 1.10.0!"
 slug: new-release-1.10.0

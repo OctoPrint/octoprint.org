@@ -6,7 +6,7 @@ date: 2017-12-18 15:00:00 +0100
 comments: false
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The fourteenth (and 2017's final) episode of a monthly live broadcast 
   for Patrons which aired live on December 16th 2017.
 slug: octoprint-on-air-14

@@ -11,7 +11,7 @@ contributors:
 - cp2004
 
 tags:
-- Release
+- release
 summary: The third release candidate for the upcoming 1.7.0 release, fixing 
   three observed regressions and two bugs in new functionality.
 slug: new-release-candidate-1.7.0rc3

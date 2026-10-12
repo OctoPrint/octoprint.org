@@ -8,7 +8,7 @@ contributors:
 first_time_contributors:
 - cperrin88
 tags:
-- Release
+- release
 summary: "The second bugfix release for 1.9.x, mostly to work around a new bug in
   a third party dependency."
 slug: new-release-1.9.2

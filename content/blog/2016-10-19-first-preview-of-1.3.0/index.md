@@ -6,7 +6,7 @@ date: 2016-10-19 14:00:00 +0200
 comments: false
 
 tags:
-- Release
+- release
 summary: "I'm very happy to finally present you with a first preview of the upcoming
   major 1.3.0 release: 1.3.0rc1!"
 slug: first-preview-of-1.3.0

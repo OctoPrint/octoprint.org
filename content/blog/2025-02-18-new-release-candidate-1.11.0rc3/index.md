@@ -18,7 +18,7 @@ closer_look:
 - Remember me functionality.
 
 tags:
-- Release
+- release
 summary: The third release candidate for the upcoming 1.11.0 release containing 
   some fixes of observed regressions and bugs in the previous ones, plus some 
   improvements of newly added functionality!

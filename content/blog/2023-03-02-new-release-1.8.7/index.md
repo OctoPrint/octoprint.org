@@ -12,7 +12,7 @@ contributors:
 - cp2004
 
 tags:
-- Release
+- release
 summary: "This seventh bugfix release for 1.8.0 work around a breaking change of a
   dependency and adds support for Python 3.11."
 slug: new-release-1.8.7

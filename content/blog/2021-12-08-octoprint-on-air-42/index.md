@@ -8,7 +8,7 @@ recorded: December 7th
 vid: AhGJ-zwAlZU
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 42nd episode of a monthly live broadcast for Patrons which was 
   recorded on December 7th 2021.
 slug: octoprint-on-air-42

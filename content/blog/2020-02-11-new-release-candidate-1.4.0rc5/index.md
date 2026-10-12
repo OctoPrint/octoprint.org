@@ -4,7 +4,7 @@ title: 'New release candidate: 1.4.0rc5'
 author: foosel
 date: 2020-02-11 14:25:00 +0100
 tags:
-- Release
+- release
 summary: The fifth release candidate for the upcoming 1.4.0 release fixes some 
   regressions observed with the prior ones.
 slug: new-release-candidate-1.4.0rc5

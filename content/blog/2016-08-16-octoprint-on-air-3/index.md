@@ -4,7 +4,7 @@ author: foosel
 date: 2016-08-16 12:00:00 +0200
 comments: false
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The third episode of a monthly live broadcast for Patrons and the first
   one to be made public afterwards, decided by the Patrons themselves - thanks!
 slug: octoprint-on-air-3

@@ -8,7 +8,7 @@ recorded: April 11th
 vid: KpWEBEd9nUQ
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 63rd episode of a regular devlog about all things OctoPrint which 
   was recorded on April 11th 2025.
 slug: octoprint-on-air-63

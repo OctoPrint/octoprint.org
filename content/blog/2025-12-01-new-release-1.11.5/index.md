@@ -9,7 +9,7 @@ prior:
   - release: 1.11.3
     link: /blog/2025/09/09/new-release-1.11.3/
 tags:
-- Release
+- release
 summary: "The fifth bugfix release for 1.11.x, fixing some bugs reported since the
   release of 1.11.0."
 slug: new-release-1.11.5

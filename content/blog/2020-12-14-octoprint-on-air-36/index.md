@@ -5,7 +5,7 @@ author: foosel
 date: 2020-12-14 17:40:00 +0100
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The thirty-sixth episode of a monthly live broadcast for Patrons which 
   aired live on December 11th 2020.
 slug: octoprint-on-air-36

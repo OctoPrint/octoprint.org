@@ -7,7 +7,7 @@ contributors:
 - QuinnDamerell
 
 tags:
-- Release
+- release
 summary: "This is a bugfix release to fix three issues in OctoPrint 1.7.0."
 slug: new-release-1.7.1
 release: 1.7.1

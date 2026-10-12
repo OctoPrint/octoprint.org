@@ -4,7 +4,7 @@ title: 'New release candidate: 1.4.0rc3'
 author: foosel
 date: 2019-12-12 14:45:00 +0100
 tags:
-- Release
+- release
 summary: The third release candidate for the upcoming 1.4.0 release fixes some 
   regressions observed with the first and second one.
 slug: new-release-candidate-1.4.0rc3

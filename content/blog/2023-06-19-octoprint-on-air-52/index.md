@@ -7,7 +7,7 @@ date: 2023-06-19 14:05:00 +0200
 recorded: June 15th
 vid: hnPa7VqiKDc
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 52nd episode of a regular live broadcast for Patrons which was 
   recorded on June 15th 2023.
 slug: octoprint-on-air-52

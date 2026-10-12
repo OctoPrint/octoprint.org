@@ -5,10 +5,10 @@ date: 2016-11-30 12:30:00 +0100
 comments: false
 
 tags:
-- Release
-summary: "With 1.2.18 I hereby present you with what will hopefully be the final
-  1.2.x release we see. The idea is to fix a couple of things just in case 1.3.0
-  won't prove to be stable enough for a pre-holiday release after all."
+- release
+summary: "With 1.2.18 I hereby present you with what will hopefully be the final 1.2.x
+  release we see. The idea is to fix a couple of things just in case 1.3.0 won't prove
+  to be stable enough for a pre-holiday release after all."
 slug: new release-1.2.18
 ---
 

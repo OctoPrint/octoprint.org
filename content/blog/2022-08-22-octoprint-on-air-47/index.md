@@ -8,7 +8,7 @@ recorded: August 18th
 vid: V-aiP4ymQ9A
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 47th episode of a regular live broadcast for Patrons which was 
   recorded on August 18th 2022.
 slug: octoprint-on-air-47

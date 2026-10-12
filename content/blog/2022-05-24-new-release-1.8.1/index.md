@@ -4,7 +4,7 @@ title: 'New release: 1.8.1'
 author: foosel
 date: 2022-05-24 12:00:00 +0200
 tags:
-- Release
+- release
 summary: "This first bugfix & security release for 1.8.0 fixes a few new issues reported,
   including one security vulnerability."
 slug: new-release-1.8.1

@@ -20,7 +20,7 @@ headsups:
     IP.
 
 tags:
-- Release
+- release
 summary: The third release candidate for the upcoming 1.5.0 release, with a fix 
   for a regression in the first two.
 slug: new-release-candidate-1.5.0rc3

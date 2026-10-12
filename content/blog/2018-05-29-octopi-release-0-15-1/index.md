@@ -3,7 +3,7 @@ author: foosel
 title: "New OctoPi Release: 0.15.1"
 date: 2018-05-29 12:15:00 +0200
 tags:
-- Octopi
+- octopi
 summary: OctoPi 0.15.1 is a minor release fixing a small issue discovered in the
   0.15.0 image.
 slug: octopi-release-0-15-1

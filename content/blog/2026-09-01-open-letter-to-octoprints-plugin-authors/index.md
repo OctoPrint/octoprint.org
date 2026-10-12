@@ -3,7 +3,7 @@ title: "An Open Letter to OctoPrint's Plugin Authors"
 author: foosel
 date: 2026-09-01 15:00:00 +0200
 tags:
-- Development
+- development
 summary: OctoPrint 2.0.0 is now on the fifth release candidate and getting close
   to the stable release. It's really time to look into your plugin's 
   compatibility, if not done yet!

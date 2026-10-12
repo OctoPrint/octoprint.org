@@ -8,7 +8,7 @@ channel: Maintenance RCs
 feedback: 4480
 
 tags:
-- Release
+- release
 summary: The fourth release candidate for the upcoming 1.8.0 release, fixing 
   another observed regression with the first ones.
 slug: new-release-candidate-1.8.0rc4

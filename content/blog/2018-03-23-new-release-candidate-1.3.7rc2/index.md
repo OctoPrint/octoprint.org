@@ -4,7 +4,7 @@ title: 'New release candidate: 1.3.7rc2'
 author: foosel
 date: 2018-03-23 16:15:00 +0100
 tags:
-- Release
+- release
 summary: This second release candidate of the 1.3.7 release fixes a couple of 
   bugs reported with the first one that were either regressions or issues with 
   new/improved functionality.

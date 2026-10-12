@@ -8,7 +8,7 @@ channel: Maintenance RCs
 feedback: 4792
 
 tags:
-- Release
+- release
 summary: The fifth release candidate for the upcoming 1.9.0 release, fixing a 
   regression reported on the last one.
 slug: new-release-candidate-1.9.0rc5

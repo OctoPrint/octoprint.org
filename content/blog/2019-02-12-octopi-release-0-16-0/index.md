@@ -3,7 +3,7 @@ author: foosel
 title: "New OctoPi Release: 0.16.0"
 date: 2019-02-12 11:10:00 +0100
 tags:
-- Octopi
+- octopi
 summary: OctoPi 0.16.0 comes with the latest OctoPrint 1.3.10 and Pi 3A+ 
   support, among other things.
 slug: octopi-release-0-16-0

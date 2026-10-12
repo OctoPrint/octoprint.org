@@ -6,7 +6,7 @@ date: 2017-12-05 15:45:00 +0100
 comments: false
 
 tags:
-- Release
+- release
 summary: This second release candidate of the 1.3.6 release fixes a couple of 
   bugs reported with the first one that were either regressions or issues with 
   new/improved functionality.

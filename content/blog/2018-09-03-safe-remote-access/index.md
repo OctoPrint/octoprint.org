@@ -4,7 +4,7 @@ title: "A Guide To Safe Remote Access of OctoPrint"
 author: jubaleth
 date: 2018-09-03 18:20:00 +0200
 tags:
-- News
+- news
 summary: In this guest post, community member Jubaleth will tell you about safe 
   ways to access your OctoPrint instance from the internet.
 slug: safe-remote-access

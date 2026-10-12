@@ -3,7 +3,7 @@ author: foosel
 title: "OctoPi Release Candidate 0.17.0rc1 needs testers!"
 date: 2019-10-30 10:40:00 +0100
 tags:
-- Octopi
+- octopi
 summary: Guy Sheffer published a release candidate for the release of OctoPi 
   0.17.0 and is looking for feedback!
 slug: octopi-release-candidate-0-17-0rc1

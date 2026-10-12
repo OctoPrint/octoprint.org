@@ -26,7 +26,7 @@ contributors:
 - jacopotediosi
 - jneilliii
 tags:
-- Release
+- release
 summary: The second release candidate for the upcoming 2.0.0 release with fixes 
   of observed regressions and newly discovered long standing bugs as well as 
   some improvements.

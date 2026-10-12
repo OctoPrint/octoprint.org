@@ -6,7 +6,7 @@ date: 2016-11-22 13:30:00 +0100
 comments: false
 
 tags:
-- Release
+- release
 summary: The first release candidate of the 1.2.18 release, which will hopefully
   be the final release before 1.3.0 becomes stable.
 slug: new-release-candidate-1.2.18rc1

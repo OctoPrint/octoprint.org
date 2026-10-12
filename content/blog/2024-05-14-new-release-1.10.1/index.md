@@ -20,7 +20,7 @@ security:
 - "[Jacopo Tediosi](https://github.com/jacopotediosi)"
 
 tags:
-- Release
+- release
 summary: "The first bugfix & security release for 1.10.x, fixing one security vulnerability,
   several bugs and also adding the one or other improvement."
 slug: new-release-1.10.1

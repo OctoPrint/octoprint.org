@@ -3,7 +3,7 @@ title: "Upgrade your OctoPrint install to Python 3!"
 author: cp2004
 date: 2020-09-10 13:45:00 +0200
 tags:
-- News
+- news
 summary: Give OctoPrint a spin on Python 3! Run this simple install script.
 slug: upgrade-to-py3
 ---

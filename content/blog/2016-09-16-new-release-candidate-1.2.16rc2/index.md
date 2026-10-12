@@ -6,7 +6,7 @@ date: 2016-09-16 13:30:00 +0200
 comments: false
 
 tags:
-- Release
+- release
 summary: The second release candidate of the 1.2.16 release, with two bug fixes 
   and a small improvement.
 slug: new-release-candidate-1.2.16rc2

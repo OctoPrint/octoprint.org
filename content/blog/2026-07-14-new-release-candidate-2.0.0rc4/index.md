@@ -22,7 +22,7 @@ closer_look:
   you install the [Bambu Connector](https://github.com/OctoPrint/OctoPrint-BambuConnector)
   (work in progress)?"
 tags:
-- Release
+- release
 summary: The fourth release candidate for the upcoming 2.0.0 release with fixes 
   of a bug in new functionality and a newly discovered long standing bug.
 slug: new-release-candidate-2.0.0rc4

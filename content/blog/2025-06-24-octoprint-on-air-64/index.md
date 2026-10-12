@@ -8,7 +8,7 @@ recorded: June 17th
 vid: 2ZPObDixax4
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 64th episode of a regular devlog about all things OctoPrint which 
   was recorded on June 17th 2025.
 slug: octoprint-on-air-64

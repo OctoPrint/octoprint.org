@@ -12,7 +12,7 @@ prior:
 contributors:
 - jacopotediosi
 tags:
-- Release
+- release
 summary: "The seventh bugfix release for 1.11.x, fixing some bugs reported since the
   release of 1.11.0."
 slug: new-release-1.11.7

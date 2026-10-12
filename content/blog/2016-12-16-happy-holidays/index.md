@@ -5,7 +5,7 @@ author: foosel
 date: 2016-12-16 17:45:00 +0100
 comments: false
 tags:
-- News
+- news
 summary: Happy Holidays, a Happy New Year and of course also Happy Printing and 
   we'll see each other again in 2017!
 slug: happy-holidays

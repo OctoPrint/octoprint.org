@@ -8,7 +8,7 @@ recorded: March 31st
 vid: IaOV8KFZCPI
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 44th episode of a regular live broadcast for Patrons which was 
   recorded on March 31st 2022.
 slug: octoprint-on-air-44

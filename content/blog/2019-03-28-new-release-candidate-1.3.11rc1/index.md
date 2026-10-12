@@ -4,7 +4,7 @@ title: 'New release candidate: 1.3.11rc1'
 author: foosel
 date: 2019-03-28 12:15:00 +0100
 tags:
-- Release
+- release
 summary: The first release candidate for the upcoming 1.3.11 stable release.
 slug: new-release-candidate-1.3.11rc1
 ---

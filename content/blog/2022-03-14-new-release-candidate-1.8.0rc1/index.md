@@ -60,7 +60,7 @@ contributors:
 - vector76
 
 tags:
-- Release
+- release
 summary: The first release candidate for the upcoming 1.8.0 release, containing 
   new features, improvements, bug fixes and dropping Python 2 support!
 slug: new-release-candidate-1.8.0rc1

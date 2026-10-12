@@ -5,7 +5,7 @@ author: foosel
 date: 2019-10-07 14:25:00 +0200
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The twenty sixth episode of a monthly live broadcast for Patrons which 
   aired live on September 20th 2019.
 slug: octoprint-on-air-26

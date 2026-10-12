@@ -3,7 +3,7 @@ title: "Funding update: You are amazing!"
 author: foosel
 date: 2023-10-30 14:15:00 +0100
 tags:
-- News
+- news
 summary: OctoPrint's financial situation has improved tremendously, thanks to 
   your support. Thank you so much!
 slug: funding-update

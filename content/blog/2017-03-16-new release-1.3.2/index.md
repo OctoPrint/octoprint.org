@@ -5,7 +5,7 @@ date: 2017-03-16 15:00:00 +0100
 comments: false
 
 tags:
-- Release
+- release
 summary: Now switched to a longer release cycle to leave some more time for 
   working on new functionality and similar things, I present you 1.3.2
 slug: new release-1.3.2

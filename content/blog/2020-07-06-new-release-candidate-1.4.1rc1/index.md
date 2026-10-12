@@ -3,7 +3,7 @@ title: "New release candidate: 1.4.1rc1"
 author: foosel
 date: 2020-07-06 13:40:00 +0200
 tags:
-- Release
+- release
 summary: The first release candidate for the upcoming 1.4.1 release, with 
   improvements and fixes!
 slug: new-release-candidate-1.4.1rc1

@@ -6,7 +6,7 @@ date: 2017-11-20 11:45:00 +0100
 comments: false
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The thirteenth episode of a monthly live broadcast for Patrons which 
   aired live on November 11th 2017.
 slug: octoprint-on-air-13

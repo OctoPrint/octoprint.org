@@ -17,7 +17,7 @@ closer_look:
 - Backup creation, download and restore functioning as expected.
 
 tags:
-- Release
+- release
 summary: The second release candidate for the upcoming 1.10.0 release containing
   some fixes of observed regressions and improvements of newly added 
   functionality!

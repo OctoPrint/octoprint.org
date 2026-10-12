@@ -6,7 +6,7 @@ date: 2017-07-27 14:25:00 +0200
 comments: false
 
 tags:
-- Release
+- release
 summary: This second release candidate of the 1.3.5 release fixes a couple of 
   bugs reported with the first one the were either regressions or issues with 
   new/improved functionality.

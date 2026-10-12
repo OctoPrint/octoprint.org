@@ -4,7 +4,7 @@ title: 'New release: 1.5.2'
 author: foosel
 date: 2020-12-10 13:40:00 +0100
 tags:
-- Release
+- release
 summary: "This is a hotfix release to fix one bug and add a workaround for a third
   party dependency issue."
 slug: new-release-1.5.2

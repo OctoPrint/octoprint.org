@@ -3,7 +3,7 @@ author: foosel
 title: "A new camera stack for OctoPi"
 date: 2023-05-24 14:00:00 +0200
 tags:
-- Octopi
+- octopi
 summary: For the past few months, I've not only worked on OctoPrint 1.9.0 and 
   its RCs, but I've also been working on a new camera stack for OctoPi. Today I 
   want to tell you a bit more about it.

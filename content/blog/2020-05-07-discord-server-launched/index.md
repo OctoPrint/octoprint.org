@@ -4,7 +4,7 @@ title: "Official Discord server launched!"
 author: foosel
 date: 2020-05-07 12:00:00 +0200
 tags:
-- News
+- news
 summary: OctoPrint now has an official Discord server, find the invite at 
   discord.octoprint.org!
 slug: discord-server-launched

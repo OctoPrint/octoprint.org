@@ -7,7 +7,7 @@ date: 2017-11-01 15:45:00 +0100
 comments: false
 
 tags:
-- Important
+- important
 summary: If you are still running OctoPi 0.12 or old pip and setuptools 
   versions, due to some changes recently done in the python infrastructure 
   you'll need to run some manual commands or you will no longer be able to 

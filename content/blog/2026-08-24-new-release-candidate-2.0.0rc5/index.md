@@ -29,7 +29,7 @@ closer_look:
   you install the [Bambu Connector](https://github.com/OctoPrint/OctoPrint-BambuConnector)
   (work in progress)?"
 tags:
-- Release
+- release
 summary: The fifth release candidate for the upcoming 2.0.0 release with some 
   more fixes of regressions and some long standing bugs.
 slug: new-release-candidate-2.0.0rc5

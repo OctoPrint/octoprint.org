@@ -4,7 +4,7 @@ title: 'New release candidate: 1.3.7rc1'
 author: foosel
 date: 2018-03-19 17:00:00 +0100
 tags:
-- Release
+- release
 summary: The first release candidate of the 1.3.7 release, with various 
   improvements and bug fixes.
 slug: new-release-candidate-1.3.7rc1

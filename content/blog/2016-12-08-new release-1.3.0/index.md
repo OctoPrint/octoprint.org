@@ -5,7 +5,7 @@ date: 2016-12-08 14:00:00 +0100
 comments: false
 
 tags:
-- Release
+- release
 summary: After over a year of work and overshadowed by a full blown project 
   funding crisis, today the much anticipated 1.3.0 release finally sees the 
   light of day!

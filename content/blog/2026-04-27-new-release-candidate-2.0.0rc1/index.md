@@ -58,7 +58,7 @@ headsups:
 
     If you are a plugin author, you **NEED** to consult [this migration guide](https://docs.octoprint.org/en/dev/plugins/migration_2_0_0.html) to check and update your plugin so it continues to work against OctoPrint 2.0.0. You might want to check out [this scanner tool by @jacopotediosi](https://github.com/jacopotediosi/octoscanner) that allows you to scan your plugin's source code for any deprecated usages, upcoming issues with 2.0.0 and also packaging related problems.
 tags:
-- Release
+- release
 summary: The first release candidate for the upcoming 2.0.0 release that brings 
   support for connection options other than serial, native thumbnail support, 
   better integration of the printer's storage, multi-storage management, and of 

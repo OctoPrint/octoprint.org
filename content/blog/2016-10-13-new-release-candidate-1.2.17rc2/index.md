@@ -6,7 +6,7 @@ date: 2016-10-13 13:20:00 +0200
 comments: false
 
 tags:
-- Release
+- release
 summary: Another release candidate for 1.2.17 that fixes another bug from 1.2.16
   and adds some internal improvements as well.
 slug: new-release-candidate-1.2.17rc2

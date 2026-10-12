@@ -5,7 +5,7 @@ author: foosel
 date: 2016-11-28 15:50:00 +0100
 comments: false
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The recording of the sixth episode of a monthly live broadcast for 
   Patrons, which aired live on November 27th.
 slug: octoprint-on-air-6

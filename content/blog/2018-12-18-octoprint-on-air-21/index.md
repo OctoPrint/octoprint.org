@@ -5,7 +5,7 @@ author: foosel
 date: 2018-12-18 12:20:00 +0100
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The twenty first episode of a monthly live broadcast for Patrons which 
   aired live on December 14th 2018.
 slug: octoprint-on-air-21

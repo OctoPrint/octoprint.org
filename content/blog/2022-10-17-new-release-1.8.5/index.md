@@ -9,7 +9,7 @@ prior:
     link: /blog/2022/09/20/new-release-1.8.3/
 
 tags:
-- Release
+- release
 summary: "This fifth bugfix release for 1.8.0 fixes two newly reported bugs and gets
   rid of a runtime warning."
 slug: new-release-1.8.5

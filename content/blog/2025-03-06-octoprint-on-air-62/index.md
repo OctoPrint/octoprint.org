@@ -8,7 +8,7 @@ recorded: February 27th
 vid: Du6CYA0NMJI
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 62nd episode of a regular devlog about all things OctoPrint which 
   was recorded on February 27th 2025.
 slug: octoprint-on-air-62

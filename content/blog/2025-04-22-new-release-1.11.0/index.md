@@ -108,7 +108,7 @@ stats:
     printtime: 2288
 
 tags:
-- Release
+- release
 summary: "In development now since January 2024, and in community testing since January
   2025, I'm proud to finally present you with OctoPrint 1.11.0!"
 slug: new-release-1.11.0

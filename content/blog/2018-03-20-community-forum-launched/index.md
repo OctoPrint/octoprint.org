@@ -4,7 +4,7 @@ title: "New community forum launched!"
 author: foosel
 date: 2018-03-20 12:40:00 +0100
 tags:
-- News
+- news
 summary: OctoPrint finally has its own community forum at 
   discourse.octoprint.org!
 slug: community-forum-launched

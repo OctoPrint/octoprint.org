@@ -4,7 +4,7 @@ author: foosel
 date: 2016-09-04 15:00:00 +0200
 comments: false
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The fourth episode of a monthly live broadcast for Patrons
 slug: octoprint-on-air-4
 ---

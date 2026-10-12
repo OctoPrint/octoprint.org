@@ -10,7 +10,7 @@ guid: /blog/2025/11/16/octoprint-on-air-68/
 redirect_from:
 - /blog/2025/11/16/octoprint-on-air-68/
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 68th episode of a regular devlog about all things OctoPrint which 
   was recorded on December 11th 2025.
 slug: octoprint-on-air-68

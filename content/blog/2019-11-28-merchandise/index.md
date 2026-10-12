@@ -4,7 +4,7 @@ title: 'Official OctoPrint Merchandise Shops launched!'
 author: foosel
 date: 2019-11-28 16:30:00 +0100
 tags:
-- News
+- news
 summary: If you have been wondering where to buy OctoPrint merch like shirts and
   such, wonder no more - the Official Merchandise Shops are there!
 slug: merchandise

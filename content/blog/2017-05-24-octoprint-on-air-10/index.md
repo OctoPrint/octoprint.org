@@ -5,7 +5,7 @@ author: foosel
 date: 2017-05-24 10:00:00 +0200
 comments: false
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The recording of the tenth episode of a monthly live broadcast for 
   Patrons, which aired live on May 13th.
 slug: octoprint-on-air-10

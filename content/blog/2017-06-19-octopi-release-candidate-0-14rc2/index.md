@@ -4,7 +4,7 @@ title: "OctoPi Release Candidate 0.14rc2 needs testers!"
 date: 2017-06-19 16:00:00 +0200
 comments: false
 tags:
-- Octopi
+- octopi
 summary: Guy Sheffer just published a second release candidate for the next 
   OctoPi release 0.14 and is looking for feedback!
 slug: octopi-release-candidate-0-14rc2

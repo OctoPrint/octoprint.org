@@ -5,7 +5,7 @@ author: foosel
 date: 2018-08-13 14:30:00 +0200
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The eighteenth episode of a monthly live broadcast for Patrons which 
   aired live on July 28th 2018.
 slug: octoprint-on-air-18

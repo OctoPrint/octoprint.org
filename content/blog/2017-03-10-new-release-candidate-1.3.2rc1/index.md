@@ -7,7 +7,7 @@ comments: false
 
 
 tags:
-- Release
+- release
 summary: The first release candidate of the 1.3.2 release, with various 
   improvements and bug fixes.
 slug: new-release-candidate-1.3.2rc1

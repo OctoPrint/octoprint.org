@@ -5,7 +5,7 @@ author: foosel
 date: 2016-10-20 10:20:00 +0200
 comments: false
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The recording of the fifth episode of a monthly live broadcast for 
   Patrons, which aired live on October 8th.
 slug: octoprint-on-air-5

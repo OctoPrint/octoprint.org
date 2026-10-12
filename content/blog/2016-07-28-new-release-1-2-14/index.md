@@ -4,7 +4,7 @@ author: foosel
 date: 2016-07-28 14:20:00 +0200
 comments: false
 tags:
-- Release
+- release
 summary: A big load of improvements and of course the usual share of fixes of 
   bugs and minor annoyances awaits you in this release fresh off the presses.
 slug: new-release-1-2-14

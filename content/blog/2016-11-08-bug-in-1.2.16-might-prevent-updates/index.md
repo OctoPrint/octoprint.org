@@ -5,7 +5,7 @@ title: Bug in 1.2.16 might prevent updates
 date: 2016-11-08 15:10:00 +0100
 comments: false
 tags:
-- Important
+- important
 summary: If you get an error when trying to upgrade from 1.2.16, open the 
   settings dialog and click "Save" (you don't have to modify anything!). Your 
   update should work now.

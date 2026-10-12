@@ -4,7 +4,7 @@ title: "Community Forum Migration"
 author: jubaleth
 date: 2019-03-06 12:20:00 +0200
 tags:
-- News
+- news
 summary: On February 11th 2019 we migrated the community forums to a new server.
   This was our experience.
 slug: community-forum-migration

@@ -5,7 +5,7 @@ author: foosel
 date: 2017-01-17 11:00:00 +0100
 comments: false
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The recording of the seventh episode of a monthly live broadcast for 
   Patrons, which aired live on January 14th.
 slug: octoprint-on-air-7

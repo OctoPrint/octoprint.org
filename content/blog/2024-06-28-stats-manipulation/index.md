@@ -3,7 +3,7 @@ title: "OctoPrint's anonymous usage stats were manipulated"
 author: foosel
 date: 2024-06-28 07:20:00 +0200
 tags:
-- News
+- news
 summary: OctoPrint's anonymous usage stats were manipulated, here's what we know
 slug: stats-manipulation
 oglogo: og-logo-angry-2

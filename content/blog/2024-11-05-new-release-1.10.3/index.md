@@ -15,7 +15,7 @@ security:
 - "[Jacopo Tediosi](https://github.com/jacopotediosi)"
 
 tags:
-- Release
+- release
 summary: "The third security & bugfix release for 1.10.x, fixing some security vulnerabilities
   and bugs reported since the release of 1.10.2."
 slug: new-release-1.10.3

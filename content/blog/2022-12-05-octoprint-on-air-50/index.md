@@ -5,7 +5,7 @@ author: foosel
 date: 2022-12-05 16:50:00 +0100
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: All of you are invited to join me on Monday, December 12th at 17:00 CET
   on YouTube, where the next OctoPrint On Air episode will air live. It will be 
   a birthday special as OctoPrint is turning 10!

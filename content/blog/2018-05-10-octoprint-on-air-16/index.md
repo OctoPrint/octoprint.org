@@ -5,7 +5,7 @@ author: foosel
 date: 2018-05-10 11:15:00 +0200
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The sixteenth episode of a monthly live broadcast for Patrons which 
   aired live on May 5th 2018.
 slug: octoprint-on-air-16

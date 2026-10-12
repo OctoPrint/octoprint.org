@@ -8,7 +8,7 @@ recorded: October 21st
 vid: X35ktGa4KhQ
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 41st episode of a monthly live broadcast for Patrons which was 
   recorded on October 21st 2021.
 slug: octoprint-on-air-41

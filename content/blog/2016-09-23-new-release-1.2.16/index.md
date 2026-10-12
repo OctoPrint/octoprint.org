@@ -5,7 +5,7 @@ date: 2016-09-23 11:00:00 +0200
 comments: false
 
 tags:
-- Release
+- release
 summary: "Another shiny maintenance release with various improvements and bug fixes
   plus the new release channel feature awaits you!"
 slug: new-release-1.2.16

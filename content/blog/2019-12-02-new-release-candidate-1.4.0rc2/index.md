@@ -4,7 +4,7 @@ title: 'New release candidate: 1.4.0rc2'
 author: foosel
 date: 2019-12-02 16:15:00 +0100
 tags:
-- Release
+- release
 summary: The second release candidate for the upcoming 1.4.0 release fixes some 
   regressions observed with the first one.
 slug: new-release-candidate-1.4.0rc2

@@ -7,7 +7,7 @@ date: 2024-11-20 08:30:00 +0100
 recorded: November 14th
 vid: opOZTwtfO4s
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 60th episode of a regular devlog about all things OctoPrint which 
   was recorded on November 14th 2024.
 slug: octoprint-on-air-60

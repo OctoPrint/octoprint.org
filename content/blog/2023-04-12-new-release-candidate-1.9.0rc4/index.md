@@ -12,7 +12,7 @@ contributors:
 - JoveToo
 
 tags:
-- Release
+- release
 summary: The fourth release candidate for the upcoming 1.9.0 release, fixing 
   some issues reported on the last ones and improving on some newly added 
   functionality.

@@ -4,7 +4,7 @@ author: foosel
 date: 2016-06-16 12:30:00 +0200
 comments: false
 tags:
-- Release
+- release
 summary: "What's this, another release just one week after the last one? Yep, and
   it's just to make your OctoPrint experience as smooth as possible :)"
 slug: new-release-1-2-13

@@ -4,7 +4,7 @@ title: 'New release candidate: 1.4.0rc4'
 author: foosel
 date: 2020-01-28 14:45:00 +0100
 tags:
-- Release
+- release
 summary: The fourth release candidate for the upcoming 1.4.0 release fixes some 
   regressions observed with the prior ones. It's now also available on the 
   Maintenance RCs channel.

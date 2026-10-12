@@ -4,7 +4,7 @@ title: "Happy Birthday, OctoPrint!"
 author: foosel
 date: 2022-12-13 14:30:00 +0100
 tags:
-- News
+- news
 summary: OctoPrint is turning 10 years old this holiday season! Time to reflect 
   a bit on its history, and to eat cake!
 slug: happy-birthday-octoprint

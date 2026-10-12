@@ -6,7 +6,7 @@ date: 2016-12-02 14:00:00 +0100
 comments: false
 
 tags:
-- Release
+- release
 summary: The third release candidate for the upcoming huge 1.3.0 release, now 
   available for your testing pleasure!
 slug: new-release-candidate-1.3.0rc3

@@ -15,7 +15,7 @@ contributors:
 security:
 - "[@jacopotediosi](https://github.com/jacopotediosi)"
 tags:
-- Release
+- release
 summary: "The fourth bugfix release for 1.11.x, fixing some bugs, security issues
   and user experience problems reported since the release of 1.11.0."
 slug: new-release-1.11.4

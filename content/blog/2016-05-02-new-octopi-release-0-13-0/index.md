@@ -4,7 +4,7 @@ title: "New OctoPi Release: 0.13.0"
 date: 2016-05-02 16:50:00 +0200
 comments: false
 tags:
-- Octopi
+- octopi
 summary: "Guy Sheffer just released a new version of OctoPi, version 0.13.0."
 slug: new-octopi-release-0-13-0
 ---

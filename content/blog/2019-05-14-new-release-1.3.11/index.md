@@ -4,7 +4,7 @@ title: 'New release: 1.3.11'
 author: foosel
 date: 2019-05-14 11:00:00 +0200
 tags:
-- Release
+- release
 summary: After three months of development and another two of testing by the 
   community, I'm happy to present you OctoPrint 1.3.11. While this is a 
   maintenance release, it not only packs a bunch of bug fixes but also a whole 

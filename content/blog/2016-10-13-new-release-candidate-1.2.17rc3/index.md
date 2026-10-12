@@ -6,7 +6,7 @@ date: 2016-10-13 17:00:00 +0200
 comments: false
 
 tags:
-- Release
+- release
 summary: This RC for 1.2.17 fixes a regression that was introduced by 1.2.17rc2 
   released earlier today.
 slug: new-release-candidate-1.2.17rc3

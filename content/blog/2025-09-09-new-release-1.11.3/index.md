@@ -30,7 +30,7 @@ headsups:
 security:
 - "[@prabhatverma47](https://github.com/prabhatverma47)"
 tags:
-- Release
+- release
 summary: "The third bugfix release for 1.11.x, fixing some bugs, security issues and
   user experience problems reported since the release of 1.11.0."
 slug: new-release-1.11.3

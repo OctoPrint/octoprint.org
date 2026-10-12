@@ -6,7 +6,7 @@ contributors:
 - cp2004
 - JoveToo
 tags:
-- Release
+- release
 summary: "A first bugfix release for 1.9.x, fixing a few issues reported since the
   release of 1.9.0."
 slug: new-release-1.9.1

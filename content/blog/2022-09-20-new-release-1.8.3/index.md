@@ -34,7 +34,7 @@ headsups:
     can find the updated docs on the `BlueprintPlugin` mixin here](https://docs.octoprint.org/en/master/plugins/mixins.html#octoprint.plugin.BlueprintPlugin).
 
 tags:
-- Release
+- release
 summary: "This third bugfix & security release for 1.8.0 fixes a few new issues reported,
   including various security vulnerabilities."
 slug: new-release-1.8.3

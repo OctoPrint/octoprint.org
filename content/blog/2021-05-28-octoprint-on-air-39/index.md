@@ -5,7 +5,7 @@ author: foosel
 date: 2021-05-28 16:30:00 +0200
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The thirty-ninth episode of a monthly live broadcast for Patrons which 
   was recorded on May 21st 2021.
 slug: octoprint-on-air-39

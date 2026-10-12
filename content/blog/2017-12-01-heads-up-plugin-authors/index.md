@@ -6,7 +6,7 @@ date: 2017-12-01 10:15:00 +0100
 comments: false
 
 tags:
-- Development
+- development
 summary: A change to solve issues with plugins bundling JS assets causing 
   interference with others  might cause errors for some plugins that go a bit 
   further than just run-off-the-mill view models. Read on to learn if your 

@@ -18,7 +18,7 @@ closer_look:
 - Remember me functionality.
 
 tags:
-- Release
+- release
 summary: The seventh release candidate for the upcoming 1.11.0 release 
   containing a for a regression in the previous one!
 slug: new-release-candidate-1.11.0rc7

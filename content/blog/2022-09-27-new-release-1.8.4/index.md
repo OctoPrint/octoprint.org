@@ -9,7 +9,7 @@ prior:
     link: /blog/2022/09/20/new-release-1.8.3/
 
 tags:
-- Release
+- release
 summary: "This fourth bugfix release for 1.8.0 fixes a few newly reported issues and
   introduces a reverse proxy test page."
 slug: new-release-1.8.4

@@ -4,7 +4,7 @@ author: foosel
 title: "OctoPrint 1.8.0 will require Python 3"
 date: 2022-01-31 16:00:00 +0100
 tags:
-- News
+- news
 summary: If you still haven't switched your OctoPrint instance to Python 3, now 
   is the time. OctoPrint 1.8.0 and later versions will require Python 3.
 slug: octoprint-1.8.0-will-require-python-3

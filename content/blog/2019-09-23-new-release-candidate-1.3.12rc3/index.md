@@ -4,7 +4,7 @@ title: 'New release candidate: 1.3.12rc3'
 author: foosel
 date: 2019-09-23 15:00:00 +0200
 tags:
-- Release
+- release
 summary: The third release candidate for the upcoming 1.3.12 stable release.
 slug: new-release-candidate-1.3.12rc3
 ---

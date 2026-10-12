@@ -3,7 +3,7 @@ author: foosel
 title: "New OctoPi Release: 0.17.0"
 date: 2019-11-14 10:15:00 +0100
 tags:
-- Octopi
+- octopi
 summary: OctoPi 0.17.0 comes with the latest OctoPrint 1.3.12 and Pi 4B support,
   among other things.
 slug: octopi-release-0-17-0

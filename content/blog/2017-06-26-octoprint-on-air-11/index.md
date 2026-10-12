@@ -5,7 +5,7 @@ author: foosel
 date: 2017-06-26 10:30:00 +0200
 comments: false
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The eleventh episode of a monthly live broadcast for Patrons, which 
   this time was prerecorded due to scheduling issues.
 slug: octoprint-on-air-11

@@ -93,7 +93,7 @@ stats:
     printtime: 16800
 
 tags:
-- Release
+- release
 summary: "After almost 4 months of development and a three week long RC phase, I'm
   proud to present you OctoPrint 1.5.0!"
 slug: new-release-1.5.0

@@ -8,7 +8,7 @@ recorded: November 3rd
 vid: gba-mYS0Ugk
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 49th episode of a regular live broadcast for Patrons which was 
   recorded on November 3rd 2022.
 slug: octoprint-on-air-49

@@ -135,7 +135,7 @@ stats:
     instances: 714
     printtime: 16913
 tags:
-- Release
+- release
 summary: "Almost a year in development, followed by close to 3 months of an RC phase,
   it's finally time to push out 1.9.0!"
 slug: new-release-1.9.0

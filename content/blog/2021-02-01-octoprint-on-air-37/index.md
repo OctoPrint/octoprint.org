@@ -5,7 +5,7 @@ author: foosel
 date: 2021-02-01 12:25:00 +0100
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The thirty-seventh episode of a monthly live broadcast for Patrons 
   which aired live on January 29th 2021.
 slug: octoprint-on-air-37

@@ -18,7 +18,7 @@ closer_look:
 - Remember me functionality.
 
 tags:
-- Release
+- release
 summary: The fifth release candidate for the upcoming 1.11.0 release containing 
   a fix of an observed regression in the previous ones!
 slug: new-release-candidate-1.11.0rc5

@@ -8,7 +8,7 @@ channel: Maintenance RCs
 feedback: 4750
 
 tags:
-- Release
+- release
 summary: The second release candidate for the upcoming 1.9.0 release, fixing one
   issue immediately found in the first one!
 slug: new-release-candidate-1.9.0rc2

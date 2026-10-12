@@ -5,7 +5,7 @@ author: foosel
 date: 2020-07-27 17:30:00 +0200
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The thirty-third episode of a monthly live broadcast for Patrons which 
   aired live on July 24th 2020.
 slug: octoprint-on-air-33

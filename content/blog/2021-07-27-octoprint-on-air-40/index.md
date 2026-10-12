@@ -5,7 +5,7 @@ author: foosel
 date: 2021-07-27 15:30:00 +0200
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The fortieth episode of a monthly live broadcast for Patrons which was 
   recorded on July 21st 2021.
 slug: octoprint-on-air-40

@@ -3,7 +3,7 @@ title: "New release: 1.4.1"
 author: foosel
 date: 2020-08-04 11:45:00 +0200
 tags:
-- Release
+- release
 summary: "Fresh off the presses, just through a month long release candidate cycle
   and the first one to be developed during a raging pandemic, I present you the next
   stable release of OctoPrint: 1.4.1!"

@@ -8,7 +8,7 @@ recorded: June 23rd
 vid: dq4tHeUvkCM
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 46th episode of a regular live broadcast for Patrons which was 
   recorded on June 23rd 2022.
 slug: octoprint-on-air-46

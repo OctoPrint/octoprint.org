@@ -3,7 +3,7 @@ author: foosel
 title: "OctoPi Release Candidate 0.15.1rc1 needs testers!"
 date: 2018-05-10 10:30:00 +0200
 tags:
-- Octopi
+- octopi
 summary: Guy Sheffer just published a release candidate for a hotfix release of 
   OctoPi 0.15 and is looking for feedback!
 slug: octopi-release-candidate-0-15-1rc1

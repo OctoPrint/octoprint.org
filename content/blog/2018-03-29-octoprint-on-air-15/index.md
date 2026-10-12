@@ -5,7 +5,7 @@ author: foosel
 date: 2018-03-29 12:55:00 +0200
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The fifteenth episode of a monthly live broadcast for Patrons which 
   aired live on March 17th 2018.
 slug: octoprint-on-air-15

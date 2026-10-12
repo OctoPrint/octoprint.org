@@ -3,7 +3,7 @@ title: 'New release: 1.3.9'
 author: foosel
 date: 2018-07-25 16:00:00 +0200
 tags:
-- Release
+- release
 summary: Despite the current heat wave pressing down on Germany making 
   development harder than usual, I'm happy to present you OctoPrint 1.3.9. This 
   is a true maintenance release again, consisting of various improvements and 

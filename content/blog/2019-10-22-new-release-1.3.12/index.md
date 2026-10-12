@@ -4,7 +4,7 @@ title: 'New release: 1.3.12'
 author: foosel
 date: 2019-10-22 12:00:00 +0200
 tags:
-- Release
+- release
 summary: Still in time for the spooky season of the year 🎃 and after 5 months of
   development and testing by the community I present you OctoPrint 1.3.12.
 slug: new-release-1.3.12

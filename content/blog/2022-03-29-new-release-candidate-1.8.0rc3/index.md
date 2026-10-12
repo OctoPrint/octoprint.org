@@ -8,7 +8,7 @@ channel: Maintenance RCs
 feedback: 4475
 
 tags:
-- Release
+- release
 summary: The third release candidate for the upcoming 1.8.0 release, fixing 
   observed regressions and adding a workaround for recent third party dependency
   issues.

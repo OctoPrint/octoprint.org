@@ -4,7 +4,7 @@ title: 'New release candidate: 1.3.10rc3'
 author: foosel
 date: 2018-11-28 14:40:00 +0100
 tags:
-- Release
+- release
 summary: The third release candidate of the 1.3.10 release, with fixes for 
   regressions discovered in 1.3.10rc2 and also a small number of improvements of
   the newly added functionality.

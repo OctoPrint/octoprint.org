@@ -4,7 +4,7 @@ title: 'New release candidate: 1.3.7rc4'
 author: foosel
 date: 2018-04-04 12:00:00 +0200
 tags:
-- Release
+- release
 summary: This fourth release candidate fixes three bugs that were discovered and
   reported over the easter weekend in the 1.3.7 RCs.
 slug: new-release-candidate-1.3.7rc4

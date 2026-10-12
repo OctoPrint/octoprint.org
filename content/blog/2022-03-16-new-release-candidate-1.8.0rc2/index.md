@@ -8,7 +8,7 @@ channel: Maintenance RCs
 feedback: 4457
 
 tags:
-- Release
+- release
 summary: The second release candidate for the upcoming 1.8.0 release, fixing 
   observed regressions and adding some improvements of added functionality.
 slug: new-release-candidate-1.8.0rc2

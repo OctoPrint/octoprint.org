@@ -8,7 +8,7 @@ recorded: May 19th
 vid: Rcd7yvOrJB0
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 45th episode of a regular live broadcast for Patrons which was 
   recorded on May 19th 2022.
 slug: octoprint-on-air-45

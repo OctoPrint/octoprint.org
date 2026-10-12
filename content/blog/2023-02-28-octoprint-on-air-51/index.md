@@ -7,7 +7,7 @@ date: 2023-02-28 14:20:00 +0100
 recorded: February 16th
 vid: v4eJ8R2IF30
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The 51st episode of a regular live broadcast for Patrons which was 
   recorded on February 16th 2023.
 slug: octoprint-on-air-51

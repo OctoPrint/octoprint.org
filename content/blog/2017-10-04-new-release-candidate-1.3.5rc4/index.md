@@ -6,7 +6,7 @@ date: 2017-10-04 14:45:00 +0200
 comments: false
 
 tags:
-- Release
+- release
 summary: The fourth release candidate of the 1.3.5 release fixes a few issues 
   discovered in the earlier ones that were either regressions or issues with 
   new/improved functionality.

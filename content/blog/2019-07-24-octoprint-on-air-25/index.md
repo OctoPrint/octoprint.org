@@ -5,7 +5,7 @@ author: foosel
 date: 2019-07-24 12:15:00 +0200
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The twenty fifth episode of a monthly live broadcast for Patrons which 
   aired live on July 5th 2019.
 slug: octoprint-on-air-25

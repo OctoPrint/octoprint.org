@@ -3,7 +3,7 @@ author: foosel
 title: Bug in 1.2.7 prevents updates
 comments: false
 tags:
-- Important
+- important
 summary: "If you are currently running version 1.2.7 you'll need to install the \n\
   \"Updatefix 1.2.7\" plugin from the plugin repository before you can \nupdate your
   OctoPrint installation.\nVersion 1.2.7 sadly contains a bug that breaks updating

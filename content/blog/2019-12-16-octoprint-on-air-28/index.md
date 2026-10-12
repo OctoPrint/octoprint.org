@@ -5,7 +5,7 @@ author: foosel
 date: 2019-12-16 15:35:00 +0100
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The twenty eighth episode of a monthly live broadcast for Patrons which
   aired live on December 13th 2019.
 slug: octoprint-on-air-28

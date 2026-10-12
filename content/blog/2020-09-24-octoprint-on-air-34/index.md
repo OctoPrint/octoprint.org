@@ -5,7 +5,7 @@ author: foosel
 date: 2020-09-24 14:00:00 +0200
 
 tags:
-- OctoPrint on Air
+- octoprint on air
 summary: The thirty-fourth episode of a monthly live broadcast for Patrons which
   aired live on September 18th 2020.
 slug: octoprint-on-air-34

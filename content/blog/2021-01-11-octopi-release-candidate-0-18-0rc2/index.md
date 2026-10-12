@@ -3,7 +3,7 @@ author: foosel
 title: "OctoPi Release Candidate 0.18.0rc2 needs testers!"
 date: 2021-01-11 14:00:00 +0100
 tags:
-- Octopi
+- octopi
 summary: Guy Sheffer just published a second release candidate for the release 
   of OctoPi 0.18.0 and is looking for feedback!
 slug: octopi-release-candidate-0-18-0rc2

@@ -4,7 +4,7 @@ title: 'New release: 1.5.1'
 author: foosel
 date: 2020-12-04 11:50:00 +0100
 tags:
-- Release
+- release
 summary: "This is a hotfix release to fix two bugs in 1.5 that sadly only were reported
   after the release candidate phase."
 slug: new-release-1.5.1

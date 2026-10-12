@@ -6,7 +6,7 @@ date: 2017-01-13 14:30:00 +0100
 comments: false
 
 tags:
-- Release
+- release
 summary: Happy 2017! Let's start it with a release candidate for 1.3.1 :)
 slug: new-release-candidate-1.3.1rc1
 ---

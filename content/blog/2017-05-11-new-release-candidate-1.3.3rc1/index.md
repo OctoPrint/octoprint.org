@@ -6,7 +6,7 @@ date: 2017-05-11 17:00:00 +0200
 comments: false
 
 tags:
-- Release
+- release
 summary: The first release candidate of the 1.3.3 release, with various 
   improvements and bug fixes.
 slug: new-release-candidate-1.3.3rc1

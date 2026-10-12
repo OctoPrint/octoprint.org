@@ -6,7 +6,7 @@ date: 2017-01-20 16:00:00 +0100
 comments: false
 
 tags:
-- Release
+- release
 summary: A second release candidate of 1.3.1 which was needed to correct a bug 
   fix present in 1.3.1rc1.
 slug: new-release-candidate-1.3.1rc2

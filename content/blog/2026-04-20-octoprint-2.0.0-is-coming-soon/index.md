@@ -3,7 +3,7 @@ title: "OctoPrint 2.0.0 is coming soon!"
 author: foosel
 date: 2026-04-20 17:00:00 +0200
 tags:
-- News
+- news
 summary: OctoPrint 2.0.0 will soon see a first release candidate, read what's 
   changed and how that might affect your third party plugins!
 slug: octoprint-2.0.0-is-coming-soon

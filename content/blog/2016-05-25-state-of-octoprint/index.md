@@ -4,7 +4,7 @@ author: foosel
 date: 2016-05-25 20:00:00 +0200
 comments: false
 tags:
-- News
+- news
 summary: A look at the state of OctoPrint, its current funding situation and how
   things will continue from here on.
 slug: state-of-octoprint
