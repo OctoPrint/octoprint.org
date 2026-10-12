@@ -116,6 +116,10 @@ permalinks:
   page:
     blog: /blog/:year/:month/:day/:slug/
 
+services:
+  rss:
+    limit: 10
+
 mainSections:
 - blog
 
