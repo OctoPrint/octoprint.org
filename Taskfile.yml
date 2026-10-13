@@ -1,0 +1,40 @@
+version: "3"
+
+dotenv: ['.env']
+
+vars:
+  TERMUX: '{{and .PREFIX (contains "com.termux" .PREFIX)}}'
+  TODAY: '{{now | date "2006-01-02"}}'
+  HUGO: '{{default "hugo" .HUGO}}'
+
+tasks:
+  clean:
+    desc: Clean output directory
+    cmds:
+      - |
+        rm -rf public || true
+
+  serve:
+    desc: Serve page on localhost w/ baseURL local.octoprint.org:1313, all posts visible
+    cmds:
+      - |
+        {{.HUGO}} server -D -E -F {{if .TERMUX}}--noBuildLock{{end}} --disableFastRender --bind=127.0.0.1 --baseURL http://local.octoprint.org:1313/
+
+  build:
+    desc: Create a production build of the site in ./public
+    cmds:
+      - |
+        {{.HUGO}} --minify {{if .TERMUX}}--noBuildLock{{end}}
+
+  update-mods:
+    desc: Updates all submodules
+    cmds:
+      - git submodule update --remote --merge
+      - cd themes/liftoff && git pull origin main
+
+  ### CI related
+
+  ci-update:
+    desc: Update GitHub Action workflow files to new versions of used actions
+    cmds:
+      - npx actions-up --include-branches
