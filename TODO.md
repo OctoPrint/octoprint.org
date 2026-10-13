@@ -52,3 +52,4 @@
     - [x] Browser check
 - [ ] Favicon
 - [x] Test RSS feeds against OctoPrint & RSS reader, should both detect no changes
+- [x] python eol API
