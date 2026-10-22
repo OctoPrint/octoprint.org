@@ -129,7 +129,7 @@ jobs:
       - name: 💎 Set up Ruby 3
         uses: ruby/setup-ruby@e81a8fa391b11a595c1b7ed84177cc0fe02faf83 # v1.328.0
         with:
-          ruby-version: "3.0"
+          ruby-version: "3.4"
           bundler-cache: true
 
       - name: 🔨 Build page
