@@ -43,26 +43,34 @@ OctoPi is available through the [Raspberry Pi Imager](https://www.raspberrypi.or
 >
 > Read and follow these instructions **precisely**.
 
-1. If you haven't already, **download and install [Raspberry Pi Imager](https://raspberrypi.org/software)** on your computer
+1. If you haven't already, **download and install [Raspberry Pi Imager](https://raspberrypi.org/software)** on your computer and run it.
 
-2. **Find the OctoPi image** under "Choose OS", by selecting "Other Specific Purpose OS" > "3D printing" > "OctoPi" and then the **"stable"** version.
+2. Select your **Device** from the list.
 
-3. **Open advanced options** by clicking on the button with the gear, or by using the keyboard shortcut <code>ctrl</code>+<code>shift</code>+<code>x</code> and then:
+3. **Find the OctoPi image** under "Choose OS", by selecting "Other Specific Purpose OS" > "3D printing" > "OctoPi" and then the **"stable"** version.
 
-   - **Configure your wifi options**: Set your SSID, password and WiFi country.
+   ![Raspberry Pi Imager OS Selection](/assets/img/download/select_os.png)
 
-   - **Change the _system_ password** in "Set username and password" by entering a new password to use for the system user "pi". This is _not_ the password you'll use for logging into
-     OctoPrint but one that you'll have to use to log into your Pi via SSH should you ever need to.
+4. Select your SD Card from the **Storage** list.
 
-   - Optionally: Change the configured timezone in "Set locale settings"
+5. **Customisation Settings**
+   1. Enter **Hostname** of choice.
+      ![Raspberry Pi Imager Customisation: Hostname](/assets/img/download/hostname.png)
+   2. Enter **Localisation** options.
+      ![Raspberry Pi Imager Customisation: Localisation](/assets/img/download/localisation.png)
+   3. Enter **User** details for local/SSH login
+      ![Raspberry Pi Imager Customisation: User](/assets/img/download/user.png)
+   4. Enter **Wi-Fi** details.
+      ![Raspberry Pi Imager Customisation: Wi-Fi](/assets/img/download/wifi.png)
+   5. Enable SSH in **Remote access**. This is useful for troubleshooting and installing system level requirements/dependencies as necessary.
+      ![Raspberry Pi Imager Customisation: Remote access](/assets/img/download/ssh.png)
 
-   - Optionally: Change the hostname in "Set hostname"
+6. **Write** the image to your SD card. **Do not format the SD card after writing, even if prompted to do so.** This will break the installation and you will have to start over!
+   ![Raspberry Pi Imager: Writing](/assets/img/download/write.png)
 
-   ![Advanced options, showing the "Set username and password" box ticked and a new password set, and showing the "Configure wireless LAN" box ticked and an SSID and Password set.](/assets/img/download/advanced-options.png)
+7. Once writing is complete, press the **Finish** button, put your SD Card into the pi and power it on.
 
-4. **Install the image to your SD card**, then plug everything in to your Raspberry Pi and boot it up. **Do not format the SD card after installing, even if prompted to do so.** This will break the installation and you will have to start over!
-
-5. **Access OctoPrint from your browser** via `http://octopi.local` or the hostname you
+8. **Access OctoPrint from your browser** via `http://octopi.local` or the hostname you
    chose ([if your computer supports bonjour](https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview))
    or `http://<your pi's ip address>`. `https` is available too, with a self-signed certificate
    (which means your browser will warn you about it being invalid - it isn't, it's just not recognized by your browser).
@@ -90,7 +98,6 @@ If you decide against using the Raspberry Pi Imager, here are some alternative s
    [if your computer supports bonjour](https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview)
    or the IP address assigned by your router), default username is `pi`, default password is `raspberry`.
    Run `sudo raspi-config`. Once that is open:
-
    1. Change the password via "Change User Password"
    2. Optionally: Change the configured timezone via "Localization Options" > "Timezone".
    3. Optionally: Change the hostname via "Network Options" > "Hostname". Your OctoPi instance will then no longer be reachable under `octopi.local` but rather the hostname you chose postfixed with `.local`, so keep that in mind.
