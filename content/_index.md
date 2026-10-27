@@ -54,12 +54,15 @@ Hand coded. Free of slop. Maintained by humans for humans.
 
 ## Screenshots
 
+{{< flickity >}}
+{{< figure src="/img/screenshots/temperature-tab.png" caption="OctoPrint's temperature tab allows monitoring and setting extruder, bed and chamber temperatures." >}}
+{{< figure src="/img/screenshots/control-tab.png" caption="On the control tab you can watch your printer working via the built-in webcam support, move the head, extrude, and access additional controls as well." >}}
+{{< figure src="/img/screenshots/gcode-viewer-tab.png" caption="The GCODE viewer tab gives you a preview and while printing also a live view of what is getting printed." >}}
+{{< figure src="/img/screenshots/terminal-tab.png" caption="Via the terminal tab you can watch what goes over the line between OctoPrint and your printer, and also send commands yourself." >}}
+{{< figure src="/img/screenshots/timelapse-tab.png" caption="The built-in timelapse mode supports taking regular stills from the camera and stitching together a timelapse video from that." >}}
+{{< figure src="/img/screenshots/upload-manager-dialog.png" caption="The built-in Upload Manager allows easy management of your file uploads." >}}
+{{< figure src="/img/screenshots/plugin-repo-dialog.png" caption="Install plugins created by the community via the built-in Plugin Manager." >}}
+{{< /flickity >}}
+
 {{< /section >}}
 
-{{< section >}}
-
-## From the OctoBlog...
-
-{{< recent-blog-posts limit=2 >}}
-
-{{< /section >}}
