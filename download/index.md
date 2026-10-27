@@ -54,22 +54,21 @@ OctoPi is available through the [Raspberry Pi Imager](https://www.raspberrypi.or
 4. Select your SD Card from the **Storage** list.
 
 5. **Customisation Settings**
-
    1. Enter **Hostname** of choice.
-    ![Raspberry Pi Imager Customisation: Hostname](/assets/img/download/hostname.png)
+      ![Raspberry Pi Imager Customisation: Hostname](/assets/img/download/hostname.png)
    2. Enter **Localisation** options.
-    ![Raspberry Pi Imager Customisation: Localisation](/assets/img/download/localisation.png)
+      ![Raspberry Pi Imager Customisation: Localisation](/assets/img/download/localisation.png)
    3. Enter **User** details for local/SSH login
-    ![Raspberry Pi Imager Customisation: User](/assets/img/download/user.png)
+      ![Raspberry Pi Imager Customisation: User](/assets/img/download/user.png)
    4. Enter **Wi-Fi** details.
-    ![Raspberry Pi Imager Customisation: Wi-Fi](/assets/img/download/wifi.png)
+      ![Raspberry Pi Imager Customisation: Wi-Fi](/assets/img/download/wifi.png)
    5. Enable SSH in **Remote access**. This is useful for troubleshooting and installing system level requirements/dependencies as necessary.
-    ![Raspberry Pi Imager Customisation: Remote access](/assets/img/download/ssh.png)
+      ![Raspberry Pi Imager Customisation: Remote access](/assets/img/download/ssh.png)
 
 6. **Write** the image to your SD card. **Do not format the SD card after writing, even if prompted to do so.** This will break the installation and you will have to start over!
    ![Raspberry Pi Imager: Writing](/assets/img/download/write.png)
 
-7. Once writing is complete, press the **Finish** button, put your SD Card into the pi and power it on. 
+7. Once writing is complete, press the **Finish** button, put your SD Card into the pi and power it on.
 
 8. **Access OctoPrint from your browser** via `http://octopi.local` or the hostname you
    chose ([if your computer supports bonjour](https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview))
@@ -95,7 +94,21 @@ If you decide against using the Raspberry Pi Imager, here are some alternative s
 
 3. **Plug everything into your Raspberry Pi and boot it up**
 
-4. **Access OctoPrint** through `http://octopi.local` ([if your computer supports bonjour](https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview))
+4. **Log into your Pi via SSH** (it is located at `octopi.local`
+   [if your computer supports bonjour](https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview)
+   or the IP address assigned by your router), default username is `pi`, default password is `raspberry`.
+   Run `sudo raspi-config`. Once that is open:
+   1. Change the password via "Change User Password"
+   2. Optionally: Change the configured timezone via "Localization Options" > "Timezone".
+   3. Optionally: Change the hostname via "Network Options" > "Hostname". Your OctoPi instance will then no longer be reachable under `octopi.local` but rather the hostname you chose postfixed with `.local`, so keep that in mind.
+
+   You can navigate in the menus using the arrow keys and <key>Enter</key>. To switch to selecting the buttons at the bottom use <key>Tab</key>.
+
+   **You do not need to expand the filesystem**, current versions of OctoPi do this automatically.
+
+   **You also do not need to manually enable the RaspiCam** if you have one, that is already taken care of on the image as well.
+
+5. **Access OctoPrint** through `http://octopi.local` ([if your computer supports bonjour](https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview))
    or `http://<your pi's ip address>`. `https` is available too, with a self-signed certificate
    (which means your browser will warn you about it being invalid - it isn't, it's just not recognized by your browser).
 
