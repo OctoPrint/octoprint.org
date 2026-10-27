@@ -43,36 +43,58 @@ If you haven't already, download and install
 [Raspberry Pi Imager](https://raspberrypi.org/software) on your computer
 {{< /step >}}
 
-{{< step number="2" title="Locate the OctoPi Image" >}}
+{{< step number="2" title="Select your device" >}}
+Chose your Raspberry Pi Model.
+{{< /step >}}
+
+{{< step number="3" title="Locate the OctoPi Image" >}}
 Find the OctoPi image under "Choose OS", by selecting
 "Other Specific Purpose OS" > "3D printing" > "OctoPi" and then the **"stable"** version.
+
+![Raspberry Pi Imager OS selection screen, showing "OctoPi stable" as option](select_os.png)
+
 {{< /step >}}
 
-{{< step number="3" title="Configure advanced options" >}}
-Open advanced options by clicking on the button with the gear icon, or by using the keyboard shortcut `Ctrl+Shift+X` and then:
-
-- **Configure your wifi options**: Set your SSID, password and WiFi country.
-
-- **Change the _system_ password** in "Set username and password" by entering a new password to use for the system user "pi". This is _not_ the password you'll use for logging into
-  OctoPrint but one that you'll have to use to log into your Pi via SSH should you ever need to.
-
-- Optionally: Change the configured timezone in "Set locale settings"
-
-- Optionally: Change the hostname in "Set hostname"
-
-![Advanced options, showing the "Set username and password" box ticked and a new password set, and showing the "Configure wireless LAN" box ticked and an SSID and Password set.](advanced-options.png)
+{{< step number="4" title="Storage selection" >}}
+Select your SD card from the storage list.
 {{< /step >}}
 
-{{< step number="4" title="Flash your SD card" >}}
+{{< step number="5" title="Customize the image" >}}
+The following steps allow you to customize various aspects of the image:
+
+- Enter the **hostname** of your choice. If unsure, set it to `octopi`.
+
+  ![Raspberry Pi Imager Customisation: Hostname](hostname.png)
+
+- Configure your **Localisation** options. You should at least select the right time zone and country (via "National Capital").
+
+  ![Raspberry Pi Imager Customisation: Localisation](localisation.png)
+
+- Enter **User** details for the *system* login. If unsure, leave the user as `pi`, but be sure to set a new password.
+  This is _not_ the password you'll use for logging into OctoPrint but one that you'll have to use to log into your Pi via SSH 
+  should you ever need to. Make sure to note it down!
+
+  ![Raspberry Pi Imager Customisation: User](user.png)
+
+- Enter **Wi-Fi** details. Set your SSID and password.
+
+  ![Raspberry Pi Imager Customisation: Wi-Fi](wifi.png)
+
+- Enable SSH under **Remote Access**. This is useful for troubleshooting and installing system level requirements/dependencies as necessary.
+
+  ![Raspberry Pi Imager Customisation: Remote access](ssh.png)
+{{< /step >}}
+
+{{< step number="6" title="Flash your SD card" >}}
 Install the image to your SD card, then plug everything in to your Raspberry Pi and boot it up. **Do not format the SD card after installing, even if prompted to do so.** This will break the installation and you will have to start over!
 {{< /step >}}
 
-{{< step number="5" title="Boot your Raspberry Pi" >}}
+{{< step number="7" title="Boot your Raspberry Pi" >}}
 Plug the SD card into your Raspberry Pi and power it up. The first boot will take a while,
 be patient.
 {{< /step >}}
 
-{{< step number="6" title="Access OctoPrint" >}}
+{{< step number="8" title="Access OctoPrint" >}}
 Once your Pi has booted up, access OctoPrint from your browser via `http://octopi.local`
 or the hostname you chose ([if your computer supports bonjour](https://learn.adafruit.com/bonjour-zeroconf-networking-for-windows-and-linux/overview))
 or `http://<your pi's ip address>`. `https` is available too, with a self-signed
