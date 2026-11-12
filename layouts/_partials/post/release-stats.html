@@ -17,9 +17,11 @@
 </ul>
 
 {{- with .rcs_incomplete }}
+<p>
 Due to this RC phase taking longer than 60
 days, which is the current limit of the anonymous usage tracking, data for these
 RCs is not fully available anymore:
+</p>
 
 <ul>
     {{- range . }}
@@ -29,7 +31,7 @@ RCs is not fully available anymore:
 {{- end }}
 
 <p>
-    Overall there were {{ .totalinstances }} instances that
+    Over the course of the past 60 days all in all there were {{ .totalinstances }} instances that
     participated in the RC testing phase and which collectively completed 
     {{ partial "readable-printtime.html" .totalprinttime }} of print jobs.
 </p>
@@ -38,13 +40,16 @@ RCs is not fully available anymore:
 {{- $prints := $.Page.Resources.Get "stats/prints.png" }}
 {{- $piecharts := $.Page.Resources.Get "stats/piecharts.png" }}
 {{- with $instances }}
-    {{- partial "lightbox.html" (dict "page" $.Page "image" .RelPermalink "caption" "{{ $.Params.release }}rc instances over the past month, per hour") }}
+    {{- $caption := printf "%src instances over the past month, per hour" $.Params.release }}
+    {{- partial "lightbox.html" (dict "page" $.Page "image" .RelPermalink "caption" $caption) }}
 {{- end }}
 {{- with $prints }}
-    {{- partial "lightbox.html" (dict "page" $.Page "image" .RelPermalink "caption" "Accumulated {{ $.Params.release }}rc print times over the past month, per hour") }}
+    {{- $caption := printf "Accumulated %src print times over the past month, per hour" $.Params.release }}
+    {{- partial "lightbox.html" (dict "page" $.Page "image" .RelPermalink "caption" $caption) }}
 {{- end }}
 {{- with $piecharts }}
-    {{- partial "lightbox.html" (dict "page" $.Page "image" .RelPermalink "caption" "{{ $.Params.release }}rc instances and accumulated print time over the past month, total") }}
+    {{- $caption := printf "%src instances and accumulated print time over the past month, total" $.Params.release }}
+    {{- partial "lightbox.html" (dict "page" $.Page "image" .RelPermalink "caption" $caption) }}
 {{- end }}
 
 {{- end -}}
