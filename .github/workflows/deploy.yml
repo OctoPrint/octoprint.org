@@ -33,14 +33,67 @@ jobs:
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
-      - name: Install Dart Sass Embedded
-        run: sudo snap install dart-sass-embedded
+      #- name: Install Dart Sass
+      #  run: sudo snap install dart-sass
 
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           submodules: recursive
           persist-credentials: false
+
+      - name: ⬇ Fetch rpi-imager.json snippet for stable
+        uses: OctoPrint/actions/fetch-rpi-imager-snippet@main
+        with:
+          token: "${{ secrets.GITHUB_TOKEN }}"
+          owner: OctoPrint
+          repo: OctoPi-UpToDate
+          output: /tmp/rpi-imager-stable.json
+          ignoreRegex: "rc|branch|mark:untested|mark:ignored"
+
+      - name: ⬇ Fetch rpi-imager.json snippet for new camera stack
+        uses: OctoPrint/actions/fetch-rpi-imager-snippet@main
+        with:
+          token: "${{ secrets.GITHUB_TOKEN }}"
+          owner: OctoPrint
+          repo: OctoPi-UpToDate
+          output: /tmp/rpi-imager-camerastack.json
+          includePrereleases: true
+          matchRegex: "camera-streamer"
+          ignoreRegex: "rc|mark:untested"
+
+      - name: 🔨 Preprocess the snippets
+        run: |
+          if [ -f /tmp/rpi-imager-stable.json ]; then
+            description=$(jq -r '.name' /tmp/rpi-imager-stable.json)
+            jq '. + {"name": "OctoPi (stable)", "description": "'"$description"'", "init_format": "systemd"}' /tmp/rpi-imager-stable.json > /tmp/rpi-imager-stable.json.tmp && mv /tmp/rpi-imager-stable.json.tmp /tmp/rpi-imager-stable.json
+          fi
+
+          if [ -f /tmp/rpi-imager-camerastack.json ]; then
+            description=$(jq -r '.name' /tmp/rpi-imager-camerastack.json)
+            jq '. + {"name": "OctoPi (new experimental camera stack)", "description": "'"$description"'", "init_format": "systemd"}' /tmp/rpi-imager-camerastack.json > /tmp/rpi-imager-camerastack.json.tmp && mv /tmp/rpi-imager-camerastack.json.tmp /tmp/rpi-imager-camerastack.json
+          fi
+
+      - name: 🔨 Build rpi-imager.json
+        uses: OctoPrint/actions/stitch-rpi-imager-snippets@main
+        with:
+          output: ./static/files/rpi-imager.json
+          snippets: /tmp/rpi-imager-stable.json /tmp/rpi-imager-camerastack.json
+
+      - name: 🐍 Set up Python 3.11
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.11"
+
+      - name: 🐍 Install requirements
+        run: |
+          pip install -r ./.github/scripts/requirements.txt
+
+      - name: 🔁 Update octopi.yaml
+        run: |
+          cd .github/scripts
+          python update_page_from_rpiimagerjson.py
+          cat ../../data/octopi.yaml
 
       - name: Setup Pages
         id: pages
@@ -54,8 +107,14 @@ jobs:
         run: |
           hugo --minify --baseURL https://octoprint.org
 
+      - name: ⬆ Upload build result
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: public
+          path: ./public
+
       #- name: Upload artifact
-      #  uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
+      #  uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
       #  with:
       #    path: ./public
 
@@ -75,4 +134,4 @@ jobs:
   #  steps:
   #    - name: Deploy to GitHub Pages
   #      id: deployment
-  #      uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
+  #      uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
