@@ -6,6 +6,8 @@ vars:
   TERMUX: '{{and .PREFIX (contains "com.termux" .PREFIX)}}'
   TODAY: '{{now | date "2006-01-02"}}'
   HUGO: '{{default "hugo" .HUGO}}'
+  INKSCAPE: '{{default "inkscape" .INKSCAPE }}'
+  MAGICK: '{{default "magick" .MAGICK}}'
 
 tasks:
   clean:
@@ -31,6 +33,14 @@ tasks:
     cmds:
       - git submodule update --remote --merge
       - cd themes/liftoff && git pull origin main
+
+  favicons:
+    desc: Generate favicon variants from SVG
+    cmds:
+      - |
+        {{.INKSCAPE}} -w 512 -h 512 "static/favicon.svg" -o "static/favicon.png"
+        {{.MAGICK}} -background transparent "static/favicon.png" -define icon:auto-resize=16,24,32,48,64,72,96,128,256 "static/favicon.ico"
+        {{.MAGICK}} "static/favicon.png" -background "#0b4600" -flatten -resize 180x180 "static/apple-touch-icon.png"
 
   ### CI related
 

@@ -187,9 +187,30 @@ blockquote {
     font-size: var(--text-md);
 }
 
-.site-footer__est {
+.site-footer__est,
+.site-footer__donate {
     color: var(--color-text-muted);
     font-size: var(--text-sm);
+}
+
+.site-footer__est {
+    margin-bottom: 0;
+}
+
+/* Donate header link */
+
+a.sponsor-button span {
+    margin-right: 0.3em;
+}
+
+a.sponsor-button:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 880px) {
+    a.sponsor-button span {
+        display: none;
+    }
 }
 
 /** Fixes */
@@ -559,6 +580,11 @@ blockquote {
 
 /** lightbox & lightbox grid */
 
+/*
+ * lightbox shortcode: like screenshot, but w/o border. Also predates that.
+ * Adapted to open built-in lightbox.
+ */
+
 a[data-lightbox] img {
     margin: 2em auto;
 }
@@ -575,6 +601,14 @@ a[data-lightbox] img {
     a[data-lightbox] img,
     .grid-lightbox {
         max-width: 90%;
+    }
+}
+
+/** Carousel */
+
+.carousel {
+    .carousel__slide figcaption {
+        text-align: center;
     }
 }
 

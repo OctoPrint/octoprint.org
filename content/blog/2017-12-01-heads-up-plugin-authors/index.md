@@ -204,7 +204,7 @@ once your users update your plugin all should be fine again.
 Since it's only logical that not all affected plugins will already be adjusted at public release of OctoPrint 1.3.6,
 I've added a small feature toggle that allows to force the old bundling approach if set:
 
-<a href="/assets/img/blog/2017-12/2017-12-01-legacy-setting.png" data-lightbox="{{ page.id }}" data-title="Settings > Features > Enable legacy plugin asset bundling"><img alt="Settings > Features > Enable legacy plugin asset bundling" src="/assets/img/blog/2017-12/2017-12-01-legacy-setting.png"></a>
+{{< lightbox image="images/2017-12-01-legacy-setting.png" caption="Settings > Features > Enable legacy plugin asset bundling" alt="Settings > Features > Enable legacy plugin asset bundling" >}}
 
 To make plugins that broke due to the change work again, simply checking 
 "Settings > Features > Enable legacy plugin asset bundling", saving and restarting the server will have 

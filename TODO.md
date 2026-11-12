@@ -34,12 +34,12 @@
     - [x] ooa
     - [x] problem: reading time
     - [x] problem: toc
-- [ ] pages
-    - [ ] Landing
+- [x] pages
+    - [x] Landing
         - [x] Hero
         - [x] Sponsors
         - [x] Features
-        - [ ] Screenshots
+        - [x] Screenshots
     - [x] Get Help
     - [x] Download
     - [x] Donate
@@ -50,6 +50,6 @@
     - [x] Security policy
     - [x] Trademark policy
     - [x] Browser check
-- [ ] Favicon
+- [x] Favicon
 - [x] Test RSS feeds against OctoPrint & RSS reader, should both detect no changes
 - [x] python eol API

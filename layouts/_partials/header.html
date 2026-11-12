@@ -1,0 +1,57 @@
+{{- /*
+Top navigation: brand, main menu, repo stats, sponsor button, social
+icons, language switcher, theme toggle, mobile menu toggle.
+*/ -}}
+<a class="site-header__brand" href="{{ site.Home.RelPermalink }}">
+  {{ partial "brand-mark.html" . }}
+  <span>{{ site.Title }}</span>
+</a>
+
+<button class="site-header__menu-toggle" type="button"
+  aria-expanded="false"
+  aria-controls="site-nav"
+  aria-label="{{ i18n "open_menu" | default "Open menu" }}"
+  data-action="toggle-menu">
+  {{ partial "icon.html" "mdi:menu" }}
+</button>
+
+<nav class="site-header__nav" id="site-nav" aria-label="{{ i18n "main_navigation" | default "Main" }}">
+  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+</nav>
+
+<div class="site-header__actions">
+  {{ partial "repo-stats.html" . }}
+  {{- $sponsor := site.Params.sponsor | default dict }}
+  {{- if and (partialCached "funding-links.html" . site.Language.Lang) (not (in (slice false "false") $sponsor.header)) }}
+  {{- /* attentionRepeat: "once", a duration such as "120s" or "2m", or
+         a plain number of seconds. */}}
+  {{- $repeat := 0 }}
+  {{- with $sponsor.attentionRepeat }}
+    {{- if ne . "once" }}
+      {{- $value := string . }}
+      {{- if findRE `^[0-9]+$` $value }}{{ $value = printf "%ss" $value }}{{ end }}
+      {{- with try (time.ParseDuration $value) }}
+        {{- if .Err }}
+          {{- warnf "header.html: params.sponsor.attentionRepeat %q is neither \"once\" nor a duration like \"120s\"" $sponsor.attentionRepeat }}
+        {{- else }}
+          {{- $repeat = .Value.Seconds }}
+        {{- end }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+  <button class="sponsor-button" type="button" popovertarget="liftoff-sponsor" aria-label="{{ i18n "sponsor" }}" title="{{ i18n "sponsor" }}"
+    {{- with $sponsor.attention }}{{ if in (slice "heartbeat" "pulse") . }} data-attention="{{ . }}"{{ with $repeat }} data-attention-repeat="{{ . }}"{{ end }}{{ end }}{{ end }}>
+    {{- partial "icon.html" "mdi:heart-outline" -}}
+  </button>
+  {{- end }}
+  {{ partial "nav-donation.html" }}
+  {{ partial "social-icons.html" . }}
+  {{ partial "lang-switcher.html" . }}
+
+  <button class="site-header__theme-toggle" type="button"
+    aria-label="{{ i18n "toggle_theme" | default "Toggle theme" }}"
+    data-action="toggle-theme">
+    <span data-theme-icon="dark">{{ partial "icon.html" "mdi:weather-night" }}</span>
+    <span data-theme-icon="light">{{ partial "icon.html" "mdi:weather-sunny" }}</span>
+  </button>
+</div>

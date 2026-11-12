@@ -6,17 +6,21 @@ Footer. Three regions:
   2. Column menus pulled from site.Menus.footer.
   3. Bottom bar with copyright.
 */ -}}
+{{- $title := cond site.Params.product site.Params.product site.Title }}
 <div class="site-footer__grid">
   <div class="site-footer__brand">
     <a class="site-footer__logo" href="{{ site.Home.RelPermalink }}">
       {{ partial "brand-mark.html" . }}
-      <span class="site-footer__brand-title">{{ site.Title }}</span>
+      <span class="site-footer__brand-title">{{ $title }}</span>
     </a>
     {{- with site.Params.tagline }}
       <p class="site-footer__tagline">{{ . }}</p>
     {{- end }}
     <p class="site-footer__est">
       Created & maintained by Gina Häußge ever since December of 2012.
+    </p>
+    <p class="site-footer__donate">
+       <a href="/support/">Help fund the work on this free & open software!</a>
     </p>
     {{- with site.Params.footer }}
       {{- with .address }}
