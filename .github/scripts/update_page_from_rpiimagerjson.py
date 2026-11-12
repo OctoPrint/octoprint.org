@@ -128,7 +128,7 @@ def update_octopi_data(path, latest, latest_cam, next_octoprint):
 @click.argument(
     "rpi_imager_json",
     default=os.path.join(
-        os.path.dirname(__file__), "..", "..", "files", "rpi-imager.json"
+        os.path.dirname(__file__), "..", "..", "static", "files", "rpi-imager.json"
     ),
 )
 @click.argument(
