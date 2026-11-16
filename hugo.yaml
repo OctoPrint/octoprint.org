@@ -23,7 +23,7 @@ params:
   social:
     - icon: simple-icons:github
       name: GitHub
-      url: https://octoprint.org/OctoPrint
+      url: https://github.com/OctoPrint/OctoPrint
     - icon: simple-icons:discourse
       name: Forum
       url: https://community.octoprint.org
