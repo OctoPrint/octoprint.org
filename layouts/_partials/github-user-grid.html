@@ -1,15 +1,25 @@
 {{- $highlight := .highlight }}
 <div class="github-user-grid">
-    {{ range .users }}
-        <div class="github-user">
-            <a href="https://github.com/{{ . }}">
-                <img src="https://github.com/{{ . }}.png?size=100" alt="@{{ . }}" /><br />
-                {{- if (in $highlight .) }}
-                    <em>@{{ . }}</em>
-                {{ else }}
-                    @{{ . }}
-                {{ end }}
-            </a>
-        </div>
-    {{ end }}
+    {{- range .users }}
+        {{- $user := . }}
+        {{- $url := printf "https://github.com/%s.png?size=100" $user }}
+        {{- $target := printf "img/github/%s.png" $user }}
+        {{- with try (resources.GetRemote $url ) }}
+            {{- with .Err }}
+            {{- else with .Value }}
+                {{- with resources.Copy $target . }}
+                <div class="github-user">
+                    <a href="https://github.com/{{ $user }}">
+                        <img src="{{ .RelPermalink }}" alt="@{{ $user }}" /><br />
+                        {{- if (in $highlight $user) }}
+                            <em>{{ $user }}</em>
+                        {{ else }}
+                            @{{ $user }}
+                        {{ end }}
+                    </a>
+                </div>
+                {{- end }}
+            {{- end }}
+        {{- end }}
+    {{- end }}
 </div>
