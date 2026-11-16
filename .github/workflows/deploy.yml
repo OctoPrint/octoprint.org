@@ -118,6 +118,7 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo --minify --baseURL https://octoprint.org
+          tree
 
       - name: 🕵️‍♂️ Validate json files
         run: |
