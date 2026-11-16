@@ -1,6 +1,9 @@
 name: Deploy Hugo site to Pages
 
 on:
+  schedule:
+    - cron: "23 * * * *"
+
   # Runs on pushes targeting the default branch
   push:
     branches: ["hugo"]
