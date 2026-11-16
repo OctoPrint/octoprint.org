@@ -44,6 +44,15 @@ jobs:
         with:
           submodules: recursive
           persist-credentials: false
+          fetch-depth: 0
+
+      - name: 🧰 Cache generated resources
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: resource/_gen
+          key: hugo-gen-${{ runner.os }}-${{ hashFiles('assets/**', 'config/**', 'layouts/_partials/opengraph.html', 'hugo.yaml') }}
+          restore-keys: |
+            hugo-gen-${{ runner.os }}-
 
       - name: ⬇ Fetch rpi-imager.json snippet for stable
         uses: OctoPrint/actions/fetch-rpi-imager-snippet@main
@@ -121,12 +130,6 @@ jobs:
           for feed in public/feed.xml public/blog/feed.xml public/feeds/*.xml; do
             [[ $(yq --xml-strict-mode -ojson $feed | jq -er type) == "object" ]]
           done
-
-      #- name: ⬆ Upload build result
-      #  uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-      #  with:
-      #    name: public
-      #    path: ./public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
