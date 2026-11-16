@@ -49,7 +49,7 @@ jobs:
       - name: 🧰 Cache generated resources
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          path: resource/_gen
+          path: resources/_gen
           key: hugo-gen-${{ runner.os }}-${{ hashFiles('assets/**', 'config/**', 'layouts/_partials/opengraph.html', 'hugo.yaml') }}
           restore-keys: |
             hugo-gen-${{ runner.os }}-
@@ -118,7 +118,6 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo --minify --baseURL https://octoprint.org
-          tree
 
       - name: 🕵️‍♂️ Validate json files
         run: |
