@@ -32,9 +32,9 @@ contain dateless pages (blueprints), so the date block is guarded.
             </span>
         {{- end }}
         {{- if not .Date.IsZero }}
-        <span>{{ partial "icon.html" "mdi:calendar-month-outline" }}&nbsp;<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></span>
+        <span class="date" arial-label="Date">{{ partial "icon.html" "mdi:calendar-month-outline" }}&nbsp;<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></span>
         {{- end }}
-        {{- with $readingtime }}<span>{{ partial "icon.html" "mdi:clock-time-four-outline" }}&nbsp;{{ i18n "reading_time" (dict "Count" .) }}</span>{{ end }}
+        {{- with $readingtime }}<span class="readingtime" aria-label="Reading time">{{ partial "icon.html" "mdi:clock-time-four-outline" }}&nbsp;{{ i18n "reading_time" (dict "Count" .) }}</span>{{ end }}
     </div>
     <p class="post-card__summary">{{ or .Description (.Summary | plainify) }}</p>
     {{- with .GetTerms "tags" }}
