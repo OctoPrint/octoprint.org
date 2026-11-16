@@ -6,7 +6,7 @@
         and
         <div class="row sponsors">
             {{- range $sponsors }}
-                <a href="{{- .url }}" rel="noopener noreferrer" target="_blank">
+                <a href="{{- .url }}" rel="noopener noreferrer" target="_blank" data-analytics='"Sponsor Link", { "props": { "sponsor": "{{ .title }}"} }'>
                     <img class="img__light" src="/img/sponsors/{{- .logo }}-light.png" alt="{{- .title }}">
                     <img class="img__dark" src="/img/sponsors/{{- .logo }}-dark.png" alt="{{- .title }}">
                 </a>
