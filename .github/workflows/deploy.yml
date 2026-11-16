@@ -107,16 +107,28 @@ jobs:
         run: |
           hugo --minify --baseURL https://octoprint.org
 
-      - name: ⬆ Upload build result
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        with:
-          name: public
-          path: ./public
+      - name: 🕵️‍♂️ Validate json files
+        run: |
+          for path in public/api/python_eol.json public/files/rpi-imager.json; do
+            [[ $(jq -er type $path) == "object" ]]
+          done
 
-      #- name: Upload artifact
-      #  uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+      - name: 🕵️‍♂️ Validate feeds
+        run: |
+          for feed in public/feed.xml public/blog/feed.xml public/feeds/*.xml; do
+            [[ $(yq --xml-strict-mode -ojson $feed | jq -er type) == "object" ]]
+          done
+
+      #- name: ⬆ Upload build result
+      #  uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
       #  with:
+      #    name: public
       #    path: ./public
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: ./public
 
   # Deployment job
   #deploy:
