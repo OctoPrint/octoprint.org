@@ -48,58 +48,85 @@ menus:
     - name: Download
       pageRef: /download
       weight: 40
+    - name: Docs
+      url: https://docs.octoprint.org
+      weight: 50
+      params:
+        target: _blank
     - name: Merchandise
       pageRef: /merch
-      weight: 50
-    #- name: Donate
-    #  pageRef: /support
-    #  weight: 60
+      weight: 60
 
   footer:
     - identifier: links
       name: Links
       weight: 10
     - parent: links
+      name: Documentation
+      url: https://docs.octoprint.org
+      weight: 10
+      params:
+        target: _blank
+    - parent: links
       name: GitHub
       url: https://github.com/OctoPrint
-      weight: 10
+      weight: 20
+      params:
+        target: _blank
     - parent: links
       name: Community Forum
       url: https://community.octoprint.org
-      weight: 20
+      weight: 30
+      params:
+        target: _blank
     - parent: links
       name: Discord
       url: https://discord.octoprint.org
-      weight: 30
+      weight: 40
+      params:
+        target: _blank
     - parent: links
       name: Mastodon
       url: https://floss.social/@OctoPrint
-      weight: 40
+      weight: 50
+      params:
+        target: _blank
     - parent: links
       name: YouTube
       url: https://www.youtube.com/c/OctoPrint3D
-      weight: 50
+      weight: 60    
+      params:
+        target: _blank
     - parent: links
       name: Browser Check
-      url: /browser-check/
-      weight: 60
+      pageRef: /browser-check/
+      weight: 70
     - parent: links
       name: Status Page
       url: https://status.octoprint.org/
-      weight: 70
+      weight: 80
+      params:
+        target: _blank
 
     - identifier: legal
       name: Rules & Policies
       weight: 20
     - parent: legal
       name: Code of Conduct
-      url: /coc/
+      pageRef: /coc/
+      weight: 10
     - parent: legal
       name: Security Policy
-      url: /security/
+      pageRef: /security/
+      weight: 20
     - parent: legal
       name: Trademark Policy
-      url: /trademark/
+      pageRef: /trademark/
+      weight: 30
+    - parent: legal
+      name: Anonymous Usage Tracking in OctoPrint
+      pageRef: /tracking/
+      weight: 40
 
 frontmatter:
   date:
@@ -175,6 +202,17 @@ privacy:
   youTube:
     disable: false
     privacyEnhanced: true
+
+caches:
+  assets:
+    dir: :resourceDir/_gen
+    maxAge: -1
+  getresource:
+    dir: :resourceDir/_res
+    maxAge: -1
+  images:
+    dir: :resourceDir/_gen
+    maxAge: -1
 
 module:
   hugoVersion:
