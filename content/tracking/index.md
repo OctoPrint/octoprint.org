@@ -1,4 +1,5 @@
 ---
+layout: page-toc
 title: Anonymous Usage Tracking in OctoPrint
 ---
 
