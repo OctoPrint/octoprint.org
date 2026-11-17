@@ -203,17 +203,6 @@ privacy:
     disable: false
     privacyEnhanced: true
 
-caches:
-  assets:
-    dir: :resourceDir/_gen
-    maxAge: -1
-  getresource:
-    dir: :resourceDir/_res
-    maxAge: -1
-  images:
-    dir: :resourceDir/_gen
-    maxAge: -1
-
 module:
   hugoVersion:
     extended: true
