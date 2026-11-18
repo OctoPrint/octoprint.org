@@ -4,7 +4,7 @@
 {{- range $headings }}
     {{- if and (le .Level $maxlevel) (ge .Level $minlevel) }}
         <li>
-            <a href="#{{ .ID }}">{{ .Title | htmlUnescape }}</a>
+            <a href="#{{ .ID }}">{{ .Title | htmlUnescape | safeHTML }}</a>
             {{- with .Headings }}
                 <ul>
                     {{ partial "toc/fragment-level.html" (dict "headings" . "minlevel" $minlevel "maxlevel" $maxlevel) }}
