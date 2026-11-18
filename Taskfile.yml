@@ -11,16 +11,17 @@ vars:
 
 tasks:
   clean:
-    desc: Clean output directory
+    desc: Clean output & resource directory
     cmds:
       - |
         rm -rf public || true
+        rm -rf resources/_gen || true
 
   serve:
     desc: Serve page on localhost w/ baseURL local.octoprint.org:1313, all posts visible
     cmds:
       - |
-        {{.HUGO}} server -D -E -F {{if .TERMUX}}--noBuildLock{{end}} --disableFastRender --bind=127.0.0.1 --baseURL http://local.octoprint.org:1313/
+        {{.HUGO}} server -D -E -F {{if .TERMUX}}--noBuildLock{{end}} --disableFastRender --bind=127.0.0.1 --baseURL http://localhost:1313/
 
   build:
     desc: Create a production build of the site in ./public
