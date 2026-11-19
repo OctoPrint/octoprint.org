@@ -1,0 +1,116 @@
+{{ define "main" }}
+  <section class="section">
+    <div class="container-narrow">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+
+      <script src="/js/lunr.js"></script>
+
+      <script type="text/javascript">
+          (() => {
+            fetch("/search.json").then((resp) => {
+                resp.json().then(data => {
+                  const searchLut = {};
+                  
+                  const index = lunr(function () {
+                      this.ref("url");
+                      this.field("title", { "boost": 50 });
+                      this.field("content");
+                      data.forEach(doc => {
+                          this.add(doc);
+                          searchLut[doc.url] = doc;
+                      })
+                  });
+
+                  const performSearch = (query) => {
+                    const results = index.search(query).filter((res) => res.score > 1).map((res) => (searchLut[res.ref])).filter(res => !!res);
+                    console.log(results);
+                    showResults(results);
+                  }
+
+                  const resultTemplate = document.getElementById("search-result-template");
+                  const resultTagTemplate = document.getElementById("search-result-tag-template");
+                  const resultContainer = document.getElementById("search-results");
+
+                  const showResults = (results) => {
+                    resultContainer.replaceChildren([]);
+
+                    const header = document.createElement("h2");
+                    header.textContent = "Results";
+                    resultContainer.appendChild(header);
+
+                    const div = document.createElement("div");
+                    div.classList = "article-listing";
+                    results.map(renderResult).forEach(result => {
+                      div.appendChild(result);
+                    });
+                    resultContainer.appendChild(div);
+                  }
+
+                  const renderResult = (result) => {
+                    const template = document.importNode(resultTemplate.content, true);
+                    template.querySelector(".search-result__link").setAttribute("href", result.url);
+                    template.querySelector(".search-result__title").textContent = result.title;
+                    template.querySelector(".search-result__summary").innerHTML = result.summary;
+                    template.querySelector(".search-result__date").textContent = result.date.split(" ")[0];
+                    
+                    if (result.tags) {
+                      const tagContainer = template.querySelector(".search-result__tags");
+                      result.tags.forEach(tag => {
+                        const tagTemplate = document.importNode(resultTagTemplate.content, true);
+                        tagTemplate.querySelector(".search-result__tag").textContent = tag;
+                        tagContainer.appendChild(tagTemplate);
+                      })
+                    }
+                    
+                    return template;
+                  }
+
+                  const searchInput = document.getElementById("search-query");
+
+                  searchInput.addEventListener("keyup", (event) => {
+                    if (event.keyCode == 13) {
+                      const query = searchInput.value
+
+                      const search = new URLSearchParams(window.location.search);
+                      search.set("q", query);
+                      window.location.search = search.toString();
+                    }
+                  });
+
+                  const search = new URLSearchParams(window.location.search);
+                  const query = search.get("q");
+                  if (query) {
+                    searchInput.value = query;
+                    performSearch(query);
+                  }
+                });
+            });
+          })();
+      </script>
+
+      <template id="search-result-template">
+        <a class="post-card search-result__link">
+            <div class="post-card__meta">
+              <time datetime="{{ .Date.Format "2006-01-02" }}" class="search-result__date"></time>
+            </div>
+            <h2 class="post-card__title search-result__title"></h2>
+            <p class="post-card__summary search-result__summary"></p>
+            <div class="post-card__tags search-result__tags"></div>
+          </a>
+      </template>
+
+      <template id="search-result-tag-template">
+        <span class="badge search-result__tag"></span>
+      </template>
+
+      <div class="search-box">
+        <input id="search-query" type="search" placeholder="Enter search query..." />
+      </div>
+
+      <div id="search-results">
+
+      </div>
+    </div>
+  </section>
+{{ end }}

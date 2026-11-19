@@ -1,0 +1,13 @@
+{{- $pages := where site.Pages ".Section" "in" site.MainSections }}
+{{- $pages = where $pages "Kind" "page" }}
+{{- $pages = where $pages "Params.hiddenInSearch" "!=" true -}}
+[{{ range $i, $page := $pages }}{{ with $page }}{{ if gt $i 0 }},{{ end }}
+    {
+        "url": {{ .RelPermalink | jsonify }},
+        "date": {{ .PublishDate.Format "2006-01-02 15:04:05 -0700" | jsonify }},
+        "title": {{ .Title | jsonify }},
+        "summary": {{ .Summary | jsonify }},
+        "content": {{ .Plain | jsonify }}{{- with .GetTerms "tags" }},
+        "tags": [{{- range $idx, $tag := . }}{{ if gt $idx 0 }},{{ end }}{{ $tag.LinkTitle | jsonify }}{{- end }}]{{ end }}
+    }{{ end }}{{ end }}
+]

@@ -159,6 +159,7 @@ outputs:
     - octoblogRSS
     - octopiRSS
     - rss
+    - search
   term:
     - html
     - rss
@@ -186,6 +187,10 @@ outputFormats:
     mediaType: application/rss
     basename: feeds/octoblog
     notAlternative: true
+  search:
+    mediaType: application/json
+    basename: search
+    notALternative: true
 
 markup:
   highlight:

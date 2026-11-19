@@ -668,6 +668,56 @@ a[data-lightbox] img {
     }
 }
 
+/** Search */
+
+.search-box {
+    text-align: center;
+    padding: var(--space-5);
+
+    input {
+        width: 100%;
+        font-size: var(--text-xl);
+        border-radius: var(--radius-2xl);
+        padding: var(--space-2) var(--space-4);
+
+        border-color: var(--color-border);
+        background-color: var(--color-bg-surface-2);
+        
+        ::after {
+            content: "🔍";
+        }
+    }
+}
+
+
+#search-results {
+    width: 100%;
+    margin-top: var(--space-8);
+}
+
+a.search-button {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  font-family: inherit;
+  font-size: var(--text-sm);
+  line-height: 1;
+  transition: color var(--transition-base), background-color var(--transition-base);
+}
+
+a.search-button:hover {
+  color: var(--color-text);
+  background-color: var(--color-bg-surface);
+}
+
 /** Fonts */
 
 @font-face {
