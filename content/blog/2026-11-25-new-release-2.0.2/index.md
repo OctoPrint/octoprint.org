@@ -10,7 +10,7 @@ contributors:
 tags:
 - release
 
-summary: "The second bugfix release for 2.0.x, fixing a some issues reported since the release of 2.0.0."
+summary: "The second bugfix release for 2.0.x, fixing some issues reported since the release of 2.0.0."
 
 release: 2.0.2
 
