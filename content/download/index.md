@@ -48,10 +48,13 @@ Chose your Raspberry Pi Model.
 {{< /step >}}
 
 {{< step number="3" title="Locate the OctoPi Image" >}}
-Find the OctoPi image under "Choose OS", by selecting
-"Other Specific Purpose OS" > "3D printing" > "OctoPi" and then the **"stable"** version.
+Find the OctoPi image under "Choose operating system" by selecting
+"Other specific-purpose OS" > "3D printing" > "OctoPi" and then the **"stable"** version.
 
-![Raspberry Pi Imager OS selection screen, showing "OctoPi stable" as option](select_os.png)
+Raspberry Pi Imager randomizes the lists, so you might have to scroll down a bit until you find what
+you are looking for.
+
+{{< video src="select_os.webm" poster="select_os.png" caption="Raspberry Pi Imager OS selection: Other specific-purpose OS > 3D printing > OctoPi > stable" >}}
 
 {{< /step >}}
 
